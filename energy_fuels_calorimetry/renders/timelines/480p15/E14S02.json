@@ -1,0 +1,31 @@
+{
+ "scene": "E14S02",
+ "title": "Q27: attempt it first",
+ "cls": "E14S02_Q27Attempt",
+ "fps": 15,
+ "duration": 89.5333,
+ "beats": [
+  {
+   "key": "E14S02.b01",
+   "start": 0.0,
+   "speech": 11.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q twenty-seven is worth fourteen marks. It combines an electrical calibration, a neutralisation reaction and a temperature graph. Read it all the way through first.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S02.b02",
+   "start": 12.0667,
+   "speech": 16.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Pause the video now and attempt every part on paper. Give yourself about fifteen to twenty minutes. If you keep the video running, the next minute is quiet thinking time: sketch the temperature graph before you calculate anything.",
+   "overrun": 0.0,
+   "pause": 60.0,
+   "layout": []
+  }
+ ]
+}

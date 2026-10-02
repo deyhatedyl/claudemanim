@@ -1,0 +1,53 @@
+{
+ "scene": "E14S11",
+ "title": "Checkpoint: spot the error",
+ "cls": "E14S11_SpotError",
+ "fps": 15,
+ "duration": 78.6667,
+ "beats": [
+  {
+   "key": "E14S11.b01",
+   "start": 0.0,
+   "speech": 12.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint: spot the error. Here are three lines from different students' answers to Q twenty-seven and Q twenty-eight. Each contains one mistake. Pause and find all three.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E14S11.b02",
+   "start": 27.5333,
+   "speech": 14.0152,
+   "audio": null,
+   "estimated": true,
+   "text": "Line one forgets to convert millilitres to litres. Fifty point zero millilitres is zero point zero five zero zero litres, so the acid is zero point zero five zero zero moles, not fifty.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S11.b03",
+   "start": 41.9333,
+   "speech": 11.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "Line two has the wrong sign. The temperature rose because the reaction released heat, so delta H is negative: negative fifty-seven point six kilojoules per mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S11.b04",
+   "start": 53.6,
+   "speech": 24.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Line three divides joules by kilojoules per mole. Nine hundred and sixty joules is zero point nine six zero kilojoules, giving zero point zero four zero zero moles. The wrong value would make the mass of X three thousand two hundred grams, far more than the whole four gram sample, which a plausibility check catches straight away.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

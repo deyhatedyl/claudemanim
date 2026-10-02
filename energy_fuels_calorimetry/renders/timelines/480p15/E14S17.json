@@ -1,0 +1,42 @@
+{
+ "scene": "E14S17",
+ "title": "Choosing a method",
+ "cls": "E14S17_Methods",
+ "fps": 15,
+ "duration": 68.7333,
+ "beats": [
+  {
+   "key": "E14S17.b01",
+   "start": 0.0,
+   "speech": 21.1759,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's recap how to choose a method across the whole topic. Start from what you're given. A mass gives moles by dividing by the molar mass. A gas volume at SLC gives moles by dividing by twenty-four point eight. A solution gives moles from concentration times volume in litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S17.b02",
+   "start": 21.5333,
+   "speech": 24.9,
+   "audio": null,
+   "estimated": true,
+   "text": "For energy: the moles of fuel times the size of delta H gives the energy released. Heating water uses m c delta T. An electrical calibration uses V times I times t, and the calibration factor is that energy divided by the temperature rise. With a calibrated calorimeter, the heat is the calibration factor times the temperature rise.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S17.b03",
+   "start": 46.8,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "Molar enthalpy is the heat divided by the moles of the limiting reactant, with a negative sign if the reaction released heat. Efficiency is useful output over input. To find the input needed for a target output, divide by the efficiency. And whenever you compare fuels, state the basis.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

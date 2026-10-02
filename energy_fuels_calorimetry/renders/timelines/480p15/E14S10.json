@@ -1,0 +1,42 @@
+{
+ "scene": "E14S10",
+ "title": "Q27 parts e and f: evidence and prediction",
+ "cls": "E14S10_PartsEF",
+ "fps": 15,
+ "duration": 54.9333,
+ "beats": [
+  {
+   "key": "E14S10.b01",
+   "start": 0.0,
+   "speech": 22.831,
+   "audio": null,
+   "estimated": true,
+   "text": "Part e. If repeats of this experiment gave very similar values, that would show the result is repeatable, or precise. It would not show that it's accurate. A systematic error, such as a wrong calibration factor or unaccounted heat loss, would shift every repeat by the same amount. One mark for each idea.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S10.b02",
+   "start": 23.2,
+   "speech": 23.011,
+   "audio": null,
+   "estimated": true,
+   "text": "Part f. Doubling the sodium hydroxide concentration gives zero point one two zero moles of it. But the acid is still only zero point zero five zero zero moles, and it's still limiting. The same amount of water forms, so the same heat is released. Two marks: the limiting reactant, and the conclusion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S10.b03",
+   "start": 46.6,
+   "speech": 7.3945,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the full tally for Q twenty-seven: three, two, two, three, two and two, for fourteen marks.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

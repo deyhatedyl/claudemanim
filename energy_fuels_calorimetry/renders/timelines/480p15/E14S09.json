@@ -1,0 +1,42 @@
+{
+ "scene": "E14S09",
+ "title": "Wrong solutions for Q27",
+ "cls": "E14S09_Wrong",
+ "fps": 15,
+ "duration": 59.5333,
+ "beats": [
+  {
+   "key": "E14S09.b01",
+   "start": 0.0,
+   "speech": 17.9193,
+   "audio": null,
+   "estimated": true,
+   "text": "Here are three tempting wrong answers. The first divides by zero point zero six zero zero moles, the sodium hydroxide, and gets negative forty-eight point zero kilojoules per mole. But the excess sodium hydroxide never reacted, so it can't be the denominator.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S09.b02",
+   "start": 18.2667,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "The second uses the highest reading, twenty-four point seven degrees, instead of the extrapolated value. The rise becomes four point seven degrees, and delta H becomes negative fifty-six point four. It's an underestimate, because cooling had already begun.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S09.b03",
+   "start": 34.8667,
+   "speech": 23.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "The third ignores the calibration and uses m c delta T with one hundred and twenty-five grams of solution. That gives about two thousand five hundred and eight joules, and about negative fifty point two kilojoules per mole. It leaves out the energy absorbed by the calorimeter itself, which is exactly what the calibration factor includes.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

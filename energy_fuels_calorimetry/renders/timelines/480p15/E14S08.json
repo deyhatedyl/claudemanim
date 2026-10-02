@@ -1,0 +1,42 @@
+{
+ "scene": "E14S08",
+ "title": "Q27 part d: molar enthalpy",
+ "cls": "E14S08_PartD",
+ "fps": 15,
+ "duration": 55.6,
+ "beats": [
+  {
+   "key": "E14S08.b01",
+   "start": 0.0,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. The heat absorbed by the calorimeter is the calibration factor times the corrected rise: six hundred times four point eight, which is two thousand eight hundred and eighty joules, or two point eight eight zero kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S08.b02",
+   "start": 16.6,
+   "speech": 29.4517,
+   "audio": null,
+   "estimated": true,
+   "text": "Divide by the amount of the limiting reactant, which equals the amount of water formed: two point eight eight zero kilojoules divided by zero point zero five zero zero moles is fifty-seven point six. The reaction released heat into the calorimeter, so delta H is negative: negative fifty-seven point six, or about negative fifty-eight kilojoules per mole of water. Two significant figures, because the corrected rise has only two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S08.b03",
+   "start": 46.4,
+   "speech": 8.2221,
+   "audio": null,
+   "estimated": true,
+   "text": "Three marks: the heat, the division by the limiting amount, and delta H with the correct sign and units.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

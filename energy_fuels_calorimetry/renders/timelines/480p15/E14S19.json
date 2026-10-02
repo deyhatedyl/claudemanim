@@ -1,0 +1,31 @@
+{
+ "scene": "E14S19",
+ "title": "Series close",
+ "cls": "E14S19_Close",
+ "fps": 15,
+ "duration": 31.4,
+ "beats": [
+  {
+   "key": "E14S19.b01",
+   "start": 0.0,
+   "speech": 13.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "That's the end of the series. You now have a full toolkit: mole calculations with units, energy from reactions and fuels, calorimetry with calibration and graph correction, and fair, evidence-based comparisons.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S19.b02",
+   "start": 13.7333,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Use the worksheet to attempt every practice question again without the video, then check the worked solutions, including the marks and traps. Keep the formula and method sheet beside you, and keep adding to your error log. Good luck.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

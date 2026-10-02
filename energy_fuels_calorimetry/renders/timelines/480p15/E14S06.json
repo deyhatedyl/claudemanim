@@ -1,0 +1,31 @@
+{
+ "scene": "E14S06",
+ "title": "Q27 part b: the limiting reactant",
+ "cls": "E14S06_PartB",
+ "fps": 15,
+ "duration": 46.6,
+ "beats": [
+  {
+   "key": "E14S06.b01",
+   "start": 0.0,
+   "speech": 20.3483,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. Hydrochloric acid: one point zero zero times zero point zero five zero zero litres is zero point zero five zero zero moles. Sodium hydroxide: zero point eight zero zero times zero point zero seven five zero litres is zero point zero six zero zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S06.b02",
+   "start": 20.7333,
+   "speech": 24.9,
+   "audio": null,
+   "estimated": true,
+   "text": "They react one to one, forming water. So the acid, at zero point zero five zero zero moles, is limiting, and zero point zero one zero zero moles of sodium hydroxide is left over. The heat released depends on the zero point zero five zero zero moles of water formed. Two marks: the amounts, and the limiting reactant.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

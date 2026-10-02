@@ -1,0 +1,53 @@
+{
+ "scene": "E14S03",
+ "title": "Q27: read and annotate",
+ "cls": "E14S03_Annotate",
+ "fps": 15,
+ "duration": 76.2667,
+ "beats": [
+  {
+   "key": "E14S03.b01",
+   "start": 0.0,
+   "speech": 20.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's annotate. The calibration uses five point zero zero volts and one point two zero amps for three hundred seconds, giving a rise of three point zero zero degrees. That's E equals V times I times t, with the time already in seconds, followed by a calibration factor.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S03.b02",
+   "start": 20.8,
+   "speech": 20.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "The question says the calibration factor applies to the reaction mixture. So for the reaction, the heat is the calibration factor times the temperature rise. We won't use m c delta T for the reaction, because the calibration already accounts for the water, the cup and the thermometer.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S03.b03",
+   "start": 41.6,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "The solutions: fifty point zero millilitres of one point zero zero molar acid, and seventy-five point zero millilitres of zero point eight zero zero molar sodium hydroxide. Convert millilitres to litres, and expect one reactant to be limiting.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S03.b04",
+   "start": 58.2,
+   "speech": 17.0917,
+   "audio": null,
+   "estimated": true,
+   "text": "Finally, the graph. The baseline is twenty point zero degrees, mixing happens at sixty seconds, and the cooling readings start at one hundred and twenty seconds. So we'll need to extrapolate the cooling line back to the moment of mixing.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

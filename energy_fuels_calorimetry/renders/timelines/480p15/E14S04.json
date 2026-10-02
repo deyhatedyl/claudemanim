@@ -1,0 +1,31 @@
+{
+ "scene": "E14S04",
+ "title": "Q27: plan the methods",
+ "cls": "E14S04_Plan",
+ "fps": 15,
+ "duration": 46.9333,
+ "beats": [
+  {
+   "key": "E14S04.b01",
+   "start": 0.0,
+   "speech": 29.7579,
+   "audio": null,
+   "estimated": true,
+   "text": "Plan the chain before calculating. Part a: E equals V times I times t, then the calibration factor, then a comparison with the water alone. Part b: moles of each solution from concentration times volume, then the limiting reactant. Part c: the corrected temperature rise from the graph. Part d: the heat from the calibration factor and the corrected rise, divided by the limiting amount, with a sign.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S04.b02",
+   "start": 30.1333,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "Parts a, b and c all feed part d, so an error in any of them carries through to the enthalpy. Parts e and f are reasoning parts: they test whether you understand what the numbers mean.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

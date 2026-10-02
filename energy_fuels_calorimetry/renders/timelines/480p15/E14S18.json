@@ -1,0 +1,53 @@
+{
+ "scene": "E14S18",
+ "title": "Diagnostic: the central traps",
+ "cls": "E14S18_Diagnostic",
+ "fps": 15,
+ "duration": 136.3333,
+ "beats": [
+  {
+   "key": "E14S18.b01",
+   "start": 0.0,
+   "speech": 9.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "Now a quick diagnostic. Here are six statements. Decide whether each is correct, and if not, name the trap. Pause and decide.",
+   "overrun": 0.0,
+   "pause": 25.0,
+   "layout": []
+  },
+  {
+   "key": "E14S18.b02",
+   "start": 35.2667,
+   "speech": 30.7841,
+   "audio": null,
+   "estimated": true,
+   "text": "One: wrong. Convert seventy-five point zero millilitres to litres, giving zero point zero six zero zero moles. Two: wrong. Use only the reacting component's share of the mixture. Three: wrong. Only twenty-one percent of air is oxygen. Four: wrong. Divide by the limiting reactant, the one that actually reacts, not the one in excess. Five: wrong. Joules per degree times degrees gives joules, not kilojoules. Six: correct.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S18.b03",
+   "start": 66.4,
+   "speech": 2.429,
+   "audio": null,
+   "estimated": true,
+   "text": "Six more. Pause and decide.",
+   "overrun": 0.0,
+   "pause": 25.0,
+   "layout": []
+  },
+  {
+   "key": "E14S18.b04",
+   "start": 94.2667,
+   "speech": 41.0752,
+   "audio": null,
+   "estimated": true,
+   "text": "Seven: wrong. The highest reading underestimates the rise when heat is being lost, so extrapolate the cooling line. Eight: wrong. Close agreement shows precision, but a systematic error can shift every repeat. Nine: wrong. A catalyst lowers the activation energy but doesn't change delta H. Ten: correct. Eleven: wrong. Per mole of fuel isn't per useful kilojoule; the energy released and the efficiency matter too. Twelve: wrong. A renewable fuel can still compete with food, use a lot of water, or leak methane. Add any you missed to your error log.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

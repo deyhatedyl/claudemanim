@@ -1,0 +1,42 @@
+{
+ "scene": "E14S15",
+ "title": "Q28 part f: moisture",
+ "cls": "E14S15_PartF",
+ "fps": 15,
+ "duration": 39.5333,
+ "beats": [
+  {
+   "key": "E14S15.b01",
+   "start": 0.0,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Part f. Suppose the powder absorbs moisture from the air before a new four point zero zero gram sample is weighed. Some of that four point zero zero grams is now water, so there's less X in the sample.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S15.b02",
+   "start": 17.0667,
+   "speech": 14.1952,
+   "audio": null,
+   "estimated": true,
+   "text": "Less X dissolves, so less heat is released, the temperature rise is smaller, and the calculated percentage of X is lower. Two marks: the reduced active mass, and its effect on the result.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S15.b03",
+   "start": 31.6,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "The full tally for Q twenty-eight: two, four, one, two, one and two, for twelve marks.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

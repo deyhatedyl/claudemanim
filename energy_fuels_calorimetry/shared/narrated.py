@@ -25,12 +25,12 @@ import json
 from contextlib import contextmanager
 from pathlib import Path
 
-from manim import (DOWN, LEFT, RIGHT, UP, UR, Create, FadeIn, FadeOut, Rectangle,
+from manim import (DOWN, DR, LEFT, RIGHT, UP, UR, Create, FadeIn, FadeOut, Rectangle,
                    RoundedRectangle, Scene, VGroup, config, linear)
 
 from . import config as C
 from .script_parser import load_scene
-from .style import BG, MUTED, SAFE_BOTTOM, TEXT, T
+from .style import BG, MUTED, SAFE_BOTTOM, TEXT, UNKNOWN, T
 from .tts import cached_clip, estimate_duration, load_manifest
 
 
@@ -64,6 +64,7 @@ class _BeatTracker:
 class NarratedScene(Scene):
     SCENE_ID: str = ""
     PAUSE_LABELS: dict = {}     # beat name -> on-screen label for its scripted pause (default "Pause and think")
+    TIMER_CORNER = UR           # DR puts the timer in the caption strip, which is free during silent pauses
 
     def setup(self):
         self.camera.background_color = BG
@@ -122,9 +123,12 @@ class NarratedScene(Scene):
         frame = RoundedRectangle(width=w, height=0.16, corner_radius=0.08, stroke_color=MUTED,
                                  stroke_width=2, fill_opacity=0)
         bar = Rectangle(width=w - 0.04, height=0.12, stroke_width=0, fill_color=MUTED, fill_opacity=0.9)
-        txt = T(f"{label}  ({int(round(seconds))} s)", size=18, color=MUTED)
+        if self.TIMER_CORNER is DR:         # attempt periods: the instruction itself, emphasised, in the bottom strip
+            txt = T(f"{label}  ({int(round(seconds))} s)", size=21, color=UNKNOWN, weight="BOLD")
+        else:
+            txt = T(f"{label}  ({int(round(seconds))} s)", size=18, color=MUTED)
         grp = VGroup(txt, VGroup(frame, bar)).arrange(DOWN, buff=0.12)
-        grp.to_corner(UR, buff=0.3)
+        grp.to_corner(self.TIMER_CORNER, buff=0.3)
         bar.move_to(frame)
         self.play(FadeIn(grp), run_time=0.3)
         left = bar.get_left()

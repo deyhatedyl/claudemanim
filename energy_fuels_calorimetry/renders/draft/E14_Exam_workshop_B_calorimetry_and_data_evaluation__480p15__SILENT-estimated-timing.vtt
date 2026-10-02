@@ -1,0 +1,1028 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.277
+Welcome to episode fourteen, our
+second and final exam workshop.
+
+00:00:04.317 --> 00:00:09.134
+We'll work through two longer practice
+questions on calorimetry and data
+
+00:00:09.174 --> 00:00:11.899
+evaluation, recap how to choose a method,
+
+00:00:11.939 --> 00:00:15.946
+and finish with a quick diagnostic
+on the most common traps.
+
+00:00:15.986 --> 00:00:20.129
+These are original practice
+questions written for this series,
+
+00:00:20.169 --> 00:00:22.057
+not official exam questions.
+
+00:00:22.400 --> 00:00:24.469
+Two retrieval checks first.
+
+00:00:24.509 --> 00:00:30.876
+How many moles of hydrochloric acid are in
+twenty-five point zero millilitres of a
+
+00:00:30.916 --> 00:00:34.704
+zero point two zero zero
+mole per litre solution?
+
+00:00:34.744 --> 00:00:41.189
+And a heater runs at six point zero zero
+volts and one point five zero amps for two
+
+00:00:41.229 --> 00:00:43.064
+point zero zero minutes.
+
+00:00:43.104 --> 00:00:46.346
+How much electrical energy does it supply?
+
+00:00:46.386 --> 00:00:47.714
+Pause and answer.
+
+00:00:58.133 --> 00:01:02.001
+For the acid, convert the
+volume to litres first:
+
+00:01:02.041 --> 00:01:08.301
+zero point two zero zero times zero point
+zero two five zero is zero point zero
+
+00:01:08.341 --> 00:01:10.374
+zero five zero zero moles.
+
+00:01:10.414 --> 00:01:13.883
+For the heater, convert
+the time to seconds:
+
+00:01:13.923 --> 00:01:20.342
+six point zero zero times one point five
+zero times one hundred and twenty is one
+
+00:01:20.382 --> 00:01:22.495
+thousand and eighty joules.
+
+00:01:22.535 --> 00:01:24.688
+Units first, then multiply.
+
+00:01:25.666 --> 00:01:29.356
+Practice question Q twenty-seven
+is worth fourteen marks.
+
+00:01:29.396 --> 00:01:31.842
+It combines an electrical calibration,
+
+00:01:31.882 --> 00:01:35.114
+a neutralisation reaction
+and a temperature graph.
+
+00:01:35.154 --> 00:01:37.379
+Read it all the way through first.
+
+00:01:37.733 --> 00:01:41.460
+Pause the video now and
+attempt every part on paper.
+
+00:01:41.500 --> 00:01:44.792
+Give yourself about
+fifteen to twenty minutes.
+
+00:01:44.832 --> 00:01:49.863
+If you keep the video running, the
+next minute is quiet thinking time:
+
+00:01:49.903 --> 00:01:54.177
+sketch the temperature graph
+before you calculate anything.
+
+00:02:55.200 --> 00:02:56.315
+Let's annotate.
+
+00:02:56.355 --> 00:03:02.397
+The calibration uses five point zero zero
+volts and one point two zero amps for
+
+00:03:02.437 --> 00:03:07.786
+three hundred seconds, giving a rise
+of three point zero zero degrees.
+
+00:03:07.826 --> 00:03:13.021
+That's E equals V times I times t,
+with the time already in seconds,
+
+00:03:13.061 --> 00:03:15.602
+followed by a calibration factor.
+
+00:03:16.000 --> 00:03:21.241
+The question says the calibration
+factor applies to the reaction mixture.
+
+00:03:21.281 --> 00:03:27.246
+So for the reaction, the heat is the
+calibration factor times the temperature rise.
+
+00:03:27.286 --> 00:03:30.285
+We won't use m c delta T for the reaction,
+
+00:03:30.325 --> 00:03:36.402
+because the calibration already accounts
+for the water, the cup and the thermometer.
+
+00:03:36.800 --> 00:03:42.046
+The solutions: fifty point zero millilitres
+of one point zero zero molar acid,
+
+00:03:42.086 --> 00:03:47.602
+and seventy-five point zero millilitres of
+zero point eight zero zero molar sodium
+
+00:03:47.642 --> 00:03:48.280
+hydroxide.
+
+00:03:48.320 --> 00:03:53.064
+Convert millilitres to litres, and
+expect one reactant to be limiting.
+
+00:03:53.400 --> 00:03:54.747
+Finally, the graph.
+
+00:03:54.787 --> 00:04:00.226
+The baseline is twenty point zero
+degrees, mixing happens at sixty seconds,
+
+00:04:00.266 --> 00:04:04.973
+and the cooling readings start at
+one hundred and twenty seconds.
+
+00:04:05.013 --> 00:04:10.491
+So we'll need to extrapolate the cooling
+line back to the moment of mixing.
+
+00:04:11.466 --> 00:04:14.001
+Plan the chain before calculating.
+
+00:04:14.041 --> 00:04:18.847
+Part a: E equals V times I times
+t, then the calibration factor,
+
+00:04:18.887 --> 00:04:21.800
+then a comparison with the water alone.
+
+00:04:21.840 --> 00:04:26.570
+Part b: moles of each solution
+from concentration times volume,
+
+00:04:26.610 --> 00:04:28.615
+then the limiting reactant.
+
+00:04:28.655 --> 00:04:32.704
+Part c: the corrected
+temperature rise from the graph.
+
+00:04:32.744 --> 00:04:37.853
+Part d: the heat from the calibration
+factor and the corrected rise,
+
+00:04:37.893 --> 00:04:41.224
+divided by the limiting
+amount, with a sign.
+
+00:04:41.600 --> 00:04:44.449
+Parts a, b and c all feed part d,
+
+00:04:44.489 --> 00:04:49.616
+so an error in any of them
+carries through to the enthalpy.
+
+00:04:49.656 --> 00:04:52.594
+Parts e and f are reasoning parts:
+
+00:04:52.634 --> 00:04:57.450
+they test whether you understand
+what the numbers mean.
+
+00:04:58.399 --> 00:04:58.866
+Part a.
+
+00:04:58.906 --> 00:05:04.873
+The calibration energy is five point zero
+zero times one point two zero times three
+
+00:05:04.913 --> 00:05:07.985
+hundred: one thousand
+eight hundred joules.
+
+00:05:08.025 --> 00:05:13.920
+The calibration factor is one thousand
+eight hundred joules divided by three point
+
+00:05:13.960 --> 00:05:17.506
+zero zero degrees: six
+hundred joules per degree.
+
+00:05:17.866 --> 00:05:19.586
+Now a plausibility check.
+
+00:05:19.626 --> 00:05:25.360
+The water alone would need one hundred and
+twenty-five point zero grams times four
+
+00:05:25.400 --> 00:05:30.571
+point one eight: five hundred and
+twenty-two point five joules per degree.
+
+00:05:30.611 --> 00:05:35.430
+The calibration factor is larger,
+which makes sense, because the cup,
+
+00:05:35.470 --> 00:05:39.302
+the thermometer and the
+stirrer absorb some energy too.
+
+00:05:39.342 --> 00:05:44.443
+A calibration factor smaller than the
+water alone would suggest an error.
+
+00:05:44.483 --> 00:05:48.919
+Three marks: the energy, the
+calibration factor, and the check.
+
+00:05:49.866 --> 00:05:50.380
+Part b.
+
+00:05:50.420 --> 00:05:56.872
+Hydrochloric acid: one point zero zero
+times zero point zero five zero zero litres
+
+00:05:56.912 --> 00:06:00.039
+is zero point zero five zero zero moles.
+
+00:06:00.079 --> 00:06:06.532
+Sodium hydroxide: zero point eight zero
+zero times zero point zero seven five zero
+
+00:06:06.572 --> 00:06:10.214
+litres is zero point zero
+six zero zero moles.
+
+00:06:10.599 --> 00:06:13.521
+They react one to one, forming water.
+
+00:06:13.561 --> 00:06:18.806
+So the acid, at zero point zero
+five zero zero moles, is limiting,
+
+00:06:18.846 --> 00:06:24.650
+and zero point zero one zero zero
+moles of sodium hydroxide is left over.
+
+00:06:24.690 --> 00:06:30.895
+The heat released depends on the zero
+point zero five zero zero moles of water
+
+00:06:30.935 --> 00:06:31.456
+formed.
+
+00:06:31.496 --> 00:06:35.499
+Two marks: the amounts,
+and the limiting reactant.
+
+00:06:36.465 --> 00:06:36.902
+Part c.
+
+00:06:36.942 --> 00:06:37.857
+Plot the data.
+
+00:06:37.897 --> 00:06:42.766
+The baseline is twenty point zero
+degrees until mixing at sixty seconds.
+
+00:06:42.806 --> 00:06:47.130
+After that, the readings fall
+steadily: twenty-four point seven,
+
+00:06:47.170 --> 00:06:52.654
+twenty-four point six, twenty-four point
+five and twenty-four point four degrees,
+
+00:06:52.694 --> 00:06:54.330
+one every sixty seconds.
+
+00:06:54.665 --> 00:06:58.676
+The highest reading is
+twenty-four point seven degrees,
+
+00:06:58.716 --> 00:07:02.579
+but by then the mixture had
+already been losing heat.
+
+00:07:02.619 --> 00:07:06.851
+So draw the best straight line
+through the cooling points,
+
+00:07:06.891 --> 00:07:11.163
+and extend it back to sixty
+seconds, the moment of mixing.
+
+00:07:11.531 --> 00:07:15.762
+The line falls by zero point
+one degrees every sixty seconds,
+
+00:07:15.802 --> 00:07:20.172
+so at sixty seconds it reaches
+twenty-four point eight degrees.
+
+00:07:20.212 --> 00:07:25.913
+The corrected temperature rise is twenty-four
+point eight minus twenty point zero:
+
+00:07:25.953 --> 00:07:27.663
+four point eight degrees.
+
+00:07:27.703 --> 00:07:32.114
+One mark for the extrapolation,
+and one for the corrected rise.
+
+00:07:33.064 --> 00:07:33.530
+Part d.
+
+00:07:33.570 --> 00:07:39.457
+The heat absorbed by the calorimeter is
+the calibration factor times the corrected
+
+00:07:39.497 --> 00:07:42.421
+rise: six hundred times four point eight,
+
+00:07:42.461 --> 00:07:46.324
+which is two thousand eight
+hundred and eighty joules,
+
+00:07:46.364 --> 00:07:49.328
+or two point eight eight zero kilojoules.
+
+00:07:49.664 --> 00:07:52.827
+Divide by the amount of
+the limiting reactant,
+
+00:07:52.867 --> 00:07:55.612
+which equals the amount of water formed:
+
+00:07:55.652 --> 00:08:01.112
+two point eight eight zero kilojoules
+divided by zero point zero five zero zero
+
+00:08:01.152 --> 00:08:03.271
+moles is fifty-seven point six.
+
+00:08:03.311 --> 00:08:08.284
+The reaction released heat into the
+calorimeter, so delta H is negative:
+
+00:08:08.324 --> 00:08:13.923
+negative fifty-seven point six, or about
+negative fifty-eight kilojoules per mole
+
+00:08:13.963 --> 00:08:14.550
+of water.
+
+00:08:14.590 --> 00:08:19.116
+Two significant figures, because
+the corrected rise has only two.
+
+00:08:19.464 --> 00:08:24.134
+Three marks: the heat, the
+division by the limiting amount,
+
+00:08:24.174 --> 00:08:27.686
+and delta H with the
+correct sign and units.
+
+00:08:28.664 --> 00:08:31.284
+Here are three tempting wrong answers.
+
+00:08:31.324 --> 00:08:36.813
+The first divides by zero point zero six
+zero zero moles, the sodium hydroxide,
+
+00:08:36.853 --> 00:08:41.083
+and gets negative forty-eight
+point zero kilojoules per mole.
+
+00:08:41.123 --> 00:08:46.583
+But the excess sodium hydroxide never
+reacted, so it can't be the denominator.
+
+00:08:46.930 --> 00:08:51.344
+The second uses the highest reading,
+twenty-four point seven degrees,
+
+00:08:51.384 --> 00:08:53.538
+instead of the extrapolated value.
+
+00:08:53.578 --> 00:08:56.249
+The rise becomes four point seven degrees,
+
+00:08:56.289 --> 00:08:59.476
+and delta H becomes negative
+fifty-six point four.
+
+00:08:59.516 --> 00:09:03.195
+It's an underestimate, because
+cooling had already begun.
+
+00:09:03.530 --> 00:09:08.815
+The third ignores the calibration and
+uses m c delta T with one hundred and
+
+00:09:08.855 --> 00:09:10.945
+twenty-five grams of solution.
+
+00:09:10.985 --> 00:09:15.205
+That gives about two thousand
+five hundred and eight joules,
+
+00:09:15.245 --> 00:09:19.109
+and about negative fifty
+point two kilojoules per mole.
+
+00:09:19.149 --> 00:09:23.369
+It leaves out the energy absorbed
+by the calorimeter itself,
+
+00:09:23.409 --> 00:09:27.243
+which is exactly what the
+calibration factor includes.
+
+00:09:28.197 --> 00:09:28.692
+Part e.
+
+00:09:28.732 --> 00:09:32.891
+If repeats of this experiment
+gave very similar values,
+
+00:09:32.931 --> 00:09:36.938
+that would show the result
+is repeatable, or precise.
+
+00:09:36.978 --> 00:09:39.763
+It would not show that it's accurate.
+
+00:09:39.803 --> 00:09:45.872
+A systematic error, such as a wrong
+calibration factor or unaccounted heat loss,
+
+00:09:45.912 --> 00:09:49.232
+would shift every repeat
+by the same amount.
+
+00:09:49.272 --> 00:09:51.028
+One mark for each idea.
+
+00:09:51.397 --> 00:09:51.905
+Part f.
+
+00:09:51.945 --> 00:09:58.323
+Doubling the sodium hydroxide concentration
+gives zero point one two zero moles of
+
+00:09:58.363 --> 00:09:58.558
+it.
+
+00:09:58.598 --> 00:10:03.567
+But the acid is still only zero
+point zero five zero zero moles,
+
+00:10:03.607 --> 00:10:05.445
+and it's still limiting.
+
+00:10:05.485 --> 00:10:10.220
+The same amount of water forms,
+so the same heat is released.
+
+00:10:10.260 --> 00:10:14.408
+Two marks: the limiting
+reactant, and the conclusion.
+
+00:10:14.797 --> 00:10:20.703
+Here's the full tally for Q twenty-seven:
+three, two, two, three, two and two,
+
+00:10:20.743 --> 00:10:22.192
+for fourteen marks.
+
+00:10:23.129 --> 00:10:25.030
+Checkpoint: spot the error.
+
+00:10:25.070 --> 00:10:30.563
+Here are three lines from different
+students' answers to Q twenty-seven and Q
+
+00:10:30.603 --> 00:10:31.497
+twenty-eight.
+
+00:10:31.537 --> 00:10:33.365
+Each contains one mistake.
+
+00:10:33.405 --> 00:10:35.202
+Pause and find all three.
+
+00:10:50.663 --> 00:10:54.452
+Line one forgets to convert
+millilitres to litres.
+
+00:10:54.492 --> 00:10:59.813
+Fifty point zero millilitres is zero
+point zero five zero zero litres,
+
+00:10:59.853 --> 00:11:04.678
+so the acid is zero point zero
+five zero zero moles, not fifty.
+
+00:11:05.063 --> 00:11:07.012
+Line two has the wrong sign.
+
+00:11:07.052 --> 00:11:12.697
+The temperature rose because the reaction
+released heat, so delta H is negative:
+
+00:11:12.737 --> 00:11:16.361
+negative fifty-seven point
+six kilojoules per mole.
+
+00:11:16.729 --> 00:11:20.316
+Line three divides joules
+by kilojoules per mole.
+
+00:11:20.356 --> 00:11:25.422
+Nine hundred and sixty joules is
+zero point nine six zero kilojoules,
+
+00:11:25.462 --> 00:11:28.679
+giving zero point zero
+four zero zero moles.
+
+00:11:28.719 --> 00:11:34.155
+The wrong value would make the mass of
+X three thousand two hundred grams,
+
+00:11:34.195 --> 00:11:37.189
+far more than the whole four gram sample,
+
+00:11:37.229 --> 00:11:40.856
+which a plausibility check
+catches straight away.
+
+00:11:41.795 --> 00:11:45.373
+Practice question Q twenty-eight
+is worth twelve marks.
+
+00:11:45.413 --> 00:11:49.976
+It tests a manufacturer's claim about
+an idealised hand-warmer powder.
+
+00:11:50.016 --> 00:11:54.251
+The active solid, X, is hypothetical,
+invented for this question.
+
+00:11:54.291 --> 00:11:55.343
+Read it through.
+
+00:11:55.729 --> 00:11:59.291
+Pause the video now and
+attempt all six parts.
+
+00:11:59.331 --> 00:12:03.676
+If you keep it running, here's
+some quiet thinking time.
+
+00:12:03.716 --> 00:12:09.510
+Start by deciding what the temperature
+rise tells you, and in which units.
+
+00:12:55.529 --> 00:12:56.034
+Part a.
+
+00:12:56.074 --> 00:13:01.951
+The heat gained by the calorimeter is
+the calibration factor times the rise:
+
+00:13:01.991 --> 00:13:08.258
+three hundred times three point two zero,
+which is nine hundred and sixty joules.
+
+00:13:08.298 --> 00:13:09.098
+Two marks.
+
+00:13:09.462 --> 00:13:09.943
+Part b.
+
+00:13:09.983 --> 00:13:15.000
+Dissolving one mole of X releases
+twenty-four point zero kilojoules.
+
+00:13:15.040 --> 00:13:20.951
+So the amount of X is zero point nine six
+zero kilojoules divided by twenty-four
+
+00:13:20.991 --> 00:13:26.083
+point zero kilojoules per mole: zero
+point zero four zero zero moles.
+
+00:13:26.123 --> 00:13:29.990
+Watch the units: convert
+joules to kilojoules first.
+
+00:13:30.329 --> 00:13:37.005
+The mass of X is zero point zero four zero
+zero moles times eighty point zero grams
+
+00:13:37.045 --> 00:13:40.000
+per mole: three point two zero grams.
+
+00:13:40.040 --> 00:13:44.531
+As a percentage of the four
+point zero zero gram sample,
+
+00:13:44.571 --> 00:13:47.202
+that's eighty point zero percent.
+
+00:13:47.242 --> 00:13:49.669
+Four marks across those steps.
+
+00:13:50.062 --> 00:13:50.544
+Part c.
+
+00:13:50.584 --> 00:13:56.732
+Eighty point zero percent is well below
+the claimed ninety-five point zero percent,
+
+00:13:56.772 --> 00:14:00.236
+so this measurement does
+not support the claim.
+
+00:14:00.276 --> 00:14:01.076
+One mark.
+
+00:14:01.927 --> 00:14:02.369
+Part d.
+
+00:14:02.409 --> 00:14:07.799
+Suppose a spreadsheet mistakenly uses a
+calibration factor of three hundred and
+
+00:14:07.839 --> 00:14:11.099
+sixty joules per degree,
+from a different setup.
+
+00:14:11.139 --> 00:14:15.429
+The heat becomes one thousand
+one hundred and fifty-two joules,
+
+00:14:15.469 --> 00:14:19.347
+the amount becomes zero point
+zero four eight zero moles,
+
+00:14:19.387 --> 00:14:22.509
+the mass becomes three
+point eight four grams,
+
+00:14:22.549 --> 00:14:26.467
+and the percentage becomes
+ninety-six point zero percent.
+
+00:14:26.861 --> 00:14:29.356
+Follow the direction of the error.
+
+00:14:29.396 --> 00:14:35.397
+A calibration factor that's too large
+makes every quantity calculated from it too
+
+00:14:35.437 --> 00:14:35.845
+large.
+
+00:14:35.885 --> 00:14:40.543
+Here, it makes a powder that
+fails the claim appear to meet it.
+
+00:14:40.583 --> 00:14:44.312
+Two marks: the recalculation,
+and the implication.
+
+00:14:44.661 --> 00:14:45.147
+Part e.
+
+00:14:45.187 --> 00:14:50.639
+Repeating the test with the same wrong
+calibration factor won't fix this.
+
+00:14:50.679 --> 00:14:53.196
+Each repeat carries the same bias,
+
+00:14:53.236 --> 00:14:57.258
+so the results would agree
+closely and still be wrong.
+
+00:14:57.298 --> 00:15:00.568
+Precision doesn't remove
+a systematic error.
+
+00:15:00.608 --> 00:15:01.408
+One mark.
+
+00:15:02.260 --> 00:15:02.813
+Part f.
+
+00:15:02.853 --> 00:15:09.755
+Suppose the powder absorbs moisture from
+the air before a new four point zero zero
+
+00:15:09.795 --> 00:15:11.702
+gram sample is weighed.
+
+00:15:11.742 --> 00:15:16.189
+Some of that four point zero
+zero grams is now water,
+
+00:15:16.229 --> 00:15:18.938
+so there's less X in the sample.
+
+00:15:19.327 --> 00:15:25.118
+Less X dissolves, so less heat is
+released, the temperature rise is smaller,
+
+00:15:25.158 --> 00:15:28.495
+and the calculated
+percentage of X is lower.
+
+00:15:28.535 --> 00:15:33.522
+Two marks: the reduced active
+mass, and its effect on the result.
+
+00:15:33.860 --> 00:15:39.405
+The full tally for Q twenty-eight:
+two, four, one, two, one and two,
+
+00:15:39.445 --> 00:15:40.841
+for twelve marks.
+
+00:15:41.792 --> 00:15:45.457
+One more checkpoint, on
+the direction of errors.
+
+00:15:45.497 --> 00:15:48.776
+For each change to the
+Q twenty-eight test,
+
+00:15:48.816 --> 00:15:54.565
+decide whether the calculated percentage
+of X would be too high or too low.
+
+00:15:54.605 --> 00:15:58.887
+First, heat is lost to the
+surroundings during the test.
+
+00:15:58.927 --> 00:16:04.984
+Second, the sample mass is recorded as
+three point eight zero grams when it was
+
+00:16:05.024 --> 00:16:07.608
+really four point zero zero grams.
+
+00:16:07.648 --> 00:16:11.313
+Third, the calibration
+factor used is too small.
+
+00:16:11.353 --> 00:16:12.665
+Pause and decide.
+
+00:16:25.125 --> 00:16:31.179
+Heat loss makes the measured rise too
+small, so the percentage comes out too low.
+
+00:16:31.219 --> 00:16:37.197
+Recording a smaller sample mass than the
+real one makes the percentage too high:
+
+00:16:37.237 --> 00:16:43.291
+three point two zero divided by three
+point eight zero is about eighty-four point
+
+00:16:43.331 --> 00:16:44.193
+two percent.
+
+00:16:44.233 --> 00:16:50.212
+And a calibration factor that's too small
+makes the heat, and so the percentage,
+
+00:16:50.252 --> 00:16:50.814
+too low.
+
+00:16:50.854 --> 00:16:55.819
+In each case, follow the change
+through the chain of calculations.
+
+00:16:56.792 --> 00:17:01.267
+Let's recap how to choose a
+method across the whole topic.
+
+00:17:01.307 --> 00:17:03.525
+Start from what you're given.
+
+00:17:03.565 --> 00:17:07.340
+A mass gives moles by
+dividing by the molar mass.
+
+00:17:07.380 --> 00:17:12.867
+A gas volume at SLC gives moles by
+dividing by twenty-four point eight.
+
+00:17:12.907 --> 00:17:17.968
+A solution gives moles from
+concentration times volume in litres.
+
+00:17:18.325 --> 00:17:24.510
+For energy: the moles of fuel times the
+size of delta H gives the energy released.
+
+00:17:24.550 --> 00:17:26.864
+Heating water uses m c delta T.
+
+00:17:26.904 --> 00:17:30.583
+An electrical calibration
+uses V times I times t,
+
+00:17:30.623 --> 00:17:36.201
+and the calibration factor is that
+energy divided by the temperature rise.
+
+00:17:36.241 --> 00:17:41.895
+With a calibrated calorimeter, the heat
+is the calibration factor times the
+
+00:17:41.935 --> 00:17:43.225
+temperature rise.
+
+00:17:43.592 --> 00:17:48.987
+Molar enthalpy is the heat divided by
+the moles of the limiting reactant,
+
+00:17:49.027 --> 00:17:52.784
+with a negative sign if
+the reaction released heat.
+
+00:17:52.824 --> 00:17:55.688
+Efficiency is useful output over input.
+
+00:17:55.728 --> 00:18:00.974
+To find the input needed for a target
+output, divide by the efficiency.
+
+00:18:01.014 --> 00:18:04.588
+And whenever you compare
+fuels, state the basis.
+
+00:18:05.525 --> 00:18:07.337
+Now a quick diagnostic.
+
+00:18:07.377 --> 00:18:09.269
+Here are six statements.
+
+00:18:09.309 --> 00:18:13.939
+Decide whether each is correct,
+and if not, name the trap.
+
+00:18:13.979 --> 00:18:15.348
+Pause and decide.
+
+00:18:40.792 --> 00:18:41.577
+One: wrong.
+
+00:18:41.617 --> 00:18:45.632
+Convert seventy-five point
+zero millilitres to litres,
+
+00:18:45.672 --> 00:18:48.861
+giving zero point zero
+six zero zero moles.
+
+00:18:48.901 --> 00:18:49.686
+Two: wrong.
+
+00:18:49.726 --> 00:18:53.816
+Use only the reacting
+component's share of the mixture.
+
+00:18:53.856 --> 00:18:54.792
+Three: wrong.
+
+00:18:54.832 --> 00:18:57.871
+Only twenty-one percent of air is oxygen.
+
+00:18:57.911 --> 00:18:58.772
+Four: wrong.
+
+00:18:58.812 --> 00:19:03.427
+Divide by the limiting reactant,
+the one that actually reacts,
+
+00:19:03.467 --> 00:19:05.079
+not the one in excess.
+
+00:19:05.119 --> 00:19:05.980
+Five: wrong.
+
+00:19:06.020 --> 00:19:10.560
+Joules per degree times degrees
+gives joules, not kilojoules.
+
+00:19:10.600 --> 00:19:11.576
+Six: correct.
+
+00:19:11.925 --> 00:19:12.726
+Six more.
+
+00:19:12.766 --> 00:19:14.354
+Pause and decide.
+
+00:19:39.792 --> 00:19:40.744
+Seven: wrong.
+
+00:19:40.784 --> 00:19:45.936
+The highest reading underestimates
+the rise when heat is being lost,
+
+00:19:45.976 --> 00:19:48.379
+so extrapolate the cooling line.
+
+00:19:48.419 --> 00:19:49.371
+Eight: wrong.
+
+00:19:49.411 --> 00:19:55.403
+Close agreement shows precision, but a
+systematic error can shift every repeat.
+
+00:19:55.443 --> 00:19:56.319
+Nine: wrong.
+
+00:19:56.359 --> 00:20:01.434
+A catalyst lowers the activation
+energy but doesn't change delta H.
+
+00:20:01.474 --> 00:20:02.427
+Ten: correct.
+
+00:20:02.467 --> 00:20:03.496
+Eleven: wrong.
+
+00:20:03.536 --> 00:20:06.855
+Per mole of fuel isn't
+per useful kilojoule;
+
+00:20:06.895 --> 00:20:10.672
+the energy released and
+the efficiency matter too.
+
+00:20:10.712 --> 00:20:11.741
+Twelve: wrong.
+
+00:20:11.781 --> 00:20:18.002
+A renewable fuel can still compete with
+food, use a lot of water, or leak methane.
+
+00:20:18.042 --> 00:20:20.867
+Add any you missed to your error log.
+
+00:20:21.858 --> 00:20:23.691
+That's the end of the series.
+
+00:20:23.731 --> 00:20:27.436
+You now have a full toolkit:
+mole calculations with units,
+
+00:20:27.476 --> 00:20:32.796
+energy from reactions and fuels, calorimetry
+with calibration and graph correction,
+
+00:20:32.836 --> 00:20:35.226
+and fair, evidence-based comparisons.
+
+00:20:35.592 --> 00:20:41.135
+Use the worksheet to attempt every
+practice question again without the video,
+
+00:20:41.175 --> 00:20:45.703
+then check the worked solutions,
+including the marks and traps.
+
+00:20:45.743 --> 00:20:51.504
+Keep the formula and method sheet beside
+you, and keep adding to your error log.
+
+00:20:51.544 --> 00:20:52.344
+Good luck.

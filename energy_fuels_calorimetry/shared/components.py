@@ -75,7 +75,7 @@ def title_card(ep_num: int, title: str, subtitle: str = "VCE Chemistry · Energy
 # ------------------------------------------------------------------ question card
 def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: bool = True,
                   parts: list[str] | None = None, cols: int = 1, side: bool = False, split: float = 0.5,
-                  inline_marks: bool = False, tight: bool = False) -> VGroup:
+                  inline_marks: bool = False, tight: bool = False, balance: bool = False) -> VGroup:
     """The full prompt of an anchor question with its marks (no answers). cols=2 lays parts out in two columns;
     side=True puts the stem on the left and a single column of parts on the right (for long questions)."""
     q = BY_ID[qid]
@@ -131,8 +131,14 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
             rows.add(*built)
         else:
             per = -(-len(built) // cols)
-            columns = VGroup(*[VGroup(*built[i * per:(i + 1) * per]).arrange(DOWN, aligned_edge=LEFT, buff=0.12 if tight else 0.18)
-                               for i in range(cols)])
+            if balance and cols == 2:          # split (order kept) where the taller column is shortest
+                per = min(range(1, len(built)), key=lambda k: max(sum(p.height for p in built[:k]),
+                                                                   sum(p.height for p in built[k:])))
+            pb = 0.12 if tight else 0.18
+            columns = VGroup(VGroup(*built[:per]).arrange(DOWN, aligned_edge=LEFT, buff=pb),
+                             VGroup(*built[per:]).arrange(DOWN, aligned_edge=LEFT, buff=pb)) if cols == 2 else \
+                VGroup(*[VGroup(*built[i * per:(i + 1) * per]).arrange(DOWN, aligned_edge=LEFT, buff=pb)
+                         for i in range(cols)])
             columns.arrange(RIGHT, buff=0.4, aligned_edge=UP)
             for i, c in enumerate(columns[1:], 1):
                 c.align_to(columns[0], LEFT).shift(RIGHT * pw * i)

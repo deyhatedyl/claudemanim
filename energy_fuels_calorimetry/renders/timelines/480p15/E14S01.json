@@ -1,0 +1,42 @@
+{
+ "scene": "E14S01",
+ "title": "Retrieval check",
+ "cls": "E14S01_Retrieval",
+ "fps": 15,
+ "duration": 85.6667,
+ "beats": [
+  {
+   "key": "E14S01.b01",
+   "start": 0.0,
+   "speech": 22.0572,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode fourteen, our second and final exam workshop. We'll work through two longer practice questions on calorimetry and data evaluation, recap how to choose a method, and finish with a quick diagnostic on the most common traps. These are original practice questions written for this series, not official exam questions.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S01.b02",
+   "start": 22.4,
+   "speech": 25.3138,
+   "audio": null,
+   "estimated": true,
+   "text": "Two retrieval checks first. How many moles of hydrochloric acid are in twenty-five point zero millilitres of a zero point two zero zero mole per litre solution? And a heater runs at six point zero zero volts and one point five zero amps for two point zero zero minutes. How much electrical energy does it supply? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E14S01.b03",
+   "start": 58.1333,
+   "speech": 26.5552,
+   "audio": null,
+   "estimated": true,
+   "text": "For the acid, convert the volume to litres first: zero point two zero zero times zero point zero two five zero is zero point zero zero five zero zero moles. For the heater, convert the time to seconds: six point zero zero times one point five zero times one hundred and twenty is one thousand and eighty joules. Units first, then multiply.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

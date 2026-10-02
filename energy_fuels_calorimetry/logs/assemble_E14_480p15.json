@@ -1,0 +1,132 @@
+{
+ "episode": "E14",
+ "quality": "480p15",
+ "output": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 54,
+ "beats_with_audio": 0,
+ "duration": 1253.26,
+ "scenes": [
+  {
+   "scene": "E14S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 85.666341
+  },
+  {
+   "scene": "E14S02",
+   "title": "Q27: attempt it first",
+   "start": 85.666341,
+   "duration": 89.533333
+  },
+  {
+   "scene": "E14S03",
+   "title": "Q27: read and annotate",
+   "start": 175.19967400000002,
+   "duration": 76.266667
+  },
+  {
+   "scene": "E14S04",
+   "title": "Q27: plan the methods",
+   "start": 251.466341,
+   "duration": 46.932682
+  },
+  {
+   "scene": "E14S05",
+   "title": "Q27 part a: calibration",
+   "start": 298.399023,
+   "duration": 51.466667
+  },
+  {
+   "scene": "E14S06",
+   "title": "Q27 part b: the limiting reactant",
+   "start": 349.86569,
+   "duration": 46.599023
+  },
+  {
+   "scene": "E14S07",
+   "title": "Q27 part c: correcting the temperature rise",
+   "start": 396.46471299999996,
+   "duration": 56.599349
+  },
+  {
+   "scene": "E14S08",
+   "title": "Q27 part d: molar enthalpy",
+   "start": 453.064062,
+   "duration": 55.599674
+  },
+  {
+   "scene": "E14S09",
+   "title": "Wrong solutions for Q27",
+   "start": 508.663736,
+   "duration": 59.533333
+  },
+  {
+   "scene": "E14S10",
+   "title": "Q27 parts e and f: evidence and prediction",
+   "start": 568.1970689999999,
+   "duration": 54.932357
+  },
+  {
+   "scene": "E14S11",
+   "title": "Checkpoint: spot the error",
+   "start": 623.129426,
+   "duration": 78.666016
+  },
+  {
+   "scene": "E14S12",
+   "title": "Q28: attempt it first",
+   "start": 701.795442,
+   "duration": 73.733333
+  },
+  {
+   "scene": "E14S13",
+   "title": "Q28 parts a to c: testing the claim",
+   "start": 775.528775,
+   "duration": 66.398698
+  },
+  {
+   "scene": "E14S14",
+   "title": "Q28 parts d and e: a calibration error",
+   "start": 841.927473,
+   "duration": 60.332682
+  },
+  {
+   "scene": "E14S15",
+   "title": "Q28 part f: moisture",
+   "start": 902.2601549999999,
+   "duration": 39.532031
+  },
+  {
+   "scene": "E14S16",
+   "title": "Checkpoint: which way does the result move?",
+   "start": 941.7921859999999,
+   "duration": 74.999674
+  },
+  {
+   "scene": "E14S17",
+   "title": "Choosing a method",
+   "start": 1016.7918599999999,
+   "duration": 68.733008
+  },
+  {
+   "scene": "E14S18",
+   "title": "Diagnostic: the central traps",
+   "start": 1085.524868,
+   "duration": 136.333333
+  },
+  {
+   "scene": "E14S19",
+   "title": "Series close",
+   "start": 1221.858201,
+   "duration": 31.399349
+  }
+ ],
+ "captions": [
+  "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

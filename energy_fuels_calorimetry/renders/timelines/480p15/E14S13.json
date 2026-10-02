@@ -1,0 +1,53 @@
+{
+ "scene": "E14S13",
+ "title": "Q28 parts a to c: testing the claim",
+ "cls": "E14S13_PartsAC",
+ "fps": 15,
+ "duration": 66.4,
+ "beats": [
+  {
+   "key": "E14S13.b01",
+   "start": 0.0,
+   "speech": 13.5476,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. The heat gained by the calorimeter is the calibration factor times the rise: three hundred times three point two zero, which is nine hundred and sixty joules. Two marks.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S13.b02",
+   "start": 13.9333,
+   "speech": 20.5283,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. Dissolving one mole of X releases twenty-four point zero kilojoules. So the amount of X is zero point nine six zero kilojoules divided by twenty-four point zero kilojoules per mole: zero point zero four zero zero moles. Watch the units: convert joules to kilojoules first.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S13.b03",
+   "start": 34.8,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "The mass of X is zero point zero four zero zero moles times eighty point zero grams per mole: three point two zero grams. As a percentage of the four point zero zero gram sample, that's eighty point zero percent. Four marks across those steps.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S13.b04",
+   "start": 54.5333,
+   "speech": 10.8848,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. Eighty point zero percent is well below the claimed ninety-five point zero percent, so this measurement does not support the claim. One mark.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

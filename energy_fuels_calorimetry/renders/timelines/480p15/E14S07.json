@@ -1,0 +1,42 @@
+{
+ "scene": "E14S07",
+ "title": "Q27 part c: correcting the temperature rise",
+ "cls": "E14S07_Graph",
+ "fps": 15,
+ "duration": 56.6,
+ "beats": [
+  {
+   "key": "E14S07.b01",
+   "start": 0.0,
+   "speech": 17.8655,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. Plot the data. The baseline is twenty point zero degrees until mixing at sixty seconds. After that, the readings fall steadily: twenty-four point seven, twenty-four point six, twenty-four point five and twenty-four point four degrees, one every sixty seconds.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S07.b02",
+   "start": 18.2,
+   "speech": 16.4979,
+   "audio": null,
+   "estimated": true,
+   "text": "The highest reading is twenty-four point seven degrees, but by then the mixture had already been losing heat. So draw the best straight line through the cooling points, and extend it back to sixty seconds, the moment of mixing.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S07.b03",
+   "start": 35.0667,
+   "speech": 20.5821,
+   "audio": null,
+   "estimated": true,
+   "text": "The line falls by zero point one degrees every sixty seconds, so at sixty seconds it reaches twenty-four point eight degrees. The corrected temperature rise is twenty-four point eight minus twenty point zero: four point eight degrees. One mark for the extrapolation, and one for the corrected rise.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

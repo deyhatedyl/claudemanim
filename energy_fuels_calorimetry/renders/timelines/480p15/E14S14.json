@@ -1,0 +1,42 @@
+{
+ "scene": "E14S14",
+ "title": "Q28 parts d and e: a calibration error",
+ "cls": "E14S14_PartsDE",
+ "fps": 15,
+ "duration": 60.3333,
+ "beats": [
+  {
+   "key": "E14S14.b01",
+   "start": 0.0,
+   "speech": 24.54,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. Suppose a spreadsheet mistakenly uses a calibration factor of three hundred and sixty joules per degree, from a different setup. The heat becomes one thousand one hundred and fifty-two joules, the amount becomes zero point zero four eight zero moles, the mass becomes three point eight four grams, and the percentage becomes ninety-six point zero percent.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S14.b02",
+   "start": 24.9333,
+   "speech": 17.4517,
+   "audio": null,
+   "estimated": true,
+   "text": "Follow the direction of the error. A calibration factor that's too large makes every quantity calculated from it too large. Here, it makes a powder that fails the claim appear to meet it. Two marks: the recalculation, and the implication.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S14.b03",
+   "start": 42.7333,
+   "speech": 16.6241,
+   "audio": null,
+   "estimated": true,
+   "text": "Part e. Repeating the test with the same wrong calibration factor won't fix this. Each repeat carries the same bias, so the results would agree closely and still be wrong. Precision doesn't remove a systematic error. One mark.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

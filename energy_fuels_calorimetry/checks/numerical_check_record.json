@@ -1854,6 +1854,105 @@
   "ok": true
  },
  {
+  "qid": "E14",
+  "label": "retrieval: n(HCl) in 25.0 mL of 0.200 M",
+  "computed": 0.005000000000000001,
+  "target": 0.005,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "retrieval: 6.00 V x 1.50 A x 2.00 min",
+  "computed": 1080.0,
+  "target": 1080,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "wrong: divide by NaOH (excess)",
+  "computed": -48.0,
+  "target": -48.0,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "wrong: uncorrected max",
+  "computed": -56.399999999999984,
+  "target": -56.4,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "wrong: m c dT with 125 g, J",
+  "computed": 2508.0,
+  "target": 2508,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "wrong: m c dT with 125 g, dH",
+  "computed": -50.16,
+  "target": -50.16,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "excess NaOH left",
+  "computed": 0.009999999999999995,
+  "target": 0.01,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "doubled NaOH amount",
+  "computed": 0.12,
+  "target": 0.12,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "spot: J / (kJ/mol) gives mass",
+  "computed": 3200.0,
+  "target": 3200,
+  "unit": "g",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "direction: mass recorded 3.80 g",
+  "computed": 84.21052631578948,
+  "target": 84.2105,
+  "unit": "%",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E14",
+  "label": "direction: smaller CF lowers %",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
   "qid": "Q01",
   "label": "marks sum [1, 2, 1] = 4",
   "computed": "4",

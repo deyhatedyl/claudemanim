@@ -1,0 +1,31 @@
+{
+ "scene": "E14S16",
+ "title": "Checkpoint: which way does the result move?",
+ "cls": "E14S16_WhichWay",
+ "fps": 15,
+ "duration": 75.0,
+ "beats": [
+  {
+   "key": "E14S16.b01",
+   "start": 0.0,
+   "speech": 30.8731,
+   "audio": null,
+   "estimated": true,
+   "text": "One more checkpoint, on the direction of errors. For each change to the Q twenty-eight test, decide whether the calculated percentage of X would be too high or too low. First, heat is lost to the surroundings during the test. Second, the sample mass is recorded as three point eight zero grams when it was really four point zero zero grams. Third, the calibration factor used is too small. Pause and decide.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E14S16.b02",
+   "start": 43.3333,
+   "speech": 30.6931,
+   "audio": null,
+   "estimated": true,
+   "text": "Heat loss makes the measured rise too small, so the percentage comes out too low. Recording a smaller sample mass than the real one makes the percentage too high: three point two zero divided by three point eight zero is about eighty-four point two percent. And a calibration factor that's too small makes the heat, and so the percentage, too low. In each case, follow the change through the chain of calculations.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

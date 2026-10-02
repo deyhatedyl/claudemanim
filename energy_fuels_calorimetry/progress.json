@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T19:41:31",
+ "updated": "2026-10-02T19:59:04",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1835,7 +1835,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep13.py",
-    "sha": "5d2770474155faf4"
+    "sha": "66f46fde2600696a"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -2051,18 +2051,279 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label).",
     "final_qa": "pending"
    }
   },
   "E14": {
    "title": "Exam workshop B on calorimetry and data evaluation",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep14.md",
+    "sha": "11df6782c86d4583",
+    "beats": 54,
+    "words": 2384,
+    "est_minutes": 21.0,
+    "anchors": "Q27,Q28",
+    "coverage": "C01,C08,C11,C18,C20,C21,C22,C23,C24,C25,C27,C28"
+   },
+   "scenes_code": {
+    "path": "scenes/ep14.py",
+    "sha": "8cda14c0ba0b90bf"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E14S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 85.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S02",
+     "title": "Q27: attempt it first",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 89.5333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S03",
+     "title": "Q27: read and annotate",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 76.2667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S04",
+     "title": "Q27: plan the methods",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 46.9333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S05",
+     "title": "Q27 part a: calibration",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 51.4667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S06",
+     "title": "Q27 part b: the limiting reactant",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 46.6,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S07",
+     "title": "Q27 part c: correcting the temperature rise",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 56.6,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S08",
+     "title": "Q27 part d: molar enthalpy",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 55.6,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S09",
+     "title": "Wrong solutions for Q27",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S10",
+     "title": "Q27 parts e and f: evidence and prediction",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 54.9333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S11",
+     "title": "Checkpoint: spot the error",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 78.6667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S12",
+     "title": "Q28: attempt it first",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 73.7333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S13",
+     "title": "Q28 parts a to c: testing the claim",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 66.4,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S14",
+     "title": "Q28 parts d and e: a calibration error",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 60.3333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S15",
+     "title": "Q28 part f: moisture",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 39.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S16",
+     "title": "Checkpoint: which way does the result move?",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 75.0,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S17",
+     "title": "Choosing a method",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 68.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S18",
+     "title": "Diagnostic: the central traps",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 136.3333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E14S19",
+     "title": "Series close",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 31.4,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 54,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 1253.26,
+    "captions": [
+     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   }
  },
- "series_est_minutes": 171.6
+ "series_est_minutes": 192.6
 }

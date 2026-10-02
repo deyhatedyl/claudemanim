@@ -14,78 +14,11 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, mark_tally, question_card, result_box, right_panel, strike, table,  # noqa: E402
                                title_card, wrap, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.workshop import (BIO, CO2E, WK, X0, XM, attempt_card, blank, boxes_for, mbox, node, number,  # noqa: E402
+                             part_tag, requested, tally_text, tick, work)
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
                           header, panel)
-
-BIO = "#7BE495"
-CO2E = "#AEB6BF"
-WK = EQ_SMALL - 8          # working-line size
-X0 = -5.55                 # left edge of working lines
-XM = 6.0                   # mark-box column
-
-
-def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
-
-
-def mbox(n: int = 1) -> VGroup:
-    """An indicative-mark box; tick() fills it once the step is visible."""
-    r = RoundedRectangle(width=0.46, height=0.42, corner_radius=0.08, stroke_color=GOOD, stroke_width=2,
-                         fill_color=GOOD, fill_opacity=0)
-    return VGroup(r, T(str(n), size=SMALL, color=GOOD).move_to(r))
-
-
-def tick(box: VGroup) -> Animation:
-    """Fill one mark box (or every box in a row of them) solid green with a dark number."""
-    boxes = [box] if isinstance(box[0], RoundedRectangle) else list(box)
-    return AnimationGroup(*[a for x in boxes for a in (x[0].animate.set_fill(GOOD, opacity=0.95),
-                                                       x[1].animate.set_color(BG))])
-
-
-def work(tex: str, y: float, color: str = TEXT, size: int = WK, x: float = X0) -> MathTex:
-    m = M(tex, size=size, color=color)
-    return m.move_to([0, y, 0]).align_to([x, 0, 0], LEFT)
-
-
-def part_tag(letter: str, line: Mobject) -> Text:
-    return TB(f"{letter}.", size=LABEL + 2, color=SYSTEM).next_to(line, LEFT, buff=0.3).align_to([X0 - 0.75, 0, 0], LEFT)
-
-
-def boxes_for(line: Mobject, n: int = 1, marks: int = 1) -> VGroup:
-    g = VGroup(*[mbox(marks) for _ in range(n)]).arrange(LEFT, buff=0.1)
-    return g.move_to([XM - (g.width - 0.46) / 2, line.get_y(), 0])
-
-
-def tally_text(qid: str, got: int, total: int) -> Text:
-    return T(f"{qid} marks shown: {got} / {total}", size=SMALL + 1, color=GOOD).to_corner(UR, buff=0.4)
-
-
-def pause_banner(text: str, card: VGroup) -> VGroup:
-    """Pause instruction in the free right-hand end of a question card's title row (the timer owns the top-right)."""
-    t = TB(text, size=SMALL, color=UNKNOWN)
-    r = RoundedRectangle(width=t.width + 0.36, height=t.height + 0.2, corner_radius=0.1, stroke_color=UNKNOWN,
-                         stroke_width=2, fill_color=PANEL, fill_opacity=1).move_to(t)
-    g = VGroup(r, t)
-    head = card[1][0]
-    return g.move_to([card.get_right()[0] - 0.28 - g.width / 2, head.get_y(), 0])
-
-
-def blank() -> Dot:
-    return Dot(radius=0.001, fill_opacity=0, stroke_width=0)
-
-
-def node(letter: str, lines: list[str], color: str, width: float = 3.4, size: int = SMALL + 1) -> VGroup:
-    lab = chip(letter, color, size=SMALL + 2)
-    body = VGroup(*[T(l, size=size) for l in lines]).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
-    body.next_to(lab, RIGHT, buff=0.18, aligned_edge=UP)
-    g = VGroup(lab, body)
-    r = RoundedRectangle(width=max(width, g.width + 0.4), height=max(0.72, g.height + 0.32), corner_radius=0.12,
-                         stroke_color=color, stroke_width=2.5, fill_color=PANEL, fill_opacity=1)
-    g.move_to(r)
-    return VGroup(r, g)
 
 
 # =====================================================================================
@@ -166,16 +99,15 @@ class E13S02_Routine(NarratedScene):
 
 # =====================================================================================
 class E13S03_Q25Attempt(NarratedScene):
-    PAUSE_LABELS = {"b02": "Quiet attempt period"}
+    PAUSE_LABELS = {"b02": "Pause the video now and attempt every part"}
+    TIMER_CORNER = DR
 
     def construct(self):
-        qc = question_card("Q25", size=SMALL, width=13.3, cols=2, inline_marks=True, tight=True)
-        qc.move_to([0, 0, 0]).align_to([0, 3.05, 0], UP)         # no header: the card carries the title
+        qc = attempt_card("Q25")
         with self.beat("b01"):
             self.play(FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         with self.beat("b02") as b:
-            ban = pause_banner("Pause now and attempt every part", qc)
-            self.play(FadeIn(ban, scale=1.05), run_time=0.6)
+            self.play(Indicate(qc[1][0][0], color=UNKNOWN), run_time=0.8)
 
 
 # =====================================================================================
@@ -526,12 +458,6 @@ class E13S10_SpotError(NarratedScene):
             self.play(FadeIn(warn), run_time=0.7)
 
 
-def number(n: int, line: Mobject) -> VGroup:
-    c = Circle(radius=0.24, stroke_color=SYSTEM, stroke_width=2.5)
-    t = TB(str(n), size=LABEL, color=SYSTEM).move_to(c)
-    return VGroup(c, t).next_to(line, LEFT, buff=0.35)
-
-
 # =====================================================================================
 class E13S11_LessAir(NarratedScene):
     def construct(self):
@@ -573,16 +499,15 @@ class E13S11_LessAir(NarratedScene):
 
 # =====================================================================================
 class E13S12_Q26Attempt(NarratedScene):
-    PAUSE_LABELS = {"b02": "Quiet attempt period"}
+    PAUSE_LABELS = {"b02": "Pause the video now and attempt every part"}
+    TIMER_CORNER = DR
 
     def construct(self):
-        qc = question_card("Q26", size=SMALL + 1, width=13.0, cols=2)
-        qc.move_to([0, 0, 0]).align_to([0, 3.05, 0], UP)         # no header: the card carries the title
+        qc = attempt_card("Q26")
         with self.beat("b01"):
             self.play(FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         with self.beat("b02") as b:
-            ban = pause_banner("Pause now and attempt it", qc)
-            self.play(FadeIn(ban, scale=1.05), run_time=0.6)
+            self.play(Indicate(qc[1][0][0], color=UNKNOWN), run_time=0.8)
 
 
 # =====================================================================================

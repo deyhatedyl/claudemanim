@@ -513,6 +513,22 @@ def ep13_workshop_values():
     check("E13", "efficiency ratio", 0.400 / 0.250, 1.6, rel=1e-9)
 
 
+def ep14_workshop_values():
+    check("E14", "retrieval: n(HCl) in 25.0 mL of 0.200 M", 0.200 * 0.0250, 0.00500, rel=1e-9)
+    check("E14", "retrieval: 6.00 V x 1.50 A x 2.00 min", 6.00 * 1.50 * 2.00 * 60, 1080, rel=1e-9, unit="J")
+    q = 600 * 4.8
+    check("E14", "wrong: divide by NaOH (excess)", -q / 0.0600 / 1000, -48.0, rel=1e-9, unit="kJ/mol")
+    check("E14", "wrong: uncorrected max", -600 * (24.7 - 20.0) / 0.0500 / 1000, -56.4, rel=1e-6, unit="kJ/mol")
+    q_mc = 125.0 * C_WATER * 4.8
+    check("E14", "wrong: m c dT with 125 g, J", q_mc, 2508, rel=1e-9, unit="J")
+    check("E14", "wrong: m c dT with 125 g, dH", -q_mc / 0.0500 / 1000, -50.16, rel=1e-6, unit="kJ/mol")
+    check("E14", "excess NaOH left", 0.0600 - 0.0500, 0.0100, rel=1e-6)
+    check("E14", "doubled NaOH amount", 2 * 0.800 * 0.0750, 0.120, rel=1e-9)
+    check("E14", "spot: J / (kJ/mol) gives mass", 960 / 24.0 * 80.0, 3200, rel=1e-9, unit="g")
+    check("E14", "direction: mass recorded 3.80 g", 100 * 3.20 / 3.80, 84.2105, rel=1e-5, unit="%")
+    check_true("E14", "direction: smaller CF lowers %", 100 * (250 * 3.20 / 1000 / 24.0 * 80.0) / 4.00 < 80.0)
+
+
 MARKS = {  # declared total, list of sub-part marks from the brief
     "Q01": (4, [1, 2, 1]), "Q02": (5, [3, 2]), "Q03": (4, [1, 1, 1, 1]), "Q04": (3, [1, 1, 1]),
     "Q05": (5, [2, 2, 1]), "Q06": (5, [1, 1, 1, 1, 1]), "Q07": (6, [1, 1, 1, 2, 1]),
@@ -545,7 +561,7 @@ def main():
     verify_equations()
     for fn in (q01, q02, q03, q04, q05, q06, q07, q09, q10, q11, q12, q13, q14, q15, q16,
                q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example,
-               ep12_teaching_values, ep13_workshop_values):
+               ep12_teaching_values, ep13_workshop_values, ep14_workshop_values):
         fn()
     verify_marks()
     fails = [r for r in results if not r["ok"]]

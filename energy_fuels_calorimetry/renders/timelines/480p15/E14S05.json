@@ -1,0 +1,31 @@
+{
+ "scene": "E14S05",
+ "title": "Q27 part a: calibration",
+ "cls": "E14S05_PartA",
+ "fps": 15,
+ "duration": 51.4667,
+ "beats": [
+  {
+   "key": "E14S05.b01",
+   "start": 0.0,
+   "speech": 19.1069,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. The calibration energy is five point zero zero times one point two zero times three hundred: one thousand eight hundred joules. The calibration factor is one thousand eight hundred joules divided by three point zero zero degrees: six hundred joules per degree.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E14S05.b02",
+   "start": 19.4667,
+   "speech": 31.0531,
+   "audio": null,
+   "estimated": true,
+   "text": "Now a plausibility check. The water alone would need one hundred and twenty-five point zero grams times four point one eight: five hundred and twenty-two point five joules per degree. The calibration factor is larger, which makes sense, because the cup, the thermometer and the stirrer absorb some energy too. A calibration factor smaller than the water alone would suggest an error. Three marks: the energy, the calibration factor, and the check.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

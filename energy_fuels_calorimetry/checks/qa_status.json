@@ -61,7 +61,12 @@
  },
  "E13": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label).",
+  "final_qa": "pending"
+ },
+ "E14": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
   "final_qa": "pending"
  }
 }
