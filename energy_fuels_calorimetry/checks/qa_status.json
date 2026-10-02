@@ -43,5 +43,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E10": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

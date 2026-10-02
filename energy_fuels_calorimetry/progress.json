@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:50:43",
+ "updated": "2026-10-02T18:55:17",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1365,11 +1365,152 @@
   },
   "E10": {
    "title": "Reaction calorimetry and molar enthalpy",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep10.md",
+    "sha": "83b395af5fe73a7c",
+    "beats": 36,
+    "words": 1449,
+    "est_minutes": 11.5,
+    "anchors": "Q19,Q20",
+    "coverage": "C22,C23,C15,C13,C01"
+   },
+   "scenes_code": {
+    "path": "scenes/ep10.py",
+    "sha": "8f69e174a948033a"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E10S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 67.0,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S02",
+     "title": "Mixing the solutions",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 68.1333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S03",
+     "title": "Which reagent sets the heat?",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 47.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S04",
+     "title": "From calorimeter heat to reaction enthalpy",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 48.4,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S05",
+     "title": "Practice Q19: justify the denominator",
+     "beats": 7,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 146.0,
+      "fresh": true,
+      "estimated_beats": 7,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S06",
+     "title": "One mole of reagent is not always one mole of reaction",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.0667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S07",
+     "title": "Practice Q20: predict the final temperature",
+     "beats": 7,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 138.0667,
+      "fresh": true,
+      "estimated_beats": 7,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S08",
+     "title": "Coefficients change delta H, not the heat",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 49.0667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 66.0667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 36,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 687.46,
+    "captions": [
+     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E11": {
    "title": "Temperature graphs, correction and experimental reasoning",
@@ -1404,5 +1545,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 116.7
+ "series_est_minutes": 128.2
 }

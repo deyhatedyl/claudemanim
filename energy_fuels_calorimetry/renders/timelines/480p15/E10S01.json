@@ -1,0 +1,42 @@
+{
+ "scene": "E10S01",
+ "title": "Retrieval check",
+ "cls": "E10S01_Retrieval",
+ "fps": 15,
+ "duration": 67.0,
+ "beats": [
+  {
+   "key": "E10S01.b01",
+   "start": 0.0,
+   "speech": 15.6166,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode ten. Now that we can calibrate a calorimeter, we can use it to measure the enthalpy change of a reaction in solution. Today: neutralisation reactions, limiting reagents, and choosing exactly the right denominator.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S01.b02",
+   "start": 16.0,
+   "speech": 24.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. What amount of sodium hydroxide is in fifty point zero millilitres of a zero point nine zero zero moles per litre solution? And a calorimeter with a calibration factor of five hundred and forty joules per degree warms by two point zero zero degrees. How much heat did it gain? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E10S01.b03",
+   "start": 48.5333,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "Convert to litres first: zero point zero five zero zero litres times zero point nine zero zero gives zero point zero four five zero moles. And five hundred and forty times two point zero zero is one thousand and eighty joules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

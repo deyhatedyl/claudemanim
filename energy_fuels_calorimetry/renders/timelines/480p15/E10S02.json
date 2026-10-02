@@ -1,0 +1,53 @@
+{
+ "scene": "E10S02",
+ "title": "Mixing the solutions",
+ "cls": "E10S02_Mixing",
+ "fps": 15,
+ "duration": 68.1333,
+ "beats": [
+  {
+   "key": "E10S02.b01",
+   "start": 0.0,
+   "speech": 20.8159,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a typical experiment. Seventy-five point zero millilitres of hydrochloric acid, at zero point eight zero zero moles per litre, and fifty point zero millilitres of sodium hydroxide, at zero point nine zero zero moles per litre, both start at the same temperature. They're mixed in a calibrated calorimeter.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S02.b02",
+   "start": 21.2,
+   "speech": 9.4634,
+   "audio": null,
+   "estimated": true,
+   "text": "The reaction is hydrochloric acid plus sodium hydroxide forming sodium chloride and water. Every reactant and product has a coefficient of one.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S02.b03",
+   "start": 31.0,
+   "speech": 22.831,
+   "audio": null,
+   "estimated": true,
+   "text": "Available amounts, with volumes converted to litres. Hydrochloric acid: zero point zero seven five zero litres times zero point eight zero zero is zero point zero six zero zero moles. Sodium hydroxide: zero point zero five zero zero litres times zero point nine zero zero is zero point zero four five zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S02.b04",
+   "start": 54.2,
+   "speech": 12.9538,
+   "audio": null,
+   "estimated": true,
+   "text": "Notice what we didn't do. We didn't add the volumes or the concentrations together to get an amount. Each solution's amount comes from its own volume and its own concentration.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

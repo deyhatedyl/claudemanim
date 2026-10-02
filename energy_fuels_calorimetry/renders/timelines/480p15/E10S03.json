@@ -1,0 +1,42 @@
+{
+ "scene": "E10S03",
+ "title": "Which reagent sets the heat?",
+ "cls": "E10S03_Limiting",
+ "fps": 15,
+ "duration": 47.6667,
+ "beats": [
+  {
+   "key": "E10S03.b01",
+   "start": 0.0,
+   "speech": 9.8772,
+   "audio": null,
+   "estimated": true,
+   "text": "With a one to one ratio, the smaller amount limits the reaction. Sodium hydroxide, zero point zero four five zero moles, is limiting.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S03.b02",
+   "start": 10.2667,
+   "speech": 21.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "So zero point zero four five zero moles of each reactant is used, and zero point zero four five zero moles of water forms. Hydrochloric acid is in excess: zero point zero six zero zero minus zero point zero four five zero leaves zero point zero one five zero moles unreacted.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S03.b03",
+   "start": 32.2667,
+   "speech": 14.429,
+   "audio": null,
+   "estimated": true,
+   "text": "The heat released comes only from the reaction that actually happens, so it's set by the limiting reagent. The excess acid just sits in the solution and releases no extra heat, under this model.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "episode": "E10",
+ "quality": "480p15",
+ "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 36,
+ "beats_with_audio": 0,
+ "duration": 687.46,
+ "scenes": [
+  {
+   "scene": "E10S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 66.999349
+  },
+  {
+   "scene": "E10S02",
+   "title": "Mixing the solutions",
+   "start": 66.999349,
+   "duration": 68.132682
+  },
+  {
+   "scene": "E10S03",
+   "title": "Which reagent sets the heat?",
+   "start": 135.13203099999998,
+   "duration": 47.666016
+  },
+  {
+   "scene": "E10S04",
+   "title": "From calorimeter heat to reaction enthalpy",
+   "start": 182.798047,
+   "duration": 48.399674
+  },
+  {
+   "scene": "E10S05",
+   "title": "Practice Q19: justify the denominator",
+   "start": 231.197721,
+   "duration": 145.998372
+  },
+  {
+   "scene": "E10S06",
+   "title": "One mole of reagent is not always one mole of reaction",
+   "start": 377.196093,
+   "duration": 57.06569
+  },
+  {
+   "scene": "E10S07",
+   "title": "Practice Q20: predict the final temperature",
+   "start": 434.26178300000004,
+   "duration": 138.066341
+  },
+  {
+   "scene": "E10S08",
+   "title": "Coefficients change delta H, not the heat",
+   "start": 572.328124,
+   "duration": 49.066341
+  },
+  {
+   "scene": "E10S09",
+   "title": "Recap and closing recall",
+   "start": 621.394465,
+   "duration": 66.066016
+  }
+ ],
+ "captions": [
+  "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

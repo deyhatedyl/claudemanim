@@ -1,0 +1,42 @@
+{
+ "scene": "E10S08",
+ "title": "Coefficients change delta H, not the heat",
+ "cls": "E10S08_Coefficients",
+ "fps": 15,
+ "duration": 49.0667,
+ "beats": [
+  {
+   "key": "E10S08.b01",
+   "start": 0.0,
+   "speech": 12.54,
+   "audio": null,
+   "estimated": true,
+   "text": "Suppose we halve the equation: one sodium hydroxide plus half a sulfuric acid forms half a sodium sulfate plus one water. Delta H halves too, to negative fifty-seven kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S08.b02",
+   "start": 12.9333,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "For the same mixture, the extent of this halved equation is twice as large: zero point zero three zero zero moles. Zero point zero three zero zero times fifty-seven is one point seven one zero kilojoules: exactly the same heat as before.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S08.b03",
+   "start": 31.4,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "That's the checkpoint. Changing the coefficients changes the delta H associated with the equation, but it can't change the heat released by the same physical reaction in the same calorimeter. The physical amounts that react are what they are.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

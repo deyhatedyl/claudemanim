@@ -1,0 +1,42 @@
+{
+ "scene": "E10S04",
+ "title": "From calorimeter heat to reaction enthalpy",
+ "cls": "E10S04_Signs",
+ "fps": 15,
+ "duration": 48.4,
+ "beats": [
+  {
+   "key": "E10S04.b01",
+   "start": 0.0,
+   "speech": 11.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "The calorimeter measures the heat it gained: q for the calorimeter equals the calibration factor times the temperature rise. For an exothermic reaction, that's a positive number.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S04.b02",
+   "start": 12.0667,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "That heat came from the reacting system. So, assuming all the heat stays in the calorimeter, q for the reaction is the negative of q for the calorimeter. Same size, opposite sign.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S04.b03",
+   "start": 26.2,
+   "speech": 21.2297,
+   "audio": null,
+   "estimated": true,
+   "text": "To get a molar enthalpy, divide by the amount that the enthalpy refers to. If we want delta H per mole of water formed, divide by the moles of water formed. That's the amount set by the limiting reagent, not the amount of whichever reagent happens to be mentioned first.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

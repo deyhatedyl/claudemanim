@@ -1,0 +1,86 @@
+{
+ "scene": "E10S05",
+ "title": "Practice Q19: justify the denominator",
+ "cls": "E10S05_Q19",
+ "fps": 15,
+ "duration": 146.0,
+ "beats": [
+  {
+   "key": "E10S05.b01",
+   "start": 0.0,
+   "speech": 10.0572,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero nineteen uses exactly the amounts we've just worked out. It's worth eight marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b02",
+   "start": 25.4667,
+   "speech": 16.4979,
+   "audio": null,
+   "estimated": true,
+   "text": "Parts a and b: zero point zero six zero zero moles of acid, zero point zero four five zero moles of sodium hydroxide, so sodium hydroxide is limiting, leaving zero point zero one five zero moles of acid unreacted.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b03",
+   "start": 42.3333,
+   "speech": 23.6586,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. The temperature rose from twenty point zero zero to twenty-four point three zero degrees: a rise of four point three zero degrees. The calibration factor was measured for these exact conditions, so q for the calorimeter is five hundred and ninety times four point three zero: two thousand five hundred and thirty-seven joules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b04",
+   "start": 66.3333,
+   "speech": 13.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "Before part d, predict. Neutralising a strong acid with a strong base releases roughly fifty to sixty kilojoules per mole of water. So expect a negative value of about that size.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b05",
+   "start": 80.0667,
+   "speech": 24.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. The water formed is zero point zero four five zero moles. So delta H equals negative two point five three seven kilojoules, divided by zero point zero four five zero moles: negative fifty-six point four kilojoules per mole of water formed. It's negative because the reaction released heat, and it's in the predicted range.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b06",
+   "start": 104.5333,
+   "speech": 10.7048,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the amounts, two for the limiting reagent and excess, two for the heat, and two for the correct denominator, sign and value.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S05.b07",
+   "start": 115.6,
+   "speech": 29.4517,
+   "audio": null,
+   "estimated": true,
+   "text": "Three tempting denominators, all wrong. Dividing by the acid supplied, zero point zero six zero zero moles, gives negative forty-two point three. Dividing by the total moles of both reactants gives an even smaller value. And dividing by the total volume gives a quantity in kilojoules per litre, which isn't a molar enthalpy at all. The first wrong step in each is not asking how much reaction actually happened.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
