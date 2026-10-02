@@ -1,0 +1,114 @@
+{
+ "episode": "E13",
+ "quality": "480p15",
+ "output": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 49,
+ "beats_with_audio": 0,
+ "duration": 1227.32,
+ "scenes": [
+  {
+   "scene": "E13S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 78.599674
+  },
+  {
+   "scene": "E13S02",
+   "title": "The routine for every question",
+   "start": 78.599674,
+   "duration": 49.266667
+  },
+  {
+   "scene": "E13S03",
+   "title": "Q25: attempt it first",
+   "start": 127.86634099999999,
+   "duration": 92.866667
+  },
+  {
+   "scene": "E13S04",
+   "title": "Q25: read and annotate",
+   "start": 220.73300799999998,
+   "duration": 82.933008
+  },
+  {
+   "scene": "E13S05",
+   "title": "Q25: plan the methods",
+   "start": 303.666016,
+   "duration": 56.731706
+  },
+  {
+   "scene": "E13S06",
+   "title": "Q25 parts a to c: amounts, equation and excess oxygen",
+   "start": 360.39772200000004,
+   "duration": 93.133333
+  },
+  {
+   "scene": "E13S07",
+   "title": "Wrong solution: all the gas treated as methane",
+   "start": 453.53105500000004,
+   "duration": 59.332682
+  },
+  {
+   "scene": "E13S08",
+   "title": "Q25 parts d and e: energy and efficiency",
+   "start": 512.863737,
+   "duration": 94.532682
+  },
+  {
+   "scene": "E13S09",
+   "title": "Q25 parts f and g: carbon dioxide and the source",
+   "start": 607.396419,
+   "duration": 84.998372
+  },
+  {
+   "scene": "E13S10",
+   "title": "Checkpoint: spot the error",
+   "start": 692.394791,
+   "duration": 77.466016
+  },
+  {
+   "scene": "E13S11",
+   "title": "What if there were less air?",
+   "start": 769.860807,
+   "duration": 55.798698
+  },
+  {
+   "scene": "E13S12",
+   "title": "Q26: attempt it first",
+   "start": 825.6595050000001,
+   "duration": 71.866667
+  },
+  {
+   "scene": "E13S13",
+   "title": "Q26 parts a and b: per gram and per useful kilojoule",
+   "start": 897.5261720000001,
+   "duration": 120.132682
+  },
+  {
+   "scene": "E13S14",
+   "title": "Wrong solution: emissions on different bases",
+   "start": 1017.6588540000001,
+   "duration": 66.932682
+  },
+  {
+   "scene": "E13S15",
+   "title": "Q26 parts c and d: explaining and limiting claims",
+   "start": 1084.5915360000001,
+   "duration": 55.533008
+  },
+  {
+   "scene": "E13S16",
+   "title": "Error log and close",
+   "start": 1140.1245440000002,
+   "duration": 87.198372
+  }
+ ],
+ "captions": [
+  "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

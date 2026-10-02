@@ -23,7 +23,7 @@ Colour roles (always reinforced by a label, arrow or line style, never colour al
 """
 from __future__ import annotations
 
-from manim import (DL, DOWN, DR, LEFT, RIGHT, UL, UP, BackgroundRectangle, DashedLine, Line, MathTex,
+from manim import (DL, DOWN, DR, LEFT, RIGHT, UL, UP, BackgroundRectangle, DashedLine, Line, MarkupText, MathTex,
                    RoundedRectangle, SurroundingRectangle, Tex, TexTemplate, Text, VGroup)
 
 FONT = "Noto Sans"
@@ -65,7 +65,11 @@ TEMPLATE.add_to_preamble(r"\usepackage{amsmath}\usepackage{amssymb}\usepackage[v
 
 
 def T(s: str, size: int = BODY, color: str = TEXT, weight: str = "NORMAL", **kw) -> Text:
-    """Plain text. size is Manim Text font_size (see module docstring for pixel equivalents)."""
+    """Plain text. size is Manim Text font_size (see module docstring for pixel equivalents).
+    'ΔH_c' (as written in the question bank) is drawn with a real subscript c."""
+    if "H_c" in s:
+        mk = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("H_c", "H<sub>c</sub>")
+        return MarkupText(mk, font=FONT, font_size=size, color=color, weight=weight, **kw)
     return Text(s, font=FONT, font_size=size, color=color, weight=weight, **kw)
 
 

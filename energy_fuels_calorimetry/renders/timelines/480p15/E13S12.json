@@ -1,0 +1,31 @@
+{
+ "scene": "E13S12",
+ "title": "Q26: attempt it first",
+ "cls": "E13S12_Q26Attempt",
+ "fps": 15,
+ "duration": 71.8667,
+ "beats": [
+  {
+   "key": "E13S12.b01",
+   "start": 0.0,
+   "speech": 11.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q twenty-six is worth ten marks. It compares a methanol heater and an ethanol heater, and the ranking depends on the basis. Read it through.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S12.b02",
+   "start": 12.0667,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "Pause the video now and attempt all four parts. If you keep it running, here's some quiet thinking time. Before you calculate anything, decide what \"per useful kilojoule\" means for each heater.",
+   "overrun": 0.0,
+   "pause": 45.0,
+   "layout": []
+  }
+ ]
+}

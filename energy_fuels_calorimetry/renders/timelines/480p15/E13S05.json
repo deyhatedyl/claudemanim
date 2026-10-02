@@ -1,0 +1,31 @@
+{
+ "scene": "E13S05",
+ "title": "Q25: plan the methods",
+ "cls": "E13S05_Plan",
+ "fps": 15,
+ "duration": 56.7333,
+ "beats": [
+  {
+   "key": "E13S05.b01",
+   "start": 0.0,
+   "speech": 38.7,
+   "audio": null,
+   "estimated": true,
+   "text": "Before calculating, plan a method for each part. Part a: amounts from volumes at SLC, then the methane fraction. Part b: a balanced equation with states and delta H. Part c: the mole ratio from the equation, then the excess oxygen as a mass. Part d: energy released from the moles of methane, and heat gained from m c delta T. Part e: efficiency as output over input. Part f: new plus inlet carbon dioxide, then a volume. And part g: a definition based on the source.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S05.b02",
+   "start": 39.0667,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Notice that the plan is a chain. Part a feeds parts c, d and f, and part d feeds part e. That's why an early error spreads, and why it's worth checking part a carefully before you move on.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

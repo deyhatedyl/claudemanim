@@ -1,0 +1,53 @@
+{
+ "scene": "E13S10",
+ "title": "Checkpoint: spot the error",
+ "cls": "E13S10_SpotError",
+ "fps": 15,
+ "duration": 77.4667,
+ "beats": [
+  {
+   "key": "E13S10.b01",
+   "start": 0.0,
+   "speech": 11.2448,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint: spot the error. Here are three lines from different students' answers to Q twenty-five. Each line contains one mistake. Pause and find all three.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E13S10.b02",
+   "start": 26.6667,
+   "speech": 13.6014,
+   "audio": null,
+   "estimated": true,
+   "text": "Line one uses the volume of air as if it were all oxygen. It should use twenty-one point zero percent of sixty point zero litres, giving zero point five zero eight moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S10.b03",
+   "start": 40.6667,
+   "speech": 9.8772,
+   "audio": null,
+   "estimated": true,
+   "text": "Line two forgets the inlet carbon dioxide. The total is zero point two five zero moles, which is six point two zero litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S10.b04",
+   "start": 50.9333,
+   "speech": 25.5476,
+   "audio": null,
+   "estimated": true,
+   "text": "Line three has the right number but the wrong unit. Grams times joules per gram per degree, times degrees, gives joules: one hundred and thirty-three thousand, seven hundred and sixty joules, which is one hundred and thirty-three point seven six kilojoules. Left uncorrected, that slip makes the efficiency a thousand times too large, which a plausibility check would catch immediately.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

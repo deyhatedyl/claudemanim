@@ -1674,6 +1674,186 @@
   "ok": true
  },
  {
+  "qid": "E12",
+  "label": "methane kJ per g",
+  "computed": 55.625,
+  "target": 55.625,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "octane kJ per g",
+  "computed": 47.89473684210526,
+  "target": 47.8947,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "retrieval: input for 10.0 MJ at 25%",
+  "computed": 40.0,
+  "target": 40.0,
+  "unit": "MJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "checkpoint: T g per useful MJ",
+  "computed": 350.0,
+  "target": 350,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "checkpoint: R g per useful MJ",
+  "computed": 228.57142857142858,
+  "target": 228.571,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "retrieval: 40.0 g bar at 1650 kJ per 100 g",
+  "computed": 660.0,
+  "target": 660,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "O2 volume in 60.0 L air",
+  "computed": 12.6,
+  "target": 12.6,
+  "unit": "L",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "wrong: O2 required if all gas is CH4",
+  "computed": 0.5,
+  "target": 0.5,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "wrong: excess O2 mass",
+  "computed": 0.25806451612903203,
+  "target": 0.258065,
+  "unit": "g",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "wrong: efficiency",
+  "computed": 60.11685393258427,
+  "target": 60.1169,
+  "unit": "%",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "error: air volume as O2",
+  "computed": 2.4193548387096775,
+  "target": 2.41935,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "error: CO2 without inlet",
+  "computed": 5.58,
+  "target": 5.58,
+  "unit": "L",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "error: kJ slip gives efficiency x1000",
+  "computed": 66796.50436953807,
+  "target": 66796.5,
+  "unit": "%",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "variation: O2 from 50.0 L air",
+  "computed": 0.42338709677419356,
+  "target": 0.423387,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "variation: O2 now limiting",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "useful kJ per mol methanol",
+  "computed": 181.5,
+  "target": 181.5,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "useful kJ per mol ethanol",
+  "computed": 548.0,
+  "target": 548,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "wrong mixed-basis ratio",
+  "computed": 3.7741046831955924,
+  "target": 3.77,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "correct per-useful ratio",
+  "computed": 1.509641873278237,
+  "target": 1.5096,
+  "unit": "",
+  "rel_tol": 0.001,
+  "ok": true
+ },
+ {
+  "qid": "E13",
+  "label": "efficiency ratio",
+  "computed": 1.6,
+  "target": 1.6,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
   "qid": "Q01",
   "label": "marks sum [1, 2, 1] = 4",
   "computed": "4",

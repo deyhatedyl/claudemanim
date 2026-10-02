@@ -478,6 +478,41 @@ def ep08_food_example():
     check("E08", "water-heat yield per g food", q / 1.50 / 1000, 2.229, rel=1e-3, unit="kJ/g")
 
 
+def ep12_teaching_values():
+    check("E12", "methane kJ per g", 890 / 16.0, 55.625, rel=1e-9)
+    check("E12", "octane kJ per g", 5460 / 114.0, 47.8947, rel=1e-5)
+    check("E12", "retrieval: input for 10.0 MJ at 25%", 10.0 / 0.25, 40.0, rel=1e-9, unit="MJ")
+    check("E12", "checkpoint: T g per useful MJ", 70 / 0.20, 350, rel=1e-9)
+    check("E12", "checkpoint: R g per useful MJ", 80 / 0.35, 228.571, rel=1e-5)
+
+
+def ep13_workshop_values():
+    n_mix = 6.20 / VM
+    check("E13", "retrieval: 40.0 g bar at 1650 kJ per 100 g", 1650 * 40.0 / 100, 660, rel=1e-9, unit="kJ")
+    check("E13", "O2 volume in 60.0 L air", 0.210 * 60.0, 12.6, rel=1e-9, unit="L")
+    # wrong solution: all gas treated as methane
+    n_o2 = 0.210 * 60.0 / VM
+    check("E13", "wrong: O2 required if all gas is CH4", 2 * n_mix, 0.500, rel=1e-9)
+    check("E13", "wrong: excess O2 mass", (n_o2 - 2 * n_mix) * 32.0, 0.258065, rel=1e-5, unit="g")
+    check("E13", "wrong: efficiency", 100 * 133.76 / (n_mix * 890), 60.1169, rel=1e-5, unit="%")
+    # spot the error
+    check("E13", "error: air volume as O2", 60.0 / VM, 2.41935, rel=1e-5)
+    check("E13", "error: CO2 without inlet", 0.225 * VM, 5.58, rel=1e-9, unit="L")
+    check("E13", "error: kJ slip gives efficiency x1000", 100 * 133760 / 200.25, 66796.5, rel=1e-5, unit="%")
+    # what if 50.0 L air
+    n_o2_50 = 0.210 * 50.0 / VM
+    check("E13", "variation: O2 from 50.0 L air", n_o2_50, 0.423387, rel=1e-5)
+    check_true("E13", "variation: O2 now limiting", n_o2_50 < 2 * 0.225)
+    # Q26 comparisons
+    m_u = 44.0 / (726 * 0.250)
+    e_u = 88.0 / (1370 * 0.400)
+    check("E13", "useful kJ per mol methanol", 726 * 0.250, 181.5, rel=1e-9)
+    check("E13", "useful kJ per mol ethanol", 1370 * 0.400, 548, rel=1e-9)
+    check("E13", "wrong mixed-basis ratio", m_u / (88.0 / 1370), 3.77, rel=2e-3)
+    check("E13", "correct per-useful ratio", m_u / e_u, 1.5096, rel=1e-3)
+    check("E13", "efficiency ratio", 0.400 / 0.250, 1.6, rel=1e-9)
+
+
 MARKS = {  # declared total, list of sub-part marks from the brief
     "Q01": (4, [1, 2, 1]), "Q02": (5, [3, 2]), "Q03": (4, [1, 1, 1, 1]), "Q04": (3, [1, 1, 1]),
     "Q05": (5, [2, 2, 1]), "Q06": (5, [1, 1, 1, 1, 1]), "Q07": (6, [1, 1, 1, 2, 1]),
@@ -509,7 +544,8 @@ def verify_marks():
 def main():
     verify_equations()
     for fn in (q01, q02, q03, q04, q05, q06, q07, q09, q10, q11, q12, q13, q14, q15, q16,
-               q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example):
+               q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example,
+               ep12_teaching_values, ep13_workshop_values):
         fn()
     verify_marks()
     fails = [r for r in results if not r["ok"]]

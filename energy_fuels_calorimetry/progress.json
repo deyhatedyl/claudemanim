@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T19:15:21",
+ "updated": "2026-10-02T19:41:31",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1061,7 +1061,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
     "final_qa": "pending"
    }
   },
@@ -1210,7 +1210,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
     "final_qa": "pending"
    }
   },
@@ -1824,11 +1824,236 @@
   },
   "E13": {
    "title": "Exam workshop A on fuels and combustion",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep13.md",
+    "sha": "0d10dd59fb9c626f",
+    "beats": 49,
+    "words": 2413,
+    "est_minutes": 20.5,
+    "anchors": "Q25,Q26",
+    "coverage": "C01,C04,C07,C11,C12,C14,C15,C16,C17,C18,C19,C27"
+   },
+   "scenes_code": {
+    "path": "scenes/ep13.py",
+    "sha": "5d2770474155faf4"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E13S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 78.6,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S02",
+     "title": "The routine for every question",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 49.2667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S03",
+     "title": "Q25: attempt it first",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 92.8667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S04",
+     "title": "Q25: read and annotate",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 82.9333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S05",
+     "title": "Q25: plan the methods",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 56.7333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S06",
+     "title": "Q25 parts a to c: amounts, equation and excess oxygen",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 93.1333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S07",
+     "title": "Wrong solution: all the gas treated as methane",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.3333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S08",
+     "title": "Q25 parts d and e: energy and efficiency",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 94.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S09",
+     "title": "Q25 parts f and g: carbon dioxide and the source",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 85.0,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S10",
+     "title": "Checkpoint: spot the error",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 77.4667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S11",
+     "title": "What if there were less air?",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 55.8,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S12",
+     "title": "Q26: attempt it first",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 71.8667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S13",
+     "title": "Q26 parts a and b: per gram and per useful kilojoule",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 120.1333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S14",
+     "title": "Wrong solution: emissions on different bases",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 66.9333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S15",
+     "title": "Q26 parts c and d: explaining and limiting claims",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 55.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E13S16",
+     "title": "Error log and close",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 87.2,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 49,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 1227.32,
+    "captions": [
+     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E14": {
    "title": "Exam workshop B on calorimetry and data evaluation",
@@ -1839,5 +2064,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 151.1
+ "series_est_minutes": 171.6
 }

@@ -1,0 +1,53 @@
+{
+ "scene": "E13S09",
+ "title": "Q25 parts f and g: carbon dioxide and the source",
+ "cls": "E13S09_PartsFG",
+ "fps": 15,
+ "duration": 85.0,
+ "beats": [
+  {
+   "key": "E13S09.b01",
+   "start": 0.0,
+   "speech": 26.1414,
+   "audio": null,
+   "estimated": true,
+   "text": "Part f. The new carbon dioxide from combustion is one mole per mole of methane: zero point two two five moles. Add the inlet carbon dioxide, ten percent of zero point two five zero, which is zero point zero two five zero moles. The total is zero point two five zero moles, which at SLC occupies six point two zero litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S09.b02",
+   "start": 26.5333,
+   "speech": 23.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "That equals the fuel volume, and that's a useful plausibility check. Every molecule in the fuel, methane or carbon dioxide, contains exactly one carbon atom, and carbon is conserved. So the moles of carbon dioxide out must equal the moles of fuel gas in. The water isn't counted, because we've isolated the dry carbon dioxide.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S09.b03",
+   "start": 50.4,
+   "speech": 19.5207,
+   "audio": null,
+   "estimated": true,
+   "text": "Part g asks why the methane counts as renewable. It's renewable because of its source: it comes from recently grown biomass, such as food or farm waste, which is replenished on a human timescale. The methane molecule itself is identical to fossil methane. One mark.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S09.b04",
+   "start": 70.2667,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the full tally: three, two, two, two, three, two and one, for fifteen marks. Notice how many of those marks come from steps you can show, not just from final answers.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

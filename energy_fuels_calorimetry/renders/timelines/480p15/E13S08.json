@@ -1,0 +1,42 @@
+{
+ "scene": "E13S08",
+ "title": "Q25 parts d and e: energy and efficiency",
+ "cls": "E13S08_PartsDE",
+ "fps": 15,
+ "duration": 94.5333,
+ "beats": [
+  {
+   "key": "E13S08.b01",
+   "start": 0.0,
+   "speech": 33.3559,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. The energy released is zero point two two five moles times eight hundred and ninety kilojoules per mole: two hundred point two five kilojoules, or about two hundred kilojoules. The heat gained by the water is eight hundred point zero grams, times four point one eight joules per gram per degree, times forty point zero degrees: one hundred and thirty-three thousand, seven hundred and sixty joules. In kilojoules, that's one hundred and thirty-three point seven six.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S08.b02",
+   "start": 33.7333,
+   "speech": 28.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Part e. Both the input and the useful output are known, so efficiency equals the useful output divided by the input, times one hundred percent. One hundred and thirty-three point seven six divided by two hundred point two five gives sixty-six point eight percent. Use the unrounded two hundred point two five here, and round only the final answer, to three significant figures to match the data.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S08.b03",
+   "start": 62.5333,
+   "speech": 31.0531,
+   "audio": null,
+   "estimated": true,
+   "text": "Why not divide by an efficiency? That inverse operation is only for finding the input needed to deliver a target output. Here we're finding the efficiency itself. Plausibility check: the answer is between zero and one hundred percent, and the water gained less energy than the fuel released, as it must for a real heater. Two marks for part d, and three for part e: the ratio, the value, and the explanation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "scene": "E13S03",
+ "title": "Q25: attempt it first",
+ "cls": "E13S03_Q25Attempt",
+ "fps": 15,
+ "duration": 92.8667,
+ "beats": [
+  {
+   "key": "E13S03.b01",
+   "start": 0.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q twenty-five is worth fifteen marks. It's an integrated question about a water heater that burns purified gas from a digester. Read it all the way through now, before you write anything.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S03.b02",
+   "start": 15.0,
+   "speech": 16.8579,
+   "audio": null,
+   "estimated": true,
+   "text": "Pause the video now and attempt every part on paper. Give yourself about fifteen to twenty minutes. If you keep the video running instead, the next minute is quiet thinking time: start by listing what's given and what's asked.",
+   "overrun": 0.0,
+   "pause": 60.0,
+   "layout": []
+  }
+ ]
+}

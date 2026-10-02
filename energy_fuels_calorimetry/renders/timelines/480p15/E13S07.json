@@ -1,0 +1,42 @@
+{
+ "scene": "E13S07",
+ "title": "Wrong solution: all the gas treated as methane",
+ "cls": "E13S07_WrongMethane",
+ "fps": 15,
+ "duration": 59.3333,
+ "beats": [
+  {
+   "key": "E13S07.b01",
+   "start": 0.0,
+   "speech": 10.8848,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a tempting wrong solution. A student treats all zero point two five zero moles of gas as methane. Watch how one reading error spreads.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S07.b02",
+   "start": 11.2667,
+   "speech": 23.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "Their oxygen requirement becomes zero point five zero zero moles, so their excess shrinks to just zero point two five eight grams. Their energy released becomes two hundred and twenty-two point five kilojoules, and their efficiency drops to sixty point one percent. One misread phrase has changed the answers to parts a, c, d and e.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S07.b03",
+   "start": 35.3333,
+   "speech": 23.0648,
+   "audio": null,
+   "estimated": true,
+   "text": "A marking scheme may still award later marks for a correct method applied consistently to the wrong number. But the methane mark in part a is gone, and every answer after it is wrong. The fix is a reading habit: whenever a gas is a mixture, find the amount of the reacting component first.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

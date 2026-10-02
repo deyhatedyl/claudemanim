@@ -1,0 +1,42 @@
+{
+ "scene": "E13S14",
+ "title": "Wrong solution: emissions on different bases",
+ "cls": "E13S14_WrongBases",
+ "fps": 15,
+ "duration": 66.9333,
+ "beats": [
+  {
+   "key": "E13S14.b01",
+   "start": 0.0,
+   "speech": 24.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Now a tempting wrong solution. A student calculates methanol correctly, at zero point two four two grams per useful kilojoule. But for ethanol they divide eighty-eight point zero grams by the full one thousand three hundred and seventy kilojoules released, getting zero point zero six four two, and they conclude that ethanol emits nearly four times less.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S14.b02",
+   "start": 24.4667,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "The two numbers are on different bases. One is per useful kilojoule; the other is per kilojoule released, which ignores the heater's efficiency. Compared properly, both per useful kilojoule, ethanol is lower by a factor of about one point five, not four.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S14.b03",
+   "start": 42.9333,
+   "speech": 23.0648,
+   "audio": null,
+   "estimated": true,
+   "text": "Another version of the same trap compares carbon dioxide per mole of fuel: one mole for methanol and two for ethanol, so \"methanol emits half as much\". That's true per mole of fuel, but a mole of methanol delivers far less useful energy. Always put both fuels on the basis the question asks for.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

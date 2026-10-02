@@ -1,0 +1,31 @@
+{
+ "scene": "E13S02",
+ "title": "The routine for every question",
+ "cls": "E13S02_Routine",
+ "fps": 15,
+ "duration": 49.2667,
+ "beats": [
+  {
+   "key": "E13S02.b01",
+   "start": 0.0,
+   "speech": 20.2945,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the routine we'll use for every question. Read the whole question first. Annotate it: units, conditions, and any words that change the chemistry. Choose a method before you calculate. Work one quantity at a time, with units. And finally, check that the answer is plausible.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S02.b02",
+   "start": 20.6667,
+   "speech": 27.6166,
+   "audio": null,
+   "estimated": true,
+   "text": "Markers can only award marks for what they can see. Each step that shows a correct idea, such as an amount in moles, a balanced equation or a correctly set-up ratio, is an observable step that can earn a mark, even if something later goes wrong. The marks you'll see today are indicative: they show how a typical marking scheme might divide up a question.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E13S06",
+ "title": "Q25 parts a to c: amounts, equation and excess oxygen",
+ "cls": "E13S06_PartsAC",
+ "fps": 15,
+ "duration": 93.1333,
+ "beats": [
+  {
+   "key": "E13S06.b01",
+   "start": 0.0,
+   "speech": 32.7083,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. The total amount of fuel mixture is six point two zero divided by twenty-four point eight: zero point two five zero moles. Methane is ninety point zero percent of that: zero point two two five moles. For oxygen, twenty-one point zero percent of sixty point zero litres is twelve point six litres, and twelve point six divided by twenty-four point eight is zero point five zero eight moles. Three observable steps, one mark each.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S06.b02",
+   "start": 33.0667,
+   "speech": 21.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. Methane gas plus two oxygen gas gives carbon dioxide gas plus two liquid water, with delta H equal to negative eight hundred and ninety kilojoules for the equation as written. One mark for the balanced equation with states, and one for the delta H with its sign and units.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S06.b03",
+   "start": 55.0667,
+   "speech": 37.08,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. Each mole of methane needs two moles of oxygen, so zero point two two five moles of methane needs zero point four five zero moles of oxygen. We have zero point five zero eight, so oxygen is in excess and all the methane can burn, just as the question says. The excess is zero point zero five eight one moles. Times thirty-two point zero grams per mole, that's one point eight six grams. One mark for the oxygen required, and one for the excess mass.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "scene": "E13S16",
+ "title": "Error log and close",
+ "cls": "E13S16_ErrorLog",
+ "fps": 15,
+ "duration": 87.2,
+ "beats": [
+  {
+   "key": "E13S16.b01",
+   "start": 0.0,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "Before we finish, start an error log. For each mistake you made today, write one row: the question and part, what you did, the type of error, the correct idea, and a check you'll use next time.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S16.b02",
+   "start": 16.2,
+   "speech": 24.5586,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's an example entry you can copy. Q twenty-five, part a. What I did: used zero point two five zero moles as the methane. Type of error: reading, a mixture versus its component. Correct idea: multiply by the volume fraction first. Next time: circle every percentage in a gas question and ask, \"percentage of what?\"",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S16.b03",
+   "start": 41.1333,
+   "speech": 5.3255,
+   "audio": null,
+   "estimated": true,
+   "text": "Your turn. Pause and write at least one entry from today's work.",
+   "overrun": 0.0,
+   "pause": 20.0,
+   "layout": []
+  },
+  {
+   "key": "E13S16.b04",
+   "start": 66.8667,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap: read and annotate, choose the method, show every quantity with units, and check plausibility. Watch for mixtures, air versus oxygen, inlet versus new carbon dioxide, and the basis of every comparison. Next episode is our second exam workshop, on calorimetry and data evaluation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

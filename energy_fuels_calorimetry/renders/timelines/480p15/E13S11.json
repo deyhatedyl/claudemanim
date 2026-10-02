@@ -1,0 +1,31 @@
+{
+ "scene": "E13S11",
+ "title": "What if there were less air?",
+ "cls": "E13S11_LessAir",
+ "fps": 15,
+ "duration": 55.8,
+ "beats": [
+  {
+   "key": "E13S11.b01",
+   "start": 0.0,
+   "speech": 14.789,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a variation to test your understanding. What if the heater received only fifty point zero litres of air instead of sixty point zero? Would all the methane still burn completely? Pause and decide.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E13S11.b02",
+   "start": 25.2,
+   "speech": 29.6317,
+   "audio": null,
+   "estimated": true,
+   "text": "Oxygen available: twenty-one point zero percent of fifty point zero litres is ten point five litres, or zero point four two three moles. But the methane needs zero point four five zero moles. Now oxygen is the limiting reactant, so the methane can't all burn completely. Some may burn incompletely, forming carbon monoxide or soot, and less energy is released. Always check which reactant limits before assuming complete combustion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

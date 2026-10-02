@@ -74,15 +74,41 @@ def title_card(ep_num: int, title: str, subtitle: str = "VCE Chemistry · Energy
 
 # ------------------------------------------------------------------ question card
 def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: bool = True,
-                  parts: list[str] | None = None, cols: int = 1) -> VGroup:
-    """The full prompt of an anchor question with its marks (no answers). cols=2 lays parts out in two columns."""
+                  parts: list[str] | None = None, cols: int = 1, side: bool = False, split: float = 0.5,
+                  inline_marks: bool = False, tight: bool = False) -> VGroup:
+    """The full prompt of an anchor question with its marks (no answers). cols=2 lays parts out in two columns;
+    side=True puts the stem on the left and a single column of parts on the right (for long questions)."""
     q = BY_ID[qid]
     total = sum(p[2] for p in q["parts"])
     head = VGroup(TB(f"{qid}", size=size + 4, color=SYSTEM),
                   T(q["title"], size=size, color=TEXT),
                   T(f"{total} marks", size=size, color=MUTED)).arrange(RIGHT, buff=0.35)
-    body = wrapped(q["stem"], size=size, width=width - 0.6)
+    lb = 0.06 if tight else 0.12          # gap between wrapped lines
+    half = (width - 1.0) * split
+    pcol = (width - 1.0) - half
+    body = wrapped(q["stem"], size=size, width=half if side else width - 0.6, buff=lb)
     rows = VGroup(head, body)
+    if show_parts and side:
+        built = VGroup()
+        for lab, txt, mk in q["parts"]:
+            if parts and lab not in parts:
+                continue
+            letter = TB(f"{lab}.", size=size, color=SYSTEM)
+            t = wrapped(txt, size=size, width=pcol - 1.2)
+            m = T(f"[{mk}]", size=size, color=MUTED)
+            t.next_to(letter, RIGHT, buff=0.2, aligned_edge=UP)
+            m.next_to(t, RIGHT, buff=0.2, aligned_edge=UP)
+            built.add(VGroup(letter, t, m))
+        built.arrange(DOWN, aligned_edge=LEFT, buff=0.16)
+        sep = Line(UP, DOWN, color=FAINT, stroke_width=1.5)
+        two = VGroup(body, built).arrange(RIGHT, buff=0.4, aligned_edge=UP)
+        built.align_to(body, LEFT).shift(RIGHT * (half + 0.4))
+        sep.stretch_to_fit_height(max(body.height, built.height)).move_to(two).align_to(two, UP)
+        sep.set_x(body.get_left()[0] + half + 0.2)
+        rows = VGroup(head, VGroup(body, sep, built))
+        rows.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
+        bg = panel(rows, color=FAINT, buff=0.3)
+        return VGroup(bg, rows)
     if show_parts:
         pw = (width - 0.6) / cols
         built = VGroup()
@@ -90,6 +116,12 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
             if parts and lab not in parts:
                 continue
             letter = TB(f"{lab}.", size=size, color=SYSTEM)
+            if inline_marks:            # marks at the end of the text: narrower cards for long questions
+                t = wrapped(f"{txt} [{mk}]", size=size, width=pw - 0.75, buff=lb)
+                t[-1][-len(f"[{mk}]"):].set_color(MUTED)
+                t.next_to(letter, RIGHT, buff=0.2, aligned_edge=UP)
+                built.add(VGroup(letter, t))
+                continue
             t = wrapped(txt, size=size, width=pw - 1.4)
             m = T(f"[{mk}]", size=size, color=MUTED)
             t.next_to(letter, RIGHT, buff=0.2, aligned_edge=UP)
@@ -99,14 +131,14 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
             rows.add(*built)
         else:
             per = -(-len(built) // cols)
-            columns = VGroup(*[VGroup(*built[i * per:(i + 1) * per]).arrange(DOWN, aligned_edge=LEFT, buff=0.18)
+            columns = VGroup(*[VGroup(*built[i * per:(i + 1) * per]).arrange(DOWN, aligned_edge=LEFT, buff=0.12 if tight else 0.18)
                                for i in range(cols)])
             columns.arrange(RIGHT, buff=0.4, aligned_edge=UP)
             for i, c in enumerate(columns[1:], 1):
                 c.align_to(columns[0], LEFT).shift(RIGHT * pw * i)
             rows.add(columns)
-    rows.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
-    bg = panel(rows, color=FAINT, buff=0.3)
+    rows.arrange(DOWN, aligned_edge=LEFT, buff=0.16 if tight else 0.22)
+    bg = panel(rows, color=FAINT, buff=0.24 if tight else 0.3)
     return VGroup(bg, rows)
 
 

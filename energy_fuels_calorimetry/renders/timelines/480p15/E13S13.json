@@ -1,0 +1,64 @@
+{
+ "scene": "E13S13",
+ "title": "Q26 parts a and b: per gram and per useful kilojoule",
+ "cls": "E13S13_PartsAB",
+ "fps": 15,
+ "duration": 120.1333,
+ "beats": [
+  {
+   "key": "E13S13.b01",
+   "start": 0.0,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Annotate first. The enthalpies are per mole. The two heaters have different efficiencies. And part b asks for grams of carbon dioxide per useful kilojoule, which sets the basis for every number in that part.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S13.b02",
+   "start": 15.6,
+   "speech": 18.0455,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. Methanol: seven hundred and twenty-six divided by thirty-two point zero is twenty-two point seven kilojoules per gram. Ethanol: one thousand three hundred and seventy divided by forty-six point zero is twenty-nine point eight kilojoules per gram. One mark each.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S13.b03",
+   "start": 34.0,
+   "speech": 27.3828,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. Work per mole of fuel. One mole of methanol gives one mole of carbon dioxide, forty-four point zero grams, and delivers seven hundred and twenty-six times zero point two five zero: one hundred and eighty-one point five kilojoules of useful energy. Forty-four point zero divided by one hundred and eighty-one point five is zero point two four two grams per useful kilojoule.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S13.b04",
+   "start": 61.7333,
+   "speech": 35.011,
+   "audio": null,
+   "estimated": true,
+   "text": "One mole of ethanol gives two moles of carbon dioxide, eighty-eight point zero grams, and delivers one thousand three hundred and seventy times zero point four zero zero: five hundred and forty-eight kilojoules of useful energy. Eighty-eight point zero divided by five hundred and forty-eight is zero point one six one grams per useful kilojoule. So the ethanol heater emits less direct carbon dioxide for the same useful energy. Four marks: one for each useful energy, and one for each emission figure.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S13.b05",
+   "start": 97.1333,
+   "speech": 22.0034,
+   "audio": null,
+   "estimated": true,
+   "text": "Is that plausible? Per kilojoule released, the two fuels are similar: about zero point zero six grams of carbon dioxide per kilojoule each. So the difference must come mostly from efficiency, forty percent versus twenty-five percent, a factor of one point six. Our ratio is about one point five, which fits.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

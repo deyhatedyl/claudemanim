@@ -21,7 +21,7 @@ from shared.tts import estimate_duration  # noqa: E402
 
 RULES = [
     (re.compile(r"\b[A-Z][a-z]?\d+[A-Za-z0-9]*\b"), "formula-like token (spell it out)"),
-    (re.compile(r"(?<!['’])\b(?:g|mg|kg|mL|L|kJ|MJ|J|mol|kPa|Pa|s|h|K|M|Vm|CF)\b(?![-'’])"), "bare unit/symbol"),
+    (re.compile(r"(?<!['’])(?<![Pp]art )\b(?:g|mg|kg|mL|L|kJ|MJ|J|mol|kPa|Pa|s|h|K|M|Vm|CF)\b(?![-'’])"), "bare unit/symbol"),
     (re.compile(r"[\^_=/×°%+→⁻¹²³⁴Δ<>]|->"), "maths symbol"),
     (re.compile(r"\bQ\d\d\b"), "question ID as digits (say 'Q zero one')"),
     (re.compile(r"\d[,.]\d{3}[,.]\d"), "ambiguous grouped number"),

@@ -31,12 +31,12 @@
  },
  "E07": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
   "final_qa": "pending"
  },
  "E08": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
   "final_qa": "pending"
  },
  "E09": {
@@ -57,6 +57,11 @@
  "E12": {
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings.",
+  "final_qa": "pending"
+ },
+ "E13": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings.",
   "final_qa": "pending"
  }
 }

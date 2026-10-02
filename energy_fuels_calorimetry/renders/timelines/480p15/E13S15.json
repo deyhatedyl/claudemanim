@@ -1,0 +1,42 @@
+{
+ "scene": "E13S15",
+ "title": "Q26 parts c and d: explaining and limiting claims",
+ "cls": "E13S15_PartsCD",
+ "fps": 15,
+ "duration": 55.5333,
+ "beats": [
+  {
+   "key": "E13S15.b01",
+   "start": 0.0,
+   "speech": 25.4938,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. That's wrong for two reasons. The energy released depends on all the bonds broken and formed in the whole reaction, not on one bond they share. And per-gram values also depend on molar mass. One mark for each idea.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S15.b02",
+   "start": 25.8667,
+   "speech": 23.4248,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. Do these results show which fuel has lower lifecycle emissions? No. We've only counted the direct carbon dioxide from combustion. Lifecycle emissions also include producing the feedstock, processing the fuel and transporting it, and we have no data on any of those. One mark for the conclusion, and one for the reason.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S15.b03",
+   "start": 49.6667,
+   "speech": 4.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "The full tally: two, four, two and two, for ten marks.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

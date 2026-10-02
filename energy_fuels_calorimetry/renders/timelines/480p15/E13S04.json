@@ -1,0 +1,53 @@
+{
+ "scene": "E13S04",
+ "title": "Q25: read and annotate",
+ "cls": "E13S04_Annotate",
+ "fps": 15,
+ "duration": 82.9333,
+ "beats": [
+  {
+   "key": "E13S04.b01",
+   "start": 0.0,
+   "speech": 27.149,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's read it the way a careful student would. First, the fuel: six point two zero litres at SLC, so we'll convert using twenty-four point eight litres per mole. But it's a mixture. Only ninety point zero percent by volume is methane. For gases at the same temperature and pressure, volume percent equals mole percent, so ninety percent of the moles are methane.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S04.b02",
+   "start": 27.5333,
+   "speech": 11.8924,
+   "audio": null,
+   "estimated": true,
+   "text": "Next, the air. Sixty point zero litres of air is not sixty litres of oxygen. Only twenty-one point zero percent of it is oxygen. That's worth underlining.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S04.b03",
+   "start": 39.8,
+   "speech": 24.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "The enthalpy of combustion is negative eight hundred and ninety kilojoules per mole, for formation of liquid water, which tells us the states for the equation. The water being heated has a mass of eight hundred point zero grams and warms from seventeen point zero to fifty-seven point zero degrees: a rise of forty point zero degrees.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S04.b04",
+   "start": 64.2667,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "Finally, the carbon dioxide in the fuel passes through unchanged. So the carbon dioxide leaving the heater has two sources: the combustion, and the inlet gas. Now we know what's asked and what could trip us up, we can choose methods.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

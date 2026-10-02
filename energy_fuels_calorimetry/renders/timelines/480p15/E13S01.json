@@ -1,0 +1,42 @@
+{
+ "scene": "E13S01",
+ "title": "Retrieval check",
+ "cls": "E13S01_Retrieval",
+ "fps": 15,
+ "duration": 78.6,
+ "beats": [
+  {
+   "key": "E13S01.b01",
+   "start": 0.0,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode thirteen, our first exam workshop. Today we'll work through two longer practice questions from start to finish, the way you'd tackle them in an exam. They're original questions written for this series, not official exam questions.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E13S01.b02",
+   "start": 17.0667,
+   "speech": 25.9076,
+   "audio": null,
+   "estimated": true,
+   "text": "First, two quick retrieval checks. A muesli bar label says one thousand six hundred and fifty kilojoules per hundred grams. How much energy is in a forty point zero gram bar? And in a catalytic heater, a platinum catalyst lets methane react at a lower temperature. Does the catalyst change the energy released per mole of methane? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E13S01.b03",
+   "start": 53.4,
+   "speech": 24.2524,
+   "audio": null,
+   "estimated": true,
+   "text": "The bar: one thousand six hundred and fifty, times forty point zero over one hundred, is six hundred and sixty kilojoules. Scale by the mass you actually have. And the catalyst: no. It provides a pathway with a lower activation energy, but the reactants, the products and their states are unchanged, so delta H is unchanged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

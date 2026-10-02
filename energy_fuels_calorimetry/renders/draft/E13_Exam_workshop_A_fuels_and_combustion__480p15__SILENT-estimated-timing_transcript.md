@@ -1,0 +1,100 @@
+# E13 Exam workshop A: fuels and combustion
+
+Runtime 20:27. Narration transcript (matches the captions).
+
+## [00:00] E13S01 Retrieval check
+
+Welcome to episode thirteen, our first exam workshop. Today we'll work through two longer practice questions from start to finish, the way you'd tackle them in an exam. They're original questions written for this series, not official exam questions.
+First, two quick retrieval checks. A muesli bar label says one thousand six hundred and fifty kilojoules per hundred grams. How much energy is in a forty point zero gram bar? And in a catalytic heater, a platinum catalyst lets methane react at a lower temperature. Does the catalyst change the energy released per mole of methane? Pause and answer.  *(pause)*
+The bar: one thousand six hundred and fifty, times forty point zero over one hundred, is six hundred and sixty kilojoules. Scale by the mass you actually have. And the catalyst: no. It provides a pathway with a lower activation energy, but the reactants, the products and their states are unchanged, so delta H is unchanged.
+
+## [01:18] E13S02 The routine for every question
+
+Here's the routine we'll use for every question. Read the whole question first. Annotate it: units, conditions, and any words that change the chemistry. Choose a method before you calculate. Work one quantity at a time, with units. And finally, check that the answer is plausible.
+Markers can only award marks for what they can see. Each step that shows a correct idea, such as an amount in moles, a balanced equation or a correctly set-up ratio, is an observable step that can earn a mark, even if something later goes wrong. The marks you'll see today are indicative: they show how a typical marking scheme might divide up a question.
+
+## [02:07] E13S03 Q25: attempt it first
+
+Practice question Q twenty-five is worth fifteen marks. It's an integrated question about a water heater that burns purified gas from a digester. Read it all the way through now, before you write anything.
+Pause the video now and attempt every part on paper. Give yourself about fifteen to twenty minutes. If you keep the video running instead, the next minute is quiet thinking time: start by listing what's given and what's asked.  *(pause)*
+
+## [03:40] E13S04 Q25: read and annotate
+
+Let's read it the way a careful student would. First, the fuel: six point two zero litres at SLC, so we'll convert using twenty-four point eight litres per mole. But it's a mixture. Only ninety point zero percent by volume is methane. For gases at the same temperature and pressure, volume percent equals mole percent, so ninety percent of the moles are methane.
+Next, the air. Sixty point zero litres of air is not sixty litres of oxygen. Only twenty-one point zero percent of it is oxygen. That's worth underlining.
+The enthalpy of combustion is negative eight hundred and ninety kilojoules per mole, for formation of liquid water, which tells us the states for the equation. The water being heated has a mass of eight hundred point zero grams and warms from seventeen point zero to fifty-seven point zero degrees: a rise of forty point zero degrees.
+Finally, the carbon dioxide in the fuel passes through unchanged. So the carbon dioxide leaving the heater has two sources: the combustion, and the inlet gas. Now we know what's asked and what could trip us up, we can choose methods.
+
+## [05:03] E13S05 Q25: plan the methods
+
+Before calculating, plan a method for each part. Part a: amounts from volumes at SLC, then the methane fraction. Part b: a balanced equation with states and delta H. Part c: the mole ratio from the equation, then the excess oxygen as a mass. Part d: energy released from the moles of methane, and heat gained from m c delta T. Part e: efficiency as output over input. Part f: new plus inlet carbon dioxide, then a volume. And part g: a definition based on the source.
+Notice that the plan is a chain. Part a feeds parts c, d and f, and part d feeds part e. That's why an early error spreads, and why it's worth checking part a carefully before you move on.
+
+## [06:00] E13S06 Q25 parts a to c: amounts, equation and excess oxygen
+
+Part a. The total amount of fuel mixture is six point two zero divided by twenty-four point eight: zero point two five zero moles. Methane is ninety point zero percent of that: zero point two two five moles. For oxygen, twenty-one point zero percent of sixty point zero litres is twelve point six litres, and twelve point six divided by twenty-four point eight is zero point five zero eight moles. Three observable steps, one mark each.
+Part b. Methane gas plus two oxygen gas gives carbon dioxide gas plus two liquid water, with delta H equal to negative eight hundred and ninety kilojoules for the equation as written. One mark for the balanced equation with states, and one for the delta H with its sign and units.
+Part c. Each mole of methane needs two moles of oxygen, so zero point two two five moles of methane needs zero point four five zero moles of oxygen. We have zero point five zero eight, so oxygen is in excess and all the methane can burn, just as the question says. The excess is zero point zero five eight one moles. Times thirty-two point zero grams per mole, that's one point eight six grams. One mark for the oxygen required, and one for the excess mass.
+
+## [07:33] E13S07 Wrong solution: all the gas treated as methane
+
+Here's a tempting wrong solution. A student treats all zero point two five zero moles of gas as methane. Watch how one reading error spreads.
+Their oxygen requirement becomes zero point five zero zero moles, so their excess shrinks to just zero point two five eight grams. Their energy released becomes two hundred and twenty-two point five kilojoules, and their efficiency drops to sixty point one percent. One misread phrase has changed the answers to parts a, c, d and e.
+A marking scheme may still award later marks for a correct method applied consistently to the wrong number. But the methane mark in part a is gone, and every answer after it is wrong. The fix is a reading habit: whenever a gas is a mixture, find the amount of the reacting component first.
+
+## [08:32] E13S08 Q25 parts d and e: energy and efficiency
+
+Part d. The energy released is zero point two two five moles times eight hundred and ninety kilojoules per mole: two hundred point two five kilojoules, or about two hundred kilojoules. The heat gained by the water is eight hundred point zero grams, times four point one eight joules per gram per degree, times forty point zero degrees: one hundred and thirty-three thousand, seven hundred and sixty joules. In kilojoules, that's one hundred and thirty-three point seven six.
+Part e. Both the input and the useful output are known, so efficiency equals the useful output divided by the input, times one hundred percent. One hundred and thirty-three point seven six divided by two hundred point two five gives sixty-six point eight percent. Use the unrounded two hundred point two five here, and round only the final answer, to three significant figures to match the data.
+Why not divide by an efficiency? That inverse operation is only for finding the input needed to deliver a target output. Here we're finding the efficiency itself. Plausibility check: the answer is between zero and one hundred percent, and the water gained less energy than the fuel released, as it must for a real heater. Two marks for part d, and three for part e: the ratio, the value, and the explanation.
+
+## [10:07] E13S09 Q25 parts f and g: carbon dioxide and the source
+
+Part f. The new carbon dioxide from combustion is one mole per mole of methane: zero point two two five moles. Add the inlet carbon dioxide, ten percent of zero point two five zero, which is zero point zero two five zero moles. The total is zero point two five zero moles, which at SLC occupies six point two zero litres.
+That equals the fuel volume, and that's a useful plausibility check. Every molecule in the fuel, methane or carbon dioxide, contains exactly one carbon atom, and carbon is conserved. So the moles of carbon dioxide out must equal the moles of fuel gas in. The water isn't counted, because we've isolated the dry carbon dioxide.
+Part g asks why the methane counts as renewable. It's renewable because of its source: it comes from recently grown biomass, such as food or farm waste, which is replenished on a human timescale. The methane molecule itself is identical to fossil methane. One mark.
+Here's the full tally: three, two, two, two, three, two and one, for fifteen marks. Notice how many of those marks come from steps you can show, not just from final answers.
+
+## [11:32] E13S10 Checkpoint: spot the error
+
+Checkpoint: spot the error. Here are three lines from different students' answers to Q twenty-five. Each line contains one mistake. Pause and find all three.  *(pause)*
+Line one uses the volume of air as if it were all oxygen. It should use twenty-one point zero percent of sixty point zero litres, giving zero point five zero eight moles.
+Line two forgets the inlet carbon dioxide. The total is zero point two five zero moles, which is six point two zero litres.
+Line three has the right number but the wrong unit. Grams times joules per gram per degree, times degrees, gives joules: one hundred and thirty-three thousand, seven hundred and sixty joules, which is one hundred and thirty-three point seven six kilojoules. Left uncorrected, that slip makes the efficiency a thousand times too large, which a plausibility check would catch immediately.
+
+## [12:49] E13S11 What if there were less air?
+
+Here's a variation to test your understanding. What if the heater received only fifty point zero litres of air instead of sixty point zero? Would all the methane still burn completely? Pause and decide.  *(pause)*
+Oxygen available: twenty-one point zero percent of fifty point zero litres is ten point five litres, or zero point four two three moles. But the methane needs zero point four five zero moles. Now oxygen is the limiting reactant, so the methane can't all burn completely. Some may burn incompletely, forming carbon monoxide or soot, and less energy is released. Always check which reactant limits before assuming complete combustion.
+
+## [13:45] E13S12 Q26: attempt it first
+
+Practice question Q twenty-six is worth ten marks. It compares a methanol heater and an ethanol heater, and the ranking depends on the basis. Read it through.
+Pause the video now and attempt all four parts. If you keep it running, here's some quiet thinking time. Before you calculate anything, decide what "per useful kilojoule" means for each heater.  *(pause)*
+
+## [14:57] E13S13 Q26 parts a and b: per gram and per useful kilojoule
+
+Annotate first. The enthalpies are per mole. The two heaters have different efficiencies. And part b asks for grams of carbon dioxide per useful kilojoule, which sets the basis for every number in that part.
+Part a. Methanol: seven hundred and twenty-six divided by thirty-two point zero is twenty-two point seven kilojoules per gram. Ethanol: one thousand three hundred and seventy divided by forty-six point zero is twenty-nine point eight kilojoules per gram. One mark each.
+Part b. Work per mole of fuel. One mole of methanol gives one mole of carbon dioxide, forty-four point zero grams, and delivers seven hundred and twenty-six times zero point two five zero: one hundred and eighty-one point five kilojoules of useful energy. Forty-four point zero divided by one hundred and eighty-one point five is zero point two four two grams per useful kilojoule.
+One mole of ethanol gives two moles of carbon dioxide, eighty-eight point zero grams, and delivers one thousand three hundred and seventy times zero point four zero zero: five hundred and forty-eight kilojoules of useful energy. Eighty-eight point zero divided by five hundred and forty-eight is zero point one six one grams per useful kilojoule. So the ethanol heater emits less direct carbon dioxide for the same useful energy. Four marks: one for each useful energy, and one for each emission figure.
+Is that plausible? Per kilojoule released, the two fuels are similar: about zero point zero six grams of carbon dioxide per kilojoule each. So the difference must come mostly from efficiency, forty percent versus twenty-five percent, a factor of one point six. Our ratio is about one point five, which fits.
+
+## [16:57] E13S14 Wrong solution: emissions on different bases
+
+Now a tempting wrong solution. A student calculates methanol correctly, at zero point two four two grams per useful kilojoule. But for ethanol they divide eighty-eight point zero grams by the full one thousand three hundred and seventy kilojoules released, getting zero point zero six four two, and they conclude that ethanol emits nearly four times less.
+The two numbers are on different bases. One is per useful kilojoule; the other is per kilojoule released, which ignores the heater's efficiency. Compared properly, both per useful kilojoule, ethanol is lower by a factor of about one point five, not four.
+Another version of the same trap compares carbon dioxide per mole of fuel: one mole for methanol and two for ethanol, so "methanol emits half as much". That's true per mole of fuel, but a mole of methanol delivers far less useful energy. Always put both fuels on the basis the question asks for.
+
+## [18:04] E13S15 Q26 parts c and d: explaining and limiting claims
+
+Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. That's wrong for two reasons. The energy released depends on all the bonds broken and formed in the whole reaction, not on one bond they share. And per-gram values also depend on molar mass. One mark for each idea.
+Part d. Do these results show which fuel has lower lifecycle emissions? No. We've only counted the direct carbon dioxide from combustion. Lifecycle emissions also include producing the feedstock, processing the fuel and transporting it, and we have no data on any of those. One mark for the conclusion, and one for the reason.
+The full tally: two, four, two and two, for ten marks.
+
+## [19:00] E13S16 Error log and close
+
+Before we finish, start an error log. For each mistake you made today, write one row: the question and part, what you did, the type of error, the correct idea, and a check you'll use next time.
+Here's an example entry you can copy. Q twenty-five, part a. What I did: used zero point two five zero moles as the methane. Type of error: reading, a mixture versus its component. Correct idea: multiply by the volume fraction first. Next time: circle every percentage in a gas question and ask, "percentage of what?"
+Your turn. Pause and write at least one entry from today's work.  *(pause)*
+To recap: read and annotate, choose the method, show every quantity with units, and check plausibility. Watch for mixtures, air versus oxygen, inlet versus new carbon dioxide, and the basis of every comparison. Next episode is our second exam workshop, on calorimetry and data evaluation.

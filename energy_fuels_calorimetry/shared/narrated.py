@@ -63,6 +63,7 @@ class _BeatTracker:
 
 class NarratedScene(Scene):
     SCENE_ID: str = ""
+    PAUSE_LABELS: dict = {}     # beat name -> on-screen label for its scripted pause (default "Pause and think")
 
     def setup(self):
         self.camera.background_color = BG
@@ -113,7 +114,7 @@ class NarratedScene(Scene):
         if g > 0:
             self.wait(g)
         if beat.pause > 0:
-            self.think_timer(beat.pause)
+            self.think_timer(beat.pause, self.PAUSE_LABELS.get(name, "Pause and think"))
 
     def think_timer(self, seconds: float, label: str = "Pause and think"):
         """Silent reflection time with a small draining bar in the top-right corner."""
