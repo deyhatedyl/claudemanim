@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T19:59:04",
+ "updated": "2026-10-02T20:19:01",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1218,16 +1218,16 @@
    "title": "Why calorimeters need calibration",
    "script": {
     "path": "scripts/ep09.md",
-    "sha": "a52d0fc1ec557d72",
-    "beats": 38,
-    "words": 1468,
-    "est_minutes": 11.8,
+    "sha": "d700ff590f7c0868",
+    "beats": 45,
+    "words": 1807,
+    "est_minutes": 14.2,
     "anchors": "Q17,Q18",
     "coverage": "C20,C21,C25,C08"
    },
    "scenes_code": {
     "path": "scenes/ep09.py",
-    "sha": "7500b457f9bd6e46"
+    "sha": "3b5a44a8525a86c1"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1257,6 +1257,18 @@
     },
     {
      "id": "E09S03",
+     "title": "Two kinds of calorimeter",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 82.8667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S04",
      "title": "Electrical calibration: E = VIt, then CF = E / delta T",
      "beats": 4,
      "audio_ready": 0,
@@ -1268,7 +1280,7 @@
      }
     },
     {
-     "id": "E09S04",
+     "id": "E09S05",
      "title": "Stacking heat capacities and the lower bound",
      "beats": 4,
      "audio_ready": 0,
@@ -1280,7 +1292,7 @@
      }
     },
     {
-     "id": "E09S05",
+     "id": "E09S06",
      "title": "Practice Q17, part 1: calibrate, then use it",
      "beats": 5,
      "audio_ready": 0,
@@ -1292,7 +1304,7 @@
      }
     },
     {
-     "id": "E09S06",
+     "id": "E09S07",
      "title": "Changing the contents changes CF",
      "beats": 4,
      "audio_ready": 0,
@@ -1304,7 +1316,19 @@
      }
     },
     {
-     "id": "E09S07",
+     "id": "E09S08",
+     "title": "Calibrating with a reaction of known delta H",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 64.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S09",
      "title": "Heat loss during calibration: follow the formula",
      "beats": 6,
      "audio_ready": 0,
@@ -1316,7 +1340,7 @@
      }
     },
     {
-     "id": "E09S08",
+     "id": "E09S10",
      "title": "Practice Q18: an impossible calibration factor",
      "beats": 5,
      "audio_ready": 0,
@@ -1328,7 +1352,7 @@
      }
     },
     {
-     "id": "E09S09",
+     "id": "E09S11",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1342,14 +1366,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 38,
+    "total": 45,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 702.19,
+    "duration": 849.79,
     "captions": [
      "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.vtt"
@@ -1359,7 +1383,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E09S03 (solution vs bomb calorimeter) and E09S08 (chemical calibration, hypothetical reference reaction) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1367,16 +1391,16 @@
    "title": "Reaction calorimetry and molar enthalpy",
    "script": {
     "path": "scripts/ep10.md",
-    "sha": "7bfc3705e5cb0572",
-    "beats": 36,
-    "words": 1447,
-    "est_minutes": 11.5,
+    "sha": "742ba614917a2082",
+    "beats": 42,
+    "words": 1829,
+    "est_minutes": 14.4,
     "anchors": "Q19,Q20",
     "coverage": "C22,C23,C15,C13,C01"
    },
    "scenes_code": {
     "path": "scenes/ep10.py",
-    "sha": "8f69e174a948033a"
+    "sha": "16a3becc3dd0efad"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1430,6 +1454,18 @@
     },
     {
      "id": "E10S05",
+     "title": "When the temperature falls",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 81.2667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S06",
      "title": "Practice Q19: justify the denominator",
      "beats": 7,
      "audio_ready": 0,
@@ -1441,7 +1477,19 @@
      }
     },
     {
-     "id": "E10S06",
+     "id": "E10S07",
+     "title": "No calibration factor? Use the solution's mass",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 92.8,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E10S08",
      "title": "One mole of reagent is not always one mole of reaction",
      "beats": 3,
      "audio_ready": 0,
@@ -1453,7 +1501,7 @@
      }
     },
     {
-     "id": "E10S07",
+     "id": "E10S09",
      "title": "Practice Q20: predict the final temperature",
      "beats": 7,
      "audio_ready": 0,
@@ -1465,7 +1513,7 @@
      }
     },
     {
-     "id": "E10S08",
+     "id": "E10S10",
      "title": "Coefficients change delta H, not the heat",
      "beats": 3,
      "audio_ready": 0,
@@ -1477,7 +1525,7 @@
      }
     },
     {
-     "id": "E10S09",
+     "id": "E10S11",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1491,14 +1539,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 36,
+    "total": 42,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 686.66,
+    "duration": 860.73,
     "captions": [
      "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.vtt"
@@ -1508,7 +1556,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E10S05 (temperature fall, endothermic sign) and E10S07 (solution-only m c \u0394T model vs CF) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1516,16 +1564,16 @@
    "title": "Temperature graphs, correction and experimental reasoning",
    "script": {
     "path": "scripts/ep11.md",
-    "sha": "ba7b50da666e5aae",
-    "beats": 41,
-    "words": 1545,
-    "est_minutes": 12.2,
+    "sha": "16f8f2445fcb8645",
+    "beats": 51,
+    "words": 2023,
+    "est_minutes": 16.1,
     "anchors": "Q21,Q22",
     "coverage": "C24,C25,C21,C08"
    },
    "scenes_code": {
     "path": "scenes/ep11.py",
-    "sha": "64fd33df9c843cfd"
+    "sha": "379468335948b0eb"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1591,6 +1639,30 @@
     },
     {
      "id": "E11S06",
+     "title": "Drawing the extrapolation well",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 72.6667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S07",
+     "title": "When the temperature falls",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 92.4,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S08",
      "title": "Heat loss during calibration versus during the reaction",
      "beats": 4,
      "audio_ready": 0,
@@ -1602,7 +1674,7 @@
      }
     },
     {
-     "id": "E11S07",
+     "id": "E11S09",
      "title": "Systematic and random errors; accuracy and precision",
      "beats": 4,
      "audio_ready": 0,
@@ -1614,7 +1686,7 @@
      }
     },
     {
-     "id": "E11S08",
+     "id": "E11S10",
      "title": "Practice Q22: a wrong CF and a thermometer offset",
      "beats": 6,
      "audio_ready": 0,
@@ -1626,7 +1698,7 @@
      }
     },
     {
-     "id": "E11S09",
+     "id": "E11S11",
      "title": "The error-direction table",
      "beats": 5,
      "audio_ready": 0,
@@ -1638,7 +1710,19 @@
      }
     },
     {
-     "id": "E11S10",
+     "id": "E11S12",
+     "title": "Checkpoint: which improvement fixes which error?",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 65.5333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S13",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1652,14 +1736,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 41,
+    "total": 51,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 730.06,
+    "duration": 960.66,
     "captions": [
      "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.vtt"
@@ -1669,7 +1753,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1677,16 +1761,16 @@
    "title": "Fair fuel comparisons and sustainability",
    "script": {
     "path": "scripts/ep12.md",
-    "sha": "9533d1e506a0a22d",
-    "beats": 32,
-    "words": 1318,
-    "est_minutes": 10.8,
+    "sha": "315e2ab81d8b3bbe",
+    "beats": 38,
+    "words": 1612,
+    "est_minutes": 13.2,
     "anchors": "Q23,Q24",
     "coverage": "C19,C27,C28,C02,C03,C17,C11"
    },
    "scenes_code": {
     "path": "scenes/ep12.py",
-    "sha": "93faf766b037eb50"
+    "sha": "d87db8e8b3cd8264"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1716,6 +1800,18 @@
     },
     {
      "id": "E12S03",
+     "title": "Per litre: another basis for gases",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 81.0,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S04",
      "title": "Normalise to the same useful output",
      "beats": 3,
      "audio_ready": 0,
@@ -1727,7 +1823,7 @@
      }
     },
     {
-     "id": "E12S04",
+     "id": "E12S05",
      "title": "Practice Q23: emissions per useful energy",
      "beats": 5,
      "audio_ready": 0,
@@ -1739,7 +1835,7 @@
      }
     },
     {
-     "id": "E12S05",
+     "id": "E12S06",
      "title": "Checkpoint: per input is not per useful output",
      "beats": 2,
      "audio_ready": 0,
@@ -1751,7 +1847,7 @@
      }
     },
     {
-     "id": "E12S06",
+     "id": "E12S07",
      "title": "Drawing the system boundary",
      "beats": 3,
      "audio_ready": 0,
@@ -1763,7 +1859,19 @@
      }
     },
     {
-     "id": "E12S07",
+     "id": "E12S08",
+     "title": "Is a biofuel carbon neutral?",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 64.1333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S09",
      "title": "Renewable is not the same as sustainable",
      "beats": 4,
      "audio_ready": 0,
@@ -1775,7 +1883,7 @@
      }
     },
     {
-     "id": "E12S08",
+     "id": "E12S10",
      "title": "Practice Q24: build an evidence-based answer",
      "beats": 6,
      "audio_ready": 0,
@@ -1787,7 +1895,7 @@
      }
     },
     {
-     "id": "E12S09",
+     "id": "E12S11",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1801,14 +1909,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 32,
+    "total": 38,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 644.26,
+    "duration": 789.39,
     "captions": [
      "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.vtt"
@@ -1818,7 +1926,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -2325,5 +2433,5 @@
    }
   }
  },
- "series_est_minutes": 192.6
+ "series_est_minutes": 204.3
 }

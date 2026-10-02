@@ -166,7 +166,54 @@ class E10S04_Signs(NarratedScene):
 
 
 # =====================================================================================
-class E10S05_Q19(NarratedScene):
+class E10S05_Falls(NarratedScene):
+    def construct(self):
+        h = header("When the temperature falls")
+        hyp = T("salt Y is hypothetical", size=SMALL, color=MUTED).to_corner(UR, buff=0.4)
+        th = Thermometer(height=3.0, level=0.62).move_to([-5.2, 0.1, 0])
+        t0 = T("21.0 °C", size=LABEL).next_to(th, RIGHT, buff=0.2).shift(0.55 * UP)
+        t1 = T("18.6 °C", size=LABEL, color=SURR).next_to(th, RIGHT, buff=0.2).shift(0.15 * UP)
+        x0 = -3.4
+
+        def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
+            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b01") as b:
+            data = VGroup(T("0.0500 mol of salt Y dissolves", size=LABEL + 1),
+                          T("CF = 500 J °C⁻¹", size=LABEL + 1)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
+            data.move_to([0, 2.05, 0]).align_to([x0, 0, 0], LEFT)
+            self.play(FadeIn(h), FadeIn(hyp), FadeIn(data), FadeIn(th), FadeIn(t0), run_time=0.9)
+            b.until(0.5)
+            self.play(th.level.animate.set_value(0.45), FadeIn(t1), run_time=1.5)
+            q = T("sign of ΔH?", size=LABEL + 2, color=UNKNOWN).move_to([0, 0.9, 0]).align_to([x0, 0, 0], LEFT)
+            b.until(0.8)
+            self.play(FadeIn(q), run_time=0.4)
+            self.q = q
+        with self.beat("b02") as b:
+            self.play(FadeOut(self.q), run_time=0.3)
+            l1 = L(r"\Delta T = 18.6 - 21.0 = -2.40\ {}^{\circ}\text{C}", 0.95, TEMP_C)
+            l2 = L(r"q_{\text{cal}} = 500 \times (-2.40) = -1200\ \text{J}", 0.25, SURR)
+            self.play(Write(l1), run_time=1.0)
+            b.until(0.45)
+            self.play(Write(l2), run_time=1.0)
+            lost = T("the calorimeter lost energy", size=SMALL + 1, color=SURR).next_to(l2, RIGHT, buff=0.35)
+            b.until(0.8)
+            self.play(FadeIn(lost), run_time=0.4)
+        with self.beat("b03") as b:
+            l3 = L(r"q_{\text{process}} = +1200\ \text{J}", -0.45, SYSTEM)
+            l4 = L(r"\Delta H = \frac{+1.200\ \text{kJ}}{0.0500\ \text{mol}} = +24.0\ \text{kJ mol}^{-1}", -1.25, UNKNOWN)
+            self.play(Write(l3), run_time=0.8)
+            b.until(0.3)
+            self.play(Write(l4), run_time=1.0)
+            self.play(Create(result_box(l4, UNKNOWN)), run_time=0.4)
+            tab = VGroup(T("temperature rises → q(cal) > 0 → ΔH < 0 (exothermic)", size=SMALL + 1, color=MUTED),
+                         T("temperature falls → q(cal) < 0 → ΔH > 0 (endothermic)", size=SMALL + 1, color=UNKNOWN))
+            tab.arrange(DOWN, aligned_edge=LEFT, buff=0.1).move_to([0, -2.4, 0])
+            b.until(0.65)
+            self.play(FadeIn(tab), run_time=0.6)
+
+
+# =====================================================================================
+class E10S06_Q19(NarratedScene):
     def construct(self):
         h = header("Practice Q19")
         qc = question_card("Q19").move_to([0, 0.3, 0])
@@ -226,7 +273,62 @@ class E10S05_Q19(NarratedScene):
 
 
 # =====================================================================================
-class E10S06_Extent(NarratedScene):
+class E10S07_MassModel(NarratedScene):
+    def construct(self):
+        h = header("No calibration factor? Use the solution's mass")
+        x0 = -6.0
+
+        def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
+            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b01") as b:
+            chips = VGroup(chip("treat the solution as water", SURR, size=SMALL + 1),
+                           chip("density 1.00 g mL⁻¹", MASS_C, size=SMALL + 1),
+                           chip("c = 4.18 J g⁻¹ °C⁻¹", ENERGY_C, size=SMALL + 1)).arrange(RIGHT, buff=0.3)
+            chips.move_to([0, 2.2, 0])
+            self.play(FadeIn(h), run_time=0.4)
+            self.play(LaggedStart(*[FadeIn(c) for c in chips], lag_ratio=0.3), run_time=1.2)
+            f = M(r"q = m\,c\,\Delta T \quad (m = \text{total mass of the mixed solution})", size=EQ_SMALL - 4).move_to([0, 1.45, 0])
+            b.until(0.6)
+            self.play(Write(f), run_time=1.0)
+        with self.beat("b02") as b:
+            l1 = L(r"V = 75.0 + 50.0 = 125.0\ \text{mL} \;\Rightarrow\; m = 125.0\ \text{g}", 0.6, MASS_C)
+            l2 = L(r"q = 125.0 \times 4.18 \times 4.30 = 2247\ \text{J}", -0.1, ENERGY_C)
+            l3 = L(r"\Delta H = -\frac{2.247\ \text{kJ}}{0.0450\ \text{mol}} = -49.9\ \text{kJ mol}^{-1}", -0.95, UNKNOWN)
+            src = T("Q19 mixture: rise 4.30 °C; 0.0450 mol water formed", size=SMALL + 1, color=MUTED).move_to([0, -2.1, 0])
+            self.play(Write(l1), FadeIn(src), run_time=1.0)
+            b.until(0.4)
+            self.play(Write(l2), run_time=1.0)
+            b.until(0.7)
+            self.play(Write(l3), run_time=1.0)
+            self.work, self.src = VGroup(l1, l2, l3), src
+        with self.beat("b03") as b:
+            tgt = self.work.copy().scale(0.75)
+            tgt.move_to([0, -0.05, 0]).align_to([-6.3, 0, 0], LEFT)
+            self.play(FadeOut(self.src), Transform(self.work, tgt), run_time=0.7)
+            sc = 0.0042
+            x_left = 2.2
+
+            def bar(v, y, col, lab, val):
+                r = Rectangle(width=v * sc, height=0.32, fill_color=col, fill_opacity=0.85, stroke_width=0)
+                r.move_to([0, y, 0]).align_to([x_left, 0, 0], LEFT)
+                return VGroup(r, T(lab, size=SMALL, color=col).next_to(r, UP, buff=0.06).align_to(r, LEFT),
+                              T(val, size=SMALL, color=col).next_to(r, RIGHT, buff=0.12))
+            hd = T("heat capacity counted (J °C⁻¹)", size=SMALL + 1, color=MUTED).move_to([3.6, 1.05, 0])
+            b1 = bar(590, 0.3, UNKNOWN, "calibration factor: whole calorimeter", "590")
+            b2 = bar(522.5, -0.45, SURR, "solution only: 125.0 × 4.18", "522.5")
+            self.play(FadeIn(hd), FadeIn(b1), FadeIn(b2), run_time=0.9)
+            cmp = VGroup(T("CF model: ΔH = −56.4 kJ mol⁻¹", size=SMALL + 2, color=UNKNOWN),
+                         T("solution-only model: ΔH = −49.9 kJ mol⁻¹", size=SMALL + 2, color=SURR))
+            cmp.arrange(DOWN, aligned_edge=LEFT, buff=0.12).move_to([3.1, -1.45, 0])
+            b.until(0.45)
+            self.play(FadeIn(cmp), run_time=0.7)
+            use = T("use the model the question gives, and say which one you used", size=LABEL, color=GOOD).move_to([0, -2.4, 0])
+            b.until(0.8)
+            self.play(FadeIn(use), run_time=0.5)
+
+
+# =====================================================================================
+class E10S08_Extent(NarratedScene):
     def construct(self):
         h = header("One mole of reagent ≠ one mole of reaction")
         eq = M(r"2\ce{NaOH(aq)}", "+", r"\ce{H2SO4(aq)}", r"\ce{->}", r"\ce{Na2SO4(aq)}", "+", r"2\ce{H2O(l)}", size=EQ_SMALL).move_to([0, 2.3, 0])
@@ -255,7 +357,7 @@ class E10S06_Extent(NarratedScene):
 
 
 # =====================================================================================
-class E10S07_Q20(NarratedScene):
+class E10S09_Q20(NarratedScene):
     def construct(self):
         h = header("Practice Q20")
         qc = question_card("Q20", size=SMALL + 2, width=13.0, cols=2).move_to([0, 0.2, 0])
@@ -302,7 +404,7 @@ class E10S07_Q20(NarratedScene):
 
 
 # =====================================================================================
-class E10S08_Coefficients(NarratedScene):
+class E10S10_Coefficients(NarratedScene):
     def construct(self):
         h = header("Coefficients change ΔH, not the heat")
         left = VGroup(TB("as written", size=LABEL + 2, color=SYSTEM),
@@ -334,7 +436,7 @@ class E10S08_Coefficients(NarratedScene):
 
 
 # =====================================================================================
-class E10S09_Recap(NarratedScene):
+class E10S11_Recap(NarratedScene):
     def construct(self):
         h = header("The reaction calorimetry chain")
         steps = ["n = c × V (V in litres) for each reagent",
@@ -363,5 +465,6 @@ class E10S09_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E10S01_Retrieval", "E10S02_Mixing", "E10S03_Limiting", "E10S04_Signs", "E10S05_Q19",
-                  "E10S06_Extent", "E10S07_Q20", "E10S08_Coefficients", "E10S09_Recap"]
+EPISODE_SCENES = ["E10S01_Retrieval", "E10S02_Mixing", "E10S03_Limiting", "E10S04_Signs", "E10S05_Falls",
+                  "E10S06_Q19", "E10S07_MassModel", "E10S08_Extent", "E10S09_Q20", "E10S10_Coefficients",
+                  "E10S11_Recap"]

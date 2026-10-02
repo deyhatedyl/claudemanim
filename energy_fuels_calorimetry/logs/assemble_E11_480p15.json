@@ -4,9 +4,9 @@
  "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 41,
+ "beats": 51,
  "beats_with_audio": 0,
- "duration": 730.06,
+ "duration": 960.66,
  "scenes": [
   {
    "scene": "E11S01",
@@ -40,32 +40,50 @@
   },
   {
    "scene": "E11S06",
-   "title": "Heat loss during calibration versus during the reaction",
+   "title": "Drawing the extrapolation well",
    "start": 337.464714,
-   "duration": 57.733008
+   "duration": 72.666016
   },
   {
    "scene": "E11S07",
-   "title": "Systematic and random errors; accuracy and precision",
-   "start": 395.197722,
-   "duration": 65.999023
+   "title": "When the temperature falls",
+   "start": 410.13073,
+   "duration": 92.398698
   },
   {
    "scene": "E11S08",
-   "title": "Practice Q22: a wrong CF and a thermometer offset",
-   "start": 461.19674499999996,
-   "duration": 122.199023
+   "title": "Heat loss during calibration versus during the reaction",
+   "start": 502.52942800000005,
+   "duration": 57.733008
   },
   {
    "scene": "E11S09",
-   "title": "The error-direction table",
-   "start": 583.395768,
-   "duration": 86.133008
+   "title": "Systematic and random errors; accuracy and precision",
+   "start": 560.2624360000001,
+   "duration": 65.999023
   },
   {
    "scene": "E11S10",
+   "title": "Practice Q22: a wrong CF and a thermometer offset",
+   "start": 626.2614590000001,
+   "duration": 122.199023
+  },
+  {
+   "scene": "E11S11",
+   "title": "The error-direction table",
+   "start": 748.4604820000001,
+   "duration": 86.133008
+  },
+  {
+   "scene": "E11S12",
+   "title": "Checkpoint: which improvement fixes which error?",
+   "start": 834.5934900000001,
+   "duration": 65.533333
+  },
+  {
+   "scene": "E11S13",
    "title": "Recap and closing recall",
-   "start": 669.528776,
+   "start": 900.1268230000001,
    "duration": 60.533333
   }
  ],

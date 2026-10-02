@@ -1,0 +1,64 @@
+{
+ "scene": "E09S10",
+ "title": "Practice Q18: an impossible calibration factor",
+ "cls": "E09S10_Q18",
+ "fps": 15,
+ "duration": 108.3333,
+ "beats": [
+  {
+   "key": "E09S10.b01",
+   "start": 0.0,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q eighteen is worth four marks. Pause the video and decide what you'd write.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E09S10.b02",
+   "start": 19.4,
+   "speech": 27.3828,
+   "audio": null,
+   "estimated": true,
+   "text": "Start with the lower bound. One hundred point zero grams of water alone needs one hundred point zero times four point one eight: four hundred and eighteen joules per degree. The cup and probe have a positive heat capacity, so the true calibration factor must be more than four hundred and eighteen. Three hundred and sixty is less, so it's inconsistent with this setup.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S10.b03",
+   "start": 47.1333,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the student's explanation. Heat loss during calibration makes the measured temperature rise smaller, and that makes E over delta T larger. So heat loss would push the calibration factor up, not down. It can't explain a value that's too low.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S10.b04",
+   "start": 65.2,
+   "speech": 19.9883,
+   "audio": null,
+   "estimated": true,
+   "text": "What could make it too low? Anything that makes the calculated E too small, or the measured delta T too large. For example, an overestimated temperature rise, perhaps from a misread thermometer, or an underestimated electrical energy, such as a time, current or voltage recorded too low.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S10.b05",
+   "start": 85.5333,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: one for the lower bound, one for concluding that three hundred and sixty is inconsistent, one for the heat-loss direction, and one for a valid error. Notice the pattern: a full-credit answer always says which measurement is affected, which way it moves, and what that does to the calculated result.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

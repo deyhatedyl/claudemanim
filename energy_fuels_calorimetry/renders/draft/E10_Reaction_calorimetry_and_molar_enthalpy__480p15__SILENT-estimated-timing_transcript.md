@@ -1,6 +1,6 @@
 # E10 Reaction calorimetry and molar enthalpy
 
-Runtime 11:26. Narration transcript (matches the captions).
+Runtime 14:20. Narration transcript (matches the captions).
 
 ## [00:00] E10S01 Retrieval check
 
@@ -27,7 +27,13 @@ The calorimeter measures the heat it gained: q for the calorimeter equals the ca
 That heat came from the reacting system. So, assuming all the heat stays in the calorimeter, q for the reaction is the negative of q for the calorimeter. Same size, opposite sign.
 To get a molar enthalpy, divide by the amount that the enthalpy refers to. If we want delta H per mole of water formed, divide by the moles of water formed. That's the amount set by the limiting reagent, not the amount of whichever reagent happens to be mentioned first.
 
-## [03:51] E10S05 Practice Q19: justify the denominator
+## [03:51] E10S05 When the temperature falls
+
+What if the temperature falls? Suppose zero point zero five zero zero moles of a salt, which we'll call Y, dissolves in a calorimeter with a calibration factor of five hundred joules per degree, and the temperature drops from twenty-one point zero to eighteen point six degrees. What's the sign of delta H? Pause and decide.  *(pause)*
+The temperature change is final minus initial: eighteen point six minus twenty-one point zero, which is negative two point four zero degrees. So q for the calorimeter is five hundred times negative two point four zero: negative one thousand two hundred joules. The calorimeter lost energy.
+That energy went into the dissolving process, so q for the process is positive one thousand two hundred joules. Divided by zero point zero five zero zero moles, delta H is positive twenty-four point zero kilojoules per mole of Y. A temperature fall means an endothermic process and a positive delta H. Keep the sign of delta T, and the signs take care of themselves.
+
+## [05:12] E10S06 Practice Q19: justify the denominator
 
 Practice question Q nineteen uses exactly the amounts we've just worked out. It's worth eight marks. Pause the video and try it.  *(pause)*
 Parts a and b: zero point zero six zero zero moles of acid, zero point zero four five zero moles of sodium hydroxide, so sodium hydroxide is limiting, leaving zero point zero one five zero moles of acid unreacted.
@@ -37,13 +43,19 @@ Part d. The water formed is zero point zero four five zero moles. So delta H equ
 Marks: two for the amounts, two for the limiting reagent and excess, two for the heat, and two for the correct denominator, sign and value.
 Three tempting denominators, all wrong. Dividing by the acid supplied, zero point zero six zero zero moles, gives negative forty-two point three. Dividing by the total moles of both reactants gives an even smaller value. And dividing by the total volume gives a quantity in kilojoules per litre, which isn't a molar enthalpy at all. The first wrong step in each is not asking how much reaction actually happened.
 
-## [06:16] E10S06 One mole of reagent is not always one mole of reaction
+## [07:38] E10S07 No calibration factor? Use the solution's mass
+
+Sometimes a question doesn't give a calibration factor. Instead it tells you to treat the solution like water: a density of one point zero zero gram per millilitre, and a specific heat capacity of four point one eight. Then the heat is m c delta T, using the total mass of the mixed solution.
+For the Q nineteen mixture, the total volume is seventy-five point zero plus fifty point zero, which is one hundred and twenty-five point zero millilitres, so the mass is one hundred and twenty-five point zero grams. q equals one hundred and twenty-five point zero times four point one eight times four point three zero: about two thousand two hundred and forty-seven joules. Dividing by zero point zero four five zero moles of water gives delta H of about negative forty-nine point nine kilojoules per mole.
+Why is that smaller in size than the negative fifty-six point four we found with the calibration factor? The m c delta T model counts only the solution. The calibration factor, five hundred and ninety joules per degree, also includes the cup, the thermometer and the stirrer, which is why it's larger than the solution alone, at five hundred and twenty-two point five. Use the model the question gives you, and say which one you used.
+
+## [09:10] E10S08 One mole of reagent is not always one mole of reaction
 
 Now an equation with a coefficient of two. Two sodium hydroxide plus sulfuric acid forms sodium sulfate plus two water, with delta H equal to negative one hundred and fourteen kilojoules for the equation as written.
 "As written" means one mole of this reaction: two moles of sodium hydroxide reacting with one mole of sulfuric acid, forming two moles of water. So one hundred and fourteen kilojoules is released per two moles of sodium hydroxide, or per two moles of water.
 The amount of reaction that actually happens is the reaction extent: the smallest value of amount divided by coefficient. Multiply the extent by one hundred and fourteen kilojoules to get the heat released. Multiplying the moles of sodium hydroxide directly by one hundred and fourteen would double count it.
 
-## [07:13] E10S07 Practice Q20: predict the final temperature
+## [10:07] E10S09 Practice Q20: predict the final temperature
 
 Practice question Q twenty is worth six marks. Pause the video and work through it.  *(pause)*
 Compare amount divided by coefficient. Sodium hydroxide: zero point zero three zero zero over two is zero point zero one five zero. Sulfuric acid: zero point zero two zero zero over one is zero point zero two zero zero. Sodium hydroxide gives the smaller value, so it's limiting, and the reaction extent is zero point zero one five zero moles.
@@ -53,13 +65,13 @@ The question asks for the final temperature, not the rise. Final equals initial 
 And the acid remaining: zero point zero two zero zero minus the zero point zero one five zero moles that reacted leaves zero point zero zero five zero zero moles of sulfuric acid.
 One mark each for the limiting decision, the extent, the heat, the rise, the final temperature and the acid remaining. Two traps: multiplying zero point zero three zero zero moles of sodium hydroxide by one hundred and fourteen, which gives twice the true heat, and reporting the rise of three point five six degrees as the final temperature.
 
-## [09:31] E10S08 Coefficients change delta H, not the heat
+## [12:25] E10S10 Coefficients change delta H, not the heat
 
 Suppose we halve the equation: one sodium hydroxide plus half a sulfuric acid forms half a sodium sulfate plus one water. Delta H halves too, to negative fifty-seven kilojoules.
 For the same mixture, the extent of this halved equation is twice as large: zero point zero three zero zero moles. Zero point zero three zero zero times fifty-seven is one point seven one zero kilojoules: exactly the same heat as before.
 That's the checkpoint. Changing the coefficients changes the delta H associated with the equation, but it can't change the heat released by the same physical reaction in the same calorimeter. The physical amounts that react are what they are.
 
-## [10:20] E10S09 Recap and closing recall
+## [13:14] E10S11 Recap and closing recall
 
 The chain for reaction calorimetry. Find each amount with c times V, in litres. Find the limiting reagent and the reaction extent. Measure q for the calorimeter as the calibration factor times the rise. The reaction's q is the negative of that. Then divide by the amount the enthalpy refers to, and say what that is.
 Closing recall. A reaction forms zero point zero four zero zero moles of water, and the calorimeter gains two point four zero kilojoules. What is delta H per mole of water?  *(pause)*

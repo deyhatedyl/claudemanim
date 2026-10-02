@@ -484,6 +484,15 @@ def ep12_teaching_values():
     check("E12", "retrieval: input for 10.0 MJ at 25%", 10.0 / 0.25, 40.0, rel=1e-9, unit="MJ")
     check("E12", "checkpoint: T g per useful MJ", 70 / 0.20, 350, rel=1e-9)
     check("E12", "checkpoint: R g per useful MJ", 80 / 0.35, 228.571, rel=1e-5)
+    check("E12", "hydrogen kJ per g", 286 / 2.0, 143, rel=1e-9)
+    check("E12", "hydrogen kJ per L at SLC", 286 / VM, 11.5323, rel=1e-4)
+    check("E12", "methane kJ per L at SLC", 890 / VM, 35.8871, rel=1e-4)
+    check("E12", "methane/hydrogen per-litre ratio", 890 / 286, 3.112, rel=1e-3)
+
+
+def ep09_extensions():
+    check("E09", "chemical calibration: q", 0.0400 * 50.0, 2.00, rel=1e-9, unit="kJ")
+    check("E09", "chemical calibration: CF", 2000 / 3.70, 540.541, rel=1e-5, unit="J/degC")
 
 
 def ep13_workshop_values():
@@ -529,6 +538,30 @@ def ep14_workshop_values():
     check_true("E14", "direction: smaller CF lowers %", 100 * (250 * 3.20 / 1000 / 24.0 * 80.0) / 4.00 < 80.0)
 
 
+def ep10_extensions():
+    dT = 18.6 - 21.0
+    check("E10", "endothermic: deltaT", dT, -2.40, rel=1e-9, unit="degC")
+    check("E10", "endothermic: q(cal)", 500 * dT, -1200, rel=1e-9, unit="J")
+    check("E10", "endothermic: deltaH (positive)", -(500 * dT) / 0.0500 / 1000, 24.0, rel=1e-9, unit="kJ/mol")
+    q = 125.0 * C_WATER * 4.30
+    check("E10", "solution-only model: q", q, 2246.75, rel=1e-9, unit="J")
+    check("E10", "solution-only model: deltaH", -q / 0.0450 / 1000, -49.9278, rel=1e-5, unit="kJ/mol")
+    check_true("E10", "CF 590 exceeds solution-only 522.5", 590 > 125.0 * C_WATER)
+
+
+def ep11_extensions():
+    m, c = linfit([120, 180, 240, 300], [18.9, 19.1, 19.3, 19.5])
+    check("E11", "endothermic graph: extrapolated T(60 s)", m * 60 + c, 18.7, rel=1e-9, unit="degC")
+    check("E11", "endothermic graph: corrected change", m * 60 + c - 22.0, -3.3, rel=1e-9, unit="degC")
+    check("E11", "endothermic graph: observed change", 18.9 - 22.0, -3.1, rel=1e-9, unit="degC")
+    xs = [195, 225, 255, 285, 315, 345, 375, 405]
+    ys = [26.08, 25.93, 25.86, 25.70, 25.62, 25.47, 25.42, 25.27]
+    mg, cg = linfit(xs, ys)
+    mp, cp = linfit([150, 165] + xs, [25.2, 25.95] + ys)
+    check("E11", "drawing: best-line value at mixing (shown to 1 d.p.)", round(mg * 120 + cg, 1), 26.3, rel=1e-9)
+    check_true("E11", "drawing: including rising points lowers the extrapolated value", mp * 120 + cp < mg * 120 + cg)
+
+
 MARKS = {  # declared total, list of sub-part marks from the brief
     "Q01": (4, [1, 2, 1]), "Q02": (5, [3, 2]), "Q03": (4, [1, 1, 1, 1]), "Q04": (3, [1, 1, 1]),
     "Q05": (5, [2, 2, 1]), "Q06": (5, [1, 1, 1, 1, 1]), "Q07": (6, [1, 1, 1, 2, 1]),
@@ -561,7 +594,8 @@ def main():
     verify_equations()
     for fn in (q01, q02, q03, q04, q05, q06, q07, q09, q10, q11, q12, q13, q14, q15, q16,
                q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example,
-               ep12_teaching_values, ep13_workshop_values, ep14_workshop_values):
+               ep09_extensions, ep10_extensions, ep11_extensions, ep12_teaching_values, ep13_workshop_values,
+               ep14_workshop_values):
         fn()
     verify_marks()
     fails = [r for r in results if not r["ok"]]

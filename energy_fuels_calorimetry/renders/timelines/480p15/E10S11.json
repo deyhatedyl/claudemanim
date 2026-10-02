@@ -1,0 +1,42 @@
+{
+ "scene": "E10S11",
+ "title": "Recap and closing recall",
+ "cls": "E10S11_Recap",
+ "fps": 15,
+ "duration": 66.0667,
+ "beats": [
+  {
+   "key": "E10S11.b01",
+   "start": 0.0,
+   "speech": 24.2524,
+   "audio": null,
+   "estimated": true,
+   "text": "The chain for reaction calorimetry. Find each amount with c times V, in litres. Find the limiting reagent and the reaction extent. Measure q for the calorimeter as the calibration factor times the rise. The reaction's q is the negative of that. Then divide by the amount the enthalpy refers to, and say what that is.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E10S11.b02",
+   "start": 24.6,
+   "speech": 13.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. A reaction forms zero point zero four zero zero moles of water, and the calorimeter gains two point four zero kilojoules. What is delta H per mole of water?",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E10S11.b03",
+   "start": 48.4,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Negative two point four zero kilojoules divided by zero point zero four zero zero moles is negative sixty point zero kilojoules per mole of water. Next episode: reading temperature graphs, and correcting for heat that escapes during the reaction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "scene": "E12S10",
+ "title": "Practice Q24: build an evidence-based answer",
+ "cls": "E12S10_Q24",
+ "fps": 15,
+ "duration": 128.3333,
+ "beats": [
+  {
+   "key": "E12S10.b01",
+   "start": 0.0,
+   "speech": 8.6359,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q twenty-four is worth six marks. Pause the video and plan your answer before we build one together.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E12S10.b02",
+   "start": 24.0667,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "First consideration: feedstock. Process B uses food-processing waste, while Process A uses an edible crop. So B avoids competing with food for land and makes productive use of a waste, which fits the green chemistry principle of using renewable feedstocks and the circular-economy idea of keeping materials in use.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S10.b03",
+   "start": 45.4,
+   "speech": 14.3752,
+   "audio": null,
+   "estimated": true,
+   "text": "Second consideration: resource use. Per kilogram of ethanol, A uses less listed energy, eight megajoules compared with ten, and less fresh water, twelve litres compared with twenty. On those measures, A is better.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S10.b04",
+   "start": 60.1333,
+   "speech": 19.9345,
+   "audio": null,
+   "estimated": true,
+   "text": "So there's a trade-off: B is better on feedstock and on using its carbon dioxide; A is better on energy and water. Also note that capturing carbon dioxide and using it in another process isn't the same as storing it permanently; it may be released later.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S10.b05",
+   "start": 80.4667,
+   "speech": 19.7545,
+   "audio": null,
+   "estimated": true,
+   "text": "Can we say which has lower total lifecycle emissions? No. A uses natural-gas heat, and B uses electricity that's only sixty percent renewable, and we aren't given emission factors for either, or data on transport and feedstock production. Stating that limit honestly is worth a mark.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S10.b06",
+   "start": 100.6,
+   "speech": 26.7352,
+   "audio": null,
+   "estimated": true,
+   "text": "A recommendation must follow from stated priorities. For example: if avoiding competition with food is the priority, B is preferred, despite its higher energy and water use. Either process can be defended, as long as the reasoning matches the evidence. Marks: two plus two for the two supported comparisons, one for the trade-off or limit, and one for a consistent, conditional conclusion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

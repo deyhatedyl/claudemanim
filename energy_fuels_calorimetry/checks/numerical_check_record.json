@@ -1674,6 +1674,123 @@
   "ok": true
  },
  {
+  "qid": "E09",
+  "label": "chemical calibration: q",
+  "computed": 2.0,
+  "target": 2.0,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E09",
+  "label": "chemical calibration: CF",
+  "computed": 540.5405405405405,
+  "target": 540.541,
+  "unit": "J/degC",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "endothermic: deltaT",
+  "computed": -2.3999999999999986,
+  "target": -2.4,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "endothermic: q(cal)",
+  "computed": -1199.9999999999993,
+  "target": -1200,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "endothermic: deltaH (positive)",
+  "computed": 23.999999999999986,
+  "target": 24.0,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "solution-only model: q",
+  "computed": 2246.75,
+  "target": 2246.75,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "solution-only model: deltaH",
+  "computed": -49.927777777777784,
+  "target": -49.9278,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E10",
+  "label": "CF 590 exceeds solution-only 522.5",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "E11",
+  "label": "endothermic graph: extrapolated T(60 s)",
+  "computed": 18.699999999999996,
+  "target": 18.7,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E11",
+  "label": "endothermic graph: corrected change",
+  "computed": -3.3000000000000043,
+  "target": -3.3,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E11",
+  "label": "endothermic graph: observed change",
+  "computed": -3.1000000000000014,
+  "target": -3.1,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E11",
+  "label": "drawing: best-line value at mixing (shown to 1 d.p.)",
+  "computed": 26.3,
+  "target": 26.3,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E11",
+  "label": "drawing: including rising points lowers the extrapolated value",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
   "qid": "E12",
   "label": "methane kJ per g",
   "computed": 55.625,
@@ -1716,6 +1833,42 @@
   "target": 228.571,
   "unit": "",
   "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "hydrogen kJ per g",
+  "computed": 143.0,
+  "target": 143,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "hydrogen kJ per L at SLC",
+  "computed": 11.532258064516128,
+  "target": 11.5323,
+  "unit": "",
+  "rel_tol": 0.0001,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "methane kJ per L at SLC",
+  "computed": 35.887096774193544,
+  "target": 35.8871,
+  "unit": "",
+  "rel_tol": 0.0001,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "methane/hydrogen per-litre ratio",
+  "computed": 3.111888111888112,
+  "target": 3.112,
+  "unit": "",
+  "rel_tol": 0.001,
   "ok": true
  },
  {

@@ -1,0 +1,31 @@
+{
+ "scene": "E11S12",
+ "title": "Checkpoint: which improvement fixes which error?",
+ "cls": "E11S12_Improve",
+ "fps": 15,
+ "duration": 65.5333,
+ "beats": [
+  {
+   "key": "E11S12.b01",
+   "start": 0.0,
+   "speech": 20.1869,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. Match each improvement to the problem it addresses. One: insulate the lid and sides. Two: calibrate using the same volume of solution as the reaction. Three: record temperatures more often and extrapolate. Four: repeat with fresh solutions and average. Pause and match them.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E11S12.b02",
+   "start": 32.6,
+   "speech": 31.9345,
+   "audio": null,
+   "estimated": true,
+   "text": "Insulation reduces heat exchange with the surroundings, a systematic error. Calibrating with the same volume makes the calibration factor valid for the actual conditions, removing another systematic error. More frequent readings define the cooling line better, so the extrapolated temperature is more reliable. And repeating and averaging reduces the effect of random errors only. It can't remove a systematic error, which is why the first two improvements matter most when results are precise but biased.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

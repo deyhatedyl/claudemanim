@@ -4,9 +4,9 @@
  "output": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 38,
+ "beats": 45,
  "beats_with_audio": 0,
- "duration": 702.19,
+ "duration": 849.79,
  "scenes": [
   {
    "scene": "E09S01",
@@ -22,44 +22,56 @@
   },
   {
    "scene": "E09S03",
-   "title": "Electrical calibration: E = VIt, then CF = E / delta T",
+   "title": "Two kinds of calorimeter",
    "start": 120.132357,
-   "duration": 58.199349
+   "duration": 82.866016
   },
   {
    "scene": "E09S04",
-   "title": "Stacking heat capacities and the lower bound",
-   "start": 178.331706,
-   "duration": 59.733333
+   "title": "Electrical calibration: E = VIt, then CF = E / delta T",
+   "start": 202.99837300000002,
+   "duration": 58.199349
   },
   {
    "scene": "E09S05",
-   "title": "Practice Q17, part 1: calibrate, then use it",
-   "start": 238.065039,
-   "duration": 105.999349
+   "title": "Stacking heat capacities and the lower bound",
+   "start": 261.197722,
+   "duration": 59.733333
   },
   {
    "scene": "E09S06",
-   "title": "Changing the contents changes CF",
-   "start": 344.064388,
-   "duration": 80.999023
+   "title": "Practice Q17, part 1: calibrate, then use it",
+   "start": 320.931055,
+   "duration": 105.999349
   },
   {
    "scene": "E09S07",
-   "title": "Heat loss during calibration: follow the formula",
-   "start": 425.063411,
-   "duration": 91.665365
+   "title": "Changing the contents changes CF",
+   "start": 426.930404,
+   "duration": 80.999023
   },
   {
    "scene": "E09S08",
-   "title": "Practice Q18: an impossible calibration factor",
-   "start": 516.7287759999999,
-   "duration": 108.332682
+   "title": "Calibrating with a reaction of known delta H",
+   "start": 507.92942700000003,
+   "duration": 64.733008
   },
   {
    "scene": "E09S09",
+   "title": "Heat loss during calibration: follow the formula",
+   "start": 572.6624350000001,
+   "duration": 91.665365
+  },
+  {
+   "scene": "E09S10",
+   "title": "Practice Q18: an impossible calibration factor",
+   "start": 664.3278,
+   "duration": 108.332682
+  },
+  {
+   "scene": "E09S11",
    "title": "Recap and closing recall",
-   "start": 625.0614579999999,
+   "start": 772.660482,
    "duration": 77.133333
   }
  ],

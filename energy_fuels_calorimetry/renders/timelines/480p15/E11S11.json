@@ -1,0 +1,64 @@
+{
+ "scene": "E11S11",
+ "title": "The error-direction table",
+ "cls": "E11S11_Table",
+ "fps": 15,
+ "duration": 86.1333,
+ "beats": [
+  {
+   "key": "E11S11.b01",
+   "start": 0.0,
+   "speech": 9.4634,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a summary table. Each row follows one fault through the formula, under the simple model where only that fault is present.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S11.b02",
+   "start": 9.8,
+   "speech": 19.7545,
+   "audio": null,
+   "estimated": true,
+   "text": "Heat loss during electrical calibration, with E known correctly: the measured rise goes down, so the calculated calibration factor goes up. Uncorrected heat loss during the reaction, with a valid calibration factor: the measured rise goes down, so the inferred heat, and its magnitude, go down.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S11.b03",
+   "start": 29.9333,
+   "speech": 22.5972,
+   "audio": null,
+   "estimated": true,
+   "text": "A calibration factor that's too small: the calculated heat and the magnitude of the molar enthalpy go down. The same additive thermometer offset on both readings: the temperature difference is unchanged. And more repeat trials with the same systematic fault: a better estimate of a biased mean, with the fault still there.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S11.b04",
+   "start": 52.8667,
+   "speech": 13.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "One caution. If several faults act together, the net effect needs a full model. They can partly cancel or add up, so the table alone can't tell you the overall direction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S11.b05",
+   "start": 66.6,
+   "speech": 18.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "And when an exam asks for an improvement, be specific: insulate the lid and sides, calibrate with the same volume of solution that will be used in the reaction, record temperatures more often and extrapolate, or repeat with fresh solutions and average the results.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

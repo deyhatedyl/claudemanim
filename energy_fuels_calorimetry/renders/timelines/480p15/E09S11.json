@@ -1,0 +1,42 @@
+{
+ "scene": "E09S11",
+ "title": "Recap and closing recall",
+ "cls": "E09S11_Recap",
+ "fps": 15,
+ "duration": 77.1333,
+ "beats": [
+  {
+   "key": "E09S11.b01",
+   "start": 0.0,
+   "speech": 27.7966,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. A calorimeter's calibration factor is the energy needed per degree for the whole setup and its contents. Find it electrically, with E equals V times I times t, with t in seconds, then C F equals E over delta T. It must exceed the water's m c, and it only applies to matching contents. When something goes wrong, trace it through the formula.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S11.b02",
+   "start": 28.1333,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. A heater runs at twelve point zero volts and two point zero zero amps for five minutes, and the temperature rises six point zero degrees. What is the calibration factor?",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E09S11.b03",
+   "start": 52.3333,
+   "speech": 23.8386,
+   "audio": null,
+   "estimated": true,
+   "text": "Five minutes is three hundred seconds. E equals twelve point zero times two point zero zero times three hundred: seven thousand two hundred joules. Divided by six point zero degrees, the calibration factor is one thousand two hundred joules per degree. Next episode: using a calibrated calorimeter to measure the enthalpy change of a reaction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

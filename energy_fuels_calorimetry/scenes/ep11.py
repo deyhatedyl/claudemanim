@@ -220,6 +220,133 @@ class E11S05_Q21(NarratedScene):
 
 
 # =====================================================================================
+DRAW_PRE = [(0, 21.0), (60, 21.0), (120, 21.0)]
+DRAW_RISE = [(135, 23.4), (150, 25.2), (165, 25.95)]
+DRAW_COOL = [(195, 26.08), (225, 25.93), (255, 25.86), (285, 25.70), (315, 25.62), (345, 25.47), (375, 25.42),
+             (405, 25.27)]
+
+
+class E11S06_Drawing(NarratedScene):
+    def construct(self):
+        h = header("Drawing the extrapolation well")
+        pg = q21_plot()
+        ax = pg.ax
+        pts = data_points(ax, DRAW_PRE + DRAW_RISE + DRAW_COOL)
+        hyp = T("hypothetical readings", size=SMALL, color=MUTED).move_to([4.75, -2.35, 0])
+        col = 4.75
+        m_g, c_g = linfit(DRAW_COOL)
+        m_p, c_p = linfit(DRAW_RISE[1:] + DRAW_COOL)
+        mix = DashedLine(ax.c2p(120, 20), ax.c2p(120, 27), color=UNKNOWN, stroke_width=2.5)
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(pg), FadeIn(hyp), run_time=0.9)
+            self.play(LaggedStart(*[FadeIn(p, scale=1.4) for p in pts], lag_ratio=0.12), run_time=1.6)
+            self.play(Create(mix), run_time=0.5)
+        with self.beat("b02") as b:
+            poor = DashedLine(ax.c2p(120, m_p * 120 + c_p), ax.c2p(405, m_p * 405 + c_p), color=BAD, stroke_width=3)
+            pd = Dot(ax.c2p(120, m_p * 120 + c_p), radius=0.08, color=BAD)
+            pt = T("includes rising points ✗", size=SMALL + 1, color=BAD).move_to([col, 1.9, 0])
+            ring = VGroup(*[Circle(radius=0.14, color=BAD, stroke_width=2.5).move_to(ax.c2p(*p)) for p in DRAW_RISE[1:]])
+            b.until(0.2)
+            self.play(Create(ring), run_time=0.6)
+            b.until(0.4)
+            self.play(Create(poor), FadeIn(pd), FadeIn(pt), run_time=1.0)
+            pk = wrapped("don't force the line through the highest point", size=SMALL + 1, width=3.6, color=MUTED).move_to([col, 1.3, 0])
+            b.until(0.8)
+            self.play(FadeIn(pk), run_time=0.5)
+            self.poor = VGroup(poor, pd, ring)
+        with self.beat("b03") as b:
+            self.play(self.poor.animate.set_opacity(0.3), run_time=0.4)
+            good = Line(ax.c2p(195, m_g * 195 + c_g), ax.c2p(405, m_g * 405 + c_g), color=SURR, stroke_width=4)
+            ext = DashedLine(ax.c2p(195, m_g * 195 + c_g), ax.c2p(120, m_g * 120 + c_g), color=SURR, stroke_width=4,
+                             dash_length=0.1)
+            dia = Square(side_length=0.2, color=UNKNOWN, fill_color=UNKNOWN, fill_opacity=1).rotate(PI / 4)
+            dia.move_to(ax.c2p(120, m_g * 120 + c_g))
+            self.play(Create(good), run_time=1.0)
+            gt = wrapped("best line: steady cooling region only", size=SMALL + 1, width=3.6, color=SURR).move_to([col, 0.5, 0])
+            self.play(FadeIn(gt), run_time=0.4)
+            b.until(0.45)
+            self.play(Create(ext), run_time=0.8)
+            self.play(FadeIn(dia, scale=1.5), run_time=0.4)
+            rd = T(f"read at mixing: ≈ {m_g * 120 + c_g:.1f} °C", size=SMALL + 2, color=UNKNOWN).move_to([col, -0.2, 0])
+            b.until(0.75)
+            self.play(FadeIn(rd), run_time=0.5)
+        with self.beat("b04") as b:
+            cv = wrapped("curved trend? use the part nearest the mixing time, and call the result an estimate",
+                         size=SMALL + 1, width=3.6, color=MUTED).move_to([col, -1.15, 0])
+            self.play(FadeIn(cv), run_time=0.7)
+
+
+# =====================================================================================
+ENDO_PTS = [(90, 19.4), (120, 18.9), (180, 19.1), (240, 19.3), (300, 19.5)]
+E_SLOPE, E_ICPT = linfit(ENDO_PTS[1:])
+E_MIX = E_SLOPE * 60 + E_ICPT
+assert abs(E_MIX - 18.7) < 1e-9
+
+
+class E11S07_Endo(NarratedScene):
+    def construct(self):
+        h = header("When the temperature falls")
+        pg = temp_axes(x_max=300, x_step=60, y_min=17, y_max=23, width=6.8, height=4.2).move_to([-2.3, 0.0, 0])
+        ax = pg.ax
+        col = 4.45
+        base = Line(ax.c2p(0, 22.0), ax.c2p(60, 22.0), color=SURR, stroke_width=4)
+        mix = DashedLine(ax.c2p(60, 17), ax.c2p(60, 23), color=UNKNOWN, stroke_width=2.5)
+        pts = data_points(ax, ENDO_PTS)
+        hyp = T("hypothetical data", size=SMALL, color=MUTED).move_to([col, -2.35, 0])
+        notes = VGroup(T("baseline 22.0 °C", size=SMALL + 1, color=SURR),
+                       T("mixing at t = 60 s", size=SMALL + 1, color=UNKNOWN),
+                       T("lowest reading 18.9 °C", size=SMALL + 1, color=SYSTEM)).arrange(DOWN, buff=0.12)
+        notes.move_to([col, 1.75, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(pg), FadeIn(hyp), run_time=0.9)
+            self.play(Create(base), FadeIn(notes[0]), run_time=0.6)
+            b.until(0.25)
+            self.play(Create(mix), FadeIn(notes[1]), run_time=0.5)
+            b.until(0.45)
+            self.play(LaggedStart(*[FadeIn(p, scale=1.5) for p in pts], lag_ratio=0.25), run_time=1.3)
+            lo = Circle(radius=0.15, color=SYSTEM, stroke_width=3).move_to(pts[1])
+            self.play(Create(lo), FadeIn(notes[2]), run_time=0.5)
+            why = chip("why does it rise again?", UNKNOWN, size=SMALL + 1).move_to([col, 0.65, 0])
+            b.until(0.85)
+            self.play(FadeIn(why), run_time=0.4)
+            self.why = why
+        with self.beat("b02") as b:
+            arrows = VGroup(*[Arrow(ax.c2p(x, 21.6), ax.c2p(x, y + 0.35), buff=0, color=SURR, stroke_width=3,
+                                    max_tip_length_to_length_ratio=0.2) for x, y in ENDO_PTS[2:]])
+            lab = T("heat flows in from the room", size=SMALL + 1, color=SURR).move_to([col, 0.65, 0])
+            self.play(FadeOut(self.why), LaggedStart(*[GrowArrow(a) for a in arrows], lag_ratio=0.2), run_time=1.0)
+            self.play(FadeIn(lab), run_time=0.4)
+            self.arrows, self.lab = arrows, lab
+        with self.beat("b03") as b:
+            self.play(FadeOut(self.arrows), FadeOut(self.lab), run_time=0.4)
+            fit = Line(ax.c2p(120, E_SLOPE * 120 + E_ICPT), ax.c2p(300, E_SLOPE * 300 + E_ICPT), color=SURR,
+                       stroke_width=4)
+            ext = DashedLine(ax.c2p(120, E_SLOPE * 120 + E_ICPT), ax.c2p(60, E_MIX), color=SURR, stroke_width=4,
+                             dash_length=0.1)
+            dia = Square(side_length=0.2, color=UNKNOWN, fill_color=UNKNOWN, fill_opacity=1).rotate(PI / 4)
+            dia.move_to(ax.c2p(60, E_MIX))
+            self.play(Create(fit), run_time=0.8)
+            w1 = M(r"\text{warming: } +0.2\ {}^{\circ}\text{C per } 60\ \text{s}", size=EQ_SMALL - 14,
+                   color=SURR).move_to([col, 0.65, 0])
+            self.play(Write(w1), run_time=0.7)
+            b.until(0.35)
+            self.play(Create(ext), FadeIn(dia, scale=1.5), run_time=0.9)
+            w2 = M(r"T(60\ \text{s}) = 18.9 - 0.2 = 18.7\ {}^{\circ}\text{C}", size=EQ_SMALL - 14,
+                   color=UNKNOWN).move_to([col, 0.05, 0])
+            self.play(Write(w2), run_time=0.8)
+            w3 = M(r"\Delta T = 18.7 - 22.0 = -3.3\ {}^{\circ}\text{C}", size=EQ_SMALL - 12,
+                   color=UNKNOWN).move_to([col, -0.6, 0])
+            w4 = T("(lowest reading gives −3.1 °C)", size=SMALL, color=MUTED).move_to([col, -1.05, 0])
+            b.until(0.65)
+            self.play(Write(w3), FadeIn(w4), run_time=0.9)
+        with self.beat("b04") as b:
+            sg = VGroup(T("ΔT < 0 → q(cal) < 0", size=SMALL + 1, color=SURR),
+                        T("→ ΔH > 0 (endothermic)", size=SMALL + 1, color=UNKNOWN)).arrange(DOWN, buff=0.08)
+            sg.move_to([col, -1.7, 0])
+            self.play(FadeIn(sg), run_time=0.7)
+
+
+# =====================================================================================
 def updown(mob, up: bool, color, label=""):
     a = Arrow(mob.get_right() + 0.15 * RIGHT + (0.3 * DOWN if up else 0.3 * UP),
               mob.get_right() + 0.15 * RIGHT + (0.3 * UP if up else 0.3 * DOWN), buff=0, color=color, stroke_width=6,
@@ -230,7 +357,7 @@ def updown(mob, up: bool, color, label=""):
     return g
 
 
-class E11S06_TwoLosses(NarratedScene):
+class E11S08_TwoLosses(NarratedScene):
     def construct(self):
         h = header("Heat loss: calibration vs reaction")
         with self.beat("b01") as b:
@@ -266,7 +393,7 @@ class E11S06_TwoLosses(NarratedScene):
 
 
 # =====================================================================================
-class E11S07_Errors(NarratedScene):
+class E11S09_Errors(NarratedScene):
     def construct(self):
         h = header("Systematic and random errors")
         with self.beat("b01") as b:
@@ -314,7 +441,7 @@ class E11S07_Errors(NarratedScene):
 
 
 # =====================================================================================
-class E11S08_Q22(NarratedScene):
+class E11S10_Q22(NarratedScene):
     def construct(self):
         h = header("Practice Q22")
         qc = question_card("Q22").move_to([0, 0.3, 0])
@@ -369,7 +496,7 @@ class E11S08_Q22(NarratedScene):
 
 
 # =====================================================================================
-class E11S09_Table(NarratedScene):
+class E11S11_Table(NarratedScene):
     def construct(self):
         h = header("Error directions (simple model)")
         rows = [["Situation", "Direction"],
@@ -411,7 +538,43 @@ class E11S09_Table(NarratedScene):
 
 
 # =====================================================================================
-class E11S10_Recap(NarratedScene):
+class E11S12_Improve(NarratedScene):
+    def construct(self):
+        h = header("Checkpoint: which improvement fixes which error?")
+
+        def card(text, color, w=5.2):
+            t = wrapped(text, size=SMALL + 2, width=w - 0.4)
+            r = RoundedRectangle(width=w, height=max(0.7, t.height + 0.3), corner_radius=0.12, stroke_color=color,
+                                 stroke_width=2.5, fill_color=PANEL, fill_opacity=1)
+            return VGroup(r, t.move_to(r))
+        imps = [card(f"{i + 1}. {t}", SYSTEM) for i, t in enumerate(
+            ["insulate the lid and sides", "calibrate with the same volume of solution",
+             "record temperatures more often and extrapolate", "repeat with fresh solutions and average"])]
+        probs = {"A": card("heat exchange with the surroundings (systematic)", SURR),
+                 "B": card("CF not valid for the actual conditions (systematic)", SURR),
+                 "C": card("observed peak underestimates the rise", SURR),
+                 "D": card("random scatter between repeats", SURR)}
+        ys = [1.65, 0.55, -0.55, -1.65]
+        for c, y in zip(imps, ys):
+            c.move_to([-3.4, y, 0])
+        for k, y in zip("CADB", ys):
+            probs[k].move_to([3.4, y, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), run_time=0.4)
+            self.play(LaggedStart(*[FadeIn(c) for c in imps], lag_ratio=0.2), run_time=1.4)
+            self.play(LaggedStart(*[FadeIn(probs[k]) for k in "CADB"], lag_ratio=0.2), run_time=1.2)
+        with self.beat("b02") as b:
+            for i, (k, fr) in enumerate(zip("ABCD", (0.0, 0.2, 0.45, 0.62))):
+                b.until(fr)
+                ln = Line(imps[i].get_right(), probs[k].get_left(), color=GOOD, stroke_width=3)
+                self.play(Create(ln), probs[k][0].animate.set_stroke(GOOD), run_time=0.6)
+            tag = chip("averaging helps with random error only", LOSS, size=SMALL + 1).move_to([0, -2.45, 0])
+            b.until(0.78)
+            self.play(FadeIn(tag), run_time=0.5)
+
+
+# =====================================================================================
+class E11S13_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         items = bullets(["Graph: baseline, mixing time, observed maximum, cooling region",
@@ -439,4 +602,5 @@ class E11S10_Recap(NarratedScene):
 
 
 EPISODE_SCENES = ["E11S01_Retrieval", "E11S02_ReadGraph", "E11S03_PeakTooLow", "E11S04_Extrapolate", "E11S05_Q21",
-                  "E11S06_TwoLosses", "E11S07_Errors", "E11S08_Q22", "E11S09_Table", "E11S10_Recap"]
+                  "E11S06_Drawing", "E11S07_Endo", "E11S08_TwoLosses", "E11S09_Errors", "E11S10_Q22",
+                  "E11S11_Table", "E11S12_Improve", "E11S13_Recap"]

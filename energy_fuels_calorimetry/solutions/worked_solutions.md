@@ -565,7 +565,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Using mcΔT for the water as if it included the apparatus, or keeping CF unchanged after changing the contents.
 
-**Worked in:** E09S05 “Practice Q17, part 1: calibrate, then use it” (≈3:58 in the draft)
+**Worked in:** E09S06 “Practice Q17, part 1: calibrate, then use it” (≈5:20 in the draft)
 
 ### Q18. An impossible calibration factor and an appealing wrong explanation (4 marks)
 
@@ -595,7 +595,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Giving 'heat loss' as a universal explanation without following the formula.
 
-**Worked in:** E09S08 “Practice Q18: an impossible calibration factor” (≈8:36 in the draft)
+**Worked in:** E09S10 “Practice Q18: an impossible calibration factor” (≈11:04 in the draft)
 
 ## Episode 10: Reaction calorimetry and molar enthalpy
 
@@ -631,7 +631,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Dividing by the acid initially supplied, by total moles of solution, or by the total volume.
 
-**Worked in:** E10S05 “Practice Q19: justify the denominator” (≈3:51 in the draft)
+**Worked in:** E10S06 “Practice Q19: justify the denominator” (≈5:12 in the draft)
 
 ### Q20. One mole of reagent is not always one mole of reaction (6 marks)
 
@@ -675,7 +675,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Multiplying 0.0300 mol directly by 114 kJ, or reporting the rise as the final temperature.
 
-**Worked in:** E10S07 “Practice Q20: predict the final temperature” (≈7:13 in the draft)
+**Worked in:** E10S09 “Practice Q20: predict the final temperature” (≈10:07 in the draft)
 
 ## Episode 11: Temperature graphs, correction and experimental reasoning
 
@@ -740,7 +740,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Equating repeatability with accuracy, or assuming every offset changes a difference.
 
-**Worked in:** E11S08 “Practice Q22: a wrong CF and a thermometer offset” (≈7:41 in the draft)
+**Worked in:** E11S10 “Practice Q22: a wrong CF and a thermometer offset” (≈10:26 in the draft)
 
 ## Episode 12: Fair fuel comparisons and sustainability
 
@@ -776,7 +776,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Comparing emissions per input MJ without correcting for efficiency.
 
-**Worked in:** E12S04 “Practice Q23: emissions per useful energy” (≈2:43 in the draft)
+**Worked in:** E12S05 “Practice Q23: emissions per useful energy” (≈4:04 in the draft)
 
 ### Q24. Evidence-based sustainability with an honest limit (6 marks)
 
@@ -810,7 +810,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Assuming 'bio' or 'renewable electricity' makes a process superior on every criterion.
 
-**Worked in:** E12S08 “Practice Q24: build an evidence-based answer” (≈7:41 in the draft)
+**Worked in:** E12S10 “Practice Q24: build an evidence-based answer” (≈10:06 in the draft)
 
 ## Episode 13: Exam workshop A: fuels and combustion
 

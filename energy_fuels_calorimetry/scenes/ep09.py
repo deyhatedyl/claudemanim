@@ -104,7 +104,87 @@ class E09S02_MoreThanWater(NarratedScene):
 
 
 # =====================================================================================
-class E09S03_EVIt(NarratedScene):
+def bomb_calorimeter(w: float = 3.0, h: float = 3.0) -> VGroup:
+    """Schematic bomb calorimeter: insulated jacket, water bath, sealed steel bomb with sample and O2,
+    ignition wires, stirrer and thermometer. Parts: .jacket .water .bomb .sample .wires .stirrer .thermo"""
+    jacket = RoundedRectangle(width=w, height=h, corner_radius=0.12, stroke_color=SURR, stroke_width=3,
+                              fill_color=PANEL, fill_opacity=1)
+    water = Rectangle(width=w - 0.35, height=h - 0.75, stroke_width=0, fill_color="#2E5C8A", fill_opacity=0.75)
+    water.align_to(jacket, DOWN).shift(0.17 * UP)
+    bomb = RoundedRectangle(width=1.05, height=1.45, corner_radius=0.14, stroke_color="#BFC9CA", stroke_width=4,
+                            fill_color="#3B4652", fill_opacity=1).move_to(water).shift(0.25 * DOWN + 0.2 * LEFT)
+    sample = Rectangle(width=0.42, height=0.14, stroke_color=SYSTEM, stroke_width=2, fill_color=SYSTEM,
+                       fill_opacity=0.9).move_to(bomb.get_bottom() + 0.32 * UP)
+    o2 = T("O₂", size=SMALL, color=TEXT).move_to(bomb).shift(0.25 * UP + 0.3 * LEFT)
+    w1 = Line(bomb.get_top() + 0.18 * LEFT + 0.95 * UP, sample.get_top() + 0.12 * LEFT + 0.08 * UP, color=SYSTEM,
+              stroke_width=2.5)
+    w2 = Line(bomb.get_top() + 0.18 * RIGHT + 0.95 * UP, sample.get_top() + 0.12 * RIGHT + 0.08 * UP, color=SYSTEM,
+              stroke_width=2.5)
+    stir = VGroup(Line(water.get_top() + 1.0 * RIGHT + 0.6 * UP, water.get_bottom() + 1.0 * RIGHT + 0.35 * UP,
+                       color=TEXT, stroke_width=2.5),
+                  Line(LEFT * 0.22, RIGHT * 0.22, color=TEXT, stroke_width=3).move_to(water.get_bottom() + 1.0 * RIGHT
+                                                                                    + 0.35 * UP))
+    thermo = VGroup(RoundedRectangle(width=0.14, height=h * 0.75, corner_radius=0.07, stroke_color=TEXT,
+                                     stroke_width=2, fill_color=BG, fill_opacity=1),
+                    Circle(radius=0.1, stroke_color=TEXT, stroke_width=2, fill_color=TEMP_C, fill_opacity=1))
+    thermo[0].move_to(water.get_center() + 0.78 * LEFT * (w / 3.0) - 0.6 * RIGHT + 0.55 * UP)
+    thermo[0].set_x(water.get_left()[0] + 0.32)
+    thermo[1].move_to(thermo[0].get_bottom())
+    g = VGroup(jacket, water, bomb, sample, o2, w1, w2, stir, thermo)
+    g.jacket, g.water, g.bomb, g.sample, g.wires, g.stirrer, g.thermo = jacket, water, bomb, sample, VGroup(w1, w2), stir, thermo
+    g.o2 = o2
+    return g
+
+
+class E09S03_Kinds(NarratedScene):
+    def construct(self):
+        h = header("Two kinds of calorimeter")
+        sol = calorimeter(width=2.5, height=2.3).move_to([-4.3, 0.95, 0])
+        st = TB("solution calorimeter", size=LABEL + 1, color=SURR).next_to(sol, DOWN, buff=0.3)
+        su = T("reactions in solution", size=SMALL, color=MUTED).next_to(st, DOWN, buff=0.1)
+        bc = bomb_calorimeter(3.0, 3.0).move_to([1.3, 0.85, 0])
+        bt = TB("bomb calorimeter", size=LABEL + 1, color=SYSTEM).next_to(bc, DOWN, buff=0.3)
+        bu = T("combustion of fuels and foods", size=SMALL, color=MUTED).next_to(bt, DOWN, buff=0.1)
+        lx = 3.35
+
+        def lab(text, target, y):
+            t = T(text, size=SMALL + 1, color=TEXT).move_to([0, y, 0]).align_to([lx + 0.15, 0, 0], LEFT)
+            a = Line(t.get_left() + 0.08 * LEFT, target, color=MUTED, stroke_width=1.5)
+            return VGroup(a, t)
+        labels = [lab("sealed steel bomb", bc.bomb.get_right(), 0.65),
+                  lab("excess O₂", bc.o2.get_right() + 0.1 * RIGHT, 1.15),
+                  lab("ignition wire", bc.wires[1].point_from_proportion(0.3), 1.85),
+                  lab("measured water", bc.water.get_right() + 0.6 * DOWN + 0.05 * LEFT, -0.15),
+                  lab("insulated jacket", bc.jacket.get_right() + 1.1 * DOWN, -0.65)]
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), run_time=0.4)
+            self.play(FadeIn(sol), run_time=0.8)
+            self.play(FadeIn(st), FadeIn(su), run_time=0.6)
+        with self.beat("b02") as b:
+            self.play(FadeIn(bc.jacket), FadeIn(bc.water), run_time=0.6)
+            self.play(FadeIn(bc.bomb), FadeIn(bc.sample), FadeIn(bc.o2), run_time=0.6)
+            self.play(FadeIn(labels[0]), FadeIn(labels[1]), FadeIn(bt), FadeIn(bu), run_time=0.6)
+            b.until(0.4)
+            self.play(Create(bc.wires), FadeIn(labels[2]), run_time=0.7)
+            self.play(bc.sample.animate.set_fill(LOSS), Flash(bc.sample, color=SYSTEM, line_length=0.15), run_time=0.7)
+            b.until(0.65)
+            self.play(FadeIn(bc.stirrer), FadeIn(bc.thermo), FadeIn(labels[3]), FadeIn(labels[4]), run_time=0.8)
+        with self.beat("b03") as b:
+            pros = T("sealed and insulated: complete combustion, little heat lost", size=SMALL + 1, color=GOOD)
+            pros.move_to([0, -1.95, 0])
+            self.play(FadeIn(pros), run_time=0.6)
+            both = chip("both need a calibration factor: q = CF × ΔT", UNKNOWN, size=SMALL + 2).move_to([0, -2.5, 0])
+            b.until(0.65)
+            self.play(FadeIn(both), run_time=0.5)
+            self.pros = pros
+        with self.beat("b04") as b:
+            errs = T("open cup or can: heat escapes; open flame: may burn incompletely", size=SMALL + 1, color=LOSS)
+            errs.move_to(self.pros)
+            self.play(FadeOut(self.pros), FadeIn(errs), run_time=0.7)
+
+
+# =====================================================================================
+class E09S04_EVIt(NarratedScene):
     def construct(self):
         h = header("Electrical calibration")
         cal = calorimeter(width=2.6, height=2.2, heater=True).move_to([-4.6, -0.3, 0])
@@ -152,7 +232,7 @@ class E09S03_EVIt(NarratedScene):
 
 
 # =====================================================================================
-class E09S04_Stack(NarratedScene):
+class E09S05_Stack(NarratedScene):
     def construct(self):
         h = header("Stacking heat capacities")
         st = cf_stack(501.6, 38.4, scale=0.0042, width=1.3, x=-5.3, y_base=-2.3, show_total=False)
@@ -188,7 +268,7 @@ class E09S04_Stack(NarratedScene):
 
 
 # =====================================================================================
-class E09S05_Q17a(NarratedScene):
+class E09S06_Q17a(NarratedScene):
     def construct(self):
         h = header("Practice Q17")
         qc = question_card("Q17").move_to([0, 0.3, 0])
@@ -224,7 +304,7 @@ class E09S05_Q17a(NarratedScene):
 
 
 # =====================================================================================
-class E09S06_Contents(NarratedScene):
+class E09S07_Contents(NarratedScene):
     def construct(self):
         h = header("Changing the contents changes CF")
         q = T("Q17 d: 150.0 g water, same apparatus. Keep CF = 540?", size=LABEL + 2, color=UNKNOWN).move_to([0, 2.45, 0])
@@ -263,6 +343,47 @@ class E09S06_Contents(NarratedScene):
 
 
 # =====================================================================================
+class E09S08_Chemical(NarratedScene):
+    def construct(self):
+        h = header("Calibrating with a reaction of known ΔH")
+        x0 = -6.0
+
+        def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
+            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b01") as b:
+            reqs = VGroup(chip("ΔH known accurately", ENERGY_C, size=SMALL + 1),
+                          chip("known amount reacts", MOL_C, size=SMALL + 1),
+                          chip("same calorimeter and contents", SURR, size=SMALL + 1)).arrange(RIGHT, buff=0.3)
+            reqs.move_to([0, 2.2, 0])
+            self.play(FadeIn(h), run_time=0.4)
+            self.play(LaggedStart(*[FadeIn(r) for r in reqs], lag_ratio=0.3), run_time=1.3)
+        with self.beat("b02") as b:
+            hyp = T("hypothetical reference reaction: 50.0 kJ released per mol", size=LABEL, color=MUTED)
+            hyp.move_to([0, 1.35, 0]).align_to([x0, 0, 0], LEFT)
+            l1 = L(r"q = 0.0400\ \text{mol} \times 50.0\ \text{kJ mol}^{-1} = 2.00\ \text{kJ} = 2000\ \text{J}", 0.75, ENERGY_C)
+            l2 = L(r"\text{CF} = \frac{2000\ \text{J}}{3.70\ {}^{\circ}\text{C}} = 541\ \text{J}\,{}^{\circ}\text{C}^{-1}", -0.15, UNKNOWN)
+            self.play(FadeIn(hyp), run_time=0.5)
+            b.until(0.2)
+            self.play(Write(l1), run_time=1.2)
+            b.until(0.62)
+            self.play(Write(l2), run_time=1.1)
+            self.play(Create(result_box(l2, UNKNOWN)), run_time=0.4)
+        with self.beat("b03") as b:
+            el = right_panel("Electrical (usually preferred)", [T("E = VIt measured directly and precisely", size=SMALL)],
+                             size=SMALL + 1, width=5.0, color=GOOD)
+            ch = right_panel("Chemical", [T("needs a complete reaction and an accurate ΔH", size=SMALL)],
+                             size=SMALL + 1, width=5.0, color=SYSTEM)
+            VGroup(el, ch).arrange(RIGHT, buff=0.35).move_to([0, -1.65, 0])
+            self.play(FadeIn(el), run_time=0.6)
+            b.until(0.35)
+            self.play(FadeIn(ch), run_time=0.6)
+            same = T("either way: calibrate under the same conditions as the experiment", size=SMALL + 1, color=UNKNOWN)
+            same.move_to([0, -2.5, 0])
+            b.until(0.75)
+            self.play(FadeIn(same), run_time=0.5)
+
+
+# =====================================================================================
 def arrow_tag(mob, direction: str, color, label: str = ""):
     if direction == "up":
         a = Arrow(mob.get_top() + 0.1 * UP, mob.get_top() + 0.75 * UP, buff=0, color=color, stroke_width=6)
@@ -276,7 +397,7 @@ def arrow_tag(mob, direction: str, color, label: str = ""):
     return VGroup(a)
 
 
-class E09S07_HeatLoss(NarratedScene):
+class E09S09_HeatLoss(NarratedScene):
     def construct(self):
         h = header("Heat loss during calibration")
         f = M(r"CF", "=", r"\frac{E}{\Delta T}", size=EQ + 16).move_to([0, 0.4, 0])
@@ -323,7 +444,7 @@ class E09S07_HeatLoss(NarratedScene):
 
 
 # =====================================================================================
-class E09S08_Q18(NarratedScene):
+class E09S10_Q18(NarratedScene):
     def construct(self):
         h = header("Practice Q18")
         qc = question_card("Q18").move_to([0, 0.3, 0])
@@ -370,7 +491,7 @@ class E09S08_Q18(NarratedScene):
 
 
 # =====================================================================================
-class E09S09_Recap(NarratedScene):
+class E09S11_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         items = bullets(["CF: energy per °C for the whole calorimeter and its contents",
@@ -401,5 +522,6 @@ class E09S09_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E09S01_Retrieval", "E09S02_MoreThanWater", "E09S03_EVIt", "E09S04_Stack", "E09S05_Q17a",
-                  "E09S06_Contents", "E09S07_HeatLoss", "E09S08_Q18", "E09S09_Recap"]
+EPISODE_SCENES = ["E09S01_Retrieval", "E09S02_MoreThanWater", "E09S03_Kinds", "E09S04_EVIt", "E09S05_Stack",
+                  "E09S06_Q17a", "E09S07_Contents", "E09S08_Chemical", "E09S09_HeatLoss", "E09S10_Q18",
+                  "E09S11_Recap"]
