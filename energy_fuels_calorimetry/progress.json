@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:21:49",
+ "updated": "2026-10-02T18:27:53",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -769,11 +769,152 @@
   },
   "E06": {
    "title": "Combustion equations and gaseous products",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep06.md",
+    "sha": "b48ae1bdd37c367f",
+    "beats": 38,
+    "words": 1414,
+    "est_minutes": 11.5,
+    "anchors": "Q11,Q12",
+    "coverage": "C12,C13,C14,C17,C01"
+   },
+   "scenes_code": {
+    "path": "scenes/ep06.py",
+    "sha": "03278112adb3b35c"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E06S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 50.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S02",
+     "title": "Balancing complete combustion: C, then H, then O",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 78.5333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S03",
+     "title": "A hydrocarbon from petrol",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 29.7333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S04",
+     "title": "Incomplete combustion: products need to be specified",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 60.9333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S05",
+     "title": "Practice Q11: incomplete combustion you can balance",
+     "beats": 8,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 142.3333,
+      "fresh": true,
+      "estimated_beats": 8,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S06",
+     "title": "Hot exhaust and dry gas",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 78.0,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S07",
+     "title": "Practice Q12: hot exhaust versus cooled dry gas",
+     "beats": 7,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 134.4667,
+      "fresh": true,
+      "estimated_beats": 7,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S08",
+     "title": "Moles, not grams; and which greenhouse gases?",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 56.4,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 54.8667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 38,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 686.0,
+    "captions": [
+     "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E07": {
    "title": "Limiting reactants, excess fuel and gas mixtures",
@@ -840,5 +981,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 67.5
+ "series_est_minutes": 79.0
 }

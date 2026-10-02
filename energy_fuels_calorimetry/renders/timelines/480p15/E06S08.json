@@ -1,0 +1,42 @@
+{
+ "scene": "E06S08",
+ "title": "Moles, not grams; and which greenhouse gases?",
+ "cls": "E06S08_MolesNotGrams",
+ "fps": 15,
+ "duration": 56.4,
+ "beats": [
+  {
+   "key": "E06S08.b01",
+   "start": 0.0,
+   "speech": 10.651,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. Methane combustion forms twice as many moles of water as carbon dioxide. Does it form twice the mass of water? Pause and decide.",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E06S08.b02",
+   "start": 17.0667,
+   "speech": 19.7007,
+   "audio": null,
+   "estimated": true,
+   "text": "No. Per mole of methane: one mole of carbon dioxide is forty-four grams, and two moles of water is thirty-six grams. Twice the moles, but less mass, because a water molecule is much lighter. Coefficients give mole ratios. Masses also depend on the molar masses.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S08.b03",
+   "start": 37.1333,
+   "speech": 18.2793,
+   "audio": null,
+   "estimated": true,
+   "text": "One more distinction. \"Carbon emissions\" usually means carbon dioxide, or the mass of carbon it contains. \"Greenhouse gases\" is broader: carbon dioxide, water vapour, unburnt methane, and others. So always check which gases a question's model counts before you add masses together.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

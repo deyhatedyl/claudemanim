@@ -1,0 +1,97 @@
+{
+ "scene": "E06S05",
+ "title": "Practice Q11: incomplete combustion you can balance",
+ "cls": "E06S05_Q11",
+ "fps": 15,
+ "duration": 142.3333,
+ "beats": [
+  {
+   "key": "E06S05.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero eleven is worth five marks. Pause the video and attempt it.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b02",
+   "start": 19.0,
+   "speech": 21.4097,
+   "audio": null,
+   "estimated": true,
+   "text": "We're told everything we need: one mole of ethanol and two point five zero moles of oxygen react completely, and the only products are carbon dioxide, carbon monoxide and water vapour. So write the skeleton with unknowns: x moles of carbon dioxide, y moles of carbon monoxide, and some water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b03",
+   "start": 40.8,
+   "speech": 6.1531,
+   "audio": null,
+   "estimated": true,
+   "text": "Hydrogen first. Ethanol has six hydrogen atoms, so it forms three moles of water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b04",
+   "start": 47.3333,
+   "speech": 5.3255,
+   "audio": null,
+   "estimated": true,
+   "text": "Carbon next. Ethanol has two carbons, so x plus y equals two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b05",
+   "start": 53.0,
+   "speech": 27.9766,
+   "audio": null,
+   "estimated": true,
+   "text": "Now oxygen, and here's where the ethanol's own oxygen matters. Oxygen atoms going in: one from ethanol plus five from the two and a half moles of oxygen gas, so six. Coming out: two x in carbon dioxide, plus y in carbon monoxide, plus three in the water. So two x plus y plus three equals six, which means two x plus y equals three.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b06",
+   "start": 81.3333,
+   "speech": 13.1338,
+   "audio": null,
+   "estimated": true,
+   "text": "Subtract the carbon equation from that: x equals one. Then y equals one. So one mole of carbon dioxide, one mole of carbon monoxide and three moles of water vapour.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b07",
+   "start": 94.8667,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "The balanced equation: ethanol plus two and a half oxygen forms carbon dioxide plus carbon monoxide plus three water vapour. Complete combustion would need three moles of oxygen per mole of ethanol, so this reaction had half a mole too little.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S05.b08",
+   "start": 112.7333,
+   "speech": 28.6241,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: one for the hydrogen balance, two for the carbon and oxygen balances, one for the equation, and one for the comparison. Here's the trap. If you forget the oxygen inside ethanol, the oxygen balance becomes two x plus y equals two, and you'd conclude that all the carbon became carbon monoxide. That looks like the textbook answer for \"limited oxygen\", but it's wrong for this data.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

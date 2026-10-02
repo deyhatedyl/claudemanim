@@ -1,0 +1,31 @@
+{
+ "scene": "E06S03",
+ "title": "A hydrocarbon from petrol",
+ "cls": "E06S03_Octane",
+ "fps": 15,
+ "duration": 29.7333,
+ "beats": [
+  {
+   "key": "E06S03.b01",
+   "start": 0.0,
+   "speech": 8.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "Same routine for octane, a component of petrol. Eight carbons give eight carbon dioxide. Eighteen hydrogens give nine water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S03.b02",
+   "start": 8.8,
+   "speech": 19.9345,
+   "audio": null,
+   "estimated": true,
+   "text": "Oxygen in the products: sixteen in the carbon dioxide plus nine in the water, twenty-five atoms. Octane contains no oxygen, so all twenty-five come from oxygen gas: twelve and a half molecules. Doubling gives two octane plus twenty-five oxygen forming sixteen carbon dioxide plus eighteen water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

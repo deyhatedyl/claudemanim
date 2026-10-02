@@ -1,0 +1,72 @@
+{
+ "episode": "E06",
+ "quality": "480p15",
+ "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 38,
+ "beats_with_audio": 0,
+ "duration": 686.0,
+ "scenes": [
+  {
+   "scene": "E06S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 50.733008
+  },
+  {
+   "scene": "E06S02",
+   "title": "Balancing complete combustion: C, then H, then O",
+   "start": 50.733008,
+   "duration": 78.533008
+  },
+  {
+   "scene": "E06S03",
+   "title": "A hydrocarbon from petrol",
+   "start": 129.26601599999998,
+   "duration": 29.733333
+  },
+  {
+   "scene": "E06S04",
+   "title": "Incomplete combustion: products need to be specified",
+   "start": 158.99934899999997,
+   "duration": 60.932682
+  },
+  {
+   "scene": "E06S05",
+   "title": "Practice Q11: incomplete combustion you can balance",
+   "start": 219.93203099999997,
+   "duration": 142.332682
+  },
+  {
+   "scene": "E06S06",
+   "title": "Hot exhaust and dry gas",
+   "start": 362.264713,
+   "duration": 77.998698
+  },
+  {
+   "scene": "E06S07",
+   "title": "Practice Q12: hot exhaust versus cooled dry gas",
+   "start": 440.26341099999996,
+   "duration": 134.466341
+  },
+  {
+   "scene": "E06S08",
+   "title": "Moles, not grams; and which greenhouse gases?",
+   "start": 574.729752,
+   "duration": 56.399674
+  },
+  {
+   "scene": "E06S09",
+   "title": "Recap and closing recall",
+   "start": 631.129426,
+   "duration": 54.866667
+  }
+ ],
+ "captions": [
+  "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

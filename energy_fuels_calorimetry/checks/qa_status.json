@@ -23,5 +23,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E06": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

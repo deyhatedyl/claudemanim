@@ -1,0 +1,64 @@
+{
+ "scene": "E06S02",
+ "title": "Balancing complete combustion: C, then H, then O",
+ "cls": "E06S02_Balance",
+ "fps": 15,
+ "duration": 78.5333,
+ "beats": [
+  {
+   "key": "E06S02.b01",
+   "start": 0.0,
+   "speech": 16.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "In complete combustion, a fuel burns in plenty of oxygen, and all its carbon ends up as carbon dioxide and all its hydrogen as water. Let's balance the complete combustion of methanol, a fuel that already contains an oxygen atom.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S02.b02",
+   "start": 17.2667,
+   "speech": 8.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "Balance carbon first. Methanol has one carbon, so we need one carbon dioxide. The counters now match for carbon.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S02.b03",
+   "start": 26.0667,
+   "speech": 11.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "Next, hydrogen. Methanol has four hydrogen atoms: three on the carbon and one on the oxygen. Each water has two, so we need two water molecules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S02.b04",
+   "start": 37.9333,
+   "speech": 22.4172,
+   "audio": null,
+   "estimated": true,
+   "text": "Oxygen last, because oxygen gas is the only reactant we can adjust freely. The products now contain two oxygens in carbon dioxide plus two in the waters: four in total. Methanol already supplies one of them. So oxygen gas must supply the other three, which is one and a half oxygen molecules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S02.b05",
+   "start": 60.7333,
+   "speech": 16.8579,
+   "audio": null,
+   "estimated": true,
+   "text": "A half is fine in a thermochemical equation, but to get whole numbers, double everything: two methanol plus three oxygen gives two carbon dioxide plus four water. Check the counters: two carbons, eight hydrogens, eight oxygens on each side.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E06S04",
+ "title": "Incomplete combustion: products need to be specified",
+ "cls": "E06S04_Incomplete",
+ "fps": 15,
+ "duration": 60.9333,
+ "beats": [
+  {
+   "key": "E06S04.b01",
+   "start": 0.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "When oxygen is limited, combustion can be incomplete. Some of the carbon ends up as carbon monoxide, a toxic gas, or as solid carbon, which we see as soot. The hydrogen still forms water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S04.b02",
+   "start": 15.0,
+   "speech": 21.5897,
+   "audio": null,
+   "estimated": true,
+   "text": "Here are three balanced equations for methane. Complete combustion needs two moles of oxygen per mole of methane. Burning to carbon monoxide needs one and a half. Burning to soot needs only one. Less oxygen per mole of fuel, and less energy released, because the carbon is less fully oxidised.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S04.b03",
+   "start": 36.9333,
+   "speech": 23.0648,
+   "audio": null,
+   "estimated": true,
+   "text": "But here's the subtle point. Saying \"limited oxygen\" doesn't tell you which of these happens. A real flame usually makes a mixture of carbon dioxide, carbon monoxide and soot, in proportions that depend on the conditions. So you can only write an incomplete-combustion equation when the products, or enough data about them, are specified.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

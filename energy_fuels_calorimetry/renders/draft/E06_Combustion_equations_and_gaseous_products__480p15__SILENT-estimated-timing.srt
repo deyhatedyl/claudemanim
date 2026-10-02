@@ -1,0 +1,749 @@
+1
+00:00:00,000 --> 00:00:01,582
+Welcome to episode six.
+
+2
+00:00:01,622 --> 00:00:07,433
+We've used combustion equations all along;
+now we'll learn to write them ourselves,
+
+3
+00:00:07,473 --> 00:00:12,126
+including the messy cases, and
+track exactly which gases come out.
+
+4
+00:00:12,467 --> 00:00:13,681
+Two quick checks.
+
+5
+00:00:13,721 --> 00:00:17,888
+In the reaction two hydrogen
+plus oxygen gives two water,
+
+6
+00:00:17,928 --> 00:00:22,611
+how much water forms from zero
+point three zero moles of oxygen?
+
+7
+00:00:22,651 --> 00:00:26,375
+And does burning biomethane
+produce carbon dioxide?
+
+8
+00:00:26,415 --> 00:00:27,670
+Pause and answer.
+
+9
+00:00:36,133 --> 00:00:41,426
+Oxygen to water is one to two, so
+zero point six zero moles of water.
+
+10
+00:00:41,466 --> 00:00:47,763
+And yes, burning biomethane produces carbon
+dioxide, one mole per mole of methane,
+
+11
+00:00:47,803 --> 00:00:49,735
+just like fossil methane.
+
+12
+00:00:50,733 --> 00:00:54,958
+In complete combustion, a fuel
+burns in plenty of oxygen,
+
+13
+00:00:54,998 --> 00:01:00,571
+and all its carbon ends up as carbon
+dioxide and all its hydrogen as water.
+
+14
+00:01:00,611 --> 00:01:04,312
+Let's balance the complete
+combustion of methanol,
+
+15
+00:01:04,352 --> 00:01:07,645
+a fuel that already
+contains an oxygen atom.
+
+16
+00:01:08,000 --> 00:01:09,564
+Balance carbon first.
+
+17
+00:01:09,604 --> 00:01:13,765
+Methanol has one carbon, so
+we need one carbon dioxide.
+
+18
+00:01:13,805 --> 00:01:16,402
+The counters now match for carbon.
+
+19
+00:01:16,800 --> 00:01:17,972
+Next, hydrogen.
+
+20
+00:01:18,012 --> 00:01:24,116
+Methanol has four hydrogen atoms: three
+on the carbon and one on the oxygen.
+
+21
+00:01:24,156 --> 00:01:28,278
+Each water has two, so we
+need two water molecules.
+
+22
+00:01:28,666 --> 00:01:34,386
+Oxygen last, because oxygen gas is the
+only reactant we can adjust freely.
+
+23
+00:01:34,426 --> 00:01:40,458
+The products now contain two oxygens in
+carbon dioxide plus two in the waters:
+
+24
+00:01:40,498 --> 00:01:41,547
+four in total.
+
+25
+00:01:41,587 --> 00:01:44,505
+Methanol already supplies one of them.
+
+26
+00:01:44,545 --> 00:01:51,084
+So oxygen gas must supply the other three,
+which is one and a half oxygen molecules.
+
+27
+00:01:51,466 --> 00:01:56,405
+A half is fine in a thermochemical
+equation, but to get whole numbers,
+
+28
+00:01:56,445 --> 00:02:02,025
+double everything: two methanol plus
+three oxygen gives two carbon dioxide plus
+
+29
+00:02:02,065 --> 00:02:02,807
+four water.
+
+30
+00:02:02,847 --> 00:02:08,324
+Check the counters: two carbons, eight
+hydrogens, eight oxygens on each side.
+
+31
+00:02:09,266 --> 00:02:12,463
+Same routine for octane,
+a component of petrol.
+
+32
+00:02:12,503 --> 00:02:15,218
+Eight carbons give eight carbon dioxide.
+
+33
+00:02:15,258 --> 00:02:17,668
+Eighteen hydrogens give nine water.
+
+34
+00:02:18,066 --> 00:02:23,319
+Oxygen in the products: sixteen in the
+carbon dioxide plus nine in the water,
+
+35
+00:02:23,359 --> 00:02:24,556
+twenty-five atoms.
+
+36
+00:02:24,596 --> 00:02:29,162
+Octane contains no oxygen, so all
+twenty-five come from oxygen gas:
+
+37
+00:02:29,202 --> 00:02:31,087
+twelve and a half molecules.
+
+38
+00:02:31,127 --> 00:02:36,586
+Doubling gives two octane plus twenty-five
+oxygen forming sixteen carbon dioxide
+
+39
+00:02:36,626 --> 00:02:38,001
+plus eighteen water.
+
+40
+00:02:38,999 --> 00:02:43,167
+When oxygen is limited,
+combustion can be incomplete.
+
+41
+00:02:43,207 --> 00:02:49,440
+Some of the carbon ends up as carbon
+monoxide, a toxic gas, or as solid carbon,
+
+42
+00:02:49,480 --> 00:02:51,107
+which we see as soot.
+
+43
+00:02:51,147 --> 00:02:53,608
+The hydrogen still forms water.
+
+44
+00:02:53,999 --> 00:02:57,408
+Here are three balanced
+equations for methane.
+
+45
+00:02:57,448 --> 00:03:02,355
+Complete combustion needs two moles
+of oxygen per mole of methane.
+
+46
+00:03:02,395 --> 00:03:05,954
+Burning to carbon monoxide
+needs one and a half.
+
+47
+00:03:05,994 --> 00:03:08,278
+Burning to soot needs only one.
+
+48
+00:03:08,318 --> 00:03:12,401
+Less oxygen per mole of fuel,
+and less energy released,
+
+49
+00:03:12,441 --> 00:03:15,589
+because the carbon is less fully oxidised.
+
+50
+00:03:15,933 --> 00:03:17,832
+But here's the subtle point.
+
+51
+00:03:17,872 --> 00:03:22,265
+Saying "limited oxygen" doesn't
+tell you which of these happens.
+
+52
+00:03:22,305 --> 00:03:27,875
+A real flame usually makes a mixture of
+carbon dioxide, carbon monoxide and soot,
+
+53
+00:03:27,915 --> 00:03:30,992
+in proportions that
+depend on the conditions.
+
+54
+00:03:31,032 --> 00:03:36,118
+So you can only write an incomplete-combustion
+equation when the products,
+
+55
+00:03:36,158 --> 00:03:38,997
+or enough data about them, are specified.
+
+56
+00:03:39,932 --> 00:03:44,006
+Practice question Q zero
+eleven is worth five marks.
+
+57
+00:03:44,046 --> 00:03:46,499
+Pause the video and attempt it.
+
+58
+00:03:58,932 --> 00:04:05,062
+We're told everything we need: one mole of
+ethanol and two point five zero moles of
+
+59
+00:04:05,102 --> 00:04:09,969
+oxygen react completely, and the
+only products are carbon dioxide,
+
+60
+00:04:10,009 --> 00:04:12,422
+carbon monoxide and water vapour.
+
+61
+00:04:12,462 --> 00:04:17,105
+So write the skeleton with
+unknowns: x moles of carbon dioxide,
+
+62
+00:04:17,145 --> 00:04:20,342
+y moles of carbon
+monoxide, and some water.
+
+63
+00:04:20,732 --> 00:04:21,846
+Hydrogen first.
+
+64
+00:04:21,886 --> 00:04:26,885
+Ethanol has six hydrogen atoms,
+so it forms three moles of water.
+
+65
+00:04:27,265 --> 00:04:28,290
+Carbon next.
+
+66
+00:04:28,330 --> 00:04:32,591
+Ethanol has two carbons,
+so x plus y equals two.
+
+67
+00:04:32,932 --> 00:04:38,196
+Now oxygen, and here's where the
+ethanol's own oxygen matters.
+
+68
+00:04:38,236 --> 00:04:45,212
+Oxygen atoms going in: one from ethanol
+plus five from the two and a half moles of
+
+69
+00:04:45,252 --> 00:04:46,838
+oxygen gas, so six.
+
+70
+00:04:46,878 --> 00:04:52,228
+Coming out: two x in carbon
+dioxide, plus y in carbon monoxide,
+
+71
+00:04:52,268 --> 00:04:54,281
+plus three in the water.
+
+72
+00:04:54,321 --> 00:05:00,909
+So two x plus y plus three equals six,
+which means two x plus y equals three.
+
+73
+00:05:01,265 --> 00:05:05,549
+Subtract the carbon equation
+from that: x equals one.
+
+74
+00:05:05,589 --> 00:05:07,017
+Then y equals one.
+
+75
+00:05:07,057 --> 00:05:13,788
+So one mole of carbon dioxide, one mole of
+carbon monoxide and three moles of water
+
+76
+00:05:13,828 --> 00:05:14,628
+vapour.
+
+77
+00:05:14,799 --> 00:05:20,813
+The balanced equation: ethanol plus two
+and a half oxygen forms carbon dioxide plus
+
+78
+00:05:20,853 --> 00:05:23,730
+carbon monoxide plus three water vapour.
+
+79
+00:05:23,770 --> 00:05:29,055
+Complete combustion would need three
+moles of oxygen per mole of ethanol,
+
+80
+00:05:29,095 --> 00:05:32,304
+so this reaction had
+half a mole too little.
+
+81
+00:05:32,665 --> 00:05:38,350
+Marks: one for the hydrogen balance,
+two for the carbon and oxygen balances,
+
+82
+00:05:38,390 --> 00:05:42,041
+one for the equation, and
+one for the comparison.
+
+83
+00:05:42,081 --> 00:05:43,246
+Here's the trap.
+
+84
+00:05:43,286 --> 00:05:46,259
+If you forget the oxygen inside ethanol,
+
+85
+00:05:46,299 --> 00:05:50,101
+the oxygen balance becomes
+two x plus y equals two,
+
+86
+00:05:50,141 --> 00:05:54,771
+and you'd conclude that all the
+carbon became carbon monoxide.
+
+87
+00:05:54,811 --> 00:05:59,065
+That looks like the textbook
+answer for "limited oxygen",
+
+88
+00:05:59,105 --> 00:06:01,289
+but it's wrong for this data.
+
+89
+00:06:02,265 --> 00:06:05,016
+Now think about the gases themselves.
+
+90
+00:06:05,056 --> 00:06:08,712
+In a hot exhaust, well
+above one hundred degrees,
+
+91
+00:06:08,752 --> 00:06:12,785
+the water formed by combustion
+is a gas: water vapour.
+
+92
+00:06:12,825 --> 00:06:18,709
+Alongside it are carbon dioxide, nitrogen
+from the air, and any excess oxygen.
+
+93
+00:06:19,065 --> 00:06:22,619
+If the exhaust is cooled
+to room temperature,
+
+94
+00:06:22,659 --> 00:06:28,210
+most of the water vapour condenses
+to liquid water and can be removed.
+
+95
+00:06:28,250 --> 00:06:30,685
+What remains is called dry gas.
+
+96
+00:06:30,725 --> 00:06:36,156
+Carbon dioxide stays a gas, so it
+can now be collected and measured.
+
+97
+00:06:36,531 --> 00:06:38,637
+So keep two accounting columns.
+
+98
+00:06:38,677 --> 00:06:42,719
+One lists what the reaction
+formed, including water vapour.
+
+99
+00:06:42,759 --> 00:06:47,355
+The other lists what is actually
+measured after cooling and drying.
+
+100
+00:06:47,395 --> 00:06:52,684
+A question about greenhouse gases in a
+hot exhaust includes the water vapour;
+
+101
+00:06:52,724 --> 00:06:58,121
+a question about a dry gas measured at
+standard laboratory conditions doesn't.
+
+102
+00:06:58,465 --> 00:07:01,622
+And gas volumes always
+need their conditions.
+
+103
+00:07:01,662 --> 00:07:07,163
+Twenty-four point eight litres per mole
+applies at twenty-five degrees and one
+
+104
+00:07:07,203 --> 00:07:08,584
+hundred kilopascals.
+
+105
+00:07:08,624 --> 00:07:14,268
+A hot gas at six hundred degrees occupies
+roughly three times as much volume per
+
+106
+00:07:14,308 --> 00:07:19,281
+mole, so you can't apply the standard
+molar volume to the hot exhaust.
+
+107
+00:07:20,263 --> 00:07:24,348
+Practice question Q zero
+twelve is worth five marks.
+
+108
+00:07:24,388 --> 00:07:27,244
+Pause the video and work through it.
+
+109
+00:07:42,663 --> 00:07:48,672
+The equation: methane plus two oxygen
+forms carbon dioxide plus two water,
+
+110
+00:07:48,712 --> 00:07:52,513
+with the water as a gas
+at six hundred degrees.
+
+111
+00:07:52,553 --> 00:07:58,725
+Methane to carbon dioxide is one to one,
+and methane to water is one to two.
+
+112
+00:07:58,765 --> 00:08:05,346
+So zero point two five zero moles of
+methane forms zero point two five zero moles
+
+113
+00:08:05,386 --> 00:08:11,108
+of carbon dioxide and zero point five
+zero zero moles of water vapour.
+
+114
+00:08:11,463 --> 00:08:13,303
+Masses in the hot stream.
+
+115
+00:08:13,343 --> 00:08:19,169
+Carbon dioxide: zero point two five zero
+times forty-four point zero is eleven
+
+116
+00:08:19,209 --> 00:08:20,447
+point zero grams.
+
+117
+00:08:20,487 --> 00:08:26,613
+Water: zero point five zero zero times
+eighteen point zero is nine point zero zero
+
+118
+00:08:26,653 --> 00:08:27,064
+grams.
+
+119
+00:08:27,104 --> 00:08:31,992
+Together, twenty point zero grams
+of newly formed greenhouse gas.
+
+120
+00:08:32,330 --> 00:08:36,654
+After cooling and drying, only
+the carbon dioxide is measured,
+
+121
+00:08:36,694 --> 00:08:39,329
+now at standard laboratory conditions:
+
+122
+00:08:39,369 --> 00:08:45,171
+zero point two five zero moles times
+twenty-four point eight litres per mole is six
+
+123
+00:08:45,211 --> 00:08:46,759
+point two zero litres.
+
+124
+00:08:47,130 --> 00:08:52,639
+Marks: one for the mole ratios, two
+for the masses, one for the total,
+
+125
+00:08:52,679 --> 00:08:54,462
+and one for the volume.
+
+126
+00:08:54,502 --> 00:09:01,041
+The traps: leaving out the hot water vapour,
+giving eleven grams instead of twenty,
+
+127
+00:09:01,081 --> 00:09:06,471
+or using twenty-four point eight
+for the gas at six hundred degrees.
+
+128
+00:09:06,863 --> 00:09:12,527
+Changed condition: if the same carbon
+dioxide were measured while still at six
+
+129
+00:09:12,567 --> 00:09:15,745
+hundred degrees and one
+hundred kilopascals,
+
+130
+00:09:15,785 --> 00:09:20,465
+would its volume be more or less
+than six point two zero litres?
+
+131
+00:09:25,930 --> 00:09:26,284
+More.
+
+132
+00:09:26,324 --> 00:09:29,913
+At a higher temperature
+and the same pressure,
+
+133
+00:09:29,953 --> 00:09:33,738
+the same amount of gas
+occupies a larger volume.
+
+134
+00:09:34,730 --> 00:09:35,545
+Checkpoint.
+
+135
+00:09:35,585 --> 00:09:41,143
+Methane combustion forms twice as many
+moles of water as carbon dioxide.
+
+136
+00:09:41,183 --> 00:09:44,019
+Does it form twice the mass of water?
+
+137
+00:09:44,059 --> 00:09:45,381
+Pause and decide.
+
+138
+00:09:51,796 --> 00:09:51,987
+No.
+
+139
+00:09:52,027 --> 00:09:57,220
+Per mole of methane: one mole of
+carbon dioxide is forty-four grams,
+
+140
+00:09:57,260 --> 00:10:00,529
+and two moles of water
+is thirty-six grams.
+
+141
+00:10:00,569 --> 00:10:06,147
+Twice the moles, but less mass, because
+a water molecule is much lighter.
+
+142
+00:10:06,187 --> 00:10:08,456
+Coefficients give mole ratios.
+
+143
+00:10:08,496 --> 00:10:11,497
+Masses also depend on the molar masses.
+
+144
+00:10:11,863 --> 00:10:13,214
+One more distinction.
+
+145
+00:10:13,254 --> 00:10:18,711
+"Carbon emissions" usually means carbon
+dioxide, or the mass of carbon it contains.
+
+146
+00:10:18,751 --> 00:10:23,811
+"Greenhouse gases" is broader: carbon
+dioxide, water vapour, unburnt methane,
+
+147
+00:10:23,851 --> 00:10:24,539
+and others.
+
+148
+00:10:24,579 --> 00:10:29,506
+So always check which gases a question's
+model counts before you add masses
+
+149
+00:10:29,546 --> 00:10:30,346
+together.
+
+150
+00:10:31,129 --> 00:10:31,698
+To recap.
+
+151
+00:10:31,738 --> 00:10:35,551
+Balance combustion in the
+order carbon, hydrogen, oxygen,
+
+152
+00:10:35,591 --> 00:10:38,255
+and remember oxygen already in the fuel.
+
+153
+00:10:38,295 --> 00:10:42,648
+Write incomplete combustion only
+when the products are specified.
+
+154
+00:10:42,688 --> 00:10:45,149
+Use states that match the conditions,
+
+155
+00:10:45,189 --> 00:10:50,056
+and separate what a reaction formed
+from what is measured after cooling.
+
+156
+00:10:50,396 --> 00:10:51,421
+Closing recall.
+
+157
+00:10:51,461 --> 00:10:55,722
+Balance the complete combustion
+of propane, C three H eight.
+
+158
+00:11:06,129 --> 00:11:08,927
+Three carbons give three carbon dioxide.
+
+159
+00:11:08,967 --> 00:11:11,198
+Eight hydrogens give four water.
+
+160
+00:11:11,238 --> 00:11:15,881
+That's ten oxygen atoms in the
+products, so five oxygen molecules.
+
+161
+00:11:15,921 --> 00:11:20,705
+Propane plus five oxygen forms three
+carbon dioxide plus four water.
+
+162
+00:11:20,745 --> 00:11:25,003
+Next episode: what happens when
+one reactant runs out first.

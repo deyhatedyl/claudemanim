@@ -100,6 +100,15 @@
  },
  {
   "qid": "EQ",
+  "label": "atoms balance: propane complete combustion (E06 recall): C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
   "label": "atoms balance: photosynthesis: 6CO2(g) + 6H2O(l) -> C6H12O6(aq) + 6O2(g)",
   "computed": "True",
   "target": "True",
@@ -609,6 +618,15 @@
   "target": 3.0,
   "unit": "",
   "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "trap gives all CO (x=0, y=2)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
   "ok": true
  },
  {

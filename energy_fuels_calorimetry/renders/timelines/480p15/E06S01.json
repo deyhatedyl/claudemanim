@@ -1,0 +1,42 @@
+{
+ "scene": "E06S01",
+ "title": "Retrieval check",
+ "cls": "E06S01_Retrieval",
+ "fps": 15,
+ "duration": 50.7333,
+ "beats": [
+  {
+   "key": "E06S01.b01",
+   "start": 0.0,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode six. We've used combustion equations all along; now we'll learn to write them ourselves, including the messy cases, and track exactly which gases come out.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S01.b02",
+   "start": 12.4667,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. In the reaction two hydrogen plus oxygen gives two water, how much water forms from zero point three zero moles of oxygen? And does burning biomethane produce carbon dioxide? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E06S01.b03",
+   "start": 36.1333,
+   "speech": 13.6014,
+   "audio": null,
+   "estimated": true,
+   "text": "Oxygen to water is one to two, so zero point six zero moles of water. And yes, burning biomethane produces carbon dioxide, one mole per mole of methane, just like fossil methane.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

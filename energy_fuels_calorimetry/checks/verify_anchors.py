@@ -94,6 +94,7 @@ EQUATIONS = {
     "methanol complete combustion (x2)": "2CH3OH(l) + 3O2(g) -> 2CO2(g) + 4H2O(l)",
     "octane complete combustion": "2C8H18(l) + 25O2(g) -> 16CO2(g) + 18H2O(l)",
     "coal (as carbon) combustion": "C(s) + O2(g) -> CO2(g)",
+    "propane complete combustion (E06 recall)": "C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)",
     "photosynthesis": "6CO2(g) + 6H2O(l) -> C6H12O6(aq) + 6O2(g)",
     "aerobic respiration": "C6H12O6(aq) + 6O2(g) -> 6CO2(g) + 6H2O(l)",
     "fermentation (Q07)": "C6H12O6(aq) -> 2C2H5OH(aq) + 2CO2(g)",
@@ -217,6 +218,9 @@ def q11():
     check("Q11", "n(CO2)", x, 1.00)
     check("Q11", "n(CO)", y, 1.00)
     check("Q11", "complete combustion O2 per mol ethanol", (2 * 2 + 3 - 1) / 2, 3.00)
+    # trap: ethanol's own O forgotten -> 2x + y = 2 with x + y = 2 -> x = 0, y = 2 (all CO)
+    x_t = (2 * 2.5 - z) - 2
+    check_true("Q11", "trap gives all CO (x=0, y=2)", abs(x_t) < 1e-12 and abs((2 - x_t) - 2) < 1e-12)
 
 
 def q12():

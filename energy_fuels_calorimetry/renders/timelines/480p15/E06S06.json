@@ -1,0 +1,53 @@
+{
+ "scene": "E06S06",
+ "title": "Hot exhaust and dry gas",
+ "cls": "E06S06_Exhaust",
+ "fps": 15,
+ "duration": 78.0,
+ "beats": [
+  {
+   "key": "E06S06.b01",
+   "start": 0.0,
+   "speech": 16.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Now think about the gases themselves. In a hot exhaust, well above one hundred degrees, the water formed by combustion is a gas: water vapour. Alongside it are carbon dioxide, nitrogen from the air, and any excess oxygen.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S06.b02",
+   "start": 16.8,
+   "speech": 17.0917,
+   "audio": null,
+   "estimated": true,
+   "text": "If the exhaust is cooled to room temperature, most of the water vapour condenses to liquid water and can be removed. What remains is called dry gas. Carbon dioxide stays a gas, so it can now be collected and measured.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S06.b03",
+   "start": 34.2667,
+   "speech": 21.5897,
+   "audio": null,
+   "estimated": true,
+   "text": "So keep two accounting columns. One lists what the reaction formed, including water vapour. The other lists what is actually measured after cooling and drying. A question about greenhouse gases in a hot exhaust includes the water vapour; a question about a dry gas measured at standard laboratory conditions doesn't.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S06.b04",
+   "start": 56.2,
+   "speech": 20.8159,
+   "audio": null,
+   "estimated": true,
+   "text": "And gas volumes always need their conditions. Twenty-four point eight litres per mole applies at twenty-five degrees and one hundred kilopascals. A hot gas at six hundred degrees occupies roughly three times as much volume per mole, so you can't apply the standard molar volume to the hot exhaust.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

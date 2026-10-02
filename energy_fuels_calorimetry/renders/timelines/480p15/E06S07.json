@@ -1,0 +1,86 @@
+{
+ "scene": "E06S07",
+ "title": "Practice Q12: hot exhaust versus cooled dry gas",
+ "cls": "E06S07_Q12",
+ "fps": 15,
+ "duration": 134.4667,
+ "beats": [
+  {
+   "key": "E06S07.b01",
+   "start": 0.0,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero twelve is worth five marks. Pause the video and work through it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b02",
+   "start": 22.4,
+   "speech": 28.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "The equation: methane plus two oxygen forms carbon dioxide plus two water, with the water as a gas at six hundred degrees. Methane to carbon dioxide is one to one, and methane to water is one to two. So zero point two five zero moles of methane forms zero point two five zero moles of carbon dioxide and zero point five zero zero moles of water vapour.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b03",
+   "start": 51.2,
+   "speech": 20.5283,
+   "audio": null,
+   "estimated": true,
+   "text": "Masses in the hot stream. Carbon dioxide: zero point two five zero times forty-four point zero is eleven point zero grams. Water: zero point five zero zero times eighteen point zero is nine point zero zero grams. Together, twenty point zero grams of newly formed greenhouse gas.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b04",
+   "start": 72.0667,
+   "speech": 14.429,
+   "audio": null,
+   "estimated": true,
+   "text": "After cooling and drying, only the carbon dioxide is measured, now at standard laboratory conditions: zero point two five zero moles times twenty-four point eight litres per mole is six point two zero litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b05",
+   "start": 86.8667,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: one for the mole ratios, two for the masses, one for the total, and one for the volume. The traps: leaving out the hot water vapour, giving eleven grams instead of twenty, or using twenty-four point eight for the gas at six hundred degrees.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b06",
+   "start": 106.6,
+   "speech": 13.6014,
+   "audio": null,
+   "estimated": true,
+   "text": "Changed condition: if the same carbon dioxide were measured while still at six hundred degrees and one hundred kilopascals, would its volume be more or less than six point two zero litres?",
+   "overrun": 0.0,
+   "pause": 5.0,
+   "layout": []
+  },
+  {
+   "key": "E06S07.b07",
+   "start": 125.6667,
+   "speech": 7.8083,
+   "audio": null,
+   "estimated": true,
+   "text": "More. At a higher temperature and the same pressure, the same amount of gas occupies a larger volume.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
