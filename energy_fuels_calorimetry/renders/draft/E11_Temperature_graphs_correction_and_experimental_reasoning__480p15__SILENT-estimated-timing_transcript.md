@@ -1,6 +1,6 @@
 # E11 Temperature graphs, correction and experimental reasoning
 
-Runtime 16:00. Narration transcript (matches the captions).
+Runtime 17:41. Narration transcript (matches the captions).
 
 ## [00:00] E11S01 Retrieval check
 
@@ -64,7 +64,14 @@ Accuracy is how close a result is to the true value. Precision describes how clo
 Repeatability means the same person, method and equipment get closely agreeing results when the experiment is repeated. Good repeatability shows precision, but it doesn't prove accuracy. Validity asks whether the experiment actually measures what it claims to, under suitable controlled conditions.
 Averaging more repeats reduces the effect of random errors. It does nothing about a systematic error: you just get a better estimate of a biased value.
 
-## [10:26] E11S10 Practice Q22: a wrong CF and a thermometer offset
+## [10:26] E11S10 Resolution, mistakes and outliers
+
+One more measurement idea that exams test directly: resolution. Which has the higher resolution, a thermometer marked every one degree, or a digital probe that reads to zero point one of a degree? Pause and decide.  *(pause)*
+Resolution is the smallest change an instrument can show, and it's always stated with a unit. For a scale, it's the smallest graduation: one degree for that thermometer. For a digital display, it's the last digit it can show: zero point one degree for the probe, or zero point zero one gram for a balance that reads to two decimal places. The probe has the higher resolution, because it records finer increments.
+But higher resolution isn't the same as accuracy. A probe that reads to zero point one of a degree can still be badly calibrated. Resolution does limit how precisely you can quote a temperature change, which is why a rise read from a coarse thermometer supports fewer significant figures.
+Two last terms. A mistake, such as misreading a scale or spilling some solution, isn't an error in the scientific sense: identify it, leave that result out, and repeat the measurement. And a single outlier in an otherwise precise set isn't evidence of a systematic error. Investigate it, and report how you treated it.
+
+## [12:06] E11S11 Practice Q22: a wrong CF and a thermometer offset
 
 Practice question Q twenty-two is worth five marks. Pause the video and work through it.  *(pause)*
 Part a. The spreadsheet uses four hundred and fifty: four hundred and fifty times four point zero zero is one thousand eight hundred joules, divided by zero point zero four zero zero moles is forty-five thousand joules per mole. So the reported value is negative forty-five point zero kilojoules per mole. With the valid five hundred, the heat is two thousand joules, and the corrected value is negative fifty point zero kilojoules per mole.
@@ -73,7 +80,7 @@ Part c. A thermometer that reads one point five degrees too high, on both readin
 But don't over-generalise. That cancellation only works for an identical additive offset. A thermometer whose scale is stretched, reading too many degrees per real degree, would change delta T.
 Marks: two for the two enthalpies, one for the repetition explanation, and two for the offset conclusion with the subtraction reasoning. The traps: equating repeatability with accuracy, and assuming every thermometer error changes a temperature difference.
 
-## [12:28] E11S11 The error-direction table
+## [14:09] E11S12 The error-direction table
 
 Here's a summary table. Each row follows one fault through the formula, under the simple model where only that fault is present.
 Heat loss during electrical calibration, with E known correctly: the measured rise goes down, so the calculated calibration factor goes up. Uncorrected heat loss during the reaction, with a valid calibration factor: the measured rise goes down, so the inferred heat, and its magnitude, go down.
@@ -81,12 +88,12 @@ A calibration factor that's too small: the calculated heat and the magnitude of 
 One caution. If several faults act together, the net effect needs a full model. They can partly cancel or add up, so the table alone can't tell you the overall direction.
 And when an exam asks for an improvement, be specific: insulate the lid and sides, calibrate with the same volume of solution that will be used in the reaction, record temperatures more often and extrapolate, or repeat with fresh solutions and average the results.
 
-## [13:54] E11S12 Checkpoint: which improvement fixes which error?
+## [15:35] E11S13 Checkpoint: which improvement fixes which error?
 
 Checkpoint. Match each improvement to the problem it addresses. One: insulate the lid and sides. Two: calibrate using the same volume of solution as the reaction. Three: record temperatures more often and extrapolate. Four: repeat with fresh solutions and average. Pause and match them.  *(pause)*
 Insulation reduces heat exchange with the surroundings, a systematic error. Calibrating with the same volume makes the calibration factor valid for the actual conditions, removing another systematic error. More frequent readings define the cooling line better, so the extrapolated temperature is more reliable. And repeating and averaging reduces the effect of random errors only. It can't remove a systematic error, which is why the first two improvements matter most when results are precise but biased.
 
-## [15:00] E11S13 Recap and closing recall
+## [16:40] E11S14 Recap and closing recall
 
 To recap. Read the graph's baseline, mixing time and cooling region. Extend the cooling trend back to the mixing time to estimate the corrected temperature, and treat it as a model-based estimate. Trace every error through the actual formula, and remember: precise isn't the same as accurate.
 Closing recall. A cooling line has a slope of negative zero point zero zero two degrees per second. Extrapolating back fifty seconds to the mixing time, how much does the temperature increase?  *(pause)*

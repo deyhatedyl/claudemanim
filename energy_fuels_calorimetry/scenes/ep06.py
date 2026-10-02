@@ -253,6 +253,16 @@ class E06S04_Incomplete(NarratedScene):
             wp = panel(warn, color=UNKNOWN)
             VGroup(wp, warn).move_to([0, 1.6, 0])
             self.play(FadeIn(wp), FadeIn(warn), run_time=1.0)
+            self.warn = VGroup(wp, warn)
+        with self.beat("b04") as b:
+            self.play(FadeOut(self.warn), run_time=0.4)
+            l1 = M(r"1.00\ \text{mol}\ \ce{CH4} + 1.60\ \text{mol}\ \ce{O2}:\ \text{complete needs } 2.00\ \text{mol}"
+                   r"\ \Rightarrow\ \text{must be incomplete}", size=EQ_SMALL - 8, color=UNKNOWN).move_to([0, 1.95, 0])
+            l2 = M(r"\text{no soot} \Rightarrow\ 0.20\ \ce{CO2} + 0.80\ \ce{CO} + 2.00\ \ce{H2O}\ \ (\text{mol})",
+                   size=EQ_SMALL - 8, color=GOOD).move_to([0, 1.2, 0])
+            self.play(Write(l1), run_time=1.2)
+            b.until(0.55)
+            self.play(Write(l2), run_time=1.1)
 
 
 # =====================================================================================

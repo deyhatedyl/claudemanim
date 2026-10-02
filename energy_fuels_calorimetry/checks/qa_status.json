@@ -26,12 +26,12 @@
  },
  "E06": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
   "final_qa": "pending"
  },
  "E07": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
   "final_qa": "pending"
  },
  "E08": {
@@ -51,17 +51,17 @@
  },
  "E11": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
   "final_qa": "pending"
  },
  "E12": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
   "final_qa": "pending"
  },
  "E13": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label).",
+  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
   "final_qa": "pending"
  },
  "E14": {

@@ -620,8 +620,9 @@ class E13S15_PartsCD(NarratedScene):
         h = header("Q26 parts c–d")
         claim = T("“Both contain an O–H bond, so they release equal energy per gram.”", size=LABEL + 2)
         claim.move_to([0, 2.15, 0])
-        r1 = T("1.  ΔH depends on all the bonds broken and formed in the whole reaction", size=LABEL, color=GOOD)
-        r2 = T("2.  per-gram values also depend on molar mass (22.7 vs 29.8 kJ g⁻¹)", size=LABEL, color=GOOD)
+        r1 = T("1.  one shared bond can't decide: it depends on the whole molecule's combustion", size=LABEL, color=GOOD)
+        r2 = wrapped("2.  oxygen is 50% of methanol's mass but 35% of ethanol's: already partly oxidised, so "
+                     "methanol releases less per gram (22.7 vs 29.8 kJ g⁻¹)", size=LABEL, width=12.0, color=GOOD)
         rs = VGroup(r1, r2).arrange(DOWN, buff=0.25, aligned_edge=LEFT).move_to([0, 1.05, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(claim), run_time=0.7)
@@ -656,7 +657,7 @@ class E13S15_PartsCD(NarratedScene):
         with self.beat("b03") as b:
             self.clear(h)
             tally = mark_tally([(2, "a: energy per gram for each fuel"), (4, "b: useful energy and g CO₂ per useful kJ, each fuel"),
-                                (2, "c: whole-reaction bonds; molar mass"), (2, "d: no; lifecycle stages missing")],
+                                (2, "c: one bond can't decide; oxygen fraction (already partly oxidised)"), (2, "d: no; lifecycle stages missing")],
                                size=SMALL + 2, width=8.0, title="Q26 indicative marks").move_to([0, 0.1, 0])
             self.play(FadeIn(tally), run_time=0.9)
 

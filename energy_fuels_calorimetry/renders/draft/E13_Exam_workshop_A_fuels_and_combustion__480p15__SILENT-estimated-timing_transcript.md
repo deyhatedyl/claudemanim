@@ -1,6 +1,6 @@
 # E13 Exam workshop A: fuels and combustion
 
-Runtime 20:27. Narration transcript (matches the captions).
+Runtime 20:40. Narration transcript (matches the captions).
 
 ## [00:00] E13S01 Retrieval check
 
@@ -88,11 +88,11 @@ Another version of the same trap compares carbon dioxide per mole of fuel: one m
 
 ## [18:04] E13S15 Q26 parts c and d: explaining and limiting claims
 
-Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. That's wrong for two reasons. The energy released depends on all the bonds broken and formed in the whole reaction, not on one bond they share. And per-gram values also depend on molar mass. One mark for each idea.
+Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. One shared bond can't decide that: the energy released depends on the combustion of the whole molecule. The expected explanation is about oxygen. Half of methanol's mass is oxygen, compared with about a third of ethanol's. That part of the fuel is already oxidised and releases no further energy, so methanol releases less energy per gram: twenty-two point seven kilojoules, compared with twenty-nine point eight. One mark for each idea.
 Part d. Do these results show which fuel has lower lifecycle emissions? No. We've only counted the direct carbon dioxide from combustion. Lifecycle emissions also include producing the feedstock, processing the fuel and transporting it, and we have no data on any of those. One mark for the conclusion, and one for the reason.
 The full tally: two, four, two and two, for ten marks.
 
-## [19:00] E13S16 Error log and close
+## [19:13] E13S16 Error log and close
 
 Before we finish, start an error log. For each mistake you made today, write one row: the question and part, what you did, the type of error, the correct idea, and a check you'll use next time.
 Here's an example entry you can copy. Q twenty-five, part a. What I did: used zero point two five zero moles as the methane. Type of error: reading, a mixture versus its component. Correct idea: multiply by the volume fraction first. Next time: circle every percentage in a gas question and ask, "percentage of what?"

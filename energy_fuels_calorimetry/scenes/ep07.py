@@ -379,7 +379,70 @@ class E07S07_GasVolumes(NarratedScene):
 
 
 # =====================================================================================
-class E07S08_NewVsInlet(NarratedScene):
+def syringe(reading: float, label: str, max_ml: float = 60.0, length: float = 4.2) -> VGroup:
+    """Schematic gas syringe: barrel with graduations every 10 mL, plunger drawn out to the reading."""
+    barrel = Rectangle(width=length, height=0.55, stroke_color=TEXT, stroke_width=2.5)
+    marks = VGroup()
+    for v in range(0, int(max_ml) + 1, 10):
+        x = barrel.get_left()[0] + length * v / max_ml
+        marks.add(Line([x, barrel.get_top()[1], 0], [x, barrel.get_top()[1] - 0.15, 0], color=MUTED, stroke_width=1.5))
+        marks.add(T(str(v), size=SMALL - 4, color=MUTED).move_to([x, barrel.get_top()[1] + 0.18, 0]))
+    xg = barrel.get_left()[0] + length * reading / max_ml
+    gas = Rectangle(width=max(0.02, xg - barrel.get_left()[0]), height=0.5, stroke_width=0, fill_color=CO2C,
+                    fill_opacity=0.5).move_to(barrel).align_to(barrel, LEFT)
+    plunger = VGroup(Line([xg, barrel.get_bottom()[1] + 0.03, 0], [xg, barrel.get_top()[1] - 0.03, 0], color=TEXT,
+                          stroke_width=5),
+                     Line([xg, barrel.get_center()[1], 0], [barrel.get_right()[0] + 0.6, barrel.get_center()[1], 0],
+                          color=TEXT, stroke_width=3))
+    nozzle = Line(barrel.get_left(), barrel.get_left() + 0.4 * LEFT, color=TEXT, stroke_width=4)
+    lab = T(label, size=SMALL + 1, color=MUTED).next_to(barrel, DOWN, buff=0.15).align_to(barrel, LEFT)
+    rd = T(f"{reading:.1f} mL", size=LABEL + 1, color=UNKNOWN).next_to(plunger[1], RIGHT, buff=0.2)
+    return VGroup(barrel, marks, gas, plunger, nozzle, lab, rd)
+
+
+class E07S08_GasMeasure(NarratedScene):
+    def construct(self):
+        h = header("Measuring a gas volume")
+        hyp = T("hypothetical readings", size=SMALL, color=MUTED).to_corner(UR, buff=0.45)
+        s1 = syringe(2.0, "before the reaction").move_to([-2.7, 1.9, 0])
+        s2 = syringe(52.5, "after the reaction").move_to([-2.7, 0.55, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(hyp), run_time=0.5)
+            b.until(0.4)
+            self.play(FadeIn(s1), run_time=0.7)
+            b.until(0.7)
+            self.play(FadeIn(s2), run_time=0.7)
+        x0 = -6.2
+
+        def L(tex, y, col=TEXT, s=EQ_SMALL - 8):
+            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b02") as b:
+            l1 = L(r"V = 52.5 - 2.0 = 50.5\ \text{mL} = 0.0505\ \text{L}", -0.5, VOL_C)
+            l2 = L(r"n = 0.0505 \div 24.8 = 0.00204\ \text{mol}", -1.15, MOL_C)
+            l3 = L(r"\%\ \text{yield} = \frac{0.00204}{0.00250} \times 100\% = 81.5\%", -1.95, GOOD)
+            self.play(Write(l1), run_time=1.0)
+            b.until(0.4)
+            self.play(Write(l2), run_time=0.9)
+            b.until(0.72)
+            self.play(Write(l3), run_time=1.0)
+            tr = T("final − initial reading; mL → L", size=SMALL + 1, color=MUTED).next_to(l1, RIGHT, buff=0.4)
+            self.play(FadeIn(tr), run_time=0.4)
+            self.work = VGroup(l1, l2, l3, tr)
+        with self.beat("b03") as b:
+            ttl = TB("assumptions behind 24.8 L mol⁻¹", size=LABEL, color=UNKNOWN)
+            ass = VGroup(*[T("• " + t, size=SMALL + 1) for t in (
+                "gas at 25 °C and 100 kPa", "behaves as an ideal gas", "only this gas is collected",
+                "none dissolves or escapes")]).arrange(DOWN, aligned_edge=LEFT, buff=0.1)
+            grp = VGroup(ttl, ass).arrange(DOWN, aligned_edge=LEFT, buff=0.15).move_to([3.9, 1.35, 0])
+            self.play(FadeIn(ttl), LaggedStart(*[FadeIn(a) for a in ass], lag_ratio=0.25), run_time=1.6)
+            lim = wrapped("limitation: CO₂ collected over water partly dissolves, so the measured volume is too small",
+                          size=SMALL + 1, width=5.2, color=BAD).move_to([3.6, -1.2, 0])
+            b.until(0.65)
+            self.play(FadeIn(lim), run_time=0.6)
+
+
+# =====================================================================================
+class E07S09_NewVsInlet(NarratedScene):
     def construct(self):
         h = header("New CO₂ versus inlet CO₂")
         box = RoundedRectangle(width=2.6, height=1.6, corner_radius=0.2, color=SYSTEM, stroke_width=3).move_to([0, 0.9, 0])
@@ -408,7 +471,7 @@ class E07S08_NewVsInlet(NarratedScene):
 
 
 # =====================================================================================
-class E07S09_Q14a(NarratedScene):
+class E07S10_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
         qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, 0.15, 0])
@@ -450,7 +513,7 @@ class E07S09_Q14a(NarratedScene):
 
 
 # =====================================================================================
-class E07S10_Q14b(NarratedScene):
+class E07S11_Q14b(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 2)")
         sc = 0.55
@@ -491,7 +554,7 @@ class E07S10_Q14b(NarratedScene):
 
 
 # =====================================================================================
-class E07S11_Recap(NarratedScene):
+class E07S12_Recap(NarratedScene):
     def construct(self):
         h = header("The limiting-reactant routine")
         steps = ["Convert to moles (reactive part of any mixture only)",
@@ -528,5 +591,5 @@ class E07S11_Recap(NarratedScene):
 
 
 EPISODE_SCENES = ["E07S01_Retrieval", "E07S02_Batches", "E07S03_Trays", "E07S04_MassCheck", "E07S05_Q13",
-                  "E07S06_Mixtures", "E07S07_GasVolumes", "E07S08_NewVsInlet", "E07S09_Q14a", "E07S10_Q14b",
-                  "E07S11_Recap"]
+                  "E07S06_Mixtures", "E07S07_GasVolumes", "E07S08_GasMeasure", "E07S09_NewVsInlet",
+                  "E07S10_Q14a", "E07S11_Q14b", "E07S12_Recap"]

@@ -696,344 +696,429 @@ and only when every volume is measured
 at the same temperature and pressure.
 
 150
-00:10:47,462 --> 00:10:51,153
+00:10:47,462 --> 00:10:50,534
+Gas volumes are often
+measured in experiments,
+
+151
+00:10:50,574 --> 00:10:56,081
+for example the carbon dioxide from
+fermentation, or a gas released by a reaction.
+
+152
+00:10:56,121 --> 00:10:58,111
+Here's a hypothetical example.
+
+153
+00:10:58,151 --> 00:11:02,643
+A gas syringe reads two point zero
+millilitres before the reaction,
+
+154
+00:11:02,683 --> 00:11:05,795
+and fifty-two point five
+millilitres after it.
+
+155
+00:11:06,129 --> 00:11:11,876
+The gas collected is the difference:
+fifty-two point five minus two point zero,
+
+156
+00:11:11,916 --> 00:11:17,736
+which is fifty point five millilitres, or
+zero point zero five zero five litres.
+
+157
+00:11:17,776 --> 00:11:23,670
+At SLC, that's zero point zero five zero
+five divided by twenty-four point eight:
+
+158
+00:11:23,710 --> 00:11:26,673
+zero point zero zero two zero four moles.
+
+159
+00:11:26,713 --> 00:11:32,387
+If the reaction should have produced zero
+point zero zero two five zero moles,
+
+160
+00:11:32,427 --> 00:11:36,822
+the percentage yield is about
+eighty-one point five percent.
+
+161
+00:11:37,195 --> 00:11:43,095
+Using twenty-four point eight litres per
+mole carries assumptions you may be asked
+
+162
+00:11:43,135 --> 00:11:48,310
+to state: the gas is at twenty-five
+degrees and one hundred kilopascals,
+
+163
+00:11:48,350 --> 00:11:52,366
+it behaves as an ideal gas,
+it's the only gas collected,
+
+164
+00:11:52,406 --> 00:11:54,973
+and none of it dissolves or escapes.
+
+165
+00:11:55,013 --> 00:11:57,798
+Each one is also a possible limitation.
+
+166
+00:11:57,838 --> 00:12:02,578
+For example, carbon dioxide collected
+over water partly dissolves,
+
+167
+00:12:02,618 --> 00:12:05,226
+so the measured volume is too small.
+
+168
+00:12:06,195 --> 00:12:09,886
 If the fuel stream already
 contains carbon dioxide,
 
-151
-00:10:51,193 --> 00:10:53,641
+169
+00:12:09,926 --> 00:12:12,374
 the exhaust has two sources of it.
 
-152
-00:10:53,681 --> 00:10:57,957
+170
+00:12:12,414 --> 00:12:16,690
 Some carbon dioxide is newly
 formed by burning the methane.
 
-153
-00:10:57,997 --> 00:11:02,899
+171
+00:12:16,730 --> 00:12:21,632
 The rest simply entered with the
 fuel and passed through unchanged.
 
-154
-00:11:03,262 --> 00:11:05,897
+172
+00:12:21,995 --> 00:12:24,630
 A question might ask for either one.
 
-155
-00:11:05,937 --> 00:11:10,504
+173
+00:12:24,670 --> 00:12:29,237
 "Carbon dioxide formed" or
 "produced" means only the new part,
 
-156
-00:11:10,544 --> 00:11:12,659
+174
+00:12:29,277 --> 00:12:31,392
 calculated from the reaction.
 
-157
-00:11:12,699 --> 00:11:17,044
+175
+00:12:31,432 --> 00:12:35,777
 "Total carbon dioxide in the
 exhaust" means new plus inlet.
 
-158
-00:11:17,084 --> 00:11:20,948
+176
+00:12:35,817 --> 00:12:39,681
 Read which one is asked for
 before you add anything.
 
-159
-00:11:21,928 --> 00:11:25,314
+177
+00:12:40,661 --> 00:12:44,047
 Practice question Q fourteen
 is worth eight marks.
 
-160
-00:11:25,354 --> 00:11:30,150
+178
+00:12:44,087 --> 00:12:48,883
 Pause the video and work through the
 whole question before continuing.
 
-161
-00:11:45,594 --> 00:11:47,566
+179
+00:13:04,328 --> 00:13:06,299
 Start with the fuel stream.
 
-162
-00:11:47,606 --> 00:11:53,675
+180
+00:13:06,339 --> 00:13:12,408
 Twelve point four litres at standard
 laboratory conditions is zero point five zero
 
-163
-00:11:53,715 --> 00:11:55,016
+181
+00:13:12,448 --> 00:13:13,749
 zero moles of gas.
 
-164
-00:11:55,056 --> 00:11:59,411
+182
+00:13:13,789 --> 00:13:18,144
 Eighty percent is methane: zero
 point four zero zero moles.
 
-165
-00:11:59,451 --> 00:12:05,709
+183
+00:13:18,184 --> 00:13:24,442
 Twenty percent is carbon dioxide: zero point
 one zero zero moles, which won't react.
 
-166
-00:12:06,061 --> 00:12:06,916
+184
+00:13:24,794 --> 00:13:25,649
 Now the air.
 
-167
-00:12:06,956 --> 00:12:12,878
+185
+00:13:25,689 --> 00:13:31,611
 Twenty-one point zero percent of ninety
 point zero litres is eighteen point nine
 
-168
-00:12:12,918 --> 00:12:14,145
+186
+00:13:31,651 --> 00:13:32,878
 litres of oxygen.
 
-169
-00:12:14,185 --> 00:12:16,754
+187
+00:13:32,918 --> 00:13:35,487
 Divided by twenty-four point eight,
 
-170
-00:12:16,794 --> 00:12:20,670
+188
+00:13:35,527 --> 00:13:39,403
 that's zero point seven six
 two one moles of oxygen.
 
-171
-00:12:21,061 --> 00:12:24,159
+189
+00:13:39,794 --> 00:13:42,892
 The equation is methane plus two oxygen.
 
-172
-00:12:24,199 --> 00:12:30,512
+190
+00:13:42,932 --> 00:13:49,245
 Amount divided by coefficient: methane
 zero point four zero zero over one is zero
 
-173
-00:12:30,552 --> 00:12:32,159
+191
+00:13:49,285 --> 00:13:50,892
 point four zero zero.
 
-174
-00:12:32,199 --> 00:12:38,434
+192
+00:13:50,932 --> 00:13:57,167
 Oxygen zero point seven six two one over
 two is zero point three eight one zero.
 
-175
-00:12:38,474 --> 00:12:41,650
+193
+00:13:57,207 --> 00:14:00,383
 Oxygen is smaller, so oxygen is limiting,
 
-176
-00:12:41,690 --> 00:12:46,789
+194
+00:14:00,423 --> 00:14:05,522
 and the reaction extent is zero
 point three eight one zero moles.
 
-177
-00:12:47,128 --> 00:12:49,692
+195
+00:14:05,861 --> 00:14:08,425
 Keep the two budgets side by side.
 
-178
-00:12:49,732 --> 00:12:55,591
+196
+00:14:08,465 --> 00:14:14,324
 Oxygen: initial zero point seven six
 two one, used all of it, remaining zero.
 
-179
-00:12:55,631 --> 00:13:01,796
+197
+00:14:14,364 --> 00:14:20,529
 Methane: initial zero point four zero
 zero, used zero point three eight one zero,
 
-180
-00:13:01,836 --> 00:13:05,779
+198
+00:14:20,569 --> 00:14:24,512
 remaining zero point zero
 one eight nine five moles.
 
-181
-00:13:05,819 --> 00:13:08,844
+199
+00:14:24,552 --> 00:14:27,577
 Times sixteen point zero grams per mole,
 
-182
-00:13:08,884 --> 00:13:13,863
+200
+00:14:27,617 --> 00:14:32,596
 that's zero point three zero three
 grams of methane left unburnt.
 
-183
-00:13:14,860 --> 00:13:18,855
+201
+00:14:33,593 --> 00:14:37,588
 Newly formed carbon dioxide
 equals the methane that reacted:
 
-184
-00:13:18,895 --> 00:13:21,411
+202
+00:14:37,628 --> 00:14:40,144
 zero point three eight one zero moles.
 
-185
-00:13:21,451 --> 00:13:26,159
+203
+00:14:40,184 --> 00:14:44,892
 At standard laboratory conditions,
 that's nine point four five litres.
 
-186
-00:13:26,527 --> 00:13:30,864
+204
+00:14:45,260 --> 00:14:49,597
 The inlet carbon dioxide was
 zero point one zero zero moles,
 
-187
-00:13:30,904 --> 00:13:33,125
+205
+00:14:49,637 --> 00:14:51,858
 or two point four eight litres.
 
-188
-00:13:33,165 --> 00:13:38,742
+206
+00:14:51,898 --> 00:14:57,475
 So the total carbon dioxide, once isolated
 at standard laboratory conditions,
 
-189
-00:13:38,782 --> 00:13:44,214
+207
+00:14:57,515 --> 00:15:02,947
 is nine point four five plus two point
 four eight: eleven point nine three,
 
-190
-00:13:44,254 --> 00:13:46,515
+208
+00:15:02,987 --> 00:15:05,248
 about eleven point nine litres.
 
-191
-00:13:46,860 --> 00:13:52,308
+209
+00:15:05,593 --> 00:15:11,041
 Energy released: zero point three eight
 one zero moles of methane times eight
 
-192
-00:13:52,348 --> 00:13:55,088
+210
+00:15:11,081 --> 00:15:13,821
 hundred and ninety kilojoules per mole,
 
-193
-00:13:55,128 --> 00:13:58,651
+211
+00:15:13,861 --> 00:15:17,384
 which is three hundred and
 thirty-nine kilojoules.
 
-194
-00:13:58,691 --> 00:14:03,538
+212
+00:15:17,424 --> 00:15:22,271
 That value is for water formed as
 a liquid, matching the data given.
 
-195
-00:14:03,927 --> 00:14:08,372
+213
+00:15:22,660 --> 00:15:27,105
 Marks: two for the reactive fuel
 amount and the oxygen amount,
 
-196
-00:14:08,412 --> 00:14:12,786
+214
+00:15:27,145 --> 00:15:31,519
 one for the limiting decision,
 two for the remaining methane,
 
-197
-00:14:12,826 --> 00:14:17,528
+215
+00:15:31,559 --> 00:15:36,261
 one each for new carbon dioxide,
 total carbon dioxide and energy.
 
-198
-00:14:17,927 --> 00:14:19,509
+216
+00:15:36,660 --> 00:15:38,242
 Three traps to watch.
 
-199
-00:14:19,549 --> 00:14:25,842
+217
+00:15:38,282 --> 00:15:44,575
 Treating all twelve point four litres of
 fuel gas as methane gives zero point five
 
-200
-00:14:25,882 --> 00:14:27,927
+218
+00:15:44,615 --> 00:15:46,660
 zero zero moles of methane.
 
-201
-00:14:27,967 --> 00:14:34,338
+219
+00:15:46,700 --> 00:15:53,071
 Treating all ninety litres of air as oxygen
 gives far too much oxygen and the wrong
 
-202
-00:14:34,378 --> 00:14:35,728
+220
+00:15:53,111 --> 00:15:54,461
 limiting reactant.
 
-203
-00:14:35,768 --> 00:14:39,899
+221
+00:15:54,501 --> 00:15:58,632
 And calling the nine point
 four five litres the total,
 
-204
-00:14:39,939 --> 00:14:44,224
+222
+00:15:58,672 --> 00:16:02,957
 or the eleven point nine three
 litres the amount formed,
 
-205
-00:14:44,264 --> 00:14:47,199
+223
+00:16:02,997 --> 00:16:05,932
 mixes up new and inlet carbon dioxide.
 
-206
-00:14:48,193 --> 00:14:48,969
+224
+00:16:06,926 --> 00:16:07,702
 The routine.
 
-207
-00:14:49,009 --> 00:14:54,268
+225
+00:16:07,742 --> 00:16:13,001
 One: convert everything to moles, using
 only the reactive part of any mixture.
 
-208
-00:14:54,308 --> 00:14:58,957
+226
+00:16:13,041 --> 00:16:17,690
 Two: divide each amount by its
 coefficient; the smallest is limiting,
 
-209
-00:14:58,997 --> 00:15:00,995
+227
+00:16:17,730 --> 00:16:19,728
 and gives the reaction extent.
 
-210
-00:15:01,035 --> 00:15:03,985
+228
+00:16:19,768 --> 00:16:22,718
 Three: used equals
 coefficient times extent.
 
-211
-00:15:04,025 --> 00:15:07,926
+229
+00:16:22,758 --> 00:16:26,659
 Four: remaining equals initial
 minus used, never negative.
 
-212
-00:15:07,966 --> 00:15:11,527
+230
+00:16:26,699 --> 00:16:30,260
 Five: products formed equal
 coefficient times extent,
 
-213
-00:15:11,567 --> 00:15:14,353
+231
+00:16:30,300 --> 00:16:33,086
 plus anything that simply passes through.
 
-214
-00:15:14,726 --> 00:15:15,886
+232
+00:16:33,459 --> 00:16:34,619
 Closing recall.
 
-215
-00:15:15,926 --> 00:15:21,961
+233
+00:16:34,659 --> 00:16:40,694
 Three point zero moles of hydrogen and
 two point zero moles of oxygen react:
 
-216
-00:15:22,001 --> 00:15:25,239
+234
+00:16:40,734 --> 00:16:43,972
 two hydrogen plus oxygen forms two water.
 
-217
-00:15:25,279 --> 00:15:29,515
+235
+00:16:44,012 --> 00:16:48,248
 Which is limiting, and how
 much of the other is left?
 
-218
-00:15:39,926 --> 00:15:44,213
+236
+00:16:58,659 --> 00:17:02,946
 Hydrogen: three point zero
 over two is one point five.
 
-219
-00:15:44,253 --> 00:15:48,219
+237
+00:17:02,986 --> 00:17:06,952
 Oxygen: two point zero over
 one is two point zero.
 
-220
-00:15:48,259 --> 00:15:53,107
+238
+00:17:06,992 --> 00:17:11,840
 Hydrogen is limiting, with an
 extent of one point five moles.
 
-221
-00:15:53,147 --> 00:15:55,991
+239
+00:17:11,880 --> 00:17:14,724
 Oxygen used is one point five moles,
 
-222
-00:15:56,031 --> 00:15:59,837
+240
+00:17:14,764 --> 00:17:18,570
 so zero point five zero
 moles of oxygen remains.
 
-223
-00:15:59,877 --> 00:16:06,608
+241
+00:17:18,610 --> 00:17:25,341
 Next episode: measuring the energy from a
 fuel, and how efficient heating really is.

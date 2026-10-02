@@ -3,22 +3,22 @@
  "title": "Q26 parts c and d: explaining and limiting claims",
  "cls": "E13S15_PartsCD",
  "fps": 15,
- "duration": 55.5333,
+ "duration": 68.8667,
  "beats": [
   {
    "key": "E13S15.b01",
    "start": 0.0,
-   "speech": 25.4938,
+   "speech": 38.8614,
    "audio": null,
    "estimated": true,
-   "text": "Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. That's wrong for two reasons. The energy released depends on all the bonds broken and formed in the whole reaction, not on one bond they share. And per-gram values also depend on molar mass. One mark for each idea.",
+   "text": "Part c. The claim is that both fuels contain an oxygen hydrogen bond, so they release equal energy per gram. One shared bond can't decide that: the energy released depends on the combustion of the whole molecule. The expected explanation is about oxygen. Half of methanol's mass is oxygen, compared with about a third of ethanol's. That part of the fuel is already oxidised and releases no further energy, so methanol releases less energy per gram: twenty-two point seven kilojoules, compared with twenty-nine point eight. One mark for each idea.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []
   },
   {
    "key": "E13S15.b02",
-   "start": 25.8667,
+   "start": 39.2,
    "speech": 23.4248,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E13S15.b03",
-   "start": 49.6667,
+   "start": 63.0,
    "speech": 4.9117,
    "audio": null,
    "estimated": true,

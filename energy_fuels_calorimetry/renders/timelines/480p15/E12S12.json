@@ -1,0 +1,42 @@
+{
+ "scene": "E12S12",
+ "title": "Recap and closing recall",
+ "cls": "E12S12_Recap",
+ "fps": 15,
+ "duration": 54.6667,
+ "beats": [
+  {
+   "key": "E12S12.b01",
+   "start": 0.0,
+   "speech": 21.3559,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. State the basis before you compare fuels: per mole, per gram, or per useful energy. To compare emissions for a task, normalise to the same useful output, which brings in efficiency. Say which boundary an emission claim uses. And remember that renewable isn't the same as sustainable.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S12.b02",
+   "start": 21.7333,
+   "speech": 5.3255,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. Name two reasons a renewable biofuel might not be sustainable.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E12S12.b03",
+   "start": 37.4667,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "For example: its crop competes with food for land or uses a lot of water, or methane leaks from its production, or processing relies on fossil energy. Next episode is our first exam workshop, on fuels and combustion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

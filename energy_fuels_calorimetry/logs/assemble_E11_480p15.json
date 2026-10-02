@@ -4,9 +4,9 @@
  "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 51,
+ "beats": 55,
  "beats_with_audio": 0,
- "duration": 960.66,
+ "duration": 1061.39,
  "scenes": [
   {
    "scene": "E11S01",
@@ -64,26 +64,32 @@
   },
   {
    "scene": "E11S10",
-   "title": "Practice Q22: a wrong CF and a thermometer offset",
+   "title": "Resolution, mistakes and outliers",
    "start": 626.2614590000001,
-   "duration": 122.199023
+   "duration": 100.732031
   },
   {
    "scene": "E11S11",
-   "title": "The error-direction table",
-   "start": 748.4604820000001,
-   "duration": 86.133008
+   "title": "Practice Q22: a wrong CF and a thermometer offset",
+   "start": 726.9934900000001,
+   "duration": 122.199023
   },
   {
    "scene": "E11S12",
-   "title": "Checkpoint: which improvement fixes which error?",
-   "start": 834.5934900000001,
-   "duration": 65.533333
+   "title": "The error-direction table",
+   "start": 849.1925130000001,
+   "duration": 86.133008
   },
   {
    "scene": "E11S13",
+   "title": "Checkpoint: which improvement fixes which error?",
+   "start": 935.3255210000001,
+   "duration": 65.533333
+  },
+  {
+   "scene": "E11S14",
    "title": "Recap and closing recall",
-   "start": 900.1268230000001,
+   "start": 1000.8588540000001,
    "duration": 60.533333
   }
  ],

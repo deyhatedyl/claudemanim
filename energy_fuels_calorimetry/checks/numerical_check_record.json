@@ -1476,6 +1476,24 @@
   "ok": true
  },
  {
+  "qid": "Q26",
+  "label": "oxygen mass fraction, methanol",
+  "computed": 0.5,
+  "target": 0.5,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "oxygen mass fraction, ethanol",
+  "computed": 0.34782608695652173,
+  "target": 0.347826,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
   "qid": "Q27",
   "label": "calibration energy",
   "computed": 1800.0,
@@ -1674,6 +1692,42 @@
   "ok": true
  },
  {
+  "qid": "E06",
+  "label": "incomplete: O2 needed for complete",
+  "computed": 2.0,
+  "target": 2.0,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E06",
+  "label": "incomplete: CO2 formed",
+  "computed": 0.20000000000000018,
+  "target": 0.2,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E06",
+  "label": "incomplete: CO formed",
+  "computed": 0.7999999999999998,
+  "target": 0.8,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E06",
+  "label": "incomplete: O atoms balance",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
   "qid": "E07",
   "label": "mass checkpoint: n(CH4)",
   "computed": 0.2,
@@ -1734,6 +1788,33 @@
   "target": 47.619,
   "unit": "L",
   "rel_tol": 0.0001,
+  "ok": true
+ },
+ {
+  "qid": "E07",
+  "label": "gas measurement: volume",
+  "computed": 0.0505,
+  "target": 0.0505,
+  "unit": "L",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "E07",
+  "label": "gas measurement: n",
+  "computed": 0.0020362903225806454,
+  "target": 0.00203629,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E07",
+  "label": "gas measurement: % yield (3 s.f.)",
+  "computed": 81.5,
+  "target": 81.5,
+  "unit": "%",
+  "rel_tol": 1e-09,
   "ok": true
  },
  {
@@ -1932,6 +2013,24 @@
   "target": 3.112,
   "unit": "",
   "rel_tol": 0.001,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "ethanol kJ per g",
+  "computed": 29.782608695652176,
+  "target": 29.7826,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "E12",
+  "label": "propane kJ per g",
+  "computed": 50.45454545454545,
+  "target": 50.4545,
+  "unit": "",
+  "rel_tol": 1e-05,
   "ok": true
  },
  {

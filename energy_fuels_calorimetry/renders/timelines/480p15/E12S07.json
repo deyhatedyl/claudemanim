@@ -1,39 +1,28 @@
 {
  "scene": "E12S07",
- "title": "Drawing the system boundary",
- "cls": "E12S07_Boundary",
+ "title": "Checkpoint: per input is not per useful output",
+ "cls": "E12S07_Checkpoint",
  "fps": 15,
- "duration": 51.8,
+ "duration": 57.4667,
  "beats": [
   {
    "key": "E12S07.b01",
    "start": 0.0,
-   "speech": 12.1262,
+   "speech": 20.5283,
    "audio": null,
    "estimated": true,
-   "text": "Where you draw the boundary changes the answer. Draw a tight boundary around just the burning, and you count operational, or direct, emissions: the carbon dioxide from combustion.",
+   "text": "Checkpoint. Imagine another hypothetical fuel, T, with lower emissions per megajoule of fuel energy than R: seventy grams instead of eighty. But it's burned in a heater that's only twenty percent efficient. Which fuel has lower emissions per megajoule of useful heat? Pause and work it out.",
    "overrun": 0.0,
-   "pause": 0.0,
+   "pause": 8.0,
    "layout": []
   },
   {
    "key": "E12S07.b02",
-   "start": 12.4667,
-   "speech": 17.0379,
+   "start": 28.9333,
+   "speech": 27.5628,
    "audio": null,
    "estimated": true,
-   "text": "Now widen it. Growing the feedstock may use fertiliser and machinery. Processing needs heat or electricity. The fuel must be transported and distributed. All of these can produce emissions, and together with combustion, they make up the lifecycle emissions.",
-   "overrun": 0.0,
-   "pause": 0.0,
-   "layout": []
-  },
-  {
-   "key": "E12S07.b03",
-   "start": 29.8667,
-   "speech": 20.9959,
-   "audio": null,
-   "estimated": true,
-   "text": "Methane deserves a special mention. Biogas and natural gas systems can leak unburnt methane, from digesters, pipes or wells. Methane is a much more potent greenhouse gas than carbon dioxide, so even small leaks can outweigh other benefits. A claim about emissions should always say which boundary it uses.",
+   "text": "For T: seventy divided by zero point two zero is three hundred and fifty grams per useful megajoule. For R, we already found about two hundred and twenty-nine. So R is lower per useful output, even though T looked better per unit of input. A lower emission per unit of input energy doesn't guarantee lower emissions per unit of useful output; efficiency matters too.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []

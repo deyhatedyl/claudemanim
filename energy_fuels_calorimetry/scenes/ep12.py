@@ -141,7 +141,43 @@ class E12S03_PerLitre(NarratedScene):
 
 
 # =====================================================================================
-class E12S04_Normalise(NarratedScene):
+class E12S04_Oxygenated(NarratedScene):
+    def construct(self):
+        h = header("Why oxygen-containing fuels release less energy")
+        data = VGroup(M(r"\ce{C2H5OH}: \Delta H_c = -1370\ \text{kJ mol}^{-1},\ M = 46.0", size=EQ_SMALL - 8),
+                      M(r"\ce{C3H8}: \Delta H_c = -2220\ \text{kJ mol}^{-1},\ M = 44.0", size=EQ_SMALL - 8)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
+        data.move_to([0, 2.2, 0])
+        PROP = "#85C1E9"
+        bars = hbars([("ethanol", 29.8, SYSTEM), ("propane", 50.5, PROP)], 1 / 12, x_left=-2.2, y0=0.75, fmt="{:.1f}")
+        tb = TB("per gram (kJ g⁻¹)", size=LABEL + 2).next_to(bars, UP, buff=0.15).align_to([-4.6, 0, 0], LEFT)
+        calc = VGroup(M(r"1370 \div 46.0 = 29.8", size=EQ_SMALL - 10, color=SYSTEM),
+                      M(r"2220 \div 44.0 = 50.5", size=EQ_SMALL - 10, color=PROP)).arrange(DOWN, buff=0.18).move_to([5.1, 0.45, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(data), run_time=0.9)
+            b.until(0.55)
+            self.play(FadeIn(tb), FadeIn(bars), run_time=1.0)
+            b.until(0.75)
+            self.play(Write(calc), run_time=0.9)
+        with self.beat("b02") as b:
+            eth = M(r"\ce{CH3CH2}", r"\ce{OH}", size=EQ_SMALL - 2).move_to([-2.6, -0.85, 0])
+            eth[1].set_color(LOSS)
+            pro = M(r"\ce{CH3CH2CH3}", size=EQ_SMALL - 2, color=PROP).move_to([2.6, -0.85, 0])
+            self.play(FadeIn(eth), FadeIn(pro), run_time=0.7)
+            ring = SurroundingRectangle(eth[1], color=LOSS, buff=0.03)
+            lab = T("already partly oxidised", size=SMALL + 2, color=LOSS).next_to(ring, DOWN, buff=0.15)
+            b.until(0.3)
+            self.play(Create(ring), FadeIn(lab), run_time=0.7)
+            lt = T("less left to oxidise → less energy released", size=LABEL, color=UNKNOWN).move_to([0, -1.85, 0])
+            b.until(0.65)
+            self.play(FadeIn(lt), run_time=0.5)
+        with self.beat("b03") as b:
+            note = T("explain with partial oxidation; “different bond enthalpies” alone isn't enough", size=SMALL + 2,
+                     color=GOOD).move_to([0, -2.45, 0])
+            self.play(FadeIn(note), run_time=0.6)
+
+
+# =====================================================================================
+class E12S05_Normalise(NarratedScene):
     def construct(self):
         h = header("Normalise to the same useful output")
         boxes = [("1.00 MJ useful heat", USEFUL), ("fuel energy input (MJ)", SYSTEM), ("mass of fuel (kg)", MASS_C), ("emissions (g)", CO2E)]
@@ -178,7 +214,7 @@ class E12S04_Normalise(NarratedScene):
 
 
 # =====================================================================================
-class E12S05_Q23(NarratedScene):
+class E12S06_Q23(NarratedScene):
     def construct(self):
         h = header("Practice Q23")
         qc = question_card("Q23").move_to([0, 0.3, 0])
@@ -226,7 +262,7 @@ class E12S05_Q23(NarratedScene):
 
 
 # =====================================================================================
-class E12S06_Checkpoint(NarratedScene):
+class E12S07_Checkpoint(NarratedScene):
     def construct(self):
         h = header("Checkpoint: per input vs per useful output")
         hyp = T("hypothetical data", size=SMALL, color=MUTED).to_corner(UR, buff=0.45)
@@ -252,7 +288,7 @@ class E12S06_Checkpoint(NarratedScene):
 
 
 # =====================================================================================
-class E12S07_Boundary(NarratedScene):
+class E12S08_Boundary(NarratedScene):
     def construct(self):
         h = header("Drawing the system boundary")
         stages = ["grow\nfeedstock", "fertiliser,\nmachines", "processing\nenergy", "transport", "COMBUSTION"]
@@ -288,7 +324,7 @@ class E12S07_Boundary(NarratedScene):
 
 
 # =====================================================================================
-class E12S08_Neutral(NarratedScene):
+class E12S09_Neutral(NarratedScene):
     def construct(self):
         h = header("Is a biofuel carbon neutral?")
         claim = T("“Our biofuel is carbon neutral: the crop absorbed the CO₂ it releases.”", size=LABEL + 1)
@@ -345,7 +381,7 @@ class E12S08_Neutral(NarratedScene):
 
 
 # =====================================================================================
-class E12S09_Sustainable(NarratedScene):
+class E12S10_Sustainable(NarratedScene):
     def construct(self):
         h = header("Renewable is not the same as sustainable")
         tr = VGroup(card("Land", ["fuel crops can displace food crops"], BAD, 3.0),
@@ -380,12 +416,13 @@ class E12S09_Sustainable(NarratedScene):
             self.play(FadeIn(circ), run_time=0.5)
         gc = VGroup(TB("Green chemistry principles", size=LABEL, color=GOOD),
                     T("• use renewable feedstocks", size=SMALL + 1), T("• prevent waste", size=SMALL + 1),
-                    T("• design for energy efficiency", size=SMALL + 1), T("• use catalysts (e.g. enzymes)", size=SMALL + 1)).arrange(DOWN, aligned_edge=LEFT, buff=0.1)
+                    T("• design for energy efficiency", size=SMALL + 1), T("• use catalysts (e.g. enzymes)", size=SMALL + 1),
+                    T("• high atom economy", size=SMALL + 1)).arrange(DOWN, aligned_edge=LEFT, buff=0.1)
         gc.move_to([4.2, 0.65, 0])
         with self.beat("b03") as b:
             self.play(FadeIn(gc[0]), run_time=0.4)
-            for i in range(1, 5):
-                b.until(0.1 + 0.2 * i)
+            for i in range(1, 6):
+                b.until(0.06 + 0.16 * i)
                 self.play(FadeIn(gc[i]), run_time=0.4)
         with self.beat("b04") as b:
             sdg = VGroup(*[chip(s, c, size=SMALL) for s, c in [("SDG 7 energy", UNKNOWN), ("SDG 12 production", SURR),
@@ -395,7 +432,7 @@ class E12S09_Sustainable(NarratedScene):
 
 
 # =====================================================================================
-class E12S10_Q24(NarratedScene):
+class E12S11_Q24(NarratedScene):
     def construct(self):
         h = header("Practice Q24")
         qc = question_card("Q24", size=SMALL + 1, width=13.0, cols=2).move_to([0, 0.2, 0])
@@ -449,7 +486,7 @@ class E12S10_Q24(NarratedScene):
 
 
 # =====================================================================================
-class E12S11_Recap(NarratedScene):
+class E12S12_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         items = bullets(["State the basis: per mole, per gram, or per useful energy",
@@ -479,6 +516,6 @@ class E12S11_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E12S01_Retrieval", "E12S02_Bases", "E12S03_PerLitre", "E12S04_Normalise", "E12S05_Q23",
-                  "E12S06_Checkpoint", "E12S07_Boundary", "E12S08_Neutral", "E12S09_Sustainable", "E12S10_Q24",
-                  "E12S11_Recap"]
+EPISODE_SCENES = ["E12S01_Retrieval", "E12S02_Bases", "E12S03_PerLitre", "E12S04_Oxygenated",
+                  "E12S05_Normalise", "E12S06_Q23", "E12S07_Checkpoint", "E12S08_Boundary", "E12S09_Neutral",
+                  "E12S10_Sustainable", "E12S11_Q24", "E12S12_Recap"]

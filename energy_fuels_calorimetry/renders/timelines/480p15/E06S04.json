@@ -3,7 +3,7 @@
  "title": "Incomplete combustion: products need to be specified",
  "cls": "E06S04_Incomplete",
  "fps": 15,
- "duration": 60.9333,
+ "duration": 98.6,
  "beats": [
   {
    "key": "E06S04.b01",
@@ -34,6 +34,17 @@
    "audio": null,
    "estimated": true,
    "text": "But here's the subtle point. Saying \"limited oxygen\" doesn't tell you which of these happens. A real flame usually makes a mixture of carbon dioxide, carbon monoxide and soot, in proportions that depend on the conditions. So you can only write an incomplete-combustion equation when the products, or enough data about them, are specified.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E06S04.b04",
+   "start": 60.3333,
+   "speech": 37.3138,
+   "audio": null,
+   "estimated": true,
+   "text": "What the amounts can tell you is whether combustion must be incomplete. Suppose one point zero zero mole of methane has only one point six zero moles of oxygen. Complete combustion would need two point zero zero, so there isn't enough oxygen, and combustion must be incomplete. If you're also told that no soot forms, the extra carbon must leave as carbon monoxide: zero point two zero moles of carbon dioxide and zero point eight zero moles of carbon monoxide, with two point zero zero moles of water.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []

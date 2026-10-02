@@ -712,372 +712,480 @@ you just get a better
 estimate of a biased value.
 
 152
-00:10:26,261 --> 00:10:30,071
+00:10:26,261 --> 00:10:30,884
+One more measurement idea that
+exams test directly: resolution.
+
+153
+00:10:30,924 --> 00:10:36,139
+Which has the higher resolution, a
+thermometer marked every one degree,
+
+154
+00:10:36,179 --> 00:10:40,580
+or a digital probe that reads
+to zero point one of a degree?
+
+155
+00:10:40,620 --> 00:10:41,878
+Pause and decide.
+
+156
+00:10:50,328 --> 00:10:54,623
+Resolution is the smallest
+change an instrument can show,
+
+157
+00:10:54,663 --> 00:10:57,284
+and it's always stated with a unit.
+
+158
+00:10:57,324 --> 00:11:02,987
+For a scale, it's the smallest graduation:
+one degree for that thermometer.
+
+159
+00:11:03,027 --> 00:11:07,170
+For a digital display, it's
+the last digit it can show:
+
+160
+00:11:07,210 --> 00:11:09,907
+zero point one degree for the probe,
+
+161
+00:11:09,947 --> 00:11:15,610
+or zero point zero one gram for a
+balance that reads to two decimal places.
+
+162
+00:11:15,650 --> 00:11:21,201
+The probe has the higher resolution,
+because it records finer increments.
+
+163
+00:11:21,595 --> 00:11:25,146
+But higher resolution
+isn't the same as accuracy.
+
+164
+00:11:25,186 --> 00:11:30,937
+A probe that reads to zero point one of
+a degree can still be badly calibrated.
+
+165
+00:11:30,977 --> 00:11:36,141
+Resolution does limit how precisely
+you can quote a temperature change,
+
+166
+00:11:36,181 --> 00:11:41,784
+which is why a rise read from a coarse
+thermometer supports fewer significant
+
+167
+00:11:41,824 --> 00:11:42,624
+figures.
+
+168
+00:11:42,795 --> 00:11:43,872
+Two last terms.
+
+169
+00:11:43,912 --> 00:11:48,640
+A mistake, such as misreading a
+scale or spilling some solution,
+
+170
+00:11:48,680 --> 00:11:54,228
+isn't an error in the scientific sense:
+identify it, leave that result out,
+
+171
+00:11:54,268 --> 00:11:56,240
+and repeat the measurement.
+
+172
+00:11:56,280 --> 00:12:02,125
+And a single outlier in an otherwise
+precise set isn't evidence of a systematic
+
+173
+00:12:02,165 --> 00:12:02,572
+error.
+
+174
+00:12:02,612 --> 00:12:06,040
+Investigate it, and report
+how you treated it.
+
+175
+00:12:06,993 --> 00:12:10,803
 Practice question Q twenty-two
 is worth five marks.
 
-153
-00:10:30,111 --> 00:10:32,828
+176
+00:12:10,843 --> 00:12:13,560
 Pause the video and work through it.
 
-154
-00:10:48,261 --> 00:10:48,730
+177
+00:12:28,993 --> 00:12:29,462
 Part a.
 
-155
-00:10:48,770 --> 00:10:51,926
+178
+00:12:29,502 --> 00:12:32,658
 The spreadsheet uses
 four hundred and fifty:
 
-156
-00:10:51,966 --> 00:10:57,663
+179
+00:12:32,698 --> 00:12:38,395
 four hundred and fifty times four point
 zero zero is one thousand eight hundred
 
-157
-00:10:57,703 --> 00:11:03,328
+180
+00:12:38,435 --> 00:12:44,060
 joules, divided by zero point zero four
 zero zero moles is forty-five thousand
 
-158
-00:11:03,368 --> 00:11:04,490
+181
+00:12:44,100 --> 00:12:45,222
 joules per mole.
 
-159
-00:11:04,530 --> 00:11:10,010
+182
+00:12:45,262 --> 00:12:50,742
 So the reported value is negative
 forty-five point zero kilojoules per mole.
 
-160
-00:11:10,050 --> 00:11:14,440
+183
+00:12:50,782 --> 00:12:55,172
 With the valid five hundred,
 the heat is two thousand joules,
 
-161
-00:11:14,480 --> 00:11:19,782
+184
+00:12:55,212 --> 00:13:00,514
 and the corrected value is negative
 fifty point zero kilojoules per mole.
 
-162
-00:11:20,128 --> 00:11:20,579
+185
+00:13:00,860 --> 00:13:01,311
 Part b.
 
-163
-00:11:20,619 --> 00:11:23,527
+186
+00:13:01,351 --> 00:13:04,259
 Repeating the experiment doesn't fix this.
 
-164
-00:11:23,567 --> 00:11:27,176
+187
+00:13:04,299 --> 00:13:07,908
 Every repeat uses the same
 wrong calibration factor,
 
-165
-00:11:27,216 --> 00:11:31,737
+188
+00:13:07,948 --> 00:13:12,469
 so the results agree closely with
 each other: good repeatability.
 
-166
-00:11:31,777 --> 00:11:36,338
+189
+00:13:12,509 --> 00:13:17,070
 But they share the same systematic
 bias, so they stay inaccurate.
 
-167
-00:11:36,728 --> 00:11:37,240
+190
+00:13:17,460 --> 00:13:17,972
 Part c.
 
-168
-00:11:37,280 --> 00:11:43,149
+191
+00:13:18,012 --> 00:13:23,881
 A thermometer that reads one point five
 degrees too high, on both readings,
 
-169
-00:11:43,189 --> 00:11:48,191
+192
+00:13:23,921 --> 00:13:28,923
 adds one point five to the initial
 and to the final temperature.
 
-170
-00:11:48,231 --> 00:11:54,415
+193
+00:13:28,963 --> 00:13:35,147
 The difference is final plus one point
 five, minus initial plus one point five,
 
-171
-00:11:54,455 --> 00:11:56,857
+194
+00:13:35,187 --> 00:13:37,589
 and the one point fives cancel.
 
-172
-00:11:56,897 --> 00:11:58,552
+195
+00:13:37,629 --> 00:13:39,284
 Delta T is unchanged.
 
-173
-00:11:58,928 --> 00:12:00,604
+196
+00:13:39,660 --> 00:13:41,336
 But don't over-generalise.
 
-174
-00:12:00,644 --> 00:12:04,696
+197
+00:13:41,376 --> 00:13:45,428
 That cancellation only works for
 an identical additive offset.
 
-175
-00:12:04,736 --> 00:12:10,042
+198
+00:13:45,468 --> 00:13:50,774
 A thermometer whose scale is stretched,
 reading too many degrees per real degree,
 
-176
-00:12:10,082 --> 00:12:11,468
+199
+00:13:50,814 --> 00:13:52,200
 would change delta T.
 
-177
-00:12:11,861 --> 00:12:16,142
+200
+00:13:52,593 --> 00:13:56,874
 Marks: two for the two enthalpies,
 one for the repetition explanation,
 
-178
-00:12:16,182 --> 00:12:20,154
+201
+00:13:56,914 --> 00:14:00,886
 and two for the offset conclusion
 with the subtraction reasoning.
 
-179
-00:12:20,194 --> 00:12:23,117
+202
+00:14:00,926 --> 00:14:03,849
 The traps: equating
 repeatability with accuracy,
 
-180
-00:12:23,157 --> 00:12:27,478
+203
+00:14:03,889 --> 00:14:08,210
 and assuming every thermometer error
 changes a temperature difference.
 
-181
-00:12:28,460 --> 00:12:30,148
+204
+00:14:09,193 --> 00:14:10,880
 Here's a summary table.
 
-182
-00:12:30,188 --> 00:12:33,678
+205
+00:14:10,920 --> 00:14:14,410
 Each row follows one
 fault through the formula,
 
-183
-00:12:33,718 --> 00:12:37,924
+206
+00:14:14,450 --> 00:14:18,656
 under the simple model where
 only that fault is present.
 
-184
-00:12:38,260 --> 00:12:42,565
+207
+00:14:18,993 --> 00:14:23,297
 Heat loss during electrical
 calibration, with E known correctly:
 
-185
-00:12:42,605 --> 00:12:47,589
+208
+00:14:23,337 --> 00:14:28,321
 the measured rise goes down, so the
 calculated calibration factor goes up.
 
-186
-00:12:47,629 --> 00:12:52,680
+209
+00:14:28,361 --> 00:14:33,412
 Uncorrected heat loss during the
 reaction, with a valid calibration factor:
 
-187
-00:12:52,720 --> 00:12:58,015
+210
+00:14:33,452 --> 00:14:38,747
 the measured rise goes down, so the
 inferred heat, and its magnitude, go down.
 
-188
-00:12:58,394 --> 00:13:01,063
+211
+00:14:39,126 --> 00:14:41,795
 A calibration factor that's too small:
 
-189
-00:13:01,103 --> 00:13:05,910
+212
+00:14:41,835 --> 00:14:46,642
 the calculated heat and the magnitude
 of the molar enthalpy go down.
 
-190
-00:13:05,950 --> 00:13:09,759
+213
+00:14:46,682 --> 00:14:50,491
 The same additive thermometer
 offset on both readings:
 
-191
-00:13:09,799 --> 00:13:12,611
+214
+00:14:50,531 --> 00:14:53,343
 the temperature difference is unchanged.
 
-192
-00:13:12,651 --> 00:13:16,460
+215
+00:14:53,383 --> 00:14:57,192
 And more repeat trials with
 the same systematic fault:
 
-193
-00:13:16,500 --> 00:13:20,991
+216
+00:14:57,232 --> 00:15:01,723
 a better estimate of a biased
 mean, with the fault still there.
 
-194
-00:13:21,327 --> 00:13:22,248
+217
+00:15:02,059 --> 00:15:02,980
 One caution.
 
-195
-00:13:22,288 --> 00:13:27,531
+218
+00:15:03,020 --> 00:15:08,263
 If several faults act together,
 the net effect needs a full model.
 
-196
-00:13:27,571 --> 00:13:30,172
+219
+00:15:08,303 --> 00:15:10,904
 They can partly cancel or add up,
 
-197
-00:13:30,212 --> 00:13:34,695
+220
+00:15:10,944 --> 00:15:15,427
 so the table alone can't tell
 you the overall direction.
 
-198
-00:13:35,060 --> 00:13:40,854
+221
+00:15:15,793 --> 00:15:21,586
 And when an exam asks for an improvement,
 be specific: insulate the lid and sides,
 
-199
-00:13:40,894 --> 00:13:46,331
+222
+00:15:21,626 --> 00:15:27,063
 calibrate with the same volume of solution
 that will be used in the reaction,
 
-200
-00:13:46,371 --> 00:13:49,675
+223
+00:15:27,103 --> 00:15:30,407
 record temperatures more
 often and extrapolate,
 
-201
-00:13:49,715 --> 00:13:53,627
+224
+00:15:30,447 --> 00:15:34,359
 or repeat with fresh solutions
 and average the results.
 
-202
-00:13:54,593 --> 00:13:55,347
+225
+00:15:35,326 --> 00:15:36,079
 Checkpoint.
 
-203
-00:13:55,387 --> 00:13:59,023
+226
+00:15:36,119 --> 00:15:39,755
 Match each improvement to
 the problem it addresses.
 
-204
-00:13:59,063 --> 00:14:01,331
+227
+00:15:39,795 --> 00:15:42,063
 One: insulate the lid and sides.
 
-205
-00:14:01,371 --> 00:14:06,017
+228
+00:15:42,103 --> 00:15:46,749
 Two: calibrate using the same
 volume of solution as the reaction.
 
-206
-00:14:06,057 --> 00:14:09,910
+229
+00:15:46,789 --> 00:15:50,642
 Three: record temperatures
 more often and extrapolate.
 
-207
-00:14:09,950 --> 00:14:13,226
+230
+00:15:50,682 --> 00:15:53,958
 Four: repeat with fresh
 solutions and average.
 
-208
-00:14:13,266 --> 00:14:14,780
+231
+00:15:53,998 --> 00:15:55,512
 Pause and match them.
 
-209
-00:14:27,193 --> 00:14:31,973
+232
+00:16:07,926 --> 00:16:12,705
 Insulation reduces heat exchange with
 the surroundings, a systematic error.
 
-210
-00:14:32,013 --> 00:14:37,241
+233
+00:16:12,745 --> 00:16:17,973
 Calibrating with the same volume makes the
 calibration factor valid for the actual
 
-211
-00:14:37,281 --> 00:14:40,197
+234
+00:16:18,013 --> 00:16:20,929
 conditions, removing
 another systematic error.
 
-212
-00:14:40,237 --> 00:14:43,667
+235
+00:16:20,969 --> 00:16:24,399
 More frequent readings define
 the cooling line better,
 
-213
-00:14:43,707 --> 00:14:46,815
+236
+00:16:24,439 --> 00:16:27,547
 so the extrapolated
 temperature is more reliable.
 
-214
-00:14:46,855 --> 00:14:51,249
+237
+00:16:27,587 --> 00:16:31,981
 And repeating and averaging reduces
 the effect of random errors only.
 
-215
-00:14:51,289 --> 00:14:53,498
+238
+00:16:32,021 --> 00:16:34,230
 It can't remove a systematic error,
 
-216
-00:14:53,538 --> 00:14:58,638
+239
+00:16:34,270 --> 00:16:39,370
 which is why the first two improvements
 matter most when results are precise but
 
-217
-00:14:58,678 --> 00:14:59,478
+240
+00:16:39,410 --> 00:16:40,210
 biased.
 
-218
-00:15:00,127 --> 00:15:00,725
+241
+00:16:40,859 --> 00:16:41,457
 To recap.
 
-219
-00:15:00,765 --> 00:15:04,837
+242
+00:16:41,497 --> 00:16:45,569
 Read the graph's baseline,
 mixing time and cooling region.
 
-220
-00:15:04,877 --> 00:15:10,084
+243
+00:16:45,609 --> 00:16:50,816
 Extend the cooling trend back to the
 mixing time to estimate the corrected
 
-221
-00:15:10,124 --> 00:15:13,771
+244
+00:16:50,856 --> 00:16:54,503
 temperature, and treat it
 as a model-based estimate.
 
-222
-00:15:13,811 --> 00:15:17,954
+245
+00:16:54,543 --> 00:16:58,686
 Trace every error through the
 actual formula, and remember:
 
-223
-00:15:17,994 --> 00:15:20,475
+246
+00:16:58,726 --> 00:17:01,207
 precise isn't the same as accurate.
 
-224
-00:15:20,860 --> 00:15:21,914
+247
+00:17:01,592 --> 00:17:02,646
 Closing recall.
 
-225
-00:15:21,954 --> 00:15:27,966
+248
+00:17:02,686 --> 00:17:08,698
 A cooling line has a slope of negative zero
 point zero zero two degrees per second.
 
-226
-00:15:28,006 --> 00:15:31,758
+249
+00:17:08,738 --> 00:17:12,490
 Extrapolating back fifty
 seconds to the mixing time,
 
-227
-00:15:31,798 --> 00:15:34,642
+250
+00:17:12,530 --> 00:17:15,374
 how much does the temperature increase?
 
-228
-00:15:45,060 --> 00:15:50,737
+251
+00:17:25,792 --> 00:17:31,469
 Fifty seconds times zero point zero zero
 two degrees per second is zero point one
 
-229
-00:15:50,777 --> 00:15:54,124
+252
+00:17:31,509 --> 00:17:34,856
 degrees, added to the
 start of the cooling line.
 
-230
-00:15:54,164 --> 00:15:59,669
+253
+00:17:34,896 --> 00:17:40,401
 Next episode: comparing fuels fairly,
 and what sustainability really requires.

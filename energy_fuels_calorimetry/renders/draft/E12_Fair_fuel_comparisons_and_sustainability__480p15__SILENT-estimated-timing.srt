@@ -228,653 +228,741 @@ for a vehicle is a challenge,
 even though it's excellent per gram.
 
 51
-00:03:21,732 --> 00:03:24,142
-Here's the fair way to compare.
+00:03:21,732 --> 00:03:25,063
+Here's a comparison that
+shows an important idea.
 
 52
-00:03:24,182 --> 00:03:29,912
+00:03:25,103 --> 00:03:28,641
+Ethanol and propane have
+almost the same molar mass:
+
+53
+00:03:28,681 --> 00:03:32,907
+forty-six point zero and forty-four
+point zero grams per mole.
+
+54
+00:03:32,947 --> 00:03:38,204
+But propane releases two thousand two
+hundred and twenty kilojoules per mole,
+
+55
+00:03:38,244 --> 00:03:42,057
+and ethanol only one thousand
+three hundred and seventy.
+
+56
+00:03:42,097 --> 00:03:47,424
+Per gram, that's about fifty point five
+kilojoules for propane and twenty-nine
+
+57
+00:03:47,464 --> 00:03:49,115
+point eight for ethanol.
+
+58
+00:03:49,465 --> 00:03:50,699
+Why so different?
+
+59
+00:03:50,739 --> 00:03:55,344
+Ethanol already contains an oxygen
+atom, in its hydroxy group.
+
+60
+00:03:55,384 --> 00:03:58,415
+Part of the molecule is already oxidised,
+
+61
+00:03:58,455 --> 00:04:04,074
+so there's less left to oxidise when
+it burns, and less energy is released.
+
+62
+00:04:04,465 --> 00:04:06,550
+That's the explanation to give.
+
+63
+00:04:06,590 --> 00:04:11,690
+Saying only that the two fuels have
+different bond enthalpies isn't enough:
+
+64
+00:04:11,730 --> 00:04:17,446
+a bond-enthalpy argument would need full
+calculations for both combustion equations.
+
+65
+00:04:17,486 --> 00:04:22,860
+The same idea explains why methanol
+releases less energy per gram than ethanol:
+
+66
+00:04:22,900 --> 00:04:25,641
+a bigger fraction of its mass is oxygen.
+
+67
+00:04:26,598 --> 00:04:29,008
+Here's the fair way to compare.
+
+68
+00:04:29,048 --> 00:04:34,778
 Fix the task first: deliver one point
 zero zero megajoule of useful heat.
 
-53
-00:03:29,952 --> 00:03:32,797
+69
+00:04:34,818 --> 00:04:37,663
 Then, for each fuel, work backwards.
 
-54
-00:03:33,132 --> 00:03:37,398
+70
+00:04:37,998 --> 00:04:42,264
 Fuel energy input equals useful
 output divided by efficiency.
 
-55
-00:03:37,438 --> 00:03:42,551
+71
+00:04:42,304 --> 00:04:47,417
 Mass of fuel equals that input divided
 by the fuel's energy per kilogram.
 
-56
-00:03:42,591 --> 00:03:46,504
+72
+00:04:47,457 --> 00:04:51,370
 And if emissions are given
 per megajoule of fuel energy,
 
-57
-00:03:46,544 --> 00:03:50,638
+73
+00:04:51,410 --> 00:04:55,504
 then emissions equal the input
 times that emission factor.
 
-58
-00:03:50,999 --> 00:03:56,330
+74
+00:04:55,865 --> 00:05:01,196
 Watch the units: megajoules divided by
 megajoules per kilogram gives kilograms.
 
-59
-00:03:56,370 --> 00:03:59,661
+75
+00:05:01,236 --> 00:05:04,528
 Megajoules times grams
 per megajoule gives grams.
 
-60
-00:03:59,701 --> 00:04:03,305
+76
+00:05:04,568 --> 00:05:08,171
 Now both fuels are compared
 on exactly the same task.
 
-61
-00:04:04,264 --> 00:04:08,277
+77
+00:05:09,131 --> 00:05:13,144
 Practice question Q twenty-three
 is worth seven marks.
 
-62
-00:04:08,317 --> 00:04:12,255
+78
+00:05:13,184 --> 00:05:17,121
 The data are hypothetical,
 made up for this exercise.
 
-63
-00:04:12,295 --> 00:04:14,322
+79
+00:05:17,161 --> 00:05:19,188
 Pause the video and try it.
 
-64
-00:04:29,731 --> 00:04:33,853
+80
+00:05:34,597 --> 00:05:38,720
 Inputs for one point zero zero
 megajoule of useful heat.
 
-65
-00:04:33,893 --> 00:04:36,827
+81
+00:05:38,760 --> 00:05:41,693
 Fuel R is thirty-five percent efficient:
 
-66
-00:04:36,867 --> 00:04:42,847
+82
+00:05:41,733 --> 00:05:47,714
 one point zero zero divided by zero point
 three five zero is two point eight five
 
-67
-00:04:42,887 --> 00:04:44,111
+83
+00:05:47,754 --> 00:05:48,977
 seven megajoules.
 
-68
-00:04:44,151 --> 00:04:47,381
+84
+00:05:49,017 --> 00:05:52,248
 Biofuel S is twenty-eight
 percent efficient:
 
-69
-00:04:47,421 --> 00:04:53,476
+85
+00:05:52,288 --> 00:05:58,343
 one point zero zero divided by zero point
 two eight zero is three point five seven
 
-70
-00:04:53,516 --> 00:04:54,631
+86
+00:05:58,383 --> 00:05:59,497
 one megajoules.
 
-71
-00:04:54,998 --> 00:04:55,487
+87
+00:05:59,864 --> 00:06:00,353
 Masses.
 
-72
-00:04:55,527 --> 00:05:01,083
+88
+00:06:00,393 --> 00:06:05,949
 R: two point eight five seven megajoules
 divided by forty-three point zero
 
-73
-00:05:01,123 --> 00:05:06,074
+89
+00:06:05,989 --> 00:06:10,940
 megajoules per kilogram is zero
 point zero six six four kilograms.
 
-74
-00:05:06,114 --> 00:05:12,199
+90
+00:06:10,980 --> 00:06:17,065
 S: three point five seven one divided by
 twenty-nine point zero is zero point one
 
-75
-00:05:12,239 --> 00:05:13,711
+91
+00:06:17,105 --> 00:06:18,577
 two three kilograms.
 
-76
-00:05:13,751 --> 00:05:15,112
+92
+00:06:18,617 --> 00:06:19,979
 R needs less mass.
 
-77
-00:05:15,464 --> 00:05:16,840
+93
+00:06:20,331 --> 00:06:21,706
 Lifecycle emissions.
 
-78
-00:05:16,880 --> 00:05:22,077
+94
+00:06:21,746 --> 00:06:26,943
 R: two point eight five seven megajoules
 times eighty point zero grams per
 
-79
-00:05:22,117 --> 00:05:27,880
+95
+00:06:26,983 --> 00:06:32,746
 megajoule is about two hundred and twenty-nine
 grams of carbon dioxide equivalent.
 
-80
-00:05:27,920 --> 00:05:33,683
+96
+00:06:32,786 --> 00:06:38,549
 S: three point five seven one times forty-five
 point zero is about one hundred and
 
-81
-00:05:33,723 --> 00:05:34,815
+97
+00:06:38,589 --> 00:06:39,682
 sixty-one grams.
 
-82
-00:05:34,855 --> 00:05:38,889
+98
+00:06:39,722 --> 00:06:43,756
 S has lower lifecycle emissions
 for the same useful heat.
 
-83
-00:05:39,264 --> 00:05:45,132
+99
+00:06:44,131 --> 00:06:49,998
 So the claim that lower fuel mass must
 mean lower emissions is false here.
 
-84
-00:05:45,172 --> 00:05:50,879
+100
+00:06:50,038 --> 00:06:55,746
 R uses less mass, but S emits less
 over its lifecycle for the same task.
 
-85
-00:05:50,919 --> 00:05:54,392
+101
+00:06:55,786 --> 00:06:59,258
 Mass and emissions
 measure different things.
 
-86
-00:05:54,432 --> 00:05:59,900
+102
+00:06:59,298 --> 00:07:04,766
 Marks: two for the inputs, two for
 the masses, two for the emissions,
 
-87
-00:05:59,940 --> 00:06:02,095
+103
+00:07:04,806 --> 00:07:06,962
 and one for the evaluation.
 
-88
-00:06:03,064 --> 00:06:03,819
+104
+00:07:07,930 --> 00:07:08,686
 Checkpoint.
 
-89
-00:06:03,859 --> 00:06:06,494
+105
+00:07:08,726 --> 00:07:11,360
 Imagine another hypothetical fuel, T,
 
-90
-00:06:06,534 --> 00:06:10,614
+106
+00:07:11,400 --> 00:07:15,480
 with lower emissions per
 megajoule of fuel energy than R:
 
-91
-00:06:10,654 --> 00:06:12,927
+107
+00:07:15,520 --> 00:07:17,793
 seventy grams instead of eighty.
 
-92
-00:06:12,967 --> 00:06:17,625
+108
+00:07:17,833 --> 00:07:22,492
 But it's burned in a heater that's
 only twenty percent efficient.
 
-93
-00:06:17,665 --> 00:06:21,962
+109
+00:07:22,532 --> 00:07:26,828
 Which fuel has lower emissions
 per megajoule of useful heat?
 
-94
-00:06:22,002 --> 00:06:23,592
+110
+00:07:26,868 --> 00:07:28,459
 Pause and work it out.
 
-95
-00:06:31,997 --> 00:06:38,218
+111
+00:07:36,864 --> 00:07:43,085
 For T: seventy divided by zero point two
 zero is three hundred and fifty grams per
 
-96
-00:06:38,258 --> 00:06:39,516
+112
+00:07:43,125 --> 00:07:44,382
 useful megajoule.
 
-97
-00:06:39,556 --> 00:06:43,945
+113
+00:07:44,422 --> 00:07:48,811
 For R, we already found about
 two hundred and twenty-nine.
 
-98
-00:06:43,985 --> 00:06:49,976
+114
+00:07:48,851 --> 00:07:54,843
 So R is lower per useful output, even
 though T looked better per unit of input.
 
-99
-00:06:50,016 --> 00:06:56,008
+115
+00:07:54,883 --> 00:08:00,874
 A lower emission per unit of input energy
 doesn't guarantee lower emissions per
 
-100
-00:06:56,048 --> 00:06:59,560
+116
+00:08:00,914 --> 00:08:04,427
 unit of useful output;
 efficiency matters too.
 
-101
-00:07:00,530 --> 00:07:03,710
+117
+00:08:05,397 --> 00:08:08,577
 Where you draw the boundary
 changes the answer.
 
-102
-00:07:03,750 --> 00:07:08,712
+118
+00:08:08,617 --> 00:08:13,578
 Draw a tight boundary around just the
 burning, and you count operational,
 
-103
-00:07:08,752 --> 00:07:12,657
+119
+00:08:13,618 --> 00:08:17,523
 or direct, emissions: the
 carbon dioxide from combustion.
 
-104
-00:07:12,997 --> 00:07:13,836
+120
+00:08:17,863 --> 00:08:18,702
 Now widen it.
 
-105
-00:07:13,876 --> 00:07:17,555
+121
+00:08:18,742 --> 00:08:22,421
 Growing the feedstock may
 use fertiliser and machinery.
 
-106
-00:07:17,595 --> 00:07:20,056
+122
+00:08:22,461 --> 00:08:24,923
 Processing needs heat or electricity.
 
-107
-00:07:20,096 --> 00:07:23,099
+123
+00:08:24,963 --> 00:08:27,965
 The fuel must be
 transported and distributed.
 
-108
-00:07:23,139 --> 00:07:27,493
+124
+00:08:28,005 --> 00:08:32,360
 All of these can produce emissions,
 and together with combustion,
 
-109
-00:07:27,533 --> 00:07:30,035
+125
+00:08:32,400 --> 00:08:34,901
 they make up the lifecycle emissions.
 
-110
-00:07:30,397 --> 00:07:32,807
+126
+00:08:35,263 --> 00:08:37,673
 Methane deserves a special mention.
 
-111
-00:07:32,847 --> 00:07:37,846
+127
+00:08:37,713 --> 00:08:42,712
 Biogas and natural gas systems can
 leak unburnt methane, from digesters,
 
-112
-00:07:37,886 --> 00:07:38,895
+128
+00:08:42,752 --> 00:08:43,762
 pipes or wells.
 
-113
-00:07:38,935 --> 00:07:43,445
+129
+00:08:43,802 --> 00:08:48,311
 Methane is a much more potent
 greenhouse gas than carbon dioxide,
 
-114
-00:07:43,485 --> 00:07:46,804
+130
+00:08:48,351 --> 00:08:51,670
 so even small leaks can
 outweigh other benefits.
 
-115
-00:07:46,844 --> 00:07:51,393
+131
+00:08:51,710 --> 00:08:56,259
 A claim about emissions should
 always say which boundary it uses.
 
-116
-00:07:52,330 --> 00:07:53,131
+132
+00:08:57,196 --> 00:08:57,997
 Checkpoint.
 
-117
-00:07:53,171 --> 00:07:56,572
+133
+00:08:58,037 --> 00:09:01,438
 A company says its
 biofuel is carbon neutral,
 
-118
-00:07:56,612 --> 00:08:02,689
+134
+00:09:01,478 --> 00:09:07,555
 because the carbon dioxide released when
 it burns was absorbed by the crop as it
 
-119
-00:08:02,729 --> 00:08:03,071
+135
+00:09:07,595 --> 00:09:07,937
 grew.
 
-120
-00:08:03,111 --> 00:08:05,365
+136
+00:09:07,977 --> 00:09:10,231
 Is that claim fully justified?
 
-121
-00:08:05,405 --> 00:08:06,705
+137
+00:09:10,271 --> 00:09:11,571
 Pause and decide.
 
-122
-00:08:15,130 --> 00:08:16,560
+138
+00:09:19,996 --> 00:09:21,426
 Part of it is right.
 
-123
-00:08:16,600 --> 00:08:22,513
+139
+00:09:21,466 --> 00:09:27,379
 The carbon in a biofuel was recently taken
 from the atmosphere by photosynthesis,
 
-124
-00:08:22,553 --> 00:08:28,172
+140
+00:09:27,419 --> 00:09:33,038
 so burning it returns carbon that was
 already in the short-term carbon cycle,
 
-125
-00:08:28,212 --> 00:08:33,283
+141
+00:09:33,078 --> 00:09:38,149
 unlike fossil carbon that had been
 locked away for millions of years.
 
-126
-00:08:33,663 --> 00:08:36,452
+142
+00:09:38,529 --> 00:09:41,318
 But the whole lifecycle usually adds more.
 
-127
-00:08:36,492 --> 00:08:39,012
+143
+00:09:41,358 --> 00:09:43,878
 Fertiliser production, farm machinery,
 
-128
-00:08:39,052 --> 00:08:42,649
+144
+00:09:43,918 --> 00:09:47,515
 processing heat and transport
 often use fossil energy,
 
-129
-00:08:42,689 --> 00:08:44,669
+145
+00:09:47,555 --> 00:09:49,536
 and some systems leak methane.
 
-130
-00:08:44,709 --> 00:08:48,778
+146
+00:09:49,576 --> 00:09:53,645
 So a biofuel can have lower net
 emissions than a fossil fuel,
 
-131
-00:08:48,818 --> 00:08:51,877
+147
+00:09:53,685 --> 00:09:56,743
 but "carbon neutral"
 needs lifecycle evidence.
 
-132
-00:08:51,917 --> 00:08:55,486
+148
+00:09:56,783 --> 00:10:00,353
 Without it, "lower-carbon"
 is the most you can claim.
 
-133
-00:08:56,462 --> 00:09:00,879
+149
+00:10:01,329 --> 00:10:05,746
 A renewable feedstock regrows,
 but growing it still has costs.
 
-134
-00:09:00,919 --> 00:09:06,846
+150
+00:10:05,786 --> 00:10:11,712
 A fuel crop can compete with food crops
 for land, use large amounts of fresh water,
 
-135
-00:09:06,886 --> 00:09:08,931
+151
+00:10:11,752 --> 00:10:13,797
 and replace natural habitats.
 
-136
-00:09:08,971 --> 00:09:13,140
+152
+00:10:13,837 --> 00:10:18,007
 So a renewable fuel isn't
 automatically a sustainable one.
 
-137
-00:09:13,529 --> 00:09:16,684
+153
+00:10:18,395 --> 00:10:21,550
 Using wastes avoids some
 of these trade-offs.
 
-138
-00:09:16,724 --> 00:09:20,872
+154
+00:10:21,590 --> 00:10:25,738
 Here's a circular example: food
 waste goes into a digester,
 
-139
-00:09:20,912 --> 00:09:26,338
+155
+00:10:25,778 --> 00:10:31,205
 which produces biogas for heat; the
 leftover digestate becomes fertiliser for
 
-140
-00:09:26,378 --> 00:09:31,024
+156
+00:10:31,245 --> 00:10:35,890
 crops; the crops become food, and
 food waste returns to the start.
 
-141
-00:09:31,064 --> 00:09:34,471
+157
+00:10:35,930 --> 00:10:39,338
 Materials stay in use
 instead of becoming waste.
 
-142
-00:09:34,862 --> 00:09:37,542
+158
+00:10:39,729 --> 00:10:42,662
 This connects to green
 chemistry principles.
 
-143
-00:09:37,582 --> 00:09:41,252
+159
+00:10:42,702 --> 00:10:46,717
 Using renewable feedstocks, such
 as plant material or waste.
 
-144
-00:09:41,292 --> 00:09:44,528
+160
+00:10:46,757 --> 00:10:50,298
 Preventing waste, by turning
 by-products into inputs.
 
-145
-00:09:44,568 --> 00:09:46,506
+161
+00:10:50,338 --> 00:10:52,461
 Designing for energy efficiency.
 
-146
-00:09:46,546 --> 00:09:49,844
+162
+00:10:52,501 --> 00:10:56,110
 And using catalysts, like
 the enzymes in fermentation,
 
-147
-00:09:49,884 --> 00:09:52,728
+163
+00:10:56,150 --> 00:10:59,218
 to make processes run
 under milder conditions.
 
-148
-00:09:53,062 --> 00:09:56,782
+164
+00:10:59,258 --> 00:11:01,584
+And aiming for a high atom economy,
+
+165
+00:11:01,624 --> 00:11:06,854
+so that more of the reactant atoms end
+up in the useful product rather than in
+
+166
+00:11:06,894 --> 00:11:07,705
+by-products.
+
+167
+00:11:08,062 --> 00:11:11,781
 It also links to the United Nations
 Sustainable Development Goals:
 
-149
-00:09:56,822 --> 00:10:00,655
+168
+00:11:11,821 --> 00:11:15,655
 affordable and clean energy,
 responsible consumption and production,
 
-150
-00:10:00,695 --> 00:10:05,422
+169
+00:11:15,695 --> 00:11:20,422
 climate action, and zero hunger, which is
 where food-versus-fuel trade-offs matter.
 
-151
-00:10:06,395 --> 00:10:10,119
+170
+00:11:21,394 --> 00:11:25,119
 Practice question Q
 twenty-four is worth six marks.
 
-152
-00:10:10,159 --> 00:10:15,031
+171
+00:11:25,159 --> 00:11:30,030
 Pause the video and plan your answer
 before we build one together.
 
-153
-00:10:30,461 --> 00:10:32,521
+172
+00:11:45,461 --> 00:11:47,521
 First consideration: feedstock.
 
-154
-00:10:32,561 --> 00:10:37,533
+173
+00:11:47,561 --> 00:11:52,533
 Process B uses food-processing waste,
 while Process A uses an edible crop.
 
-155
-00:10:37,573 --> 00:10:42,748
+174
+00:11:52,573 --> 00:11:57,748
 So B avoids competing with food for land
 and makes productive use of a waste,
 
-156
-00:10:42,788 --> 00:10:48,031
+175
+00:11:57,788 --> 00:12:03,031
 which fits the green chemistry principle
 of using renewable feedstocks and the
 
-157
-00:10:48,071 --> 00:10:51,457
+176
+00:12:03,071 --> 00:12:06,457
 circular-economy idea of
 keeping materials in use.
 
-158
-00:10:51,795 --> 00:10:54,162
+177
+00:12:06,794 --> 00:12:09,162
 Second consideration: resource use.
 
-159
-00:10:54,202 --> 00:10:57,670
+178
+00:12:09,202 --> 00:12:12,670
 Per kilogram of ethanol,
 A uses less listed energy,
 
-160
-00:10:57,710 --> 00:11:01,590
+179
+00:12:12,710 --> 00:12:16,590
 eight megajoules compared with
 ten, and less fresh water,
 
-161
-00:11:01,630 --> 00:11:03,998
+180
+00:12:16,630 --> 00:12:18,997
 twelve litres compared with twenty.
 
-162
-00:11:04,038 --> 00:11:06,170
+181
+00:12:19,037 --> 00:12:21,170
 On those measures, A is better.
 
-163
-00:11:06,528 --> 00:11:12,921
+182
+00:12:21,528 --> 00:12:27,921
 So there's a trade-off: B is better on
 feedstock and on using its carbon dioxide;
 
-164
-00:11:12,961 --> 00:11:15,463
+183
+00:12:27,961 --> 00:12:30,462
 A is better on energy and water.
 
-165
-00:11:15,503 --> 00:11:21,896
+184
+00:12:30,502 --> 00:12:36,895
 Also note that capturing carbon dioxide
 and using it in another process isn't the
 
-166
-00:11:21,936 --> 00:11:26,463
+185
+00:12:36,935 --> 00:12:41,462
 same as storing it permanently;
 it may be released later.
 
-167
-00:11:26,861 --> 00:11:30,588
+186
+00:12:41,861 --> 00:12:45,587
 Can we say which has lower
 total lifecycle emissions?
 
-168
-00:11:30,628 --> 00:11:30,801
+187
+00:12:45,627 --> 00:12:45,800
 No.
 
-169
-00:11:30,841 --> 00:11:35,988
+188
+00:12:45,840 --> 00:12:50,988
 A uses natural-gas heat, and B uses
 electricity that's only sixty percent
 
-170
-00:11:36,028 --> 00:11:40,181
+189
+00:12:51,028 --> 00:12:55,180
 renewable, and we aren't given
 emission factors for either,
 
-171
-00:11:40,221 --> 00:11:43,449
+190
+00:12:55,220 --> 00:12:58,449
 or data on transport and
 feedstock production.
 
-172
-00:11:43,489 --> 00:11:46,616
+191
+00:12:58,489 --> 00:13:01,616
 Stating that limit
 honestly is worth a mark.
 
-173
-00:11:46,995 --> 00:11:50,575
+192
+00:13:01,994 --> 00:13:05,575
 A recommendation must follow
 from stated priorities.
 
-174
-00:11:50,615 --> 00:11:56,075
+193
+00:13:05,615 --> 00:13:11,075
 For example: if avoiding competition with
 food is the priority, B is preferred,
 
-175
-00:11:56,115 --> 00:11:58,860
+194
+00:13:11,115 --> 00:13:13,860
 despite its higher energy and water use.
 
-176
-00:11:58,900 --> 00:12:04,291
+195
+00:13:13,900 --> 00:13:19,291
 Either process can be defended, as long
 as the reasoning matches the evidence.
 
-177
-00:12:04,331 --> 00:12:08,051
+196
+00:13:19,331 --> 00:13:23,050
 Marks: two plus two for the
 two supported comparisons,
 
-178
-00:12:08,091 --> 00:12:13,730
+197
+00:13:23,090 --> 00:13:28,730
 one for the trade-off or limit, and one
 for a consistent, conditional conclusion.
 
-179
-00:12:14,727 --> 00:12:15,355
+198
+00:13:29,727 --> 00:13:30,355
 To recap.
 
-180
-00:12:15,395 --> 00:12:21,509
+199
+00:13:30,395 --> 00:13:36,509
 State the basis before you compare fuels:
 per mole, per gram, or per useful energy.
 
-181
-00:12:21,549 --> 00:12:26,626
+200
+00:13:36,549 --> 00:13:41,626
 To compare emissions for a task,
 normalise to the same useful output,
 
-182
-00:12:26,666 --> 00:12:28,628
+201
+00:13:41,666 --> 00:13:43,628
 which brings in efficiency.
 
-183
-00:12:28,668 --> 00:12:31,743
+202
+00:13:43,668 --> 00:13:46,742
 Say which boundary an emission claim uses.
 
-184
-00:12:31,783 --> 00:12:36,083
+203
+00:13:46,782 --> 00:13:51,083
 And remember that renewable
 isn't the same as sustainable.
 
-185
-00:12:36,461 --> 00:12:37,458
+204
+00:13:51,460 --> 00:13:52,458
 Closing recall.
 
-186
-00:12:37,498 --> 00:12:41,786
+205
+00:13:52,498 --> 00:13:56,786
 Name two reasons a renewable
 biofuel might not be sustainable.
 
-187
-00:12:52,194 --> 00:12:57,702
+206
+00:14:07,194 --> 00:14:12,702
 For example: its crop competes with
 food for land or uses a lot of water,
 
-188
-00:12:57,742 --> 00:13:03,478
+207
+00:14:12,742 --> 00:14:18,478
 or methane leaks from its production,
 or processing relies on fossil energy.
 
-189
-00:13:03,518 --> 00:13:08,458
+208
+00:14:18,518 --> 00:14:23,458
 Next episode is our first exam
 workshop, on fuels and combustion.

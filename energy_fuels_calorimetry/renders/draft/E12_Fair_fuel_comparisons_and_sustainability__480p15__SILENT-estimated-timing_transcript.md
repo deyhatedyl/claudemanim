@@ -1,6 +1,6 @@
 # E12 Fair fuel comparisons and sustainability
 
-Runtime 13:09. Narration transcript (matches the captions).
+Runtime 14:24. Narration transcript (matches the captions).
 
 ## [00:00] E12S01 Retrieval check
 
@@ -20,13 +20,19 @@ Here's another basis that matters for gaseous fuels: energy per litre. Hydrogen 
 Per gram, hydrogen wins easily: two hundred and eighty-six divided by two point zero is one hundred and forty-three kilojoules per gram, compared with about fifty-five point six for methane.
 But a mole of any gas at SLC occupies twenty-four point eight litres. So per litre, hydrogen gives two hundred and eighty-six divided by twenty-four point eight, about eleven point five kilojoules, while methane gives eight hundred and ninety divided by twenty-four point eight, about thirty-five point nine. Per litre, methane wins by about three times. That's why storing enough hydrogen for a vehicle is a challenge, even though it's excellent per gram.
 
-## [03:21] E12S04 Normalise to the same useful output
+## [03:21] E12S04 Why oxygen-containing fuels release less energy
+
+Here's a comparison that shows an important idea. Ethanol and propane have almost the same molar mass: forty-six point zero and forty-four point zero grams per mole. But propane releases two thousand two hundred and twenty kilojoules per mole, and ethanol only one thousand three hundred and seventy. Per gram, that's about fifty point five kilojoules for propane and twenty-nine point eight for ethanol.
+Why so different? Ethanol already contains an oxygen atom, in its hydroxy group. Part of the molecule is already oxidised, so there's less left to oxidise when it burns, and less energy is released.
+That's the explanation to give. Saying only that the two fuels have different bond enthalpies isn't enough: a bond-enthalpy argument would need full calculations for both combustion equations. The same idea explains why methanol releases less energy per gram than ethanol: a bigger fraction of its mass is oxygen.
+
+## [04:26] E12S05 Normalise to the same useful output
 
 Here's the fair way to compare. Fix the task first: deliver one point zero zero megajoule of useful heat. Then, for each fuel, work backwards.
 Fuel energy input equals useful output divided by efficiency. Mass of fuel equals that input divided by the fuel's energy per kilogram. And if emissions are given per megajoule of fuel energy, then emissions equal the input times that emission factor.
 Watch the units: megajoules divided by megajoules per kilogram gives kilograms. Megajoules times grams per megajoule gives grams. Now both fuels are compared on exactly the same task.
 
-## [04:04] E12S05 Practice Q23: emissions per useful energy
+## [05:09] E12S06 Practice Q23: emissions per useful energy
 
 Practice question Q twenty-three is worth seven marks. The data are hypothetical, made up for this exercise. Pause the video and try it.  *(pause)*
 Inputs for one point zero zero megajoule of useful heat. Fuel R is thirty-five percent efficient: one point zero zero divided by zero point three five zero is two point eight five seven megajoules. Biofuel S is twenty-eight percent efficient: one point zero zero divided by zero point two eight zero is three point five seven one megajoules.
@@ -34,31 +40,31 @@ Masses. R: two point eight five seven megajoules divided by forty-three point ze
 Lifecycle emissions. R: two point eight five seven megajoules times eighty point zero grams per megajoule is about two hundred and twenty-nine grams of carbon dioxide equivalent. S: three point five seven one times forty-five point zero is about one hundred and sixty-one grams. S has lower lifecycle emissions for the same useful heat.
 So the claim that lower fuel mass must mean lower emissions is false here. R uses less mass, but S emits less over its lifecycle for the same task. Mass and emissions measure different things. Marks: two for the inputs, two for the masses, two for the emissions, and one for the evaluation.
 
-## [06:03] E12S06 Checkpoint: per input is not per useful output
+## [07:07] E12S07 Checkpoint: per input is not per useful output
 
 Checkpoint. Imagine another hypothetical fuel, T, with lower emissions per megajoule of fuel energy than R: seventy grams instead of eighty. But it's burned in a heater that's only twenty percent efficient. Which fuel has lower emissions per megajoule of useful heat? Pause and work it out.  *(pause)*
 For T: seventy divided by zero point two zero is three hundred and fifty grams per useful megajoule. For R, we already found about two hundred and twenty-nine. So R is lower per useful output, even though T looked better per unit of input. A lower emission per unit of input energy doesn't guarantee lower emissions per unit of useful output; efficiency matters too.
 
-## [07:00] E12S07 Drawing the system boundary
+## [08:05] E12S08 Drawing the system boundary
 
 Where you draw the boundary changes the answer. Draw a tight boundary around just the burning, and you count operational, or direct, emissions: the carbon dioxide from combustion.
 Now widen it. Growing the feedstock may use fertiliser and machinery. Processing needs heat or electricity. The fuel must be transported and distributed. All of these can produce emissions, and together with combustion, they make up the lifecycle emissions.
 Methane deserves a special mention. Biogas and natural gas systems can leak unburnt methane, from digesters, pipes or wells. Methane is a much more potent greenhouse gas than carbon dioxide, so even small leaks can outweigh other benefits. A claim about emissions should always say which boundary it uses.
 
-## [07:52] E12S08 Is a biofuel carbon neutral?
+## [08:57] E12S09 Is a biofuel carbon neutral?
 
 Checkpoint. A company says its biofuel is carbon neutral, because the carbon dioxide released when it burns was absorbed by the crop as it grew. Is that claim fully justified? Pause and decide.  *(pause)*
 Part of it is right. The carbon in a biofuel was recently taken from the atmosphere by photosynthesis, so burning it returns carbon that was already in the short-term carbon cycle, unlike fossil carbon that had been locked away for millions of years.
 But the whole lifecycle usually adds more. Fertiliser production, farm machinery, processing heat and transport often use fossil energy, and some systems leak methane. So a biofuel can have lower net emissions than a fossil fuel, but "carbon neutral" needs lifecycle evidence. Without it, "lower-carbon" is the most you can claim.
 
-## [08:56] E12S09 Renewable is not the same as sustainable
+## [10:01] E12S10 Renewable is not the same as sustainable
 
 A renewable feedstock regrows, but growing it still has costs. A fuel crop can compete with food crops for land, use large amounts of fresh water, and replace natural habitats. So a renewable fuel isn't automatically a sustainable one.
 Using wastes avoids some of these trade-offs. Here's a circular example: food waste goes into a digester, which produces biogas for heat; the leftover digestate becomes fertiliser for crops; the crops become food, and food waste returns to the start. Materials stay in use instead of becoming waste.
-This connects to green chemistry principles. Using renewable feedstocks, such as plant material or waste. Preventing waste, by turning by-products into inputs. Designing for energy efficiency. And using catalysts, like the enzymes in fermentation, to make processes run under milder conditions.
+This connects to green chemistry principles. Using renewable feedstocks, such as plant material or waste. Preventing waste, by turning by-products into inputs. Designing for energy efficiency. And using catalysts, like the enzymes in fermentation, to make processes run under milder conditions. And aiming for a high atom economy, so that more of the reactant atoms end up in the useful product rather than in by-products.
 It also links to the United Nations Sustainable Development Goals: affordable and clean energy, responsible consumption and production, climate action, and zero hunger, which is where food-versus-fuel trade-offs matter.
 
-## [10:06] E12S10 Practice Q24: build an evidence-based answer
+## [11:21] E12S11 Practice Q24: build an evidence-based answer
 
 Practice question Q twenty-four is worth six marks. Pause the video and plan your answer before we build one together.  *(pause)*
 First consideration: feedstock. Process B uses food-processing waste, while Process A uses an edible crop. So B avoids competing with food for land and makes productive use of a waste, which fits the green chemistry principle of using renewable feedstocks and the circular-economy idea of keeping materials in use.
@@ -67,7 +73,7 @@ So there's a trade-off: B is better on feedstock and on using its carbon dioxide
 Can we say which has lower total lifecycle emissions? No. A uses natural-gas heat, and B uses electricity that's only sixty percent renewable, and we aren't given emission factors for either, or data on transport and feedstock production. Stating that limit honestly is worth a mark.
 A recommendation must follow from stated priorities. For example: if avoiding competition with food is the priority, B is preferred, despite its higher energy and water use. Either process can be defended, as long as the reasoning matches the evidence. Marks: two plus two for the two supported comparisons, one for the trade-off or limit, and one for a consistent, conditional conclusion.
 
-## [12:14] E12S11 Recap and closing recall
+## [13:29] E12S12 Recap and closing recall
 
 To recap. State the basis before you compare fuels: per mole, per gram, or per useful energy. To compare emissions for a task, normalise to the same useful output, which brings in efficiency. Say which boundary an emission claim uses. And remember that renewable isn't the same as sustainable.
 Closing recall. Name two reasons a renewable biofuel might not be sustainable.  *(pause)*

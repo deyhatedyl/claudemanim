@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T20:26:01",
+ "updated": "2026-10-02T20:43:11",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -771,16 +771,16 @@
    "title": "Combustion equations and gaseous products",
    "script": {
     "path": "scripts/ep06.md",
-    "sha": "1a3905390116b883",
-    "beats": 40,
-    "words": 1495,
-    "est_minutes": 12.3,
+    "sha": "7e811dbd87fd435d",
+    "beats": 41,
+    "words": 1583,
+    "est_minutes": 12.9,
     "anchors": "Q11,Q12",
     "coverage": "C12,C13,C14,C17,C01"
    },
    "scenes_code": {
     "path": "scenes/ep06.py",
-    "sha": "306dcc30f6226226"
+    "sha": "1f236184fb7285c7"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -823,12 +823,12 @@
     {
      "id": "E06S04",
      "title": "Incomplete combustion: products need to be specified",
-     "beats": 3,
+     "beats": 4,
      "audio_ready": 0,
      "480p15": {
-      "duration": 60.9333,
+      "duration": 98.6,
       "fresh": true,
-      "estimated_beats": 3,
+      "estimated_beats": 4,
       "layout_warnings": 0
      }
     },
@@ -907,14 +907,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 40,
+    "total": 41,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 734.73,
+    "duration": 772.4,
     "captions": [
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
@@ -924,7 +924,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
     "final_qa": "pending"
    }
   },
@@ -932,16 +932,16 @@
    "title": "Limiting reactants, excess fuel and gas mixtures",
    "script": {
     "path": "scripts/ep07.md",
-    "sha": "644130ef6c63dbfe",
-    "beats": 45,
-    "words": 2023,
-    "est_minutes": 16.2,
+    "sha": "0aa0f08ac58427b7",
+    "beats": 48,
+    "words": 2204,
+    "est_minutes": 17.5,
     "anchors": "Q13,Q14",
     "coverage": "C14,C15,C16,C17,C01"
    },
    "scenes_code": {
     "path": "scenes/ep07.py",
-    "sha": "c0e671d0dda17243"
+    "sha": "b0b96358b326ba5f"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1031,6 +1031,18 @@
     },
     {
      "id": "E07S08",
+     "title": "Measuring a gas volume",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 78.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S09",
      "title": "New carbon dioxide versus inlet carbon dioxide",
      "beats": 2,
      "audio_ready": 0,
@@ -1042,7 +1054,7 @@
      }
     },
     {
-     "id": "E07S09",
+     "id": "E07S10",
      "title": "Practice Q14, part 1: budgets and the limiting reactant",
      "beats": 5,
      "audio_ready": 0,
@@ -1054,7 +1066,7 @@
      }
     },
     {
-     "id": "E07S10",
+     "id": "E07S11",
      "title": "Practice Q14, part 2: carbon dioxide and energy",
      "beats": 5,
      "audio_ready": 0,
@@ -1066,7 +1078,7 @@
      }
     },
     {
-     "id": "E07S11",
+     "id": "E07S12",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1080,14 +1092,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 45,
+    "total": 48,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 967.59,
+    "duration": 1046.33,
     "captions": [
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.vtt"
@@ -1097,7 +1109,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1612,16 +1624,16 @@
    "title": "Temperature graphs, correction and experimental reasoning",
    "script": {
     "path": "scripts/ep11.md",
-    "sha": "16f8f2445fcb8645",
-    "beats": 51,
-    "words": 2023,
-    "est_minutes": 16.1,
+    "sha": "f7a832a53fd3c81e",
+    "beats": 55,
+    "words": 2234,
+    "est_minutes": 17.8,
     "anchors": "Q21,Q22",
     "coverage": "C24,C25,C21,C08"
    },
    "scenes_code": {
     "path": "scenes/ep11.py",
-    "sha": "379468335948b0eb"
+    "sha": "35b576829e8858ee"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1735,6 +1747,18 @@
     },
     {
      "id": "E11S10",
+     "title": "Resolution, mistakes and outliers",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 100.7333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S11",
      "title": "Practice Q22: a wrong CF and a thermometer offset",
      "beats": 6,
      "audio_ready": 0,
@@ -1746,7 +1770,7 @@
      }
     },
     {
-     "id": "E11S11",
+     "id": "E11S12",
      "title": "The error-direction table",
      "beats": 5,
      "audio_ready": 0,
@@ -1758,7 +1782,7 @@
      }
     },
     {
-     "id": "E11S12",
+     "id": "E11S13",
      "title": "Checkpoint: which improvement fixes which error?",
      "beats": 2,
      "audio_ready": 0,
@@ -1770,7 +1794,7 @@
      }
     },
     {
-     "id": "E11S13",
+     "id": "E11S14",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1784,14 +1808,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 51,
+    "total": 55,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 960.66,
+    "duration": 1061.39,
     "captions": [
      "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.vtt"
@@ -1801,7 +1825,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1809,16 +1833,16 @@
    "title": "Fair fuel comparisons and sustainability",
    "script": {
     "path": "scripts/ep12.md",
-    "sha": "315e2ab81d8b3bbe",
-    "beats": 38,
-    "words": 1612,
-    "est_minutes": 13.2,
+    "sha": "18400be662ffbbf9",
+    "beats": 41,
+    "words": 1783,
+    "est_minutes": 14.5,
     "anchors": "Q23,Q24",
     "coverage": "C19,C27,C28,C02,C03,C17,C11"
    },
    "scenes_code": {
     "path": "scenes/ep12.py",
-    "sha": "d87db8e8b3cd8264"
+    "sha": "91a45fd7547674da"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1860,6 +1884,18 @@
     },
     {
      "id": "E12S04",
+     "title": "Why oxygen-containing fuels release less energy",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 64.8667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S05",
      "title": "Normalise to the same useful output",
      "beats": 3,
      "audio_ready": 0,
@@ -1871,7 +1907,7 @@
      }
     },
     {
-     "id": "E12S05",
+     "id": "E12S06",
      "title": "Practice Q23: emissions per useful energy",
      "beats": 5,
      "audio_ready": 0,
@@ -1883,7 +1919,7 @@
      }
     },
     {
-     "id": "E12S06",
+     "id": "E12S07",
      "title": "Checkpoint: per input is not per useful output",
      "beats": 2,
      "audio_ready": 0,
@@ -1895,7 +1931,7 @@
      }
     },
     {
-     "id": "E12S07",
+     "id": "E12S08",
      "title": "Drawing the system boundary",
      "beats": 3,
      "audio_ready": 0,
@@ -1907,7 +1943,7 @@
      }
     },
     {
-     "id": "E12S08",
+     "id": "E12S09",
      "title": "Is a biofuel carbon neutral?",
      "beats": 3,
      "audio_ready": 0,
@@ -1919,19 +1955,19 @@
      }
     },
     {
-     "id": "E12S09",
+     "id": "E12S10",
      "title": "Renewable is not the same as sustainable",
      "beats": 4,
      "audio_ready": 0,
      "480p15": {
-      "duration": 69.9333,
+      "duration": 80.0667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
      }
     },
     {
-     "id": "E12S10",
+     "id": "E12S11",
      "title": "Practice Q24: build an evidence-based answer",
      "beats": 6,
      "audio_ready": 0,
@@ -1943,7 +1979,7 @@
      }
     },
     {
-     "id": "E12S11",
+     "id": "E12S12",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1957,14 +1993,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 38,
+    "total": 41,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 789.39,
+    "duration": 864.39,
     "captions": [
      "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.vtt"
@@ -1974,7 +2010,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1982,16 +2018,16 @@
    "title": "Exam workshop A on fuels and combustion",
    "script": {
     "path": "scripts/ep13.md",
-    "sha": "0d10dd59fb9c626f",
+    "sha": "f82d2b8d197d326f",
     "beats": 49,
-    "words": 2413,
-    "est_minutes": 20.5,
+    "words": 2444,
+    "est_minutes": 20.7,
     "anchors": "Q25,Q26",
     "coverage": "C01,C04,C07,C11,C12,C14,C15,C16,C17,C18,C19,C27"
    },
    "scenes_code": {
     "path": "scenes/ep13.py",
-    "sha": "66f46fde2600696a"
+    "sha": "73153c9b25245ac7"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -2169,7 +2205,7 @@
      "beats": 3,
      "audio_ready": 0,
      "480p15": {
-      "duration": 55.5333,
+      "duration": 68.8667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2197,7 +2233,7 @@
     "output": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 1227.32,
+    "duration": 1240.66,
     "captions": [
      "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.vtt"
@@ -2207,7 +2243,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label).",
+    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
     "final_qa": "pending"
    }
   },
@@ -2481,5 +2517,5 @@
    }
   }
  },
- "series_est_minutes": 209.3
+ "series_est_minutes": 214.4
 }

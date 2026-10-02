@@ -345,7 +345,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Forgetting the O atom in ethanol, or assuming incomplete combustion always gives only CO.
 
-**Worked in:** E06S05 “Practice Q11: incomplete combustion you can balance” (≈3:39 in the draft)
+**Worked in:** E06S05 “Practice Q11: incomplete combustion you can balance” (≈4:17 in the draft)
 
 ### Q12. Hot exhaust versus cooled dry gas (5 marks)
 
@@ -379,7 +379,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Excluding hot water vapour, or applying the SLC molar volume to gas at 600 °C.
 
-**Worked in:** E06S07 “Practice Q12: hot exhaust versus cooled dry gas” (≈7:19 in the draft)
+**Worked in:** E06S07 “Practice Q12: hot exhaust versus cooled dry gas” (≈7:57 in the draft)
 
 ## Episode 07: Limiting reactants, excess fuel and gas mixtures
 
@@ -459,7 +459,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Counting all of the fuel-stream gas as methane, or treating all measured CO₂ as newly formed.
 
-**Worked in:** E07S09 “Practice Q14, part 1: budgets and the limiting reactant” (≈11:21 in the draft); E07S10 “Practice Q14, part 2: carbon dioxide and energy” (≈13:14 in the draft)
+**Worked in:** E07S10 “Practice Q14, part 1: budgets and the limiting reactant” (≈12:40 in the draft); E07S11 “Practice Q14, part 2: carbon dioxide and energy” (≈14:33 in the draft)
 
 ## Episode 08: Measuring combustion energy and efficiency
 
@@ -740,7 +740,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Equating repeatability with accuracy, or assuming every offset changes a difference.
 
-**Worked in:** E11S10 “Practice Q22: a wrong CF and a thermometer offset” (≈10:26 in the draft)
+**Worked in:** E11S11 “Practice Q22: a wrong CF and a thermometer offset” (≈12:06 in the draft)
 
 ## Episode 12: Fair fuel comparisons and sustainability
 
@@ -776,7 +776,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Comparing emissions per input MJ without correcting for efficiency.
 
-**Worked in:** E12S05 “Practice Q23: emissions per useful energy” (≈4:04 in the draft)
+**Worked in:** E12S06 “Practice Q23: emissions per useful energy” (≈5:09 in the draft)
 
 ### Q24. Evidence-based sustainability with an honest limit (6 marks)
 
@@ -810,7 +810,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Assuming 'bio' or 'renewable electricity' makes a process superior on every criterion.
 
-**Worked in:** E12S10 “Practice Q24: build an evidence-based answer” (≈10:06 in the draft)
+**Worked in:** E12S11 “Practice Q24: build an evidence-based answer” (≈11:21 in the draft)
 
 ## Episode 13: Exam workshop A: fuels and combustion
 
@@ -877,7 +877,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **c.** Explain why 'both contain an O–H bond, so they release equal energy per gram' is wrong. *[2]*
 
-> Energy released depends on all the bonds broken and formed in the whole reaction, and per-gram values also depend on molar mass; one shared bond does not determine it.
+> One shared O–H bond cannot decide the energy released, which depends on the combustion of the whole molecule. Per gram, oxygen makes up a larger fraction of methanol's mass (16/32 = 50%) than of ethanol's (16/46 ≈ 35%); that part of the fuel is already oxidised and releases no further energy, so methanol releases less per gram (22.7 vs 29.8 kJ g⁻¹).
 
 **d.** Explain whether these results establish which fuel has lower lifecycle emissions. *[2]*
 
@@ -889,11 +889,11 @@ Each solution gives the working for every part, the indicative mark allocation s
 |---|---|
 | 2 | a: energy per gram for each fuel |
 | 4 | b: useful energy and g CO₂ per useful kJ, each fuel |
-| 2 | c: whole-reaction bonds; molar mass |
+| 2 | c: one bond can't decide; oxygen fraction (already partly oxidised) |
 | 2 | d: no; lifecycle stages missing |
 | **10** | **total** |
 
-**Trap.** Per mole vs per gram; CO₂ per mole vs per useful energy; bond-breaking misconception; unsupported lifecycle claim.
+**Trap.** Per mole vs per gram; CO₂ per mole vs per useful energy; explaining energy content by one shared bond (or by bond enthalpies without full calculations) instead of the degree of oxidation; unsupported lifecycle claim.
 
 **Worked in:** E13S12 “Q26: attempt it first” (≈13:45 in the draft); E13S13 “Q26 parts a and b: per gram and per useful kilojoule” (≈14:57 in the draft); E13S15 “Q26 parts c and d: explaining and limiting claims” (≈18:04 in the draft)
 

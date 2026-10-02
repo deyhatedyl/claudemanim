@@ -1,6 +1,6 @@
 # E06 Combustion equations and gaseous products
 
-Runtime 12:14. Narration transcript (matches the captions).
+Runtime 12:52. Narration transcript (matches the captions).
 
 ## [00:00] E06S01 Retrieval check
 
@@ -26,8 +26,9 @@ Oxygen in the products: sixteen in the carbon dioxide plus nine in the water, tw
 When oxygen is limited, combustion can be incomplete. Some of the carbon ends up as carbon monoxide, a toxic gas, or as solid carbon, which we see as soot. The hydrogen still forms water.
 Here are three balanced equations for methane. Complete combustion needs two moles of oxygen per mole of methane. Burning to carbon monoxide needs one and a half. Burning to soot needs only one. Less oxygen per mole of fuel, and less energy released, because the carbon is less fully oxidised.
 But here's the subtle point. Saying "limited oxygen" doesn't tell you which of these happens. A real flame usually makes a mixture of carbon dioxide, carbon monoxide and soot, in proportions that depend on the conditions. So you can only write an incomplete-combustion equation when the products, or enough data about them, are specified.
+What the amounts can tell you is whether combustion must be incomplete. Suppose one point zero zero mole of methane has only one point six zero moles of oxygen. Complete combustion would need two point zero zero, so there isn't enough oxygen, and combustion must be incomplete. If you're also told that no soot forms, the extra carbon must leave as carbon monoxide: zero point two zero moles of carbon dioxide and zero point eight zero moles of carbon monoxide, with two point zero zero moles of water.
 
-## [03:39] E06S05 Practice Q11: incomplete combustion you can balance
+## [04:17] E06S05 Practice Q11: incomplete combustion you can balance
 
 Practice question Q eleven is worth five marks. Pause the video and attempt it.  *(pause)*
 We're told everything we need: one mole of ethanol and two point five zero moles of oxygen react completely, and the only products are carbon dioxide, carbon monoxide and water vapour. So write the skeleton with unknowns: x moles of carbon dioxide, y moles of carbon monoxide, and some water.
@@ -38,14 +39,14 @@ Subtract the carbon equation from that: x equals one. Then y equals one. So one 
 The balanced equation: ethanol plus two and a half oxygen forms carbon dioxide plus carbon monoxide plus three water vapour. Complete combustion would need three moles of oxygen per mole of ethanol, so this reaction had half a mole too little.
 Marks: one for the hydrogen balance, two for the carbon and oxygen balances, one for the equation, and one for the comparison. Here's the trap. If you forget the oxygen inside ethanol, the oxygen balance becomes two x plus y equals two, and you'd conclude that all the carbon became carbon monoxide. That looks like the textbook answer for "limited oxygen", but it's wrong for this data.
 
-## [06:01] E06S06 Hot exhaust and dry gas
+## [06:39] E06S06 Hot exhaust and dry gas
 
 Now think about the gases themselves. In a hot exhaust, well above one hundred degrees, the water formed by combustion is a gas: water vapour. Alongside it are carbon dioxide, nitrogen from the air, and any excess oxygen.
 If the exhaust is cooled to room temperature, most of the water vapour condenses to liquid water and can be removed. What remains is called dry gas. Carbon dioxide stays a gas, so it can now be collected and measured.
 So keep two accounting columns. One lists what the reaction formed, including water vapour. The other lists what is actually measured after cooling and drying. A question about greenhouse gases in a hot exhaust includes the water vapour; a question about a dry gas measured at standard laboratory conditions doesn't.
 And gas volumes always need their conditions. Twenty-four point eight litres per mole applies at twenty-five degrees and one hundred kilopascals. A hot gas at six hundred degrees occupies roughly three times as much volume per mole, so you can't apply the standard molar volume to the hot exhaust.
 
-## [07:19] E06S07 Practice Q12: hot exhaust versus cooled dry gas
+## [07:57] E06S07 Practice Q12: hot exhaust versus cooled dry gas
 
 Practice question Q twelve is worth five marks. Pause the video and work through it.  *(pause)*
 The equation: methane plus two oxygen forms carbon dioxide plus two water, with the water as a gas at six hundred degrees. Methane to carbon dioxide is one to one, and methane to water is one to two. So zero point two five zero moles of methane forms zero point two five zero moles of carbon dioxide and zero point five zero zero moles of water vapour.
@@ -55,18 +56,18 @@ Marks: one for the mole ratios, two for the masses, one for the total, and one f
 Changed condition: if the same carbon dioxide were measured while still at six hundred degrees and one hundred kilopascals, would its volume be more or less than six point two zero litres?  *(pause)*
 More. At a higher temperature and the same pressure, the same amount of gas occupies a larger volume.
 
-## [09:33] E06S08 Moles, not grams; and which greenhouse gases?
+## [10:11] E06S08 Moles, not grams; and which greenhouse gases?
 
 Checkpoint. Methane combustion forms twice as many moles of water as carbon dioxide. Does it form twice the mass of water? Pause and decide.  *(pause)*
 No. Per mole of methane: one mole of carbon dioxide is forty-four grams, and two moles of water is thirty-six grams. Twice the moles, but less mass, because a water molecule is much lighter. Coefficients give mole ratios. Masses also depend on the molar masses.
 One more distinction. "Carbon emissions" usually means carbon dioxide, or the mass of carbon it contains. "Greenhouse gases" is broader: carbon dioxide, water vapour, unburnt methane, and others. So always check which gases a question's model counts before you add masses together.
 
-## [10:30] E06S09 Checkpoint: propane
+## [11:07] E06S09 Checkpoint: propane
 
 Checkpoint. Write a balanced equation, with states, for the complete combustion of propane, C three H eight, at SLC. Pause and try it.  *(pause)*
 Carbon first: three carbon atoms make three carbon dioxide. Then hydrogen: eight hydrogen atoms make four water. Then oxygen: six atoms in the carbon dioxide plus four in the water is ten, which is five oxygen molecules. So propane gas plus five oxygen gas forms three carbon dioxide gas plus four water, and at SLC the water is a liquid.
 
-## [11:19] E06S10 Recap and closing recall
+## [11:57] E06S10 Recap and closing recall
 
 To recap. Balance combustion in the order carbon, hydrogen, oxygen, and remember oxygen already in the fuel. Write incomplete combustion only when the products are specified. Use states that match the conditions, and separate what a reaction formed from what is measured after cooling.
 Closing recall. Balance the complete combustion of propane, C three H eight.  *(pause)*

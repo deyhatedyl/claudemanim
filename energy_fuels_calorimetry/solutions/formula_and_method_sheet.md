@@ -41,6 +41,10 @@ not the official VCAA data book: in an exam, use the constants and data the pape
   vertical distance from reactants to products.
 * A catalyst provides a pathway with a lower activation energy. It does **not** change ΔH.
 * Energy released by a fuel: E = n(fuel) × |ΔH<sub>c</sub>|. Energy per gram = |ΔH<sub>c</sub>| ÷ M.
+  "Energy released" is always a positive quantity with a unit; the sign belongs to ΔH.
+* Oxygen-containing fuels (alcohols) release less energy per gram than hydrocarbons of similar size because they
+  are already partly oxidised (for example ethanol 29.8 kJ g⁻¹ vs propane 50.5 kJ g⁻¹). Explain it this way:
+  quoting "different bond enthalpies" alone is not enough.
 * Food: energy = Σ(mass of each nutrient × its energy factor); scale to the portion actually eaten.
 
 ## Calorimetry
@@ -48,7 +52,7 @@ not the official VCAA data book: in an exam, use the constants and data the pape
 | Situation | Relationship |
 |---|---|
 | heating water | q = m c ΔT (m in g gives q in J) |
-| electrical calibration | E = V × I × t (t in s); calibration factor CF = E ÷ ΔT (J °C⁻¹) |
+| electrical calibration | E = V × I × t (t in s); calibration factor CF = E ÷ ΔT (J °C⁻¹); time needed t = E ÷ (V × I) |
 | calibrated calorimeter | q = CF × ΔT |
 | reaction in the calorimeter | q(reaction) = −q(calorimeter); ΔH = −q ÷ n(limiting), per mole of the stated substance |
 | fuel or food burnt under a can | energy per gram = q ÷ mass burnt (heat losses make this an underestimate) |
@@ -64,6 +68,14 @@ energy. A temperature rise means the reaction released heat, so ΔH is negative.
 Heat lost during calibration makes the CF too large; heat lost during a reaction makes ΔT, q and the
 calculated |ΔH| too small. A CF that is too large makes every quantity calculated from it too large.
 Repeating with the same systematic error gives precise (repeatable) results that are still inaccurate.
+
+**Measurement terms.** Resolution is the smallest change an instrument can show, stated with a unit: the smallest
+graduation of a scale, or the last digit of a digital display. Higher resolution is not the same as accuracy.
+Identified mistakes (misreading, spilling) are left out and repeated; one outlier is not evidence of a systematic
+error. Averaging repeats reduces the effect of random errors, not systematic ones.
+
+**Measuring a gas volume.** Volume = final − initial reading, in L; n = V ÷ 24.8 assumes 25 °C and 100 kPa, ideal
+behaviour, only that gas collected, and none dissolved or lost. % yield = actual ÷ theoretical × 100%.
 
 ## Efficiency and fair comparisons
 
@@ -114,3 +126,6 @@ Repeating with the same systematic error gives precise (repeatable) results that
 10. Efficiency applied in the wrong direction.
 11. Fuels compared on different bases (per mole vs per useful kJ; per kJ released vs per useful kJ).
 12. "Renewable" treated as "sustainable"; direct emissions treated as lifecycle emissions.
+13. Energy released written as a negative number (the sign belongs to ΔH).
+14. Concluding complete combustion when the O₂ : fuel ratio is below the complete-combustion ratio.
+15. Leaving out water vapour when counting greenhouse gases from a hot exhaust.

@@ -428,6 +428,8 @@ def q26():
     check("Q26", "ethanol g CO2 per useful kJ", 88.0 / (1370 * 0.400), 0.160584, rel=1e-5)
     check("Q26", "trap: methanol g CO2 per input kJ", 44.0 / 726, 0.0606061, rel=1e-5)
     check("Q26", "trap: ethanol g CO2 per input kJ", 88.0 / 1370, 0.0642336, rel=1e-5)
+    check("Q26", "oxygen mass fraction, methanol", 16.0 / 32.0, 0.500, rel=1e-9)
+    check("Q26", "oxygen mass fraction, ethanol", 16.0 / 46.0, 0.347826, rel=1e-5)
 
 
 def q27():
@@ -488,6 +490,8 @@ def ep12_teaching_values():
     check("E12", "hydrogen kJ per L at SLC", 286 / VM, 11.5323, rel=1e-4)
     check("E12", "methane kJ per L at SLC", 890 / VM, 35.8871, rel=1e-4)
     check("E12", "methane/hydrogen per-litre ratio", 890 / 286, 3.112, rel=1e-3)
+    check("E12", "ethanol kJ per g", 1370 / 46.0, 29.7826, rel=1e-5)
+    check("E12", "propane kJ per g", 2220 / 44.0, 50.4545, rel=1e-5)
 
 
 def ep09_extensions():
@@ -562,6 +566,16 @@ def ep11_extensions():
     check_true("E11", "drawing: including rising points lowers the extrapolated value", mp * 120 + cp < mg * 120 + cg)
 
 
+def ep06_extensions():
+    # 1.00 mol CH4 + 1.60 mol O2, products CO2, CO, H2O only: C: x + y = 1; O: 2x + y + 2(H2O) = 3.20
+    x = 3.20 - 2.00 - 1.00
+    y = 1.00 - x
+    check("E06", "incomplete: O2 needed for complete", 2 * 1.00, 2.00, rel=1e-9)
+    check("E06", "incomplete: CO2 formed", x, 0.20, rel=1e-9)
+    check("E06", "incomplete: CO formed", y, 0.80, rel=1e-9)
+    check_true("E06", "incomplete: O atoms balance", abs(2 * x + y + 2.00 - 3.20) < 1e-12)
+
+
 def ep07_extensions():
     n_ch4, n_o2 = 3.20 / 16.0, 9.60 / 32.0
     check("E07", "mass checkpoint: n(CH4)", n_ch4, 0.200, rel=1e-9)
@@ -571,6 +585,10 @@ def ep07_extensions():
     check("E07", "gas volumes: O2 for 2.00 L propane", 5 * 2.00, 10.0, rel=1e-9, unit="L")
     check("E07", "gas volumes: CO2 from 2.00 L propane", 3 * 2.00, 6.00, rel=1e-9, unit="L")
     check("E07", "gas volumes: air for 10.0 L O2", 10.0 / 0.210, 47.619, rel=1e-4, unit="L")
+    v = (52.5 - 2.0) / 1000
+    check("E07", "gas measurement: volume", v, 0.0505, rel=1e-9, unit="L")
+    check("E07", "gas measurement: n", v / VM, 0.00203629, rel=1e-5)
+    check("E07", "gas measurement: % yield (3 s.f.)", round(100 * (v / VM) / 0.00250, 1), 81.5, rel=1e-9, unit="%")
 
 
 MARKS = {  # declared total, list of sub-part marks from the brief
@@ -605,7 +623,7 @@ def main():
     verify_equations()
     for fn in (q01, q02, q03, q04, q05, q06, q07, q09, q10, q11, q12, q13, q14, q15, q16,
                q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example,
-               ep07_extensions, ep09_extensions, ep10_extensions, ep11_extensions, ep12_teaching_values, ep13_workshop_values,
+               ep06_extensions, ep07_extensions, ep09_extensions, ep10_extensions, ep11_extensions, ep12_teaching_values, ep13_workshop_values,
                ep14_workshop_values):
         fn()
     verify_marks()

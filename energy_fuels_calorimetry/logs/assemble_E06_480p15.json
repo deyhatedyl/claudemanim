@@ -4,9 +4,9 @@
  "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 40,
+ "beats": 41,
  "beats_with_audio": 0,
- "duration": 734.73,
+ "duration": 772.4,
  "scenes": [
   {
    "scene": "E06S01",
@@ -30,42 +30,42 @@
    "scene": "E06S04",
    "title": "Incomplete combustion: products need to be specified",
    "start": 158.99934899999997,
-   "duration": 60.932682
+   "duration": 98.599349
   },
   {
    "scene": "E06S05",
    "title": "Practice Q11: incomplete combustion you can balance",
-   "start": 219.93203099999997,
+   "start": 257.59869799999996,
    "duration": 141.932682
   },
   {
    "scene": "E06S06",
    "title": "Hot exhaust and dry gas",
-   "start": 361.86471299999994,
+   "start": 399.53137999999996,
    "duration": 77.998698
   },
   {
    "scene": "E06S07",
    "title": "Practice Q12: hot exhaust versus cooled dry gas",
-   "start": 439.8634109999999,
+   "start": 477.53007799999995,
    "duration": 134.066341
   },
   {
    "scene": "E06S08",
    "title": "Moles, not grams; and which greenhouse gases?",
-   "start": 573.9297519999999,
+   "start": 611.596419,
    "duration": 56.399674
   },
   {
    "scene": "E06S09",
    "title": "Checkpoint: propane",
-   "start": 630.3294259999999,
+   "start": 667.996093,
    "duration": 49.533333
   },
   {
    "scene": "E06S10",
    "title": "Recap and closing recall",
-   "start": 679.8627589999999,
+   "start": 717.529426,
    "duration": 54.866667
   }
  ],

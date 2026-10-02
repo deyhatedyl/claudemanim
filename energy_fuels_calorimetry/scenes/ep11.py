@@ -441,7 +441,76 @@ class E11S09_Errors(NarratedScene):
 
 
 # =====================================================================================
-class E11S10_Q22(NarratedScene):
+def display(value: str, label: str, color=TEXT) -> VGroup:
+    """A digital readout box with a caption."""
+    box = RoundedRectangle(width=2.5, height=0.85, corner_radius=0.1, stroke_color=MUTED, stroke_width=2,
+                           fill_color="#0B1A12", fill_opacity=1)
+    t = T(value, size=BODY, color=GOOD).move_to(box)
+    lab = T(label, size=SMALL, color=MUTED).next_to(box, UP, buff=0.1)
+    return VGroup(box, t, lab)
+
+
+class E11S10_Resolution(NarratedScene):
+    def construct(self):
+        from shared.components import Thermometer
+        h = header("Resolution, mistakes and outliers")
+        th = Thermometer(height=2.6, level=0.5).move_to([-4.6, 0.75, 0])
+        ticks = VGroup(*[T(f"{v}", size=SMALL - 2, color=MUTED) for v in (20, 21, 22, 23)])
+        for i, tk in enumerate(ticks):
+            tk.next_to(th.tube, LEFT, buff=0.12).set_y(th.tube.get_bottom()[1] + 0.45 + i * 0.62)
+        thl = T("marked every 1 °C", size=SMALL, color=MUTED).next_to(th, DOWN, buff=0.2)
+        probe = display("23.4 °C", "digital probe").move_to([-0.6, 1.0, 0])
+        bal = display("12.37 g", "digital balance").move_to([3.6, 1.0, 0])
+        q = T("higher resolution: the thermometer or the probe?", size=LABEL + 1, color=UNKNOWN).move_to([0, -1.0, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(th), FadeIn(ticks), FadeIn(thl), run_time=0.9)
+            self.play(FadeIn(probe), run_time=0.6)
+            b.until(0.7)
+            self.play(FadeIn(q), run_time=0.5)
+            self.q = q
+        with self.beat("b02") as b:
+            self.play(FadeOut(self.q), run_time=0.3)
+            d = T("resolution: the smallest change an instrument can show, with a unit", size=LABEL + 1).move_to([0, 2.3, 0])
+            self.play(FadeIn(d), run_time=0.7)
+            c1 = chip("1 °C", SURR, size=SMALL + 2).next_to(thl, DOWN, buff=0.15)
+            c2 = chip("0.1 °C", GOOD, size=SMALL + 2).next_to(probe, DOWN, buff=0.2)
+            c3 = chip("0.01 g", GOOD, size=SMALL + 2).next_to(bal, DOWN, buff=0.2)
+            b.until(0.3)
+            self.play(FadeIn(c1, scale=1.1), run_time=0.5)
+            b.until(0.48)
+            self.play(FadeIn(c2, scale=1.1), run_time=0.5)
+            b.until(0.62)
+            self.play(FadeIn(bal), FadeIn(c3, scale=1.1), run_time=0.6)
+            hi = T("higher resolution = finer increments", size=LABEL, color=GOOD).move_to([0, -1.55, 0])
+            b.until(0.85)
+            self.play(FadeIn(hi), Indicate(probe, color=GOOD), run_time=0.7)
+            self.hi = hi
+        with self.beat("b03") as b:
+            n1 = T("not automatically more accurate: a fine display can still be badly calibrated", size=SMALL + 2,
+                   color=LOSS).move_to([0, -2.15, 0])
+            self.play(FadeIn(n1), run_time=0.6)
+            n2 = T("coarse thermometer → ΔT supports fewer significant figures", size=SMALL + 2, color=MUTED)
+            n2.move_to([0, -2.6, 0])
+            b.until(0.6)
+            self.play(FadeIn(n2), run_time=0.5)
+        with self.beat("b04") as b:
+            self.clear(h)
+            m = right_panel("Mistake (not an error)", [wrapped("e.g. misreading a scale or spilling solution: identify it, "
+                                                                "leave that result out, and repeat the measurement",
+                                                                size=SMALL + 2, width=5.2)],
+                            size=SMALL + 2, width=5.2, color=SYSTEM)
+            o = right_panel("Outlier", [wrapped("one odd value in an otherwise precise set is not evidence of a "
+                                                "systematic error: investigate it and report how it was treated",
+                                                size=SMALL + 2, width=5.2)],
+                            size=SMALL + 2, width=5.2, color=UNKNOWN)
+            VGroup(m, o).arrange(RIGHT, buff=0.4, aligned_edge=UP).move_to([0, 0.5, 0])
+            self.play(FadeIn(m), run_time=0.7)
+            b.until(0.5)
+            self.play(FadeIn(o), run_time=0.7)
+
+
+# =====================================================================================
+class E11S11_Q22(NarratedScene):
     def construct(self):
         h = header("Practice Q22")
         qc = question_card("Q22").move_to([0, 0.3, 0])
@@ -496,7 +565,7 @@ class E11S10_Q22(NarratedScene):
 
 
 # =====================================================================================
-class E11S11_Table(NarratedScene):
+class E11S12_Table(NarratedScene):
     def construct(self):
         h = header("Error directions (simple model)")
         rows = [["Situation", "Direction"],
@@ -538,7 +607,7 @@ class E11S11_Table(NarratedScene):
 
 
 # =====================================================================================
-class E11S12_Improve(NarratedScene):
+class E11S13_Improve(NarratedScene):
     def construct(self):
         h = header("Checkpoint: which improvement fixes which error?")
 
@@ -568,13 +637,13 @@ class E11S12_Improve(NarratedScene):
                 b.until(fr)
                 ln = Line(imps[i].get_right(), probs[k].get_left(), color=GOOD, stroke_width=3)
                 self.play(Create(ln), probs[k][0].animate.set_stroke(GOOD), run_time=0.6)
-            tag = chip("averaging helps with random error only", LOSS, size=SMALL + 1).move_to([0, -2.45, 0])
+            tag = chip("averaging reduces the effect of random error only", LOSS, size=SMALL + 1).move_to([0, -2.45, 0])
             b.until(0.78)
             self.play(FadeIn(tag), run_time=0.5)
 
 
 # =====================================================================================
-class E11S13_Recap(NarratedScene):
+class E11S14_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         items = bullets(["Graph: baseline, mixing time, observed maximum, cooling region",
@@ -601,6 +670,6 @@ class E11S13_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E11S01_Retrieval", "E11S02_ReadGraph", "E11S03_PeakTooLow", "E11S04_Extrapolate", "E11S05_Q21",
-                  "E11S06_Drawing", "E11S07_Endo", "E11S08_TwoLosses", "E11S09_Errors", "E11S10_Q22",
-                  "E11S11_Table", "E11S12_Improve", "E11S13_Recap"]
+EPISODE_SCENES = ["E11S01_Retrieval", "E11S02_ReadGraph", "E11S03_PeakTooLow", "E11S04_Extrapolate",
+                  "E11S05_Q21", "E11S06_Drawing", "E11S07_Endo", "E11S08_TwoLosses", "E11S09_Errors",
+                  "E11S10_Resolution", "E11S11_Q22", "E11S12_Table", "E11S13_Improve", "E11S14_Recap"]

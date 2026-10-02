@@ -1,6 +1,6 @@
 # E07 Limiting reactants, excess fuel and gas mixtures
 
-Runtime 16:07. Narration transcript (matches the captions).
+Runtime 17:26. Narration transcript (matches the captions).
 
 ## [00:00] E07S01 Retrieval check
 
@@ -53,12 +53,18 @@ Here's a shortcut for gases. At the same temperature and pressure, equal volumes
 Propane burns as C three H eight plus five oxygen, forming three carbon dioxide plus four water. So two point zero zero litres of propane needs five times as much oxygen, ten point zero litres, and forms three times as much carbon dioxide, six point zero zero litres, all measured at the same conditions. At SLC the water is a liquid, so it doesn't count as gas volume.
 If the oxygen comes from air that is twenty-one point zero percent oxygen, the air needed is ten point zero divided by zero point two one zero: about forty-seven point six litres of air. The volume shortcut only works for gases, and only when every volume is measured at the same temperature and pressure.
 
-## [10:47] E07S08 New carbon dioxide versus inlet carbon dioxide
+## [10:47] E07S08 Measuring a gas volume
+
+Gas volumes are often measured in experiments, for example the carbon dioxide from fermentation, or a gas released by a reaction. Here's a hypothetical example. A gas syringe reads two point zero millilitres before the reaction, and fifty-two point five millilitres after it.
+The gas collected is the difference: fifty-two point five minus two point zero, which is fifty point five millilitres, or zero point zero five zero five litres. At SLC, that's zero point zero five zero five divided by twenty-four point eight: zero point zero zero two zero four moles. If the reaction should have produced zero point zero zero two five zero moles, the percentage yield is about eighty-one point five percent.
+Using twenty-four point eight litres per mole carries assumptions you may be asked to state: the gas is at twenty-five degrees and one hundred kilopascals, it behaves as an ideal gas, it's the only gas collected, and none of it dissolves or escapes. Each one is also a possible limitation. For example, carbon dioxide collected over water partly dissolves, so the measured volume is too small.
+
+## [12:06] E07S09 New carbon dioxide versus inlet carbon dioxide
 
 If the fuel stream already contains carbon dioxide, the exhaust has two sources of it. Some carbon dioxide is newly formed by burning the methane. The rest simply entered with the fuel and passed through unchanged.
 A question might ask for either one. "Carbon dioxide formed" or "produced" means only the new part, calculated from the reaction. "Total carbon dioxide in the exhaust" means new plus inlet. Read which one is asked for before you add anything.
 
-## [11:21] E07S09 Practice Q14, part 1: budgets and the limiting reactant
+## [12:40] E07S10 Practice Q14, part 1: budgets and the limiting reactant
 
 Practice question Q fourteen is worth eight marks. Pause the video and work through the whole question before continuing.  *(pause)*
 Start with the fuel stream. Twelve point four litres at standard laboratory conditions is zero point five zero zero moles of gas. Eighty percent is methane: zero point four zero zero moles. Twenty percent is carbon dioxide: zero point one zero zero moles, which won't react.
@@ -66,7 +72,7 @@ Now the air. Twenty-one point zero percent of ninety point zero litres is eighte
 The equation is methane plus two oxygen. Amount divided by coefficient: methane zero point four zero zero over one is zero point four zero zero. Oxygen zero point seven six two one over two is zero point three eight one zero. Oxygen is smaller, so oxygen is limiting, and the reaction extent is zero point three eight one zero moles.
 Keep the two budgets side by side. Oxygen: initial zero point seven six two one, used all of it, remaining zero. Methane: initial zero point four zero zero, used zero point three eight one zero, remaining zero point zero one eight nine five moles. Times sixteen point zero grams per mole, that's zero point three zero three grams of methane left unburnt.
 
-## [13:14] E07S10 Practice Q14, part 2: carbon dioxide and energy
+## [14:33] E07S11 Practice Q14, part 2: carbon dioxide and energy
 
 Newly formed carbon dioxide equals the methane that reacted: zero point three eight one zero moles. At standard laboratory conditions, that's nine point four five litres.
 The inlet carbon dioxide was zero point one zero zero moles, or two point four eight litres. So the total carbon dioxide, once isolated at standard laboratory conditions, is nine point four five plus two point four eight: eleven point nine three, about eleven point nine litres.
@@ -74,7 +80,7 @@ Energy released: zero point three eight one zero moles of methane times eight hu
 Marks: two for the reactive fuel amount and the oxygen amount, one for the limiting decision, two for the remaining methane, one each for new carbon dioxide, total carbon dioxide and energy.
 Three traps to watch. Treating all twelve point four litres of fuel gas as methane gives zero point five zero zero moles of methane. Treating all ninety litres of air as oxygen gives far too much oxygen and the wrong limiting reactant. And calling the nine point four five litres the total, or the eleven point nine three litres the amount formed, mixes up new and inlet carbon dioxide.
 
-## [14:48] E07S11 Recap and closing recall
+## [16:06] E07S12 Recap and closing recall
 
 The routine. One: convert everything to moles, using only the reactive part of any mixture. Two: divide each amount by its coefficient; the smallest is limiting, and gives the reaction extent. Three: used equals coefficient times extent. Four: remaining equals initial minus used, never negative. Five: products formed equal coefficient times extent, plus anything that simply passes through.
 Closing recall. Three point zero moles of hydrogen and two point zero moles of oxygen react: two hydrogen plus oxygen forms two water. Which is limiting, and how much of the other is left?  *(pause)*

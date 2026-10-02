@@ -516,12 +516,15 @@ BANK = [
         answers=[
             "a. Methanol 726 ÷ 32.0 = 22.7 kJ g⁻¹; ethanol 1370 ÷ 46.0 = 29.8 kJ g⁻¹",
             "b. Methanol: 44.0 g ÷ (726 × 0.250) kJ = 0.242 g kJ⁻¹; ethanol: 88.0 g ÷ (1370 × 0.400) kJ = 0.161 g kJ⁻¹",
-            "c. Energy released depends on all the bonds broken and formed in the whole reaction, and per-gram "
-            "values also depend on molar mass; one shared bond does not determine it.",
+            "c. One shared O–H bond cannot decide the energy released, which depends on the combustion of the whole "
+            "molecule. Per gram, oxygen makes up a larger fraction of methanol's mass (16/32 = 50%) than of "
+            "ethanol's (16/46 ≈ 35%); that part of the fuel is already oxidised and releases no further energy, "
+            "so methanol releases less per gram (22.7 vs 29.8 kJ g⁻¹).",
             "d. No. Direct combustion CO₂ omits feedstock production, processing and transport; lifecycle "
             "data are needed.",
         ],
-        trap="Per mole vs per gram; CO₂ per mole vs per useful energy; bond-breaking misconception; unsupported lifecycle claim.",
+        trap="Per mole vs per gram; CO₂ per mole vs per useful energy; explaining energy content by one shared bond "
+             "(or by bond enthalpies without full calculations) instead of the degree of oxidation; unsupported lifecycle claim.",
     ),
     dict(
         id="Q27", episode=14, title="Integrated workshop: calibration, a graph and neutralisation",

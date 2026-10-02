@@ -4,9 +4,9 @@
  "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 45,
+ "beats": 48,
  "beats_with_audio": 0,
- "duration": 967.59,
+ "duration": 1046.33,
  "scenes": [
   {
    "scene": "E07S01",
@@ -52,26 +52,32 @@
   },
   {
    "scene": "E07S08",
-   "title": "New carbon dioxide versus inlet carbon dioxide",
+   "title": "Measuring a gas volume",
    "start": 647.462109,
-   "duration": 34.46569
+   "duration": 78.733008
   },
   {
    "scene": "E07S09",
-   "title": "Practice Q14, part 1: budgets and the limiting reactant",
-   "start": 681.927799,
-   "duration": 112.932357
+   "title": "New carbon dioxide versus inlet carbon dioxide",
+   "start": 726.1951170000001,
+   "duration": 34.46569
   },
   {
    "scene": "E07S10",
-   "title": "Practice Q14, part 2: carbon dioxide and energy",
-   "start": 794.8601560000001,
-   "duration": 93.333008
+   "title": "Practice Q14, part 1: budgets and the limiting reactant",
+   "start": 760.6608070000001,
+   "duration": 112.932357
   },
   {
    "scene": "E07S11",
+   "title": "Practice Q14, part 2: carbon dioxide and energy",
+   "start": 873.5931640000001,
+   "duration": 93.333008
+  },
+  {
+   "scene": "E07S12",
    "title": "Recap and closing recall",
-   "start": 888.193164,
+   "start": 966.9261720000002,
    "duration": 79.399674
   }
  ],

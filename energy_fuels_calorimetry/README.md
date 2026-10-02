@@ -9,10 +9,10 @@ for this series; they are not official VCAA questions or marking schemes.
 * All 14 episodes are scripted (TTS-ready, 0 lint issues), built as Manim scenes and rendered as
   **silent 480p drafts with estimated timing**; every beat-end still has been inspected and the
   automatic layout check reports no off-frame or caption-strip content. Draft series runtime is about
-  3 h 28 min (`series_index.md`).
+  3 h 34 min (`series_index.md`).
 * Learner documents are complete: `questions/worksheet.md`, `solutions/worked_solutions.md`,
   `solutions/formula_and_method_sheet.md`; plus `coverage_matrix.md` and `series_index.md`.
-* `checks/verify_anchors.py`: 326 independent numerical, atom-balance and marks checks, 0 failures.
+* `checks/verify_anchors.py`: 337 independent numerical, atom-balance and marks checks, 0 failures.
 * **Not yet produced:** narration audio, narrated drafts, final 1080p30 renders and final captions.
   Narration is blocked until a `GEMINI_API_KEY` is available in the environment (see `RESUME.md`).
   Nothing in `renders/draft/` is a finished lesson: silent drafts carry `SILENT-estimated-timing`
@@ -27,6 +27,7 @@ for this series; they are not official VCAA questions or marking schemes.
 | `questions/worksheet.md` | learner worksheet: questions only (generated) |
 | `solutions/worked_solutions.md` | working per part, indicative marks per observable step, traps, where each is worked (generated) |
 | `solutions/formula_and_method_sheet.md` | formula and method sheet (hand-written) |
+| `exam_reconciliation.md` | 2024, 2025, 2025 NHT and 2026 NHT exams and reports mapped to episodes; changes made |
 | `coverage_matrix.md`, `series_index.md` | coverage C01–C28 → episodes/questions; viewing order, runtimes, files (generated) |
 | `checks/verify_anchors.py` | independent numerical/atom-balance/marks verification → `checks/numerical_check_record.md` |
 | `scripts/epNN.md` | narration scripts + scene table (objective, on-screen, transitions, checks per scene) |
@@ -51,7 +52,7 @@ with a soft subtitle track.
 See `RESUME.md`. Quick reference (from this folder, using the repo's `.venv`):
 
 ```
-python checks/verify_anchors.py        # 326 checks must pass
+python checks/verify_anchors.py        # 337 checks must pass
 python tools/lint_scripts.py           # spoken text TTS-ready + timing estimates
 python tools/render.py E01 -q l        # draft
 python tools/stills.py E01 -q l        # beat-end stills for review
