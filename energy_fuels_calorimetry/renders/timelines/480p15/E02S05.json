@@ -1,0 +1,130 @@
+{
+ "scene": "E02S05",
+ "title": "Practice Q03: a bond-energy ledger",
+ "cls": "E02S05_Q03",
+ "fps": 15,
+ "duration": 191.4,
+ "beats": [
+  {
+   "key": "E02S05.b01",
+   "start": 0.0,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero three is worth four marks. Read it, then pause and try it.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b02",
+   "start": 19.4,
+   "speech": 20.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "We're asked for the enthalpy change for the equation as written, so for one mole of hydrogen reacting with one mole of chlorine to form two moles of hydrogen chloride. The model is: energy absorbed to break all reactant bonds, minus energy released when all product bonds form.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b03",
+   "start": 40.2,
+   "speech": 16.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Start the ledger with bonds broken. One hydrogen to hydrogen bond, at four hundred and thirty-six kilojoules per mole, and one chlorine to chlorine bond, at two hundred and forty-three. Total energy absorbed: six hundred and seventy-nine kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b04",
+   "start": 57.0,
+   "speech": 16.6241,
+   "audio": null,
+   "estimated": true,
+   "text": "Now bonds formed. The equation makes two moles of hydrogen chloride, so two hydrogen to chlorine bonds form, each releasing four hundred and thirty-one. Total energy released: eight hundred and sixty-two kilojoules. Don't miss that coefficient of two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b05",
+   "start": 74.0,
+   "speech": 9.4634,
+   "audio": null,
+   "estimated": true,
+   "text": "Before subtracting, predict the sign. More energy is released than absorbed, so the reaction should be exothermic, with a negative enthalpy change.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b06",
+   "start": 83.8,
+   "speech": 17.9193,
+   "audio": null,
+   "estimated": true,
+   "text": "Enthalpy change equals energy absorbed minus energy released: six hundred and seventy-nine minus eight hundred and sixty-two, which is negative one hundred and eighty-three kilojoules for the equation as written. It's an estimate, because average bond enthalpies are averages over many compounds.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b07",
+   "start": 102.0667,
+   "speech": 21.2297,
+   "audio": null,
+   "estimated": true,
+   "text": "For the explanation mark, link cause and effect: the reaction is exothermic because more energy is released forming the two hydrogen to chlorine bonds than is absorbed breaking the hydrogen to hydrogen and chlorine to chlorine bonds. Simply saying \"bonds are formed\" misses the comparison, which is the whole point.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b08",
+   "start": 123.6667,
+   "speech": 10.7048,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: one for the broken total, one for the formed total, one for the subtraction with the correct sign, and one for the causal explanation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b09",
+   "start": 134.7333,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "Two tempting errors. Adding every bond energy together gives a large positive number with no physical meaning. And treating bond breaking as the release step flips the sign, giving positive one hundred and eighty-three. In both cases, the first wrong step is not separating energy in from energy out.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b10",
+   "start": 156.0667,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Changed condition. Suppose the product bond were weaker, so that forming the two new bonds released only six hundred kilojoules in total. Would the reaction still be exothermic?",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E02S05.b11",
+   "start": 174.6,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "No. Six hundred and seventy-nine absorbed minus six hundred released gives positive seventy-nine kilojoules, so it would be endothermic. The sign depends on the balance between breaking and forming, not on bonds being broken or formed alone.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

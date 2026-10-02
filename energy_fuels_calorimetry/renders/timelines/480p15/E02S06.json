@@ -1,0 +1,75 @@
+{
+ "scene": "E02S06",
+ "title": "Enthalpy, delta H and talking about signs",
+ "cls": "E02S06_Enthalpy",
+ "fps": 15,
+ "duration": 121.9333,
+ "beats": [
+  {
+   "key": "E02S06.b01",
+   "start": 0.0,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "Chemists summarise all of this with a quantity called enthalpy, written H. You can think of it as the total chemical energy, or heat content, of a system at constant pressure. We can't measure absolute enthalpy, but we can measure changes in it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S06.b02",
+   "start": 18.6667,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "The enthalpy change, delta H, equals the enthalpy of the products minus the enthalpy of the reactants. On a diagram, reactants sit at one level and products at another. For the hydrogen chloride reaction, the products sit one hundred and eighty-three kilojoules lower.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S06.b03",
+   "start": 37.3333,
+   "speech": 20.5821,
+   "audio": null,
+   "estimated": true,
+   "text": "Because the products are lower, delta H is negative. The system has less enthalpy at the end, and the difference was transferred out to the surroundings as heat. A negative delta H means exothermic. A positive delta H means the products sit higher, and the reaction is endothermic.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S06.b04",
+   "start": 58.2667,
+   "speech": 24.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the language. Delta H equals negative one hundred and eighty-three kilojoules is a signed quantity describing the system. The same fact, said as energy released, is one hundred and eighty-three kilojoules released, a positive amount. Avoid saying \"negative one hundred and eighty-three kilojoules released\". That's a double negative, which would actually mean energy was absorbed.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S06.b05",
+   "start": 82.7333,
+   "speech": 12.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. One student writes \"delta H equals negative fifty kilojoules\". Another writes \"fifty kilojoules of energy is released\". Are they describing the same reaction? Pause and decide.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E02S06.b06",
+   "start": 103.2667,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "Yes. Both describe an exothermic change in which fifty kilojoules of energy leaves the system. One uses a signed enthalpy change, and the other uses the positive size of the energy released. Both are correct if each one is labelled clearly.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

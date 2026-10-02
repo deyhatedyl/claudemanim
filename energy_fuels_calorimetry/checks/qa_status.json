@@ -3,5 +3,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft (estimated timing). Every beat-end still inspected; layout defects fixed (clipped text S01/S02/S03, overlaps S04/S05/S06/S08). Automatic layout check: 0 warnings. Narration sync, pronunciation and final 1080p QA pending TTS access.",
   "final_qa": "pending"
+ },
+ "E02": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: exo/endo titles overlapping header, mispositioned 'energy in' arrow, magnet poles (now attract), \u0394H label overlap, long labels wrapped. Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

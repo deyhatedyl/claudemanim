@@ -1,0 +1,53 @@
+{
+ "scene": "E02S04",
+ "title": "Breaking bonds absorbs energy; making bonds releases it",
+ "cls": "E02S04_Bonds",
+ "fps": 15,
+ "duration": 72.1333,
+ "beats": [
+  {
+   "key": "E02S04.b01",
+   "start": 0.0,
+   "speech": 20.3483,
+   "audio": null,
+   "estimated": true,
+   "text": "So where does the energy come from? Start with a single hydrogen molecule. The two atoms are held together by a bond, an attraction between the nuclei and the shared electrons. To pull the atoms apart, you have to supply energy. Breaking a bond always absorbs energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S04.b02",
+   "start": 20.7333,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "Now run it the other way. When two separate hydrogen atoms come together and form a bond, they settle into a lower-energy arrangement, and energy is released to the surroundings. Making a bond always releases energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S04.b03",
+   "start": 36.5333,
+   "speech": 15.9766,
+   "audio": null,
+   "estimated": true,
+   "text": "Think of two strong magnets stuck together. Pulling them apart takes effort: that's bond breaking. Letting them snap together gives energy out: that's bond making. Neither magnet contains energy that pops out when you separate them.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S04.b04",
+   "start": 52.8667,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "So a reaction's overall energy change is a balance. Energy goes in to break the bonds in the reactants, and energy comes out when the bonds in the products form. If more energy comes out than went in, the reaction is exothermic overall.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "scene": "E02S08",
+ "title": "Oxygen counts too: partly oxidised fuels",
+ "cls": "E02S08_Oxygen",
+ "fps": 15,
+ "duration": 102.4667,
+ "beats": [
+  {
+   "key": "E02S08.b01",
+   "start": 0.0,
+   "speech": 23.6586,
+   "audio": null,
+   "estimated": true,
+   "text": "Combustion has one more bond to remember: oxygen's. When methane burns, the ledger breaks four carbon to hydrogen bonds and two oxygen to oxygen double bonds. Then it forms two carbon to oxygen double bonds in carbon dioxide and four oxygen to hydrogen bonds in water. Leaving out the oxygen bonds is a common slip.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S08.b02",
+   "start": 24.0,
+   "speech": 10.5248,
+   "audio": null,
+   "estimated": true,
+   "text": "Combustion releases so much energy largely because the bonds in carbon dioxide and water are very strong, so forming them releases a lot of energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S08.b03",
+   "start": 34.8667,
+   "speech": 22.0034,
+   "audio": null,
+   "estimated": true,
+   "text": "Now compare three carbon compounds on a ladder of oxidation. Methane's carbon has no oxygen attached. In methanol, one oxygen is already attached to the carbon. Carbon dioxide is fully oxidised and can't burn any further. In oxidation numbers, the carbon goes from negative four, to negative two, to positive four.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S08.b04",
+   "start": 57.2667,
+   "speech": 26.3752,
+   "audio": null,
+   "estimated": true,
+   "text": "A fuel that is already partly oxidised has, in a sense, already done some of its combustion. So burning it has less further oxidation to do, and that tends to release less energy. The data fit this idea: one mole of methane releases eight hundred and ninety kilojoules, while one mole of methanol, also with one carbon, releases seven hundred and twenty-six.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S08.b05",
+   "start": 84.0,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "But treat this as a qualitative idea, not a shortcut. An exact comparison needs the full balanced reaction, the states of the products, and a consistent basis, such as per mole or per gram. We'll compare fuels carefully in later episodes.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

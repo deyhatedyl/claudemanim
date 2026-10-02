@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T17:45:35",
+ "updated": "2026-10-02T17:56:48",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -161,11 +161,152 @@
   },
   "E02": {
    "title": "Where reaction energy comes from",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep02.md",
+    "sha": "90c025049b318ea8",
+    "beats": 47,
+    "words": 1820,
+    "est_minutes": 14.4,
+    "anchors": "Q03,Q04",
+    "coverage": "C08,C09,C10"
+   },
+   "scenes_code": {
+    "path": "scenes/ep02.py",
+    "sha": "0cc6dbe89192872c"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E02S01",
+     "title": "Retrieval check and the big question",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 77.4,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S02",
+     "title": "System, surroundings, heat and temperature",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 73.6,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S03",
+     "title": "Exothermic and endothermic",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 65.1333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S04",
+     "title": "Breaking bonds absorbs energy; making bonds releases it",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 72.1333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S05",
+     "title": "Practice Q03: a bond-energy ledger",
+     "beats": 11,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 191.4,
+      "fresh": true,
+      "estimated_beats": 11,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S06",
+     "title": "Enthalpy, delta H and talking about signs",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 121.9333,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S07",
+     "title": "Practice Q04: an endothermic change",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 96.6667,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S08",
+     "title": "Oxygen counts too: partly oxidised fuels",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 102.4667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E02S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 60.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 47,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 861.26,
+    "captions": [
+     "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: exo/endo titles overlapping header, mispositioned 'energy in' arrow, magnet poles (now attract), \u0394H label overlap, long labels wrapped. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E03": {
    "title": "Energy profiles and thermochemical equations",
@@ -264,5 +405,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 16.9
+ "series_est_minutes": 31.3
 }

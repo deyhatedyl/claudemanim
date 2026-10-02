@@ -1,0 +1,53 @@
+{
+ "scene": "E02S03",
+ "title": "Exothermic and endothermic",
+ "cls": "E02S03_ExoEndo",
+ "fps": 15,
+ "duration": 65.1333,
+ "beats": [
+  {
+   "key": "E02S03.b01",
+   "start": 0.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "In an exothermic reaction, energy is transferred from the system to the surroundings. The surroundings gain that energy, so the water warms up and the thermometer reading rises. Combustion of a fuel is exothermic.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S03.b02",
+   "start": 15.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "In an endothermic reaction, energy is transferred from the surroundings into the system. The surroundings lose energy, so the water cools and the thermometer reading falls. An instant cold pack is a familiar example.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S03.b03",
+   "start": 30.0,
+   "speech": 17.0917,
+   "audio": null,
+   "estimated": true,
+   "text": "We can attach signs to these transfers. Energy gained counts as positive, and energy lost counts as negative. In an exothermic reaction the system loses energy, so q for the system is negative, while q for the surroundings is positive.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S03.b04",
+   "start": 47.4667,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "If no energy escapes anywhere else, these two are equal in size and opposite in sign. Whatever the system loses, the surroundings gain. That single idea, energy is conserved and only moves, underpins every calorimetry calculation in this series.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

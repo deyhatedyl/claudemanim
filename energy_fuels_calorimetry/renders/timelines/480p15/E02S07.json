@@ -1,0 +1,75 @@
+{
+ "scene": "E02S07",
+ "title": "Practice Q04: an endothermic change",
+ "cls": "E02S07_Q04",
+ "fps": 15,
+ "duration": 96.6667,
+ "beats": [
+  {
+   "key": "E02S07.b01",
+   "start": 0.0,
+   "speech": 7.3945,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero four is worth three marks. Pause the video and answer all three parts.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E02S07.b02",
+   "start": 19.8,
+   "speech": 9.0497,
+   "audio": null,
+   "estimated": true,
+   "text": "The dissolution absorbs energy, so energy is transferred from the calorimeter into the dissolving system. Every arrow points inward this time.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S07.b03",
+   "start": 29.2,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "The system's energy change is the energy absorbed per mole times the amount: eighteen point zero kilojoules per mole times zero point zero two five zero moles, which is positive zero point four five zero kilojoules. It's positive because the system gains energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S07.b04",
+   "start": 47.8667,
+   "speech": 11.1186,
+   "audio": null,
+   "estimated": true,
+   "text": "The calorimeter supplies that energy, so its change is negative zero point four five zero kilojoules. And because the calorimeter's contents lose energy, the temperature falls.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S07.b05",
+   "start": 59.3333,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "One mark each: the system's change with its positive sign, the calorimeter's change with its negative sign, and the falling temperature. The tempting error is giving both the same sign. Ask yourself who gains and who loses, and the signs follow.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S07.b06",
+   "start": 77.4,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "Notice that endothermic doesn't mean energy disappears. Every kilojoule the system absorbs came from the surroundings. If twice as much solute dissolved, twice as much energy would transfer, and the temperature would fall about twice as far, if the calorimeter stayed the same.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

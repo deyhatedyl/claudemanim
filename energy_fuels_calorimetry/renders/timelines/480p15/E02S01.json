@@ -1,0 +1,53 @@
+{
+ "scene": "E02S01",
+ "title": "Retrieval check and the big question",
+ "cls": "E02S01_Retrieval",
+ "fps": 15,
+ "duration": 77.4,
+ "beats": [
+  {
+   "key": "E02S01.b01",
+   "start": 0.0,
+   "speech": 11.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome back. In this episode we answer a question that sits underneath the whole topic: when a fuel burns, where does the energy actually come from?",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S01.b02",
+   "start": 11.6667,
+   "speech": 16.6241,
+   "audio": null,
+   "estimated": true,
+   "text": "First, a quick retrieval check from last time. Hydrogen burns: two hydrogen plus oxygen gives two water. If zero point five zero zero moles of hydrogen reacts completely, what amount of water forms? Pause and work it out.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E02S01.b03",
+   "start": 36.7333,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "The ratio of hydrogen to water is two to two, which is one to one. So zero point five zero zero moles of water forms. The coefficients gave us a mole ratio, exactly as in episode one.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S01.b04",
+   "start": 52.9333,
+   "speech": 23.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the big question. A common belief is that energy is stored inside chemical bonds and comes out when the bonds break. It sounds reasonable, but it's the wrong way round. By the end of this episode you'll be able to explain why, and to calculate an estimate of the energy change for a reaction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

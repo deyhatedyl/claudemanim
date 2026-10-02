@@ -5,6 +5,7 @@ Every component returns ordinary Manim mobjects so scenes can animate their part
 """
 from __future__ import annotations
 
+import re
 import sys
 from functools import lru_cache
 from pathlib import Path
@@ -28,8 +29,9 @@ def _w(s: str, size: int) -> float:
 
 
 def wrap(s: str, size: int = LABEL, width: float = 11.5) -> list[str]:
-    """Greedy word wrap using measured text widths."""
-    words, lines, cur = s.split(), [], ""
+    """Greedy word wrap using measured text widths. A number stays on the same line as its unit."""
+    s = re.sub(r"(\d)\s+(kJ|MJ|J|g|kg|mg|mol|L|mL|°C|%|K|s|kPa)\b", "\\1\u00a0\\2", s)
+    words, lines, cur = [w for w in s.split(" ") if w], [], ""
     for w in words:
         cand = (cur + " " + w).strip()
         if cur and _w(cand, size) > width:
@@ -420,3 +422,149 @@ def hladder(units: list[str], factors: list[str], color: str = TEXT, size: int =
         tl = T(f"÷{f}", size=SMALL, color=SYSTEM).next_to(l, DOWN, buff=0.06)
         arrows.add(VGroup(r, tr, l, tl))
     return VGroup(boxes, arrows)
+
+
+# ------------------------------------------------------------------ calorimetry apparatus
+class Thermometer(VGroup):
+    """Schematic thermometer whose liquid column follows self.level (a ValueTracker, 0..1)."""
+
+    def __init__(self, height: float = 2.4, level: float = 0.35, color: str = "#F1948A", **kw):
+        from manim import ValueTracker, always_redraw
+        super().__init__(**kw)
+        self.h = height
+        tube = RoundedRectangle(width=0.2, height=height, corner_radius=0.1, stroke_color=TEXT, stroke_width=2.5,
+                                fill_color=BG, fill_opacity=1)
+        bulb = Circle(radius=0.17, stroke_color=TEXT, stroke_width=2.5, fill_color=color, fill_opacity=1)
+        bulb.move_to(tube.get_bottom() + 0.05 * UP)
+        self.tube, self.bulb = tube, bulb
+        self.level = ValueTracker(level)
+        base = bulb.get_center()
+
+        def col():
+            hh = max(0.02, self.level.get_value() * (height - 0.25))
+            r = Rectangle(width=0.1, height=hh, stroke_width=0, fill_color=color, fill_opacity=1)
+            r.move_to(self.bulb.get_center() + UP * hh / 2)
+            return r
+        self.column = always_redraw(col)
+        ticks = VGroup(*[Line(LEFT * 0.05, RIGHT * 0.05, color=MUTED, stroke_width=1.5)
+                         .move_to(tube.get_bottom() + UP * (0.35 + i * (height - 0.5) / 6) + RIGHT * 0.17)
+                         for i in range(7)])
+        self.add(tube, ticks, self.column, bulb)
+
+
+def calorimeter(width: float = 3.2, height: float = 2.6, water_level: float = 0.65, heater: bool = False,
+                system: bool = False, thermometer: bool = True, stirrer: bool = True, lid: bool = True) -> VGroup:
+    """Schematic insulated cup calorimeter. Parts: .cup .water .lid .thermo .stirrer .heater .system"""
+    from .style import SURR, SYSTEM as SYS
+    bw = width * 0.82
+    outer = Polygon([-width / 2, height / 2, 0], [width / 2, height / 2, 0], [bw / 2, -height / 2, 0],
+                    [-bw / 2, -height / 2, 0], stroke_color=SURR, stroke_width=3, fill_color=PANEL, fill_opacity=1)
+    inner = outer.copy().scale(0.9).set_stroke(SURR, 1.5).set_fill(BG, 1)
+    yl = -height / 2 * 0.9 + height * 0.9 * water_level
+
+    def xat(y):
+        t = (y + height * 0.45) / (height * 0.9)
+        return (bw * 0.9 / 2) * (1 - t) + (width * 0.9 / 2) * t
+    water = Polygon([-bw * 0.45, -height * 0.45, 0], [bw * 0.45, -height * 0.45, 0], [xat(yl), yl, 0],
+                    [-xat(yl), yl, 0], stroke_width=0, fill_color=SURR, fill_opacity=0.35)
+    g = VGroup(outer, inner, water)
+    g.cup, g.water = VGroup(outer, inner), water
+    g.lid = g.thermo = g.stirrer = g.heater = g.system = None
+    if lid:
+        lid_m = RoundedRectangle(width=width * 1.08, height=0.2, corner_radius=0.05, stroke_color=SURR,
+                                 stroke_width=2.5, fill_color=PANEL, fill_opacity=1).next_to(outer, UP, buff=0)
+        g.add(lid_m)
+        g.lid = lid_m
+    if thermometer:
+        th = Thermometer(height=height * 1.0)
+        th.move_to([width * 0.22, -height * 0.05, 0]).align_to(water, DOWN).shift(0.15 * UP)
+        g.add(th)
+        g.thermo = th
+    if stirrer:
+        st = VGroup(Line([-width * 0.25, height / 2 + 0.6, 0], [-width * 0.25, -height * 0.32, 0], color=MUTED,
+                         stroke_width=3),
+                    Circle(radius=0.16, color=MUTED, stroke_width=3).move_to([-width * 0.25, -height * 0.32, 0]))
+        g.add(st)
+        g.stirrer = st
+    if heater:
+        pts = [np.array([-0.05 + 0.18 * np.sin(k * np.pi / 2), -height * 0.3 + 0.12 * k, 0]) for k in range(9)]
+        coil = VMobject(stroke_color=SYSTEM, stroke_width=4).set_points_smoothly(pts)
+        leads = VGroup(Line(pts[-1], [-0.05, height / 2 + 0.6, 0], color=SYSTEM, stroke_width=3),
+                       Line(pts[0] + 0.0 * UP, [0.25, height / 2 + 0.6, 0], color=SYSTEM, stroke_width=3))
+        h = VGroup(coil, leads)
+        g.add(h)
+        g.heater = h
+    if system:
+        from .style import SYSTEM as SC
+        sysb = DashedVMobject(Circle(radius=min(width, height) * 0.2, color=SC, stroke_width=3), num_dashes=20)
+        sysb.move_to([-0.15, -height * 0.18, 0])
+        g.add(sysb)
+        g.system = sysb
+    return g
+
+
+def enthalpy_axis(height: float = 4.2, label: str = "Enthalpy, H") -> VGroup:
+    ax = Arrow([0, -height / 2, 0], [0, height / 2, 0], buff=0, color=TEXT, stroke_width=3,
+               max_tip_length_to_length_ratio=0.06)
+    t = T(label, size=SMALL + 2).rotate(np.pi / 2).next_to(ax, LEFT, buff=0.15)
+    return VGroup(ax, t)
+
+
+def level(width: float, label: str, color: str = TEXT, size: int = LABEL, side=RIGHT) -> VGroup:
+    ln = Line(LEFT * width / 2, RIGHT * width / 2, color=color, stroke_width=5)
+    t = T(label, size=size, color=color).next_to(ln, side, buff=0.2)
+    g = VGroup(ln, t)
+    g.line, g.label = ln, t
+    return g
+
+
+def dH_arrow(y_from: float, y_to: float, x: float, text: str, color: str = UNKNOWN, size: int = LABEL,
+             side=RIGHT) -> VGroup:
+    a = Arrow([x, y_from, 0], [x, y_to, 0], buff=0, color=color, stroke_width=5,
+              max_tip_length_to_length_ratio=0.12)
+    t = T(text, size=size, color=color).next_to(a, side, buff=0.15)
+    return VGroup(a, t)
+
+
+def ledger(broken: list[tuple[str, str]], formed: list[tuple[str, str]], broken_total: str, formed_total: str,
+           width: float = 5.6, size: int = LABEL) -> VGroup:
+    """Two-column bond ledger. Each column: header, rows (desc, value), total.
+    Returns VGroup(left, right) with attributes .rows and .total on each column."""
+    from .style import SYSTEM as SC, USEFUL
+
+    def col(title, sub, rows, total, color):
+        h1 = TB(title, size=size + 2, color=color)
+        h2 = T(sub, size=SMALL, color=color)
+        hd = VGroup(h1, h2).arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+        rr = VGroup()
+        for d, v in rows:
+            dt = T(d, size=size)
+            vt = T(v, size=size) if v else Dot(radius=0.001, fill_opacity=0, stroke_width=0)
+            vt.move_to([width / 2 - 0.3 - vt.width / 2, 0, 0])
+            dt.move_to([-width / 2 + 0.3 + dt.width / 2, 0, 0])
+            rr.add(VGroup(dt, vt))
+        rr.arrange(DOWN, buff=0.18)
+        for r in rr:
+            r[0].align_to([-width / 2 + 0.3, 0, 0], LEFT)
+            r[1].align_to([width / 2 - 0.3, 0, 0], RIGHT)
+        tl = Line(LEFT * (width / 2 - 0.2), RIGHT * (width / 2 - 0.2), color=color, stroke_width=2)
+        tt = VGroup(TB("Total", size=size, color=color), TB(total, size=size, color=color))
+        tt[0].align_to([-width / 2 + 0.3, 0, 0], LEFT)
+        tt[1].align_to([width / 2 - 0.3, 0, 0], RIGHT)
+        body = VGroup(hd, rr, tl, tt).arrange(DOWN, buff=0.2)
+        hd.align_to([-width / 2 + 0.3, 0, 0], LEFT)
+        for r in rr:
+            r[0].align_to([-width / 2 + 0.3, 0, 0], LEFT)
+            r[1].align_to([width / 2 - 0.3, 0, 0], RIGHT)
+        tt[0].align_to([-width / 2 + 0.3, 0, 0], LEFT)
+        tt[1].align_to([width / 2 - 0.3, 0, 0], RIGHT)
+        box = RoundedRectangle(width=width, height=body.height + 0.45, corner_radius=0.15, stroke_color=color,
+                               stroke_width=2.5, fill_color=PANEL, fill_opacity=0.95).move_to(body)
+        c = VGroup(box, hd, rr, tl, tt)
+        c.box, c.head, c.rows, c.line, c.total = box, hd, rr, tl, tt
+        return c
+    left = col("Bonds broken", "energy absorbed (in)", broken, broken_total, SC)
+    right = col("Bonds formed", "energy released (out)", formed, formed_total, USEFUL)
+    g = VGroup(left, right).arrange(RIGHT, buff=0.4, aligned_edge=UP)
+    g.left, g.right = left, right
+    return g

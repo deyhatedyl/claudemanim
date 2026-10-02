@@ -1,0 +1,53 @@
+{
+ "scene": "E02S02",
+ "title": "System, surroundings, heat and temperature",
+ "cls": "E02S02_System",
+ "fps": 15,
+ "duration": 73.6,
+ "beats": [
+  {
+   "key": "E02S02.b01",
+   "start": 0.0,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "To talk about energy changes precisely, we split the world in two. The system is the reacting chemicals themselves, the substances whose bonds are changing. Everything else is the surroundings: the water they're dissolved in, the cup, the thermometer, the air.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S02.b02",
+   "start": 18.0667,
+   "speech": 18.9269,
+   "audio": null,
+   "estimated": true,
+   "text": "When a reaction happens, energy can be transferred across the boundary between the system and the surroundings. Energy transferred because of a temperature difference is called heat. So heat is not a substance that flows around. It's a name for energy on the move.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S02.b03",
+   "start": 37.3333,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Temperature is different. Temperature measures how hot something is, which reflects the average kinetic energy of its particles. It is not the total amount of energy something contains.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S02.b04",
+   "start": 49.8,
+   "speech": 22.831,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's an example. A cup of tea at eighty degrees is hotter than a bath at forty degrees. But the bath contains far more water, so it holds far more thermal energy. Higher temperature does not mean more energy. In calorimetry we'll use temperature changes to work out how much heat was transferred.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

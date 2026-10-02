@@ -1,0 +1,72 @@
+{
+ "episode": "E02",
+ "quality": "480p15",
+ "output": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 47,
+ "beats_with_audio": 0,
+ "duration": 861.26,
+ "scenes": [
+  {
+   "scene": "E02S01",
+   "title": "Retrieval check and the big question",
+   "start": 0.0,
+   "duration": 77.399674
+  },
+  {
+   "scene": "E02S02",
+   "title": "System, surroundings, heat and temperature",
+   "start": 77.399674,
+   "duration": 73.599349
+  },
+  {
+   "scene": "E02S03",
+   "title": "Exothermic and endothermic",
+   "start": 150.99902300000002,
+   "duration": 65.133008
+  },
+  {
+   "scene": "E02S04",
+   "title": "Breaking bonds absorbs energy; making bonds releases it",
+   "start": 216.13203100000004,
+   "duration": 72.133008
+  },
+  {
+   "scene": "E02S05",
+   "title": "Practice Q03: a bond-energy ledger",
+   "start": 288.26503900000006,
+   "duration": 191.399023
+  },
+  {
+   "scene": "E02S06",
+   "title": "Enthalpy, delta H and talking about signs",
+   "start": 479.66406200000006,
+   "duration": 121.930404
+  },
+  {
+   "scene": "E02S07",
+   "title": "Practice Q04: an endothermic change",
+   "start": 601.594466,
+   "duration": 96.666016
+  },
+  {
+   "scene": "E02S08",
+   "title": "Oxygen counts too: partly oxidised fuels",
+   "start": 698.260482,
+   "duration": 102.466667
+  },
+  {
+   "scene": "E02S09",
+   "title": "Recap and closing recall",
+   "start": 800.727149,
+   "duration": 60.533008
+  }
+ ],
+ "captions": [
+  "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

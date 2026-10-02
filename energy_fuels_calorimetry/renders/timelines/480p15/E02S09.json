@@ -1,0 +1,42 @@
+{
+ "scene": "E02S09",
+ "title": "Recap and closing recall",
+ "cls": "E02S09_Recap",
+ "fps": 15,
+ "duration": 60.5333,
+ "beats": [
+  {
+   "key": "E02S09.b01",
+   "start": 0.0,
+   "speech": 21.7697,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's recap. The system is the reacting chemicals; the surroundings are everything else. Heat is energy transferred, and temperature measures how hot something is. Breaking bonds absorbs energy, and making bonds releases it. Delta H is products minus reactants, and a negative value means energy was released to the surroundings.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E02S09.b02",
+   "start": 22.1333,
+   "speech": 7.8083,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. In one sentence, explain why burning a fuel releases energy, using the words \"broken\" and \"formed\".",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E02S09.b03",
+   "start": 40.4,
+   "speech": 19.1607,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a strong answer: more energy is released when the bonds in the products are formed than is absorbed when the bonds in the reactants are broken. Next episode, we'll draw these changes as energy profiles and learn how to scale and reverse thermochemical equations.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
