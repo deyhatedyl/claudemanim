@@ -1,0 +1,53 @@
+{
+ "scene": "E09S04",
+ "title": "Stacking heat capacities and the lower bound",
+ "cls": "E09S04_Stack",
+ "fps": 15,
+ "duration": 59.7333,
+ "beats": [
+  {
+   "key": "E09S04.b01",
+   "start": 0.0,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "We can think of the calibration factor as two parts stacked together. The water's part is its mass times its specific heat capacity. The apparatus part is the energy per degree needed by the cup, probe, stirrer and heater.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S04.b02",
+   "start": 17.0667,
+   "speech": 11.9462,
+   "audio": null,
+   "estimated": true,
+   "text": "Adding them gives the calibration factor. This simple model assumes the parts just add, and that their heat capacities don't change over the small temperature range we use.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S04.b03",
+   "start": 29.4,
+   "speech": 18.5131,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a powerful check. The apparatus always needs some energy to warm up, so its part is positive. That means a correctly measured calibration factor must be larger than the water's part alone: C F is at least m c for the water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S04.b04",
+   "start": 48.2667,
+   "speech": 10.5248,
+   "audio": null,
+   "estimated": true,
+   "text": "If a calculated calibration factor comes out smaller than the water alone could account for, something has gone wrong in the measurements or the calculation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

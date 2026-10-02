@@ -1,0 +1,53 @@
+{
+ "scene": "E09S02",
+ "title": "More than the water gets heated",
+ "cls": "E09S02_MoreThanWater",
+ "fps": 15,
+ "duration": 62.6,
+ "beats": [
+  {
+   "key": "E09S02.b01",
+   "start": 0.0,
+   "speech": 10.291,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a solution calorimeter: an insulated cup with a lid, a measured volume of water, a stirrer, a temperature probe, and an electric heater.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S02.b02",
+   "start": 10.6667,
+   "speech": 17.9193,
+   "audio": null,
+   "estimated": true,
+   "text": "When energy goes in, it doesn't only warm the water. It also warms the inside of the cup, the probe, the stirrer and the heater itself. Those parts are part of what heats up, so they absorb some of the energy too.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S02.b03",
+   "start": 28.9333,
+   "speech": 19.9883,
+   "audio": null,
+   "estimated": true,
+   "text": "So instead of m c delta T for the water alone, we use a single number for the whole setup: the calibration factor, C F. It's the energy needed to raise the temperature of the calorimeter and its contents by one degree Celsius, in joules per degree.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S02.b04",
+   "start": 49.2667,
+   "speech": 12.36,
+   "audio": null,
+   "estimated": true,
+   "text": "The calibration factor belongs to this particular calorimeter with these particular contents. Change the cup, the probe, or the amount of liquid inside, and the calibration factor changes too.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

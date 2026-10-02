@@ -1,0 +1,53 @@
+{
+ "scene": "E09S03",
+ "title": "Electrical calibration: E = VIt, then CF = E / delta T",
+ "cls": "E09S03_EVIt",
+ "fps": 15,
+ "duration": 58.2,
+ "beats": [
+  {
+   "key": "E09S03.b01",
+   "start": 0.0,
+   "speech": 13.1876,
+   "audio": null,
+   "estimated": true,
+   "text": "To find the calibration factor, we put in a known amount of energy and measure the temperature rise. An electric heater is ideal, because we can measure the energy very precisely.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S03.b02",
+   "start": 13.5333,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "The electrical energy equals voltage times current times time: E equals V times I times t. Voltage in volts, current in amps, and time in seconds. Volts times amps gives watts, which are joules per second, so multiplying by seconds leaves joules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S03.b03",
+   "start": 32.0,
+   "speech": 13.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "Time must be in seconds. A four-minute heating period is two hundred and forty seconds. Using four instead of two hundred and forty would make the energy sixty times too small.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S03.b04",
+   "start": 45.7333,
+   "speech": 11.5324,
+   "audio": null,
+   "estimated": true,
+   "text": "Then the calibration factor is the energy supplied divided by the temperature rise it caused: C F equals E over delta T, in joules per degree Celsius.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

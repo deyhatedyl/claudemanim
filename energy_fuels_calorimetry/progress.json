@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:41:49",
+ "updated": "2026-10-02T18:50:43",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1216,11 +1216,152 @@
   },
   "E09": {
    "title": "Why calorimeters need calibration",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep09.md",
+    "sha": "a5f285cff220afb6",
+    "beats": 38,
+    "words": 1470,
+    "est_minutes": 11.8,
+    "anchors": "Q17,Q18",
+    "coverage": "C20,C21,C25,C08"
+   },
+   "scenes_code": {
+    "path": "scenes/ep09.py",
+    "sha": "7500b457f9bd6e46"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E09S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S02",
+     "title": "More than the water gets heated",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 62.6,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S03",
+     "title": "Electrical calibration: E = VIt, then CF = E / delta T",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 58.2,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S04",
+     "title": "Stacking heat capacities and the lower bound",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.7333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S05",
+     "title": "Practice Q17, part 1: calibrate, then use it",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 106.4,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S06",
+     "title": "Changing the contents changes CF",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 81.0,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S07",
+     "title": "Heat loss during calibration: follow the formula",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 91.6667,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S08",
+     "title": "Practice Q18: an impossible calibration factor",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 108.7333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E09S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 77.1333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 38,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 702.99,
+    "captions": [
+     "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E10": {
    "title": "Reaction calorimetry and molar enthalpy",
@@ -1263,5 +1404,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 104.9
+ "series_est_minutes": 116.7
 }

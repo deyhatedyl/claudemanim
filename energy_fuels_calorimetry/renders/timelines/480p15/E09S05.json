@@ -1,0 +1,64 @@
+{
+ "scene": "E09S05",
+ "title": "Practice Q17, part 1: calibrate, then use it",
+ "cls": "E09S05_Q17a",
+ "fps": 15,
+ "duration": 106.4,
+ "beats": [
+  {
+   "key": "E09S05.b01",
+   "start": 0.0,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero seventeen is worth six marks. Pause the video and work through it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E09S05.b02",
+   "start": 22.4,
+   "speech": 26.969,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. The electrical energy: six point zero zero volts times one point five zero amps times two hundred and forty seconds is two thousand one hundred and sixty joules. The temperature rose four point zero zero degrees, so the calibration factor is two thousand one hundred and sixty divided by four point zero zero: five hundred and forty joules per degree Celsius.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S05.b03",
+   "start": 49.7333,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "Plausibility check: the water alone needs one hundred and twenty point zero times four point one eight, which is five hundred and one point six joules per degree. Five hundred and forty is a bit larger, exactly as the model requires.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S05.b04",
+   "start": 67.6,
+   "speech": 13.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. The apparatus contribution is the difference: five hundred and forty minus five hundred and one point six, which is thirty-eight point four joules per degree. It's small, but not zero.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S05.b05",
+   "start": 81.9333,
+   "speech": 23.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. In a later experiment with the same calorimeter and contents, the temperature rises five point six zero degrees. The heat gained by the calorimeter is the calibration factor times the rise: five hundred and forty times five point six zero, which is three thousand and twenty-four joules, about three point zero two kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

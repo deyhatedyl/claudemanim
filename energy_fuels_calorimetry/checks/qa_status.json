@@ -38,5 +38,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E09": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

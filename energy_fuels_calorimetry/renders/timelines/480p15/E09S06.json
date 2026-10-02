@@ -1,0 +1,53 @@
+{
+ "scene": "E09S06",
+ "title": "Changing the contents changes CF",
+ "cls": "E09S06_Contents",
+ "fps": 15,
+ "duration": 81.0,
+ "beats": [
+  {
+   "key": "E09S06.b01",
+   "start": 0.0,
+   "speech": 12.9538,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d. Now the water is increased to one hundred and fifty point zero grams, with the same cup, probe and stirrer. Can we still use five hundred and forty?",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S06.b02",
+   "start": 13.3333,
+   "speech": 26.969,
+   "audio": null,
+   "estimated": true,
+   "text": "No. The water's part grows: one hundred and fifty point zero times four point one eight is six hundred and twenty-seven point zero joules per degree. The apparatus part stays at thirty-eight point four, assuming the heat capacities simply add and don't change. So the new calibration factor is six hundred and sixty-five point four, about six hundred and sixty-five joules per degree.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S06.b03",
+   "start": 40.6667,
+   "speech": 23.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks for question seventeen: two for the energy and calibration factor, one for the apparatus contribution, one for the later heat, and two for the new calibration factor. The trap is keeping five hundred and forty after changing the contents, or using m c delta T for the water as if it included the apparatus.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S06.b04",
+   "start": 64.3333,
+   "speech": 15.6703,
+   "audio": null,
+   "estimated": true,
+   "text": "So a calibration factor can only be reused if the calorimeter and its contents match the calibration. In an exam, a question will either say the setup is matched, or give you enough information to adjust it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

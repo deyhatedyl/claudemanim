@@ -1,0 +1,42 @@
+{
+ "scene": "E09S01",
+ "title": "Retrieval check",
+ "cls": "E09S01_Retrieval",
+ "fps": 15,
+ "duration": 57.5333,
+ "beats": [
+  {
+   "key": "E09S01.b01",
+   "start": 0.0,
+   "speech": 15.0228,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode nine. Last time we assumed that all the useful heat went into the water. In a real calorimeter, that isn't quite true, and today we'll fix it with a technique called calibration.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E09S01.b02",
+   "start": 15.4,
+   "speech": 11.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "A quick check first. How much energy warms one hundred and twenty point zero grams of water by four point zero zero degrees? Pause and calculate.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E09S01.b03",
+   "start": 35.1333,
+   "speech": 21.4097,
+   "audio": null,
+   "estimated": true,
+   "text": "Using q equals m c delta T: one hundred and twenty point zero times four point one eight times four point zero zero, which is two thousand and six point four joules. Keep that number in mind; it's close to, but not the same as, what a real calorimeter needs.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

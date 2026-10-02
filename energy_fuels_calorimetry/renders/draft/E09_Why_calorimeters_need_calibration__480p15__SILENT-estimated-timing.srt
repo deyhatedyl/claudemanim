@@ -1,0 +1,743 @@
+1
+00:00:00,000 --> 00:00:01,818
+Welcome to episode nine.
+
+2
+00:00:01,858 --> 00:00:06,929
+Last time we assumed that all the
+useful heat went into the water.
+
+3
+00:00:06,969 --> 00:00:10,414
+In a real calorimeter,
+that isn't quite true,
+
+4
+00:00:10,454 --> 00:00:15,023
+and today we'll fix it with a
+technique called calibration.
+
+5
+00:00:15,400 --> 00:00:16,951
+A quick check first.
+
+6
+00:00:16,991 --> 00:00:23,158
+How much energy warms one hundred and
+twenty point zero grams of water by four
+
+7
+00:00:23,198 --> 00:00:25,067
+point zero zero degrees?
+
+8
+00:00:25,107 --> 00:00:26,699
+Pause and calculate.
+
+9
+00:00:35,133 --> 00:00:41,978
+Using q equals m c delta T: one hundred
+and twenty point zero times four point one
+
+10
+00:00:42,018 --> 00:00:48,863
+eight times four point zero zero, which is
+two thousand and six point four joules.
+
+11
+00:00:48,903 --> 00:00:53,984
+Keep that number in mind; it's
+close to, but not the same as,
+
+12
+00:00:54,024 --> 00:00:56,543
+what a real calorimeter needs.
+
+13
+00:00:57,533 --> 00:01:01,769
+Here's a solution calorimeter:
+an insulated cup with a lid,
+
+14
+00:01:01,809 --> 00:01:07,824
+a measured volume of water, a stirrer, a
+temperature probe, and an electric heater.
+
+15
+00:01:08,200 --> 00:01:12,576
+When energy goes in, it
+doesn't only warm the water.
+
+16
+00:01:12,616 --> 00:01:19,540
+It also warms the inside of the cup, the
+probe, the stirrer and the heater itself.
+
+17
+00:01:19,580 --> 00:01:26,119
+Those parts are part of what heats up,
+so they absorb some of the energy too.
+
+18
+00:01:26,466 --> 00:01:30,179
+So instead of m c delta
+T for the water alone,
+
+19
+00:01:30,219 --> 00:01:36,053
+we use a single number for the whole
+setup: the calibration factor, C F.
+
+20
+00:01:36,093 --> 00:01:42,825
+It's the energy needed to raise the
+temperature of the calorimeter and its contents
+
+21
+00:01:42,865 --> 00:01:46,455
+by one degree Celsius,
+in joules per degree.
+
+22
+00:01:46,800 --> 00:01:52,188
+The calibration factor belongs to this
+particular calorimeter with these particular
+
+23
+00:01:52,228 --> 00:01:52,776
+contents.
+
+24
+00:01:52,816 --> 00:01:56,569
+Change the cup, the probe, or
+the amount of liquid inside,
+
+25
+00:01:56,609 --> 00:01:59,160
+and the calibration factor changes too.
+
+26
+00:02:00,132 --> 00:02:06,202
+To find the calibration factor, we put in
+a known amount of energy and measure the
+
+27
+00:02:06,242 --> 00:02:07,468
+temperature rise.
+
+28
+00:02:07,508 --> 00:02:13,320
+An electric heater is ideal, because we
+can measure the energy very precisely.
+
+29
+00:02:13,666 --> 00:02:18,263
+The electrical energy equals
+voltage times current times time:
+
+30
+00:02:18,303 --> 00:02:20,282
+E equals V times I times t.
+
+31
+00:02:20,322 --> 00:02:24,395
+Voltage in volts, current in
+amps, and time in seconds.
+
+32
+00:02:24,435 --> 00:02:28,733
+Volts times amps gives watts,
+which are joules per second,
+
+33
+00:02:28,773 --> 00:02:31,765
+so multiplying by seconds leaves joules.
+
+34
+00:02:32,132 --> 00:02:33,947
+Time must be in seconds.
+
+35
+00:02:33,987 --> 00:02:38,738
+A four-minute heating period is
+two hundred and forty seconds.
+
+36
+00:02:38,778 --> 00:02:44,996
+Using four instead of two hundred and
+forty would make the energy sixty times too
+
+37
+00:02:45,036 --> 00:02:45,826
+small.
+
+38
+00:02:45,866 --> 00:02:52,172
+Then the calibration factor is the energy
+supplied divided by the temperature rise
+
+39
+00:02:52,212 --> 00:02:57,398
+it caused: C F equals E over delta
+T, in joules per degree Celsius.
+
+40
+00:02:58,332 --> 00:03:03,546
+We can think of the calibration
+factor as two parts stacked together.
+
+41
+00:03:03,586 --> 00:03:08,268
+The water's part is its mass
+times its specific heat capacity.
+
+42
+00:03:08,308 --> 00:03:13,523
+The apparatus part is the energy
+per degree needed by the cup, probe,
+
+43
+00:03:13,563 --> 00:03:15,010
+stirrer and heater.
+
+44
+00:03:15,398 --> 00:03:18,240
+Adding them gives the calibration factor.
+
+45
+00:03:18,280 --> 00:03:21,402
+This simple model assumes
+the parts just add,
+
+46
+00:03:21,442 --> 00:03:27,345
+and that their heat capacities don't change
+over the small temperature range we use.
+
+47
+00:03:27,732 --> 00:03:29,649
+Here's a powerful check.
+
+48
+00:03:29,689 --> 00:03:35,766
+The apparatus always needs some energy
+to warm up, so its part is positive.
+
+49
+00:03:35,806 --> 00:03:42,453
+That means a correctly measured calibration
+factor must be larger than the water's
+
+50
+00:03:42,493 --> 00:03:46,245
+part alone: C F is at
+least m c for the water.
+
+51
+00:03:46,598 --> 00:03:51,888
+If a calculated calibration factor comes
+out smaller than the water alone could
+
+52
+00:03:51,928 --> 00:03:57,123
+account for, something has gone wrong
+in the measurements or the calculation.
+
+53
+00:03:58,065 --> 00:04:02,213
+Practice question Q zero
+seventeen is worth six marks.
+
+54
+00:04:02,253 --> 00:04:05,046
+Pause the video and work through it.
+
+55
+00:04:20,465 --> 00:04:20,947
+Part a.
+
+56
+00:04:20,987 --> 00:04:26,832
+The electrical energy: six point zero
+zero volts times one point five zero amps
+
+57
+00:04:26,872 --> 00:04:32,867
+times two hundred and forty seconds is
+two thousand one hundred and sixty joules.
+
+58
+00:04:32,907 --> 00:04:36,592
+The temperature rose four
+point zero zero degrees,
+
+59
+00:04:36,632 --> 00:04:42,477
+so the calibration factor is two thousand
+one hundred and sixty divided by four
+
+60
+00:04:42,517 --> 00:04:47,434
+point zero zero: five hundred and
+forty joules per degree Celsius.
+
+61
+00:04:47,798 --> 00:04:53,897
+Plausibility check: the water alone needs
+one hundred and twenty point zero times
+
+62
+00:04:53,937 --> 00:04:59,959
+four point one eight, which is five hundred
+and one point six joules per degree.
+
+63
+00:04:59,999 --> 00:05:05,304
+Five hundred and forty is a bit
+larger, exactly as the model requires.
+
+64
+00:05:05,665 --> 00:05:06,145
+Part b.
+
+65
+00:05:06,185 --> 00:05:09,487
+The apparatus contribution
+is the difference:
+
+66
+00:05:09,527 --> 00:05:13,942
+five hundred and forty minus
+five hundred and one point six,
+
+67
+00:05:13,982 --> 00:05:17,730
+which is thirty-eight point
+four joules per degree.
+
+68
+00:05:17,770 --> 00:05:19,626
+It's small, but not zero.
+
+69
+00:05:19,998 --> 00:05:20,459
+Part c.
+
+70
+00:05:20,499 --> 00:05:24,826
+In a later experiment with the
+same calorimeter and contents,
+
+71
+00:05:24,866 --> 00:05:28,405
+the temperature rises five
+point six zero degrees.
+
+72
+00:05:28,445 --> 00:05:33,845
+The heat gained by the calorimeter is
+the calibration factor times the rise:
+
+73
+00:05:33,885 --> 00:05:37,353
+five hundred and forty
+times five point six zero,
+
+74
+00:05:37,393 --> 00:05:40,717
+which is three thousand
+and twenty-four joules,
+
+75
+00:05:40,757 --> 00:05:43,477
+about three point zero two kilojoules.
+
+76
+00:05:44,464 --> 00:05:45,017
+Part d.
+
+77
+00:05:45,057 --> 00:05:50,859
+Now the water is increased to one
+hundred and fifty point zero grams,
+
+78
+00:05:50,899 --> 00:05:53,992
+with the same cup, probe and stirrer.
+
+79
+00:05:54,032 --> 00:05:57,418
+Can we still use five hundred and forty?
+
+80
+00:05:57,798 --> 00:05:57,972
+No.
+
+81
+00:05:58,012 --> 00:06:03,893
+The water's part grows: one hundred and
+fifty point zero times four point one eight
+
+82
+00:06:03,933 --> 00:06:08,246
+is six hundred and twenty-seven
+point zero joules per degree.
+
+83
+00:06:08,286 --> 00:06:11,956
+The apparatus part stays at
+thirty-eight point four,
+
+84
+00:06:11,996 --> 00:06:16,022
+assuming the heat capacities
+simply add and don't change.
+
+85
+00:06:16,062 --> 00:06:21,088
+So the new calibration factor is six
+hundred and sixty-five point four,
+
+86
+00:06:21,128 --> 00:06:24,767
+about six hundred and
+sixty-five joules per degree.
+
+87
+00:06:25,131 --> 00:06:30,538
+Marks for question seventeen: two for
+the energy and calibration factor,
+
+88
+00:06:30,578 --> 00:06:35,001
+one for the apparatus contribution,
+one for the later heat,
+
+89
+00:06:35,041 --> 00:06:37,951
+and two for the new calibration factor.
+
+90
+00:06:37,991 --> 00:06:43,321
+The trap is keeping five hundred and
+forty after changing the contents,
+
+91
+00:06:43,361 --> 00:06:48,430
+or using m c delta T for the water
+as if it included the apparatus.
+
+92
+00:06:48,798 --> 00:06:54,749
+So a calibration factor can only be reused
+if the calorimeter and its contents
+
+93
+00:06:54,789 --> 00:06:56,439
+match the calibration.
+
+94
+00:06:56,479 --> 00:07:01,048
+In an exam, a question will
+either say the setup is matched,
+
+95
+00:07:01,088 --> 00:07:04,468
+or give you enough
+information to adjust it.
+
+96
+00:07:05,463 --> 00:07:09,485
+Suppose some heat escapes during
+the electrical calibration.
+
+97
+00:07:09,525 --> 00:07:12,735
+Which way does that push
+the calibration factor?
+
+98
+00:07:12,775 --> 00:07:13,547
+Don't guess.
+
+99
+00:07:13,587 --> 00:07:14,873
+Follow the formula.
+
+100
+00:07:15,263 --> 00:07:20,242
+The electrical energy is measured
+from the voltage, current and time,
+
+101
+00:07:20,282 --> 00:07:22,787
+so it's correct: it doesn't change.
+
+102
+00:07:22,827 --> 00:07:27,806
+But some of that energy leaks out
+instead of warming the calorimeter,
+
+103
+00:07:27,846 --> 00:07:32,355
+so the measured temperature rise
+is smaller than it should be.
+
+104
+00:07:32,730 --> 00:07:36,396
+The calibration factor
+is E divided by delta T.
+
+105
+00:07:36,436 --> 00:07:40,496
+The top stays the same, and
+the bottom gets smaller,
+
+106
+00:07:40,536 --> 00:07:45,504
+so the calibration factor comes
+out larger than the true value.
+
+107
+00:07:45,863 --> 00:07:51,322
+This surprises many students, because
+they've memorised "heat loss makes the answer
+
+108
+00:07:51,362 --> 00:07:51,919
+smaller".
+
+109
+00:07:51,959 --> 00:07:55,430
+That's true for some quantities
+and false for others.
+
+110
+00:07:55,470 --> 00:08:00,730
+The only reliable method is to trace the
+affected measurement through the actual
+
+111
+00:08:00,770 --> 00:08:01,570
+formula.
+
+112
+00:08:01,663 --> 00:08:02,455
+Checkpoint.
+
+113
+00:08:02,495 --> 00:08:08,580
+During a calibration, the student records
+the heating time as two hundred seconds
+
+114
+00:08:08,620 --> 00:08:11,680
+when it was really two hundred and forty.
+
+115
+00:08:11,720 --> 00:08:15,612
+Will the calibration factor
+be too big or too small?
+
+116
+00:08:15,652 --> 00:08:17,694
+Pause and trace it through.
+
+117
+00:08:26,130 --> 00:08:26,921
+Too small.
+
+118
+00:08:26,961 --> 00:08:31,327
+A shorter recorded time
+gives a smaller calculated E.
+
+119
+00:08:31,367 --> 00:08:36,187
+With the same measured delta
+T, E over delta T is smaller.
+
+120
+00:08:37,129 --> 00:08:41,163
+Practice question Q zero
+eighteen is worth four marks.
+
+121
+00:08:41,203 --> 00:08:44,523
+Pause the video and
+decide what you'd write.
+
+122
+00:08:56,929 --> 00:08:58,920
+Start with the lower bound.
+
+123
+00:08:58,960 --> 00:09:05,164
+One hundred point zero grams of water alone
+needs one hundred point zero times four
+
+124
+00:09:05,204 --> 00:09:09,753
+point one eight: four hundred
+and eighteen joules per degree.
+
+125
+00:09:09,793 --> 00:09:13,364
+The cup and probe have a
+positive heat capacity,
+
+126
+00:09:13,404 --> 00:09:19,006
+so the true calibration factor must be
+more than four hundred and eighteen.
+
+127
+00:09:19,046 --> 00:09:24,312
+Three hundred and sixty is less, so
+it's inconsistent with this setup.
+
+128
+00:09:24,662 --> 00:09:26,833
+Now the student's explanation.
+
+129
+00:09:26,873 --> 00:09:32,212
+Heat loss during calibration makes
+the measured temperature rise smaller,
+
+130
+00:09:32,252 --> 00:09:34,939
+and that makes E over delta T larger.
+
+131
+00:09:34,979 --> 00:09:39,360
+So heat loss would push the
+calibration factor up, not down.
+
+132
+00:09:39,400 --> 00:09:42,348
+It can't explain a value that's too low.
+
+133
+00:09:42,729 --> 00:09:44,596
+What could make it too low?
+
+134
+00:09:44,636 --> 00:09:50,387
+Anything that makes the calculated E too
+small, or the measured delta T too large.
+
+135
+00:09:50,427 --> 00:09:56,250
+For example, an overestimated temperature
+rise, perhaps from a misread thermometer,
+
+136
+00:09:56,290 --> 00:10:00,134
+or an underestimated electrical
+energy, such as a time,
+
+137
+00:10:00,174 --> 00:10:02,717
+current or voltage recorded too low.
+
+138
+00:10:03,062 --> 00:10:08,948
+Marks: one for the lower bound, one for
+concluding that three hundred and sixty is
+
+139
+00:10:08,988 --> 00:10:14,223
+inconsistent, one for the heat-loss
+direction, and one for a valid error.
+
+140
+00:10:14,263 --> 00:10:20,221
+Notice the pattern: a full-credit answer
+always says which measurement is affected,
+
+141
+00:10:20,261 --> 00:10:24,885
+which way it moves, and what that
+does to the calculated result.
+
+142
+00:10:25,861 --> 00:10:26,547
+To recap.
+
+143
+00:10:26,587 --> 00:10:32,992
+A calorimeter's calibration factor is the
+energy needed per degree for the whole
+
+144
+00:10:33,032 --> 00:10:34,845
+setup and its contents.
+
+145
+00:10:34,885 --> 00:10:40,727
+Find it electrically, with E equals
+V times I times t, with t in seconds,
+
+146
+00:10:40,767 --> 00:10:43,225
+then C F equals E over delta T.
+
+147
+00:10:43,265 --> 00:10:49,106
+It must exceed the water's m c, and
+it only applies to matching contents.
+
+148
+00:10:49,146 --> 00:10:53,658
+When something goes wrong,
+trace it through the formula.
+
+149
+00:10:53,995 --> 00:10:55,091
+Closing recall.
+
+150
+00:10:55,131 --> 00:11:00,997
+A heater runs at twelve point zero volts
+and two point zero zero amps for five
+
+151
+00:11:01,037 --> 00:11:05,389
+minutes, and the temperature
+rises six point zero degrees.
+
+152
+00:11:05,429 --> 00:11:07,776
+What is the calibration factor?
+
+153
+00:11:18,195 --> 00:11:20,843
+Five minutes is three hundred seconds.
+
+154
+00:11:20,883 --> 00:11:26,007
+E equals twelve point zero times two
+point zero zero times three hundred:
+
+155
+00:11:26,047 --> 00:11:28,412
+seven thousand two hundred joules.
+
+156
+00:11:28,452 --> 00:11:30,817
+Divided by six point zero degrees,
+
+157
+00:11:30,857 --> 00:11:35,698
+the calibration factor is one thousand
+two hundred joules per degree.
+
+158
+00:11:35,738 --> 00:11:41,357
+Next episode: using a calibrated calorimeter
+to measure the enthalpy change of a
+
+159
+00:11:41,397 --> 00:11:42,197
+reaction.
