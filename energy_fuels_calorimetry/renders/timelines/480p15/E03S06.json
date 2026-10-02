@@ -1,0 +1,53 @@
+{
+ "scene": "E03S06",
+ "title": "Thermochemical equations: scale and reverse",
+ "cls": "E03S06_Thermo",
+ "fps": 15,
+ "duration": 92.6667,
+ "beats": [
+  {
+   "key": "E03S06.b01",
+   "start": 0.0,
+   "speech": 22.831,
+   "audio": null,
+   "estimated": true,
+   "text": "A thermochemical equation is a balanced equation with a delta H attached. Here's hydrogen burning to form liquid water: delta H equals negative five hundred and seventy-two kilojoules. That value refers to the equation as written: two moles of hydrogen reacting with one mole of oxygen to form two moles of liquid water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S06.b02",
+   "start": 23.2,
+   "speech": 18.9269,
+   "audio": null,
+   "estimated": true,
+   "text": "If you double the equation, you double the amounts reacting, so you double delta H. Four moles of hydrogen burning releases twice as much energy: delta H becomes negative one thousand one hundred and forty-four kilojoules. The coefficients and delta H always scale together.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S06.b03",
+   "start": 42.4667,
+   "speech": 22.471,
+   "audio": null,
+   "estimated": true,
+   "text": "If you reverse the equation, the same energy change runs the other way, so the sign flips. Decomposing two moles of liquid water into hydrogen and oxygen has delta H equal to positive five hundred and seventy-two kilojoules. It takes as much energy to pull water apart as was released when it formed.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S06.b04",
+   "start": 65.3333,
+   "speech": 26.3752,
+   "audio": null,
+   "estimated": true,
+   "text": "Sometimes you want a molar quantity for one substance. Dividing the equation by two gives one mole of hydrogen forming one mole of water, with delta H equal to negative two hundred and eighty-six kilojoules. So the molar enthalpy of combustion of hydrogen is negative two hundred and eighty-six kilojoules per mole of hydrogen. Always say which substance \"per mole\" refers to.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

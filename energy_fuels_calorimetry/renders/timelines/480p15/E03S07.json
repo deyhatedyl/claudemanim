@@ -1,0 +1,53 @@
+{
+ "scene": "E03S07",
+ "title": "States matter: liquid or gaseous water",
+ "cls": "E03S07_States",
+ "fps": 15,
+ "duration": 61.1333,
+ "beats": [
+  {
+   "key": "E03S07.b01",
+   "start": 0.0,
+   "speech": 9.2297,
+   "audio": null,
+   "estimated": true,
+   "text": "Look closely at the states in that equation. The water is a liquid. What if the product were water vapour instead?",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S07.b02",
+   "start": 9.6,
+   "speech": 12.54,
+   "audio": null,
+   "estimated": true,
+   "text": "Turning liquid water into vapour absorbs energy: about forty-four kilojoules per mole at twenty-five degrees. So gaseous water sits higher in enthalpy than the same amount of liquid water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S07.b03",
+   "start": 22.5333,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "That means forming two moles of water vapour releases less energy than forming two moles of liquid water: about four hundred and eighty-four kilojoules instead of five hundred and seventy-two. You can't reuse negative five hundred and seventy-two if the product state changes. You need data for the states actually involved.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S07.b04",
+   "start": 44.7333,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "This is why states are never decoration in a thermochemical equation. Hot exhaust gases contain water vapour, while a calorimeter at room temperature mostly ends up with liquid water. Which value applies depends on the states.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

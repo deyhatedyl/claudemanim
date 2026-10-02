@@ -1,0 +1,42 @@
+{
+ "scene": "E03S01",
+ "title": "Retrieval check",
+ "cls": "E03S01_Retrieval",
+ "fps": 15,
+ "duration": 59.3333,
+ "beats": [
+  {
+   "key": "E03S01.b01",
+   "start": 0.0,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode three. Last time we saw where reaction energy comes from. Today we'll draw it, as an energy profile, and learn how to read and adjust thermochemical equations, which are the equations that come with an enthalpy change attached.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S01.b02",
+   "start": 17.8667,
+   "speech": 14.7352,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. First: does breaking a bond absorb energy or release it? Second: if the products have less enthalpy than the reactants, is delta H positive or negative? Pause and answer both.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E03S01.b03",
+   "start": 41.0667,
+   "speech": 17.2717,
+   "audio": null,
+   "estimated": true,
+   "text": "Breaking a bond absorbs energy. And if the products are lower in enthalpy, delta H, which is products minus reactants, is negative, so the reaction is exothermic. Hold on to both ideas; we're about to see them on a graph.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

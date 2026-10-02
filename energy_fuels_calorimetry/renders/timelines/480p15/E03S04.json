@@ -1,0 +1,64 @@
+{
+ "scene": "E03S04",
+ "title": "What a catalyst changes, and what it doesn't",
+ "cls": "E03S04_Catalyst",
+ "fps": 15,
+ "duration": 79.2,
+ "beats": [
+  {
+   "key": "E03S04.b01",
+   "start": 0.0,
+   "speech": 14.1952,
+   "audio": null,
+   "estimated": true,
+   "text": "A catalyst provides an alternative reaction pathway with a lower activation energy. On the profile, that's a second curve with a lower peak. Let's draw it as a dashed line over the original.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S04.b02",
+   "start": 14.5333,
+   "speech": 17.0917,
+   "audio": null,
+   "estimated": true,
+   "text": "Look at the endpoints. The catalysed path starts at the same reactant level and finishes at the same product level. The catalyst is not consumed, and it doesn't change what the reactants and products are, so their enthalpies don't change.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S04.b03",
+   "start": 32.0,
+   "speech": 10.291,
+   "audio": null,
+   "estimated": true,
+   "text": "So the catalyst lowers the forward activation energy, and the reverse activation energy by the same amount. But delta H is exactly the same.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S04.b04",
+   "start": 42.6667,
+   "speech": 10.4172,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. A student says: \"Adding a catalyst makes an exothermic reaction release more heat.\" Is that right? Pause and decide, with a reason.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E03S04.b05",
+   "start": 61.5333,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "No. For the same amount reacting, the heat released equals the size of delta H, and the catalyst doesn't change delta H. The reaction may reach the same result faster, but the energy released for that amount is unchanged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

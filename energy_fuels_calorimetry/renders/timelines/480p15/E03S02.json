@@ -1,0 +1,42 @@
+{
+ "scene": "E03S02",
+ "title": "The axes and the two endpoints",
+ "cls": "E03S02_Axes",
+ "fps": 15,
+ "duration": 58.6667,
+ "beats": [
+  {
+   "key": "E03S02.b01",
+   "start": 0.0,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "An energy profile has enthalpy on the vertical axis. The horizontal axis is called the reaction coordinate, or reaction progress. It is not time. It shows how far the atoms have got in rearranging from reactants into products, so a profile says nothing about how fast a reaction goes.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S02.b02",
+   "start": 21.3333,
+   "speech": 15.0228,
+   "audio": null,
+   "estimated": true,
+   "text": "Start every profile with the two endpoints. Draw a flat level for the reactants on the left, and a flat level for the products on the right. For an exothermic reaction, the products sit lower.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S02.b03",
+   "start": 36.7333,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "The vertical gap between the two levels is delta H. Measured from reactants down to products, it's negative here. Notice that delta H only depends on where the two endpoints sit. We haven't drawn anything in between yet, and we don't need to in order to know delta H.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

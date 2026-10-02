@@ -1,0 +1,72 @@
+{
+ "episode": "E03",
+ "quality": "480p15",
+ "output": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 42,
+ "beats_with_audio": 0,
+ "duration": 751.66,
+ "scenes": [
+  {
+   "scene": "E03S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 59.333008
+  },
+  {
+   "scene": "E03S02",
+   "title": "The axes and the two endpoints",
+   "start": 59.333008,
+   "duration": 58.66569
+  },
+  {
+   "scene": "E03S03",
+   "title": "Activation energy, forward and reverse",
+   "start": 117.99869799999999,
+   "duration": 83.464974
+  },
+  {
+   "scene": "E03S04",
+   "title": "What a catalyst changes, and what it doesn't",
+   "start": 201.46367199999997,
+   "duration": 79.199349
+  },
+  {
+   "scene": "E03S05",
+   "title": "Practice Q06: read the vertical distances",
+   "start": 280.66302099999996,
+   "duration": 139.266341
+  },
+  {
+   "scene": "E03S06",
+   "title": "Thermochemical equations: scale and reverse",
+   "start": 419.92936199999997,
+   "duration": 92.666667
+  },
+  {
+   "scene": "E03S07",
+   "title": "States matter: liquid or gaseous water",
+   "start": 512.5960289999999,
+   "duration": 61.133333
+  },
+  {
+   "scene": "E03S08",
+   "title": "Practice Q05: scaling, reversing and states",
+   "start": 573.7293619999999,
+   "duration": 117.266667
+  },
+  {
+   "scene": "E03S09",
+   "title": "Recap and closing recall",
+   "start": 690.9960289999999,
+   "duration": 60.666341
+  }
+ ],
+ "captions": [
+  "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

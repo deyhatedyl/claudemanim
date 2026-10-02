@@ -1,0 +1,64 @@
+{
+ "scene": "E03S03",
+ "title": "Activation energy, forward and reverse",
+ "cls": "E03S03_Activation",
+ "fps": 15,
+ "duration": 83.4667,
+ "beats": [
+  {
+   "key": "E03S03.b01",
+   "start": 0.0,
+   "speech": 16.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "Now join the endpoints with a curve. To get from reactants to products, bonds must start breaking before new ones fully form, so the energy first rises to a maximum, called the transition state, and then falls to the products.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S03.b02",
+   "start": 17.2667,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "The activation energy is the minimum energy needed to reach the transition state from the reactants. On the graph, it's the vertical distance from the reactant level up to the peak. That's the forward activation energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S03.b03",
+   "start": 33.0667,
+   "speech": 17.0917,
+   "audio": null,
+   "estimated": true,
+   "text": "Run the reaction backwards, from products to reactants, and you climb from the product level up to the same peak. That's the reverse activation energy. For an exothermic reaction it's bigger than the forward one, because the products start lower.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S03.b04",
+   "start": 50.5333,
+   "speech": 19.2331,
+   "audio": null,
+   "estimated": true,
+   "text": "So there are three vertical distances, and every one of them is a difference between two heights. Forward activation energy: peak minus reactants. Reverse activation energy: peak minus products. Delta H: products minus reactants. None of them is read straight off the axis.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S03.b05",
+   "start": 70.1333,
+   "speech": 12.36,
+   "audio": null,
+   "estimated": true,
+   "text": "For an endothermic reaction the picture flips. The products sit above the reactants, so delta H is positive, and the forward activation energy is the larger of the two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

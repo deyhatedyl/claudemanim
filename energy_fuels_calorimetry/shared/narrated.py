@@ -72,6 +72,9 @@ class NarratedScene(Scene):
         tex_dir = C.RENDERS / "media" / "Tex" / sid
         tex_dir.mkdir(parents=True, exist_ok=True)
         config.tex_dir = str(tex_dir)
+        text_dir = C.RENDERS / "media" / "texts" / sid
+        text_dir.mkdir(parents=True, exist_ok=True)
+        config.text_dir = str(text_dir)
         self._script = load_scene(sid)
         self._beats = {b.name: b for b in self._script.beats}
         self._order = [b.name for b in self._script.beats]

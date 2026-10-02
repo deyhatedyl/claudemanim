@@ -1,0 +1,64 @@
+{
+ "scene": "E03S08",
+ "title": "Practice Q05: scaling, reversing and states",
+ "cls": "E03S08_Q05",
+ "fps": 15,
+ "duration": 117.2667,
+ "beats": [
+  {
+   "key": "E03S08.b01",
+   "start": 0.0,
+   "speech": 9.4634,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero five, worth five marks, puts scaling, reversing and states together. Pause the video and attempt all three parts.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E03S08.b02",
+   "start": 24.8667,
+   "speech": 20.3483,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. Decomposing one mole of liquid water means reversing the equation and halving it. Reversing flips the sign; halving halves the value. So liquid water forms hydrogen gas plus half a mole of oxygen gas, with delta H equal to positive two hundred and eighty-six kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S08.b03",
+   "start": 45.6,
+   "speech": 25.3676,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. The negative five hundred and seventy-two refers to two moles of hydrogen, so one mole of hydrogen releases two hundred and eighty-six kilojoules. Zero point seven five zero moles therefore releases zero point seven five zero times two hundred and eighty-six, which is two hundred and fourteen point five kilojoules, reported as two hundred and fifteen kilojoules released.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S08.b04",
+   "start": 71.3333,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. No. If the product were water vapour, the products would sit higher in enthalpy, because vaporisation absorbs energy. So less energy would be released, and a different delta H value would be needed.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S08.b05",
+   "start": 86.9333,
+   "speech": 29.3979,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the reversed, halved equation with its enthalpy; two for the energy released; one for the state explanation. The tempting error is multiplying zero point seven five zero by five hundred and seventy-two, giving four hundred and twenty-nine kilojoules. That treats the equation's value as if it were per mole of hydrogen. The first wrong step is not asking what amount the delta H refers to.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

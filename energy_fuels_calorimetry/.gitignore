@@ -4,3 +4,4 @@ checks/stills/
 logs/render_*.log
 __pycache__/
 *.pyc
+media/

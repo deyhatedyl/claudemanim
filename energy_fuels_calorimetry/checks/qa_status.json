@@ -8,5 +8,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: exo/endo titles overlapping header, mispositioned 'energy in' arrow, magnet poles (now attract), \u0394H label overlap, long labels wrapped. Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E03": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: profile label collisions (labels moved to arrow tops, legend for catalysed path, wider reactant flats), Q06 axes inside safe area, state-diagram arrow/label overlaps. Q06 profile drawn to scale from the question data (80/25/150/110). Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

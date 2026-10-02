@@ -568,3 +568,62 @@ def ledger(broken: list[tuple[str, str]], formed: list[tuple[str, str]], broken_
     g = VGroup(left, right).arrange(RIGHT, buff=0.4, aligned_edge=UP)
     g.left, g.right = left, right
     return g
+
+
+# ------------------------------------------------------------------ energy profiles
+def profile_fn(R: float, TS: float, P: float, x0: float = 2.0, xp: float = 5.0, x1: float = 8.0):
+    """Smooth (C1) enthalpy curve: flat at R until x0, cosine rise to TS at xp, cosine fall to P at x1, then flat."""
+    def f(x):
+        if x <= x0:
+            return R
+        if x <= xp:
+            t = (x - x0) / (xp - x0)
+            return R + (TS - R) * (1 - np.cos(np.pi * t)) / 2
+        if x <= x1:
+            t = (x - xp) / (x1 - xp)
+            return TS + (P - TS) * (1 - np.cos(np.pi * t)) / 2
+        return P
+    return f
+
+
+def profile_axes(y_max: float = 175, y_step: float = 25, width: float = 7.0, height: float = 4.6,
+                 numbers: bool = True, y_label: str = "Enthalpy (kJ mol⁻¹)") -> VGroup:
+    """Axes for an energy profile. x: reaction coordinate 0..10 (not time). Returns VGroup(axes, xlab, ylab)."""
+    from manim import Axes
+    ax = Axes(x_range=[0, 10, 1], y_range=[0, y_max, y_step], x_length=width, y_length=height,
+              axis_config=dict(color=TEXT, stroke_width=2.5, include_ticks=False, tip_length=0.18),
+              y_axis_config=dict(include_ticks=numbers, include_numbers=numbers,
+                                 numbers_to_include=np.arange(0, y_max + 1, y_step) if numbers else [],
+                                 font_size=24, decimal_number_config=dict(num_decimal_places=0, color=MUTED)))
+    xl = T("Reaction coordinate (not time)", size=SMALL, color=MUTED).next_to(ax.x_axis, DOWN, buff=0.18)
+    yl = T(y_label, size=SMALL, color=MUTED).rotate(np.pi / 2).next_to(ax.y_axis, LEFT, buff=0.55 if numbers else 0.2)
+    g = VGroup(ax, xl, yl)
+    g.ax, g.xlab, g.ylab = ax, xl, yl
+    return g
+
+
+def profile_curve(ax, R: float, TS: float, P: float, color: str = TEXT, dashed: bool = False, width: float = 4,
+                  x0: float = 2.0, xp: float = 5.0, x1: float = 8.0):
+    c = ax.plot(profile_fn(R, TS, P, x0, xp, x1), x_range=[0.4, 9.6, 0.02], color=color, stroke_width=width,
+                use_smoothing=False)
+    return DashedVMobject(c, num_dashes=60) if dashed else c
+
+
+def v_arrow(ax, x: float, y_from: float, y_to: float, text: str, color: str, side=RIGHT, size: int = SMALL + 2,
+            double: bool = False, at: str = "mid") -> VGroup:
+    """Vertical arrow between two enthalpy values (data coordinates) with a label.
+    at="mid" centres the label on the arrow; "top"/"bottom" puts it beside the upper/lower end."""
+    from manim import DoubleArrow
+    p, q = ax.c2p(x, y_from), ax.c2p(x, y_to)
+    cls = DoubleArrow if double else Arrow
+    a = cls(p, q, buff=0, color=color, stroke_width=4, max_tip_length_to_length_ratio=0.12, tip_length=0.18)
+    t = T(text, size=size, color=color).next_to(a, side, buff=0.1)
+    if at == "top":
+        t.align_to(a, UP).shift(0.12 * DOWN)
+    elif at == "bottom":
+        t.align_to(a, DOWN).shift(0.12 * UP)
+    return VGroup(a, t)
+
+
+def h_guide(ax, y: float, x_from: float, x_to: float, color: str = FAINT) -> DashedLine:
+    return DashedLine(ax.c2p(x_from, y), ax.c2p(x_to, y), color=color, stroke_width=1.5, dash_length=0.08)

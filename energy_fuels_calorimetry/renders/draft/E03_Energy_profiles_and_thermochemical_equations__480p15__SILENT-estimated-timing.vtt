@@ -1,0 +1,656 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.768
+Welcome to episode three.
+
+00:00:01.808 --> 00:00:05.385
+Last time we saw where
+reaction energy comes from.
+
+00:00:05.425 --> 00:00:08.423
+Today we'll draw it, as an energy profile,
+
+00:00:08.463 --> 00:00:12.619
+and learn how to read and adjust
+thermochemical equations,
+
+00:00:12.659 --> 00:00:17.506
+which are the equations that come
+with an enthalpy change attached.
+
+00:00:17.867 --> 00:00:19.152
+Two quick checks.
+
+00:00:19.192 --> 00:00:23.518
+First: does breaking a bond
+absorb energy or release it?
+
+00:00:23.558 --> 00:00:28.352
+Second: if the products have less
+enthalpy than the reactants,
+
+00:00:28.392 --> 00:00:30.847
+is delta H positive or negative?
+
+00:00:30.887 --> 00:00:32.602
+Pause and answer both.
+
+00:00:41.067 --> 00:00:43.483
+Breaking a bond absorbs energy.
+
+00:00:43.523 --> 00:00:47.523
+And if the products are
+lower in enthalpy, delta H,
+
+00:00:47.563 --> 00:00:53.703
+which is products minus reactants, is
+negative, so the reaction is exothermic.
+
+00:00:53.743 --> 00:00:58.338
+Hold on to both ideas; we're
+about to see them on a graph.
+
+00:00:59.333 --> 00:01:03.192
+An energy profile has enthalpy
+on the vertical axis.
+
+00:01:03.232 --> 00:01:08.891
+The horizontal axis is called the reaction
+coordinate, or reaction progress.
+
+00:01:08.931 --> 00:01:10.016
+It is not time.
+
+00:01:10.056 --> 00:01:16.015
+It shows how far the atoms have got in
+rearranging from reactants into products,
+
+00:01:16.055 --> 00:01:20.329
+so a profile says nothing
+about how fast a reaction goes.
+
+00:01:20.666 --> 00:01:24.044
+Start every profile
+with the two endpoints.
+
+00:01:24.084 --> 00:01:27.860
+Draw a flat level for the
+reactants on the left,
+
+00:01:27.900 --> 00:01:31.595
+and a flat level for the
+products on the right.
+
+00:01:31.635 --> 00:01:35.689
+For an exothermic reaction,
+the products sit lower.
+
+00:01:36.066 --> 00:01:40.098
+The vertical gap between
+the two levels is delta H.
+
+00:01:40.138 --> 00:01:44.968
+Measured from reactants down to
+products, it's negative here.
+
+00:01:45.008 --> 00:01:50.077
+Notice that delta H only depends
+on where the two endpoints sit.
+
+00:01:50.117 --> 00:01:53.350
+We haven't drawn anything in between yet,
+
+00:01:53.390 --> 00:01:57.062
+and we don't need to in
+order to know delta H.
+
+00:01:57.999 --> 00:02:00.701
+Now join the endpoints with a curve.
+
+00:02:00.741 --> 00:02:03.291
+To get from reactants to products,
+
+00:02:03.331 --> 00:02:07.329
+bonds must start breaking
+before new ones fully form,
+
+00:02:07.369 --> 00:02:12.509
+so the energy first rises to a
+maximum, called the transition state,
+
+00:02:12.549 --> 00:02:14.910
+and then falls to the products.
+
+00:02:15.265 --> 00:02:20.943
+The activation energy is the minimum energy
+needed to reach the transition state
+
+00:02:20.983 --> 00:02:22.301
+from the reactants.
+
+00:02:22.341 --> 00:02:28.018
+On the graph, it's the vertical distance
+from the reactant level up to the peak.
+
+00:02:28.058 --> 00:02:30.702
+That's the forward activation energy.
+
+00:02:31.065 --> 00:02:34.910
+Run the reaction backwards,
+from products to reactants,
+
+00:02:34.950 --> 00:02:38.936
+and you climb from the product
+level up to the same peak.
+
+00:02:38.976 --> 00:02:41.549
+That's the reverse activation energy.
+
+00:02:41.589 --> 00:02:45.786
+For an exothermic reaction it's
+bigger than the forward one,
+
+00:02:45.826 --> 00:02:48.157
+because the products start lower.
+
+00:02:48.532 --> 00:02:51.219
+So there are three vertical distances,
+
+00:02:51.259 --> 00:02:55.381
+and every one of them is a
+difference between two heights.
+
+00:02:55.421 --> 00:02:58.826
+Forward activation energy:
+peak minus reactants.
+
+00:02:58.866 --> 00:03:02.199
+Reverse activation energy:
+peak minus products.
+
+00:03:02.239 --> 00:03:04.639
+Delta H: products minus reactants.
+
+00:03:04.679 --> 00:03:07.765
+None of them is read
+straight off the axis.
+
+00:03:08.132 --> 00:03:11.517
+For an endothermic reaction
+the picture flips.
+
+00:03:11.557 --> 00:03:16.059
+The products sit above the
+reactants, so delta H is positive,
+
+00:03:16.099 --> 00:03:20.492
+and the forward activation
+energy is the larger of the two.
+
+00:03:21.464 --> 00:03:27.691
+A catalyst provides an alternative reaction
+pathway with a lower activation energy.
+
+00:03:27.731 --> 00:03:31.919
+On the profile, that's a second
+curve with a lower peak.
+
+00:03:31.959 --> 00:03:35.659
+Let's draw it as a dashed
+line over the original.
+
+00:03:35.997 --> 00:03:37.564
+Look at the endpoints.
+
+00:03:37.604 --> 00:03:43.188
+The catalysed path starts at the same
+reactant level and finishes at the same
+
+00:03:43.228 --> 00:03:44.211
+product level.
+
+00:03:44.251 --> 00:03:50.273
+The catalyst is not consumed, and it doesn't
+change what the reactants and products
+
+00:03:50.313 --> 00:03:53.089
+are, so their enthalpies don't change.
+
+00:03:53.464 --> 00:03:57.376
+So the catalyst lowers the
+forward activation energy,
+
+00:03:57.416 --> 00:04:01.328
+and the reverse activation
+energy by the same amount.
+
+00:04:01.368 --> 00:04:03.755
+But delta H is exactly the same.
+
+00:04:04.130 --> 00:04:04.909
+Checkpoint.
+
+00:04:04.949 --> 00:04:11.085
+A student says: "Adding a catalyst makes
+an exothermic reaction release more heat."
+
+00:04:11.125 --> 00:04:12.126
+Is that right?
+
+00:04:12.166 --> 00:04:14.548
+Pause and decide, with a reason.
+
+00:04:22.997 --> 00:04:23.188
+No.
+
+00:04:23.228 --> 00:04:28.952
+For the same amount reacting, the heat
+released equals the size of delta H,
+
+00:04:28.992 --> 00:04:32.026
+and the catalyst doesn't change delta H.
+
+00:04:32.066 --> 00:04:35.561
+The reaction may reach
+the same result faster,
+
+00:04:35.601 --> 00:04:39.675
+but the energy released for
+that amount is unchanged.
+
+00:04:40.663 --> 00:04:44.917
+Here's practice question Q
+zero six, worth five marks.
+
+00:04:44.957 --> 00:04:48.058
+Pause the video and try all five parts.
+
+00:05:00.463 --> 00:05:03.737
+Let's draw the profile
+to scale from the data.
+
+00:05:03.777 --> 00:05:06.978
+Reactants at eighty,
+products at twenty-five,
+
+00:05:07.018 --> 00:05:10.292
+the uncatalysed peak at
+one hundred and fifty,
+
+00:05:10.332 --> 00:05:13.605
+and the catalysed peak
+at one hundred and ten.
+
+00:05:13.645 --> 00:05:19.624
+All in kilojoules per mole of reaction,
+measured from the same arbitrary reference.
+
+00:05:19.996 --> 00:05:23.628
+The forward activation energy
+is peak minus reactants:
+
+00:05:23.668 --> 00:05:28.632
+one hundred and fifty minus eighty,
+which is seventy kilojoules per mole.
+
+00:05:28.996 --> 00:05:32.446
+The reverse activation energy
+is peak minus products:
+
+00:05:32.486 --> 00:05:35.080
+one hundred and fifty minus twenty-five,
+
+00:05:35.120 --> 00:05:38.874
+which is one hundred and
+twenty-five kilojoules per mole.
+
+00:05:39.263 --> 00:05:43.166
+Delta H is products minus reactants:
+twenty-five minus eighty,
+
+00:05:43.206 --> 00:05:46.282
+which is negative fifty-five
+kilojoules per mole.
+
+00:05:46.322 --> 00:05:51.155
+It's negative, and the products are
+lower, so that's consistent: exothermic.
+
+00:05:51.530 --> 00:05:57.041
+The catalysed forward activation energy is
+the catalysed peak minus the reactants:
+
+00:05:57.081 --> 00:06:01.821
+one hundred and ten minus eighty,
+which is thirty kilojoules per mole.
+
+00:06:02.196 --> 00:06:07.612
+And the explanation: the catalyst does
+not change the heat released by the same
+
+00:06:07.652 --> 00:06:13.136
+amount reacting, because the reactant and
+product levels, and therefore delta H,
+
+00:06:13.176 --> 00:06:14.143
+are unchanged.
+
+00:06:14.530 --> 00:06:16.246
+One mark for each part.
+
+00:06:16.286 --> 00:06:21.210
+The most common error is reading
+the peak, one hundred and fifty,
+
+00:06:21.250 --> 00:06:23.119
+as the activation energy.
+
+00:06:23.159 --> 00:06:27.549
+That's a height above an
+arbitrary zero, not a difference.
+
+00:06:27.589 --> 00:06:32.629
+The first wrong step is forgetting
+to subtract the reactant level.
+
+00:06:32.996 --> 00:06:36.667
+Prediction: what is the catalysed
+reverse activation energy?
+
+00:06:43.130 --> 00:06:48.373
+The catalysed peak minus the products:
+one hundred and ten minus twenty-five,
+
+00:06:48.413 --> 00:06:51.186
+which is eighty-five kilojoules per mole.
+
+00:06:51.226 --> 00:06:54.686
+It's forty less than the
+uncatalysed reverse value,
+
+00:06:54.726 --> 00:06:58.980
+the same forty that the catalyst
+took off the forward barrier.
+
+00:06:59.929 --> 00:07:05.180
+A thermochemical equation is a balanced
+equation with a delta H attached.
+
+00:07:05.220 --> 00:07:08.442
+Here's hydrogen burning
+to form liquid water:
+
+00:07:08.482 --> 00:07:13.081
+delta H equals negative five
+hundred and seventy-two kilojoules.
+
+00:07:13.121 --> 00:07:16.342
+That value refers to
+the equation as written:
+
+00:07:16.382 --> 00:07:22.285
+two moles of hydrogen reacting with one
+mole of oxygen to form two moles of liquid
+
+00:07:22.325 --> 00:07:23.089
+water.
+
+00:07:23.129 --> 00:07:28.886
+If you double the equation, you double the
+amounts reacting, so you double delta H.
+
+00:07:28.926 --> 00:07:33.146
+Four moles of hydrogen burning
+releases twice as much energy:
+
+00:07:33.186 --> 00:07:38.454
+delta H becomes negative one thousand
+one hundred and forty-four kilojoules.
+
+00:07:38.494 --> 00:07:42.056
+The coefficients and delta
+H always scale together.
+
+00:07:42.396 --> 00:07:47.746
+If you reverse the equation, the same
+energy change runs the other way,
+
+00:07:47.786 --> 00:07:49.113
+so the sign flips.
+
+00:07:49.153 --> 00:07:55.414
+Decomposing two moles of liquid water into
+hydrogen and oxygen has delta H equal to
+
+00:07:55.454 --> 00:07:59.133
+positive five hundred and
+seventy-two kilojoules.
+
+00:07:59.173 --> 00:08:04.867
+It takes as much energy to pull water
+apart as was released when it formed.
+
+00:08:05.263 --> 00:08:09.062
+Sometimes you want a molar
+quantity for one substance.
+
+00:08:09.102 --> 00:08:14.891
+Dividing the equation by two gives one mole
+of hydrogen forming one mole of water,
+
+00:08:14.931 --> 00:08:19.797
+with delta H equal to negative two
+hundred and eighty-six kilojoules.
+
+00:08:19.837 --> 00:08:25.128
+So the molar enthalpy of combustion of
+hydrogen is negative two hundred and
+
+00:08:25.168 --> 00:08:28.185
+eighty-six kilojoules
+per mole of hydrogen.
+
+00:08:28.225 --> 00:08:31.638
+Always say which substance
+"per mole" refers to.
+
+00:08:32.596 --> 00:08:36.182
+Look closely at the
+states in that equation.
+
+00:08:36.222 --> 00:08:37.995
+The water is a liquid.
+
+00:08:38.035 --> 00:08:41.826
+What if the product were
+water vapour instead?
+
+00:08:42.196 --> 00:08:45.392
+Turning liquid water into
+vapour absorbs energy:
+
+00:08:45.432 --> 00:08:49.437
+about forty-four kilojoules per
+mole at twenty-five degrees.
+
+00:08:49.477 --> 00:08:54.736
+So gaseous water sits higher in enthalpy
+than the same amount of liquid water.
+
+00:08:55.129 --> 00:09:00.682
+That means forming two moles of water vapour
+releases less energy than forming two
+
+00:09:00.722 --> 00:09:06.069
+moles of liquid water: about four hundred
+and eighty-four kilojoules instead of
+
+00:09:06.109 --> 00:09:08.047
+five hundred and seventy-two.
+
+00:09:08.087 --> 00:09:13.707
+You can't reuse negative five hundred and
+seventy-two if the product state changes.
+
+00:09:13.747 --> 00:09:16.953
+You need data for the
+states actually involved.
+
+00:09:17.329 --> 00:09:22.066
+This is why states are never decoration
+in a thermochemical equation.
+
+00:09:22.106 --> 00:09:24.765
+Hot exhaust gases contain water vapour,
+
+00:09:24.805 --> 00:09:29.819
+while a calorimeter at room temperature
+mostly ends up with liquid water.
+
+00:09:29.859 --> 00:09:32.766
+Which value applies depends on the states.
+
+00:09:33.729 --> 00:09:38.004
+Practice question Q zero five,
+worth five marks, puts scaling,
+
+00:09:38.044 --> 00:09:40.091
+reversing and states together.
+
+00:09:40.131 --> 00:09:43.193
+Pause the video and
+attempt all three parts.
+
+00:09:58.596 --> 00:09:59.076
+Part a.
+
+00:09:59.116 --> 00:10:05.091
+Decomposing one mole of liquid water means
+reversing the equation and halving it.
+
+00:10:05.131 --> 00:10:08.879
+Reversing flips the sign;
+halving halves the value.
+
+00:10:08.919 --> 00:10:13.780
+So liquid water forms hydrogen gas
+plus half a mole of oxygen gas,
+
+00:10:13.820 --> 00:10:18.944
+with delta H equal to positive two
+hundred and eighty-six kilojoules.
+
+00:10:19.329 --> 00:10:19.763
+Part b.
+
+00:10:19.803 --> 00:10:24.769
+The negative five hundred and seventy-two
+refers to two moles of hydrogen,
+
+00:10:24.809 --> 00:10:29.572
+so one mole of hydrogen releases two
+hundred and eighty-six kilojoules.
+
+00:10:29.612 --> 00:10:34.848
+Zero point seven five zero moles therefore
+releases zero point seven five zero
+
+00:10:34.888 --> 00:10:37.081
+times two hundred and eighty-six,
+
+00:10:37.121 --> 00:10:40.869
+which is two hundred and
+fourteen point five kilojoules,
+
+00:10:40.909 --> 00:10:44.697
+reported as two hundred and
+fifteen kilojoules released.
+
+00:10:45.063 --> 00:10:45.549
+Part c.
+
+00:10:45.589 --> 00:10:45.775
+No.
+
+00:10:45.815 --> 00:10:51.495
+If the product were water vapour, the
+products would sit higher in enthalpy,
+
+00:10:51.535 --> 00:10:54.205
+because vaporisation absorbs energy.
+
+00:10:54.245 --> 00:11:00.265
+So less energy would be released, and a
+different delta H value would be needed.
+
+00:11:00.663 --> 00:11:05.264
+Marks: two for the reversed,
+halved equation with its enthalpy;
+
+00:11:05.304 --> 00:11:09.611
+two for the energy released;
+one for the state explanation.
+
+00:11:09.651 --> 00:11:15.506
+The tempting error is multiplying zero
+point seven five zero by five hundred and
+
+00:11:15.546 --> 00:11:19.927
+seventy-two, giving four hundred
+and twenty-nine kilojoules.
+
+00:11:19.967 --> 00:11:24.937
+That treats the equation's value as
+if it were per mole of hydrogen.
+
+00:11:24.977 --> 00:11:30.061
+The first wrong step is not asking
+what amount the delta H refers to.
+
+00:11:30.996 --> 00:11:31.586
+To recap.
+
+00:11:31.626 --> 00:11:35.922
+On an energy profile, every
+quantity is a vertical difference:
+
+00:11:35.962 --> 00:11:40.468
+forward activation energy, reverse
+activation energy and delta H.
+
+00:11:40.508 --> 00:11:45.854
+A catalyst lowers the peak but leaves
+both endpoints, and delta H, unchanged.
+
+00:11:45.894 --> 00:11:51.659
+In a thermochemical equation, delta H scales
+with the coefficients and changes sign
+
+00:11:51.699 --> 00:11:55.896
+when the equation is reversed,
+and it depends on the states.
+
+00:11:56.263 --> 00:11:57.297
+Closing recall.
+
+00:11:57.337 --> 00:12:01.952
+An equation has delta H equal to
+negative one hundred kilojoules.
+
+00:12:01.992 --> 00:12:07.148
+What is delta H for the reverse equation
+with every coefficient tripled?
+
+00:12:17.596 --> 00:12:19.852
+Reverse it: positive one hundred.
+
+00:12:19.892 --> 00:12:22.983
+Triple it: positive
+three hundred kilojoules.
+
+00:12:23.023 --> 00:12:28.549
+Next episode, we step back from equations
+to the fuels themselves: fossil fuels,
+
+00:12:28.589 --> 00:12:30.676
+biofuels and the carbon cycle.

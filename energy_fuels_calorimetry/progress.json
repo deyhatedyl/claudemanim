@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T17:56:48",
+ "updated": "2026-10-02T18:07:29",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -310,11 +310,152 @@
   },
   "E03": {
    "title": "Energy profiles and thermochemical equations",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep03.md",
+    "sha": "0d51ea78cc7e857e",
+    "beats": 42,
+    "words": 1558,
+    "est_minutes": 12.6,
+    "anchors": "Q05,Q06",
+    "coverage": "C09,C10,C11,C13"
+   },
+   "scenes_code": {
+    "path": "scenes/ep03.py",
+    "sha": "c96c89f8cdd32eff"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E03S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.3333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S02",
+     "title": "The axes and the two endpoints",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 58.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S03",
+     "title": "Activation energy, forward and reverse",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 83.4667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S04",
+     "title": "What a catalyst changes, and what it doesn't",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 79.2,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S05",
+     "title": "Practice Q06: read the vertical distances",
+     "beats": 10,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 139.2667,
+      "fresh": true,
+      "estimated_beats": 10,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S06",
+     "title": "Thermochemical equations: scale and reverse",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 92.6667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S07",
+     "title": "States matter: liquid or gaseous water",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 61.1333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S08",
+     "title": "Practice Q05: scaling, reversing and states",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 117.2667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E03S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 60.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 42,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 751.66,
+    "captions": [
+     "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: profile label collisions (labels moved to arrow tops, legend for catalysed path, wider reactant flats), Q06 axes inside safe area, state-diagram arrow/label overlaps. Q06 profile drawn to scale from the question data (80/25/150/110). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E04": {
    "title": "Fuels, biofuels and the carbon cycle",
@@ -405,5 +546,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 31.3
+ "series_est_minutes": 43.9
 }

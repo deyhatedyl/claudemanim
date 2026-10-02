@@ -1,0 +1,119 @@
+{
+ "scene": "E03S05",
+ "title": "Practice Q06: read the vertical distances",
+ "cls": "E03S05_Q06",
+ "fps": 15,
+ "duration": 139.2667,
+ "beats": [
+  {
+   "key": "E03S05.b01",
+   "start": 0.0,
+   "speech": 7.3945,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's practice question Q zero six, worth five marks. Pause the video and try all five parts.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b02",
+   "start": 19.8,
+   "speech": 19.1607,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's draw the profile to scale from the data. Reactants at eighty, products at twenty-five, the uncatalysed peak at one hundred and fifty, and the catalysed peak at one hundred and ten. All in kilojoules per mole of reaction, measured from the same arbitrary reference.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b03",
+   "start": 39.3333,
+   "speech": 8.6359,
+   "audio": null,
+   "estimated": true,
+   "text": "The forward activation energy is peak minus reactants: one hundred and fifty minus eighty, which is seventy kilojoules per mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b04",
+   "start": 48.3333,
+   "speech": 9.8772,
+   "audio": null,
+   "estimated": true,
+   "text": "The reverse activation energy is peak minus products: one hundred and fifty minus twenty-five, which is one hundred and twenty-five kilojoules per mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b05",
+   "start": 58.6,
+   "speech": 11.8924,
+   "audio": null,
+   "estimated": true,
+   "text": "Delta H is products minus reactants: twenty-five minus eighty, which is negative fifty-five kilojoules per mole. It's negative, and the products are lower, so that's consistent: exothermic.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b06",
+   "start": 70.8667,
+   "speech": 10.291,
+   "audio": null,
+   "estimated": true,
+   "text": "The catalysed forward activation energy is the catalysed peak minus the reactants: one hundred and ten minus eighty, which is thirty kilojoules per mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b07",
+   "start": 81.5333,
+   "speech": 11.9462,
+   "audio": null,
+   "estimated": true,
+   "text": "And the explanation: the catalyst does not change the heat released by the same amount reacting, because the reactant and product levels, and therefore delta H, are unchanged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b08",
+   "start": 93.8667,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "One mark for each part. The most common error is reading the peak, one hundred and fifty, as the activation energy. That's a height above an arbitrary zero, not a difference. The first wrong step is forgetting to subtract the reactant level.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b09",
+   "start": 112.3333,
+   "speech": 3.6703,
+   "audio": null,
+   "estimated": true,
+   "text": "Prediction: what is the catalysed reverse activation energy?",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E03S05.b10",
+   "start": 122.4667,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "The catalysed peak minus the products: one hundred and ten minus twenty-five, which is eighty-five kilojoules per mole. It's forty less than the uncatalysed reverse value, the same forty that the catalyst took off the forward barrier.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

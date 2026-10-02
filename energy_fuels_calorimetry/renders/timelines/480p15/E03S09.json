@@ -1,0 +1,42 @@
+{
+ "scene": "E03S09",
+ "title": "Recap and closing recall",
+ "cls": "E03S09_Recap",
+ "fps": 15,
+ "duration": 60.6667,
+ "beats": [
+  {
+   "key": "E03S09.b01",
+   "start": 0.0,
+   "speech": 24.9,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. On an energy profile, every quantity is a vertical difference: forward activation energy, reverse activation energy and delta H. A catalyst lowers the peak but leaves both endpoints, and delta H, unchanged. In a thermochemical equation, delta H scales with the coefficients and changes sign when the equation is reversed, and it depends on the states.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E03S09.b02",
+   "start": 25.2667,
+   "speech": 10.8848,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. An equation has delta H equal to negative one hundred kilojoules. What is delta H for the reverse equation with every coefficient tripled?",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E03S09.b03",
+   "start": 46.6,
+   "speech": 13.08,
+   "audio": null,
+   "estimated": true,
+   "text": "Reverse it: positive one hundred. Triple it: positive three hundred kilojoules. Next episode, we step back from equations to the fuels themselves: fossil fuels, biofuels and the carbon cycle.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
