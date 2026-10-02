@@ -1,0 +1,78 @@
+{
+ "episode": "E04",
+ "quality": "480p15",
+ "output": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 42,
+ "beats_with_audio": 0,
+ "duration": 769.06,
+ "scenes": [
+  {
+   "scene": "E04S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 62.666341
+  },
+  {
+   "scene": "E04S02",
+   "title": "What counts as a fuel: the fossil fuels",
+   "start": 62.666341,
+   "duration": 46.733008
+  },
+  {
+   "scene": "E04S03",
+   "title": "Renewable means replenished on a human timescale",
+   "start": 109.399349,
+   "duration": 65.132682
+  },
+  {
+   "scene": "E04S04",
+   "title": "Following the carbon atoms",
+   "start": 174.53203100000002,
+   "duration": 67.866667
+  },
+  {
+   "scene": "E04S05",
+   "title": "Photosynthesis and respiration",
+   "start": 242.39869800000002,
+   "duration": 51.466341
+  },
+  {
+   "scene": "E04S06",
+   "title": "Making bioethanol: fermentation and distillation",
+   "start": 293.865039,
+   "duration": 75.532682
+  },
+  {
+   "scene": "E04S07",
+   "title": "Practice Q07: fermentation yield",
+   "start": 369.39772100000005,
+   "duration": 164.198698
+  },
+  {
+   "scene": "E04S08",
+   "title": "Biogas and biodiesel",
+   "start": 533.5964190000001,
+   "duration": 74.132031
+  },
+  {
+   "scene": "E04S09",
+   "title": "Practice Q08: same molecule, different source",
+   "start": 607.7284500000001,
+   "duration": 108.266667
+  },
+  {
+   "scene": "E04S10",
+   "title": "Recap and closing recall",
+   "start": 715.995117,
+   "duration": 53.066667
+  }
+ ],
+ "captions": [
+  "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

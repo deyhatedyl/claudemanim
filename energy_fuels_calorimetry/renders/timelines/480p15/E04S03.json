@@ -1,0 +1,42 @@
+{
+ "scene": "E04S03",
+ "title": "Renewable means replenished on a human timescale",
+ "cls": "E04S03_Timescale",
+ "fps": 15,
+ "duration": 65.1333,
+ "beats": [
+  {
+   "key": "E04S03.b01",
+   "start": 0.0,
+   "speech": 22.2372,
+   "audio": null,
+   "estimated": true,
+   "text": "Compare two timescales. A fossil fuel took millions of years to form. A biofuel is made from biomass, such as crops, plant waste or animal fat, that can be regrown or replaced within months or years. A fuel is renewable if it is replenished at least as fast as we use it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S03.b02",
+   "start": 22.6,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "There are three biofuels to know. Biogas is a mixture of mainly methane and carbon dioxide, made when microbes break down organic waste without oxygen. Bioethanol is ethanol made by fermenting sugars. And biodiesel is made by reacting plant oils or animal fats with an alcohol, in a process called transesterification.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S03.b03",
+   "start": 44.8,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "Notice something important. Methane from biogas and methane from natural gas are the same molecule. Burning one mole of either releases the same energy and forms the same carbon dioxide. What differs is where the carbon came from, and how quickly it can be replaced.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

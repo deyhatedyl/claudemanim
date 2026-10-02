@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:07:29",
+ "updated": "2026-10-02T18:16:57",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -459,11 +459,164 @@
   },
   "E04": {
    "title": "Fuels, biofuels and the carbon cycle",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep04.md",
+    "sha": "5e4963c52cabd3be",
+    "beats": 42,
+    "words": 1624,
+    "est_minutes": 12.9,
+    "anchors": "Q07,Q08",
+    "coverage": "C02,C03,C04,C05,C06,C17"
+   },
+   "scenes_code": {
+    "path": "scenes/ep04.py",
+    "sha": "a15a375d1277e470"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E04S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 62.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S02",
+     "title": "What counts as a fuel: the fossil fuels",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 46.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S03",
+     "title": "Renewable means replenished on a human timescale",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 65.1333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S04",
+     "title": "Following the carbon atoms",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 67.8667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S05",
+     "title": "Photosynthesis and respiration",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 51.4667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S06",
+     "title": "Making bioethanol: fermentation and distillation",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 75.5333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S07",
+     "title": "Practice Q07: fermentation yield",
+     "beats": 8,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 164.2,
+      "fresh": true,
+      "estimated_beats": 8,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S08",
+     "title": "Biogas and biodiesel",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 74.1333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S09",
+     "title": "Practice Q08: same molecule, different source",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 108.2667,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E04S10",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 53.0667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 42,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 769.06,
+    "captions": [
+     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E05": {
    "title": "Food as a chemical energy source",
@@ -546,5 +699,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 43.9
+ "series_est_minutes": 56.8
 }

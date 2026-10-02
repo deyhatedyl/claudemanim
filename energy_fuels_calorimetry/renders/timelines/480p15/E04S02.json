@@ -1,0 +1,42 @@
+{
+ "scene": "E04S02",
+ "title": "What counts as a fuel: the fossil fuels",
+ "cls": "E04S02_Fossil",
+ "fps": 15,
+ "duration": 46.7333,
+ "beats": [
+  {
+   "key": "E04S02.b01",
+   "start": 0.0,
+   "speech": 15.8503,
+   "audio": null,
+   "estimated": true,
+   "text": "A fuel is a substance that undergoes a chemical reaction, usually combustion with oxygen, to release useful energy, most often as heat. The useful part matters: we choose fuels because the energy can be captured and used.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S02.b02",
+   "start": 16.2,
+   "speech": 13.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "The fossil fuels are coal, natural gas and petrol. Coal is mostly carbon. Natural gas is mostly methane. Petrol is a mixture of liquid hydrocarbons refined from crude oil, such as octane.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S02.b03",
+   "start": 30.5333,
+   "speech": 15.2566,
+   "audio": null,
+   "estimated": true,
+   "text": "Fossil fuels formed from the remains of organisms buried and transformed by heat and pressure over millions of years. We're using them far faster than they can form, so on any human timescale they are non-renewable.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

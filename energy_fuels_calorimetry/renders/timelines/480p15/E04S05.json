@@ -1,0 +1,42 @@
+{
+ "scene": "E04S05",
+ "title": "Photosynthesis and respiration",
+ "cls": "E04S05_Photosynthesis",
+ "fps": 15,
+ "duration": 51.4667,
+ "beats": [
+  {
+   "key": "E04S05.b01",
+   "start": 0.0,
+   "speech": 11.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "Photosynthesis: six carbon dioxide plus six water forms one glucose plus six oxygen. Check the atoms: six carbons, twelve hydrogens, and eighteen oxygens on each side.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S05.b02",
+   "start": 11.8667,
+   "speech": 15.3828,
+   "audio": null,
+   "estimated": true,
+   "text": "Photosynthesis is endothermic. The products, glucose and oxygen, sit higher in enthalpy than carbon dioxide and water. That energy doesn't appear from nowhere: it is absorbed from sunlight. Light energy is converted into chemical energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S05.b03",
+   "start": 27.6,
+   "speech": 22.8848,
+   "audio": null,
+   "estimated": true,
+   "text": "Cellular respiration is the reverse overall change. Glucose reacts with oxygen to form carbon dioxide and water, releasing roughly two point eight thousand kilojoules per mole of glucose. As we saw in episode two, that energy is released because the bonds formed in carbon dioxide and water are stronger, not because glucose's bonds break.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

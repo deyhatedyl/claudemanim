@@ -1,0 +1,97 @@
+{
+ "scene": "E04S07",
+ "title": "Practice Q07: fermentation yield",
+ "cls": "E04S07_Q07",
+ "fps": 15,
+ "duration": 164.2,
+ "beats": [
+  {
+   "key": "E04S07.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero seven is worth six marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b02",
+   "start": 22.0,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "First, the balanced equation: one glucose forms two ethanol and two carbon dioxide, with glucose and ethanol in aqueous solution and carbon dioxide as a gas. That ratio, one to two to two, drives everything else.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b03",
+   "start": 37.8,
+   "speech": 24.72,
+   "audio": null,
+   "estimated": true,
+   "text": "Now predict. Glucose has a molar mass of one hundred and eighty, and we have two hundred and seventy grams, so about one and a half moles. That could make up to three moles of ethanol, about one hundred and forty grams at most. With a yield below one hundred percent, expect a bit over one hundred grams.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b04",
+   "start": 62.8667,
+   "speech": 19.9345,
+   "audio": null,
+   "estimated": true,
+   "text": "Amount of glucose: two hundred and seventy point zero grams divided by one hundred and eighty point zero grams per mole, which is one point five zero moles. The theoretical amount of ethanol is twice that: three point zero zero moles. The same for carbon dioxide.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b05",
+   "start": 83.2,
+   "speech": 16.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "Only seventy-eight point zero percent of that theoretical conversion happens, so multiply once: zero point seven eight zero times three point zero zero gives two point three four moles of ethanol, and two point three four moles of carbon dioxide.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b06",
+   "start": 100.4667,
+   "speech": 26.3214,
+   "audio": null,
+   "estimated": true,
+   "text": "Now convert to mass. Ethanol: two point three four moles times forty-six point zero grams per mole is one hundred and seven point six four, so about one hundred and eight grams. Carbon dioxide: two point three four times forty-four point zero is one hundred and two point nine six, so about one hundred and three grams. Both fit the prediction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b07",
+   "start": 127.1333,
+   "speech": 12.36,
+   "audio": null,
+   "estimated": true,
+   "text": "For distillation, a full answer is: distillation separates and concentrates the ethanol from the aqueous fermentation mixture, using the difference in volatility, or boiling point, of ethanol and water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S07.b08",
+   "start": 139.8667,
+   "speech": 23.371,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: one for the equation, one for the two to one ratio, one for applying the yield, two for the masses, and one for distillation. The traps: a one to one ratio, which halves the answer; applying seventy-eight percent twice; or describing distillation as if it produced the ethanol. Distillation separates; fermentation makes.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

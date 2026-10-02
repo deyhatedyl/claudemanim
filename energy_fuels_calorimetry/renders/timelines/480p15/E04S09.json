@@ -1,0 +1,75 @@
+{
+ "scene": "E04S09",
+ "title": "Practice Q08: same molecule, different source",
+ "cls": "E04S09_Q08",
+ "fps": 15,
+ "duration": 108.2667,
+ "beats": [
+  {
+   "key": "E04S09.b01",
+   "start": 0.0,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero eight is worth four marks. Pause the video and write your answers.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E04S09.b02",
+   "start": 22.4,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a. Both fuels are pure methane, so per mole burned under the same conditions they release the same energy and produce the same amount of carbon dioxide: one mole of carbon dioxide per mole of methane. The molecule doesn't remember where it came from.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S09.b03",
+   "start": 42.1333,
+   "speech": 16.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Part b. Methane from natural gas is non-renewable: it formed over millions of years and is used far faster than it's replaced. Biomethane from recently grown plant waste is renewable, because its feedstock regrows on a human timescale.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S09.b04",
+   "start": 58.9333,
+   "speech": 17.8655,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c. Renewable doesn't prove sustainable. Methane can leak from digesters and pipelines, and methane is a much more potent greenhouse gas than carbon dioxide. Processing also uses energy, and growing feedstock uses land and water. Sustainability needs the whole lifecycle.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S09.b05",
+   "start": 77.1333,
+   "speech": 19.7545,
+   "audio": null,
+   "estimated": true,
+   "text": "One mark for part a, two for part b, and one for part c. The trap is saying that biomethane doesn't produce carbon dioxide when it burns. It does, exactly as much per mole. The difference is that its carbon was recently taken from the atmosphere.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S09.b06",
+   "start": 97.2667,
+   "speech": 10.0572,
+   "audio": null,
+   "estimated": true,
+   "text": "So, the checkpoint for this episode: renewable means replenished on a human timescale. It doesn't mean emission-free, and it doesn't automatically mean sustainable.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

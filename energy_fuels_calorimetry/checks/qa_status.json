@@ -13,5 +13,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: profile label collisions (labels moved to arrow tops, legend for catalysed path, wider reactant flats), Q06 axes inside safe area, state-diagram arrow/label overlaps. Q06 profile drawn to scale from the question data (80/25/150/110). Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E04": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

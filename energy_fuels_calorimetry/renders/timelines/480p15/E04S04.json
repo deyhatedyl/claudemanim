@@ -1,0 +1,64 @@
+{
+ "scene": "E04S04",
+ "title": "Following the carbon atoms",
+ "cls": "E04S04_CarbonCycle",
+ "fps": 15,
+ "duration": 67.8667,
+ "beats": [
+  {
+   "key": "E04S04.b01",
+   "start": 0.0,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's follow some carbon atoms. They start in carbon dioxide in the atmosphere. During photosynthesis, a plant uses energy from sunlight to build those carbon atoms into glucose.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S04.b02",
+   "start": 12.4667,
+   "speech": 10.291,
+   "audio": null,
+   "estimated": true,
+   "text": "The glucose can be fermented into ethanol. The same carbon atoms are now in the fuel, with some leaving as carbon dioxide during fermentation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S04.b03",
+   "start": 23.1333,
+   "speech": 16.0841,
+   "audio": null,
+   "estimated": true,
+   "text": "When the ethanol burns, its carbon atoms return to the atmosphere as carbon dioxide, and the next crop can take them up again. Over a full cycle, this carbon is recycled on a timescale of months or years.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S04.b04",
+   "start": 39.6,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "Burning a fossil fuel is different. Its carbon was locked away underground for millions of years. Releasing it adds extra carbon dioxide to the atmosphere, faster than natural processes can remove it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S04.b05",
+   "start": 53.7333,
+   "speech": 13.1338,
+   "audio": null,
+   "estimated": true,
+   "text": "But careful: the biofuel cycle isn't automatically carbon neutral. Growing, harvesting, processing and transporting the fuel can use fossil energy too. We'll look at those wider boundaries in episode twelve.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

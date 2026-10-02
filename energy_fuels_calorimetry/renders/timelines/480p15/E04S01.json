@@ -1,0 +1,42 @@
+{
+ "scene": "E04S01",
+ "title": "Retrieval check",
+ "cls": "E04S01_Retrieval",
+ "fps": 15,
+ "duration": 62.6667,
+ "beats": [
+  {
+   "key": "E04S01.b01",
+   "start": 0.0,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode four. So far we've treated fuels as equations. Today we look at the fuels themselves: where they come from, how biofuels are made, and what the carbon in them does over time.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S01.b02",
+   "start": 15.6,
+   "speech": 20.1683,
+   "audio": null,
+   "estimated": true,
+   "text": "First, two quick checks from last episode. Does a catalyst change the delta H of a reaction? And if two moles of hydrogen burning has delta H equal to negative five hundred and seventy-two kilojoules, what is the molar enthalpy of combustion of hydrogen? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E04S01.b03",
+   "start": 44.2,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "A catalyst lowers the activation energy but does not change delta H. And the molar enthalpy of combustion of hydrogen is negative two hundred and eighty-six kilojoules per mole of hydrogen: half the value, because the equation was for two moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

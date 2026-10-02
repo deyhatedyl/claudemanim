@@ -1,0 +1,53 @@
+{
+ "scene": "E04S08",
+ "title": "Biogas and biodiesel",
+ "cls": "E04S08_BiogasBiodiesel",
+ "fps": 15,
+ "duration": 74.1333,
+ "beats": [
+  {
+   "key": "E04S08.b01",
+   "start": 0.0,
+   "speech": 20.1683,
+   "audio": null,
+   "estimated": true,
+   "text": "Biogas comes from anaerobic digestion. Organic waste, like manure, food scraps or sewage, is sealed in a tank without oxygen. Microbes break it down over days to weeks, producing a gas that's mainly methane and carbon dioxide. The leftover solid, called digestate, can be used as fertiliser.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S08.b02",
+   "start": 20.5333,
+   "speech": 10.291,
+   "audio": null,
+   "estimated": true,
+   "text": "Biodiesel starts from fats and oils, which are triglycerides. A triglyceride is three fatty acid chains attached to a glycerol backbone by ester links.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S08.b03",
+   "start": 31.2,
+   "speech": 23.4786,
+   "audio": null,
+   "estimated": true,
+   "text": "In transesterification, the triglyceride reacts with three molecules of an alcohol, usually methanol, with a catalyst such as potassium hydroxide. Each fatty acid chain swaps partners: it leaves the glycerol and attaches to the alcohol. So one triglyceride plus three alcohol molecules gives three fatty acid methyl esters, which are the biodiesel, plus one glycerol.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S08.b04",
+   "start": 55.0667,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "For this series, that ratio is the key: one triglyceride, three alcohol, three esters, one glycerol. The detailed organic chemistry belongs to the organic chemistry topic; here we just need to recognise the reaction and why the product is a renewable fuel.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

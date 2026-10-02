@@ -1,0 +1,42 @@
+{
+ "scene": "E04S10",
+ "title": "Recap and closing recall",
+ "cls": "E04S10_Recap",
+ "fps": 15,
+ "duration": 53.0667,
+ "beats": [
+  {
+   "key": "E04S10.b01",
+   "start": 0.0,
+   "speech": 22.0034,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. Coal, natural gas and petrol are fossil fuels: non-renewable because they formed over millions of years. Biogas comes from anaerobic digestion, bioethanol from fermentation followed by distillation, and biodiesel from transesterification of fats and oils. They're renewable because their feedstocks regrow quickly, but renewable isn't the same as sustainable.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S10.b02",
+   "start": 22.4,
+   "speech": 6.9807,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. Write the balanced equation for fermentation of glucose, and say what distillation does afterwards.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E04S10.b03",
+   "start": 39.8,
+   "speech": 12.3062,
+   "audio": null,
+   "estimated": true,
+   "text": "Glucose forms two ethanol plus two carbon dioxide. Distillation then separates and concentrates the ethanol, using its lower boiling point. Next episode: food as a chemical energy source.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "scene": "E04S06",
+ "title": "Making bioethanol: fermentation and distillation",
+ "cls": "E04S06_Ethanol",
+ "fps": 15,
+ "duration": 75.5333,
+ "beats": [
+  {
+   "key": "E04S06.b01",
+   "start": 0.0,
+   "speech": 13.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "Fermentation: glucose in solution forms two ethanol and two carbon dioxide. Watch the atoms. Six carbons, twelve hydrogens and six oxygens go in, and exactly the same atoms come out, just rearranged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S06.b02",
+   "start": 14.3333,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "This reaction is catalysed by enzymes from yeast, in the absence of oxygen, at a warm temperature, around thirty to thirty-five degrees. Enzymes are proteins with a specific shape. At a very high temperature, their shape is permanently damaged. We say the enzyme is denatured, and the fermentation slows or stops.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S06.b03",
+   "start": 36.5333,
+   "speech": 12.36,
+   "audio": null,
+   "estimated": true,
+   "text": "Fermentation only produces a dilute ethanol solution, around ten to fifteen percent ethanol, because the yeast can't survive higher concentrations. So we separate and concentrate the ethanol by distillation.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E04S06.b04",
+   "start": 49.2667,
+   "speech": 25.3138,
+   "audio": null,
+   "estimated": true,
+   "text": "Distillation uses the difference in boiling points. Ethanol boils at about seventy-eight degrees, water at one hundred. When the mixture is heated, the vapour is richer in ethanol than the liquid, and it's cooled and collected in a condenser. The distillate is much more concentrated, but ordinary distillation can't produce pure ethanol: it reaches about ninety-five percent at most.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
