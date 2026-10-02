@@ -1,0 +1,72 @@
+{
+ "episode": "E12",
+ "quality": "480p15",
+ "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 32,
+ "beats_with_audio": 0,
+ "duration": 644.26,
+ "scenes": [
+  {
+   "scene": "E12S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 61.333008
+  },
+  {
+   "scene": "E12S02",
+   "title": "Per mole, per gram, per useful output",
+   "start": 61.333008,
+   "duration": 59.4
+  },
+  {
+   "scene": "E12S03",
+   "title": "Normalise to the same useful output",
+   "start": 120.733008,
+   "duration": 42.532357
+  },
+  {
+   "scene": "E12S04",
+   "title": "Practice Q23: emissions per useful energy",
+   "start": 163.265365,
+   "duration": 118.799674
+  },
+  {
+   "scene": "E12S05",
+   "title": "Checkpoint: per input is not per useful output",
+   "start": 282.065039,
+   "duration": 57.466341
+  },
+  {
+   "scene": "E12S06",
+   "title": "Drawing the system boundary",
+   "start": 339.53138,
+   "duration": 51.799349
+  },
+  {
+   "scene": "E12S07",
+   "title": "Renewable is not the same as sustainable",
+   "start": 391.330729,
+   "duration": 69.932357
+  },
+  {
+   "scene": "E12S08",
+   "title": "Practice Q24: build an evidence-based answer",
+   "start": 461.26308600000004,
+   "duration": 128.332682
+  },
+  {
+   "scene": "E12S09",
+   "title": "Recap and closing recall",
+   "start": 589.595768,
+   "duration": 54.666667
+  }
+ ],
+ "captions": [
+  "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

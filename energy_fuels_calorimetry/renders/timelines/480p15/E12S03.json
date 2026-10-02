@@ -1,0 +1,42 @@
+{
+ "scene": "E12S03",
+ "title": "Normalise to the same useful output",
+ "cls": "E12S03_Normalise",
+ "fps": 15,
+ "duration": 42.5333,
+ "beats": [
+  {
+   "key": "E12S03.b01",
+   "start": 0.0,
+   "speech": 11.0648,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the fair way to compare. Fix the task first: deliver one point zero zero megajoule of useful heat. Then, for each fuel, work backwards.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S03.b02",
+   "start": 11.4,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "Fuel energy input equals useful output divided by efficiency. Mass of fuel equals that input divided by the fuel's energy per kilogram. And if emissions are given per megajoule of fuel energy, then emissions equal the input times that emission factor.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S03.b03",
+   "start": 29.2667,
+   "speech": 12.3062,
+   "audio": null,
+   "estimated": true,
+   "text": "Watch the units: megajoules divided by megajoules per kilogram gives kilograms. Megajoules times grams per megajoule gives grams. Now both fuels are compared on exactly the same task.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

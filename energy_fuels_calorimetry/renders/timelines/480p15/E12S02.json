@@ -1,0 +1,42 @@
+{
+ "scene": "E12S02",
+ "title": "Per mole, per gram, per useful output",
+ "cls": "E12S02_Bases",
+ "fps": 15,
+ "duration": 59.4,
+ "beats": [
+  {
+   "key": "E12S02.b01",
+   "start": 0.0,
+   "speech": 18.5131,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's compare methane and octane. Burning one mole of octane releases about five thousand four hundred and sixty kilojoules. One mole of methane releases eight hundred and ninety. Per mole, octane wins by a long way, because each octane molecule is much bigger.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S02.b02",
+   "start": 18.8667,
+   "speech": 19.7007,
+   "audio": null,
+   "estimated": true,
+   "text": "Now per gram. Methane: eight hundred and ninety divided by sixteen point zero is about fifty-five point six kilojoules per gram. Octane: five thousand four hundred and sixty divided by one hundred and fourteen point zero is about forty-seven point nine. Per gram, methane wins.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S02.b03",
+   "start": 38.9333,
+   "speech": 19.5207,
+   "audio": null,
+   "estimated": true,
+   "text": "Neither statement is wrong. They answer different questions. And for a real heating task there's a third basis that often matters most: how much fuel, and how much emission, does it take to deliver a given amount of useful energy? That depends on efficiency too.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

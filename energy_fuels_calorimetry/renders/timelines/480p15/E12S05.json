@@ -1,0 +1,31 @@
+{
+ "scene": "E12S05",
+ "title": "Checkpoint: per input is not per useful output",
+ "cls": "E12S05_Checkpoint",
+ "fps": 15,
+ "duration": 57.4667,
+ "beats": [
+  {
+   "key": "E12S05.b01",
+   "start": 0.0,
+   "speech": 20.5283,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. Imagine another hypothetical fuel, T, with lower emissions per megajoule of fuel energy than R: seventy grams instead of eighty. But it's burned in a heater that's only twenty percent efficient. Which fuel has lower emissions per megajoule of useful heat? Pause and work it out.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E12S05.b02",
+   "start": 28.9333,
+   "speech": 27.5628,
+   "audio": null,
+   "estimated": true,
+   "text": "For T: seventy divided by zero point two zero is three hundred and fifty grams per useful megajoule. For R, we already found about two hundred and twenty-nine. So R is lower per useful output, even though T looked better per unit of input. A lower emission per unit of input energy doesn't guarantee lower emissions per unit of useful output; efficiency matters too.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

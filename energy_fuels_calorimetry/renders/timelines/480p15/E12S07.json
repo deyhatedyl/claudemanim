@@ -1,0 +1,53 @@
+{
+ "scene": "E12S07",
+ "title": "Renewable is not the same as sustainable",
+ "cls": "E12S07_Sustainable",
+ "fps": 15,
+ "duration": 69.9333,
+ "beats": [
+  {
+   "key": "E12S07.b01",
+   "start": 0.0,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "A renewable feedstock regrows, but growing it still has costs. A fuel crop can compete with food crops for land, use large amounts of fresh water, and replace natural habitats. So a renewable fuel isn't automatically a sustainable one.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S07.b02",
+   "start": 17.0667,
+   "speech": 20.9421,
+   "audio": null,
+   "estimated": true,
+   "text": "Using wastes avoids some of these trade-offs. Here's a circular example: food waste goes into a digester, which produces biogas for heat; the leftover digestate becomes fertiliser for crops; the crops become food, and food waste returns to the start. Materials stay in use instead of becoming waste.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S07.b03",
+   "start": 38.4,
+   "speech": 17.8655,
+   "audio": null,
+   "estimated": true,
+   "text": "This connects to green chemistry principles. Using renewable feedstocks, such as plant material or waste. Preventing waste, by turning by-products into inputs. Designing for energy efficiency. And using catalysts, like the enzymes in fermentation, to make processes run under milder conditions.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S07.b04",
+   "start": 56.6,
+   "speech": 12.36,
+   "audio": null,
+   "estimated": true,
+   "text": "It also links to the United Nations Sustainable Development Goals: affordable and clean energy, responsible consumption and production, climate action, and zero hunger, which is where food-versus-fuel trade-offs matter.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E12S01",
+ "title": "Retrieval check",
+ "cls": "E12S01_Retrieval",
+ "fps": 15,
+ "duration": 61.3333,
+ "beats": [
+  {
+   "key": "E12S01.b01",
+   "start": 0.0,
+   "speech": 18.2793,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode twelve. \"Which fuel is better?\" sounds like a simple question. Today we'll see that the honest answer always starts with \"better on what basis?\", and that sustainability needs evidence from the whole lifecycle, not just the moment of burning.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E12S01.b02",
+   "start": 18.6667,
+   "speech": 18.0455,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. Yeast enzymes catalyse fermentation. Do they change the delta H of the reaction? And a heater with twenty-five percent efficiency must deliver ten point zero megajoules of useful heat. How much fuel energy is needed? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E12S01.b03",
+   "start": 45.1333,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Enzymes lower the activation energy but don't change delta H. And the fuel energy needed is ten point zero divided by zero point two five: forty point zero megajoules. A lower efficiency means more input.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

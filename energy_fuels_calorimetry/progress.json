@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T19:02:47",
+ "updated": "2026-10-02T19:15:21",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1675,11 +1675,152 @@
   },
   "E12": {
    "title": "Fair fuel comparisons and sustainability",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep12.md",
+    "sha": "9533d1e506a0a22d",
+    "beats": 32,
+    "words": 1318,
+    "est_minutes": 10.8,
+    "anchors": "Q23,Q24",
+    "coverage": "C19,C27,C28,C02,C03,C17,C11"
+   },
+   "scenes_code": {
+    "path": "scenes/ep12.py",
+    "sha": "93faf766b037eb50"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E12S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 61.3333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S02",
+     "title": "Per mole, per gram, per useful output",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.4,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S03",
+     "title": "Normalise to the same useful output",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 42.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S04",
+     "title": "Practice Q23: emissions per useful energy",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 118.8,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S05",
+     "title": "Checkpoint: per input is not per useful output",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.4667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S06",
+     "title": "Drawing the system boundary",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 51.8,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S07",
+     "title": "Renewable is not the same as sustainable",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 69.9333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S08",
+     "title": "Practice Q24: build an evidence-based answer",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 128.3333,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E12S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 54.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 32,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 644.26,
+    "captions": [
+     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E13": {
    "title": "Exam workshop A on fuels and combustion",
@@ -1698,5 +1839,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 140.4
+ "series_est_minutes": 151.1
 }
