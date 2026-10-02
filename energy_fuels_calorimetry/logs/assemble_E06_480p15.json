@@ -6,7 +6,7 @@
  "narrated": false,
  "beats": 38,
  "beats_with_audio": 0,
- "duration": 686.0,
+ "duration": 685.2,
  "scenes": [
   {
    "scene": "E06S01",
@@ -36,30 +36,30 @@
    "scene": "E06S05",
    "title": "Practice Q11: incomplete combustion you can balance",
    "start": 219.93203099999997,
-   "duration": 142.332682
+   "duration": 141.932682
   },
   {
    "scene": "E06S06",
    "title": "Hot exhaust and dry gas",
-   "start": 362.264713,
+   "start": 361.86471299999994,
    "duration": 77.998698
   },
   {
    "scene": "E06S07",
    "title": "Practice Q12: hot exhaust versus cooled dry gas",
-   "start": 440.26341099999996,
-   "duration": 134.466341
+   "start": 439.8634109999999,
+   "duration": 134.066341
   },
   {
    "scene": "E06S08",
    "title": "Moles, not grams; and which greenhouse gases?",
-   "start": 574.729752,
+   "start": 573.9297519999999,
    "duration": 56.399674
   },
   {
    "scene": "E06S09",
    "title": "Recap and closing recall",
-   "start": 631.129426,
+   "start": 630.3294259999999,
    "duration": 54.866667
   }
  ],

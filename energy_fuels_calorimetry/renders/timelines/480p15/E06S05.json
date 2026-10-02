@@ -3,22 +3,22 @@
  "title": "Practice Q11: incomplete combustion you can balance",
  "cls": "E06S05_Q11",
  "fps": 15,
- "duration": 142.3333,
+ "duration": 141.9333,
  "beats": [
   {
    "key": "E06S05.b01",
    "start": 0.0,
-   "speech": 6.5669,
+   "speech": 6.1531,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero eleven is worth five marks. Pause the video and attempt it.",
+   "text": "Practice question Q eleven is worth five marks. Pause the video and attempt it.",
    "overrun": 0.0,
    "pause": 12.0,
    "layout": []
   },
   {
    "key": "E06S05.b02",
-   "start": 19.0,
+   "start": 18.6,
    "speech": 21.4097,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E06S05.b03",
-   "start": 40.8,
+   "start": 40.4,
    "speech": 6.1531,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E06S05.b04",
-   "start": 47.3333,
+   "start": 46.9333,
    "speech": 5.3255,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E06S05.b05",
-   "start": 53.0,
+   "start": 52.6,
    "speech": 27.9766,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E06S05.b06",
-   "start": 81.3333,
+   "start": 80.9333,
    "speech": 13.1338,
    "audio": null,
    "estimated": true,
@@ -73,7 +73,7 @@
   },
   {
    "key": "E06S05.b07",
-   "start": 94.8667,
+   "start": 94.4667,
    "speech": 17.5055,
    "audio": null,
    "estimated": true,
@@ -84,7 +84,7 @@
   },
   {
    "key": "E06S05.b08",
-   "start": 112.7333,
+   "start": 112.3333,
    "speech": 28.6241,
    "audio": null,
    "estimated": true,

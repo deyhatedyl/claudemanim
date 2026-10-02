@@ -1,0 +1,42 @@
+{
+ "scene": "E11S10",
+ "title": "Recap and closing recall",
+ "cls": "E11S10_Recap",
+ "fps": 15,
+ "duration": 60.5333,
+ "beats": [
+  {
+   "key": "E11S10.b01",
+   "start": 0.0,
+   "speech": 20.3483,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. Read the graph's baseline, mixing time and cooling region. Extend the cooling trend back to the mixing time to estimate the corrected temperature, and treat it as a model-based estimate. Trace every error through the actual formula, and remember: precise isn't the same as accurate.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S10.b02",
+   "start": 20.7333,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. A cooling line has a slope of negative zero point zero zero two degrees per second. Extrapolating back fifty seconds to the mixing time, how much does the temperature increase?",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E11S10.b03",
+   "start": 44.9333,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "Fifty seconds times zero point zero zero two degrees per second is zero point one degrees, added to the start of the cooling line. Next episode: comparing fuels fairly, and what sustainability really requires.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -3,22 +3,22 @@
  "title": "Practice Q15: a measured fuel mass loss",
  "cls": "E08S06_Q15",
  "fps": 15,
- "duration": 134.9333,
+ "duration": 134.5333,
  "beats": [
   {
    "key": "E08S06.b01",
    "start": 0.0,
-   "speech": 6.5669,
+   "speech": 6.1531,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero fifteen is worth six marks. Pause the video and try it.",
+   "text": "Practice question Q fifteen is worth six marks. Pause the video and try it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E08S06.b02",
-   "start": 22.0,
+   "start": 21.6,
    "speech": 18.0993,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E08S06.b03",
-   "start": 40.4667,
+   "start": 40.0667,
    "speech": 11.5324,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E08S06.b04",
-   "start": 52.3333,
+   "start": 51.9333,
    "speech": 24.72,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E08S06.b05",
-   "start": 77.4,
+   "start": 77.0,
    "speech": 24.9,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E08S06.b06",
-   "start": 102.6667,
+   "start": 102.2667,
    "speech": 31.2869,
    "audio": null,
    "estimated": true,

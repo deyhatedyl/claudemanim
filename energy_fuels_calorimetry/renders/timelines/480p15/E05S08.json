@@ -3,22 +3,22 @@
  "title": "Practice Q10: two bases, two answers",
  "cls": "E05S08_Q10",
  "fps": 15,
- "duration": 106.0,
+ "duration": 105.6,
  "beats": [
   {
    "key": "E05S08.b01",
    "start": 0.0,
-   "speech": 11.7124,
+   "speech": 11.2986,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero ten is worth five marks. Before you calculate anything, decide which two comparison bases the question wants. Then pause and work it out.",
+   "text": "Practice question Q ten is worth five marks. Before you calculate anything, decide which two comparison bases the question wants. Then pause and work it out.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E05S08.b02",
-   "start": 27.1333,
+   "start": 26.7333,
    "speech": 25.3138,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E05S08.b03",
-   "start": 52.8,
+   "start": 52.4,
    "speech": 27.5628,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E05S08.b04",
-   "start": 80.7333,
+   "start": 80.3333,
    "speech": 24.3062,
    "audio": null,
    "estimated": true,

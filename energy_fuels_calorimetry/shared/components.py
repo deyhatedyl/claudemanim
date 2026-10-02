@@ -681,3 +681,33 @@ class Budget(VGroup):
     def move_to(self, point, **kw):
         super().move_to(point, **kw)
         return self
+
+
+# ------------------------------------------------------------------ temperature-time plots (real data only)
+def temp_axes(x_max: float = 400, x_step: float = 60, y_min: float = 20, y_max: float = 27, y_step: float = 1,
+              width: float = 8.0, height: float = 4.4, x_label: str = "Time (s)", y_label: str = "Temperature (°C)"):
+    """Axes for temperature-time data. Returns VGroup(ax, xlab, ylab) with .ax set."""
+    from manim import Axes
+    ax = Axes(x_range=[0, x_max, x_step], y_range=[y_min, y_max, y_step], x_length=width, y_length=height,
+              axis_config=dict(color=TEXT, stroke_width=2.5, include_tip=False, font_size=22,
+                               decimal_number_config=dict(num_decimal_places=0, color=MUTED)),
+              x_axis_config=dict(numbers_to_include=np.arange(0, x_max + 1, x_step)),
+              y_axis_config=dict(numbers_to_include=np.arange(y_min, y_max + 0.01, y_step)))
+    grid = VGroup(*[DashedLine(ax.c2p(0, y), ax.c2p(x_max, y), color=FAINT, stroke_width=1, dash_length=0.06)
+                    for y in np.arange(y_min + y_step, y_max + 0.01, y_step)])
+    xl = T(x_label, size=SMALL + 1, color=MUTED).next_to(ax.x_axis, DOWN, buff=0.45)
+    yl = T(y_label, size=SMALL + 1, color=MUTED).rotate(np.pi / 2).next_to(ax.y_axis, LEFT, buff=0.55)
+    g = VGroup(grid, ax, xl, yl)
+    g.ax, g.grid = ax, grid
+    return g
+
+
+def data_points(ax, pts, color: str = TEXT, radius: float = 0.07) -> VGroup:
+    return VGroup(*[Dot(ax.c2p(x, y), radius=radius, color=color) for x, y in pts])
+
+
+def linfit(pts):
+    xs = np.array([p[0] for p in pts], dtype=float)
+    ys = np.array([p[1] for p in pts], dtype=float)
+    b, a = np.polyfit(xs, ys, 1)
+    return b, a          # slope, intercept

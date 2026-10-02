@@ -54,12 +54,12 @@ Both statements are true. They answer different questions. In an exam, state the
 
 ## [08:06] E05S08 Practice Q10: two bases, two answers
 
-Practice question Q zero ten is worth five marks. Before you calculate anything, decide which two comparison bases the question wants. Then pause and work it out.  *(pause)*
+Practice question Q ten is worth five marks. Before you calculate anything, decide which two comparison bases the question wants. Then pause and work it out.  *(pause)*
 The two bases are energy per one hundred grams and energy per serving. Food A per one hundred grams: fifty times sixteen, plus ten times seventeen, plus twelve times thirty-seven, gives one thousand four hundred and fourteen kilojoules. Food B: thirty-five times sixteen, plus twenty times seventeen, plus fifteen times thirty-seven, gives one thousand four hundred and fifty-five kilojoules.
 So per one hundred grams, food B is higher. Now the servings. Food A's serving is eighty grams: one thousand four hundred and fourteen times zero point eight zero is one thousand one hundred and thirty-one point two kilojoules. Food B's serving is fifty grams: one thousand four hundred and fifty-five times zero point five zero is seven hundred and twenty-seven point five kilojoules.
 So food B has more energy per one hundred grams, but the food A serving contains more energy. Marks: two for the per-one-hundred-gram values, two for the serving values, and one for stating both comparisons on their bases. The trap is comparing an eighty-gram serving with a fifty-gram serving and calling it a comparison of the foods.
 
-## [09:52] E05S09 Recap and closing recall
+## [09:51] E05S09 Recap and closing recall
 
 To recap. Respiration oxidises food just as combustion oxidises a fuel, and the energy is conserved, partly as useful work and partly as heat. Food energy is estimated with factors of sixteen, seventeen and thirty-seven kilojoules per gram. Keep units attached when scaling, and always state the basis of a comparison.
 Closing recall. How much energy do twenty grams of fat provide, using the food factor?  *(pause)*

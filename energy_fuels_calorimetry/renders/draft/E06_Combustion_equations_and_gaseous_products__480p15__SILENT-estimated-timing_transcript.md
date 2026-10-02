@@ -29,7 +29,7 @@ But here's the subtle point. Saying "limited oxygen" doesn't tell you which of t
 
 ## [03:39] E06S05 Practice Q11: incomplete combustion you can balance
 
-Practice question Q zero eleven is worth five marks. Pause the video and attempt it.  *(pause)*
+Practice question Q eleven is worth five marks. Pause the video and attempt it.  *(pause)*
 We're told everything we need: one mole of ethanol and two point five zero moles of oxygen react completely, and the only products are carbon dioxide, carbon monoxide and water vapour. So write the skeleton with unknowns: x moles of carbon dioxide, y moles of carbon monoxide, and some water.
 Hydrogen first. Ethanol has six hydrogen atoms, so it forms three moles of water.
 Carbon next. Ethanol has two carbons, so x plus y equals two.
@@ -38,16 +38,16 @@ Subtract the carbon equation from that: x equals one. Then y equals one. So one 
 The balanced equation: ethanol plus two and a half oxygen forms carbon dioxide plus carbon monoxide plus three water vapour. Complete combustion would need three moles of oxygen per mole of ethanol, so this reaction had half a mole too little.
 Marks: one for the hydrogen balance, two for the carbon and oxygen balances, one for the equation, and one for the comparison. Here's the trap. If you forget the oxygen inside ethanol, the oxygen balance becomes two x plus y equals two, and you'd conclude that all the carbon became carbon monoxide. That looks like the textbook answer for "limited oxygen", but it's wrong for this data.
 
-## [06:02] E06S06 Hot exhaust and dry gas
+## [06:01] E06S06 Hot exhaust and dry gas
 
 Now think about the gases themselves. In a hot exhaust, well above one hundred degrees, the water formed by combustion is a gas: water vapour. Alongside it are carbon dioxide, nitrogen from the air, and any excess oxygen.
 If the exhaust is cooled to room temperature, most of the water vapour condenses to liquid water and can be removed. What remains is called dry gas. Carbon dioxide stays a gas, so it can now be collected and measured.
 So keep two accounting columns. One lists what the reaction formed, including water vapour. The other lists what is actually measured after cooling and drying. A question about greenhouse gases in a hot exhaust includes the water vapour; a question about a dry gas measured at standard laboratory conditions doesn't.
 And gas volumes always need their conditions. Twenty-four point eight litres per mole applies at twenty-five degrees and one hundred kilopascals. A hot gas at six hundred degrees occupies roughly three times as much volume per mole, so you can't apply the standard molar volume to the hot exhaust.
 
-## [07:20] E06S07 Practice Q12: hot exhaust versus cooled dry gas
+## [07:19] E06S07 Practice Q12: hot exhaust versus cooled dry gas
 
-Practice question Q zero twelve is worth five marks. Pause the video and work through it.  *(pause)*
+Practice question Q twelve is worth five marks. Pause the video and work through it.  *(pause)*
 The equation: methane plus two oxygen forms carbon dioxide plus two water, with the water as a gas at six hundred degrees. Methane to carbon dioxide is one to one, and methane to water is one to two. So zero point two five zero moles of methane forms zero point two five zero moles of carbon dioxide and zero point five zero zero moles of water vapour.
 Masses in the hot stream. Carbon dioxide: zero point two five zero times forty-four point zero is eleven point zero grams. Water: zero point five zero zero times eighteen point zero is nine point zero zero grams. Together, twenty point zero grams of newly formed greenhouse gas.
 After cooling and drying, only the carbon dioxide is measured, now at standard laboratory conditions: zero point two five zero moles times twenty-four point eight litres per mole is six point two zero litres.
@@ -55,13 +55,13 @@ Marks: one for the mole ratios, two for the masses, one for the total, and one f
 Changed condition: if the same carbon dioxide were measured while still at six hundred degrees and one hundred kilopascals, would its volume be more or less than six point two zero litres?  *(pause)*
 More. At a higher temperature and the same pressure, the same amount of gas occupies a larger volume.
 
-## [09:34] E06S08 Moles, not grams; and which greenhouse gases?
+## [09:33] E06S08 Moles, not grams; and which greenhouse gases?
 
 Checkpoint. Methane combustion forms twice as many moles of water as carbon dioxide. Does it form twice the mass of water? Pause and decide.  *(pause)*
 No. Per mole of methane: one mole of carbon dioxide is forty-four grams, and two moles of water is thirty-six grams. Twice the moles, but less mass, because a water molecule is much lighter. Coefficients give mole ratios. Masses also depend on the molar masses.
 One more distinction. "Carbon emissions" usually means carbon dioxide, or the mass of carbon it contains. "Greenhouse gases" is broader: carbon dioxide, water vapour, unburnt methane, and others. So always check which gases a question's model counts before you add masses together.
 
-## [10:31] E06S09 Recap and closing recall
+## [10:30] E06S09 Recap and closing recall
 
 To recap. Balance combustion in the order carbon, hydrogen, oxygen, and remember oxygen already in the fuel. Write incomplete combustion only when the products are specified. Use states that match the conditions, and separate what a reaction formed from what is measured after cooling.
 Closing recall. Balance the complete combustion of propane, C three H eight.  *(pause)*

@@ -1,0 +1,650 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.648
+Welcome to episode eleven.
+
+00:00:01.688 --> 00:00:05.933
+Real calorimeters lose heat, and
+real thermometers aren't perfect.
+
+00:00:05.973 --> 00:00:08.855
+Today we'll learn to
+read temperature graphs,
+
+00:00:08.895 --> 00:00:12.361
+correct for heat lost while
+the reaction is happening,
+
+00:00:12.401 --> 00:00:14.609
+and reason carefully about errors.
+
+00:00:15.000 --> 00:00:16.145
+Two quick checks.
+
+00:00:16.185 --> 00:00:19.560
+If heat escapes during an
+electrical calibration,
+
+00:00:19.600 --> 00:00:23.742
+is the calibration factor
+calculated too large or too small?
+
+00:00:23.782 --> 00:00:27.575
+And if a reaction raises the
+calorimeter's temperature,
+
+00:00:27.615 --> 00:00:29.805
+is delta H positive or negative?
+
+00:00:29.845 --> 00:00:31.030
+Pause and answer.
+
+00:00:39.467 --> 00:00:44.981
+Too large: the measured rise is
+smaller, and C F equals E over delta T.
+
+00:00:45.021 --> 00:00:51.593
+And delta H is negative, because the reaction
+transferred energy to the calorimeter.
+
+00:00:52.533 --> 00:00:56.811
+Here's real-looking data, from
+practice question Q twenty-one.
+
+00:00:56.851 --> 00:01:00.711
+Temperature is on the vertical
+axis, in degrees Celsius,
+
+00:01:00.751 --> 00:01:03.984
+and time is on the
+horizontal axis, in seconds.
+
+00:01:04.024 --> 00:01:09.805
+Each point is an actual measurement; we
+won't draw a decorative curve through them.
+
+00:01:10.200 --> 00:01:15.150
+Before mixing, the temperature is steady
+at twenty-one point zero degrees.
+
+00:01:15.190 --> 00:01:16.499
+That's the baseline.
+
+00:01:16.539 --> 00:01:19.843
+Mixing happens at one
+hundred and twenty seconds.
+
+00:01:20.200 --> 00:01:24.294
+After mixing, the temperature climbs
+quickly: twenty-three, twenty-five,
+
+00:01:24.334 --> 00:01:28.084
+twenty-six, and the highest reading,
+twenty-six point one degrees,
+
+00:01:28.124 --> 00:01:30.077
+at one hundred and eighty seconds.
+
+00:01:30.466 --> 00:01:35.491
+After that, the readings fall slowly
+and steadily: twenty-five point nine,
+
+00:01:35.531 --> 00:01:38.776
+twenty-five point seven,
+twenty-five point five.
+
+00:01:38.816 --> 00:01:41.719
+The calorimeter is
+losing heat to the room.
+
+00:01:41.759 --> 00:01:44.428
+That steady fall is the cooling region.
+
+00:01:45.399 --> 00:01:46.783
+Here's the problem.
+
+00:01:46.823 --> 00:01:52.178
+The calorimeter starts losing heat as
+soon as it's warmer than the room,
+
+00:01:52.218 --> 00:01:55.700
+which is while the reaction
+is still happening.
+
+00:01:55.740 --> 00:02:00.836
+So by the time the temperature peaks,
+some heat has already escaped.
+
+00:02:01.199 --> 00:02:06.187
+That means the highest measured temperature
+is lower than the temperature the
+
+00:02:06.227 --> 00:02:11.476
+calorimeter would have reached if the
+reaction had been instantaneous and no heat
+
+00:02:11.516 --> 00:02:12.259
+had escaped.
+
+00:02:12.299 --> 00:02:15.524
+Using it would underestimate
+the temperature rise,
+
+00:02:15.564 --> 00:02:18.111
+and so underestimate the heat released.
+
+00:02:19.065 --> 00:02:24.155
+To estimate what the temperature
+would have been without that loss,
+
+00:02:24.195 --> 00:02:26.146
+we use the cooling region.
+
+00:02:26.186 --> 00:02:30.357
+Draw the best straight line
+through the cooling points.
+
+00:02:30.397 --> 00:02:32.847
+Here they lie exactly on a line.
+
+00:02:33.199 --> 00:02:38.666
+The slope: the temperature falls from
+twenty-six point one to twenty-five point
+
+00:02:38.706 --> 00:02:42.081
+five degrees over one
+hundred and eighty seconds.
+
+00:02:42.121 --> 00:02:46.194
+That's negative zero point six
+over one hundred and eighty,
+
+00:02:46.234 --> 00:02:51.532
+or about negative zero point zero zero
+three three three degrees per second.
+
+00:02:51.865 --> 00:02:55.408
+Now extend that line
+backwards, as a dashed line,
+
+00:02:55.448 --> 00:02:59.649
+to the moment of mixing at one
+hundred and twenty seconds.
+
+00:02:59.689 --> 00:03:05.572
+Going back sixty seconds adds sixty times
+zero point zero zero three three three,
+
+00:03:05.612 --> 00:03:07.912
+which is zero point two degrees.
+
+00:03:07.952 --> 00:03:13.509
+So the extrapolated temperature at mixing
+is twenty-six point three degrees.
+
+00:03:13.865 --> 00:03:15.345
+Compare the two rises.
+
+00:03:15.385 --> 00:03:17.764
+Using the highest observed reading:
+
+00:03:17.804 --> 00:03:23.430
+twenty-six point one minus twenty-one point
+zero, which is five point one degrees.
+
+00:03:23.470 --> 00:03:29.026
+Using the extrapolated value: twenty-six
+point three minus twenty-one point zero,
+
+00:03:29.066 --> 00:03:31.376
+which is five point three degrees.
+
+00:03:31.416 --> 00:03:37.110
+The corrected rise is larger, because it
+adds back the heat lost while the reaction
+
+00:03:37.150 --> 00:03:38.118
+was happening.
+
+00:03:38.465 --> 00:03:42.769
+Treat the extrapolated value
+as an estimate from a model.
+
+00:03:42.809 --> 00:03:46.046
+It assumes the cooling
+rate stays the same,
+
+00:03:46.086 --> 00:03:50.237
+and that the reaction happened
+at the moment of mixing.
+
+00:03:50.277 --> 00:03:53.591
+It's a better estimate
+than the raw maximum,
+
+00:03:53.631 --> 00:03:57.212
+not a perfect recovery
+of the true temperature.
+
+00:03:58.198 --> 00:04:01.969
+Practice question Q twenty-one
+is worth five marks.
+
+00:04:02.009 --> 00:04:07.014
+You've seen the graph; pause the
+video and write the full solution.
+
+00:04:19.465 --> 00:04:24.900
+Part a: the cooling slope is negative
+zero point zero zero three three three
+
+00:04:24.940 --> 00:04:30.592
+degrees per second, and extrapolating
+back sixty seconds gives twenty-six point
+
+00:04:30.632 --> 00:04:32.321
+three degrees at mixing.
+
+00:04:32.361 --> 00:04:36.323
+Part b: the corrected rise
+is five point three degrees.
+
+00:04:36.665 --> 00:04:42.017
+Part c: the corrected heat is six
+hundred and fifty times five point three:
+
+00:04:42.057 --> 00:04:45.612
+three thousand four hundred
+and forty-five joules.
+
+00:04:45.652 --> 00:04:50.932
+Since the temperature rise is a graph
+estimate to two significant figures,
+
+00:04:50.972 --> 00:04:54.351
+report it as about three
+point four kilojoules.
+
+00:04:54.732 --> 00:05:00.206
+Part d: the highest observed temperature
+gives a rise of five point one degrees,
+
+00:05:00.246 --> 00:05:05.858
+and six hundred and fifty times five point
+one is three thousand three hundred and
+
+00:05:05.898 --> 00:05:09.373
+fifteen joules, about three
+point three kilojoules.
+
+00:05:09.413 --> 00:05:14.887
+That's an underestimate, because cooling
+had already started before the peak was
+
+00:05:14.927 --> 00:05:15.727
+recorded.
+
+00:05:15.932 --> 00:05:21.550
+Marks: two for the correct region and
+extrapolation, one for the corrected rise,
+
+00:05:21.590 --> 00:05:26.784
+one for the corrected heat, and one
+for the comparison with its direction.
+
+00:05:26.824 --> 00:05:31.169
+The traps: using the observed
+maximum as if it were corrected,
+
+00:05:31.209 --> 00:05:36.514
+or reading twenty-six point three
+degrees itself as the temperature change.
+
+00:05:37.465 --> 00:05:43.489
+Heat can escape at two different stages,
+and the effects go in different directions.
+
+00:05:43.529 --> 00:05:48.583
+That's why "heat loss makes the answer
+smaller" isn't a reliable rule.
+
+00:05:48.931 --> 00:05:53.308
+During calibration, the electrical
+energy is known correctly.
+
+00:05:53.348 --> 00:05:57.797
+Heat loss makes the measured
+temperature rise smaller, so C F,
+
+00:05:57.837 --> 00:06:00.878
+which is E over delta T, comes out larger.
+
+00:06:01.265 --> 00:06:05.596
+During the reaction, with a
+valid calibration factor fixed,
+
+00:06:05.636 --> 00:06:09.597
+uncorrected heat loss makes
+the measured rise smaller.
+
+00:06:09.637 --> 00:06:15.525
+Then q, which is C F times delta T, is
+smaller, so the calculated heat released,
+
+00:06:15.565 --> 00:06:19.418
+and the size of the molar
+enthalpy, are smaller too.
+
+00:06:19.798 --> 00:06:24.021
+Same physical cause, opposite
+effects on the calculated quantity,
+
+00:06:24.061 --> 00:06:28.940
+because the temperature rise sits in
+the denominator in one formula and the
+
+00:06:28.980 --> 00:06:30.449
+numerator in the other.
+
+00:06:30.489 --> 00:06:34.227
+Always follow the measurement
+through the actual formula.
+
+00:06:35.198 --> 00:06:37.159
+Some vocabulary, used precisely.
+
+00:06:37.199 --> 00:06:41.224
+A random error makes repeated
+measurements scatter unpredictably,
+
+00:06:41.264 --> 00:06:43.287
+sometimes high and sometimes low.
+
+00:06:43.327 --> 00:06:48.477
+A systematic error pushes every result in
+the same direction by a consistent amount
+
+00:06:48.517 --> 00:06:49.393
+or proportion.
+
+00:06:49.731 --> 00:06:53.508
+Accuracy is how close a
+result is to the true value.
+
+00:06:53.548 --> 00:06:58.721
+Precision describes how closely
+repeated results agree with each other.
+
+00:06:58.761 --> 00:07:03.786
+Here's a set of results that are
+tightly grouped, so they're precise,
+
+00:07:03.826 --> 00:07:07.383
+but they're all too low,
+so they're not accurate.
+
+00:07:07.423 --> 00:07:10.727
+That's the fingerprint
+of a systematic error.
+
+00:07:11.064 --> 00:07:13.168
+Repeatability means the same person,
+
+00:07:13.208 --> 00:07:18.050
+method and equipment get closely agreeing
+results when the experiment is repeated.
+
+00:07:18.090 --> 00:07:21.980
+Good repeatability shows precision,
+but it doesn't prove accuracy.
+
+00:07:22.020 --> 00:07:26.327
+Validity asks whether the experiment
+actually measures what it claims to,
+
+00:07:26.367 --> 00:07:28.570
+under suitable controlled conditions.
+
+00:07:28.931 --> 00:07:33.365
+Averaging more repeats reduces
+the effect of random errors.
+
+00:07:33.405 --> 00:07:36.474
+It does nothing about a systematic error:
+
+00:07:36.514 --> 00:07:40.230
+you just get a better
+estimate of a biased value.
+
+00:07:41.197 --> 00:07:45.006
+Practice question Q twenty-two
+is worth five marks.
+
+00:07:45.046 --> 00:07:47.764
+Pause the video and work through it.
+
+00:08:03.197 --> 00:08:03.665
+Part a.
+
+00:08:03.705 --> 00:08:06.861
+The spreadsheet uses
+four hundred and fifty:
+
+00:08:06.901 --> 00:08:12.598
+four hundred and fifty times four point
+zero zero is one thousand eight hundred
+
+00:08:12.638 --> 00:08:18.263
+joules, divided by zero point zero four
+zero zero moles is forty-five thousand
+
+00:08:18.303 --> 00:08:19.425
+joules per mole.
+
+00:08:19.465 --> 00:08:24.945
+So the reported value is negative
+forty-five point zero kilojoules per mole.
+
+00:08:24.985 --> 00:08:29.376
+With the valid five hundred,
+the heat is two thousand joules,
+
+00:08:29.416 --> 00:08:34.717
+and the corrected value is negative
+fifty point zero kilojoules per mole.
+
+00:08:35.063 --> 00:08:35.515
+Part b.
+
+00:08:35.555 --> 00:08:38.462
+Repeating the experiment doesn't fix this.
+
+00:08:38.502 --> 00:08:42.111
+Every repeat uses the same
+wrong calibration factor,
+
+00:08:42.151 --> 00:08:46.672
+so the results agree closely with
+each other: good repeatability.
+
+00:08:46.712 --> 00:08:51.274
+But they share the same systematic
+bias, so they stay inaccurate.
+
+00:08:51.663 --> 00:08:52.175
+Part c.
+
+00:08:52.215 --> 00:08:58.084
+A thermometer that reads one point five
+degrees too high, on both readings,
+
+00:08:58.124 --> 00:09:03.126
+adds one point five to the initial
+and to the final temperature.
+
+00:09:03.166 --> 00:09:09.350
+The difference is final plus one point
+five, minus initial plus one point five,
+
+00:09:09.390 --> 00:09:11.792
+and the one point fives cancel.
+
+00:09:11.832 --> 00:09:13.487
+Delta T is unchanged.
+
+00:09:13.863 --> 00:09:15.539
+But don't over-generalise.
+
+00:09:15.579 --> 00:09:19.631
+That cancellation only works for
+an identical additive offset.
+
+00:09:19.671 --> 00:09:24.977
+A thermometer whose scale is stretched,
+reading too many degrees per real degree,
+
+00:09:25.017 --> 00:09:26.403
+would change delta T.
+
+00:09:26.797 --> 00:09:31.078
+Marks: two for the two enthalpies,
+one for the repetition explanation,
+
+00:09:31.118 --> 00:09:35.090
+and two for the offset conclusion
+with the subtraction reasoning.
+
+00:09:35.130 --> 00:09:38.053
+The traps: equating
+repeatability with accuracy,
+
+00:09:38.093 --> 00:09:42.413
+and assuming every thermometer error
+changes a temperature difference.
+
+00:09:43.396 --> 00:09:45.083
+Here's a summary table.
+
+00:09:45.123 --> 00:09:48.613
+Each row follows one
+fault through the formula,
+
+00:09:48.653 --> 00:09:52.859
+under the simple model where
+only that fault is present.
+
+00:09:53.196 --> 00:09:57.500
+Heat loss during electrical
+calibration, with E known correctly:
+
+00:09:57.540 --> 00:10:02.524
+the measured rise goes down, so the
+calculated calibration factor goes up.
+
+00:10:02.564 --> 00:10:07.615
+Uncorrected heat loss during the
+reaction, with a valid calibration factor:
+
+00:10:07.655 --> 00:10:12.950
+the measured rise goes down, so the
+inferred heat, and its magnitude, go down.
+
+00:10:13.329 --> 00:10:15.998
+A calibration factor that's too small:
+
+00:10:16.038 --> 00:10:20.845
+the calculated heat and the magnitude
+of the molar enthalpy go down.
+
+00:10:20.885 --> 00:10:24.695
+The same additive thermometer
+offset on both readings:
+
+00:10:24.735 --> 00:10:27.546
+the temperature difference is unchanged.
+
+00:10:27.586 --> 00:10:31.395
+And more repeat trials with
+the same systematic fault:
+
+00:10:31.435 --> 00:10:35.926
+a better estimate of a biased
+mean, with the fault still there.
+
+00:10:36.262 --> 00:10:37.183
+One caution.
+
+00:10:37.223 --> 00:10:42.466
+If several faults act together,
+the net effect needs a full model.
+
+00:10:42.506 --> 00:10:45.108
+They can partly cancel or add up,
+
+00:10:45.148 --> 00:10:49.630
+so the table alone can't tell
+you the overall direction.
+
+00:10:49.996 --> 00:10:55.789
+And when an exam asks for an improvement,
+be specific: insulate the lid and sides,
+
+00:10:55.829 --> 00:11:01.267
+calibrate with the same volume of solution
+that will be used in the reaction,
+
+00:11:01.307 --> 00:11:04.610
+record temperatures more
+often and extrapolate,
+
+00:11:04.650 --> 00:11:08.563
+or repeat with fresh solutions
+and average the results.
+
+00:11:09.529 --> 00:11:10.127
+To recap.
+
+00:11:10.167 --> 00:11:14.239
+Read the graph's baseline,
+mixing time and cooling region.
+
+00:11:14.279 --> 00:11:19.486
+Extend the cooling trend back to the
+mixing time to estimate the corrected
+
+00:11:19.526 --> 00:11:23.172
+temperature, and treat it
+as a model-based estimate.
+
+00:11:23.212 --> 00:11:27.356
+Trace every error through the
+actual formula, and remember:
+
+00:11:27.396 --> 00:11:29.877
+precise isn't the same as accurate.
+
+00:11:30.262 --> 00:11:31.316
+Closing recall.
+
+00:11:31.356 --> 00:11:37.368
+A cooling line has a slope of negative zero
+point zero zero two degrees per second.
+
+00:11:37.408 --> 00:11:41.160
+Extrapolating back fifty
+seconds to the mixing time,
+
+00:11:41.200 --> 00:11:44.043
+how much does the temperature increase?
+
+00:11:54.462 --> 00:12:00.139
+Fifty seconds times zero point zero zero
+two degrees per second is zero point one
+
+00:12:00.179 --> 00:12:03.526
+degrees, added to the
+start of the cooling line.
+
+00:12:03.566 --> 00:12:09.071
+Next episode: comparing fuels fairly,
+and what sustainability really requires.

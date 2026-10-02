@@ -6,7 +6,7 @@
  "narrated": false,
  "beats": 36,
  "beats_with_audio": 0,
- "duration": 641.46,
+ "duration": 641.06,
  "scenes": [
   {
    "scene": "E05S01",
@@ -54,12 +54,12 @@
    "scene": "E05S08",
    "title": "Practice Q10: two bases, two answers",
    "start": 486.19641899999993,
-   "duration": 105.999674
+   "duration": 105.599674
   },
   {
    "scene": "E05S09",
    "title": "Recap and closing recall",
-   "start": 592.1960929999999,
+   "start": 591.7960929999999,
    "duration": 49.266667
   }
  ],

@@ -3,22 +3,22 @@
  "title": "Practice Q13: excess means what's left after reaction",
  "cls": "E07S04_Q13",
  "fps": 15,
- "duration": 169.8667,
+ "duration": 169.4667,
  "beats": [
   {
    "key": "E07S04.b01",
    "start": 0.0,
-   "speech": 6.5669,
+   "speech": 6.1531,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero thirteen is worth six marks. Pause the video and try it.",
+   "text": "Practice question Q thirteen is worth six marks. Pause the video and try it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E07S04.b02",
-   "start": 22.0,
+   "start": 21.6,
    "speech": 23.011,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E07S04.b03",
-   "start": 45.4,
+   "start": 45.0,
    "speech": 24.6124,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E07S04.b04",
-   "start": 70.4,
+   "start": 70.0,
    "speech": 19.9883,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E07S04.b05",
-   "start": 90.7333,
+   "start": 90.3333,
    "speech": 25.9614,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E07S04.b06",
-   "start": 117.0667,
+   "start": 116.6667,
    "speech": 23.2448,
    "audio": null,
    "estimated": true,
@@ -73,7 +73,7 @@
   },
   {
    "key": "E07S04.b07",
-   "start": 140.6667,
+   "start": 140.2667,
    "speech": 28.2103,
    "audio": null,
    "estimated": true,

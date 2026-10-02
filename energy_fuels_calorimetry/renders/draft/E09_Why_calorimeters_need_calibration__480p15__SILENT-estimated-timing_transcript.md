@@ -31,7 +31,7 @@ If a calculated calibration factor comes out smaller than the water alone could 
 
 ## [03:58] E09S05 Practice Q17, part 1: calibrate, then use it
 
-Practice question Q zero seventeen is worth six marks. Pause the video and work through it.  *(pause)*
+Practice question Q seventeen is worth six marks. Pause the video and work through it.  *(pause)*
 Part a. The electrical energy: six point zero zero volts times one point five zero amps times two hundred and forty seconds is two thousand one hundred and sixty joules. The temperature rose four point zero zero degrees, so the calibration factor is two thousand one hundred and sixty divided by four point zero zero: five hundred and forty joules per degree Celsius.
 Plausibility check: the water alone needs one hundred and twenty point zero times four point one eight, which is five hundred and one point six joules per degree. Five hundred and forty is a bit larger, exactly as the model requires.
 Part b. The apparatus contribution is the difference: five hundred and forty minus five hundred and one point six, which is thirty-eight point four joules per degree. It's small, but not zero.
@@ -53,9 +53,9 @@ This surprises many students, because they've memorised "heat loss makes the ans
 Checkpoint. During a calibration, the student records the heating time as two hundred seconds when it was really two hundred and forty. Will the calibration factor be too big or too small? Pause and trace it through.  *(pause)*
 Too small. A shorter recorded time gives a smaller calculated E. With the same measured delta T, E over delta T is smaller.
 
-## [08:37] E09S08 Practice Q18: an impossible calibration factor
+## [08:36] E09S08 Practice Q18: an impossible calibration factor
 
-Practice question Q zero eighteen is worth four marks. Pause the video and decide what you'd write.  *(pause)*
+Practice question Q eighteen is worth four marks. Pause the video and decide what you'd write.  *(pause)*
 Start with the lower bound. One hundred point zero grams of water alone needs one hundred point zero times four point one eight: four hundred and eighteen joules per degree. The cup and probe have a positive heat capacity, so the true calibration factor must be more than four hundred and eighteen. Three hundred and sixty is less, so it's inconsistent with this setup.
 Now the student's explanation. Heat loss during calibration makes the measured temperature rise smaller, and that makes E over delta T larger. So heat loss would push the calibration factor up, not down. It can't explain a value that's too low.
 What could make it too low? Anything that makes the calculated E too small, or the measured delta T too large. For example, an overestimated temperature rise, perhaps from a misread thermometer, or an underestimated electrical energy, such as a time, current or voltage recorded too low.

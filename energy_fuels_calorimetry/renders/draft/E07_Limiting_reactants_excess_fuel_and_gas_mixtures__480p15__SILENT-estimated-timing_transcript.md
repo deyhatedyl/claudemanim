@@ -1,6 +1,6 @@
 # E07 Limiting reactants, excess fuel and gas mixtures
 
-Runtime 13:25. Narration transcript (matches the captions).
+Runtime 13:24. Narration transcript (matches the captions).
 
 ## [00:00] E07S01 Retrieval check
 
@@ -26,7 +26,7 @@ Methane: zero point two zero over one is zero point two zero. Oxygen: zero point
 
 ## [04:22] E07S04 Practice Q13: excess means what's left after reaction
 
-Practice question Q zero thirteen is worth six marks. Pause the video and try it.  *(pause)*
+Practice question Q thirteen is worth six marks. Pause the video and try it.  *(pause)*
 This is an idealised calculation: the ethanol that reacts burns completely, and any excess ethanol is simply left unreacted. First, amounts in moles. Ethanol is already given as zero point four zero zero moles. Oxygen: thirty-two point zero grams divided by thirty-two point zero grams per mole is one point zero zero moles.
 The balanced equation: ethanol plus three oxygen forms two carbon dioxide plus three water. Now compare amount divided by coefficient. Ethanol: zero point four zero zero over one is zero point four zero zero. Oxygen: one point zero zero over three is zero point three three three. Oxygen gives the smaller value, so oxygen is limiting.
 Another way to say it: zero point four zero zero moles of ethanol would need three times as much oxygen, one point two zero moles, and we only have one point zero zero. That sentence is a good way to justify the limiting reactant in an exam.
@@ -40,14 +40,14 @@ Gases often arrive as mixtures. Air is about twenty-one percent oxygen by volume
 For ideal gases at the same temperature and pressure, equal volumes contain equal amounts. So a volume fraction is also a mole fraction. That's an assumption, and questions usually state it. If the gases are at different conditions, you can't use the fractions this way.
 So split each stream before you do any stoichiometry. From the air, only the oxygen fraction goes into the reaction. From the fuel, only the methane fraction reacts. The nitrogen and the carbon dioxide pass through.
 
-## [08:05] E07S06 New carbon dioxide versus inlet carbon dioxide
+## [08:04] E07S06 New carbon dioxide versus inlet carbon dioxide
 
 If the fuel stream already contains carbon dioxide, the exhaust has two sources of it. Some carbon dioxide is newly formed by burning the methane. The rest simply entered with the fuel and passed through unchanged.
 A question might ask for either one. "Carbon dioxide formed" or "produced" means only the new part, calculated from the reaction. "Total carbon dioxide in the exhaust" means new plus inlet. Read which one is asked for before you add anything.
 
 ## [08:39] E07S07 Practice Q14, part 1: budgets and the limiting reactant
 
-Practice question Q zero fourteen is worth eight marks. Pause the video and work through the whole question before continuing.  *(pause)*
+Practice question Q fourteen is worth eight marks. Pause the video and work through the whole question before continuing.  *(pause)*
 Start with the fuel stream. Twelve point four litres at standard laboratory conditions is zero point five zero zero moles of gas. Eighty percent is methane: zero point four zero zero moles. Twenty percent is carbon dioxide: zero point one zero zero moles, which won't react.
 Now the air. Twenty-one point zero percent of ninety point zero litres is eighteen point nine litres of oxygen. Divided by twenty-four point eight, that's zero point seven six two one moles of oxygen.
 The equation is methane plus two oxygen. Amount divided by coefficient: methane zero point four zero zero over one is zero point four zero zero. Oxygen zero point seven six two one over two is zero point three eight one zero. Oxygen is smaller, so oxygen is limiting, and the reaction extent is zero point three eight one zero moles.
@@ -61,7 +61,7 @@ Energy released: zero point three eight one zero moles of methane times eight hu
 Marks: two for the reactive fuel amount and the oxygen amount, one for the limiting decision, two for the remaining methane, one each for new carbon dioxide, total carbon dioxide and energy.
 Three traps to watch. Treating all twelve point four litres of fuel gas as methane gives zero point five zero zero moles of methane. Treating all ninety litres of air as oxygen gives far too much oxygen and the wrong limiting reactant. And calling the nine point four five litres the total, or the eleven point nine three litres the amount formed, mixes up new and inlet carbon dioxide.
 
-## [12:06] E07S09 Recap and closing recall
+## [12:05] E07S09 Recap and closing recall
 
 The routine. One: convert everything to moles, using only the reactive part of any mixture. Two: divide each amount by its coefficient; the smallest is limiting, and gives the reaction extent. Three: used equals coefficient times extent. Four: remaining equals initial minus used, never negative. Five: products formed equal coefficient times extent, plus anything that simply passes through.
 Closing recall. Three point zero moles of hydrogen and two point zero moles of oxygen react: two hydrogen plus oxygen forms two water. Which is limiting, and how much of the other is left?  *(pause)*

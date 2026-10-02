@@ -21,32 +21,37 @@
  },
  "E05": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
   "final_qa": "pending"
  },
  "E06": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
   "final_qa": "pending"
  },
  "E07": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
   "final_qa": "pending"
  },
  "E08": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
   "final_qa": "pending"
  },
  "E09": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
   "final_qa": "pending"
  },
  "E10": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+  "final_qa": "pending"
+ },
+ "E11": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings.",
   "final_qa": "pending"
  }
 }

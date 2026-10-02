@@ -3,22 +3,22 @@
  "title": "Practice Q18: an impossible calibration factor",
  "cls": "E09S08_Q18",
  "fps": 15,
- "duration": 108.7333,
+ "duration": 108.3333,
  "beats": [
   {
    "key": "E09S08.b01",
    "start": 0.0,
-   "speech": 7.3945,
+   "speech": 6.9807,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero eighteen is worth four marks. Pause the video and decide what you'd write.",
+   "text": "Practice question Q eighteen is worth four marks. Pause the video and decide what you'd write.",
    "overrun": 0.0,
    "pause": 12.0,
    "layout": []
   },
   {
    "key": "E09S08.b02",
-   "start": 19.8,
+   "start": 19.4,
    "speech": 27.3828,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E09S08.b03",
-   "start": 47.5333,
+   "start": 47.1333,
    "speech": 17.6855,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E09S08.b04",
-   "start": 65.6,
+   "start": 65.2,
    "speech": 19.9883,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E09S08.b05",
-   "start": 85.9333,
+   "start": 85.5333,
    "speech": 21.8234,
    "audio": null,
    "estimated": true,

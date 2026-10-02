@@ -1,0 +1,53 @@
+{
+ "scene": "E11S02",
+ "title": "Reading a temperature-time graph",
+ "cls": "E11S02_ReadGraph",
+ "fps": 15,
+ "duration": 52.8667,
+ "beats": [
+  {
+   "key": "E11S02.b01",
+   "start": 0.0,
+   "speech": 17.2717,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's real-looking data, from practice question Q twenty-one. Temperature is on the vertical axis, in degrees Celsius, and time is on the horizontal axis, in seconds. Each point is an actual measurement; we won't draw a decorative curve through them.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S02.b02",
+   "start": 17.6667,
+   "speech": 9.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "Before mixing, the temperature is steady at twenty-one point zero degrees. That's the baseline. Mixing happens at one hundred and twenty seconds.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S02.b03",
+   "start": 27.6667,
+   "speech": 9.8772,
+   "audio": null,
+   "estimated": true,
+   "text": "After mixing, the temperature climbs quickly: twenty-three, twenty-five, twenty-six, and the highest reading, twenty-six point one degrees, at one hundred and eighty seconds.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S02.b04",
+   "start": 37.9333,
+   "speech": 13.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "After that, the readings fall slowly and steadily: twenty-five point nine, twenty-five point seven, twenty-five point five. The calorimeter is losing heat to the room. That steady fall is the cooling region.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "scene": "E11S03",
+ "title": "Why the highest reading is too low",
+ "cls": "E11S03_PeakTooLow",
+ "fps": 15,
+ "duration": 33.6667,
+ "beats": [
+  {
+   "key": "E11S03.b01",
+   "start": 0.0,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the problem. The calorimeter starts losing heat as soon as it's warmer than the room, which is while the reaction is still happening. So by the time the temperature peaks, some heat has already escaped.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S03.b02",
+   "start": 15.8,
+   "speech": 16.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "That means the highest measured temperature is lower than the temperature the calorimeter would have reached if the reaction had been instantaneous and no heat had escaped. Using it would underestimate the temperature rise, and so underestimate the heat released.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

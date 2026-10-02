@@ -3,22 +3,22 @@
  "title": "Practice Q12: hot exhaust versus cooled dry gas",
  "cls": "E06S07_Q12",
  "fps": 15,
- "duration": 134.4667,
+ "duration": 134.0667,
  "beats": [
   {
    "key": "E06S07.b01",
    "start": 0.0,
-   "speech": 6.9807,
+   "speech": 6.5669,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero twelve is worth five marks. Pause the video and work through it.",
+   "text": "Practice question Q twelve is worth five marks. Pause the video and work through it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E06S07.b02",
-   "start": 22.4,
+   "start": 22.0,
    "speech": 28.4441,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E06S07.b03",
-   "start": 51.2,
+   "start": 50.8,
    "speech": 20.5283,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E06S07.b04",
-   "start": 72.0667,
+   "start": 71.6667,
    "speech": 14.429,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E06S07.b05",
-   "start": 86.8667,
+   "start": 86.4667,
    "speech": 19.3407,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E06S07.b06",
-   "start": 106.6,
+   "start": 106.2,
    "speech": 13.6014,
    "audio": null,
    "estimated": true,
@@ -73,7 +73,7 @@
   },
   {
    "key": "E06S07.b07",
-   "start": 125.6667,
+   "start": 125.2667,
    "speech": 7.8083,
    "audio": null,
    "estimated": true,

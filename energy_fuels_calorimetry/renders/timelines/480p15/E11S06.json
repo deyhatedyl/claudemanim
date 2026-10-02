@@ -1,0 +1,53 @@
+{
+ "scene": "E11S06",
+ "title": "Heat loss during calibration versus during the reaction",
+ "cls": "E11S06_TwoLosses",
+ "fps": 15,
+ "duration": 57.7333,
+ "beats": [
+  {
+   "key": "E11S06.b01",
+   "start": 0.0,
+   "speech": 11.1186,
+   "audio": null,
+   "estimated": true,
+   "text": "Heat can escape at two different stages, and the effects go in different directions. That's why \"heat loss makes the answer smaller\" isn't a reliable rule.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S06.b02",
+   "start": 11.4667,
+   "speech": 11.9462,
+   "audio": null,
+   "estimated": true,
+   "text": "During calibration, the electrical energy is known correctly. Heat loss makes the measured temperature rise smaller, so C F, which is E over delta T, comes out larger.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S06.b03",
+   "start": 23.8,
+   "speech": 18.1531,
+   "audio": null,
+   "estimated": true,
+   "text": "During the reaction, with a valid calibration factor fixed, uncorrected heat loss makes the measured rise smaller. Then q, which is C F times delta T, is smaller, so the calculated heat released, and the size of the molar enthalpy, are smaller too.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S06.b04",
+   "start": 42.3333,
+   "speech": 14.429,
+   "audio": null,
+   "estimated": true,
+   "text": "Same physical cause, opposite effects on the calculated quantity, because the temperature rise sits in the denominator in one formula and the numerator in the other. Always follow the measurement through the actual formula.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

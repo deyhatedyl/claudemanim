@@ -1,0 +1,64 @@
+{
+ "scene": "E11S04",
+ "title": "Extrapolating the cooling line",
+ "cls": "E11S04_Extrapolate",
+ "fps": 15,
+ "duration": 99.1333,
+ "beats": [
+  {
+   "key": "E11S04.b01",
+   "start": 0.0,
+   "speech": 13.7814,
+   "audio": null,
+   "estimated": true,
+   "text": "To estimate what the temperature would have been without that loss, we use the cooling region. Draw the best straight line through the cooling points. Here they lie exactly on a line.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S04.b02",
+   "start": 14.1333,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "The slope: the temperature falls from twenty-six point one to twenty-five point five degrees over one hundred and eighty seconds. That's negative zero point six over one hundred and eighty, or about negative zero point zero zero three three three degrees per second.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S04.b03",
+   "start": 32.8,
+   "speech": 21.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "Now extend that line backwards, as a dashed line, to the moment of mixing at one hundred and twenty seconds. Going back sixty seconds adds sixty times zero point zero zero three three three, which is zero point two degrees. So the extrapolated temperature at mixing is twenty-six point three degrees.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S04.b04",
+   "start": 54.8,
+   "speech": 24.2524,
+   "audio": null,
+   "estimated": true,
+   "text": "Compare the two rises. Using the highest observed reading: twenty-six point one minus twenty-one point zero, which is five point one degrees. Using the extrapolated value: twenty-six point three minus twenty-one point zero, which is five point three degrees. The corrected rise is larger, because it adds back the heat lost while the reaction was happening.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S04.b05",
+   "start": 79.4,
+   "speech": 18.7469,
+   "audio": null,
+   "estimated": true,
+   "text": "Treat the extrapolated value as an estimate from a model. It assumes the cooling rate stays the same, and that the reaction happened at the moment of mixing. It's a better estimate than the raw maximum, not a perfect recovery of the true temperature.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

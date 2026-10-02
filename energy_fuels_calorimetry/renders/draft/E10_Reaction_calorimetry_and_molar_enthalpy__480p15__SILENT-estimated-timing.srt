@@ -254,466 +254,466 @@ not the amount of whichever reagent
 happens to be mentioned first.
 
 55
-00:03:51,198 --> 00:03:57,376
-Practice question Q zero nineteen uses
-exactly the amounts we've just worked out.
+00:03:51,198 --> 00:03:56,974
+Practice question Q nineteen uses exactly
+the amounts we've just worked out.
 
 56
-00:03:57,416 --> 00:03:59,142
+00:03:57,014 --> 00:03:58,735
 It's worth eight marks.
 
 57
-00:03:59,182 --> 00:04:01,255
+00:03:58,775 --> 00:04:00,841
 Pause the video and try it.
 
 58
-00:04:16,664 --> 00:04:21,260
+00:04:16,264 --> 00:04:20,860
 Parts a and b: zero point zero
 six zero zero moles of acid,
 
 59
-00:04:21,300 --> 00:04:25,738
+00:04:20,900 --> 00:04:25,338
 zero point zero four five zero
 moles of sodium hydroxide,
 
 60
-00:04:25,778 --> 00:04:31,944
+00:04:25,378 --> 00:04:31,544
 so sodium hydroxide is limiting, leaving
 zero point zero one five zero moles of
 
 61
-00:04:31,984 --> 00:04:33,162
+00:04:31,584 --> 00:04:32,762
 acid unreacted.
 
 62
-00:04:33,531 --> 00:04:33,994
+00:04:33,131 --> 00:04:33,594
 Part c.
 
 63
-00:04:34,034 --> 00:04:39,747
+00:04:33,634 --> 00:04:39,347
 The temperature rose from twenty point
 zero zero to twenty-four point three zero
 
 64
-00:04:39,787 --> 00:04:43,271
+00:04:39,387 --> 00:04:42,871
 degrees: a rise of four
 point three zero degrees.
 
 65
-00:04:43,311 --> 00:04:47,801
+00:04:42,911 --> 00:04:47,401
 The calibration factor was measured
 for these exact conditions,
 
 66
-00:04:47,841 --> 00:04:53,554
+00:04:47,441 --> 00:04:53,154
 so q for the calorimeter is five hundred
 and ninety times four point three zero:
 
 67
-00:04:53,594 --> 00:04:57,190
+00:04:53,194 --> 00:04:56,790
 two thousand five hundred
 and thirty-seven joules.
 
 68
-00:04:57,531 --> 00:04:59,248
+00:04:57,131 --> 00:04:58,848
 Before part d, predict.
 
 69
-00:04:59,288 --> 00:05:05,130
+00:04:58,888 --> 00:05:04,730
 Neutralising a strong acid with a strong
 base releases roughly fifty to sixty
 
 70
-00:05:05,170 --> 00:05:07,345
+00:05:04,770 --> 00:05:06,945
 kilojoules per mole of water.
 
 71
-00:05:07,385 --> 00:05:10,899
+00:05:06,985 --> 00:05:10,499
 So expect a negative
 value of about that size.
 
 72
-00:05:11,264 --> 00:05:11,743
+00:05:10,864 --> 00:05:11,343
 Part d.
 
 73
-00:05:11,783 --> 00:05:15,965
+00:05:11,383 --> 00:05:15,565
 The water formed is zero point
 zero four five zero moles.
 
 74
-00:05:16,005 --> 00:05:20,779
+00:05:15,605 --> 00:05:20,379
 So delta H equals negative two
 point five three seven kilojoules,
 
 75
-00:05:20,819 --> 00:05:24,335
+00:05:20,419 --> 00:05:23,935
 divided by zero point zero
 four five zero moles:
 
 76
-00:05:24,375 --> 00:05:29,223
+00:05:23,975 --> 00:05:28,823
 negative fifty-six point four
 kilojoules per mole of water formed.
 
 77
-00:05:29,263 --> 00:05:35,337
+00:05:28,863 --> 00:05:34,937
 It's negative because the reaction released
 heat, and it's in the predicted range.
 
 78
-00:05:35,731 --> 00:05:40,966
+00:05:35,331 --> 00:05:40,566
 Marks: two for the amounts, two for
 the limiting reagent and excess,
 
 79
-00:05:41,006 --> 00:05:46,436
+00:05:40,606 --> 00:05:46,036
 two for the heat, and two for the
 correct denominator, sign and value.
 
 80
-00:05:46,798 --> 00:05:49,587
+00:05:46,398 --> 00:05:49,187
 Three tempting denominators, all wrong.
 
 81
-00:05:49,627 --> 00:05:54,447
+00:05:49,227 --> 00:05:54,047
 Dividing by the acid supplied, zero
 point zero six zero zero moles,
 
 82
-00:05:54,487 --> 00:05:57,131
+00:05:54,087 --> 00:05:56,731
 gives negative forty-two point three.
 
 83
-00:05:57,171 --> 00:06:02,499
+00:05:56,771 --> 00:06:02,099
 Dividing by the total moles of both
 reactants gives an even smaller value.
 
 84
-00:06:02,539 --> 00:06:07,867
+00:06:02,139 --> 00:06:07,467
 And dividing by the total volume gives
 a quantity in kilojoules per litre,
 
 85
-00:06:07,907 --> 00:06:10,479
+00:06:07,507 --> 00:06:10,079
 which isn't a molar enthalpy at all.
 
 86
-00:06:10,519 --> 00:06:16,249
+00:06:10,119 --> 00:06:15,849
 The first wrong step in each is not asking
 how much reaction actually happened.
 
 87
-00:06:17,196 --> 00:06:20,179
+00:06:16,796 --> 00:06:19,779
 Now an equation with a coefficient of two.
 
 88
-00:06:20,219 --> 00:06:25,648
+00:06:19,819 --> 00:06:25,248
 Two sodium hydroxide plus sulfuric acid
 forms sodium sulfate plus two water,
 
 89
-00:06:25,688 --> 00:06:31,621
+00:06:25,288 --> 00:06:31,221
 with delta H equal to negative one hundred
 and fourteen kilojoules for the equation
 
 90
-00:06:31,661 --> 00:06:32,461
+00:06:31,261 --> 00:06:32,061
 as written.
 
 91
-00:06:32,796 --> 00:06:36,164
+00:06:32,396 --> 00:06:35,764
 "As written" means one
 mole of this reaction:
 
 92
-00:06:36,204 --> 00:06:41,466
+00:06:35,804 --> 00:06:41,066
 two moles of sodium hydroxide reacting
 with one mole of sulfuric acid,
 
 93
-00:06:41,506 --> 00:06:43,510
+00:06:41,106 --> 00:06:43,110
 forming two moles of water.
 
 94
-00:06:43,550 --> 00:06:49,115
+00:06:43,150 --> 00:06:48,715
 So one hundred and fourteen kilojoules
 is released per two moles of sodium
 
 95
-00:06:49,155 --> 00:06:51,957
+00:06:48,755 --> 00:06:51,557
 hydroxide, or per two moles of water.
 
 96
-00:06:52,329 --> 00:06:56,986
+00:06:51,929 --> 00:06:56,586
 The amount of reaction that actually
 happens is the reaction extent:
 
 97
-00:06:57,026 --> 00:07:00,577
+00:06:56,626 --> 00:07:00,177
 the smallest value of amount
 divided by coefficient.
 
 98
-00:07:00,617 --> 00:07:06,379
+00:07:00,217 --> 00:07:05,979
 Multiply the extent by one hundred and
 fourteen kilojoules to get the heat released.
 
 99
-00:07:06,419 --> 00:07:11,766
+00:07:06,019 --> 00:07:11,366
 Multiplying the moles of sodium hydroxide
 directly by one hundred and fourteen
 
 100
-00:07:11,806 --> 00:07:13,325
+00:07:11,406 --> 00:07:12,925
 would double count it.
 
 101
-00:07:14,262 --> 00:07:18,314
-Practice question Q zero
-twenty is worth six marks.
+00:07:13,862 --> 00:07:17,506
+Practice question Q twenty
+is worth six marks.
 
 102
-00:07:18,354 --> 00:07:21,242
+00:07:17,546 --> 00:07:20,429
 Pause the video and work through it.
 
 103
-00:07:36,662 --> 00:07:39,543
+00:07:35,862 --> 00:07:38,743
 Compare amount divided by coefficient.
 
 104
-00:07:39,583 --> 00:07:45,770
+00:07:38,783 --> 00:07:44,970
 Sodium hydroxide: zero point zero three
 zero zero over two is zero point zero one
 
 105
-00:07:45,810 --> 00:07:46,539
+00:07:45,010 --> 00:07:45,739
 five zero.
 
 106
-00:07:46,579 --> 00:07:52,766
+00:07:45,779 --> 00:07:51,966
 Sulfuric acid: zero point zero two zero
 zero over one is zero point zero two zero
 
 107
-00:07:52,806 --> 00:07:53,150
+00:07:52,006 --> 00:07:52,350
 zero.
 
 108
-00:07:53,190 --> 00:07:57,686
+00:07:52,390 --> 00:07:56,886
 Sodium hydroxide gives the
 smaller value, so it's limiting,
 
 109
-00:07:57,726 --> 00:08:02,569
+00:07:56,926 --> 00:08:01,769
 and the reaction extent is zero
 point zero one five zero moles.
 
 110
-00:08:02,928 --> 00:08:08,728
+00:08:02,128 --> 00:08:07,928
 Heat released: zero point zero one five
 zero moles of reaction times one hundred
 
 111
-00:08:08,768 --> 00:08:13,984
+00:08:07,968 --> 00:08:13,184
 and fourteen kilojoules per mole of
 reaction is one point seven one zero
 
 112
-00:08:14,024 --> 00:08:18,185
+00:08:13,224 --> 00:08:17,385
 kilojoules, or one thousand
 seven hundred and ten joules.
 
 113
-00:08:18,528 --> 00:08:24,044
+00:08:17,728 --> 00:08:23,244
 The calorimeter gains that heat, so the
 temperature rise is q divided by the
 
 114
-00:08:24,084 --> 00:08:29,673
+00:08:23,284 --> 00:08:28,873
 calibration factor: one thousand seven
 hundred and ten joules divided by four
 
 115
-00:08:29,713 --> 00:08:32,378
+00:08:28,913 --> 00:08:31,578
 hundred and eighty joules per degree,
 
 116
-00:08:32,418 --> 00:08:35,854
+00:08:31,618 --> 00:08:35,054
 which is three point five
 six two five degrees.
 
 117
-00:08:36,195 --> 00:08:40,296
+00:08:35,395 --> 00:08:39,496
 The question asks for the final
 temperature, not the rise.
 
 118
-00:08:40,336 --> 00:08:46,222
+00:08:39,536 --> 00:08:45,422
 Final equals initial plus rise: twenty-one
 point zero plus three point five six two
 
 119
-00:08:46,262 --> 00:08:52,045
+00:08:45,462 --> 00:08:51,245
 five is twenty-four point five six two
 five, about twenty-four point six degrees.
 
 120
-00:08:52,395 --> 00:08:58,927
+00:08:51,595 --> 00:08:58,127
 And the acid remaining: zero point zero
 two zero zero minus the zero point zero one
 
 121
-00:08:58,967 --> 00:09:05,262
+00:08:58,167 --> 00:09:04,462
 five zero moles that reacted leaves zero
 point zero zero five zero zero moles of
 
 122
-00:09:05,302 --> 00:09:06,410
+00:09:04,502 --> 00:09:05,610
 sulfuric acid.
 
 123
-00:09:06,795 --> 00:09:11,983
+00:09:05,995 --> 00:09:11,183
 One mark each for the limiting decision,
 the extent, the heat, the rise,
 
 124
-00:09:12,023 --> 00:09:15,250
+00:09:11,223 --> 00:09:14,450
 the final temperature
 and the acid remaining.
 
 125
-00:09:15,290 --> 00:09:21,276
+00:09:14,490 --> 00:09:20,476
 Two traps: multiplying zero point zero
 three zero zero moles of sodium hydroxide by
 
 126
-00:09:21,316 --> 00:09:25,487
+00:09:20,516 --> 00:09:24,687
 one hundred and fourteen, which
 gives twice the true heat,
 
 127
-00:09:25,527 --> 00:09:31,335
+00:09:24,727 --> 00:09:30,535
 and reporting the rise of three point five
 six degrees as the final temperature.
 
 128
-00:09:32,328 --> 00:09:38,236
+00:09:31,528 --> 00:09:37,436
 Suppose we halve the equation: one sodium
 hydroxide plus half a sulfuric acid forms
 
 129
-00:09:38,276 --> 00:09:40,887
+00:09:37,476 --> 00:09:40,087
 half a sodium sulfate plus one water.
 
 130
-00:09:40,927 --> 00:09:44,868
+00:09:40,127 --> 00:09:44,068
 Delta H halves too, to negative
 fifty-seven kilojoules.
 
 131
-00:09:45,261 --> 00:09:51,022
+00:09:44,461 --> 00:09:50,222
 For the same mixture, the extent of
 this halved equation is twice as large:
 
 132
-00:09:51,062 --> 00:09:53,962
+00:09:50,262 --> 00:09:53,162
 zero point zero three zero zero moles.
 
 133
-00:09:54,002 --> 00:09:59,917
+00:09:53,202 --> 00:09:59,117
 Zero point zero three zero zero times
 fifty-seven is one point seven one zero
 
 134
-00:09:59,957 --> 00:10:03,361
+00:09:59,157 --> 00:10:02,561
 kilojoules: exactly the
 same heat as before.
 
 135
-00:10:03,728 --> 00:10:05,230
+00:10:02,928 --> 00:10:04,430
 That's the checkpoint.
 
 136
-00:10:05,270 --> 00:10:10,485
+00:10:04,470 --> 00:10:09,685
 Changing the coefficients changes the
 delta H associated with the equation,
 
 137
-00:10:10,525 --> 00:10:16,021
+00:10:09,725 --> 00:10:15,221
 but it can't change the heat released by
 the same physical reaction in the same
 
 138
-00:10:16,061 --> 00:10:16,862
+00:10:15,261 --> 00:10:16,062
 calorimeter.
 
 139
-00:10:16,902 --> 00:10:20,406
+00:10:16,102 --> 00:10:19,606
 The physical amounts that
 react are what they are.
 
 140
-00:10:21,394 --> 00:10:24,084
+00:10:20,594 --> 00:10:23,284
 The chain for reaction calorimetry.
 
 141
-00:10:24,124 --> 00:10:27,437
+00:10:23,324 --> 00:10:26,637
 Find each amount with
 c times V, in litres.
 
 142
-00:10:27,477 --> 00:10:31,336
+00:10:26,677 --> 00:10:30,536
 Find the limiting reagent
 and the reaction extent.
 
 143
-00:10:31,376 --> 00:10:36,873
+00:10:30,576 --> 00:10:36,073
 Measure q for the calorimeter as the
 calibration factor times the rise.
 
 144
-00:10:36,913 --> 00:10:40,070
+00:10:36,113 --> 00:10:39,270
 The reaction's q is the negative of that.
 
 145
-00:10:40,110 --> 00:10:45,647
+00:10:39,310 --> 00:10:44,847
 Then divide by the amount the enthalpy
 refers to, and say what that is.
 
 146
-00:10:45,994 --> 00:10:47,141
+00:10:45,194 --> 00:10:46,341
 Closing recall.
 
 147
-00:10:47,181 --> 00:10:52,124
+00:10:46,381 --> 00:10:51,324
 A reaction forms zero point zero
 four zero zero moles of water,
 
 148
-00:10:52,164 --> 00:10:56,633
+00:10:51,364 --> 00:10:55,833
 and the calorimeter gains two
 point four zero kilojoules.
 
 149
-00:10:56,673 --> 00:10:59,362
+00:10:55,873 --> 00:10:58,562
 What is delta H per mole of water?
 
 150
-00:11:09,794 --> 00:11:15,314
+00:11:08,994 --> 00:11:14,514
 Negative two point four zero kilojoules
 divided by zero point zero four zero zero
 
 151
-00:11:15,354 --> 00:11:19,706
+00:11:14,554 --> 00:11:18,906
 moles is negative sixty point zero
 kilojoules per mole of water.
 
 152
-00:11:19,746 --> 00:11:22,520
+00:11:18,946 --> 00:11:21,720
 Next episode: reading temperature graphs,
 
 153
-00:11:22,560 --> 00:11:26,472
+00:11:21,760 --> 00:11:25,672
 and correcting for heat that
 escapes during the reaction.

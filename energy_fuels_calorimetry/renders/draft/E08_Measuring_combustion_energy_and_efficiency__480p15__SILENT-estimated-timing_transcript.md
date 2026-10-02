@@ -1,6 +1,6 @@
 # E08 Measuring combustion energy and efficiency
 
-Runtime 12:26. Narration transcript (matches the captions).
+Runtime 12:25. Narration transcript (matches the captions).
 
 ## [00:00] E08S01 Retrieval check
 
@@ -38,7 +38,7 @@ Two reasons. First, most of the energy escaped to the can and the air, and some 
 
 ## [05:42] E08S06 Practice Q15: a measured fuel mass loss
 
-Practice question Q zero fifteen is worth six marks. Pause the video and try it.  *(pause)*
+Practice question Q fifteen is worth six marks. Pause the video and try it.  *(pause)*
 Ethanol burned: one hundred and two point six four zero minus one hundred and one point seven two zero, which is zero point nine two zero grams. Divided by forty-six point zero grams per mole: zero point zero two zero zero moles.
 Energy released by the ethanol: zero point zero two zero zero moles times one thousand three hundred and seventy kilojoules per mole is twenty-seven point four kilojoules.
 Now the water. Its temperature rise is thirty-seven point zero minus nineteen point eight: seventeen point two degrees. The heat gained is two hundred and fifty point zero grams times four point one eight times seventeen point two, which is seventeen thousand nine hundred and seventy-four joules, or seventeen point nine seven four kilojoules, about eighteen point zero.
@@ -55,14 +55,14 @@ Too small. Multiplying by zero point four five zero gives less than the useful o
 
 ## [09:28] E08S08 Practice Q16: work backwards from useful heat
 
-Practice question Q zero sixteen is worth five marks. Pause the video and try it.  *(pause)*
+Practice question Q sixteen is worth five marks. Pause the video and try it.  *(pause)*
 Start with what's needed: heating one hundred and eighty point zero grams of water from eighteen point zero to seventy-eight point zero degrees, a rise of sixty point zero degrees. Useful heat equals one hundred and eighty point zero times four point one eight times sixty point zero: forty-five thousand one hundred and forty-four joules, which is forty-five point one four four kilojoules.
 The heater is forty-five point zero percent efficient, so the chemical energy input must be larger: forty-five point one four four divided by zero point four five zero, which is one hundred point three two kilojoules.
 The fuel supplies twenty-nine point eight kilojoules per gram, so the mass needed is one hundred point three two divided by twenty-nine point eight: three point three six six grams, reported as three point three seven grams.
 Now the student's method: multiplying forty-five point one four four by zero point four five zero, then dividing by twenty-nine point eight, gives zero point six eight two grams. Even a perfect, one hundred percent efficient heater would need forty-five point one four four divided by twenty-nine point eight, one point five one five grams. So zero point six eight two grams is impossible: the efficiency was used in the wrong direction.
 Marks: two for the useful heat, one for dividing by the efficiency, one for the fuel mass, and one for the explanation with that sanity check.
 
-## [11:32] E08S09 Recap and closing recall
+## [11:31] E08S09 Recap and closing recall
 
 To recap. The fuel's energy comes from the mass burned, converted to moles, times the molar enthalpy of combustion. The useful energy comes from q equals m c delta T for the water. Efficiency is useful over total, and to find an input from a required output, divide by the efficiency.
 Closing recall. If a heater's efficiency halved, how would the mass of fuel needed for the same heating task change?  *(pause)*

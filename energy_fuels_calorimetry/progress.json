@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:55:17",
+ "updated": "2026-10-02T19:02:47",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -622,9 +622,9 @@
    "title": "Food as a chemical energy source",
    "script": {
     "path": "scripts/ep05.md",
-    "sha": "cb449cf0be458a72",
+    "sha": "ee9d3748b7339b50",
     "beats": 36,
-    "words": 1328,
+    "words": 1327,
     "est_minutes": 10.7,
     "anchors": "Q09,Q10",
     "coverage": "C04,C07"
@@ -725,7 +725,7 @@
      "beats": 4,
      "audio_ready": 0,
      "480p15": {
-      "duration": 106.0,
+      "duration": 105.6,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -753,7 +753,7 @@
     "output": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 641.46,
+    "duration": 641.06,
     "captions": [
      "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.vtt"
@@ -763,7 +763,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
@@ -771,9 +771,9 @@
    "title": "Combustion equations and gaseous products",
    "script": {
     "path": "scripts/ep06.md",
-    "sha": "b48ae1bdd37c367f",
+    "sha": "732a3e2b2bd8ee5e",
     "beats": 38,
-    "words": 1414,
+    "words": 1412,
     "est_minutes": 11.5,
     "anchors": "Q11,Q12",
     "coverage": "C12,C13,C14,C17,C01"
@@ -838,7 +838,7 @@
      "beats": 8,
      "audio_ready": 0,
      "480p15": {
-      "duration": 142.3333,
+      "duration": 141.9333,
       "fresh": true,
       "estimated_beats": 8,
       "layout_warnings": 0
@@ -862,7 +862,7 @@
      "beats": 7,
      "audio_ready": 0,
      "480p15": {
-      "duration": 134.4667,
+      "duration": 134.0667,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -902,7 +902,7 @@
     "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 686.0,
+    "duration": 685.2,
     "captions": [
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
@@ -912,7 +912,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
@@ -920,9 +920,9 @@
    "title": "Limiting reactants, excess fuel and gas mixtures",
    "script": {
     "path": "scripts/ep07.md",
-    "sha": "0cc21947da9aa25d",
+    "sha": "88a41b7469a72f15",
     "beats": 38,
-    "words": 1682,
+    "words": 1680,
     "est_minutes": 13.5,
     "anchors": "Q13,Q14",
     "coverage": "C14,C15,C16,C17,C01"
@@ -975,7 +975,7 @@
      "beats": 7,
      "audio_ready": 0,
      "480p15": {
-      "duration": 169.8667,
+      "duration": 169.4667,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1011,7 +1011,7 @@
      "beats": 5,
      "audio_ready": 0,
      "480p15": {
-      "duration": 113.3333,
+      "duration": 112.9333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1051,7 +1051,7 @@
     "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 805.73,
+    "duration": 804.93,
     "captions": [
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.vtt"
@@ -1061,7 +1061,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
@@ -1069,9 +1069,9 @@
    "title": "Measuring combustion energy and efficiency",
    "script": {
     "path": "scripts/ep08.md",
-    "sha": "88d1465f90864b24",
+    "sha": "d5606117af901fdc",
     "beats": 39,
-    "words": 1573,
+    "words": 1571,
     "est_minutes": 12.5,
     "anchors": "Q15,Q16",
     "coverage": "C18,C19,C08,C10"
@@ -1148,7 +1148,7 @@
      "beats": 6,
      "audio_ready": 0,
      "480p15": {
-      "duration": 134.9333,
+      "duration": 134.5333,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1172,7 +1172,7 @@
      "beats": 6,
      "audio_ready": 0,
      "480p15": {
-      "duration": 123.9333,
+      "duration": 123.5333,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1200,7 +1200,7 @@
     "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 746.79,
+    "duration": 745.99,
     "captions": [
      "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.vtt"
@@ -1210,7 +1210,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
@@ -1218,9 +1218,9 @@
    "title": "Why calorimeters need calibration",
    "script": {
     "path": "scripts/ep09.md",
-    "sha": "a5f285cff220afb6",
+    "sha": "a52d0fc1ec557d72",
     "beats": 38,
-    "words": 1470,
+    "words": 1468,
     "est_minutes": 11.8,
     "anchors": "Q17,Q18",
     "coverage": "C20,C21,C25,C08"
@@ -1285,7 +1285,7 @@
      "beats": 5,
      "audio_ready": 0,
      "480p15": {
-      "duration": 106.4,
+      "duration": 106.0,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1321,7 +1321,7 @@
      "beats": 5,
      "audio_ready": 0,
      "480p15": {
-      "duration": 108.7333,
+      "duration": 108.3333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1349,7 +1349,7 @@
     "output": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 702.99,
+    "duration": 702.19,
     "captions": [
      "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.vtt"
@@ -1359,7 +1359,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
@@ -1367,9 +1367,9 @@
    "title": "Reaction calorimetry and molar enthalpy",
    "script": {
     "path": "scripts/ep10.md",
-    "sha": "83b395af5fe73a7c",
+    "sha": "7bfc3705e5cb0572",
     "beats": 36,
-    "words": 1449,
+    "words": 1447,
     "est_minutes": 11.5,
     "anchors": "Q19,Q20",
     "coverage": "C22,C23,C15,C13,C01"
@@ -1434,7 +1434,7 @@
      "beats": 7,
      "audio_ready": 0,
      "480p15": {
-      "duration": 146.0,
+      "duration": 145.6,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1458,7 +1458,7 @@
      "beats": 7,
      "audio_ready": 0,
      "480p15": {
-      "duration": 138.0667,
+      "duration": 137.6667,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1498,7 +1498,7 @@
     "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 687.46,
+    "duration": 686.66,
     "captions": [
      "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.vtt"
@@ -1508,17 +1508,170 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
     "final_qa": "pending"
    }
   },
   "E11": {
    "title": "Temperature graphs, correction and experimental reasoning",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep11.md",
+    "sha": "ba7b50da666e5aae",
+    "beats": 41,
+    "words": 1545,
+    "est_minutes": 12.2,
+    "anchors": "Q21,Q22",
+    "coverage": "C24,C25,C21,C08"
+   },
+   "scenes_code": {
+    "path": "scenes/ep11.py",
+    "sha": "64fd33df9c843cfd"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E11S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 52.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S02",
+     "title": "Reading a temperature-time graph",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 52.8667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S03",
+     "title": "Why the highest reading is too low",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 33.6667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S04",
+     "title": "Extrapolating the cooling line",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 99.1333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S05",
+     "title": "Practice Q21: corrected heat",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 99.2667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S06",
+     "title": "Heat loss during calibration versus during the reaction",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.7333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S07",
+     "title": "Systematic and random errors; accuracy and precision",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 66.0,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S08",
+     "title": "Practice Q22: a wrong CF and a thermometer offset",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 122.2,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S09",
+     "title": "The error-direction table",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 86.1333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E11S10",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 60.5333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 41,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 730.06,
+    "captions": [
+     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E12": {
    "title": "Fair fuel comparisons and sustainability",
@@ -1545,5 +1698,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 128.2
+ "series_est_minutes": 140.4
 }

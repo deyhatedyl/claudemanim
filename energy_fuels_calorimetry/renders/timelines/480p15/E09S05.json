@@ -3,22 +3,22 @@
  "title": "Practice Q17, part 1: calibrate, then use it",
  "cls": "E09S05_Q17a",
  "fps": 15,
- "duration": 106.4,
+ "duration": 106.0,
  "beats": [
   {
    "key": "E09S05.b01",
    "start": 0.0,
-   "speech": 6.9807,
+   "speech": 6.5669,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero seventeen is worth six marks. Pause the video and work through it.",
+   "text": "Practice question Q seventeen is worth six marks. Pause the video and work through it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E09S05.b02",
-   "start": 22.4,
+   "start": 22.0,
    "speech": 26.969,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E09S05.b03",
-   "start": 49.7333,
+   "start": 49.3333,
    "speech": 17.5055,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E09S05.b04",
-   "start": 67.6,
+   "start": 67.2,
    "speech": 13.9614,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E09S05.b05",
-   "start": 81.9333,
+   "start": 81.5333,
    "speech": 23.4786,
    "audio": null,
    "estimated": true,

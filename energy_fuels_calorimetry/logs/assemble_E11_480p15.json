@@ -1,0 +1,78 @@
+{
+ "episode": "E11",
+ "quality": "480p15",
+ "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 41,
+ "beats_with_audio": 0,
+ "duration": 730.06,
+ "scenes": [
+  {
+   "scene": "E11S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 52.533008
+  },
+  {
+   "scene": "E11S02",
+   "title": "Reading a temperature-time graph",
+   "start": 52.533008,
+   "duration": 52.866016
+  },
+  {
+   "scene": "E11S03",
+   "title": "Why the highest reading is too low",
+   "start": 105.399024,
+   "duration": 33.666341
+  },
+  {
+   "scene": "E11S04",
+   "title": "Extrapolating the cooling line",
+   "start": 139.06536499999999,
+   "duration": 99.133008
+  },
+  {
+   "scene": "E11S05",
+   "title": "Practice Q21: corrected heat",
+   "start": 238.198373,
+   "duration": 99.266341
+  },
+  {
+   "scene": "E11S06",
+   "title": "Heat loss during calibration versus during the reaction",
+   "start": 337.464714,
+   "duration": 57.733008
+  },
+  {
+   "scene": "E11S07",
+   "title": "Systematic and random errors; accuracy and precision",
+   "start": 395.197722,
+   "duration": 65.999023
+  },
+  {
+   "scene": "E11S08",
+   "title": "Practice Q22: a wrong CF and a thermometer offset",
+   "start": 461.19674499999996,
+   "duration": 122.199023
+  },
+  {
+   "scene": "E11S09",
+   "title": "The error-direction table",
+   "start": 583.395768,
+   "duration": 86.133008
+  },
+  {
+   "scene": "E11S10",
+   "title": "Recap and closing recall",
+   "start": 669.528776,
+   "duration": 60.533333
+  }
+ ],
+ "captions": [
+  "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

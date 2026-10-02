@@ -1,0 +1,53 @@
+{
+ "scene": "E11S07",
+ "title": "Systematic and random errors; accuracy and precision",
+ "cls": "E11S07_Errors",
+ "fps": 15,
+ "duration": 66.0,
+ "beats": [
+  {
+   "key": "E11S07.b01",
+   "start": 0.0,
+   "speech": 14.1952,
+   "audio": null,
+   "estimated": true,
+   "text": "Some vocabulary, used precisely. A random error makes repeated measurements scatter unpredictably, sometimes high and sometimes low. A systematic error pushes every result in the same direction by a consistent amount or proportion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S07.b02",
+   "start": 14.5333,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "Accuracy is how close a result is to the true value. Precision describes how closely repeated results agree with each other. Here's a set of results that are tightly grouped, so they're precise, but they're all too low, so they're not accurate. That's the fingerprint of a systematic error.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S07.b03",
+   "start": 35.8667,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "Repeatability means the same person, method and equipment get closely agreeing results when the experiment is repeated. Good repeatability shows precision, but it doesn't prove accuracy. Validity asks whether the experiment actually measures what it claims to, under suitable controlled conditions.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S07.b04",
+   "start": 53.7333,
+   "speech": 11.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "Averaging more repeats reduces the effect of random errors. It does nothing about a systematic error: you just get a better estimate of a biased value.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

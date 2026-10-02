@@ -3,22 +3,22 @@
  "title": "Practice Q16: work backwards from useful heat",
  "cls": "E08S08_Q16",
  "fps": 15,
- "duration": 123.9333,
+ "duration": 123.5333,
  "beats": [
   {
    "key": "E08S08.b01",
    "start": 0.0,
-   "speech": 6.5669,
+   "speech": 6.1531,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero sixteen is worth five marks. Pause the video and try it.",
+   "text": "Practice question Q sixteen is worth five marks. Pause the video and try it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E08S08.b02",
-   "start": 22.0,
+   "start": 21.6,
    "speech": 26.789,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E08S08.b03",
-   "start": 49.1333,
+   "start": 48.7333,
    "speech": 15.2566,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E08S08.b04",
-   "start": 64.7333,
+   "start": 64.3333,
    "speech": 15.6703,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E08S08.b05",
-   "start": 80.8,
+   "start": 80.4,
    "speech": 30.6931,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E08S08.b06",
-   "start": 111.8667,
+   "start": 111.4667,
    "speech": 11.1186,
    "audio": null,
    "estimated": true,

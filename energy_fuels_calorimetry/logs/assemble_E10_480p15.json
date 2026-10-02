@@ -6,7 +6,7 @@
  "narrated": false,
  "beats": 36,
  "beats_with_audio": 0,
- "duration": 687.46,
+ "duration": 686.66,
  "scenes": [
   {
    "scene": "E10S01",
@@ -36,30 +36,30 @@
    "scene": "E10S05",
    "title": "Practice Q19: justify the denominator",
    "start": 231.197721,
-   "duration": 145.998372
+   "duration": 145.598372
   },
   {
    "scene": "E10S06",
    "title": "One mole of reagent is not always one mole of reaction",
-   "start": 377.196093,
+   "start": 376.79609300000004,
    "duration": 57.06569
   },
   {
    "scene": "E10S07",
    "title": "Practice Q20: predict the final temperature",
-   "start": 434.26178300000004,
-   "duration": 138.066341
+   "start": 433.86178300000006,
+   "duration": 137.666341
   },
   {
    "scene": "E10S08",
    "title": "Coefficients change delta H, not the heat",
-   "start": 572.328124,
+   "start": 571.528124,
    "duration": 49.066341
   },
   {
    "scene": "E10S09",
    "title": "Recap and closing recall",
-   "start": 621.394465,
+   "start": 620.594465,
    "duration": 66.066016
   }
  ],

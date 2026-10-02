@@ -3,22 +3,22 @@
  "title": "Practice Q19: justify the denominator",
  "cls": "E10S05_Q19",
  "fps": 15,
- "duration": 146.0,
+ "duration": 145.6,
  "beats": [
   {
    "key": "E10S05.b01",
    "start": 0.0,
-   "speech": 10.0572,
+   "speech": 9.6434,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero nineteen uses exactly the amounts we've just worked out. It's worth eight marks. Pause the video and try it.",
+   "text": "Practice question Q nineteen uses exactly the amounts we've just worked out. It's worth eight marks. Pause the video and try it.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E10S05.b02",
-   "start": 25.4667,
+   "start": 25.0667,
    "speech": 16.4979,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E10S05.b03",
-   "start": 42.3333,
+   "start": 41.9333,
    "speech": 23.6586,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E10S05.b04",
-   "start": 66.3333,
+   "start": 65.9333,
    "speech": 13.3676,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E10S05.b05",
-   "start": 80.0667,
+   "start": 79.6667,
    "speech": 24.0724,
    "audio": null,
    "estimated": true,
@@ -62,7 +62,7 @@
   },
   {
    "key": "E10S05.b06",
-   "start": 104.5333,
+   "start": 104.1333,
    "speech": 10.7048,
    "audio": null,
    "estimated": true,
@@ -73,7 +73,7 @@
   },
   {
    "key": "E10S05.b07",
-   "start": 115.6,
+   "start": 115.2,
    "speech": 29.4517,
    "audio": null,
    "estimated": true,

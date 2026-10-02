@@ -1,0 +1,64 @@
+{
+ "scene": "E11S05",
+ "title": "Practice Q21: corrected heat",
+ "cls": "E11S05_Q21",
+ "fps": 15,
+ "duration": 99.2667,
+ "beats": [
+  {
+   "key": "E11S05.b01",
+   "start": 0.0,
+   "speech": 8.8159,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q twenty-one is worth five marks. You've seen the graph; pause the video and write the full solution.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E11S05.b02",
+   "start": 21.2667,
+   "speech": 16.8579,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a: the cooling slope is negative zero point zero zero three three three degrees per second, and extrapolating back sixty seconds gives twenty-six point three degrees at mixing. Part b: the corrected rise is five point three degrees.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S05.b03",
+   "start": 38.4667,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "Part c: the corrected heat is six hundred and fifty times five point three: three thousand four hundred and forty-five joules. Since the temperature rise is a graph estimate to two significant figures, report it as about three point four kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S05.b04",
+   "start": 56.5333,
+   "speech": 20.8159,
+   "audio": null,
+   "estimated": true,
+   "text": "Part d: the highest observed temperature gives a rise of five point one degrees, and six hundred and fifty times five point one is three thousand three hundred and fifteen joules, about three point three kilojoules. That's an underestimate, because cooling had already started before the peak was recorded.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S05.b05",
+   "start": 77.7333,
+   "speech": 20.5821,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the correct region and extrapolation, one for the corrected rise, one for the corrected heat, and one for the comparison with its direction. The traps: using the observed maximum as if it were corrected, or reading twenty-six point three degrees itself as the temperature change.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

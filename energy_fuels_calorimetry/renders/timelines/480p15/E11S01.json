@@ -1,0 +1,42 @@
+{
+ "scene": "E11S01",
+ "title": "Retrieval check",
+ "cls": "E11S01_Retrieval",
+ "fps": 15,
+ "duration": 52.5333,
+ "beats": [
+  {
+   "key": "E11S01.b01",
+   "start": 0.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode eleven. Real calorimeters lose heat, and real thermometers aren't perfect. Today we'll learn to read temperature graphs, correct for heat lost while the reaction is happening, and reason carefully about errors.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E11S01.b02",
+   "start": 15.0,
+   "speech": 16.0303,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. If heat escapes during an electrical calibration, is the calibration factor calculated too large or too small? And if a reaction raises the calorimeter's temperature, is delta H positive or negative? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E11S01.b03",
+   "start": 39.4667,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "Too large: the measured rise is smaller, and C F equals E over delta T. And delta H is negative, because the reaction transferred energy to the calorimeter.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

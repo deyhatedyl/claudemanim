@@ -3,22 +3,22 @@
  "title": "Practice Q14, part 1: budgets and the limiting reactant",
  "cls": "E07S07_Q14a",
  "fps": 15,
- "duration": 113.3333,
+ "duration": 112.9333,
  "beats": [
   {
    "key": "E07S07.b01",
    "start": 0.0,
-   "speech": 8.6359,
+   "speech": 8.2221,
    "audio": null,
    "estimated": true,
-   "text": "Practice question Q zero fourteen is worth eight marks. Pause the video and work through the whole question before continuing.",
+   "text": "Practice question Q fourteen is worth eight marks. Pause the video and work through the whole question before continuing.",
    "overrun": 0.0,
    "pause": 15.0,
    "layout": []
   },
   {
    "key": "E07S07.b02",
-   "start": 24.0667,
+   "start": 23.6667,
    "speech": 20.1145,
    "audio": null,
    "estimated": true,
@@ -29,7 +29,7 @@
   },
   {
    "key": "E07S07.b03",
-   "start": 44.5333,
+   "start": 44.1333,
    "speech": 14.609,
    "audio": null,
    "estimated": true,
@@ -40,7 +40,7 @@
   },
   {
    "key": "E07S07.b04",
-   "start": 59.5333,
+   "start": 59.1333,
    "speech": 25.7276,
    "audio": null,
    "estimated": true,
@@ -51,7 +51,7 @@
   },
   {
    "key": "E07S07.b05",
-   "start": 85.6,
+   "start": 85.2,
    "speech": 26.7352,
    "audio": null,
    "estimated": true,
