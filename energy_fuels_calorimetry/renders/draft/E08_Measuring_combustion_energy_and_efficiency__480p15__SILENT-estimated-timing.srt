@@ -1,0 +1,799 @@
+1
+00:00:00,000 --> 00:00:01,882
+Welcome to episode eight.
+
+2
+00:00:01,922 --> 00:00:06,265
+So far we've calculated the
+energy a fuel should release.
+
+3
+00:00:06,305 --> 00:00:11,417
+Now we measure the energy it actually
+delivers to something useful,
+
+4
+00:00:11,457 --> 00:00:14,609
+like a can of water, and compare the two.
+
+5
+00:00:15,000 --> 00:00:16,137
+Two quick checks.
+
+6
+00:00:16,177 --> 00:00:21,742
+Ethanol's molar enthalpy of combustion is
+negative one thousand three hundred and
+
+7
+00:00:21,782 --> 00:00:23,680
+seventy kilojoules per mole.
+
+8
+00:00:23,720 --> 00:00:28,871
+How much energy is released when zero
+point zero two zero zero moles burns?
+
+9
+00:00:28,911 --> 00:00:34,546
+And what is seventeen thousand nine hundred
+and seventy-four joules in kilojoules?
+
+10
+00:00:34,586 --> 00:00:35,762
+Pause and answer.
+
+11
+00:00:44,200 --> 00:00:49,554
+Zero point zero two zero zero times one
+thousand three hundred and seventy gives
+
+12
+00:00:49,594 --> 00:00:52,520
+twenty-seven point four
+kilojoules released.
+
+13
+00:00:52,560 --> 00:00:58,116
+And seventeen thousand nine hundred and
+seventy-four joules is seventeen point nine
+
+14
+00:00:58,156 --> 00:00:59,600
+seven four kilojoules.
+
+15
+00:00:59,640 --> 00:01:03,954
+Hold on to both: they're about to
+appear in a practice question.
+
+16
+00:01:04,933 --> 00:01:09,303
+Here's a common way to measure
+the energy from a fuel.
+
+17
+00:01:09,343 --> 00:01:12,407
+A spirit burner holds the liquid fuel.
+
+18
+00:01:12,447 --> 00:01:16,736
+Above it, a metal can holds
+a measured mass of water,
+
+19
+00:01:16,776 --> 00:01:20,370
+with a thermometer to
+track its temperature.
+
+20
+00:01:20,733 --> 00:01:25,688
+When the fuel burns, the energy
+it releases goes several places.
+
+21
+00:01:25,728 --> 00:01:30,528
+Some heats the water: that's the
+useful energy we can measure.
+
+22
+00:01:30,568 --> 00:01:33,572
+Some heats the can and the thermometer.
+
+23
+00:01:33,612 --> 00:01:36,928
+And a lot simply heats
+the surrounding air,
+
+24
+00:01:36,968 --> 00:01:41,495
+especially the hot gases rising
+past the sides of the can.
+
+25
+00:01:41,866 --> 00:01:43,619
+There's another loss too.
+
+26
+00:01:43,659 --> 00:01:47,133
+In a small flame, combustion
+is often incomplete.
+
+27
+00:01:47,173 --> 00:01:50,145
+You may see soot on the bottom of the can.
+
+28
+00:01:50,185 --> 00:01:55,595
+Incompletely burned fuel releases less
+energy than the equation for complete
+
+29
+00:01:55,635 --> 00:01:57,069
+combustion predicts.
+
+30
+00:01:57,466 --> 00:02:04,062
+So the energy gained by the water is
+always less than the energy the fuel could
+
+31
+00:02:04,102 --> 00:02:04,734
+release.
+
+32
+00:02:04,774 --> 00:02:10,654
+Our job is to measure that useful
+part, and compare it with the total.
+
+33
+00:02:11,599 --> 00:02:12,540
+Start small.
+
+34
+00:02:12,580 --> 00:02:19,247
+To warm one gram of water by one degree
+Celsius takes four point one eight joules.
+
+35
+00:02:19,287 --> 00:02:23,663
+That number is the specific
+heat capacity of water, c:
+
+36
+00:02:23,703 --> 00:02:27,629
+four point one eight joules
+per gram per degree.
+
+37
+00:02:27,999 --> 00:02:33,174
+Two grams need twice as much energy
+for the same one-degree rise,
+
+38
+00:02:33,214 --> 00:02:39,031
+and two hundred and fifty grams need
+two hundred and fifty times as much.
+
+39
+00:02:39,071 --> 00:02:42,841
+So energy is proportional
+to the mass of water.
+
+40
+00:02:43,199 --> 00:02:49,628
+And warming the same water by ten degrees
+instead of one takes ten times the energy.
+
+41
+00:02:49,668 --> 00:02:53,903
+So energy is also proportional
+to the temperature rise.
+
+42
+00:02:54,265 --> 00:02:58,247
+Put those together: q equals
+m times c times delta T.
+
+43
+00:02:58,287 --> 00:03:03,711
+Check the units: grams, times joules
+per gram per degree, times degrees.
+
+44
+00:03:03,751 --> 00:03:07,165
+Grams cancel, degrees
+cancel, leaving joules.
+
+45
+00:03:07,532 --> 00:03:09,535
+Now the important questions.
+
+46
+00:03:09,575 --> 00:03:10,338
+Whose mass?
+
+47
+00:03:10,378 --> 00:03:15,300
+The water's, because the water is
+what's being heated, not the fuel.
+
+48
+00:03:15,340 --> 00:03:19,459
+And delta T is the temperature
+rise, final minus initial,
+
+49
+00:03:19,499 --> 00:03:21,907
+not the final temperature itself.
+
+50
+00:03:22,864 --> 00:03:26,655
+Rearranging gives delta T
+equals q divided by m c.
+
+51
+00:03:26,695 --> 00:03:28,878
+Let's see what that predicts.
+
+52
+00:03:28,918 --> 00:03:35,008
+Put four thousand one hundred and eighty
+joules into one hundred grams of water:
+
+53
+00:03:35,048 --> 00:03:37,653
+the temperature rises ten degrees.
+
+54
+00:03:37,997 --> 00:03:43,691
+Put the same energy into two hundred
+grams of water: the rise halves,
+
+55
+00:03:43,731 --> 00:03:45,020
+to five degrees.
+
+56
+00:03:45,060 --> 00:03:48,882
+The energy is spread over
+twice as much water.
+
+57
+00:03:49,264 --> 00:03:54,656
+Now double the energy, to eight thousand
+three hundred and sixty joules,
+
+58
+00:03:54,696 --> 00:04:00,164
+into the original one hundred grams:
+the rise doubles, to twenty degrees.
+
+59
+00:04:00,204 --> 00:04:06,425
+Keep these two effects in mind whenever a
+question changes the mass of water or the
+
+60
+00:04:06,465 --> 00:04:07,597
+amount of fuel.
+
+61
+00:04:08,529 --> 00:04:14,115
+To know how much fuel burned, weigh
+the burner before and after heating.
+
+62
+00:04:14,155 --> 00:04:19,741
+The mass lost is the mass of fuel
+burned, assuming nothing else escaped.
+
+63
+00:04:19,781 --> 00:04:23,491
+Divide by molar mass to
+get the amount in moles,
+
+64
+00:04:23,531 --> 00:04:29,429
+then multiply by the molar enthalpy of
+combustion to get the energy the fuel
+
+65
+00:04:29,469 --> 00:04:30,269
+released.
+
+66
+00:04:30,529 --> 00:04:33,379
+The same idea measures energy in food.
+
+67
+00:04:33,419 --> 00:04:39,693
+Suppose one point five zero grams of dry
+food burns under a can holding one hundred
+
+68
+00:04:39,733 --> 00:04:45,397
+point zero grams of water, and the
+water warms by eight point zero degrees.
+
+69
+00:04:45,437 --> 00:04:51,330
+The water gains one hundred times four
+point one eight times eight point zero:
+
+70
+00:04:51,370 --> 00:04:55,249
+three thousand three hundred
+and forty-four joules.
+
+71
+00:04:55,596 --> 00:05:01,557
+Per gram of food, that's three thousand
+three hundred and forty-four divided by one
+
+72
+00:05:01,597 --> 00:05:05,678
+point five zero: about two
+point two kilojoules per gram.
+
+73
+00:05:05,718 --> 00:05:11,607
+That's far less than a typical nutrition
+label value of fifteen or more kilojoules
+
+74
+00:05:11,647 --> 00:05:14,757
+per gram for a dry,
+carbohydrate-rich food.
+
+75
+00:05:15,129 --> 00:05:16,022
+Two reasons.
+
+76
+00:05:16,062 --> 00:05:20,452
+First, most of the energy
+escaped to the can and the air,
+
+77
+00:05:20,492 --> 00:05:24,028
+and some food probably
+didn't burn completely.
+
+78
+00:05:24,068 --> 00:05:29,080
+Second, a label reports the energy
+the body can obtain from food,
+
+79
+00:05:29,120 --> 00:05:33,355
+which is a different basis
+from heat measured in a can.
+
+80
+00:05:33,395 --> 00:05:37,475
+So call this result an
+experimental water-heat yield,
+
+81
+00:05:37,515 --> 00:05:41,091
+and don't treat it as
+the food's label energy.
+
+82
+00:05:42,062 --> 00:05:46,344
+Practice question Q zero
+fifteen is worth six marks.
+
+83
+00:05:46,384 --> 00:05:48,629
+Pause the video and try it.
+
+84
+00:06:04,062 --> 00:06:10,480
+Ethanol burned: one hundred and two point
+six four zero minus one hundred and one
+
+85
+00:06:10,520 --> 00:06:15,424
+point seven two zero, which is
+zero point nine two zero grams.
+
+86
+00:06:15,464 --> 00:06:22,161
+Divided by forty-six point zero grams per
+mole: zero point zero two zero zero moles.
+
+87
+00:06:22,528 --> 00:06:27,743
+Energy released by the ethanol: zero
+point zero two zero zero moles times one
+
+88
+00:06:27,783 --> 00:06:33,270
+thousand three hundred and seventy kilojoules
+per mole is twenty-seven point four
+
+89
+00:06:33,310 --> 00:06:34,110
+kilojoules.
+
+90
+00:06:34,395 --> 00:06:35,303
+Now the water.
+
+91
+00:06:35,343 --> 00:06:40,383
+Its temperature rise is thirty-seven
+point zero minus nineteen point eight:
+
+92
+00:06:40,423 --> 00:06:42,279
+seventeen point two degrees.
+
+93
+00:06:42,319 --> 00:06:47,562
+The heat gained is two hundred and fifty
+point zero grams times four point one
+
+94
+00:06:47,602 --> 00:06:52,777
+eight times seventeen point two, which
+is seventeen thousand nine hundred and
+
+95
+00:06:52,817 --> 00:06:57,314
+seventy-four joules, or seventeen
+point nine seven four kilojoules,
+
+96
+00:06:57,354 --> 00:06:59,115
+about eighteen point zero.
+
+97
+00:06:59,462 --> 00:07:04,038
+Before dividing, predict: the water
+gained less than the fuel released,
+
+98
+00:07:04,078 --> 00:07:07,418
+so the efficiency must be
+below one hundred percent.
+
+99
+00:07:07,458 --> 00:07:10,669
+Efficiency equals useful
+energy over total energy:
+
+100
+00:07:10,709 --> 00:07:16,065
+seventeen point nine seven four kilojoules
+over twenty-seven point four kilojoules,
+
+101
+00:07:16,105 --> 00:07:20,291
+times one hundred percent, which
+is sixty-five point six percent.
+
+102
+00:07:20,331 --> 00:07:24,362
+Both energies are in kilojoules,
+so the units cancel properly.
+
+103
+00:07:24,728 --> 00:07:30,003
+Marks: two for the mass and amount
+of ethanol, one for the fuel energy,
+
+104
+00:07:30,043 --> 00:07:33,820
+two for the water heat,
+and one for the efficiency.
+
+105
+00:07:33,860 --> 00:07:34,718
+Three traps.
+
+106
+00:07:34,758 --> 00:07:38,685
+Using the whole burner mass
+instead of the mass lost.
+
+107
+00:07:38,725 --> 00:07:43,550
+Using the fuel's mass in m c delta
+T instead of the water's mass.
+
+108
+00:07:43,590 --> 00:07:48,865
+And dividing seventeen thousand nine
+hundred and seventy-four joules by
+
+109
+00:07:48,905 --> 00:07:51,484
+twenty-seven point four kilojoules,
+
+110
+00:07:51,524 --> 00:07:56,015
+which gives an impossible six
+hundred and fifty-six percent.
+
+111
+00:07:56,994 --> 00:08:00,892
+Efficiency compares what you
+get with what you put in.
+
+112
+00:08:00,932 --> 00:08:05,925
+Efficiency equals useful energy
+output divided by total energy input,
+
+113
+00:08:05,965 --> 00:08:07,821
+times one hundred percent.
+
+114
+00:08:07,861 --> 00:08:13,258
+Always say what counts as useful, and
+keep both energies in the same unit.
+
+115
+00:08:13,594 --> 00:08:18,337
+Sometimes you know the useful energy
+you need, and the efficiency,
+
+116
+00:08:18,377 --> 00:08:20,004
+and you want the input.
+
+117
+00:08:20,044 --> 00:08:25,077
+Rearrange: total input equals useful
+output divided by the efficiency,
+
+118
+00:08:25,117 --> 00:08:29,030
+written as a fraction, like
+zero point four five zero.
+
+119
+00:08:29,394 --> 00:08:31,455
+Test it with limiting cases.
+
+120
+00:08:31,495 --> 00:08:37,457
+At one hundred percent efficiency, the
+input would just equal the useful output.
+
+121
+00:08:37,497 --> 00:08:43,534
+At forty-five percent, dividing by zero
+point four five zero makes the input more
+
+122
+00:08:43,574 --> 00:08:44,884
+than twice as big.
+
+123
+00:08:44,924 --> 00:08:50,437
+A less efficient heater needs more fuel
+to deliver the same useful energy.
+
+124
+00:08:50,477 --> 00:08:54,863
+Dividing by a number less than
+one makes the answer larger,
+
+125
+00:08:54,903 --> 00:08:57,604
+which is exactly what should happen.
+
+126
+00:08:57,994 --> 00:08:58,788
+Checkpoint.
+
+127
+00:08:58,828 --> 00:09:04,403
+A student finds the required input by
+multiplying the useful energy by the
+
+128
+00:09:04,443 --> 00:09:05,238
+efficiency.
+
+129
+00:09:05,278 --> 00:09:08,465
+Will their answer be too big or too small?
+
+130
+00:09:14,927 --> 00:09:15,638
+Too small.
+
+131
+00:09:15,678 --> 00:09:21,795
+Multiplying by zero point four five zero
+gives less than the useful output itself,
+
+132
+00:09:21,835 --> 00:09:26,075
+which would mean getting more
+energy out than you put in.
+
+133
+00:09:26,115 --> 00:09:27,467
+That's impossible.
+
+134
+00:09:28,460 --> 00:09:32,770
+Practice question Q zero
+sixteen is worth five marks.
+
+135
+00:09:32,810 --> 00:09:35,026
+Pause the video and try it.
+
+136
+00:09:50,460 --> 00:09:56,110
+Start with what's needed: heating one
+hundred and eighty point zero grams of water
+
+137
+00:09:56,150 --> 00:10:00,344
+from eighteen point zero to
+seventy-eight point zero degrees,
+
+138
+00:10:00,384 --> 00:10:02,773
+a rise of sixty point zero degrees.
+
+139
+00:10:02,813 --> 00:10:08,256
+Useful heat equals one hundred and eighty
+point zero times four point one eight
+
+140
+00:10:08,296 --> 00:10:13,669
+times sixty point zero: forty-five thousand
+one hundred and forty-four joules,
+
+141
+00:10:13,709 --> 00:10:17,249
+which is forty-five point
+one four four kilojoules.
+
+142
+00:10:17,593 --> 00:10:21,403
+The heater is forty-five
+point zero percent efficient,
+
+143
+00:10:21,443 --> 00:10:24,539
+so the chemical energy
+input must be larger:
+
+144
+00:10:24,579 --> 00:10:29,387
+forty-five point one four four
+divided by zero point four five zero,
+
+145
+00:10:29,427 --> 00:10:32,849
+which is one hundred point
+three two kilojoules.
+
+146
+00:10:33,193 --> 00:10:37,529
+The fuel supplies twenty-nine
+point eight kilojoules per gram,
+
+147
+00:10:37,569 --> 00:10:43,035
+so the mass needed is one hundred point
+three two divided by twenty-nine point
+
+148
+00:10:43,075 --> 00:10:48,863
+eight: three point three six six grams,
+reported as three point three seven grams.
+
+149
+00:10:49,260 --> 00:10:55,059
+Now the student's method: multiplying
+forty-five point one four four by zero point
+
+150
+00:10:55,099 --> 00:10:59,118
+four five zero, then dividing
+by twenty-nine point eight,
+
+151
+00:10:59,158 --> 00:11:01,753
+gives zero point six eight two grams.
+
+152
+00:11:01,793 --> 00:11:07,450
+Even a perfect, one hundred percent
+efficient heater would need forty-five point
+
+153
+00:11:07,490 --> 00:11:13,147
+one four four divided by twenty-nine point
+eight, one point five one five grams.
+
+154
+00:11:13,187 --> 00:11:16,566
+So zero point six eight
+two grams is impossible:
+
+155
+00:11:16,606 --> 00:11:19,953
+the efficiency was used
+in the wrong direction.
+
+156
+00:11:20,326 --> 00:11:25,570
+Marks: two for the useful heat,
+one for dividing by the efficiency,
+
+157
+00:11:25,610 --> 00:11:31,445
+one for the fuel mass, and one for the
+explanation with that sanity check.
+
+158
+00:11:32,393 --> 00:11:33,056
+To recap.
+
+159
+00:11:33,096 --> 00:11:38,141
+The fuel's energy comes from the
+mass burned, converted to moles,
+
+160
+00:11:38,181 --> 00:11:41,191
+times the molar enthalpy of combustion.
+
+161
+00:11:41,231 --> 00:11:46,197
+The useful energy comes from q
+equals m c delta T for the water.
+
+162
+00:11:46,237 --> 00:11:52,220
+Efficiency is useful over total, and to
+find an input from a required output,
+
+163
+00:11:52,260 --> 00:11:54,216
+divide by the efficiency.
+
+164
+00:11:54,593 --> 00:11:55,689
+Closing recall.
+
+165
+00:11:55,729 --> 00:12:01,673
+If a heater's efficiency halved, how
+would the mass of fuel needed for the same
+
+166
+00:12:01,713 --> 00:12:03,228
+heating task change?
+
+167
+00:12:11,659 --> 00:12:17,400
+It would double, because the required
+input is the useful output divided by the
+
+168
+00:12:17,440 --> 00:12:18,205
+efficiency.
+
+169
+00:12:18,245 --> 00:12:23,180
+Next episode: why a real calorimeter
+heats more than just its water,
+
+170
+00:12:23,220 --> 00:12:25,854
+and how calibration accounts for it.

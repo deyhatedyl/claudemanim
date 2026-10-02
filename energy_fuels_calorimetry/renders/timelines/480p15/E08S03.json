@@ -1,0 +1,64 @@
+{
+ "scene": "E08S03",
+ "title": "Building q = mc delta T",
+ "cls": "E08S03_qmcT",
+ "fps": 15,
+ "duration": 71.2667,
+ "beats": [
+  {
+   "key": "E08S03.b01",
+   "start": 0.0,
+   "speech": 16.0303,
+   "audio": null,
+   "estimated": true,
+   "text": "Start small. To warm one gram of water by one degree Celsius takes four point one eight joules. That number is the specific heat capacity of water, c: four point one eight joules per gram per degree.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S03.b02",
+   "start": 16.4,
+   "speech": 14.8428,
+   "audio": null,
+   "estimated": true,
+   "text": "Two grams need twice as much energy for the same one-degree rise, and two hundred and fifty grams need two hundred and fifty times as much. So energy is proportional to the mass of water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S03.b03",
+   "start": 31.6,
+   "speech": 10.7048,
+   "audio": null,
+   "estimated": true,
+   "text": "And warming the same water by ten degrees instead of one takes ten times the energy. So energy is also proportional to the temperature rise.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S03.b04",
+   "start": 42.6667,
+   "speech": 12.9,
+   "audio": null,
+   "estimated": true,
+   "text": "Put those together: q equals m times c times delta T. Check the units: grams, times joules per gram per degree, times degrees. Grams cancel, degrees cancel, leaving joules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S03.b05",
+   "start": 55.9333,
+   "speech": 14.3752,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the important questions. Whose mass? The water's, because the water is what's being heated, not the fuel. And delta T is the temperature rise, final minus initial, not the final temperature itself.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E08S09",
+ "title": "Recap and closing recall",
+ "cls": "E08S09_Recap",
+ "fps": 15,
+ "duration": 54.4,
+ "beats": [
+  {
+   "key": "E08S09.b01",
+   "start": 0.0,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. The fuel's energy comes from the mass burned, converted to moles, times the molar enthalpy of combustion. The useful energy comes from q equals m c delta T for the water. Efficiency is useful over total, and to find an input from a required output, divide by the efficiency.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S09.b02",
+   "start": 22.2,
+   "speech": 8.6359,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. If a heater's efficiency halved, how would the mass of fuel needed for the same heating task change?",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E08S09.b03",
+   "start": 39.2667,
+   "speech": 14.1952,
+   "audio": null,
+   "estimated": true,
+   "text": "It would double, because the required input is the useful output divided by the efficiency. Next episode: why a real calorimeter heats more than just its water, and how calibration accounts for it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:35:41",
+ "updated": "2026-10-02T18:41:49",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -1067,11 +1067,152 @@
   },
   "E08": {
    "title": "Measuring combustion energy and efficiency",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep08.md",
+    "sha": "88d1465f90864b24",
+    "beats": 39,
+    "words": 1573,
+    "est_minutes": 12.5,
+    "anchors": "Q15,Q16",
+    "coverage": "C18,C19,C08,C10"
+   },
+   "scenes_code": {
+    "path": "scenes/ep08.py",
+    "sha": "9f6065d97de9ec9b"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E08S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 64.9333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S02",
+     "title": "Where the energy goes",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 66.6667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S03",
+     "title": "Building q = mc delta T",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 71.2667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S04",
+     "title": "Mass and energy change the temperature rise",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 45.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S05",
+     "title": "How much fuel burned? A mass reading",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 93.5333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S06",
+     "title": "Practice Q15: a measured fuel mass loss",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 134.9333,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S07",
+     "title": "Efficiency, forwards and backwards",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 91.4667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S08",
+     "title": "Practice Q16: work backwards from useful heat",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 123.9333,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 54.4,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 39,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 746.79,
+    "captions": [
+     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E09": {
    "title": "Why calorimeters need calibration",
@@ -1122,5 +1263,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 92.4
+ "series_est_minutes": 104.9
 }

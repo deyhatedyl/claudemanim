@@ -1,0 +1,75 @@
+{
+ "scene": "E08S06",
+ "title": "Practice Q15: a measured fuel mass loss",
+ "cls": "E08S06_Q15",
+ "fps": 15,
+ "duration": 134.9333,
+ "beats": [
+  {
+   "key": "E08S06.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero fifteen is worth six marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E08S06.b02",
+   "start": 22.0,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "Ethanol burned: one hundred and two point six four zero minus one hundred and one point seven two zero, which is zero point nine two zero grams. Divided by forty-six point zero grams per mole: zero point zero two zero zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S06.b03",
+   "start": 40.4667,
+   "speech": 11.5324,
+   "audio": null,
+   "estimated": true,
+   "text": "Energy released by the ethanol: zero point zero two zero zero moles times one thousand three hundred and seventy kilojoules per mole is twenty-seven point four kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S06.b04",
+   "start": 52.3333,
+   "speech": 24.72,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the water. Its temperature rise is thirty-seven point zero minus nineteen point eight: seventeen point two degrees. The heat gained is two hundred and fifty point zero grams times four point one eight times seventeen point two, which is seventeen thousand nine hundred and seventy-four joules, or seventeen point nine seven four kilojoules, about eighteen point zero.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S06.b05",
+   "start": 77.4,
+   "speech": 24.9,
+   "audio": null,
+   "estimated": true,
+   "text": "Before dividing, predict: the water gained less than the fuel released, so the efficiency must be below one hundred percent. Efficiency equals useful energy over total energy: seventeen point nine seven four kilojoules over twenty-seven point four kilojoules, times one hundred percent, which is sixty-five point six percent. Both energies are in kilojoules, so the units cancel properly.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S06.b06",
+   "start": 102.6667,
+   "speech": 31.2869,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the mass and amount of ethanol, one for the fuel energy, two for the water heat, and one for the efficiency. Three traps. Using the whole burner mass instead of the mass lost. Using the fuel's mass in m c delta T instead of the water's mass. And dividing seventeen thousand nine hundred and seventy-four joules by twenty-seven point four kilojoules, which gives an impossible six hundred and fifty-six percent.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

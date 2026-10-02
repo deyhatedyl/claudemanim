@@ -1,0 +1,75 @@
+{
+ "scene": "E08S08",
+ "title": "Practice Q16: work backwards from useful heat",
+ "cls": "E08S08_Q16",
+ "fps": 15,
+ "duration": 123.9333,
+ "beats": [
+  {
+   "key": "E08S08.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero sixteen is worth five marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E08S08.b02",
+   "start": 22.0,
+   "speech": 26.789,
+   "audio": null,
+   "estimated": true,
+   "text": "Start with what's needed: heating one hundred and eighty point zero grams of water from eighteen point zero to seventy-eight point zero degrees, a rise of sixty point zero degrees. Useful heat equals one hundred and eighty point zero times four point one eight times sixty point zero: forty-five thousand one hundred and forty-four joules, which is forty-five point one four four kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S08.b03",
+   "start": 49.1333,
+   "speech": 15.2566,
+   "audio": null,
+   "estimated": true,
+   "text": "The heater is forty-five point zero percent efficient, so the chemical energy input must be larger: forty-five point one four four divided by zero point four five zero, which is one hundred point three two kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S08.b04",
+   "start": 64.7333,
+   "speech": 15.6703,
+   "audio": null,
+   "estimated": true,
+   "text": "The fuel supplies twenty-nine point eight kilojoules per gram, so the mass needed is one hundred point three two divided by twenty-nine point eight: three point three six six grams, reported as three point three seven grams.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S08.b05",
+   "start": 80.8,
+   "speech": 30.6931,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the student's method: multiplying forty-five point one four four by zero point four five zero, then dividing by twenty-nine point eight, gives zero point six eight two grams. Even a perfect, one hundred percent efficient heater would need forty-five point one four four divided by twenty-nine point eight, one point five one five grams. So zero point six eight two grams is impossible: the efficiency was used in the wrong direction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S08.b06",
+   "start": 111.8667,
+   "speech": 11.1186,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the useful heat, one for dividing by the efficiency, one for the fuel mass, and one for the explanation with that sanity check.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

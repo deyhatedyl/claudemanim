@@ -1,0 +1,53 @@
+{
+ "scene": "E08S02",
+ "title": "Where the energy goes",
+ "cls": "E08S02_EnergyFlow",
+ "fps": 15,
+ "duration": 66.6667,
+ "beats": [
+  {
+   "key": "E08S02.b01",
+   "start": 0.0,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a common way to measure the energy from a fuel. A spirit burner holds the liquid fuel. Above it, a metal can holds a measured mass of water, with a thermometer to track its temperature.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S02.b02",
+   "start": 15.8,
+   "speech": 20.7621,
+   "audio": null,
+   "estimated": true,
+   "text": "When the fuel burns, the energy it releases goes several places. Some heats the water: that's the useful energy we can measure. Some heats the can and the thermometer. And a lot simply heats the surrounding air, especially the hot gases rising past the sides of the can.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S02.b03",
+   "start": 36.9333,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "There's another loss too. In a small flame, combustion is often incomplete. You may see soot on the bottom of the can. Incompletely burned fuel releases less energy than the equation for complete combustion predicts.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S02.b04",
+   "start": 52.5333,
+   "speech": 13.1876,
+   "audio": null,
+   "estimated": true,
+   "text": "So the energy gained by the water is always less than the energy the fuel could release. Our job is to measure that useful part, and compare it with the total.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

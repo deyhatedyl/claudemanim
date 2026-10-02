@@ -1,0 +1,53 @@
+{
+ "scene": "E08S05",
+ "title": "How much fuel burned? A mass reading",
+ "cls": "E08S05_MassLoss",
+ "fps": 15,
+ "duration": 93.5333,
+ "beats": [
+  {
+   "key": "E08S05.b01",
+   "start": 0.0,
+   "speech": 21.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "To know how much fuel burned, weigh the burner before and after heating. The mass lost is the mass of fuel burned, assuming nothing else escaped. Divide by molar mass to get the amount in moles, then multiply by the molar enthalpy of combustion to get the energy the fuel released.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S05.b02",
+   "start": 22.0,
+   "speech": 24.72,
+   "audio": null,
+   "estimated": true,
+   "text": "The same idea measures energy in food. Suppose one point five zero grams of dry food burns under a can holding one hundred point zero grams of water, and the water warms by eight point zero degrees. The water gains one hundred times four point one eight times eight point zero: three thousand three hundred and forty-four joules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S05.b03",
+   "start": 47.0667,
+   "speech": 19.1607,
+   "audio": null,
+   "estimated": true,
+   "text": "Per gram of food, that's three thousand three hundred and forty-four divided by one point five zero: about two point two kilojoules per gram. That's far less than a typical nutrition label value of fifteen or more kilojoules per gram for a dry, carbohydrate-rich food.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S05.b04",
+   "start": 66.6,
+   "speech": 25.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "Two reasons. First, most of the energy escaped to the can and the air, and some food probably didn't burn completely. Second, a label reports the energy the body can obtain from food, which is a different basis from heat measured in a can. So call this result an experimental water-heat yield, and don't treat it as the food's label energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

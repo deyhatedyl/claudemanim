@@ -1,0 +1,72 @@
+{
+ "episode": "E08",
+ "quality": "480p15",
+ "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 39,
+ "beats_with_audio": 0,
+ "duration": 746.79,
+ "scenes": [
+  {
+   "scene": "E08S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 64.933008
+  },
+  {
+   "scene": "E08S02",
+   "title": "Where the energy goes",
+   "start": 64.933008,
+   "duration": 66.66569
+  },
+  {
+   "scene": "E08S03",
+   "title": "Building q = mc delta T",
+   "start": 131.598698,
+   "duration": 71.265365
+  },
+  {
+   "scene": "E08S04",
+   "title": "Mass and energy change the temperature rise",
+   "start": 202.86406300000002,
+   "duration": 45.665039
+  },
+  {
+   "scene": "E08S05",
+   "title": "How much fuel burned? A mass reading",
+   "start": 248.52910200000002,
+   "duration": 93.532682
+  },
+  {
+   "scene": "E08S06",
+   "title": "Practice Q15: a measured fuel mass loss",
+   "start": 342.061784,
+   "duration": 134.932031
+  },
+  {
+   "scene": "E08S07",
+   "title": "Efficiency, forwards and backwards",
+   "start": 476.993815,
+   "duration": 91.46569
+  },
+  {
+   "scene": "E08S08",
+   "title": "Practice Q16: work backwards from useful heat",
+   "start": 568.459505,
+   "duration": 123.933008
+  },
+  {
+   "scene": "E08S09",
+   "title": "Recap and closing recall",
+   "start": 692.392513,
+   "duration": 54.4
+  }
+ ],
+ "captions": [
+  "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

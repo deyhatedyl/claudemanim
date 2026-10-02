@@ -1,0 +1,42 @@
+{
+ "scene": "E08S04",
+ "title": "Mass and energy change the temperature rise",
+ "cls": "E08S04_MassEnergy",
+ "fps": 15,
+ "duration": 45.6667,
+ "beats": [
+  {
+   "key": "E08S04.b01",
+   "start": 0.0,
+   "speech": 14.789,
+   "audio": null,
+   "estimated": true,
+   "text": "Rearranging gives delta T equals q divided by m c. Let's see what that predicts. Put four thousand one hundred and eighty joules into one hundred grams of water: the temperature rises ten degrees.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S04.b02",
+   "start": 15.1333,
+   "speech": 10.8848,
+   "audio": null,
+   "estimated": true,
+   "text": "Put the same energy into two hundred grams of water: the rise halves, to five degrees. The energy is spread over twice as much water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S04.b03",
+   "start": 26.4,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "Now double the energy, to eight thousand three hundred and sixty joules, into the original one hundred grams: the rise doubles, to twenty degrees. Keep these two effects in mind whenever a question changes the mass of water or the amount of fuel.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

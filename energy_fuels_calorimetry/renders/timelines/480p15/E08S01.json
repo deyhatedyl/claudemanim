@@ -1,0 +1,42 @@
+{
+ "scene": "E08S01",
+ "title": "Retrieval check",
+ "cls": "E08S01_Retrieval",
+ "fps": 15,
+ "duration": 64.9333,
+ "beats": [
+  {
+   "key": "E08S01.b01",
+   "start": 0.0,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode eight. So far we've calculated the energy a fuel should release. Now we measure the energy it actually delivers to something useful, like a can of water, and compare the two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S01.b02",
+   "start": 15.0,
+   "speech": 20.7621,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. Ethanol's molar enthalpy of combustion is negative one thousand three hundred and seventy kilojoules per mole. How much energy is released when zero point zero two zero zero moles burns? And what is seventeen thousand nine hundred and seventy-four joules in kilojoules? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E08S01.b03",
+   "start": 44.2,
+   "speech": 19.7545,
+   "audio": null,
+   "estimated": true,
+   "text": "Zero point zero two zero zero times one thousand three hundred and seventy gives twenty-seven point four kilojoules released. And seventeen thousand nine hundred and seventy-four joules is seventeen point nine seven four kilojoules. Hold on to both: they're about to appear in a practice question.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

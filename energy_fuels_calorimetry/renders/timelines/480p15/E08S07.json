@@ -1,0 +1,64 @@
+{
+ "scene": "E08S07",
+ "title": "Efficiency, forwards and backwards",
+ "cls": "E08S07_Efficiency",
+ "fps": 15,
+ "duration": 91.4667,
+ "beats": [
+  {
+   "key": "E08S07.b01",
+   "start": 0.0,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "Efficiency compares what you get with what you put in. Efficiency equals useful energy output divided by total energy input, times one hundred percent. Always say what counts as useful, and keep both energies in the same unit.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S07.b02",
+   "start": 16.6,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "Sometimes you know the useful energy you need, and the efficiency, and you want the input. Rearrange: total input equals useful output divided by the efficiency, written as a fraction, like zero point four five zero.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S07.b03",
+   "start": 32.4,
+   "speech": 28.2103,
+   "audio": null,
+   "estimated": true,
+   "text": "Test it with limiting cases. At one hundred percent efficiency, the input would just equal the useful output. At forty-five percent, dividing by zero point four five zero makes the input more than twice as big. A less efficient heater needs more fuel to deliver the same useful energy. Dividing by a number less than one makes the answer larger, which is exactly what should happen.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E08S07.b04",
+   "start": 61.0,
+   "speech": 10.471,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. A student finds the required input by multiplying the useful energy by the efficiency. Will their answer be too big or too small?",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E08S07.b05",
+   "start": 77.9333,
+   "speech": 12.54,
+   "audio": null,
+   "estimated": true,
+   "text": "Too small. Multiplying by zero point four five zero gives less than the useful output itself, which would mean getting more energy out than you put in. That's impossible.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
