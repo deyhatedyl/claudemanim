@@ -3,9 +3,9 @@ Anchor question bank Q01-Q28 (original practice material written for this series
 not official VCAA questions or marking schemes).
 
 Single source of truth for:
-  * questions/worksheet.md         (prompts only, no answers)    -> tools/build_docs.py
-  * solutions/answer_key.md        (final answers + marks + trap)
-  * on-screen prompts in the episodes (scenes import PROMPTS)
+  * questions/worksheet.md         (prompts only, no answers)              -> tools/build_docs.py
+  * solutions/worked_solutions.md  (working per part, marks, traps)        -> tools/build_docs.py
+  * on-screen question cards in the episodes (shared/components.question_card)
 
 Wording has been lightly edited from the brief for clarity and to split each set into
 lettered parts with indicative marks; no data value has been changed. Numerical targets are

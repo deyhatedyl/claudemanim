@@ -14,6 +14,10 @@ Narration is blocked until a `GEMINI_API_KEY` is available (see `RESUME.md`). No
 |---|---|
 | `brief/` | the production brief (verbatim) |
 | `questions/bank.py` | Q01–Q28 prompts, parts, marks, final answers, traps (single source) |
+| `questions/worksheet.md` | learner worksheet: questions only (generated) |
+| `solutions/worked_solutions.md` | working per part, indicative marks per observable step, traps, where each is worked (generated) |
+| `solutions/formula_and_method_sheet.md` | formula and method sheet (hand-written) |
+| `coverage_matrix.md`, `series_index.md` | coverage C01–C28 → episodes/questions; viewing order, runtimes, files (generated) |
 | `checks/verify_anchors.py` | independent numerical/atom-balance/marks verification → `checks/numerical_check_record.md` |
 | `scripts/epNN.md` | narration scripts + scene table (objective, on-screen, transitions, checks per scene) |
 | `scenes/epNN.py` | Manim scenes, one class per script scene; timing driven by narration beats |
@@ -37,11 +41,12 @@ with a soft subtitle track.
 See `RESUME.md`. Quick reference (from this folder, using the repo's `.venv`):
 
 ```
-python checks/verify_anchors.py        # 269 checks must pass
+python checks/verify_anchors.py        # 302 checks must pass
 python tools/lint_scripts.py           # spoken text TTS-ready + timing estimates
 python tools/render.py E01 -q l        # draft
 python tools/stills.py E01 -q l        # beat-end stills for review
 python tools/progress.py               # refresh progress.json
+python tools/build_docs.py             # worksheet, worked solutions, coverage matrix, series index
 ```
 
 ## Visual conventions

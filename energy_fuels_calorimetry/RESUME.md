@@ -22,5 +22,9 @@
    Record QA results in `checks/qa_status.json` (`final_qa: "pass"` only after watching the final).
 5. **Scripts/visuals not yet written**: follow the pattern of `scripts/ep01.md` + `scenes/ep01.py`
    (one scene class per `## ENNSxx` heading; every `[bNN]` beat used once, in order — the render fails otherwise).
-6. **Commit and push** after every completed stage. Rendered media under `renders/media/` is
+6. **Documents**: `python tools/build_docs.py` regenerates `questions/worksheet.md`,
+   `solutions/worked_solutions.md` (mark tallies are read from the scenes, so they match the videos),
+   `coverage_matrix.md` and `series_index.md`. Re-run after any change to `questions/bank.py`, a script,
+   a practice scene or a render. `solutions/formula_and_method_sheet.md` is maintained by hand.
+7. **Commit and push** after every completed stage. Rendered media under `renders/media/` is
    reproducible and git-ignored.
