@@ -1,6 +1,6 @@
 # E08 Measuring combustion energy and efficiency
 
-Runtime 12:25. Narration transcript (matches the captions).
+Runtime 13:55. Narration transcript (matches the captions).
 
 ## [00:00] E08S01 Retrieval check
 
@@ -62,7 +62,13 @@ The fuel supplies twenty-nine point eight kilojoules per gram, so the mass neede
 Now the student's method: multiplying forty-five point one four four by zero point four five zero, then dividing by twenty-nine point eight, gives zero point six eight two grams. Even a perfect, one hundred percent efficient heater would need forty-five point one four four divided by twenty-nine point eight, one point five one five grams. So zero point six eight two grams is impossible: the efficiency was used in the wrong direction.
 Marks: two for the useful heat, one for dividing by the efficiency, one for the fuel mass, and one for the explanation with that sanity check.
 
-## [11:31] E08S09 Recap and closing recall
+## [11:31] E08S09 Why measured values come out low
+
+Checkpoint. A class burns ethanol under a can of water and calculates an enthalpy of combustion much smaller in size than the data book value. List as many reasons as you can. Pause and think.  *(pause)*
+Most of the energy never reaches the water. Hot gases carry heat away around the can, the can and the clamp warm up, and draughts make it worse. A yellow, sooty flame means incomplete combustion, so less energy is released per gram than the data book assumes. And if ethanol evaporates from the wick before the burner is reweighed, the recorded mass loss includes fuel that never burned.
+Each of these makes the calculated energy per mole, and the size of delta H, too small. The fixes are specific: use a draught shield and a lid, keep the flame close to a thin-walled copper can, stir the water, make sure there's enough air for a clean blue flame, and cap the burner and reweigh it straight away. With this method, a result well below the data book value is expected; a result above it would point to a measurement or calculation error instead.
+
+## [13:01] E08S10 Recap and closing recall
 
 To recap. The fuel's energy comes from the mass burned, converted to moles, times the molar enthalpy of combustion. The useful energy comes from q equals m c delta T for the water. Efficiency is useful over total, and to find an input from a required output, divide by the efficiency.
 Closing recall. If a heater's efficiency halved, how would the mass of fuel needed for the same heating task change?  *(pause)*

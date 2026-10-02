@@ -562,6 +562,17 @@ def ep11_extensions():
     check_true("E11", "drawing: including rising points lowers the extrapolated value", mp * 120 + cp < mg * 120 + cg)
 
 
+def ep07_extensions():
+    n_ch4, n_o2 = 3.20 / 16.0, 9.60 / 32.0
+    check("E07", "mass checkpoint: n(CH4)", n_ch4, 0.200, rel=1e-9)
+    check("E07", "mass checkpoint: n(O2)", n_o2, 0.300, rel=1e-9)
+    check_true("E07", "mass checkpoint: O2 limiting (0.150 < 0.200)", n_o2 / 2 < n_ch4 / 1)
+    check("E07", "mass checkpoint: CH4 left (g)", (n_ch4 - n_o2 / 2) * 16.0, 0.800, rel=1e-9, unit="g")
+    check("E07", "gas volumes: O2 for 2.00 L propane", 5 * 2.00, 10.0, rel=1e-9, unit="L")
+    check("E07", "gas volumes: CO2 from 2.00 L propane", 3 * 2.00, 6.00, rel=1e-9, unit="L")
+    check("E07", "gas volumes: air for 10.0 L O2", 10.0 / 0.210, 47.619, rel=1e-4, unit="L")
+
+
 MARKS = {  # declared total, list of sub-part marks from the brief
     "Q01": (4, [1, 2, 1]), "Q02": (5, [3, 2]), "Q03": (4, [1, 1, 1, 1]), "Q04": (3, [1, 1, 1]),
     "Q05": (5, [2, 2, 1]), "Q06": (5, [1, 1, 1, 1, 1]), "Q07": (6, [1, 1, 1, 2, 1]),
@@ -594,7 +605,7 @@ def main():
     verify_equations()
     for fn in (q01, q02, q03, q04, q05, q06, q07, q09, q10, q11, q12, q13, q14, q15, q16,
                q17, q18, q19, q20, q21, q22, q23, q25, q26, q27, q28, ep08_food_example,
-               ep09_extensions, ep10_extensions, ep11_extensions, ep12_teaching_values, ep13_workshop_values,
+               ep07_extensions, ep09_extensions, ep10_extensions, ep11_extensions, ep12_teaching_values, ep13_workshop_values,
                ep14_workshop_values):
         fn()
     verify_marks()

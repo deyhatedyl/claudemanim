@@ -26,17 +26,17 @@
  },
  "E06": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected.",
   "final_qa": "pending"
  },
  "E07": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered.",
   "final_qa": "pending"
  },
  "E08": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
   "final_qa": "pending"
  },
  "E09": {

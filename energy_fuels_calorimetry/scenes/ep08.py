@@ -400,7 +400,61 @@ class E08S08_Q16(NarratedScene):
 
 
 # =====================================================================================
-class E08S09_Recap(NarratedScene):
+class E08S09_TooLow(NarratedScene):
+    def construct(self):
+        h = header("Why measured values come out low")
+        sch = T("schematic", size=SMALL, color=MUTED).to_corner(UR, buff=0.45)
+        rig = burner_rig([-4.2, -0.35, 0], 0.85)
+        x0 = -1.2
+        q = wrapped("Measured |ΔH| for ethanol is much smaller than the data book value. Why?", size=LABEL + 1, width=7.4,
+                    color=UNKNOWN).move_to([0, 1.9, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), FadeIn(sch), FadeIn(rig), run_time=1.0)
+            b.until(0.3)
+            self.play(FadeIn(q), run_time=0.7)
+        causes = [("hot gases escape around the can", LOSS), ("the can and clamp warm up", MUTED),
+                  ("sooty yellow flame: incomplete combustion", UNKNOWN),
+                  ("fuel evaporates from the wick before reweighing", SYSTEM)]
+        rows = VGroup(*[VGroup(Dot(radius=0.06, color=c), T(t, size=SMALL + 2, color=c)).arrange(RIGHT, buff=0.18)
+                        for t, c in causes]).arrange(DOWN, aligned_edge=LEFT, buff=0.28)
+        rows.move_to([0, 0.35, 0]).align_to([x0, 0, 0], LEFT)
+        fpos = rig.flame.get_top()
+        gas = VGroup(DashedVMobject(Arrow(fpos + 0.15 * RIGHT, fpos + np.array([1.6, 1.2, 0]), buff=0, color=LOSS,
+                                          stroke_width=4), num_dashes=8),
+                     DashedVMobject(Arrow(fpos + 0.15 * LEFT, fpos + np.array([-1.4, 1.3, 0]), buff=0, color=LOSS,
+                                          stroke_width=4), num_dashes=8))
+        soot = VGroup(*[Dot(rig.can.get_bottom() + RIGHT * x + 0.03 * UP, radius=0.045, color="#333333")
+                        for x in np.linspace(-0.55, 0.55, 8)])
+        vap = VGroup(*[DashedVMobject(Arc(radius=0.18, start_angle=-PI / 2, angle=PI, color=SYSTEM, stroke_width=2.5),
+                                      num_dashes=5).move_to(rig.bottle.get_right() + np.array([0.3, 0.15 + 0.32 * i, 0]))
+                       for i in range(2)])
+        with self.beat("b02") as b:
+            self.play(Create(gas), FadeIn(rows[0]), run_time=0.8)
+            b.until(0.25)
+            self.play(Indicate(rig.can, color=MUTED), FadeIn(rows[1]), run_time=0.8)
+            b.until(0.45)
+            self.play(FadeIn(soot), FadeIn(rows[2]), run_time=0.8)
+            b.until(0.68)
+            self.play(Create(vap), FadeIn(rows[3]), run_time=0.8)
+            self.rows = rows
+        with self.beat("b03") as b:
+            dirn = chip("each makes the calculated |ΔH| too small", LOSS, size=SMALL + 2)
+            dirn.move_to([0, -0.85, 0]).align_to([x0, 0, 0], LEFT)
+            self.play(FadeIn(dirn), run_time=0.5)
+            fixes = VGroup(*[T(t, size=SMALL + 1, color=GOOD) for t in (
+                "draught shield and lid; flame close to a thin copper can; stir",
+                "enough air for a clean blue flame; cap and reweigh at once")]).arrange(DOWN, aligned_edge=LEFT, buff=0.12)
+            fixes.move_to([0, -1.6, 0]).align_to([x0, 0, 0], LEFT)
+            b.until(0.3)
+            self.play(FadeIn(fixes, lag_ratio=0.3), run_time=0.9)
+            note = T("a result above the data book value points to an error", size=SMALL,
+                     color=MUTED).move_to([0, -2.38, 0]).align_to([x0, 0, 0], LEFT)
+            b.until(0.82)
+            self.play(FadeIn(note), run_time=0.5)
+
+
+# =====================================================================================
+class E08S10_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         steps = VGroup(T("mass lost", size=LABEL + 2, color=MASS_C), T("→ ÷ M → mol", size=LABEL + 2, color=MOL_C),
@@ -427,5 +481,6 @@ class E08S09_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E08S01_Retrieval", "E08S02_EnergyFlow", "E08S03_qmcT", "E08S04_MassEnergy", "E08S05_MassLoss",
-                  "E08S06_Q15", "E08S07_Efficiency", "E08S08_Q16", "E08S09_Recap"]
+EPISODE_SCENES = ["E08S01_Retrieval", "E08S02_EnergyFlow", "E08S03_qmcT", "E08S04_MassEnergy",
+                  "E08S05_MassLoss", "E08S06_Q15", "E08S07_Efficiency", "E08S08_Q16", "E08S09_TooLow",
+                  "E08S10_Recap"]

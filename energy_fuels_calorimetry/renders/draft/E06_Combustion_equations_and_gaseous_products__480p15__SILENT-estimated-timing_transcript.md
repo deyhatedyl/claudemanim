@@ -1,6 +1,6 @@
 # E06 Combustion equations and gaseous products
 
-Runtime 11:25. Narration transcript (matches the captions).
+Runtime 12:14. Narration transcript (matches the captions).
 
 ## [00:00] E06S01 Retrieval check
 
@@ -61,7 +61,12 @@ Checkpoint. Methane combustion forms twice as many moles of water as carbon diox
 No. Per mole of methane: one mole of carbon dioxide is forty-four grams, and two moles of water is thirty-six grams. Twice the moles, but less mass, because a water molecule is much lighter. Coefficients give mole ratios. Masses also depend on the molar masses.
 One more distinction. "Carbon emissions" usually means carbon dioxide, or the mass of carbon it contains. "Greenhouse gases" is broader: carbon dioxide, water vapour, unburnt methane, and others. So always check which gases a question's model counts before you add masses together.
 
-## [10:30] E06S09 Recap and closing recall
+## [10:30] E06S09 Checkpoint: propane
+
+Checkpoint. Write a balanced equation, with states, for the complete combustion of propane, C three H eight, at SLC. Pause and try it.  *(pause)*
+Carbon first: three carbon atoms make three carbon dioxide. Then hydrogen: eight hydrogen atoms make four water. Then oxygen: six atoms in the carbon dioxide plus four in the water is ten, which is five oxygen molecules. So propane gas plus five oxygen gas forms three carbon dioxide gas plus four water, and at SLC the water is a liquid.
+
+## [11:19] E06S10 Recap and closing recall
 
 To recap. Balance combustion in the order carbon, hydrogen, oxygen, and remember oxygen already in the fuel. Write incomplete combustion only when the products are specified. Use states that match the conditions, and separate what a reaction formed from what is measured after cooling.
 Closing recall. Balance the complete combustion of propane, C three H eight.  *(pause)*

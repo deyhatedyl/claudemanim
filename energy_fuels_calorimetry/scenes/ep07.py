@@ -189,7 +189,50 @@ class E07S03_Trays(NarratedScene):
 
 
 # =====================================================================================
-class E07S04_Q13(NarratedScene):
+class E07S04_MassCheck(NarratedScene):
+    def construct(self):
+        h = header("Checkpoint: more grams, still limiting")
+        eq = M(r"\ce{CH4 + 2O2 -> CO2 + 2H2O}", size=EQ_SMALL).move_to([0, 2.3, 0])
+        data = T("3.20 g CH₄ with 9.60 g O₂, ignited", size=BODY).move_to([0, 1.5, 0])
+        x0 = -5.6
+
+        def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
+            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([x0, 0, 0], LEFT)
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), Write(eq), run_time=0.9)
+            self.play(FadeIn(data), run_time=0.6)
+            q = T("Which is limiting? How much of the other is left?", size=LABEL + 2, color=UNKNOWN).move_to([0, 0.75, 0])
+            b.until(0.6)
+            self.play(FadeIn(q), run_time=0.5)
+            self.q = q
+        with self.beat("b02") as b:
+            self.play(FadeOut(self.q), run_time=0.3)
+            l1 = L(r"n(\ce{CH4}) = 3.20 \div 16.0 = 0.200\ \text{mol}", 0.75, CH4C)
+            l2 = L(r"n(\ce{O2}) = 9.60 \div 32.0 = 0.300\ \text{mol}", 0.1, O2C)
+            self.play(Write(l1), run_time=0.9)
+            b.until(0.5)
+            self.play(Write(l2), run_time=0.9)
+        with self.beat("b03") as b:
+            r1 = M(r"\ce{CH4}: \tfrac{0.200}{1} = 0.200", size=EQ_SMALL - 4, color=CH4C).move_to([3.2, 0.75, 0])
+            r2 = M(r"\ce{O2}: \tfrac{0.300}{2} = 0.150", size=EQ_SMALL - 4, color=O2C).move_to([3.2, 0.1, 0])
+            self.play(Write(r1), run_time=0.8)
+            b.until(0.35)
+            self.play(Write(r2), run_time=0.8)
+            box = SurroundingRectangle(r2, color=UNKNOWN, buff=0.1)
+            lim = chip("O₂ limiting, despite more grams and more moles", BAD, size=SMALL + 2).move_to([0, -0.7, 0])
+            b.until(0.65)
+            self.play(Create(box), FadeIn(lim), run_time=0.7)
+        with self.beat("b04") as b:
+            l3 = L(r"\text{extent} = 0.150\ \text{mol};\ \ \ce{CH4}\ \text{left} = 0.200 - 0.150 = 0.0500\ \text{mol} = 0.800\ \text{g}",
+                   -1.5, GOOD, s=EQ_SMALL - 8)
+            l4 = L(r"\ce{CO2}\ \text{formed} = 0.150\ \text{mol}", -2.2, GOOD, s=EQ_SMALL - 8)
+            self.play(Write(l3), run_time=1.2)
+            b.until(0.7)
+            self.play(Write(l4), run_time=0.8)
+
+
+# =====================================================================================
+class E07S05_Q13(NarratedScene):
     def construct(self):
         h = header("Practice Q13")
         qc = question_card("Q13").move_to([0, 0.3, 0])
@@ -262,7 +305,7 @@ class E07S04_Q13(NarratedScene):
 
 
 # =====================================================================================
-class E07S05_Mixtures(NarratedScene):
+class E07S06_Mixtures(NarratedScene):
     def construct(self):
         h = header("Gas mixtures: only the reactive part reacts")
         air = stream_bar([(0.79, "N₂ and others 79% (inert here)", INERT, False), (0.21, "O₂ 21%", O2C, True)], y=1.4, x_left=-5.6, width=7.0)
@@ -298,7 +341,45 @@ class E07S05_Mixtures(NarratedScene):
 
 
 # =====================================================================================
-class E07S06_NewVsInlet(NarratedScene):
+class E07S07_GasVolumes(NarratedScene):
+    def construct(self):
+        h = header("Gas volumes react in the same ratio")
+        rule = chip("same temperature and pressure: volume ratio = mole ratio", UNKNOWN, size=SMALL + 2).move_to([0, 2.3, 0])
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), run_time=0.4)
+            b.until(0.3)
+            self.play(FadeIn(rule), run_time=0.7)
+        eq = M(r"\ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}", size=EQ_SMALL).move_to([0, 1.5, 0])
+        sc, xl = 0.42, -2.0
+
+        def vbar(v, y, col, lab, val):
+            r = Rectangle(width=v * sc, height=0.38, fill_color=col, fill_opacity=0.85, stroke_width=0)
+            r.move_to([0, y, 0]).align_to([xl, 0, 0], LEFT)
+            return VGroup(r, T(lab, size=SMALL + 1).next_to(r, LEFT, buff=0.2).align_to([xl - 0.2, 0, 0], RIGHT),
+                          T(val, size=SMALL + 1, color=col).next_to(r, RIGHT, buff=0.15))
+        bars = [vbar(2.00, 0.6, SYSTEM, "propane", "2.00 L"), vbar(10.0, 0.0, O2C, "oxygen (× 5)", "10.0 L"),
+                vbar(6.00, -0.6, "#AEB6BF", "carbon dioxide (× 3)", "6.00 L")]
+        with self.beat("b02") as b:
+            self.play(Write(eq), run_time=1.0)
+            self.play(FadeIn(bars[0]), run_time=0.5)
+            b.until(0.35)
+            self.play(GrowFromEdge(bars[1][0], LEFT), FadeIn(bars[1][1:]), run_time=0.8)
+            b.until(0.55)
+            self.play(GrowFromEdge(bars[2][0], LEFT), FadeIn(bars[2][1:]), run_time=0.8)
+            wl = T("water: liquid at SLC, no gas volume", size=SMALL + 1, color=MUTED).move_to([0, -1.15, 0])
+            b.until(0.82)
+            self.play(FadeIn(wl), run_time=0.5)
+        with self.beat("b03") as b:
+            air = M(r"V(\text{air}) = \frac{10.0\ \text{L}}{0.210} = 47.6\ \text{L}", size=EQ_SMALL - 6, color=SURR).move_to([0, -1.85, 0])
+            self.play(Write(air), run_time=1.1)
+            note = T("gases only, all volumes at the same temperature and pressure", size=SMALL + 1, color=UNKNOWN)
+            note.move_to([0, -2.5, 0])
+            b.until(0.6)
+            self.play(FadeIn(note), run_time=0.5)
+
+
+# =====================================================================================
+class E07S08_NewVsInlet(NarratedScene):
     def construct(self):
         h = header("New CO₂ versus inlet CO₂")
         box = RoundedRectangle(width=2.6, height=1.6, corner_radius=0.2, color=SYSTEM, stroke_width=3).move_to([0, 0.9, 0])
@@ -327,7 +408,7 @@ class E07S06_NewVsInlet(NarratedScene):
 
 
 # =====================================================================================
-class E07S07_Q14a(NarratedScene):
+class E07S09_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
         qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, 0.15, 0])
@@ -369,7 +450,7 @@ class E07S07_Q14a(NarratedScene):
 
 
 # =====================================================================================
-class E07S08_Q14b(NarratedScene):
+class E07S10_Q14b(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 2)")
         sc = 0.55
@@ -410,7 +491,7 @@ class E07S08_Q14b(NarratedScene):
 
 
 # =====================================================================================
-class E07S09_Recap(NarratedScene):
+class E07S11_Recap(NarratedScene):
     def construct(self):
         h = header("The limiting-reactant routine")
         steps = ["Convert to moles (reactive part of any mixture only)",
@@ -446,5 +527,6 @@ class E07S09_Recap(NarratedScene):
             self.play(FadeIn(nxt), run_time=0.5)
 
 
-EPISODE_SCENES = ["E07S01_Retrieval", "E07S02_Batches", "E07S03_Trays", "E07S04_Q13", "E07S05_Mixtures",
-                  "E07S06_NewVsInlet", "E07S07_Q14a", "E07S08_Q14b", "E07S09_Recap"]
+EPISODE_SCENES = ["E07S01_Retrieval", "E07S02_Batches", "E07S03_Trays", "E07S04_MassCheck", "E07S05_Q13",
+                  "E07S06_Mixtures", "E07S07_GasVolumes", "E07S08_NewVsInlet", "E07S09_Q14a", "E07S10_Q14b",
+                  "E07S11_Recap"]

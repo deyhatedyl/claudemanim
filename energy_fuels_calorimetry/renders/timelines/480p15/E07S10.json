@@ -1,0 +1,64 @@
+{
+ "scene": "E07S10",
+ "title": "Practice Q14, part 2: carbon dioxide and energy",
+ "cls": "E07S10_Q14b",
+ "fps": 15,
+ "duration": 93.3333,
+ "beats": [
+  {
+   "key": "E07S10.b01",
+   "start": 0.0,
+   "speech": 11.2986,
+   "audio": null,
+   "estimated": true,
+   "text": "Newly formed carbon dioxide equals the methane that reacted: zero point three eight one zero moles. At standard laboratory conditions, that's nine point four five litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S10.b02",
+   "start": 11.6667,
+   "speech": 19.9883,
+   "audio": null,
+   "estimated": true,
+   "text": "The inlet carbon dioxide was zero point one zero zero moles, or two point four eight litres. So the total carbon dioxide, once isolated at standard laboratory conditions, is nine point four five plus two point four eight: eleven point nine three, about eleven point nine litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S10.b03",
+   "start": 32.0,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Energy released: zero point three eight one zero moles of methane times eight hundred and ninety kilojoules per mole, which is three hundred and thirty-nine kilojoules. That value is for water formed as a liquid, matching the data given.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S10.b04",
+   "start": 49.0667,
+   "speech": 13.6014,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the reactive fuel amount and the oxygen amount, one for the limiting decision, two for the remaining methane, one each for new carbon dioxide, total carbon dioxide and energy.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S10.b05",
+   "start": 63.0667,
+   "speech": 29.2717,
+   "audio": null,
+   "estimated": true,
+   "text": "Three traps to watch. Treating all twelve point four litres of fuel gas as methane gives zero point five zero zero moles of methane. Treating all ninety litres of air as oxygen gives far too much oxygen and the wrong limiting reactant. And calling the nine point four five litres the total, or the eleven point nine three litres the amount formed, mixes up new and inlet carbon dioxide.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

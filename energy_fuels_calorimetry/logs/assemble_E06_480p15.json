@@ -4,9 +4,9 @@
  "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 38,
+ "beats": 40,
  "beats_with_audio": 0,
- "duration": 685.2,
+ "duration": 734.73,
  "scenes": [
   {
    "scene": "E06S01",
@@ -58,8 +58,14 @@
   },
   {
    "scene": "E06S09",
-   "title": "Recap and closing recall",
+   "title": "Checkpoint: propane",
    "start": 630.3294259999999,
+   "duration": 49.533333
+  },
+  {
+   "scene": "E06S10",
+   "title": "Recap and closing recall",
+   "start": 679.8627589999999,
    "duration": 54.866667
   }
  ],

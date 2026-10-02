@@ -1,39 +1,28 @@
 {
  "scene": "E06S09",
- "title": "Recap and closing recall",
- "cls": "E06S09_Recap",
+ "title": "Checkpoint: propane",
+ "cls": "E06S09_Propane",
  "fps": 15,
- "duration": 54.8667,
+ "duration": 49.5333,
  "beats": [
   {
    "key": "E06S09.b01",
    "start": 0.0,
-   "speech": 18.9269,
+   "speech": 10.0572,
    "audio": null,
    "estimated": true,
-   "text": "To recap. Balance combustion in the order carbon, hydrogen, oxygen, and remember oxygen already in the fuel. Write incomplete combustion only when the products are specified. Use states that match the conditions, and separate what a reaction formed from what is measured after cooling.",
+   "text": "Checkpoint. Write a balanced equation, with states, for the complete combustion of propane, C three H eight, at SLC. Pause and try it.",
    "overrun": 0.0,
-   "pause": 0.0,
+   "pause": 12.0,
    "layout": []
   },
   {
    "key": "E06S09.b02",
-   "start": 19.2667,
-   "speech": 5.3255,
+   "start": 22.4667,
+   "speech": 26.0876,
    "audio": null,
    "estimated": true,
-   "text": "Closing recall. Balance the complete combustion of propane, C three H eight.",
-   "overrun": 0.0,
-   "pause": 10.0,
-   "layout": []
-  },
-  {
-   "key": "E06S09.b03",
-   "start": 35.0,
-   "speech": 18.8731,
-   "audio": null,
-   "estimated": true,
-   "text": "Three carbons give three carbon dioxide. Eight hydrogens give four water. That's ten oxygen atoms in the products, so five oxygen molecules. Propane plus five oxygen forms three carbon dioxide plus four water. Next episode: what happens when one reactant runs out first.",
+   "text": "Carbon first: three carbon atoms make three carbon dioxide. Then hydrogen: eight hydrogen atoms make four water. Then oxygen: six atoms in the carbon dioxide plus four in the water is ten, which is five oxygen molecules. So propane gas plus five oxygen gas forms three carbon dioxide gas plus four water, and at SLC the water is a liquid.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []

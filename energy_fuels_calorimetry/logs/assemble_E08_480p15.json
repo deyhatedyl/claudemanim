@@ -4,9 +4,9 @@
  "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 39,
+ "beats": 42,
  "beats_with_audio": 0,
- "duration": 745.99,
+ "duration": 835.93,
  "scenes": [
   {
    "scene": "E08S01",
@@ -58,8 +58,14 @@
   },
   {
    "scene": "E08S09",
-   "title": "Recap and closing recall",
+   "title": "Why measured values come out low",
    "start": 691.5925129999999,
+   "duration": 89.932682
+  },
+  {
+   "scene": "E08S10",
+   "title": "Recap and closing recall",
+   "start": 781.5251949999999,
    "duration": 54.4
   }
  ],

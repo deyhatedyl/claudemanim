@@ -4,9 +4,9 @@
  "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
  "final": false,
  "narrated": false,
- "beats": 38,
+ "beats": 45,
  "beats_with_audio": 0,
- "duration": 804.93,
+ "duration": 967.59,
  "scenes": [
   {
    "scene": "E07S01",
@@ -28,38 +28,50 @@
   },
   {
    "scene": "E07S04",
-   "title": "Practice Q13: excess means what's left after reaction",
+   "title": "Checkpoint: more grams, still limiting",
    "start": 262.597721,
-   "duration": 169.466016
+   "duration": 91.866341
   },
   {
    "scene": "E07S05",
-   "title": "Gas mixtures: only the reactive part reacts",
-   "start": 432.06373699999995,
-   "duration": 52.733008
+   "title": "Practice Q13: excess means what's left after reaction",
+   "start": 354.464062,
+   "duration": 169.466016
   },
   {
    "scene": "E07S06",
-   "title": "New carbon dioxide versus inlet carbon dioxide",
-   "start": 484.79674499999993,
-   "duration": 34.46569
+   "title": "Gas mixtures: only the reactive part reacts",
+   "start": 523.930078,
+   "duration": 52.733008
   },
   {
    "scene": "E07S07",
-   "title": "Practice Q14, part 1: budgets and the limiting reactant",
-   "start": 519.262435,
-   "duration": 112.932357
+   "title": "Gas volumes react in the same ratio",
+   "start": 576.663086,
+   "duration": 70.799023
   },
   {
    "scene": "E07S08",
-   "title": "Practice Q14, part 2: carbon dioxide and energy",
-   "start": 632.194792,
-   "duration": 93.333008
+   "title": "New carbon dioxide versus inlet carbon dioxide",
+   "start": 647.462109,
+   "duration": 34.46569
   },
   {
    "scene": "E07S09",
+   "title": "Practice Q14, part 1: budgets and the limiting reactant",
+   "start": 681.927799,
+   "duration": 112.932357
+  },
+  {
+   "scene": "E07S10",
+   "title": "Practice Q14, part 2: carbon dioxide and energy",
+   "start": 794.8601560000001,
+   "duration": 93.333008
+  },
+  {
+   "scene": "E07S11",
    "title": "Recap and closing recall",
-   "start": 725.5278000000001,
+   "start": 888.193164,
    "duration": 79.399674
   }
  ],

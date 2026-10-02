@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T20:19:01",
+ "updated": "2026-10-02T20:26:01",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -771,16 +771,16 @@
    "title": "Combustion equations and gaseous products",
    "script": {
     "path": "scripts/ep06.md",
-    "sha": "732a3e2b2bd8ee5e",
-    "beats": 38,
-    "words": 1412,
-    "est_minutes": 11.5,
+    "sha": "1a3905390116b883",
+    "beats": 40,
+    "words": 1495,
+    "est_minutes": 12.3,
     "anchors": "Q11,Q12",
     "coverage": "C12,C13,C14,C17,C01"
    },
    "scenes_code": {
     "path": "scenes/ep06.py",
-    "sha": "03278112adb3b35c"
+    "sha": "306dcc30f6226226"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -882,6 +882,18 @@
     },
     {
      "id": "E06S09",
+     "title": "Checkpoint: propane",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 49.5333,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E06S10",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -895,14 +907,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 38,
+    "total": 40,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 685.2,
+    "duration": 734.73,
     "captions": [
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
@@ -912,7 +924,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected.",
     "final_qa": "pending"
    }
   },
@@ -920,16 +932,16 @@
    "title": "Limiting reactants, excess fuel and gas mixtures",
    "script": {
     "path": "scripts/ep07.md",
-    "sha": "88a41b7469a72f15",
-    "beats": 38,
-    "words": 1680,
-    "est_minutes": 13.5,
+    "sha": "644130ef6c63dbfe",
+    "beats": 45,
+    "words": 2023,
+    "est_minutes": 16.2,
     "anchors": "Q13,Q14",
     "coverage": "C14,C15,C16,C17,C01"
    },
    "scenes_code": {
     "path": "scenes/ep07.py",
-    "sha": "efb56721c7ceb1fa"
+    "sha": "c0e671d0dda17243"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -971,6 +983,18 @@
     },
     {
      "id": "E07S04",
+     "title": "Checkpoint: more grams, still limiting",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 91.8667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S05",
      "title": "Practice Q13: excess means what's left after reaction",
      "beats": 7,
      "audio_ready": 0,
@@ -982,7 +1006,7 @@
      }
     },
     {
-     "id": "E07S05",
+     "id": "E07S06",
      "title": "Gas mixtures: only the reactive part reacts",
      "beats": 3,
      "audio_ready": 0,
@@ -994,7 +1018,19 @@
      }
     },
     {
-     "id": "E07S06",
+     "id": "E07S07",
+     "title": "Gas volumes react in the same ratio",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 70.8,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S08",
      "title": "New carbon dioxide versus inlet carbon dioxide",
      "beats": 2,
      "audio_ready": 0,
@@ -1006,7 +1042,7 @@
      }
     },
     {
-     "id": "E07S07",
+     "id": "E07S09",
      "title": "Practice Q14, part 1: budgets and the limiting reactant",
      "beats": 5,
      "audio_ready": 0,
@@ -1018,7 +1054,7 @@
      }
     },
     {
-     "id": "E07S08",
+     "id": "E07S10",
      "title": "Practice Q14, part 2: carbon dioxide and energy",
      "beats": 5,
      "audio_ready": 0,
@@ -1030,7 +1066,7 @@
      }
     },
     {
-     "id": "E07S09",
+     "id": "E07S11",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1044,14 +1080,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 38,
+    "total": 45,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 804.93,
+    "duration": 967.59,
     "captions": [
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.vtt"
@@ -1061,7 +1097,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered.",
     "final_qa": "pending"
    }
   },
@@ -1069,16 +1105,16 @@
    "title": "Measuring combustion energy and efficiency",
    "script": {
     "path": "scripts/ep08.md",
-    "sha": "d5606117af901fdc",
-    "beats": 39,
-    "words": 1571,
-    "est_minutes": 12.5,
+    "sha": "c6de4bd9d242d91a",
+    "beats": 42,
+    "words": 1759,
+    "est_minutes": 14.0,
     "anchors": "Q15,Q16",
     "coverage": "C18,C19,C08,C10"
    },
    "scenes_code": {
     "path": "scenes/ep08.py",
-    "sha": "9f6065d97de9ec9b"
+    "sha": "2d6b57d3f16162cf"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1180,6 +1216,18 @@
     },
     {
      "id": "E08S09",
+     "title": "Why measured values come out low",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 89.9333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E08S10",
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
@@ -1193,14 +1241,14 @@
    ],
    "audio": {
     "ready": 0,
-    "total": 39,
+    "total": 42,
     "seconds": 0
    },
    "assembled_480p15": {
     "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 745.99,
+    "duration": 835.93,
     "captions": [
      "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.srt",
      "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.vtt"
@@ -1210,7 +1258,7 @@
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript.",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
     "final_qa": "pending"
    }
   },
@@ -2433,5 +2481,5 @@
    }
   }
  },
- "series_est_minutes": 204.3
+ "series_est_minutes": 209.3
 }

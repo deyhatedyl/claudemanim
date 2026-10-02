@@ -1,28 +1,39 @@
 {
  "scene": "E07S06",
- "title": "New carbon dioxide versus inlet carbon dioxide",
- "cls": "E07S06_NewVsInlet",
+ "title": "Gas mixtures: only the reactive part reacts",
+ "cls": "E07S06_Mixtures",
  "fps": 15,
- "duration": 34.4667,
+ "duration": 52.7333,
  "beats": [
   {
    "key": "E07S06.b01",
    "start": 0.0,
-   "speech": 15.4366,
+   "speech": 16.0303,
    "audio": null,
    "estimated": true,
-   "text": "If the fuel stream already contains carbon dioxide, the exhaust has two sources of it. Some carbon dioxide is newly formed by burning the methane. The rest simply entered with the fuel and passed through unchanged.",
+   "text": "Gases often arrive as mixtures. Air is about twenty-one percent oxygen by volume; the rest, mostly nitrogen, doesn't react in these calculations. A fuel stream might be methane mixed with carbon dioxide, which can't burn any further.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []
   },
   {
    "key": "E07S06.b02",
-   "start": 15.8,
-   "speech": 17.6855,
+   "start": 16.4,
+   "speech": 19.3407,
    "audio": null,
    "estimated": true,
-   "text": "A question might ask for either one. \"Carbon dioxide formed\" or \"produced\" means only the new part, calculated from the reaction. \"Total carbon dioxide in the exhaust\" means new plus inlet. Read which one is asked for before you add anything.",
+   "text": "For ideal gases at the same temperature and pressure, equal volumes contain equal amounts. So a volume fraction is also a mole fraction. That's an assumption, and questions usually state it. If the gases are at different conditions, you can't use the fractions this way.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S06.b03",
+   "start": 36.1333,
+   "speech": 15.6166,
+   "audio": null,
+   "estimated": true,
+   "text": "So split each stream before you do any stoichiometry. From the air, only the oxygen fraction goes into the reaction. From the fuel, only the methane fraction reacts. The nitrogen and the carbon dioxide pass through.",
    "overrun": 0.0,
    "pause": 0.0,
    "layout": []

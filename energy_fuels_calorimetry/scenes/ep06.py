@@ -498,7 +498,34 @@ class E06S08_MolesNotGrams(NarratedScene):
 
 
 # =====================================================================================
-class E06S09_Recap(NarratedScene):
+class E06S09_Propane(NarratedScene):
+    def construct(self):
+        h = header("Checkpoint: propane")
+        bal = Balancer(self, [[1, "C3H8"], [None, "O2"]], [[None, "CO2"], [None, "H2O"]], y=1.5)
+        with self.beat("b01") as b:
+            self.play(FadeIn(h), run_time=0.4)
+            bal.show(1.0)
+            st = T("complete combustion, with states, at SLC", size=LABEL + 1, color=UNKNOWN).move_to([0, -1.2, 0])
+            self.play(FadeIn(st), run_time=0.5)
+            self.st = st
+        with self.beat("b02") as b:
+            self.play(FadeOut(self.st), run_time=0.3)
+            bal.set("p", 0, 3, rt=0.8, flag="C")
+            b.until(0.25)
+            bal.set("p", 1, 4, rt=0.8, flag="H")
+            b.until(0.45)
+            ox = T("O in products: 6 + 4 = 10 atoms → 5 O₂", size=LABEL + 1).move_to([0, -1.2, 0])
+            self.play(FadeIn(ox), run_time=0.5)
+            bal.set("r", 1, 5, rt=0.8, flag="O")
+            fin = M(r"\ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}", size=EQ, color=GOOD).move_to([0, -2.0, 0])
+            b.until(0.75)
+            self.play(Write(fin), run_time=1.1)
+            nt = T("water is a liquid at SLC", size=SMALL + 1, color=MUTED).next_to(fin, DOWN, buff=0.15)
+            self.play(FadeIn(nt), run_time=0.4)
+
+
+# =====================================================================================
+class E06S10_Recap(NarratedScene):
     def construct(self):
         h = header("Recap")
         items = bullets(["Balance C, then H, then O; include O already in the fuel",
@@ -527,4 +554,4 @@ class E06S09_Recap(NarratedScene):
 
 
 EPISODE_SCENES = ["E06S01_Retrieval", "E06S02_Balance", "E06S03_Octane", "E06S04_Incomplete", "E06S05_Q11",
-                  "E06S06_Exhaust", "E06S07_Q12", "E06S08_MolesNotGrams", "E06S09_Recap"]
+                  "E06S06_Exhaust", "E06S07_Q12", "E06S08_MolesNotGrams", "E06S09_Propane", "E06S10_Recap"]

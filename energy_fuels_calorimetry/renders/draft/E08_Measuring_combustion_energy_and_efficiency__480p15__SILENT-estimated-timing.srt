@@ -741,59 +741,154 @@ one for the fuel mass, and one for the
 explanation with that sanity check.
 
 158
-00:11:31,593 --> 00:11:32,256
-To recap.
+00:11:31,593 --> 00:11:32,442
+Checkpoint.
 
 159
-00:11:32,296 --> 00:11:37,341
+00:11:32,482 --> 00:11:39,154
+A class burns ethanol under a can of water
+and calculates an enthalpy of combustion
+
+160
+00:11:39,194 --> 00:11:42,874
+much smaller in size than
+the data book value.
+
+161
+00:11:42,914 --> 00:11:45,461
+List as many reasons as you can.
+
+162
+00:11:45,501 --> 00:11:46,795
+Pause and think.
+
+163
+00:11:55,259 --> 00:11:58,476
+Most of the energy
+never reaches the water.
+
+164
+00:11:58,516 --> 00:12:03,930
+Hot gases carry heat away around the
+can, the can and the clamp warm up,
+
+165
+00:12:03,970 --> 00:12:05,975
+and draughts make it worse.
+
+166
+00:12:06,015 --> 00:12:09,762
+A yellow, sooty flame means
+incomplete combustion,
+
+167
+00:12:09,802 --> 00:12:14,534
+so less energy is released per
+gram than the data book assumes.
+
+168
+00:12:14,574 --> 00:12:19,911
+And if ethanol evaporates from the
+wick before the burner is reweighed,
+
+169
+00:12:19,951 --> 00:12:24,117
+the recorded mass loss includes
+fuel that never burned.
+
+170
+00:12:24,459 --> 00:12:30,484
+Each of these makes the calculated energy
+per mole, and the size of delta H,
+
+171
+00:12:30,524 --> 00:12:31,283
+too small.
+
+172
+00:12:31,323 --> 00:12:35,672
+The fixes are specific: use
+a draught shield and a lid,
+
+173
+00:12:35,712 --> 00:12:40,859
+keep the flame close to a thin-walled
+copper can, stir the water,
+
+174
+00:12:40,899 --> 00:12:45,009
+make sure there's enough
+air for a clean blue flame,
+
+175
+00:12:45,049 --> 00:12:48,840
+and cap the burner and
+reweigh it straight away.
+
+176
+00:12:48,880 --> 00:12:54,426
+With this method, a result well below
+the data book value is expected;
+
+177
+00:12:54,466 --> 00:13:00,532
+a result above it would point to a
+measurement or calculation error instead.
+
+178
+00:13:01,525 --> 00:13:02,189
+To recap.
+
+179
+00:13:02,229 --> 00:13:07,273
 The fuel's energy comes from the
 mass burned, converted to moles,
 
-160
-00:11:37,381 --> 00:11:40,391
+180
+00:13:07,313 --> 00:13:10,324
 times the molar enthalpy of combustion.
 
-161
-00:11:40,431 --> 00:11:45,397
+181
+00:13:10,364 --> 00:13:15,330
 The useful energy comes from q
 equals m c delta T for the water.
 
-162
-00:11:45,437 --> 00:11:51,420
+182
+00:13:15,370 --> 00:13:21,353
 Efficiency is useful over total, and to
 find an input from a required output,
 
-163
-00:11:51,460 --> 00:11:53,416
+183
+00:13:21,393 --> 00:13:23,349
 divide by the efficiency.
 
-164
-00:11:53,793 --> 00:11:54,889
+184
+00:13:23,725 --> 00:13:24,821
 Closing recall.
 
-165
-00:11:54,929 --> 00:12:00,873
+185
+00:13:24,861 --> 00:13:30,806
 If a heater's efficiency halved, how
 would the mass of fuel needed for the same
 
-166
-00:12:00,913 --> 00:12:02,428
+186
+00:13:30,846 --> 00:13:32,361
 heating task change?
 
-167
-00:12:10,859 --> 00:12:16,600
+187
+00:13:40,792 --> 00:13:46,532
 It would double, because the required
 input is the useful output divided by the
 
-168
-00:12:16,640 --> 00:12:17,405
+188
+00:13:46,572 --> 00:13:47,337
 efficiency.
 
-169
-00:12:17,445 --> 00:12:22,380
+189
+00:13:47,377 --> 00:13:52,313
 Next episode: why a real calorimeter
 heats more than just its water,
 
-170
-00:12:22,420 --> 00:12:25,054
+190
+00:13:52,353 --> 00:13:54,987
 and how calibration accounts for it.

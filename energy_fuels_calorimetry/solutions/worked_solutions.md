@@ -415,7 +415,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Taking the smaller raw mole number as limiting, or reporting the starting amount as the amount remaining.
 
-**Worked in:** E07S04 “Practice Q13: excess means what's left after reaction” (≈4:22 in the draft)
+**Worked in:** E07S05 “Practice Q13: excess means what's left after reaction” (≈5:54 in the draft)
 
 ### Q14. A fuel stream already containing carbon dioxide (8 marks)
 
@@ -459,7 +459,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Counting all of the fuel-stream gas as methane, or treating all measured CO₂ as newly formed.
 
-**Worked in:** E07S07 “Practice Q14, part 1: budgets and the limiting reactant” (≈8:39 in the draft); E07S08 “Practice Q14, part 2: carbon dioxide and energy” (≈10:32 in the draft)
+**Worked in:** E07S09 “Practice Q14, part 1: budgets and the limiting reactant” (≈11:21 in the draft); E07S10 “Practice Q14, part 2: carbon dioxide and energy” (≈13:14 in the draft)
 
 ## Episode 08: Measuring combustion energy and efficiency
 
