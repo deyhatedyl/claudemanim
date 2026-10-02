@@ -1,0 +1,64 @@
+{
+ "scene": "E05S04",
+ "title": "Per 100 g, per serving, per packet",
+ "cls": "E05S04_Scaling",
+ "fps": 15,
+ "duration": 80.0667,
+ "beats": [
+  {
+   "key": "E05S04.b01",
+   "start": 0.0,
+   "speech": 14.3752,
+   "audio": null,
+   "estimated": true,
+   "text": "Labels report energy on different bases: per one hundred grams, per serving, and sometimes per packet. To convert, keep the units attached. A forty-five gram serving is forty-five hundredths of one hundred grams.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S04.b02",
+   "start": 14.7333,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "So the serving energy is one thousand six hundred and fifty-one kilojoules per one hundred grams, times forty-five grams. The grams cancel, and we divide by one hundred: about seven hundred and forty-three kilojoules per serving.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S04.b03",
+   "start": 30.5333,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "The energy per gram is the same whether you eat a crumb or a whole packet: about sixteen point five kilojoules per gram for this bar. Per gram is a property of the food. Per serving depends on how much you eat.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S04.b04",
+   "start": 49.0,
+   "speech": 10.7048,
+   "audio": null,
+   "estimated": true,
+   "text": "Checkpoint. If you eat two servings instead of one, what happens to the energy you take in, and what happens to the energy per gram?",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E05S04.b05",
+   "start": 66.1333,
+   "speech": 12.9538,
+   "audio": null,
+   "estimated": true,
+   "text": "The energy you take in doubles, to about one thousand four hundred and eighty-six kilojoules. The energy per gram doesn't change: it's still about sixteen point five kilojoules per gram.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

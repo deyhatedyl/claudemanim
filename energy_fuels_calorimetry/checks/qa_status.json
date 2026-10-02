@@ -18,5 +18,10 @@
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
   "final_qa": "pending"
+ },
+ "E05": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings.",
+  "final_qa": "pending"
  }
 }

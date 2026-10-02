@@ -1,0 +1,53 @@
+{
+ "scene": "E05S07",
+ "title": "Which food has more energy? Choose the basis first",
+ "cls": "E05S07_WhichFood",
+ "fps": 15,
+ "duration": 59.8,
+ "beats": [
+  {
+   "key": "E05S07.b01",
+   "start": 0.0,
+   "speech": 20.0607,
+   "audio": null,
+   "estimated": true,
+   "text": "Which food has more energy? That question isn't complete until you say: more energy per what? Here are two foods with illustrative label values. Nuts: two thousand five hundred kilojoules per one hundred grams. Cooked pasta: six hundred and fifty kilojoules per one hundred grams.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S07.b02",
+   "start": 20.4,
+   "speech": 7.2145,
+   "audio": null,
+   "estimated": true,
+   "text": "Per one hundred grams, the nuts win easily, because they're rich in fat and contain little water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S07.b03",
+   "start": 28.0,
+   "speech": 17.9193,
+   "audio": null,
+   "estimated": true,
+   "text": "But a typical serving of nuts might be twenty-five grams, which is six hundred and twenty-five kilojoules. A serving of pasta might be two hundred and fifty grams, which is one thousand six hundred and twenty-five kilojoules. Per serving, the pasta wins.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S07.b04",
+   "start": 46.2667,
+   "speech": 12.54,
+   "audio": null,
+   "estimated": true,
+   "text": "Both statements are true. They answer different questions. In an exam, state the basis, show the numbers for both foods on that basis, and only then make the comparison.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

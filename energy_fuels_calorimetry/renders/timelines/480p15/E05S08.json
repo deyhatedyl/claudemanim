@@ -1,0 +1,53 @@
+{
+ "scene": "E05S08",
+ "title": "Practice Q10: two bases, two answers",
+ "cls": "E05S08_Q10",
+ "fps": 15,
+ "duration": 106.0,
+ "beats": [
+  {
+   "key": "E05S08.b01",
+   "start": 0.0,
+   "speech": 11.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero ten is worth five marks. Before you calculate anything, decide which two comparison bases the question wants. Then pause and work it out.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E05S08.b02",
+   "start": 27.1333,
+   "speech": 25.3138,
+   "audio": null,
+   "estimated": true,
+   "text": "The two bases are energy per one hundred grams and energy per serving. Food A per one hundred grams: fifty times sixteen, plus ten times seventeen, plus twelve times thirty-seven, gives one thousand four hundred and fourteen kilojoules. Food B: thirty-five times sixteen, plus twenty times seventeen, plus fifteen times thirty-seven, gives one thousand four hundred and fifty-five kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S08.b03",
+   "start": 52.8,
+   "speech": 27.5628,
+   "audio": null,
+   "estimated": true,
+   "text": "So per one hundred grams, food B is higher. Now the servings. Food A's serving is eighty grams: one thousand four hundred and fourteen times zero point eight zero is one thousand one hundred and thirty-one point two kilojoules. Food B's serving is fifty grams: one thousand four hundred and fifty-five times zero point five zero is seven hundred and twenty-seven point five kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S08.b04",
+   "start": 80.7333,
+   "speech": 24.3062,
+   "audio": null,
+   "estimated": true,
+   "text": "So food B has more energy per one hundred grams, but the food A serving contains more energy. Marks: two for the per-one-hundred-gram values, two for the serving values, and one for stating both comparisons on their bases. The trap is comparing an eighty-gram serving with a fifty-gram serving and calling it a comparison of the foods.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

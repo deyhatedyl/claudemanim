@@ -1,0 +1,53 @@
+{
+ "scene": "E05S03",
+ "title": "Energy factors and the energy bar",
+ "cls": "E05S03_Factors",
+ "fps": 15,
+ "duration": 70.0667,
+ "beats": [
+  {
+   "key": "E05S03.b01",
+   "start": 0.0,
+   "speech": 18.9269,
+   "audio": null,
+   "estimated": true,
+   "text": "Food labels give the mass of each macronutrient. To estimate energy, we use average energy factors: carbohydrate provides about sixteen kilojoules per gram, protein about seventeen, and fat about thirty-seven. Fat provides more than twice as much energy per gram as the other two.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S03.b02",
+   "start": 19.2667,
+   "speech": 12.9538,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's an example: a muesli bar label, per one hundred grams, lists sixty grams of carbohydrate, eight grams of protein and fifteen grams of fat. These are illustrative label values.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S03.b03",
+   "start": 32.6,
+   "speech": 20.8883,
+   "audio": null,
+   "estimated": true,
+   "text": "Each nutrient contributes its mass times its factor. Carbohydrate: sixty grams times sixteen kilojoules per gram is nine hundred and sixty kilojoules. Protein: eight times seventeen is one hundred and thirty-six. Fat: fifteen times thirty-seven is five hundred and fifty-five. The grams cancel each time, leaving kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S03.b04",
+   "start": 53.8667,
+   "speech": 15.2028,
+   "audio": null,
+   "estimated": true,
+   "text": "Add the three contributions: one thousand six hundred and fifty-one kilojoules per one hundred grams. Notice that fat, at only fifteen grams, supplies a third of the total. That's the effect of its larger factor.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

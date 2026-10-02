@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:16:57",
+ "updated": "2026-10-02T18:21:49",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -620,11 +620,152 @@
   },
   "E05": {
    "title": "Food as a chemical energy source",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep05.md",
+    "sha": "cb449cf0be458a72",
+    "beats": 36,
+    "words": 1328,
+    "est_minutes": 10.7,
+    "anchors": "Q09,Q10",
+    "coverage": "C04,C07"
+   },
+   "scenes_code": {
+    "path": "scenes/ep05.py",
+    "sha": "83833d0629e3d6d3"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E05S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 46.6667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S02",
+     "title": "Respiration: food as a fuel",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.2667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S03",
+     "title": "Energy factors and the energy bar",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 70.0667,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S04",
+     "title": "Per 100 g, per serving, per packet",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 80.0667,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S05",
+     "title": "Nutrition factors are a different basis",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 49.0,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S06",
+     "title": "Practice Q09: a label with a serving trap",
+     "beats": 7,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 123.3333,
+      "fresh": true,
+      "estimated_beats": 7,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S07",
+     "title": "Which food has more energy? Choose the basis first",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 59.8,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S08",
+     "title": "Practice Q10: two bases, two answers",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 106.0,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E05S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 49.2667,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 36,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 641.46,
+    "captions": [
+     "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E06": {
    "title": "Combustion equations and gaseous products",
@@ -699,5 +840,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 56.8
+ "series_est_minutes": 67.5
 }

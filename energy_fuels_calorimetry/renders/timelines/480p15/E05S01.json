@@ -1,0 +1,42 @@
+{
+ "scene": "E05S01",
+ "title": "Retrieval check",
+ "cls": "E05S01_Retrieval",
+ "fps": 15,
+ "duration": 46.6667,
+ "beats": [
+  {
+   "key": "E05S01.b01",
+   "start": 0.0,
+   "speech": 14.789,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode five. Your body runs on chemical energy too. Today we treat food as a fuel: where its energy comes from, and how to calculate and compare the energy in different foods.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S01.b02",
+   "start": 15.1333,
+   "speech": 10.2372,
+   "audio": null,
+   "estimated": true,
+   "text": "Quick check from last episode. Is cellular respiration exothermic or endothermic? And where does the energy for photosynthesis come from? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E05S01.b03",
+   "start": 33.8,
+   "speech": 11.8924,
+   "audio": null,
+   "estimated": true,
+   "text": "Respiration is exothermic: glucose reacting with oxygen releases energy. Photosynthesis is endothermic, and its energy is absorbed from sunlight. Today we follow the energy that respiration releases.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

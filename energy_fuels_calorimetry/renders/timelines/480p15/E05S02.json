@@ -1,0 +1,42 @@
+{
+ "scene": "E05S02",
+ "title": "Respiration: food as a fuel",
+ "cls": "E05S02_Respiration",
+ "fps": 15,
+ "duration": 57.2667,
+ "beats": [
+  {
+   "key": "E05S02.b01",
+   "start": 0.0,
+   "speech": 18.1531,
+   "audio": null,
+   "estimated": true,
+   "text": "In respiration, glucose reacts with oxygen to form carbon dioxide and water, just like the combustion of a fuel, but in many small, enzyme-controlled steps instead of a flame. The overall equation and the overall energy change are the same as burning glucose.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S02.b02",
+   "start": 18.5333,
+   "speech": 18.8731,
+   "audio": null,
+   "estimated": true,
+   "text": "Look at the oxygen. In oxygen gas, its oxidation number is zero. In carbon dioxide and in water, it's negative two. A decrease in oxidation number means oxygen is reduced. At the same time, the glucose is oxidised. Respiration is a redox reaction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S02.b03",
+   "start": 37.8,
+   "speech": 18.5131,
+   "audio": null,
+   "estimated": true,
+   "text": "Energy is conserved. The energy released doesn't disappear and isn't created. Some is captured to power muscles and cell processes, but a large share is released as heat, which keeps your body warm. So not all of the released energy becomes useful work.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E05S09",
+ "title": "Recap and closing recall",
+ "cls": "E05S09_Recap",
+ "fps": 15,
+ "duration": 49.2667,
+ "beats": [
+  {
+   "key": "E05S09.b01",
+   "start": 0.0,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "To recap. Respiration oxidises food just as combustion oxidises a fuel, and the energy is conserved, partly as useful work and partly as heat. Food energy is estimated with factors of sixteen, seventeen and thirty-seven kilojoules per gram. Keep units attached when scaling, and always state the basis of a comparison.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S09.b02",
+   "start": 22.2,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. How much energy do twenty grams of fat provide, using the food factor?",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E05S09.b03",
+   "start": 37.2,
+   "speech": 11.1186,
+   "audio": null,
+   "estimated": true,
+   "text": "Twenty grams times thirty-seven kilojoules per gram is seven hundred and forty kilojoules. Next episode, we return to fuels and balance combustion equations, including incomplete combustion.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

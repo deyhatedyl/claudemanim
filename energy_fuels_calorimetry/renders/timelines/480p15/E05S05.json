@@ -1,0 +1,42 @@
+{
+ "scene": "E05S05",
+ "title": "Nutrition factors are a different basis",
+ "cls": "E05S05_Basis",
+ "fps": 15,
+ "duration": 49.0,
+ "beats": [
+  {
+   "key": "E05S05.b01",
+   "start": 0.0,
+   "speech": 11.5324,
+   "audio": null,
+   "estimated": true,
+   "text": "The sixteen kilojoules per gram for carbohydrate is a rounded nutritional factor. It's an average for the energy the body can obtain from carbohydrates in typical foods.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S05.b02",
+   "start": 11.8667,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "A measured heat of combustion is different. For pure glucose burned completely, it's about two point eight thousand kilojoules per mole. Dividing by the molar mass, one hundred and eighty grams per mole, gives about fifteen point six kilojoules per gram.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S05.b03",
+   "start": 29.7333,
+   "speech": 18.3331,
+   "audio": null,
+   "estimated": true,
+   "text": "The two numbers are close, but they're answers to different questions, reported on different bases. In a question, use the data and the basis you're given. Don't quietly swap a food factor for a molar heat of combustion, or the other way around.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

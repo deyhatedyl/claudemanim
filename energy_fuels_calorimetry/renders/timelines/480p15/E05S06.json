@@ -1,0 +1,86 @@
+{
+ "scene": "E05S06",
+ "title": "Practice Q09: a label with a serving trap",
+ "cls": "E05S06_Q09",
+ "fps": 15,
+ "duration": 123.3333,
+ "beats": [
+  {
+   "key": "E05S06.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero nine is worth four marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b02",
+   "start": 19.0,
+   "speech": 16.0303,
+   "audio": null,
+   "estimated": true,
+   "text": "What's asked: the energy in one serving, in kilojoules and in joules. The label gives masses per one hundred grams, and a serving is thirty grams. So we'll find the energy per one hundred grams, then scale.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b03",
+   "start": 35.4,
+   "speech": 11.1186,
+   "audio": null,
+   "estimated": true,
+   "text": "Predict first. A serving is under a third of one hundred grams, so its energy should be a bit under a third of the per-one-hundred-gram value.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b04",
+   "start": 46.8667,
+   "speech": 20.8883,
+   "audio": null,
+   "estimated": true,
+   "text": "Carbohydrate: forty-eight point zero grams times sixteen is seven hundred and sixty-eight kilojoules. Protein: twelve point zero times seventeen is two hundred and four. Fat: eighteen point zero times thirty-seven is six hundred and sixty-six. Total: one thousand six hundred and thirty-eight kilojoules per one hundred grams.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b05",
+   "start": 68.1333,
+   "speech": 16.6779,
+   "audio": null,
+   "estimated": true,
+   "text": "Now scale to one thirty-gram serving: one thousand six hundred and thirty-eight times thirty point zero over one hundred gives four hundred and ninety-one point four, about four hundred and ninety-one kilojoules. That's just under a third, as predicted.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b06",
+   "start": 85.2,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "In joules, multiply by one thousand: four hundred and ninety-one point four kilojoules is four point nine one times ten to the power of five joules. A larger unit to a smaller one, so the number gets bigger.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E05S06.b07",
+   "start": 101.8,
+   "speech": 20.5821,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the weighted sum, one for the serving factor, and one for the conversion to joules. The traps: using the whole ninety-gram packet, which gives about one thousand four hundred and seventy-four kilojoules, or writing four hundred and ninety-one joules when the value is in kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

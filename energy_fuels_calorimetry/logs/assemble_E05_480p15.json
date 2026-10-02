@@ -1,0 +1,72 @@
+{
+ "episode": "E05",
+ "quality": "480p15",
+ "output": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 36,
+ "beats_with_audio": 0,
+ "duration": 641.46,
+ "scenes": [
+  {
+   "scene": "E05S01",
+   "title": "Retrieval check",
+   "start": 0.0,
+   "duration": 46.666016
+  },
+  {
+   "scene": "E05S02",
+   "title": "Respiration: food as a fuel",
+   "start": 46.666016,
+   "duration": 57.266016
+  },
+  {
+   "scene": "E05S03",
+   "title": "Energy factors and the energy bar",
+   "start": 103.93203199999999,
+   "duration": 70.066341
+  },
+  {
+   "scene": "E05S04",
+   "title": "Per 100 g, per serving, per packet",
+   "start": 173.998373,
+   "duration": 80.06569
+  },
+  {
+   "scene": "E05S05",
+   "title": "Nutrition factors are a different basis",
+   "start": 254.06406299999998,
+   "duration": 48.999674
+  },
+  {
+   "scene": "E05S06",
+   "title": "Practice Q09: a label with a serving trap",
+   "start": 303.06373699999995,
+   "duration": 123.333333
+  },
+  {
+   "scene": "E05S07",
+   "title": "Which food has more energy? Choose the basis first",
+   "start": 426.3970699999999,
+   "duration": 59.799349
+  },
+  {
+   "scene": "E05S08",
+   "title": "Practice Q10: two bases, two answers",
+   "start": 486.19641899999993,
+   "duration": 105.999674
+  },
+  {
+   "scene": "E05S09",
+   "title": "Recap and closing recall",
+   "start": 592.1960929999999,
+   "duration": 49.266667
+  }
+ ],
+ "captions": [
+  "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}
