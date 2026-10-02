@@ -1,0 +1,31 @@
+{
+ "scene": "E07S06",
+ "title": "New carbon dioxide versus inlet carbon dioxide",
+ "cls": "E07S06_NewVsInlet",
+ "fps": 15,
+ "duration": 34.4667,
+ "beats": [
+  {
+   "key": "E07S06.b01",
+   "start": 0.0,
+   "speech": 15.4366,
+   "audio": null,
+   "estimated": true,
+   "text": "If the fuel stream already contains carbon dioxide, the exhaust has two sources of it. Some carbon dioxide is newly formed by burning the methane. The rest simply entered with the fuel and passed through unchanged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S06.b02",
+   "start": 15.8,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "A question might ask for either one. \"Carbon dioxide formed\" or \"produced\" means only the new part, calculated from the reaction. \"Total carbon dioxide in the exhaust\" means new plus inlet. Read which one is asked for before you add anything.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

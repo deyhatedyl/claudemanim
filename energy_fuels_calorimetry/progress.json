@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T18:27:53",
+ "updated": "2026-10-02T18:35:41",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -918,11 +918,152 @@
   },
   "E07": {
    "title": "Limiting reactants, excess fuel and gas mixtures",
-   "script": null,
-   "scenes_code": null,
-   "stage": "not-started",
-   "scenes": [],
-   "qa": {}
+   "script": {
+    "path": "scripts/ep07.md",
+    "sha": "0cc21947da9aa25d",
+    "beats": 38,
+    "words": 1682,
+    "est_minutes": 13.5,
+    "anchors": "Q13,Q14",
+    "coverage": "C14,C15,C16,C17,C01"
+   },
+   "scenes_code": {
+    "path": "scenes/ep07.py",
+    "sha": "efb56721c7ceb1fa"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E07S01",
+     "title": "Retrieval check",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 51.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S02",
+     "title": "Why the smaller number isn't always the limiting reactant",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 77.2,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S03",
+     "title": "Initial, used, remaining",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 133.6667,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S04",
+     "title": "Practice Q13: excess means what's left after reaction",
+     "beats": 7,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 169.8667,
+      "fresh": true,
+      "estimated_beats": 7,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S05",
+     "title": "Gas mixtures: only the reactive part reacts",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 52.7333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S06",
+     "title": "New carbon dioxide versus inlet carbon dioxide",
+     "beats": 2,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 34.4667,
+      "fresh": true,
+      "estimated_beats": 2,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S07",
+     "title": "Practice Q14, part 1: budgets and the limiting reactant",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 113.3333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S08",
+     "title": "Practice Q14, part 2: carbon dioxide and energy",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 93.3333,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E07S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 79.4,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 38,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 805.73,
+    "captions": [
+     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings.",
+    "final_qa": "pending"
+   }
   },
   "E08": {
    "title": "Measuring combustion energy and efficiency",
@@ -981,5 +1122,5 @@
    "qa": {}
   }
  },
- "series_est_minutes": 79.0
+ "series_est_minutes": 92.4
 }

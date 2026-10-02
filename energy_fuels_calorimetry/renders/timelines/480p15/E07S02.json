@@ -1,0 +1,53 @@
+{
+ "scene": "E07S02",
+ "title": "Why the smaller number isn't always the limiting reactant",
+ "cls": "E07S02_Batches",
+ "fps": 15,
+ "duration": 77.2,
+ "beats": [
+  {
+   "key": "E07S02.b01",
+   "start": 0.0,
+   "speech": 17.0379,
+   "audio": null,
+   "estimated": true,
+   "text": "Think of the balanced equation as a recipe for one batch: one methane and two oxygen molecules. Suppose we have three methane molecules and four oxygen molecules. Methane is the smaller number. Is methane the one that runs out?",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S02.b02",
+   "start": 17.4,
+   "speech": 18.4055,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's build batches. Each batch takes one methane and two oxygens. The first batch: fine. The second batch: fine. Now we're out of oxygen, with one methane left over. So oxygen limited the reaction, even though there was more of it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S02.b03",
+   "start": 36.2,
+   "speech": 17.8655,
+   "audio": null,
+   "estimated": true,
+   "text": "The reason is the recipe. Each batch needs twice as much oxygen as methane. So what matters isn't the raw amount of each reactant. It's how many batches each reactant could make on its own: its amount divided by its coefficient.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S02.b04",
+   "start": 54.4,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "Scale this up to moles. With one point zero zero moles of methane and one point five zero moles of oxygen, methane could make one point zero zero moles of batches, but oxygen only zero point seven five. The smaller value of amount divided by coefficient identifies the limiting reactant: oxygen.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "scene": "E07S09",
+ "title": "Recap and closing recall",
+ "cls": "E07S09_Recap",
+ "fps": 15,
+ "duration": 79.4,
+ "beats": [
+  {
+   "key": "E07S09.b01",
+   "start": 0.0,
+   "speech": 26.16,
+   "audio": null,
+   "estimated": true,
+   "text": "The routine. One: convert everything to moles, using only the reactive part of any mixture. Two: divide each amount by its coefficient; the smallest is limiting, and gives the reaction extent. Three: used equals coefficient times extent. Four: remaining equals initial minus used, never negative. Five: products formed equal coefficient times extent, plus anything that simply passes through.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S09.b02",
+   "start": 26.5333,
+   "speech": 14.789,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. Three point zero moles of hydrogen and two point zero moles of oxygen react: two hydrogen plus oxygen forms two water. Which is limiting, and how much of the other is left?",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E07S09.b03",
+   "start": 51.7333,
+   "speech": 26.6814,
+   "audio": null,
+   "estimated": true,
+   "text": "Hydrogen: three point zero over two is one point five. Oxygen: two point zero over one is two point zero. Hydrogen is limiting, with an extent of one point five moles. Oxygen used is one point five moles, so zero point five zero moles of oxygen remains. Next episode: measuring the energy from a fuel, and how efficient heating really is.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

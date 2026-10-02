@@ -1,0 +1,75 @@
+{
+ "scene": "E07S03",
+ "title": "Initial, used, remaining",
+ "cls": "E07S03_Trays",
+ "fps": 15,
+ "duration": 133.6667,
+ "beats": [
+  {
+   "key": "E07S03.b01",
+   "start": 0.0,
+   "speech": 12.1262,
+   "audio": null,
+   "estimated": true,
+   "text": "The smaller value, zero point seven five moles, is called the reaction extent: the number of moles of the recipe that actually happen. Everything else follows from it.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S03.b02",
+   "start": 12.4667,
+   "speech": 20.3483,
+   "audio": null,
+   "estimated": true,
+   "text": "Amount used equals coefficient times extent. Methane: one times zero point seven five, so zero point seven five moles used. Oxygen: two times zero point seven five, so one point five zero moles used, which is all of it, as it should be for the limiting reactant.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S03.b03",
+   "start": 33.2,
+   "speech": 14.1414,
+   "audio": null,
+   "estimated": true,
+   "text": "Products form the same way. Carbon dioxide: one times zero point seven five, so zero point seven five moles. Water: two times zero point seven five, so one point five zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S03.b04",
+   "start": 47.7333,
+   "speech": 23.371,
+   "audio": null,
+   "estimated": true,
+   "text": "Finally, remaining equals initial minus used. Methane: one point zero zero minus zero point seven five leaves zero point two five moles in excess. Oxygen: one point five zero minus one point five zero leaves zero. Check: nothing is negative. A negative remaining amount always means the wrong reactant was chosen as limiting.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S03.b05",
+   "start": 71.4667,
+   "speech": 17.6855,
+   "audio": null,
+   "estimated": true,
+   "text": "Quick prediction. This time, zero point two zero moles of methane meets zero point five zero moles of oxygen. Which reactant is limiting, and how much of the other is left? Pause and work it out with amount divided by coefficient.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E07S03.b06",
+   "start": 99.6,
+   "speech": 33.1221,
+   "audio": null,
+   "estimated": true,
+   "text": "Methane: zero point two zero over one is zero point two zero. Oxygen: zero point five zero over two is zero point two five. Methane is smaller, so this time methane is limiting, with an extent of zero point two zero moles. Oxygen used is two times zero point two zero, which is zero point four zero moles, leaving zero point one zero moles of oxygen. The same two reactants can swap roles when the amounts change.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

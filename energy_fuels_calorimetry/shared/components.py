@@ -74,8 +74,8 @@ def title_card(ep_num: int, title: str, subtitle: str = "VCE Chemistry · Energy
 
 # ------------------------------------------------------------------ question card
 def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: bool = True,
-                  parts: list[str] | None = None) -> VGroup:
-    """The full prompt of an anchor question with its marks (no answers)."""
+                  parts: list[str] | None = None, cols: int = 1) -> VGroup:
+    """The full prompt of an anchor question with its marks (no answers). cols=2 lays parts out in two columns."""
     q = BY_ID[qid]
     total = sum(p[2] for p in q["parts"])
     head = VGroup(TB(f"{qid}", size=size + 4, color=SYSTEM),
@@ -84,15 +84,27 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
     body = wrapped(q["stem"], size=size, width=width - 0.6)
     rows = VGroup(head, body)
     if show_parts:
+        pw = (width - 0.6) / cols
+        built = VGroup()
         for lab, txt, mk in q["parts"]:
             if parts and lab not in parts:
                 continue
             letter = TB(f"{lab}.", size=size, color=SYSTEM)
-            t = wrapped(txt, size=size, width=width - 2.2)
+            t = wrapped(txt, size=size, width=pw - 1.4)
             m = T(f"[{mk}]", size=size, color=MUTED)
             t.next_to(letter, RIGHT, buff=0.2, aligned_edge=UP)
             m.next_to(t, RIGHT, buff=0.2, aligned_edge=UP)
-            rows.add(VGroup(letter, t, m))
+            built.add(VGroup(letter, t, m))
+        if cols == 1:
+            rows.add(*built)
+        else:
+            per = -(-len(built) // cols)
+            columns = VGroup(*[VGroup(*built[i * per:(i + 1) * per]).arrange(DOWN, aligned_edge=LEFT, buff=0.18)
+                               for i in range(cols)])
+            columns.arrange(RIGHT, buff=0.4, aligned_edge=UP)
+            for i, c in enumerate(columns[1:], 1):
+                c.align_to(columns[0], LEFT).shift(RIGHT * pw * i)
+            rows.add(columns)
     rows.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
     bg = panel(rows, color=FAINT, buff=0.3)
     return VGroup(bg, rows)
@@ -627,3 +639,45 @@ def v_arrow(ax, x: float, y_from: float, y_to: float, text: str, color: str, sid
 
 def h_guide(ax, y: float, x_from: float, x_to: float, color: str = FAINT) -> DashedLine:
     return DashedLine(ax.c2p(x_from, y), ax.c2p(x_to, y), color=color, stroke_width=1.5, dash_length=0.08)
+
+
+# ------------------------------------------------------------------ reaction budget (initial / used / remaining)
+class Budget(VGroup):
+    """Grid with species rows and stage columns (e.g. initial, used, remaining, formed).
+    Use .cell(r, c, text, color) to create a value mobject positioned in a cell (not added automatically)."""
+
+    def __init__(self, species: list[str], cols: list[str], col_w: float = 2.2, label_w: float = 1.8,
+                 row_h: float = 0.62, size: int = LABEL, col_colors: list[str] | None = None, **kw):
+        super().__init__(**kw)
+        self.col_w, self.label_w, self.row_h, self.size = col_w, label_w, row_h, size
+        n_r, n_c = len(species), len(cols)
+        W = label_w + n_c * col_w
+        H = (n_r + 1) * row_h
+        col_colors = col_colors or [MUTED] * n_c
+        self.heads = VGroup(*[TB(c, size=size, color=col_colors[i]).move_to([label_w + (i + 0.5) * col_w, -0.5 * row_h, 0])
+                              for i, c in enumerate(cols)])
+        self.labels = VGroup(*[T(s, size=size + 2).move_to([label_w / 2, -(r + 1.5) * row_h, 0])
+                               for r, s in enumerate(species)])
+        lines = VGroup(Line([0, -row_h, 0], [W, -row_h, 0], color=SYSTEM, stroke_width=2.5))
+        for r in range(2, n_r + 1):
+            lines.add(Line([0, -r * row_h, 0], [W, -r * row_h, 0], color=FAINT, stroke_width=1.2))
+        for c in range(n_c):
+            x = label_w + c * col_w
+            lines.add(Line([x, 0, 0], [x, -H, 0], color=FAINT, stroke_width=1.2))
+        self.lines = lines
+        self.add(lines, self.heads, self.labels)
+        self._origin = self.get_center().copy()
+
+    def pos(self, r: int, c: int):
+        shift = self.get_center() - self._origin
+        return np.array([self.label_w + (c + 0.5) * self.col_w, -(r + 1.5) * self.row_h, 0]) + shift
+
+    def cell(self, r: int, c: int, text: str, color: str = TEXT, bold: bool = False):
+        t = (TB if bold else T)(text, size=self.size, color=color)
+        if t.width > self.col_w - 0.15:
+            t.scale((self.col_w - 0.15) / t.width)
+        return t.move_to(self.pos(r, c))
+
+    def move_to(self, point, **kw):
+        super().move_to(point, **kw)
+        return self

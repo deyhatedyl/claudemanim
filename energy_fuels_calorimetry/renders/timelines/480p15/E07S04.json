@@ -1,0 +1,86 @@
+{
+ "scene": "E07S04",
+ "title": "Practice Q13: excess means what's left after reaction",
+ "cls": "E07S04_Q13",
+ "fps": 15,
+ "duration": 169.8667,
+ "beats": [
+  {
+   "key": "E07S04.b01",
+   "start": 0.0,
+   "speech": 6.5669,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero thirteen is worth six marks. Pause the video and try it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b02",
+   "start": 22.0,
+   "speech": 23.011,
+   "audio": null,
+   "estimated": true,
+   "text": "This is an idealised calculation: the ethanol that reacts burns completely, and any excess ethanol is simply left unreacted. First, amounts in moles. Ethanol is already given as zero point four zero zero moles. Oxygen: thirty-two point zero grams divided by thirty-two point zero grams per mole is one point zero zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b03",
+   "start": 45.4,
+   "speech": 24.6124,
+   "audio": null,
+   "estimated": true,
+   "text": "The balanced equation: ethanol plus three oxygen forms two carbon dioxide plus three water. Now compare amount divided by coefficient. Ethanol: zero point four zero zero over one is zero point four zero zero. Oxygen: one point zero zero over three is zero point three three three. Oxygen gives the smaller value, so oxygen is limiting.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b04",
+   "start": 70.4,
+   "speech": 19.9883,
+   "audio": null,
+   "estimated": true,
+   "text": "Another way to say it: zero point four zero zero moles of ethanol would need three times as much oxygen, one point two zero moles, and we only have one point zero zero. That sentence is a good way to justify the limiting reactant in an exam.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b05",
+   "start": 90.7333,
+   "speech": 25.9614,
+   "audio": null,
+   "estimated": true,
+   "text": "The reaction extent is one third of a mole. Ethanol used is one third, about zero point three three three moles. Ethanol remaining is zero point four zero zero minus zero point three three three, which is zero point zero six six seven moles. Times forty-six point zero grams per mole, that's three point zero seven grams of ethanol left over.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b06",
+   "start": 117.0667,
+   "speech": 23.2448,
+   "audio": null,
+   "estimated": true,
+   "text": "Carbon dioxide formed is two times the extent: zero point six six seven moles. Times forty-four point zero, that's twenty-nine point three grams. And the energy released is the extent times one thousand three hundred and seventy kilojoules per mole of ethanol: four hundred and fifty-six point seven, about four hundred and fifty-seven kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S04.b07",
+   "start": 140.6667,
+   "speech": 28.2103,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: two for the amounts and the limiting justification, two for ethanol used and remaining, one for the carbon dioxide, and one for the energy. Two traps. Choosing ethanol as limiting because zero point four zero zero is smaller than one point zero zero ignores the coefficients. And reporting zero point four zero zero moles as the amount remaining confuses the starting amount with what's left.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

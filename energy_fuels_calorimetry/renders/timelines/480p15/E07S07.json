@@ -1,0 +1,64 @@
+{
+ "scene": "E07S07",
+ "title": "Practice Q14, part 1: budgets and the limiting reactant",
+ "cls": "E07S07_Q14a",
+ "fps": 15,
+ "duration": 113.3333,
+ "beats": [
+  {
+   "key": "E07S07.b01",
+   "start": 0.0,
+   "speech": 8.6359,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero fourteen is worth eight marks. Pause the video and work through the whole question before continuing.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E07S07.b02",
+   "start": 24.0667,
+   "speech": 20.1145,
+   "audio": null,
+   "estimated": true,
+   "text": "Start with the fuel stream. Twelve point four litres at standard laboratory conditions is zero point five zero zero moles of gas. Eighty percent is methane: zero point four zero zero moles. Twenty percent is carbon dioxide: zero point one zero zero moles, which won't react.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S07.b03",
+   "start": 44.5333,
+   "speech": 14.609,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the air. Twenty-one point zero percent of ninety point zero litres is eighteen point nine litres of oxygen. Divided by twenty-four point eight, that's zero point seven six two one moles of oxygen.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S07.b04",
+   "start": 59.5333,
+   "speech": 25.7276,
+   "audio": null,
+   "estimated": true,
+   "text": "The equation is methane plus two oxygen. Amount divided by coefficient: methane zero point four zero zero over one is zero point four zero zero. Oxygen zero point seven six two one over two is zero point three eight one zero. Oxygen is smaller, so oxygen is limiting, and the reaction extent is zero point three eight one zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S07.b05",
+   "start": 85.6,
+   "speech": 26.7352,
+   "audio": null,
+   "estimated": true,
+   "text": "Keep the two budgets side by side. Oxygen: initial zero point seven six two one, used all of it, remaining zero. Methane: initial zero point four zero zero, used zero point three eight one zero, remaining zero point zero one eight nine five moles. Times sixteen point zero grams per mole, that's zero point three zero three grams of methane left unburnt.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

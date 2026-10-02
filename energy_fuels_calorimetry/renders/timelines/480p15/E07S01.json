@@ -1,0 +1,42 @@
+{
+ "scene": "E07S01",
+ "title": "Retrieval check",
+ "cls": "E07S01_Retrieval",
+ "fps": 15,
+ "duration": 51.7333,
+ "beats": [
+  {
+   "key": "E07S01.b01",
+   "start": 0.0,
+   "speech": 16.0303,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to episode seven. Real reactions rarely get reactants in exactly the right proportions. One reactant runs out first, and some of the other is left over. Today we'll learn to work out which, and how much.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S01.b02",
+   "start": 16.4,
+   "speech": 13.1338,
+   "audio": null,
+   "estimated": true,
+   "text": "Two quick checks. Balance the complete combustion of methane. And what volume does zero point one zero zero moles of carbon dioxide occupy at standard laboratory conditions? Pause and answer.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E07S01.b03",
+   "start": 38.0,
+   "speech": 12.7738,
+   "audio": null,
+   "estimated": true,
+   "text": "Methane plus two oxygen forms carbon dioxide plus two water. And zero point one zero zero moles times twenty-four point eight litres per mole is two point four eight litres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

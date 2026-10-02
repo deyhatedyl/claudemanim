@@ -1,0 +1,42 @@
+{
+ "scene": "E07S05",
+ "title": "Gas mixtures: only the reactive part reacts",
+ "cls": "E07S05_Mixtures",
+ "fps": 15,
+ "duration": 52.7333,
+ "beats": [
+  {
+   "key": "E07S05.b01",
+   "start": 0.0,
+   "speech": 16.0303,
+   "audio": null,
+   "estimated": true,
+   "text": "Gases often arrive as mixtures. Air is about twenty-one percent oxygen by volume; the rest, mostly nitrogen, doesn't react in these calculations. A fuel stream might be methane mixed with carbon dioxide, which can't burn any further.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S05.b02",
+   "start": 16.4,
+   "speech": 19.3407,
+   "audio": null,
+   "estimated": true,
+   "text": "For ideal gases at the same temperature and pressure, equal volumes contain equal amounts. So a volume fraction is also a mole fraction. That's an assumption, and questions usually state it. If the gases are at different conditions, you can't use the fractions this way.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E07S05.b03",
+   "start": 36.1333,
+   "speech": 15.6166,
+   "audio": null,
+   "estimated": true,
+   "text": "So split each stream before you do any stoichiometry. From the air, only the oxygen fraction goes into the reaction. From the fuel, only the methane fraction reacts. The nitrogen and the carbon dioxide pass through.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
