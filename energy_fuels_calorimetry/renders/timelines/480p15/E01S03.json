@@ -1,0 +1,75 @@
+{
+ "scene": "E01S03",
+ "title": "Three ways to get moles, and why the units cancel",
+ "cls": "E01S03_ThreeRoutes",
+ "fps": 15,
+ "duration": 139.4,
+ "beats": [
+  {
+   "key": "E01S03.b01",
+   "start": 0.0,
+   "speech": 21.5359,
+   "audio": null,
+   "estimated": true,
+   "text": "First, from a mass. Amount in moles equals mass divided by molar mass. Watch the units. Mass is in grams. Molar mass is in grams per mole. Dividing grams by grams per mole cancels the grams and leaves moles. The units tell you the relationship is set up correctly.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S03.b02",
+   "start": 21.9333,
+   "speech": 13.1338,
+   "audio": null,
+   "estimated": true,
+   "text": "Second, from a solution. Amount equals concentration times volume. Concentration is in moles per litre, so the volume must be in litres. Then litres cancel, and you're left with moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S03.b03",
+   "start": 35.4667,
+   "speech": 22.4172,
+   "audio": null,
+   "estimated": true,
+   "text": "Third, from a gas. At standard laboratory conditions, which in this course means twenty-five degrees Celsius and one hundred kilopascals, one mole of any gas occupies about twenty-four point eight litres. This is the molar volume. Amount equals gas volume divided by molar volume: litres divided by litres per mole gives moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S03.b04",
+   "start": 58.2667,
+   "speech": 17.9193,
+   "audio": null,
+   "estimated": true,
+   "text": "Two warnings about that last one. It applies only to gases, and only at those stated conditions. A hot exhaust gas at six hundred degrees takes up far more space per mole, so twenty-four point eight would give the wrong answer there.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S03.b05",
+   "start": 76.5333,
+   "speech": 20.9959,
+   "audio": null,
+   "estimated": true,
+   "text": "Now a checkpoint. A solution has a concentration of zero point one zero zero moles per litre, and you have two hundred and fifty millilitres of it. Why can't you multiply zero point one zero zero by two hundred and fifty? Pause and explain it in your own words.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E01S03.b06",
+   "start": 105.9333,
+   "speech": 32.5283,
+   "audio": null,
+   "estimated": true,
+   "text": "Because the concentration is per litre, the volume must be in litres for the units to cancel. Two hundred and fifty millilitres is zero point two five zero litres. Multiplying gives zero point zero two five zero moles. If you multiply by two hundred and fifty instead, you get twenty-five, which is a thousand times too big. The units left over, millilitres times moles per litre, don't simplify to moles. That mismatch is your warning sign.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

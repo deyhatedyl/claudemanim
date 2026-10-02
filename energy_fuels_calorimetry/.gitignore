@@ -1,0 +1,6 @@
+renders/media/
+renders/draft/*.mp4
+checks/stills/
+logs/render_*.log
+__pycache__/
+*.pyc

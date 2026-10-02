@@ -1,0 +1,7 @@
+{
+ "E01": {
+  "draft_visual_qa": "pass",
+  "draft_notes": "480p15 silent draft (estimated timing). Every beat-end still inspected; layout defects fixed (clipped text S01/S02/S03, overlaps S04/S05/S06/S08). Automatic layout check: 0 warnings. Narration sync, pronunciation and final 1080p QA pending TTS access.",
+  "final_qa": "pending"
+ }
+}

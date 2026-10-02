@@ -1,0 +1,64 @@
+{
+ "scene": "E01S02",
+ "title": "One container, several different labels",
+ "cls": "E01S02_Labels",
+ "fps": 15,
+ "duration": 93.2,
+ "beats": [
+  {
+   "key": "E01S02.b01",
+   "start": 0.0,
+   "speech": 22.0034,
+   "audio": null,
+   "estimated": true,
+   "text": "Picture a flask of liquid ethanol. We can describe the same sample in several ways. Its mass, in grams, is what a balance reads. Its volume, in millilitres or litres, is how much space it takes up. And its amount, in moles, is a count of how many particles it contains.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S02.b02",
+   "start": 22.4,
+   "speech": 20.4021,
+   "audio": null,
+   "estimated": true,
+   "text": "A mole is a counting unit, like a dozen, but enormous: about six point zero two times ten to the power of twenty-three particles. Chemists count in moles because reactions happen particle by particle, so the recipe of a reaction is written in particles, and therefore in moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S02.b03",
+   "start": 43.2,
+   "speech": 16.2641,
+   "audio": null,
+   "estimated": true,
+   "text": "Molar mass links mass to amount. It is the mass of one mole of a substance, in grams per mole. For ethanol it's forty-six point zero grams per mole, so forty-six grams of ethanol is exactly one mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S02.b04",
+   "start": 59.8,
+   "speech": 19.5207,
+   "audio": null,
+   "estimated": true,
+   "text": "Now let's swap the ethanol for the same mass of water: forty-six grams again. The mass label is unchanged. But water molecules are lighter, at eighteen grams per mole, so the same forty-six grams contains about two point five six moles. Same mass, different amount.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S02.b05",
+   "start": 79.6667,
+   "speech": 12.54,
+   "audio": null,
+   "estimated": true,
+   "text": "So these labels are not interchangeable. You cannot replace grams with moles, or millilitres with litres, without a relationship that connects them. The next scene gives you those relationships.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

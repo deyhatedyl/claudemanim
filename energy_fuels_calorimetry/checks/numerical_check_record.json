@@ -1,0 +1,2423 @@
+[
+ {
+  "qid": "EQ",
+  "label": "atoms balance: hydrogen combustion (Q05): 2H2(g) + O2(g) -> 2H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: water decomposition, reversed and halved (Q05): H2O(l) -> H2(g) + 1/2O2(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: HCl formation (Q03): H2(g) + Cl2(g) -> 2HCl(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: methane complete combustion: CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: methane incomplete to CO: 2CH4(g) + 3O2(g) -> 2CO(g) + 4H2O(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: methane incomplete to soot: CH4(g) + O2(g) -> C(s) + 2H2O(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: ethanol complete combustion: C2H5OH(l) + 3O2(g) -> 2CO2(g) + 3H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: ethanol specified incomplete (Q11): C2H5OH(l) + 5/2O2(g) -> CO2(g) + CO(g) + 3H2O(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: methanol complete combustion (x2): 2CH3OH(l) + 3O2(g) -> 2CO2(g) + 4H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: octane complete combustion: 2C8H18(l) + 25O2(g) -> 16CO2(g) + 18H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: coal (as carbon) combustion: C(s) + O2(g) -> CO2(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: photosynthesis: 6CO2(g) + 6H2O(l) -> C6H12O6(aq) + 6O2(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: aerobic respiration: C6H12O6(aq) + 6O2(g) -> 6CO2(g) + 6H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: fermentation (Q07): C6H12O6(aq) -> 2C2H5OH(aq) + 2CO2(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: transesterification (tristearin + methanol): C57H110O6(l) + 3CH3OH(l) -> 3C19H38O2(l) + C3H8O3(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: anaerobic digestion (glucose, idealised): C6H12O6(aq) -> 3CH4(g) + 3CO2(g)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: HCl/NaOH neutralisation (Q19, Q27): HCl(aq) + NaOH(aq) -> NaCl(aq) + H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "atoms balance: NaOH/H2SO4 neutralisation (Q20): 2NaOH(aq) + H2SO4(aq) -> Na2SO4(aq) + 2H2O(l)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass C2H5OH",
+  "computed": 46.0,
+  "target": 46.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass CO2",
+  "computed": 44.0,
+  "target": 44.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass H2O",
+  "computed": 18.0,
+  "target": 18.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass CH4",
+  "computed": 16.0,
+  "target": 16.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass O2",
+  "computed": 32.0,
+  "target": 32.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass CH3OH",
+  "computed": 32.0,
+  "target": 32.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass C6H12O6",
+  "computed": 180.0,
+  "target": 180.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "EQ",
+  "label": "molar mass CO",
+  "computed": 28.0,
+  "target": 28.0,
+  "unit": "g/mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "n(ethanol)",
+  "computed": 0.0075,
+  "target": 0.0075,
+  "unit": "mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "n(gas) from 186 mL at SLC",
+  "computed": 0.0075,
+  "target": 0.0075,
+  "unit": "mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "trap: mL used as L gives 1000x too large",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "air volume",
+  "computed": 85.0,
+  "target": 85.0,
+  "unit": "L",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "time",
+  "computed": 540.0,
+  "target": 540,
+  "unit": "s",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "energy",
+  "computed": 72.0,
+  "target": 72.0,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "V(O2)",
+  "computed": 17.765,
+  "target": 17.765,
+  "unit": "L",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "n(O2)",
+  "computed": 0.7163306451612903,
+  "target": 0.716,
+  "unit": "mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "n(O2) unrounded",
+  "computed": 0.7163306451612903,
+  "target": 0.7163306,
+  "unit": "mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "bonds broken",
+  "computed": 679,
+  "target": 679,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "bonds formed",
+  "computed": 862,
+  "target": 862,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "deltaH",
+  "computed": -183,
+  "target": -183,
+  "unit": "kJ per mol reaction",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "q_system",
+  "computed": 0.45,
+  "target": 0.45,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "q_cal",
+  "computed": -0.45,
+  "target": -0.45,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "temperature falls (q_cal < 0)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "reverse, per mol H2O(l)",
+  "computed": 286.0,
+  "target": 286,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "energy released by 0.750 mol H2",
+  "computed": 214.5,
+  "target": 214.5,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "trap: treating -572 as per mol H2 gives 429 kJ",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "forward Ea",
+  "computed": 70,
+  "target": 70,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "reverse Ea",
+  "computed": 125,
+  "target": 125,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "deltaH",
+  "computed": -55,
+  "target": -55,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "catalysed forward Ea",
+  "computed": 30,
+  "target": 30,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "deltaH unchanged by catalyst",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "n(glucose)",
+  "computed": 1.5,
+  "target": 1.5,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "theoretical n(ethanol)",
+  "computed": 3.0,
+  "target": 3.0,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "actual n(ethanol) = n(CO2)",
+  "computed": 2.34,
+  "target": 2.34,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "m(ethanol)",
+  "computed": 107.63999999999999,
+  "target": 107.64,
+  "unit": "g",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "m(CO2)",
+  "computed": 102.96,
+  "target": 102.96,
+  "unit": "g",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "trap: 1:1 ratio would give 53.8 g ethanol",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "energy per 100 g",
+  "computed": 1638.0,
+  "target": 1638,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "energy per 30.0 g serving",
+  "computed": 491.4,
+  "target": 491.4,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "serving in J",
+  "computed": 491400.0,
+  "target": 491400.0,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "whole packet (trap)",
+  "computed": 1474.2,
+  "target": 1474.2,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "A per 100 g",
+  "computed": 1414.0,
+  "target": 1414,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "B per 100 g",
+  "computed": 1455.0,
+  "target": 1455,
+  "unit": "kJ",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "A serving 80 g",
+  "computed": 1131.2,
+  "target": 1131.2,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "B serving 50 g",
+  "computed": 727.5,
+  "target": 727.5,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "B higher per 100 g, A serving higher",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "n(H2O)",
+  "computed": 3.0,
+  "target": 3.0,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "n(CO2)",
+  "computed": 1.0,
+  "target": 1.0,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "n(CO)",
+  "computed": 1.0,
+  "target": 1.0,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "complete combustion O2 per mol ethanol",
+  "computed": 3.0,
+  "target": 3.0,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "m(CO2)",
+  "computed": 11.0,
+  "target": 11.0,
+  "unit": "g",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "m(H2O vapour)",
+  "computed": 9.0,
+  "target": 9.0,
+  "unit": "g",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "total newly formed GHG mass",
+  "computed": 20.0,
+  "target": 20.0,
+  "unit": "g",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "dry CO2 volume at SLC",
+  "computed": 6.2,
+  "target": 6.2,
+  "unit": "L",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "O2 limiting (n/coef: O2 0.333 < ethanol 0.400)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "ethanol used",
+  "computed": 0.3333333333333333,
+  "target": 0.3333333333333333,
+  "unit": "mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "ethanol remaining (mol)",
+  "computed": 0.06666666666666671,
+  "target": 0.0666667,
+  "unit": "mol",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "ethanol remaining (g)",
+  "computed": 3.0666666666666687,
+  "target": 3.07,
+  "unit": "g",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "CO2 mass",
+  "computed": 29.333333333333332,
+  "target": 29.3,
+  "unit": "g",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "energy released",
+  "computed": 456.66666666666663,
+  "target": 456.6667,
+  "unit": "kJ",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "remaining non-negative",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "initial CH4",
+  "computed": 0.4,
+  "target": 0.4,
+  "unit": "mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "O2 available",
+  "computed": 0.7620967741935483,
+  "target": 0.7620968,
+  "unit": "mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "O2 limiting",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "CH4 consumed",
+  "computed": 0.38104838709677413,
+  "target": 0.3810484,
+  "unit": "mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "CH4 remaining (g)",
+  "computed": 0.30322580645161423,
+  "target": 0.3032258,
+  "unit": "g",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "new CO2 volume SLC",
+  "computed": 9.45,
+  "target": 9.45,
+  "unit": "L",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "inlet CO2 volume SLC",
+  "computed": 2.4800000000000004,
+  "target": 2.48,
+  "unit": "L",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "total CO2 volume SLC",
+  "computed": 11.929999999999998,
+  "target": 11.93,
+  "unit": "L",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "energy released",
+  "computed": 339.13306451612897,
+  "target": 339.133,
+  "unit": "kJ",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "remaining non-negative",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "trap: all gas as methane gives 0.500 mol CH4",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "ethanol burned",
+  "computed": 0.9200000000000017,
+  "target": 0.92,
+  "unit": "g",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "n(ethanol)",
+  "computed": 0.02000000000000004,
+  "target": 0.02,
+  "unit": "mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "fuel energy",
+  "computed": 27.400000000000052,
+  "target": 27.4,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "deltaT",
+  "computed": 17.2,
+  "target": 17.2,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "water heat",
+  "computed": 17.974,
+  "target": 17.974,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "efficiency",
+  "computed": 65.59854014598528,
+  "target": 65.5985,
+  "unit": "%",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "useful heat",
+  "computed": 45.144,
+  "target": 45.144,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "required input",
+  "computed": 100.32,
+  "target": 100.32,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "fuel mass",
+  "computed": 3.366442953020134,
+  "target": 3.36644,
+  "unit": "g",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "wrong method mass",
+  "computed": 0.6817046979865771,
+  "target": 0.6817,
+  "unit": "g",
+  "rel_tol": 0.001,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "100% efficient minimum",
+  "computed": 1.5148993288590602,
+  "target": 1.515,
+  "unit": "g",
+  "rel_tol": 0.001,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "wrong method < 100% minimum (impossible)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "electrical input",
+  "computed": 2160.0,
+  "target": 2160,
+  "unit": "J",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "CF",
+  "computed": 540.0,
+  "target": 540,
+  "unit": "J/degC",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "water contribution",
+  "computed": 501.59999999999997,
+  "target": 501.6,
+  "unit": "J/degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "apparatus contribution",
+  "computed": 38.400000000000034,
+  "target": 38.4,
+  "unit": "J/degC",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "later heat",
+  "computed": 3024.0,
+  "target": 3024,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "new CF",
+  "computed": 665.4000000000001,
+  "target": 665.4,
+  "unit": "J/degC",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "water-only lower bound",
+  "computed": 418.0,
+  "target": 418,
+  "unit": "J/degC",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "360 < lower bound (inconsistent)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "heat loss raises apparent CF",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "overestimated dT lowers CF",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "n(HCl)",
+  "computed": 0.06,
+  "target": 0.06,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "n(NaOH)",
+  "computed": 0.045000000000000005,
+  "target": 0.045,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "NaOH limiting (1:1)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "HCl left",
+  "computed": 0.014999999999999993,
+  "target": 0.015,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "deltaT",
+  "computed": 4.300000000000001,
+  "target": 4.3,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "q_cal",
+  "computed": 2537.0000000000005,
+  "target": 2537,
+  "unit": "J",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "deltaH per mol H2O",
+  "computed": -56.37777777777778,
+  "target": -56.3778,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "trap: divide by acid supplied",
+  "computed": -42.283333333333346,
+  "target": -42.283,
+  "unit": "kJ/mol",
+  "rel_tol": 0.0001,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "NaOH limiting (0.0150 < 0.0200)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "reaction extent",
+  "computed": 0.015,
+  "target": 0.015,
+  "unit": "mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "acid remaining",
+  "computed": 0.005000000000000001,
+  "target": 0.005,
+  "unit": "mol",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "heat released",
+  "computed": 1.71,
+  "target": 1.71,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "deltaT",
+  "computed": 3.5625,
+  "target": 3.5625,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "final T",
+  "computed": 24.5625,
+  "target": 24.5625,
+  "unit": "degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "trap: 0.0300 x 114 kJ",
+  "computed": 3.42,
+  "target": 3.42,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "cooling slope",
+  "computed": -0.003333333333333339,
+  "target": -0.0033333,
+  "unit": "degC/s",
+  "rel_tol": 0.0001,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "extrapolated T at 120 s",
+  "computed": 26.3,
+  "target": 26.3,
+  "unit": "degC",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "corrected rise",
+  "computed": 5.300000000000001,
+  "target": 5.3,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "corrected q",
+  "computed": 3445.0000000000005,
+  "target": 3445,
+  "unit": "J",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "uncorrected q (max 26.1)",
+  "computed": 3315.000000000001,
+  "target": 3315,
+  "unit": "J",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "cooling data exactly linear (max residual < 1e-9)",
+  "computed": "3.55e-15",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "reported deltaH",
+  "computed": -45.0,
+  "target": -45.0,
+  "unit": "kJ/mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "corrected deltaH",
+  "computed": -50.0,
+  "target": -50.0,
+  "unit": "kJ/mol",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "additive offset cancels",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "R input",
+  "computed": 2.857142857142857,
+  "target": 2.85714,
+  "unit": "MJ",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "R mass",
+  "computed": 0.0664451827242525,
+  "target": 0.0664452,
+  "unit": "kg",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "R emissions",
+  "computed": 228.57142857142858,
+  "target": 228.571,
+  "unit": "g CO2e",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "S input",
+  "computed": 3.571428571428571,
+  "target": 3.57143,
+  "unit": "MJ",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "S mass",
+  "computed": 0.1231527093596059,
+  "target": 0.123153,
+  "unit": "kg",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "S emissions",
+  "computed": 160.7142857142857,
+  "target": 160.714,
+  "unit": "g CO2e",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "R less mass, S lower emissions",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "n(mixture)",
+  "computed": 0.25,
+  "target": 0.25,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "n(CH4)",
+  "computed": 0.225,
+  "target": 0.225,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "n(O2)",
+  "computed": 0.5080645161290323,
+  "target": 0.5080645,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "O2 required",
+  "computed": 0.45,
+  "target": 0.45,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "O2 in excess (methane all burns)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "O2 remaining mol",
+  "computed": 0.05806451612903224,
+  "target": 0.0580645,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "O2 remaining g",
+  "computed": 1.8580645161290317,
+  "target": 1.85806,
+  "unit": "g",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "energy released",
+  "computed": 200.25,
+  "target": 200.25,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "water heat",
+  "computed": 133.76,
+  "target": 133.76,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "efficiency",
+  "computed": 66.79650436953808,
+  "target": 66.7965,
+  "unit": "%",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "total CO2 mol",
+  "computed": 0.25,
+  "target": 0.25,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "total CO2 volume SLC",
+  "computed": 6.2,
+  "target": 6.2,
+  "unit": "L",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "trap: all gas as methane energy",
+  "computed": 222.5,
+  "target": 222.5,
+  "unit": "kJ",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "methanol kJ/g",
+  "computed": 22.6875,
+  "target": 22.6875,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "ethanol kJ/g",
+  "computed": 29.782608695652176,
+  "target": 29.7826,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "methanol g CO2 per useful kJ",
+  "computed": 0.24242424242424243,
+  "target": 0.242424,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "ethanol g CO2 per useful kJ",
+  "computed": 0.16058394160583941,
+  "target": 0.160584,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "trap: methanol g CO2 per input kJ",
+  "computed": 0.06060606060606061,
+  "target": 0.0606061,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "trap: ethanol g CO2 per input kJ",
+  "computed": 0.06423357664233577,
+  "target": 0.0642336,
+  "unit": "",
+  "rel_tol": 1e-05,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "calibration energy",
+  "computed": 1800.0,
+  "target": 1800,
+  "unit": "J",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "CF",
+  "computed": 600.0,
+  "target": 600,
+  "unit": "J/degC",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "water-only",
+  "computed": 522.5,
+  "target": 522.5,
+  "unit": "J/degC",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "CF > water-only (plausible)",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "n(HCl)",
+  "computed": 0.05,
+  "target": 0.05,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "n(NaOH)",
+  "computed": 0.06,
+  "target": 0.06,
+  "unit": "",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "acid limiting",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "extrapolated T at 60 s",
+  "computed": 24.799999999999997,
+  "target": 24.8,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "corrected rise",
+  "computed": 4.799999999999997,
+  "target": 4.8,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "q_cal",
+  "computed": 2879.999999999998,
+  "target": 2880,
+  "unit": "J",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "deltaH",
+  "computed": -57.599999999999966,
+  "target": -57.6,
+  "unit": "kJ/mol",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "uncorrected (max 24.7) deltaH (trap)",
+  "computed": -56.4,
+  "target": -56.4,
+  "unit": "",
+  "rel_tol": 1e-06,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "doubling NaOH: acid still limiting, heat unchanged",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "q",
+  "computed": 960.0,
+  "target": 960,
+  "unit": "J",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "n(X)",
+  "computed": 0.04,
+  "target": 0.04,
+  "unit": "",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "m(X)",
+  "computed": 3.2,
+  "target": 3.2,
+  "unit": "g",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "purity",
+  "computed": 80.0,
+  "target": 80.0,
+  "unit": "%",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "wrong-CF q",
+  "computed": 1152.0,
+  "target": 1152,
+  "unit": "J",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "wrong-CF purity",
+  "computed": 95.99999999999999,
+  "target": 96.0,
+  "unit": "%",
+  "rel_tol": 1e-09,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "claim 95% not supported by 80%; wrong CF makes it appear supported",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "E08",
+  "label": "food calorimetry water heat",
+  "computed": 3344.0,
+  "target": 3344,
+  "unit": "J",
+  "rel_tol": 0.002,
+  "ok": true
+ },
+ {
+  "qid": "E08",
+  "label": "water-heat yield per g food",
+  "computed": 2.2293333333333334,
+  "target": 2.229,
+  "unit": "kJ/g",
+  "rel_tol": 0.001,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "marks sum [1, 2, 1] = 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "marks sum [3, 2] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "marks sum [1, 1, 1, 1] = 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "marks sum [1, 1, 1] = 3",
+  "computed": "3",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "marks sum [2, 2, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "marks sum [1, 1, 1, 1, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "marks sum [1, 1, 1, 2, 1] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q08",
+  "label": "marks sum [1, 2, 1] = 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "marks sum [2, 1, 1] = 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "marks sum [2, 2, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "marks sum [1, 2, 1, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "marks sum [1, 2, 1, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "marks sum [2, 2, 1, 1] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "marks sum [2, 1, 2, 1, 1, 1] = 8",
+  "computed": "8",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "marks sum [2, 1, 2, 1] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "marks sum [2, 1, 1, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "marks sum [2, 1, 1, 2] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "marks sum [1, 1, 1, 1] = 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "marks sum [2, 2, 2, 2] = 8",
+  "computed": "8",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "marks sum [1, 1, 1, 1, 1, 1] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "marks sum [2, 1, 1, 1] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "marks sum [2, 1, 2] = 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "marks sum [2, 2, 2, 1] = 7",
+  "computed": "7",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q24",
+  "label": "marks sum [2, 2, 1, 1] = 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "marks sum [3, 2, 2, 2, 3, 2, 1] = 15",
+  "computed": "15",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "marks sum [2, 4, 2, 2] = 10",
+  "computed": "10",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "marks sum [3, 2, 2, 3, 2, 2] = 14",
+  "computed": "14",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "marks sum [2, 4, 1, 2, 1, 2] = 12",
+  "computed": "12",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "worksheet parts sum to 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q01",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q02",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "worksheet parts sum to 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q03",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "worksheet parts sum to 3",
+  "computed": "3",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q04",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q05",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q06",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q07",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q08",
+  "label": "worksheet parts sum to 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q08",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "worksheet parts sum to 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q09",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q10",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q11",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q12",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q13",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "worksheet parts sum to 8",
+  "computed": "8",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q14",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q15",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q16",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q17",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "worksheet parts sum to 4",
+  "computed": "4",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q18",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "worksheet parts sum to 8",
+  "computed": "8",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q19",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q20",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q21",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "worksheet parts sum to 5",
+  "computed": "5",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q22",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "worksheet parts sum to 7",
+  "computed": "7",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q23",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q24",
+  "label": "worksheet parts sum to 6",
+  "computed": "6",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q24",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "worksheet parts sum to 15",
+  "computed": "15",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q25",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "worksheet parts sum to 10",
+  "computed": "10",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q26",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "worksheet parts sum to 14",
+  "computed": "14",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q27",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "worksheet parts sum to 12",
+  "computed": "12",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "Q28",
+  "label": "worksheet has one answer line per part",
+  "computed": "True",
+  "target": "True",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ },
+ {
+  "qid": "ALL",
+  "label": "total marks in bank",
+  "computed": 178,
+  "target": "info",
+  "unit": "",
+  "rel_tol": 0,
+  "ok": true
+ }
+]

@@ -1,0 +1,876 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.384
+Welcome to this series on
+energy, fuels and calorimetry.
+
+00:00:04.424 --> 00:00:10.072
+Over these lessons we'll work out
+where the energy in a fuel comes from,
+
+00:00:10.112 --> 00:00:14.101
+how we measure it, and how
+to compare fuels fairly.
+
+00:00:14.141 --> 00:00:19.078
+Almost every calculation in the
+topic starts in the same place:
+
+00:00:19.118 --> 00:00:20.816
+with amounts in moles.
+
+00:00:20.856 --> 00:00:22.831
+So that's where we begin.
+
+00:00:23.200 --> 00:00:26.284
+Here's a quick check before we start.
+
+00:00:26.324 --> 00:00:29.747
+One flask holds one mole of hydrogen gas.
+
+00:00:29.787 --> 00:00:32.449
+Another holds one mole of water.
+
+00:00:32.489 --> 00:00:36.249
+Do they contain the same
+amount of substance?
+
+00:00:36.289 --> 00:00:38.529
+Do they have the same mass?
+
+00:00:38.569 --> 00:00:40.004
+Pause and decide.
+
+00:00:48.467 --> 00:00:54.700
+They contain the same amount: one mole
+each, so the same number of molecules.
+
+00:00:54.740 --> 00:00:57.470
+But the masses are very different.
+
+00:00:57.510 --> 00:01:01.951
+One mole of hydrogen gas has
+a mass of about two grams,
+
+00:01:01.991 --> 00:01:06.758
+while one mole of water has a
+mass of about eighteen grams.
+
+00:01:06.798 --> 00:01:09.039
+Same amount, different mass.
+
+00:01:09.079 --> 00:01:14.374
+Holding those two ideas apart is
+the first skill in this episode.
+
+00:01:14.733 --> 00:01:15.781
+Here's the plan.
+
+00:01:15.821 --> 00:01:19.452
+We'll separate amount, mass,
+volume and concentration.
+
+00:01:19.492 --> 00:01:24.142
+Then we'll use three relationships
+that turn each of them into moles.
+
+00:01:24.182 --> 00:01:28.900
+We'll practise unit conversions, read
+a balanced equation as a recipe,
+
+00:01:28.940 --> 00:01:31.591
+and finish with two practice questions.
+
+00:01:32.533 --> 00:01:35.316
+Picture a flask of liquid ethanol.
+
+00:01:35.356 --> 00:01:39.302
+We can describe the same
+sample in several ways.
+
+00:01:39.342 --> 00:01:42.955
+Its mass, in grams, is
+what a balance reads.
+
+00:01:42.995 --> 00:01:48.601
+Its volume, in millilitres or litres,
+is how much space it takes up.
+
+00:01:48.641 --> 00:01:54.536
+And its amount, in moles, is a count
+of how many particles it contains.
+
+00:01:54.933 --> 00:01:58.914
+A mole is a counting unit,
+like a dozen, but enormous:
+
+00:01:58.954 --> 00:02:04.424
+about six point zero two times ten to
+the power of twenty-three particles.
+
+00:02:04.464 --> 00:02:09.636
+Chemists count in moles because
+reactions happen particle by particle,
+
+00:02:09.676 --> 00:02:15.335
+so the recipe of a reaction is written
+in particles, and therefore in moles.
+
+00:02:15.733 --> 00:02:18.348
+Molar mass links mass to amount.
+
+00:02:18.388 --> 00:02:23.410
+It is the mass of one mole of
+a substance, in grams per mole.
+
+00:02:23.450 --> 00:02:27.808
+For ethanol it's forty-six
+point zero grams per mole,
+
+00:02:27.848 --> 00:02:31.997
+so forty-six grams of
+ethanol is exactly one mole.
+
+00:02:32.333 --> 00:02:38.052
+Now let's swap the ethanol for the same
+mass of water: forty-six grams again.
+
+00:02:38.092 --> 00:02:40.146
+The mass label is unchanged.
+
+00:02:40.186 --> 00:02:44.634
+But water molecules are lighter,
+at eighteen grams per mole,
+
+00:02:44.674 --> 00:02:49.720
+so the same forty-six grams contains
+about two point five six moles.
+
+00:02:49.760 --> 00:02:51.854
+Same mass, different amount.
+
+00:02:52.200 --> 00:02:54.786
+So these labels are not interchangeable.
+
+00:02:54.826 --> 00:02:58.988
+You cannot replace grams with
+moles, or millilitres with litres,
+
+00:02:59.028 --> 00:03:01.745
+without a relationship that connects them.
+
+00:03:01.785 --> 00:03:04.740
+The next scene gives
+you those relationships.
+
+00:03:05.732 --> 00:03:07.278
+First, from a mass.
+
+00:03:07.318 --> 00:03:11.452
+Amount in moles equals mass
+divided by molar mass.
+
+00:03:11.492 --> 00:03:12.787
+Watch the units.
+
+00:03:12.827 --> 00:03:14.206
+Mass is in grams.
+
+00:03:14.246 --> 00:03:16.877
+Molar mass is in grams per mole.
+
+00:03:16.917 --> 00:03:22.553
+Dividing grams by grams per mole
+cancels the grams and leaves moles.
+
+00:03:22.593 --> 00:03:27.268
+The units tell you the
+relationship is set up correctly.
+
+00:03:27.665 --> 00:03:29.367
+Second, from a solution.
+
+00:03:29.407 --> 00:03:32.342
+Amount equals concentration times volume.
+
+00:03:32.382 --> 00:03:37.349
+Concentration is in moles per litre,
+so the volume must be in litres.
+
+00:03:37.389 --> 00:03:40.799
+Then litres cancel, and
+you're left with moles.
+
+00:03:41.199 --> 00:03:42.416
+Third, from a gas.
+
+00:03:42.456 --> 00:03:44.790
+At standard laboratory conditions,
+
+00:03:44.830 --> 00:03:50.587
+which in this course means twenty-five
+degrees Celsius and one hundred kilopascals,
+
+00:03:50.627 --> 00:03:55.196
+one mole of any gas occupies about
+twenty-four point eight litres.
+
+00:03:55.236 --> 00:03:56.942
+This is the molar volume.
+
+00:03:56.982 --> 00:04:00.363
+Amount equals gas volume
+divided by molar volume:
+
+00:04:00.403 --> 00:04:03.616
+litres divided by litres
+per mole gives moles.
+
+00:04:03.999 --> 00:04:06.530
+Two warnings about that last one.
+
+00:04:06.570 --> 00:04:11.360
+It applies only to gases, and
+only at those stated conditions.
+
+00:04:11.400 --> 00:04:17.126
+A hot exhaust gas at six hundred degrees
+takes up far more space per mole,
+
+00:04:17.166 --> 00:04:21.918
+so twenty-four point eight would
+give the wrong answer there.
+
+00:04:22.265 --> 00:04:23.614
+Now a checkpoint.
+
+00:04:23.654 --> 00:04:29.741
+A solution has a concentration of zero
+point one zero zero moles per litre,
+
+00:04:29.781 --> 00:04:34.071
+and you have two hundred
+and fifty millilitres of it.
+
+00:04:34.111 --> 00:04:40.035
+Why can't you multiply zero point one
+zero zero by two hundred and fifty?
+
+00:04:40.075 --> 00:04:43.261
+Pause and explain it in your own words.
+
+00:04:51.665 --> 00:04:54.548
+Because the concentration is per litre,
+
+00:04:54.588 --> 00:04:58.521
+the volume must be in litres
+for the units to cancel.
+
+00:04:58.561 --> 00:05:03.692
+Two hundred and fifty millilitres
+is zero point two five zero litres.
+
+00:05:03.732 --> 00:05:07.740
+Multiplying gives zero point
+zero two five zero moles.
+
+00:05:07.780 --> 00:05:12.986
+If you multiply by two hundred and
+fifty instead, you get twenty-five,
+
+00:05:13.026 --> 00:05:15.534
+which is a thousand times too big.
+
+00:05:15.574 --> 00:05:21.530
+The units left over, millilitres times
+moles per litre, don't simplify to moles.
+
+00:05:21.570 --> 00:05:24.194
+That mismatch is your warning sign.
+
+00:05:25.132 --> 00:05:29.707
+Unit conversions cause more lost
+marks than difficult chemistry,
+
+00:05:29.747 --> 00:05:31.870
+so let's make them mechanical.
+
+00:05:31.910 --> 00:05:33.601
+Here is a volume ladder.
+
+00:05:33.641 --> 00:05:39.513
+One cubic metre is one thousand litres,
+and one litre is one thousand millilitres.
+
+00:05:39.553 --> 00:05:43.231
+Each step down the ladder
+multiplies by a thousand.
+
+00:05:43.598 --> 00:05:45.337
+Here's a direction rule.
+
+00:05:45.377 --> 00:05:51.416
+When you move to a smaller unit, you need
+more of them, so the number gets bigger.
+
+00:05:51.456 --> 00:05:55.566
+When you move to a larger
+unit, the number gets smaller.
+
+00:05:55.606 --> 00:06:01.719
+For example, zero point zero eight five
+zero cubic metres becomes eighty-five point
+
+00:06:01.759 --> 00:06:05.836
+zero litres, and then
+eighty-five thousand millilitres.
+
+00:06:06.198 --> 00:06:07.833
+Mass works the same way.
+
+00:06:07.873 --> 00:06:13.135
+One kilogram is one thousand grams, and
+one gram is one thousand milligrams.
+
+00:06:13.175 --> 00:06:16.833
+Energy too: one megajoule
+is one thousand kilojoules,
+
+00:06:16.873 --> 00:06:19.693
+and one kilojoule is one thousand joules.
+
+00:06:19.733 --> 00:06:24.478
+So seventy-two thousand joules is
+seventy-two point zero kilojoules.
+
+00:06:24.865 --> 00:06:30.353
+Time is the odd one out, because
+its steps are sixty, not a thousand.
+
+00:06:30.393 --> 00:06:35.079
+One hour is sixty minutes, and
+one minute is sixty seconds,
+
+00:06:35.119 --> 00:06:39.085
+so one hour is three thousand
+six hundred seconds.
+
+00:06:39.125 --> 00:06:42.850
+Zero point one five zero
+hours is nine minutes,
+
+00:06:42.890 --> 00:06:46.095
+which is five hundred and forty seconds.
+
+00:06:46.465 --> 00:06:49.503
+After every conversion, ask one question:
+
+00:06:49.543 --> 00:06:52.882
+should the number have
+got bigger or smaller?
+
+00:06:52.922 --> 00:06:58.177
+If it went the wrong way, you multiplied
+when you should have divided.
+
+00:06:59.130 --> 00:07:01.440
+A balanced equation is a recipe.
+
+00:07:01.480 --> 00:07:07.386
+Hydrogen burning in oxygen: two hydrogen
+molecules react with one oxygen molecule
+
+00:07:07.426 --> 00:07:09.441
+to make two water molecules.
+
+00:07:09.481 --> 00:07:11.570
+Count the atoms on each side.
+
+00:07:11.610 --> 00:07:16.562
+Four hydrogen atoms and two oxygen
+atoms before, and the same after.
+
+00:07:16.602 --> 00:07:21.080
+Nothing appears or disappears;
+the atoms are just rearranged.
+
+00:07:21.464 --> 00:07:23.502
+Now scale the recipe up.
+
+00:07:23.542 --> 00:07:28.005
+Make it ten times bigger,
+or a million times bigger,
+
+00:07:28.045 --> 00:07:31.296
+and the ratio stays two to one to two.
+
+00:07:31.336 --> 00:07:36.406
+Scale it up by a mole, and the
+coefficients become amounts:
+
+00:07:36.446 --> 00:07:43.287
+two moles of hydrogen react with one mole
+of oxygen to make two moles of water.
+
+00:07:43.664 --> 00:07:46.522
+So a coefficient gives a mole ratio.
+
+00:07:46.562 --> 00:07:52.881
+If zero point four zero moles of hydrogen
+reacts, it needs half as much oxygen,
+
+00:07:52.921 --> 00:07:58.999
+zero point two zero moles, and it makes
+zero point four zero moles of water.
+
+00:07:59.039 --> 00:08:05.721
+The ratio is valid because it comes from
+counting particles, and moles are a count.
+
+00:08:06.064 --> 00:08:09.635
+But the coefficients are not a mass ratio.
+
+00:08:09.675 --> 00:08:16.600
+Zero point four zero moles of hydrogen
+has a mass of only zero point eight grams,
+
+00:08:16.640 --> 00:08:23.220
+while zero point two zero moles of oxygen
+has a mass of six point four grams.
+
+00:08:23.260 --> 00:08:30.357
+Mass is still conserved: zero point eight
+plus six point four gives seven point two
+
+00:08:30.397 --> 00:08:31.646
+grams of water.
+
+00:08:31.686 --> 00:08:36.118
+But the masses are not in
+a two to one to two ratio.
+
+00:08:36.158 --> 00:08:41.489
+Use the equation with moles, then
+convert to grams at the end.
+
+00:08:42.463 --> 00:08:45.798
+One last tool before
+the questions: rounding.
+
+00:08:45.838 --> 00:08:51.498
+Suppose an oxygen volume works out to
+seventeen point seven six five litres,
+
+00:08:51.538 --> 00:08:53.973
+and you need the amount in moles.
+
+00:08:54.013 --> 00:08:58.172
+If you round that volume to
+seventeen point eight first,
+
+00:08:58.212 --> 00:09:04.287
+then divide by twenty-four point eight,
+you get zero point seven one eight moles.
+
+00:09:04.663 --> 00:09:10.307
+If you keep the full value instead,
+you get zero point seven one six three,
+
+00:09:10.347 --> 00:09:13.869
+which rounds to zero
+point seven one six moles.
+
+00:09:13.909 --> 00:09:18.112
+The early rounding changed
+the third significant figure.
+
+00:09:18.152 --> 00:09:22.169
+In a longer calculation,
+those small errors build up.
+
+00:09:22.530 --> 00:09:25.767
+So keep unrounded values
+in your calculator,
+
+00:09:25.807 --> 00:09:29.788
+write the intermediate result
+with a few extra digits,
+
+00:09:29.828 --> 00:09:32.170
+and round only the final answer.
+
+00:09:32.210 --> 00:09:37.085
+Base the number of significant
+figures on the data you were given,
+
+00:09:37.125 --> 00:09:38.614
+which here is three.
+
+00:09:39.597 --> 00:09:44.001
+Here's practice question Q
+zero one, worth four marks.
+
+00:09:44.041 --> 00:09:49.474
+Read it, then pause the video and
+try it before I work through it.
+
+00:10:01.930 --> 00:10:03.606
+Let's read it together.
+
+00:10:03.646 --> 00:10:07.261
+We're given a mass of
+ethanol and its molar mass,
+
+00:10:07.301 --> 00:10:11.065
+and a gas volume at standard
+laboratory conditions.
+
+00:10:11.105 --> 00:10:15.690
+We're asked for two amounts in
+moles, and then an explanation.
+
+00:10:15.730 --> 00:10:18.788
+Each part needs a different relationship.
+
+00:10:19.130 --> 00:10:24.019
+Before we calculate, what should
+the ethanol answer look like?
+
+00:10:24.059 --> 00:10:27.120
+One mole of ethanol is forty-six grams,
+
+00:10:27.160 --> 00:10:32.924
+and we have only zero point three four
+five grams, much less than a mole.
+
+00:10:32.964 --> 00:10:38.291
+So expect an answer far below one,
+roughly one hundredth of a mole.
+
+00:10:38.663 --> 00:10:41.679
+Amount equals mass divided by molar mass:
+
+00:10:41.719 --> 00:10:47.640
+zero point three four five grams divided
+by forty-six point zero grams per mole.
+
+00:10:47.680 --> 00:10:52.781
+The grams cancel, leaving zero point
+zero zero seven five zero moles.
+
+00:10:52.821 --> 00:10:57.590
+That's under one hundredth of a
+mole, which fits the prediction.
+
+00:10:57.930 --> 00:11:01.071
+For the gas, the volume is in millilitres,
+
+00:11:01.111 --> 00:11:04.327
+but the molar volume
+is in litres per mole.
+
+00:11:04.367 --> 00:11:05.615
+So convert first.
+
+00:11:05.655 --> 00:11:11.219
+One hundred and eighty-six millilitres
+is zero point one eight six litres.
+
+00:11:11.259 --> 00:11:15.385
+Then divide by twenty-four
+point eight litres per mole.
+
+00:11:15.425 --> 00:11:20.347
+Litres cancel, giving zero point
+zero zero seven five zero moles.
+
+00:11:20.730 --> 00:11:23.978
+So both samples contain the same amount.
+
+00:11:24.018 --> 00:11:26.362
+Does that mean the same mass?
+
+00:11:26.402 --> 00:11:26.609
+No.
+
+00:11:26.649 --> 00:11:30.390
+Equal amounts mean equal
+numbers of particles.
+
+00:11:30.430 --> 00:11:36.391
+The mass also depends on molar mass,
+and we don't know which gas this is,
+
+00:11:36.431 --> 00:11:38.939
+so we can't calculate its mass.
+
+00:11:38.979 --> 00:11:44.569
+Saying "we can't tell" here is a
+correct chemical answer, not a gap.
+
+00:11:44.930 --> 00:11:47.551
+Compare that with a weaker answer: "No,
+
+00:11:47.591 --> 00:11:51.713
+because they are different
+substances." It sounds reasonable,
+
+00:11:51.753 --> 00:11:53.760
+but it misses the causal link.
+
+00:11:53.800 --> 00:11:58.605
+Different substances matter here
+because their molar masses can differ,
+
+00:11:58.645 --> 00:12:01.374
+and mass equals amount times molar mass.
+
+00:12:01.730 --> 00:12:03.910
+Here are the indicative marks.
+
+00:12:03.950 --> 00:12:09.977
+One mark for the ethanol amount, two for
+converting the gas volume and dividing by
+
+00:12:10.017 --> 00:12:16.159
+the molar volume, and one for explaining
+that equal moles don't imply equal masses.
+
+00:12:16.530 --> 00:12:18.104
+Now the tempting error.
+
+00:12:18.144 --> 00:12:23.719
+Dividing one hundred and eighty-six by
+twenty-four point eight gives seven point
+
+00:12:23.759 --> 00:12:24.842
+five zero moles.
+
+00:12:24.882 --> 00:12:29.965
+The first wrong step is substituting
+millilitres where litres are needed.
+
+00:12:30.005 --> 00:12:35.369
+A sanity check catches it: seven and a
+half moles of gas would fill about one
+
+00:12:35.409 --> 00:12:40.602
+hundred and eighty-six litres, not one
+hundred and eighty-six millilitres.
+
+00:12:40.997 --> 00:12:42.193
+Quick prediction.
+
+00:12:42.233 --> 00:12:46.701
+If the gas had been measured at
+fifty degrees Celsius instead,
+
+00:12:46.741 --> 00:12:50.337
+could you still divide by
+twenty-four point eight?
+
+00:12:50.377 --> 00:12:51.468
+Think about it.
+
+00:12:57.930 --> 00:12:58.094
+No.
+
+00:12:58.134 --> 00:13:03.736
+Twenty-four point eight litres per mole
+applies only at twenty-five degrees and one
+
+00:13:03.776 --> 00:13:05.096
+hundred kilopascals.
+
+00:13:05.136 --> 00:13:09.174
+At a higher temperature, a mole
+of gas occupies more volume,
+
+00:13:09.214 --> 00:13:12.953
+so you would need the
+conditions-specific molar volume.
+
+00:13:13.929 --> 00:13:17.644
+Practice question Q zero
+two is less guided.
+
+00:13:17.684 --> 00:13:19.521
+It's worth five marks.
+
+00:13:19.561 --> 00:13:23.572
+Pause the video now and
+work through all of it.
+
+00:13:38.995 --> 00:13:40.988
+Part a is three conversions.
+
+00:13:41.028 --> 00:13:44.255
+Zero point zero eight
+five zero cubic metres,
+
+00:13:44.295 --> 00:13:49.772
+times one thousand litres per cubic
+metre, is eighty-five point zero litres.
+
+00:13:49.812 --> 00:13:55.724
+Zero point one five zero hours, times three
+thousand six hundred seconds per hour,
+
+00:13:55.764 --> 00:13:58.192
+is five hundred and forty seconds.
+
+00:13:58.232 --> 00:14:02.766
+And seven point two zero times
+ten to the power of four joules,
+
+00:14:02.806 --> 00:14:07.266
+divided by one thousand, is
+seventy-two point zero kilojoules.
+
+00:14:07.306 --> 00:14:11.331
+Check the directions: smaller
+units gave bigger numbers,
+
+00:14:11.371 --> 00:14:14.420
+and the larger unit gave a smaller number.
+
+00:14:14.795 --> 00:14:16.748
+For part b, first predict.
+
+00:14:16.788 --> 00:14:22.956
+Eighty-five litres of any gas at these
+conditions is about eighty-five divided by
+
+00:14:22.996 --> 00:14:27.248
+twenty-five, so roughly three
+and a half moles in total.
+
+00:14:27.288 --> 00:14:30.007
+Oxygen is only about a fifth of air,
+
+00:14:30.047 --> 00:14:33.956
+so expect roughly zero
+point seven moles of oxygen.
+
+00:14:34.329 --> 00:14:36.029
+Only the oxygen counts.
+
+00:14:36.069 --> 00:14:39.887
+Its volume is twenty point
+nine percent of the air:
+
+00:14:39.927 --> 00:14:46.091
+zero point two zero nine times eighty-five
+point zero litres gives seventeen point
+
+00:14:46.131 --> 00:14:48.511
+seven six five litres of oxygen.
+
+00:14:48.551 --> 00:14:52.143
+Because all the gases
+share the same conditions,
+
+00:14:52.183 --> 00:14:55.738
+a volume fraction is also
+a mole fraction here.
+
+00:14:56.129 --> 00:15:01.654
+Then amount of oxygen equals seventeen
+point seven six five litres divided by
+
+00:15:01.694 --> 00:15:04.545
+twenty-four point eight litres per mole,
+
+00:15:04.585 --> 00:15:07.869
+which is zero point seven
+one six three moles,
+
+00:15:07.909 --> 00:15:10.977
+reported as zero point
+seven one six moles.
+
+00:15:11.017 --> 00:15:13.040
+That matches the prediction.
+
+00:15:13.395 --> 00:15:18.675
+Marks: three for the conversions,
+one for applying the oxygen fraction,
+
+00:15:18.715 --> 00:15:21.148
+and one for the amount of oxygen.
+
+00:15:21.188 --> 00:15:26.692
+The first trap is using the whole
+eighty-five litres as if it were oxygen,
+
+00:15:26.732 --> 00:15:29.764
+which gives three point four three moles.
+
+00:15:29.804 --> 00:15:33.585
+The second is treating
+cubic metres as millilitres,
+
+00:15:33.625 --> 00:15:37.256
+which makes the volume a
+million times too small.
+
+00:15:37.296 --> 00:15:41.192
+In both cases, the prediction
+would have warned you.
+
+00:15:42.127 --> 00:15:43.832
+Let's pull it together.
+
+00:15:43.872 --> 00:15:47.701
+If you have a mass, use
+mass divided by molar mass,
+
+00:15:47.741 --> 00:15:50.355
+with grams matching grams per mole.
+
+00:15:50.395 --> 00:15:56.575
+If you have a solution, use concentration
+times volume, with the volume in litres.
+
+00:15:56.615 --> 00:16:00.520
+If you have a gas at standard
+laboratory conditions,
+
+00:16:00.560 --> 00:16:04.692
+divide its volume in litres
+by twenty-four point eight.
+
+00:16:04.732 --> 00:16:09.510
+And a balanced equation gives
+you mole ratios, not mass ratios.
+
+00:16:09.861 --> 00:16:10.909
+Closing recall.
+
+00:16:10.949 --> 00:16:15.045
+Without looking back: what
+are the units of molar volume,
+
+00:16:15.085 --> 00:16:20.270
+and at what temperature and pressure
+does twenty-four point eight apply?
+
+00:16:20.310 --> 00:16:22.995
+Say your answer out loud, then check.
+
+00:16:33.461 --> 00:16:35.869
+Molar volume is in litres per mole,
+
+00:16:35.909 --> 00:16:41.606
+and twenty-four point eight applies at
+twenty-five degrees Celsius and one hundred
+
+00:16:41.646 --> 00:16:42.445
+kilopascals.
+
+00:16:42.485 --> 00:16:47.692
+Next episode, we'll use these amounts
+to ask where the energy in a reaction
+
+00:16:47.732 --> 00:16:49.131
+actually comes from.

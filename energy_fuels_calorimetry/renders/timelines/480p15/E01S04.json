@@ -1,0 +1,64 @@
+{
+ "scene": "E01S04",
+ "title": "The unit ladder",
+ "cls": "E01S04_Ladder",
+ "fps": 15,
+ "duration": 94.0,
+ "beats": [
+  {
+   "key": "E01S04.b01",
+   "start": 0.0,
+   "speech": 18.0993,
+   "audio": null,
+   "estimated": true,
+   "text": "Unit conversions cause more lost marks than difficult chemistry, so let's make them mechanical. Here is a volume ladder. One cubic metre is one thousand litres, and one litre is one thousand millilitres. Each step down the ladder multiplies by a thousand.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S04.b02",
+   "start": 18.4667,
+   "speech": 22.2372,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a direction rule. When you move to a smaller unit, you need more of them, so the number gets bigger. When you move to a larger unit, the number gets smaller. For example, zero point zero eight five zero cubic metres becomes eighty-five point zero litres, and then eighty-five thousand millilitres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S04.b03",
+   "start": 41.0667,
+   "speech": 18.2793,
+   "audio": null,
+   "estimated": true,
+   "text": "Mass works the same way. One kilogram is one thousand grams, and one gram is one thousand milligrams. Energy too: one megajoule is one thousand kilojoules, and one kilojoule is one thousand joules. So seventy-two thousand joules is seventy-two point zero kilojoules.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S04.b04",
+   "start": 59.7333,
+   "speech": 21.2297,
+   "audio": null,
+   "estimated": true,
+   "text": "Time is the odd one out, because its steps are sixty, not a thousand. One hour is sixty minutes, and one minute is sixty seconds, so one hour is three thousand six hundred seconds. Zero point one five zero hours is nine minutes, which is five hundred and forty seconds.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S04.b05",
+   "start": 81.3333,
+   "speech": 11.7124,
+   "audio": null,
+   "estimated": true,
+   "text": "After every conversion, ask one question: should the number have got bigger or smaller? If it went the wrong way, you multiplied when you should have divided.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

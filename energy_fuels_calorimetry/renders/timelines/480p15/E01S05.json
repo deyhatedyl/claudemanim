@@ -1,0 +1,53 @@
+{
+ "scene": "E01S05",
+ "title": "A balanced equation is a recipe in moles",
+ "cls": "E01S05_Recipe",
+ "fps": 15,
+ "duration": 103.3333,
+ "beats": [
+  {
+   "key": "E01S05.b01",
+   "start": 0.0,
+   "speech": 21.9497,
+   "audio": null,
+   "estimated": true,
+   "text": "A balanced equation is a recipe. Hydrogen burning in oxygen: two hydrogen molecules react with one oxygen molecule to make two water molecules. Count the atoms on each side. Four hydrogen atoms and two oxygen atoms before, and the same after. Nothing appears or disappears; the atoms are just rearranged.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S05.b02",
+   "start": 22.3333,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "Now scale the recipe up. Make it ten times bigger, or a million times bigger, and the ratio stays two to one to two. Scale it up by a mole, and the coefficients become amounts: two moles of hydrogen react with one mole of oxygen to make two moles of water.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S05.b03",
+   "start": 44.5333,
+   "speech": 22.0572,
+   "audio": null,
+   "estimated": true,
+   "text": "So a coefficient gives a mole ratio. If zero point four zero moles of hydrogen reacts, it needs half as much oxygen, zero point two zero moles, and it makes zero point four zero moles of water. The ratio is valid because it comes from counting particles, and moles are a count.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S05.b04",
+   "start": 66.9333,
+   "speech": 35.4248,
+   "audio": null,
+   "estimated": true,
+   "text": "But the coefficients are not a mass ratio. Zero point four zero moles of hydrogen has a mass of only zero point eight grams, while zero point two zero moles of oxygen has a mass of six point four grams. Mass is still conserved: zero point eight plus six point four gives seven point two grams of water. But the masses are not in a two to one to two ratio. Use the equation with moles, then convert to grams at the end.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

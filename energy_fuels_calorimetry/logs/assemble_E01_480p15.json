@@ -1,0 +1,72 @@
+{
+ "episode": "E01",
+ "quality": "480p15",
+ "output": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.mp4",
+ "final": false,
+ "narrated": false,
+ "beats": 47,
+ "beats_with_audio": 0,
+ "duration": 1010.13,
+ "scenes": [
+  {
+   "scene": "E01S01",
+   "title": "Welcome and a retrieval check",
+   "start": 0.0,
+   "duration": 92.533008
+  },
+  {
+   "scene": "E01S02",
+   "title": "One container, several different labels",
+   "start": 92.533008,
+   "duration": 93.199023
+  },
+  {
+   "scene": "E01S03",
+   "title": "Three ways to get moles, and why the units cancel",
+   "start": 185.732031,
+   "duration": 139.399674
+  },
+  {
+   "scene": "E01S04",
+   "title": "The unit ladder",
+   "start": 325.131705,
+   "duration": 93.998698
+  },
+  {
+   "scene": "E01S05",
+   "title": "A balanced equation is a recipe in moles",
+   "start": 419.130403,
+   "duration": 103.333008
+  },
+  {
+   "scene": "E01S06",
+   "title": "Round at the end, not along the way",
+   "start": 522.463411,
+   "duration": 57.133333
+  },
+  {
+   "scene": "E01S07",
+   "title": "Practice Q01: two routes to an amount",
+   "start": 579.596744,
+   "duration": 214.332031
+  },
+  {
+   "scene": "E01S08",
+   "title": "Practice Q02: conversions inside a data sheet",
+   "start": 793.928775,
+   "duration": 148.198698
+  },
+  {
+   "scene": "E01S09",
+   "title": "Recap and closing recall",
+   "start": 942.127473,
+   "duration": 68.0
+  }
+ ],
+ "captions": [
+  "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.srt",
+  "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.vtt"
+ ],
+ "transcript": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing_transcript.md",
+ "problems": []
+}

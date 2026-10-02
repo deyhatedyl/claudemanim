@@ -1,0 +1,268 @@
+{
+ "updated": "2026-10-02T17:45:35",
+ "tts": {
+  "provider": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "voice": "Kore",
+  "api_key_present": false
+ },
+ "blockers": [
+  "TTS: GEMINI_API_KEY not set in this environment; narration, narrated drafts and final renders cannot be produced. Add it as an environment variable and start a new session, then run tools/tts_probe.py."
+ ],
+ "episodes": {
+  "E01": {
+   "title": "Mole calculations and units that unlock the topic",
+   "script": {
+    "path": "scripts/ep01.md",
+    "sha": "b1e2e392429ce0db",
+    "beats": 47,
+    "words": 2159,
+    "est_minutes": 16.9,
+    "anchors": "Q01,Q02",
+    "coverage": "C01"
+   },
+   "scenes_code": {
+    "path": "scenes/ep01.py",
+    "sha": "472e4ccf2fec74a8"
+   },
+   "stage": "draft-rendered",
+   "scenes": [
+    {
+     "id": "E01S01",
+     "title": "Welcome and a retrieval check",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 92.5333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S02",
+     "title": "One container, several different labels",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 93.2,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S03",
+     "title": "Three ways to get moles, and why the units cancel",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 139.4,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S04",
+     "title": "The unit ladder",
+     "beats": 5,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 94.0,
+      "fresh": true,
+      "estimated_beats": 5,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S05",
+     "title": "A balanced equation is a recipe in moles",
+     "beats": 4,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 103.3333,
+      "fresh": true,
+      "estimated_beats": 4,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S06",
+     "title": "Round at the end, not along the way",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 57.1333,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S07",
+     "title": "Practice Q01: two routes to an amount",
+     "beats": 11,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 214.3333,
+      "fresh": true,
+      "estimated_beats": 11,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S08",
+     "title": "Practice Q02: conversions inside a data sheet",
+     "beats": 6,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 148.2,
+      "fresh": true,
+      "estimated_beats": 6,
+      "layout_warnings": 0
+     }
+    },
+    {
+     "id": "E01S09",
+     "title": "Recap and closing recall",
+     "beats": 3,
+     "audio_ready": 0,
+     "480p15": {
+      "duration": 68.0,
+      "fresh": true,
+      "estimated_beats": 3,
+      "layout_warnings": 0
+     }
+    }
+   ],
+   "audio": {
+    "ready": 0,
+    "total": 47,
+    "seconds": 0
+   },
+   "assembled_480p15": {
+    "output": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.mp4",
+    "final": false,
+    "narrated": false,
+    "duration": 1010.13,
+    "captions": [
+     "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.srt",
+     "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.vtt"
+    ],
+    "transcript": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing_transcript.md",
+    "problems": []
+   },
+   "qa": {
+    "draft_visual_qa": "pass",
+    "draft_notes": "480p15 silent draft (estimated timing). Every beat-end still inspected; layout defects fixed (clipped text S01/S02/S03, overlaps S04/S05/S06/S08). Automatic layout check: 0 warnings. Narration sync, pronunciation and final 1080p QA pending TTS access.",
+    "final_qa": "pending"
+   }
+  },
+  "E02": {
+   "title": "Where reaction energy comes from",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E03": {
+   "title": "Energy profiles and thermochemical equations",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E04": {
+   "title": "Fuels, biofuels and the carbon cycle",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E05": {
+   "title": "Food as a chemical energy source",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E06": {
+   "title": "Combustion equations and gaseous products",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E07": {
+   "title": "Limiting reactants, excess fuel and gas mixtures",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E08": {
+   "title": "Measuring combustion energy and efficiency",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E09": {
+   "title": "Why calorimeters need calibration",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E10": {
+   "title": "Reaction calorimetry and molar enthalpy",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E11": {
+   "title": "Temperature graphs, correction and experimental reasoning",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E12": {
+   "title": "Fair fuel comparisons and sustainability",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E13": {
+   "title": "Exam workshop A on fuels and combustion",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  },
+  "E14": {
+   "title": "Exam workshop B on calorimetry and data evaluation",
+   "script": null,
+   "scenes_code": null,
+   "stage": "not-started",
+   "scenes": [],
+   "qa": {}
+  }
+ },
+ "series_est_minutes": 16.9
+}

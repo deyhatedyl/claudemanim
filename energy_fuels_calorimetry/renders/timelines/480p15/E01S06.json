@@ -1,0 +1,42 @@
+{
+ "scene": "E01S06",
+ "title": "Round at the end, not along the way",
+ "cls": "E01S06_Rounding",
+ "fps": 15,
+ "duration": 57.1333,
+ "beats": [
+  {
+   "key": "E01S06.b01",
+   "start": 0.0,
+   "speech": 21.8234,
+   "audio": null,
+   "estimated": true,
+   "text": "One last tool before the questions: rounding. Suppose an oxygen volume works out to seventeen point seven six five litres, and you need the amount in moles. If you round that volume to seventeen point eight first, then divide by twenty-four point eight, you get zero point seven one eight moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S06.b02",
+   "start": 22.2,
+   "speech": 17.5055,
+   "audio": null,
+   "estimated": true,
+   "text": "If you keep the full value instead, you get zero point seven one six three, which rounds to zero point seven one six moles. The early rounding changed the third significant figure. In a longer calculation, those small errors build up.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S06.b03",
+   "start": 40.0667,
+   "speech": 16.0841,
+   "audio": null,
+   "estimated": true,
+   "text": "So keep unrounded values in your calculator, write the intermediate result with a few extra digits, and round only the final answer. Base the number of significant figures on the data you were given, which here is three.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

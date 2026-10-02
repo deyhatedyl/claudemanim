@@ -1,0 +1,42 @@
+{
+ "scene": "E01S09",
+ "title": "Recap and closing recall",
+ "cls": "E01S09_Recap",
+ "fps": 15,
+ "duration": 68.0,
+ "beats": [
+  {
+   "key": "E01S09.b01",
+   "start": 0.0,
+   "speech": 27.3828,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's pull it together. If you have a mass, use mass divided by molar mass, with grams matching grams per mole. If you have a solution, use concentration times volume, with the volume in litres. If you have a gas at standard laboratory conditions, divide its volume in litres by twenty-four point eight. And a balanced equation gives you mole ratios, not mass ratios.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S09.b02",
+   "start": 27.7333,
+   "speech": 13.1338,
+   "audio": null,
+   "estimated": true,
+   "text": "Closing recall. Without looking back: what are the units of molar volume, and at what temperature and pressure does twenty-four point eight apply? Say your answer out loud, then check.",
+   "overrun": 0.0,
+   "pause": 10.0,
+   "layout": []
+  },
+  {
+   "key": "E01S09.b03",
+   "start": 51.3333,
+   "speech": 15.6703,
+   "audio": null,
+   "estimated": true,
+   "text": "Molar volume is in litres per mole, and twenty-four point eight applies at twenty-five degrees Celsius and one hundred kilopascals. Next episode, we'll use these amounts to ask where the energy in a reaction actually comes from.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

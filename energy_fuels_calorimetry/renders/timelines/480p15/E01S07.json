@@ -1,0 +1,130 @@
+{
+ "scene": "E01S07",
+ "title": "Practice Q01: two routes to an amount",
+ "cls": "E01S07_Q01",
+ "fps": 15,
+ "duration": 214.3333,
+ "beats": [
+  {
+   "key": "E01S07.b01",
+   "start": 0.0,
+   "speech": 9.8772,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's practice question Q zero one, worth four marks. Read it, then pause the video and try it before I work through it.",
+   "overrun": 0.0,
+   "pause": 12.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b02",
+   "start": 22.3333,
+   "speech": 16.8579,
+   "audio": null,
+   "estimated": true,
+   "text": "Let's read it together. We're given a mass of ethanol and its molar mass, and a gas volume at standard laboratory conditions. We're asked for two amounts in moles, and then an explanation. Each part needs a different relationship.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b03",
+   "start": 39.5333,
+   "speech": 19.1607,
+   "audio": null,
+   "estimated": true,
+   "text": "Before we calculate, what should the ethanol answer look like? One mole of ethanol is forty-six grams, and we have only zero point three four five grams, much less than a mole. So expect an answer far below one, roughly one hundredth of a mole.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b04",
+   "start": 59.0667,
+   "speech": 18.9269,
+   "audio": null,
+   "estimated": true,
+   "text": "Amount equals mass divided by molar mass: zero point three four five grams divided by forty-six point zero grams per mole. The grams cancel, leaving zero point zero zero seven five zero moles. That's under one hundredth of a mole, which fits the prediction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b05",
+   "start": 78.3333,
+   "speech": 22.4172,
+   "audio": null,
+   "estimated": true,
+   "text": "For the gas, the volume is in millilitres, but the molar volume is in litres per mole. So convert first. One hundred and eighty-six millilitres is zero point one eight six litres. Then divide by twenty-four point eight litres per mole. Litres cancel, giving zero point zero zero seven five zero moles.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b06",
+   "start": 101.1333,
+   "speech": 23.8386,
+   "audio": null,
+   "estimated": true,
+   "text": "So both samples contain the same amount. Does that mean the same mass? No. Equal amounts mean equal numbers of particles. The mass also depends on molar mass, and we don't know which gas this is, so we can't calculate its mass. Saying \"we can't tell\" here is a correct chemical answer, not a gap.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b06b",
+   "start": 125.3333,
+   "speech": 16.4441,
+   "audio": null,
+   "estimated": true,
+   "text": "Compare that with a weaker answer: \"No, because they are different substances.\" It sounds reasonable, but it misses the causal link. Different substances matter here because their molar masses can differ, and mass equals amount times molar mass.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b07",
+   "start": 142.1333,
+   "speech": 14.429,
+   "audio": null,
+   "estimated": true,
+   "text": "Here are the indicative marks. One mark for the ethanol amount, two for converting the gas volume and dividing by the molar volume, and one for explaining that equal moles don't imply equal masses.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b08",
+   "start": 156.9333,
+   "speech": 24.0724,
+   "audio": null,
+   "estimated": true,
+   "text": "Now the tempting error. Dividing one hundred and eighty-six by twenty-four point eight gives seven point five zero moles. The first wrong step is substituting millilitres where litres are needed. A sanity check catches it: seven and a half moles of gas would fill about one hundred and eighty-six litres, not one hundred and eighty-six millilitres.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b09",
+   "start": 181.4,
+   "speech": 10.471,
+   "audio": null,
+   "estimated": true,
+   "text": "Quick prediction. If the gas had been measured at fifty degrees Celsius instead, could you still divide by twenty-four point eight? Think about it.",
+   "overrun": 0.0,
+   "pause": 6.0,
+   "layout": []
+  },
+  {
+   "key": "E01S07.b10",
+   "start": 198.3333,
+   "speech": 15.0228,
+   "audio": null,
+   "estimated": true,
+   "text": "No. Twenty-four point eight litres per mole applies only at twenty-five degrees and one hundred kilopascals. At a higher temperature, a mole of gas occupies more volume, so you would need the conditions-specific molar volume.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

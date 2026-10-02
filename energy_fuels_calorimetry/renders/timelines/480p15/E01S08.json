@@ -1,0 +1,75 @@
+{
+ "scene": "E01S08",
+ "title": "Practice Q02: conversions inside a data sheet",
+ "cls": "E01S08_Q02",
+ "fps": 15,
+ "duration": 148.2,
+ "beats": [
+  {
+   "key": "E01S08.b01",
+   "start": 0.0,
+   "speech": 9.6434,
+   "audio": null,
+   "estimated": true,
+   "text": "Practice question Q zero two is less guided. It's worth five marks. Pause the video now and work through all of it.",
+   "overrun": 0.0,
+   "pause": 15.0,
+   "layout": []
+  },
+  {
+   "key": "E01S08.b02",
+   "start": 25.0667,
+   "speech": 35.4248,
+   "audio": null,
+   "estimated": true,
+   "text": "Part a is three conversions. Zero point zero eight five zero cubic metres, times one thousand litres per cubic metre, is eighty-five point zero litres. Zero point one five zero hours, times three thousand six hundred seconds per hour, is five hundred and forty seconds. And seven point two zero times ten to the power of four joules, divided by one thousand, is seventy-two point zero kilojoules. Check the directions: smaller units gave bigger numbers, and the larger unit gave a smaller number.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S08.b03",
+   "start": 60.8667,
+   "speech": 19.1607,
+   "audio": null,
+   "estimated": true,
+   "text": "For part b, first predict. Eighty-five litres of any gas at these conditions is about eighty-five divided by twenty-five, so roughly three and a half moles in total. Oxygen is only about a fifth of air, so expect roughly zero point seven moles of oxygen.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S08.b04",
+   "start": 80.4,
+   "speech": 21.4097,
+   "audio": null,
+   "estimated": true,
+   "text": "Only the oxygen counts. Its volume is twenty point nine percent of the air: zero point two zero nine times eighty-five point zero litres gives seventeen point seven six five litres of oxygen. Because all the gases share the same conditions, a volume fraction is also a mole fraction here.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S08.b05",
+   "start": 102.2,
+   "speech": 16.9117,
+   "audio": null,
+   "estimated": true,
+   "text": "Then amount of oxygen equals seventeen point seven six five litres divided by twenty-four point eight litres per mole, which is zero point seven one six three moles, reported as zero point seven one six moles. That matches the prediction.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S08.b06",
+   "start": 119.4667,
+   "speech": 27.7966,
+   "audio": null,
+   "estimated": true,
+   "text": "Marks: three for the conversions, one for applying the oxygen fraction, and one for the amount of oxygen. The first trap is using the whole eighty-five litres as if it were oxygen, which gives three point four three moles. The second is treating cubic metres as millilitres, which makes the volume a million times too small. In both cases, the prediction would have warned you.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}

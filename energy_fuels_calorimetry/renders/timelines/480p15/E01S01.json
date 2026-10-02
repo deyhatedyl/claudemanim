@@ -1,0 +1,53 @@
+{
+ "scene": "E01S01",
+ "title": "Welcome and a retrieval check",
+ "cls": "E01S01_Welcome",
+ "fps": 15,
+ "duration": 92.5333,
+ "beats": [
+  {
+   "key": "E01S01.b01",
+   "start": 0.0,
+   "speech": 22.831,
+   "audio": null,
+   "estimated": true,
+   "text": "Welcome to this series on energy, fuels and calorimetry. Over these lessons we'll work out where the energy in a fuel comes from, how we measure it, and how to compare fuels fairly. Almost every calculation in the topic starts in the same place: with amounts in moles. So that's where we begin.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S01.b02",
+   "start": 23.2,
+   "speech": 16.8041,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's a quick check before we start. One flask holds one mole of hydrogen gas. Another holds one mole of water. Do they contain the same amount of substance? Do they have the same mass? Pause and decide.",
+   "overrun": 0.0,
+   "pause": 8.0,
+   "layout": []
+  },
+  {
+   "key": "E01S01.b03",
+   "start": 48.4667,
+   "speech": 25.9076,
+   "audio": null,
+   "estimated": true,
+   "text": "They contain the same amount: one mole each, so the same number of molecules. But the masses are very different. One mole of hydrogen gas has a mass of about two grams, while one mole of water has a mass of about eighteen grams. Same amount, different mass. Holding those two ideas apart is the first skill in this episode.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  },
+  {
+   "key": "E01S01.b04",
+   "start": 74.7333,
+   "speech": 16.8579,
+   "audio": null,
+   "estimated": true,
+   "text": "Here's the plan. We'll separate amount, mass, volume and concentration. Then we'll use three relationships that turn each of them into moles. We'll practise unit conversions, read a balanced equation as a recipe, and finish with two practice questions.",
+   "overrun": 0.0,
+   "pause": 0.0,
+   "layout": []
+  }
+ ]
+}
