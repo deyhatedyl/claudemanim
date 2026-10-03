@@ -28,7 +28,9 @@ def main():
     # Captions occupy the reserved lower strip and remain readable in players
     # that do not expose the MP4's optional soft-subtitle track.
     relative_caption = str(caption.relative_to(ROOT))
-    style = "FontName=Inter,FontSize=22,PrimaryColour=&H00F8F1EE,OutlineColour=&H001E110C,BorderStyle=1,Outline=1,Shadow=0,MarginV=18"
+    # libass uses its 288-high SRT reference canvas. At 1080p these values
+    # keep two lines inside the 169-pixel caption strip (SAFE_BOTTOM).
+    style = "FontName=Inter,FontSize=15,PrimaryColour=&H00F8F1EE,OutlineColour=&H001E110C,BorderStyle=1,Outline=1,Shadow=0,MarginV=10"
     subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-i", str(source), "-vf",
                            f"subtitles={relative_caption}:force_style='{style}'", "-an", "-sn",
                            "-c:v", "libx264", "-preset", "fast", "-crf", "19",
