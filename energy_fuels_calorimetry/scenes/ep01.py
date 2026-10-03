@@ -303,7 +303,7 @@ class E01S04_Ladder(NarratedScene):
         mass = hladder(["kg", "g", "mg"], ["1000", "1000"], color=MASS_C)
         energy = hladder(["MJ", "kJ", "J"], ["1000", "1000"], color=ENERGY_C)
         time_ = hladder(["h", "min", "s"], ["60", "60"], color=TEXT)
-        for lad_, y in [(mass, 2.10), (energy, 0.95), (time_, -1.05)]:
+        for lad_, y in [(mass, 2.10), (energy, 0.65), (time_, -1.05)]:
             lad_.move_to([2.7, y, 0])
         e_ex = T("72 000 J  =  72.0 kJ", size=LABEL, color=ENERGY_C).next_to(energy, DOWN, buff=0.15)
         t_ex = T("0.150 h  =  9.00 min  =  540 s", size=LABEL).next_to(time_, DOWN, buff=0.15)
@@ -645,17 +645,17 @@ class E01S08_Q02(NarratedScene):
 
         with self.beat("b04") as b:
             self.play(FadeOut(self.part_a), self.pg.animate.move_to([0, 1.80, 0]), run_time=0.7)
-            lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.45, 0])
+            lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.05, 0])
             bar_w = 9.0
             o2w = bar_w * 0.209
             o2 = Rectangle(width=o2w, height=0.7, fill_color=SYSTEM, fill_opacity=0.85, stroke_color=TEXT, stroke_width=2)
             rest = Rectangle(width=bar_w - o2w, height=0.7, fill_color=FAINT, fill_opacity=0.6, stroke_color=TEXT, stroke_width=2)
-            bar = VGroup(o2, rest).arrange(RIGHT, buff=0).move_to([0.2, 0.45, 0])
+            bar = VGroup(o2, rest).arrange(RIGHT, buff=0).move_to([0.2, 0.05, 0])
             o2l = T("O₂ 20.9%", size=SMALL, color=BG).move_to(o2)
             restl = T("other gases (inert here) 79.1%", size=SMALL).move_to(rest)
             total = T("85.0 L of air", size=LABEL).next_to(bar, UP, buff=0.1)
             self.play(FadeIn(lb), FadeIn(bar), FadeIn(total), FadeIn(o2l), FadeIn(restl), run_time=0.9)
-            calc = M(r"V(\ce{O2}) = 0.209 \times 85.0\ \text{L} = 17.765\ \text{L}", size=EQ_SMALL).move_to([0.2, -0.6, 0])
+            calc = M(r"V(\ce{O2}) = 0.209 \times 85.0\ \text{L} = 17.765\ \text{L}", size=EQ_SMALL).move_to([0.2, -0.75, 0])
             b.until(0.3)
             self.play(Write(calc), run_time=1.2)
             note = T("Same temperature and pressure for all the gases, so volume fraction = mole fraction.",
@@ -666,7 +666,8 @@ class E01S08_Q02(NarratedScene):
             self.calc, self.lb = calc, lb
 
         with self.beat("b05") as b:
-            self.play(FadeOut(self.bar_grp), self.calc.animate.move_to([0.2, 0.75, 0]), run_time=0.6)
+            self.play(FadeOut(self.bar_grp), self.calc.animate.move_to([0.2, 0.45, 0]),
+                      self.lb.animate.move_to([-6.2, 0.45, 0]), run_time=0.6)
             n1 = M(r"n(\ce{O2}) = \frac{V}{V_m} = \frac{17.765\ \text{L}}{24.8\ \text{L mol}^{-1}}", size=EQ_SMALL).next_to(self.calc, DOWN, buff=0.35)
             n2 = M(r"= 0.71633\ldots\ \text{mol} \approx 0.716\ \text{mol}", size=EQ_SMALL).next_to(n1, DOWN, buff=0.3)
             self.play(Write(n1), run_time=1.2)

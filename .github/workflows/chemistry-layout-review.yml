@@ -4,7 +4,12 @@ on:
   push:
     branches: [codex/chemistry-layout-20261003]
     paths:
-      - energy_fuels_calorimetry/**
+      - energy_fuels_calorimetry/scenes/ep0[123].py
+      - energy_fuels_calorimetry/scripts/ep0[123].md
+      - energy_fuels_calorimetry/shared/**
+      - energy_fuels_calorimetry/tools/**
+      - energy_fuels_calorimetry/questions/**
+      - energy_fuels_calorimetry/requirements.txt
       - .github/workflows/chemistry-layout-review.yml
   workflow_dispatch:
 
@@ -56,7 +61,7 @@ jobs:
           fi
       - name: Build visual review sheets
         if: always()
-        run: python tools/layout_report.py ${{ matrix.episode }} --tag 1080p30
+        run: python tools/layout_report.py ${{ matrix.episode }} --tag 1080p30 --strict
       - name: Save previews and checks
         if: always()
         uses: actions/upload-artifact@v4

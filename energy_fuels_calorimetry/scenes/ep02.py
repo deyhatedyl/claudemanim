@@ -525,6 +525,8 @@ class E02S07_Q04(NarratedScene):
             t2 = T("Every kilojoule the system absorbs comes from the surroundings.", size=LABEL + 2).move_to([0, 0.5, 0])
             t3 = VGroup(T("Twice the solute:", size=LABEL + 2), M(r"0.900\ \text{kJ}", size=EQ_SMALL - 2),
                         T("transferred, about twice the temperature drop (same calorimeter)", size=LABEL)).arrange(RIGHT, buff=0.2)
+            if t3.width > 12.8:
+                t3.scale(12.8 / t3.width)
             t3.move_to([0, -0.7, 0])
             self.play(Write(t1), run_time=1.0)
             self.play(FadeIn(t2), run_time=0.8)
