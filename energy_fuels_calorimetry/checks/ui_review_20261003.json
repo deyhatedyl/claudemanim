@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-03",
+  "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+  "branch": "codex/chemistry-layout-20261003",
+  "layout_review_run": 37091568251,
+  "preview_render_run": 37092538378,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "reference_match": "Inter text and equation letters/numerals; dark navy palette; compact section kicker; centered scene titles; colored pills; filled checklist badges; lighter outlines. Mathematical symbols use TeX symbol fonts.",
+  "scope": "E01\u2013E03 only. The previous 480p draft records do not verify the new UI in E04\u2013E14.",
+  "review_method": "Every exported beat-end frame inspected manually. Automatic checks cover frame edges, caption strip, title crowding and kicker/pill collisions; they do not prove all internal objects are separated.",
+  "episodes": {
+    "E01": {
+      "scenes": 9,
+      "beat_end_frames_inspected": 47,
+      "layout_flags": 0,
+      "visual_review": "pass",
+      "video_validation": "pass: 1920x1080 at 30 fps, one video stream, full FFmpeg decode without errors",
+      "duration_seconds": 1011.933333,
+      "video_file": "E01-Chemistry-SILENT-preview-1080p.mp4",
+      "sha256": "df8570d06edfdb087a67b6e188f9f0d08dd0449c911fe3eece74550d3386ab45",
+      "assembly_timing_problems": 0,
+      "caption_sample_bounds": [
+        940,
+        1040
+      ]
+    },
+    "E02": {
+      "scenes": 9,
+      "beat_end_frames_inspected": 47,
+      "layout_flags": 0,
+      "visual_review": "pass",
+      "video_validation": "pass: 1920x1080 at 30 fps, one video stream, full FFmpeg decode without errors",
+      "duration_seconds": 863.333333,
+      "video_file": "E02-Chemistry-SILENT-preview-1080p.mp4",
+      "sha256": "7c49e2e9f8917a5f319cd44c0504a1bdcd13ea02ec48fdb8d6b53eb0483c18f4",
+      "assembly_timing_problems": 0,
+      "caption_sample_bounds": [
+        940,
+        1040
+      ]
+    },
+    "E03": {
+      "scenes": 9,
+      "beat_end_frames_inspected": 42,
+      "layout_flags": 0,
+      "visual_review": "pass",
+      "video_validation": "pass: 1920x1080 at 30 fps, one video stream, full FFmpeg decode without errors",
+      "duration_seconds": 753.166667,
+      "video_file": "E03-Chemistry-SILENT-preview-1080p.mp4",
+      "sha256": "9c88b63650d572d4a5a3879c93ca9fa62a9498e010b36c6e93b12c4eae1136e9",
+      "assembly_timing_problems": 0,
+      "caption_sample_bounds": [
+        940,
+        1040
+      ]
+    }
+  },
+  "narration": "Not supplied. All timing is estimated; narration synchronization and narrated final QA remain pending.",
+  "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+  "caption_style": {
+    "font": "Inter",
+    "srt_reference_font_size": 15,
+    "srt_reference_vertical_margin": 10,
+    "max_lines": 2,
+    "final_mp4_caption_check": "pass: sampled two-line cues in all three exported MP4s remain below y=910"
+  },
+  "checks": {
+    "numerical_atom_balance_and_marks": {
+      "checks": 337,
+      "failures": 0
+    },
+    "script_lint": {
+      "episodes": 14,
+      "issues": 0
+    },
+    "preview_build": "all three GitHub Actions jobs passed"
+  }
+}

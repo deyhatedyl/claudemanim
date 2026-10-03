@@ -2,17 +2,62 @@
  "E01": {
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft (estimated timing). Every beat-end still inspected; layout defects fixed (clipped text S01/S02/S03, overlaps S04/S05/S06/S08). Automatic layout check: 0 warnings. Narration sync, pronunciation and final 1080p QA pending TTS access.",
-  "final_qa": "pending"
+  "final_qa": "pending",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-03",
+   "resolution": "1920x1080",
+   "fps": 30,
+   "scenes": 9,
+   "beat_end_frames_inspected": 47,
+   "geometry_flags": 0,
+   "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+   "record": "checks/ui_review_20261003.json",
+   "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+   "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+   "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+   "preview_render_run": 37092538378
+  }
  },
  "E02": {
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: exo/endo titles overlapping header, mispositioned 'energy in' arrow, magnet poles (now attract), \u0394H label overlap, long labels wrapped. Layout check: 0 warnings.",
-  "final_qa": "pending"
+  "final_qa": "pending",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-03",
+   "resolution": "1920x1080",
+   "fps": 30,
+   "scenes": 9,
+   "beat_end_frames_inspected": 47,
+   "geometry_flags": 0,
+   "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+   "record": "checks/ui_review_20261003.json",
+   "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+   "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+   "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+   "preview_render_run": 37092538378
+  }
  },
  "E03": {
   "draft_visual_qa": "pass",
   "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: profile label collisions (labels moved to arrow tops, legend for catalysed path, wider reactant flats), Q06 axes inside safe area, state-diagram arrow/label overlaps. Q06 profile drawn to scale from the question data (80/25/150/110). Layout check: 0 warnings.",
-  "final_qa": "pending"
+  "final_qa": "pending",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-03",
+   "resolution": "1920x1080",
+   "fps": 30,
+   "scenes": 9,
+   "beat_end_frames_inspected": 42,
+   "geometry_flags": 0,
+   "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+   "record": "checks/ui_review_20261003.json",
+   "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+   "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+   "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+   "preview_render_run": 37092538378
+  }
  },
  "E04": {
   "draft_visual_qa": "pass",

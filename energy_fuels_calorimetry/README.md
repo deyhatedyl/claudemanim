@@ -4,16 +4,19 @@ Production project for a 14-episode narrated video series (12 teaching episodes 
 following `brief/production_brief.md`. All practice questions (Q01–Q28) are original material written
 for this series; they are not official VCAA questions or marking schemes.
 
-**Current state: see `progress.json` (generated) and `logs/known_issues.md`.**
+**Current continuation: see `checks/ui_review_20261003.json` and `checks/qa_status.json`.**
+`progress.json` records the earlier 480p draft run and does not include the new CI preview artifacts.
 
-**Continuation prepared 3 October 2026:** the shared UI now follows the supplied reference
-contact sheets: Inter, a dark navy background, centered scene titles, a compact top-left section
-label, filled pills/checklist badges, and lighter outlines. Question cards are fitted below the
-title; graph height and several E01/E03 placements have been adjusted. Beat-level checks now
-include header crowding and kicker collisions, and can export every beat-end frame for review.
-These new visual changes **have not yet been rendered or visually verified**. The chemistry
-preview workflow renders E01–E03 and exports frames for review. Earlier render/QA status below
-describes the previously committed style, not this new one.
+**Continuation, 3 October 2026:** the shared UI follows the supplied reference contact sheets:
+Inter text and equation letters/numerals, dark navy, centered scene titles, compact section labels,
+filled pills/checklist badges and lighter outlines. Question cards and graphs fit below the title;
+long kickers leave room for the top-right pills. Internal label spacing was also reviewed.
+E01–E03 have been rendered at 1080p30 and all 136 beat-end frames inspected. Automatic checks
+report zero off-frame, caption-strip, header-crowding or kicker/pill flags across 27 scenes.
+Captioned silent MP4s are available from the chemistry preview workflow; two-line captions fit
+the reserved bottom strip. Narration remains pending; these are visual previews with estimated timing.
+E04–E14 have **not** been rendered or reviewed with this new shared style; their older QA below
+applies to the previously committed 480p drafts.
 
 * All 14 episodes are scripted (TTS-ready, 0 lint issues), built as Manim scenes and rendered as
   **silent 480p drafts with estimated timing**; every beat-end still has been inspected and the
@@ -22,7 +25,7 @@ describes the previously committed style, not this new one.
 * Learner documents are complete: `questions/worksheet.md`, `solutions/worked_solutions.md`,
   `solutions/formula_and_method_sheet.md`; plus `coverage_matrix.md` and `series_index.md`.
 * `checks/verify_anchors.py`: 337 independent numerical, atom-balance and marks checks, 0 failures.
-* **Not yet produced:** narration audio, narrated drafts, final 1080p30 renders and final captions.
+* **Not yet produced:** narration audio, narrated drafts, final narrated 1080p30 lessons and audio-aligned captions.
   The learner will supply manually generated narration; no TTS API key is required for this route.
   Nothing in `renders/draft/` is a finished lesson: silent drafts carry `SILENT-estimated-timing`
   in their names, and draft MP4s are git-ignored (regenerate with `tools/render.py`).
@@ -96,5 +99,5 @@ must never be used as an audio alignment.
 
 The prepared `.github/workflows/chemistry-previews.yml` renders only E01–E03 at 1080p30, exports
 review frames and geometry reports, and packages silent MP4s with visible captions. The workflow
-runs when changes are pushed to `codex/chemistry-layout-20261003`. Until those renders and the
-geometry/visual reviews are complete, no new episode should be described as checked or finished.
+runs when changes are pushed to `codex/chemistry-layout-20261003`. The first three visual previews have been reviewed; they remain silent drafts with estimated
+timing. Narrated final QA requires the learner's audio and re-rendering at measured beat durations.
