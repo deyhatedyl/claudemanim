@@ -6,6 +6,15 @@ for this series; they are not official VCAA questions or marking schemes.
 
 **Current state: see `progress.json` (generated) and `logs/known_issues.md`.**
 
+**Continuation prepared 3 October 2026:** the shared UI now follows the supplied reference
+contact sheets: Inter, a dark navy background, centered scene titles, a compact top-left section
+label, filled pills/checklist badges, and lighter outlines. Question cards are fitted below the
+title; graph height and several E01/E03 placements have been adjusted. Beat-level checks now
+include header crowding and kicker collisions, and can export every beat-end frame for review.
+These new visual changes **have not yet been rendered or visually verified**. The chemistry
+preview workflow renders E01–E03 and exports frames for review. Earlier render/QA status below
+describes the previously committed style, not this new one.
+
 * All 14 episodes are scripted (TTS-ready, 0 lint issues), built as Manim scenes and rendered as
   **silent 480p drafts with estimated timing**; every beat-end still has been inspected and the
   automatic layout check reports no off-frame or caption-strip content. Draft series runtime is about
@@ -14,7 +23,7 @@ for this series; they are not official VCAA questions or marking schemes.
   `solutions/formula_and_method_sheet.md`; plus `coverage_matrix.md` and `series_index.md`.
 * `checks/verify_anchors.py`: 337 independent numerical, atom-balance and marks checks, 0 failures.
 * **Not yet produced:** narration audio, narrated drafts, final 1080p30 renders and final captions.
-  Narration is blocked until a `GEMINI_API_KEY` is available in the environment (see `RESUME.md`).
+  The learner will supply manually generated narration; no TTS API key is required for this route.
   Nothing in `renders/draft/` is a finished lesson: silent drafts carry `SILENT-estimated-timing`
   in their names, and draft MP4s are git-ignored (regenerate with `tools/render.py`).
 
@@ -62,8 +71,30 @@ python tools/build_docs.py             # worksheet, worked solutions, coverage m
 
 ## Visual conventions
 
-Dark background, Noto Sans text, Computer Modern maths. Colour roles (always paired with a label,
+Dark navy background, Inter text and equation letters/numerals (XeLaTeX + mathastext; mathematical
+symbols use the available TeX symbol fonts). Colour roles (always paired with a label,
 arrow or line style): system = orange, calorimeter/surroundings = blue, useful energy = green solid,
 losses = red dashed, unknown = yellow box with "?"/"Asked" tag. Quantity chips: amount (mol) lavender,
 mass (g) teal, volume (L) light blue, concentration pink, energy amber. The bottom ~15% of the frame
 is kept clear for subtitles; every beat is checked automatically for off-frame or caption-strip content.
+
+## Manual narration and preview workflow
+
+```
+python tools/export_narration.py E01 E02 E03
+python tools/import_manual_audio.py --directory audio/manual --episodes E01 E02 E03
+MANIM_BIN=$(command -v manim) EXPORT_BEAT_STILLS=1 python tools/render.py E01 -q h
+python tools/layout_report.py E01 --tag 1080p30
+```
+
+The narration pack includes clean full-episode and per-scene text, optional per-beat text and one
+voice-direction file. Beat files import directly. Whole-scene/episode recordings require checked
+speech alignment first; `import_manual_audio.py --segments checked-alignment.json --episodes E01`
+imports those measured segments. An edit to the spoken script invalidates that beat's audio cache.
+Re-render with measured durations before assembling narrated lessons. Estimated preview timestamps
+must never be used as an audio alignment.
+
+The prepared `.github/workflows/chemistry-previews.yml` renders only E01–E03 at 1080p30, exports
+review frames and geometry reports, and packages silent MP4s with visible captions. The workflow
+runs when changes are pushed to `codex/chemistry-layout-20261003`. Until those renders and the
+geometry/visual reviews are complete, no new episode should be described as checked or finished.

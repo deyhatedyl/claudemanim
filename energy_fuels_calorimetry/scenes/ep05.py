@@ -20,9 +20,8 @@ SCALE = 1 / 330      # bar length (units) per kJ
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def seg(kj: float, color: str, label: str, h: float = 0.7) -> VGroup:
@@ -220,7 +219,7 @@ class E05S05_Basis(NarratedScene):
 class E05S06_Q09(NarratedScene):
     def construct(self):
         h = header("Practice Q09")
-        qc = question_card("Q09").move_to([0, 0.3, 0])
+        qc = question_card("Q09").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("one serving, in kJ and J")
@@ -329,7 +328,7 @@ class E05S07_WhichFood(NarratedScene):
 class E05S08_Q10(NarratedScene):
     def construct(self):
         h = header("Practice Q10")
-        qc = question_card("Q10").move_to([0, 0.3, 0])
+        qc = question_card("Q10").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
             bases = T("First: which two comparison bases?", size=LABEL + 2, color=UNKNOWN).next_to(qc, DOWN, buff=0.3)

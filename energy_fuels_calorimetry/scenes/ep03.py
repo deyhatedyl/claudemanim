@@ -20,9 +20,8 @@ CAT = "#5DD39E"   # catalysed path (always dashed + labelled)
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def flat(ax, y, x_from, x_to, color=TEXT, width=5):
@@ -233,11 +232,11 @@ class E03S04_Catalyst(NarratedScene):
 class E03S05_Q06(NarratedScene):
     def construct(self):
         h = header("Practice Q06")
-        card = question_card("Q06").move_to([0, 0.2, 0])
+        card = question_card("Q06").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
-        pa = profile_axes(y_max=175, y_step=25, numbers=True, width=6.2, height=4.4).move_to([-2.85, 0.1, 0])
+        pa = profile_axes(y_max=175, y_step=25, numbers=True, width=6.2, height=4.1).move_to([-2.85, -0.15, 0])
         ax = pa.ax
         R, P, TS, TSc = 80, 25, 150, 110
         c1 = profile_curve(ax, R, TS, P)
@@ -420,7 +419,7 @@ class E03S07_States(NarratedScene):
 class E03S08_Q05(NarratedScene):
     def construct(self):
         h = header("Practice Q05")
-        card = question_card("Q05").move_to([0, 0.3, 0])
+        card = question_card("Q05").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
         given = M(r"2\ce{H2(g)} + \ce{O2(g)} \ce{->} 2\ce{H2O(l)} \qquad \Delta H = -572\ \text{kJ}", size=EQ_SMALL - 2).move_to([0, 2.3, 0])

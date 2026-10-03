@@ -15,9 +15,8 @@ XM = 6.0                   # mark-box column
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def mbox(n: int = 1) -> VGroup:

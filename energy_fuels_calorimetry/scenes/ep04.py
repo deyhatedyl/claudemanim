@@ -20,9 +20,8 @@ BIO = "#7BE495"
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def card(title, lines, color, width=3.9):
@@ -371,7 +370,7 @@ class E04S06_Ethanol(NarratedScene):
 class E04S07_Q07(NarratedScene):
     def construct(self):
         h = header("Practice Q07")
-        qc = question_card("Q07").move_to([0, 0.3, 0])
+        qc = question_card("Q07").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         eq = M(r"\ce{C6H12O6(aq)} \ce{->} 2\ce{C2H5OH(aq)} + 2\ce{CO2(g)}", size=EQ_SMALL).move_to([0, 2.35, 0])
@@ -520,7 +519,7 @@ class E04S08_BiogasBiodiesel(NarratedScene):
 class E04S09_Q08(NarratedScene):
     def construct(self):
         h = header("Practice Q08")
-        qc = question_card("Q08").move_to([0, 0.3, 0])
+        qc = question_card("Q08").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         with self.beat("b02") as b:

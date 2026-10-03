@@ -26,9 +26,8 @@ assert abs(T_MIX - 26.3) < 1e-9
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def q21_plot(center=(-2.0, 0.1, 0), width=7.2, height=4.2):
@@ -180,7 +179,7 @@ class E11S04_Extrapolate(NarratedScene):
 class E11S05_Q21(NarratedScene):
     def construct(self):
         h = header("Practice Q21")
-        qc = question_card("Q21", size=SMALL + 2).move_to([0, 0.2, 0])
+        qc = question_card("Q21", size=SMALL + 2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("corrected heat; comparison")
@@ -513,7 +512,7 @@ class E11S10_Resolution(NarratedScene):
 class E11S11_Q22(NarratedScene):
     def construct(self):
         h = header("Practice Q22")
-        qc = question_card("Q22").move_to([0, 0.3, 0])
+        qc = question_card("Q22").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("reported vs corrected ΔH")

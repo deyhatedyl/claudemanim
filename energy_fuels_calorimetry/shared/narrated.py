@@ -22,6 +22,7 @@ NarratedScene: a Manim Scene whose timing is driven by narration beats.
 from __future__ import annotations
 
 import json
+import os
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -30,7 +31,7 @@ from manim import (DOWN, DR, LEFT, RIGHT, UP, UR, Create, FadeIn, FadeOut, Recta
 
 from . import config as C
 from .script_parser import load_scene
-from .style import BG, MUTED, SAFE_BOTTOM, TEXT, UNKNOWN, T
+from .style import BG, MUTED, SAFE_BOTTOM, TEXT, UNKNOWN, HEADER_GAP, T, set_section
 from .tts import cached_clip, estimate_duration, load_manifest
 
 
@@ -64,7 +65,7 @@ class _BeatTracker:
 class NarratedScene(Scene):
     SCENE_ID: str = ""
     PAUSE_LABELS: dict = {}     # beat name -> on-screen label for its scripted pause (default "Pause and think")
-    TIMER_CORNER = UR           # DR puts the timer in the caption strip, which is free during silent pauses
+    TIMER_CORNER = DR           # The caption strip is free during a silent thinking pause.
 
     def setup(self):
         self.camera.background_color = BG
@@ -78,6 +79,7 @@ class NarratedScene(Scene):
         text_dir.mkdir(parents=True, exist_ok=True)
         config.text_dir = str(text_dir)
         self._script = load_scene(sid)
+        set_section(sid, self._script.title)
         self._beats = {b.name: b for b in self._script.beats}
         self._order = [b.name for b in self._script.beats]
         self._used: list[str] = []
@@ -111,6 +113,11 @@ class NarratedScene(Scene):
                      estimated=est, text=beat.text, overrun=round(max(0.0, overrun), 3),
                      pause=beat.pause, layout=self.layout_problems())
         self._timeline.append(entry)
+        if os.environ.get("EXPORT_BEAT_STILLS") == "1":
+            out = C.ROOT / "checks" / "beat_stills" / f"{self.SCENE_ID[:3]}_{quality_tag()}"
+            out.mkdir(parents=True, exist_ok=True)
+            self.renderer.update_frame(self)
+            self.camera.get_image().save(out / f"{beat.key}.png")
         g = C.BEAT_GAP if gap is None else gap
         if g > 0:
             self.wait(g)
@@ -118,7 +125,7 @@ class NarratedScene(Scene):
             self.think_timer(beat.pause, self.PAUSE_LABELS.get(name, "Pause and think"))
 
     def think_timer(self, seconds: float, label: str = "Pause and think"):
-        """Silent reflection time with a small draining bar in the top-right corner."""
+        """Silent reflection time with a small draining bar in the chosen corner."""
         w = 2.6
         frame = RoundedRectangle(width=w, height=0.16, corner_radius=0.08, stroke_color=MUTED,
                                  stroke_width=2, fill_opacity=0)
@@ -138,8 +145,11 @@ class NarratedScene(Scene):
 
     # ------------------------------------------------------------ layout QA
     def layout_problems(self) -> list[str]:
-        """Objects outside the frame margins or inside the caption strip at the end of a beat."""
+        """Frame, caption, header and header-pill collisions at each completed beat."""
         out = []
+        family = [m for root in self.mobjects for m in root.get_family()]
+        headers = [m for m in family if getattr(m, "layout_role", None) == "header"]
+        header_ids = {id(m) for h in headers for m in h.get_family()}
         hw = config.frame_width / 2 - 0.15
         hh = config.frame_height / 2 - 0.05
         for m in self.mobjects:
@@ -154,6 +164,20 @@ class NarratedScene(Scene):
                 out.append(f"off-frame {label} x[{l:.2f},{r:.2f}] y[{bt:.2f},{tp:.2f}]")
             elif bt < SAFE_BOTTOM - 0.02:
                 out.append(f"caption-strip {label} bottom {bt:.2f}")
+            if id(m) in header_ids:
+                continue
+            if bt > 3.20:      # top-row metadata; it is never part of the content area
+                for h in headers:
+                    for k in h[:2]:
+                        if min(r, k.get_right()[0]) > max(l, k.get_left()[0]) and \
+                           min(tp, k.get_top()[1]) > max(bt, k.get_bottom()[1]):
+                            out.append(f"kicker-collision {label}")
+                continue
+            for h in headers:
+                title = h[2]
+                if min(r, title.get_right()[0]) > max(l, title.get_left()[0]) and \
+                   tp > title.get_bottom()[1] - HEADER_GAP:
+                    out.append(f"header-crowding {label} top {tp:.2f}; title bottom {title.get_bottom()[1]:.2f}")
         return out
 
     # ------------------------------------------------------------ helpers
@@ -172,6 +196,11 @@ class NarratedScene(Scene):
         missing = [n for n in self._order if n not in self._used]
         if missing:
             raise RuntimeError(f"{self.SCENE_ID}: beats never narrated: {missing}")
+        qa = C.ROOT / "checks" / "layout" / quality_tag()
+        qa.mkdir(parents=True, exist_ok=True)
+        (qa / f"{self.SCENE_ID}.json").write_text(json.dumps({
+            "scene": self.SCENE_ID, "beats": [dict(key=b["key"], layout=b["layout"]) for b in self._timeline]
+        }, indent=1))
         if not config.write_to_movie:      # still-image renders must not overwrite draft timelines
             return
         out = C.TIMELINES / quality_tag()

@@ -20,9 +20,8 @@ APP = "#95A5A6"
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def meter(letter, color):
@@ -271,7 +270,7 @@ class E09S05_Stack(NarratedScene):
 class E09S06_Q17a(NarratedScene):
     def construct(self):
         h = header("Practice Q17")
-        qc = question_card("Q17").move_to([0, 0.3, 0])
+        qc = question_card("Q17").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("CF, apparatus share, later heat")
@@ -447,7 +446,7 @@ class E09S09_HeatLoss(NarratedScene):
 class E09S10_Q18(NarratedScene):
     def construct(self):
         h = header("Practice Q18")
-        qc = question_card("Q18").move_to([0, 0.3, 0])
+        qc = question_card("Q18").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         nl = NumberLine(x_range=[300, 600, 50], length=10.0, include_numbers=True, color=TEXT,

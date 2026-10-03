@@ -20,9 +20,8 @@ from shared.style import (ATOM_COLORS, BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD,
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 TOK = re.compile(r"([A-Z][a-z]?)(\d*)")
@@ -269,7 +268,7 @@ class E06S04_Incomplete(NarratedScene):
 class E06S05_Q11(NarratedScene):
     def construct(self):
         h = header("Practice Q11")
-        qc = question_card("Q11").move_to([0, 0.3, 0])
+        qc = question_card("Q11").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         sk = M(r"\ce{C2H5OH}", "+", r"2.5\,\ce{O2}", r"\ce{->}", r"x\,\ce{CO2}", "+", r"y\,\ce{CO}", "+", r"z\,\ce{H2O}", size=EQ).move_to([0, 2.3, 0])
@@ -420,7 +419,7 @@ class E06S06_Exhaust(NarratedScene):
 class E06S07_Q12(NarratedScene):
     def construct(self):
         h = header("Practice Q12")
-        qc = question_card("Q12").move_to([0, 0.3, 0])
+        qc = question_card("Q12").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}", size=EQ_SMALL).move_to([0, 2.35, 0])

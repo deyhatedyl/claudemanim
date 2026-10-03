@@ -20,11 +20,8 @@ from shared.style import (BAD, BG, BODY, CONC_C, EQ, EQ_SMALL, ENERGY_C, FAINT, 
 
 
 def requested(text: str) -> VGroup:
-    """Top-right reminder of the requested quantity/unit (kept visible during a solution)."""
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    g = VGroup(c, t).arrange(RIGHT, buff=0.15)
-    return g.to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 # =====================================================================================
@@ -306,7 +303,7 @@ class E01S04_Ladder(NarratedScene):
         mass = hladder(["kg", "g", "mg"], ["1000", "1000"], color=MASS_C)
         energy = hladder(["MJ", "kJ", "J"], ["1000", "1000"], color=ENERGY_C)
         time_ = hladder(["h", "min", "s"], ["60", "60"], color=TEXT)
-        for lad_, y in [(mass, 2.35), (energy, 0.95), (time_, -1.05)]:
+        for lad_, y in [(mass, 2.10), (energy, 0.95), (time_, -1.05)]:
             lad_.move_to([2.7, y, 0])
         e_ex = T("72 000 J  =  72.0 kJ", size=LABEL, color=ENERGY_C).next_to(energy, DOWN, buff=0.15)
         t_ex = T("0.150 h  =  9.00 min  =  540 s", size=LABEL).next_to(time_, DOWN, buff=0.15)
@@ -469,7 +466,7 @@ class E01S06_Rounding(NarratedScene):
 class E01S07_Q01(NarratedScene):
     def construct(self):
         h = header("Practice Q01")
-        card = question_card("Q01").move_to([0, 0.15, 0])
+        card = question_card("Q01").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
@@ -606,7 +603,7 @@ class E01S07_Q01(NarratedScene):
 class E01S08_Q02(NarratedScene):
     def construct(self):
         h = header("Practice Q02")
-        card = question_card("Q02").move_to([0, 0.3, 0])
+        card = question_card("Q02").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
@@ -647,7 +644,7 @@ class E01S08_Q02(NarratedScene):
             self.pg = pg
 
         with self.beat("b04") as b:
-            self.play(FadeOut(self.part_a), self.pg.animate.move_to([0, 2.15, 0]), run_time=0.7)
+            self.play(FadeOut(self.part_a), self.pg.animate.move_to([0, 1.80, 0]), run_time=0.7)
             lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.45, 0])
             bar_w = 9.0
             o2w = bar_w * 0.209

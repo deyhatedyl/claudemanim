@@ -18,9 +18,8 @@ from shared.style import (BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL,
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def flow_arrows(center, r_in: float, r_out: float, inward: bool, color: str, n: int = 4, stroke: float = 6):
@@ -286,7 +285,7 @@ class E02S04_Bonds(NarratedScene):
 class E02S05_Q03(NarratedScene):
     def construct(self):
         h = header("Practice Q03")
-        card = question_card("Q03").move_to([0, 0.4, 0])
+        card = question_card("Q03").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
@@ -476,7 +475,7 @@ class E02S06_Enthalpy(NarratedScene):
 class E02S07_Q04(NarratedScene):
     def construct(self):
         h = header("Practice Q04")
-        card = question_card("Q04").move_to([0, 0.4, 0])
+        card = question_card("Q04").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 

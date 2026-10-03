@@ -18,9 +18,8 @@ from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HE
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def burner_rig(center=ORIGIN, scale=1.0):
@@ -253,7 +252,7 @@ class E08S05_MassLoss(NarratedScene):
 class E08S06_Q15(NarratedScene):
     def construct(self):
         h = header("Practice Q15")
-        qc = question_card("Q15").move_to([0, 0.3, 0])
+        qc = question_card("Q15").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("efficiency (%)")
@@ -360,7 +359,7 @@ class E08S07_Efficiency(NarratedScene):
 class E08S08_Q16(NarratedScene):
     def construct(self):
         h = header("Practice Q16")
-        qc = question_card("Q16").move_to([0, 0.3, 0])
+        qc = question_card("Q16").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("minimum fuel mass (g)")

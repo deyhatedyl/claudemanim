@@ -20,9 +20,8 @@ O2C, CH4C, INERT, CO2C = "#E74C3C", "#F5B041", "#7F8C8D", "#AEB6BF"
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def stream_bar(parts, width=8.0, h=0.6, y=0.0, x_left=-4.0):
@@ -235,7 +234,7 @@ class E07S04_MassCheck(NarratedScene):
 class E07S05_Q13(NarratedScene):
     def construct(self):
         h = header("Practice Q13")
-        qc = question_card("Q13").move_to([0, 0.3, 0])
+        qc = question_card("Q13").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         model = T("idealised: reacting ethanol burns completely; excess ethanol left unreacted", size=LABEL, color=MUTED).move_to([0, 2.5, 0])
@@ -474,7 +473,7 @@ class E07S09_NewVsInlet(NarratedScene):
 class E07S10_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
-        qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, 0.15, 0])
+        qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("limiting reactant; CH₄ left (g)")

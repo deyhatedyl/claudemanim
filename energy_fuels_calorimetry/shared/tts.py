@@ -40,6 +40,11 @@ def clip_hash(text: str, model: str | None = None, voice: str | None = None, sty
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def manual_text_hash(text: str) -> str:
+    """Manual audio follows the exact current script, independently of a TTS provider."""
+    return hashlib.sha256(" ".join(text.split()).encode()).hexdigest()
+
+
 def load_manifest() -> dict:
     if C.AUDIO_MANIFEST.exists():
         return json.loads(C.AUDIO_MANIFEST.read_text())
@@ -62,7 +67,13 @@ def cached_clip(beat_key: str, text: str, manifest: dict | None = None) -> dict 
     """Return the manifest entry if a clip for exactly this text/voice exists on disk."""
     manifest = manifest if manifest is not None else load_manifest()
     e = manifest.get(beat_key)
-    if not e or e.get("hash") != clip_hash(text):
+    if not e:
+        return None
+    if e.get("source") == "manual":
+        matches = e.get("text_hash") == manual_text_hash(text)
+    else:
+        matches = e.get("hash") == clip_hash(text)
+    if not matches:
         return None
     p = C.ROOT / e["path"]
     return e if p.exists() else None

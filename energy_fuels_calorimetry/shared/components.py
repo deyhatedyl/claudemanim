@@ -16,7 +16,7 @@ from manim import (DL, DOWN, DR, LEFT, ORIGIN, RIGHT, UL, UP, UR, Arrow, Circle,
                    RoundedRectangle, Text, VGroup, VMobject, WHITE)
 
 from .style import (ATOM_COLORS, BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD, LABEL, LOSS, MUTED, PANEL,
-                    SMALL, SYSTEM, TEXT, UNKNOWN, M, T, TB, chip, panel)
+                    SMALL, SYSTEM, TEXT, UNKNOWN, M, T, TB, chip, panel, fit_content)
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "questions"))
 from bank import BY_ID  # noqa: E402
@@ -24,17 +24,17 @@ from bank import BY_ID  # noqa: E402
 
 # ------------------------------------------------------------------ text layout
 @lru_cache(maxsize=4096)
-def _w(s: str, size: int) -> float:
-    return T(s, size=size).width
+def _w(s: str, size: int, weight: str = "NORMAL") -> float:
+    return T(s, size=size, weight=weight).width
 
 
-def wrap(s: str, size: int = LABEL, width: float = 11.5) -> list[str]:
+def wrap(s: str, size: int = LABEL, width: float = 11.5, weight: str = "NORMAL") -> list[str]:
     """Greedy word wrap using measured text widths. A number stays on the same line as its unit."""
     s = re.sub(r"(\d)\s+(kJ|MJ|J|g|kg|mg|mol|L|mL|°C|%|K|s|kPa)\b", "\\1\u00a0\\2", s)
     words, lines, cur = [w for w in s.split(" ") if w], [], ""
     for w in words:
         cand = (cur + " " + w).strip()
-        if cur and _w(cand, size) > width:
+        if cur and _w(cand, size, weight) > width:
             lines.append(cur)
             cur = w
         else:
@@ -46,7 +46,9 @@ def wrap(s: str, size: int = LABEL, width: float = 11.5) -> list[str]:
 
 def wrapped(s: str, size: int = LABEL, width: float = 11.5, color: str = TEXT, buff: float = 0.12,
             weight: str = "NORMAL") -> VGroup:
-    g = VGroup(*[T(l, size=size, color=color, weight=weight) for l in wrap(s, size, width)])
+    if weight == "NORMAL" and color not in (TEXT, MUTED, FAINT, BG):
+        weight = "SEMIBOLD"
+    g = VGroup(*[T(l, size=size, color=color, weight=weight) for l in wrap(s, size, width, weight)])
     return g.arrange(DOWN, aligned_edge=LEFT, buff=buff)
 
 
@@ -108,7 +110,7 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
         rows = VGroup(head, VGroup(body, sep, built))
         rows.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         bg = panel(rows, color=FAINT, buff=0.3)
-        return VGroup(bg, rows)
+        return fit_content(VGroup(bg, rows), max_height=4.9)
     if show_parts:
         pw = (width - 0.6) / cols
         built = VGroup()
@@ -145,7 +147,7 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
             rows.add(columns)
     rows.arrange(DOWN, aligned_edge=LEFT, buff=0.16 if tight else 0.22)
     bg = panel(rows, color=FAINT, buff=0.24 if tight else 0.3)
-    return VGroup(bg, rows)
+    return fit_content(VGroup(bg, rows), max_height=4.9)
 
 
 # ------------------------------------------------------------------ working lines
@@ -204,8 +206,8 @@ def mark_tally(rows: list[tuple[int, str]], size: int = LABEL, width: float = 7.
     head = TB(title, size=size + 2, color=GOOD)
     lines = VGroup()
     for mk, txt in rows:
-        box = RoundedRectangle(width=0.55, height=0.42, corner_radius=0.08, stroke_color=GOOD, stroke_width=2)
-        n = T(str(mk), size=size, color=GOOD).move_to(box)
+        box = Circle(radius=0.18, stroke_width=0, fill_color=GOOD, fill_opacity=1)
+        n = T(str(mk), size=min(size, 20), color=BG, weight="SEMIBOLD").move_to(box)
         body = wrapped(txt, size=size, width=width - 1.0)
         body.next_to(box, RIGHT, buff=0.22, aligned_edge=UP)
         lines.add(VGroup(VGroup(box, n), body))
@@ -448,8 +450,8 @@ def arrow_label(start, end, text: str, color: str = TEXT, size: int = SMALL, sid
 
 
 def number_badge(n: int | str, color: str = SYSTEM, size: int = LABEL) -> VGroup:
-    c = Circle(radius=0.24, stroke_color=color, stroke_width=3, fill_color=BG, fill_opacity=1)
-    return VGroup(c, TB(str(n), size=size, color=color).move_to(c))
+    c = Circle(radius=0.19, stroke_width=0, fill_color=GOOD, fill_opacity=1)
+    return VGroup(c, TB(str(n), size=min(size, 20), color=BG).move_to(c))
 
 
 def hladder(units: list[str], factors: list[str], color: str = TEXT, size: int = LABEL, box_w: float = 1.25,
@@ -640,11 +642,12 @@ def profile_axes(y_max: float = 175, y_step: float = 25, width: float = 7.0, hei
                  numbers: bool = True, y_label: str = "Enthalpy (kJ mol⁻¹)") -> VGroup:
     """Axes for an energy profile. x: reaction coordinate 0..10 (not time). Returns VGroup(axes, xlab, ylab)."""
     from manim import Axes
+    height = min(height, 4.20)
     ax = Axes(x_range=[0, 10, 1], y_range=[0, y_max, y_step], x_length=width, y_length=height,
-              axis_config=dict(color=TEXT, stroke_width=2.5, include_ticks=False, tip_length=0.18),
+              axis_config=dict(color=MUTED, stroke_width=1.3, include_ticks=False, tip_length=0.12),
               y_axis_config=dict(include_ticks=numbers, include_numbers=numbers,
                                  numbers_to_include=np.arange(0, y_max + 1, y_step) if numbers else [],
-                                 font_size=24, decimal_number_config=dict(num_decimal_places=0, color=MUTED)))
+                                 font_size=24, decimal_number_config=dict(num_decimal_places=0, color=MUTED, mob_class=Text)))
     xl = T("Reaction coordinate (not time)", size=SMALL, color=MUTED).next_to(ax.x_axis, DOWN, buff=0.18)
     yl = T(y_label, size=SMALL, color=MUTED).rotate(np.pi / 2).next_to(ax.y_axis, LEFT, buff=0.55 if numbers else 0.2)
     g = VGroup(ax, xl, yl)
@@ -726,9 +729,10 @@ def temp_axes(x_max: float = 400, x_step: float = 60, y_min: float = 20, y_max: 
               width: float = 8.0, height: float = 4.4, x_label: str = "Time (s)", y_label: str = "Temperature (°C)"):
     """Axes for temperature-time data. Returns VGroup(ax, xlab, ylab) with .ax set."""
     from manim import Axes
+    height = min(height, 4.0)
     ax = Axes(x_range=[0, x_max, x_step], y_range=[y_min, y_max, y_step], x_length=width, y_length=height,
-              axis_config=dict(color=TEXT, stroke_width=2.5, include_tip=False, font_size=22,
-                               decimal_number_config=dict(num_decimal_places=0, color=MUTED)),
+              axis_config=dict(color=MUTED, stroke_width=1.3, include_tip=False, font_size=22,
+                               decimal_number_config=dict(num_decimal_places=0, color=MUTED, mob_class=Text)),
               x_axis_config=dict(numbers_to_include=np.arange(0, x_max + 1, x_step)),
               y_axis_config=dict(numbers_to_include=np.arange(y_min, y_max + 0.01, y_step)))
     grid = VGroup(*[DashedLine(ax.c2p(0, y), ax.c2p(x_max, y), color=FAINT, stroke_width=1, dash_length=0.06)

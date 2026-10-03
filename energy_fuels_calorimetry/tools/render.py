@@ -71,10 +71,13 @@ def main():
     classes = episode_scenes(ep)
     if a.still is not None:
         sel = [c for c in classes if not a.still or c.split("_")[0] in a.still]
+        failures = []
         with cf.ThreadPoolExecutor(a.jobs) as ex:
             for cls, ok, dt, log in ex.map(lambda c: render_scene(ep, c, a.quality, True), sel):
                 print(f"{'OK ' if ok else 'ERR'} still {cls} {dt:.0f}s  {log}")
-        return
+                if not ok:
+                    failures.append(cls)
+        sys.exit(1 if failures else 0)
     if a.scenes:
         classes = [c for c in classes if c.split("_")[0] in a.scenes]
     failed = []

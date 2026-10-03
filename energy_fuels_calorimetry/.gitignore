@@ -5,3 +5,6 @@ logs/render_*.log
 __pycache__/
 *.pyc
 media/
+delivery/
+checks/beat_stills/
+checks/contact_sheets/

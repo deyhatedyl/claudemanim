@@ -20,9 +20,8 @@ ACID, BASE = "#F5B7B1", "#AED6F1"
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def cylinder(label, vol, conc, color, fill=0.6, h=2.2):
@@ -216,7 +215,7 @@ class E10S05_Falls(NarratedScene):
 class E10S06_Q19(NarratedScene):
     def construct(self):
         h = header("Practice Q19")
-        qc = question_card("Q19").move_to([0, 0.3, 0])
+        qc = question_card("Q19").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("ΔH per mol water")
@@ -360,7 +359,7 @@ class E10S08_Extent(NarratedScene):
 class E10S09_Q20(NarratedScene):
     def construct(self):
         h = header("Practice Q20")
-        qc = question_card("Q20", size=SMALL + 2, width=13.0, cols=2).move_to([0, 0.2, 0])
+        qc = question_card("Q20", size=SMALL + 2, width=13.0, cols=2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("final temperature")

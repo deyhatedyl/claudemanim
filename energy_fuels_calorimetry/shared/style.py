@@ -1,17 +1,13 @@
 """
 Visual conventions for the whole series.
 
-Measured on 1080p frames (see checks/font_metrics.md): Manim Text font_size f gives a cap
-height of about 1.34·f px and an em of about 1.875·f px. MathTex font_size f gives a cap height
-of about 0.96·f px.
+Inter text and equation letters/numerals are used throughout. Font sizes are Manim units;
+the previous Noto Sans/Computer Modern measurements do not describe this font setup.
+Render and inspect actual frames before treating the reference match as verified.
 
-  BODY  (Text 28)   cap ≈ 37 px, em ≈ 52 px      main explanatory text
-  LABEL (Text 22)   cap ≈ 29 px, em ≈ 41 px      supporting labels
-  SMALL (Text 20)   cap ≈ 27 px, em ≈ 37 px      minimum size used anywhere
-  EQ    (MathTex 46) cap ≈ 44 px                  main equations
-
-Layout: content stays inside x ∈ [-6.6, 6.6] and y ∈ [SAFE_BOTTOM, 3.1]. The strip below
-SAFE_BOTTOM (bottom ~15% of the frame) is reserved for subtitles.
+Layout: content stays inside x ∈ [-6.6, 6.6] and y ∈ [SAFE_BOTTOM, CONTENT_TOP]. Two rows
+above the content hold the section metadata and centered title. The strip below SAFE_BOTTOM
+(bottom ~15% of the frame) is reserved for subtitles.
 
 Colour roles (always reinforced by a label, arrow or line style, never colour alone):
   SYSTEM   reacting chemicals / the system              solid orange outlines
@@ -23,50 +19,68 @@ Colour roles (always reinforced by a label, arrow or line style, never colour al
 """
 from __future__ import annotations
 
-from manim import (DL, DOWN, DR, LEFT, RIGHT, UL, UP, BackgroundRectangle, DashedLine, Line, MarkupText, MathTex,
+import re
+
+from manim import (DL, DOWN, DR, LEFT, RIGHT, UL, UP, UR, BackgroundRectangle, DashedLine, Line, MarkupText, MathTex,
                    RoundedRectangle, SurroundingRectangle, Tex, TexTemplate, Text, VGroup)
 
-FONT = "Noto Sans"
+FONT = "Inter"
+Text.set_default(font=FONT)
 
-BG = "#0E1117"
-PANEL = "#1A202B"
-TEXT = "#ECEFF4"
-MUTED = "#AAB2C0"
-FAINT = "#5C6573"
+BG = "#0C111E"
+PANEL = "#141C2C"
+TEXT = "#EEF1F8"
+MUTED = "#8B98AB"
+FAINT = "#566276"
 
-SYSTEM = "#FF9F43"
-SURR = "#54A0FF"
-USEFUL = "#2ECC71"
-LOSS = "#FF6B6B"
-UNKNOWN = "#FFE066"
-GOOD = "#7BE495"
-BAD = "#FF7B7B"
+SYSTEM = "#FF9566"
+SURR = "#59B6F4"
+USEFUL = "#64DA9A"
+LOSS = "#FF5578"
+UNKNOWN = "#FFCE60"
+GOOD = "#64DA9A"
+BAD = "#FF5578"
 
-MOL_C = "#C39BD3"     # amount, mol
-MASS_C = "#48C9B0"    # mass, g
-VOL_C = "#7FB3F5"     # volume, L
-CONC_C = "#F5A6C8"    # concentration, mol L^-1
-ENERGY_C = "#F8C471"  # energy, J / kJ
-TEMP_C = "#F1948A"    # temperature, °C
+MOL_C = "#B38BFF"     # amount, mol
+MASS_C = "#49D4AC"    # mass, g
+VOL_C = SURR          # volume, L
+CONC_C = "#F173A5"    # concentration, mol L^-1
+ENERGY_C = UNKNOWN    # energy, J / kJ
+TEMP_C = SYSTEM       # temperature, °C
 
 # atoms (CPK-like, but readable on a dark background; every atom also carries its symbol)
 ATOM_COLORS = {"C": "#5D6D7E", "H": "#F4F6F7", "O": "#E74C3C", "N": "#3498DB", "Cl": "#2ECC71",
                "Na": "#AF7AC5", "S": "#F4D03F"}
 
-BODY, LABEL, SMALL, HEAD = 28, 22, 20, 34
+BODY, LABEL, SMALL, HEAD = 28, 22, 20, 36
 EQ, EQ_SMALL = 46, 38
 SAFE_BOTTOM = -2.75
 X_LIMIT = 6.6
 TOP_Y = 3.1
+CONTENT_TOP = 2.55
+HEADER_GAP = 0.12
+_SECTION_ID = ""
+_SECTION_TITLE = "VCE Chemistry"
 
-TEMPLATE = TexTemplate()
-TEMPLATE.add_to_preamble(r"\usepackage{amsmath}\usepackage{amssymb}\usepackage[version=4]{mhchem}"
-                         r"\usepackage{siunitx}\sisetup{per-mode=power,inter-unit-product=\,}")
+
+def set_section(scene_id: str, title: str):
+    global _SECTION_ID, _SECTION_TITLE
+    _SECTION_ID, _SECTION_TITLE = scene_id, title
+
+TEMPLATE = TexTemplate(
+    tex_compiler="xelatex", output_format=".xdv",
+    preamble=r"\usepackage{amsmath}\usepackage{amssymb}\usepackage{fontspec}"
+             r"\setmainfont{Inter}\setsansfont{Inter}"
+             r"\usepackage{mathastext}\usepackage[version=4]{mhchem}"
+             r"\usepackage{siunitx}\sisetup{per-mode=power,inter-unit-product=\,}",
+)
 
 
 def T(s: str, size: int = BODY, color: str = TEXT, weight: str = "NORMAL", **kw) -> Text:
-    """Plain text. size is Manim Text font_size (see module docstring for pixel equivalents).
+    """Plain text. size is Manim Text font_size.
     'ΔH_c' (as written in the question bank) is drawn with a real subscript c."""
+    if weight == "NORMAL" and color not in (TEXT, MUTED, FAINT, BG):
+        weight = "SEMIBOLD"
     if "H_c" in s:
         mk = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("H_c", "H<sub>c</sub>")
         return MarkupText(mk, font=FONT, font_size=size, color=color, weight=weight, **kw)
@@ -74,7 +88,7 @@ def T(s: str, size: int = BODY, color: str = TEXT, weight: str = "NORMAL", **kw)
 
 
 def TB(s: str, size: int = BODY, color: str = TEXT, **kw) -> Text:
-    return T(s, size=size, color=color, weight="BOLD", **kw)
+    return T(s, size=size, color=color, weight="SEMIBOLD", **kw)
 
 
 def M(*s: str, size: int = EQ, color: str = TEXT, **kw) -> MathTex:
@@ -96,22 +110,54 @@ def para(lines: list[str] | str, size: int = BODY, color: str = TEXT, buff: floa
     return g
 
 
-def header(title: str, kicker: str | None = None) -> VGroup:
-    """Scene title in the top-left with an underline; optional small kicker (e.g. 'Episode 01')."""
-    t = TB(title, size=HEAD)
-    parts = [t]
-    if kicker:
-        k = T(kicker, size=SMALL, color=MUTED)
-        parts = [k, t]
-    g = VGroup(*parts).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
-    g.to_corner(UL, buff=0.38)
-    ul = Line(t.get_corner(DL), t.get_corner(DR), color=SYSTEM, stroke_width=3).shift(0.1 * DOWN)
-    g.add(ul)
+def header(title: str, kicker: str | None = None, color: str | None = None) -> VGroup:
+    """Two fixed rows: the kicker shares the top row with the Asked pill.
+
+    The title has its own full-width row. Its underline is always above the
+    content area, including for long titles. This removes the old coupling
+    between title height, question-card placement and the top-right reminder.
+    """
+    color = color or (SYSTEM if title.startswith("Practice") or re.match(r"Q\d+", title)
+                      else GOOD if title == "Recap" else TEXT)
+    t = TB(title, size=HEAD, color=color)
+    if t.width > 12.8:
+        t.scale(12.8 / t.width)
+    t.move_to([0, 3.03, 0])
+    section = re.match(r"E(\d+)S(\d+)", _SECTION_ID)
+    num = f"{int(section[1])} · {int(section[2])}" if section else "VCE"
+    n = TB(num, size=18, color=SYSTEM).move_to([-6.62, 3.57, 0], aligned_edge=LEFT)
+    k = T((kicker or _SECTION_TITLE).upper(), size=15, color=MUTED)
+    if k.width > 5.7:
+        k.scale(5.7 / k.width)
+    k.move_to([-5.87, 3.57, 0], aligned_edge=LEFT)
+    ul = Line([-6.62, 3.32, 0], [-6.08, 3.32, 0], color=SYSTEM, stroke_width=1.2)
+    g = VGroup(n, k, t, ul)
+    g.layout_role = "header"
+    return g
+
+
+def fit_content(mob, max_width: float = 12.9, max_height: float | None = None):
+    """Fit a complete component as a unit, preserving its internal layout."""
+    max_height = max_height or (CONTENT_TOP - SAFE_BOTTOM - 0.16)
+    factor = min(1.0, max_width / max(mob.width, 1e-9), max_height / max(mob.height, 1e-9))
+    if factor < 1.0:
+        mob.scale(factor)
+    return mob
+
+
+def asked_pill(text: str) -> VGroup:
+    """One reserved top-right row, separate from the title and the kicker."""
+    c = chip("Asked", UNKNOWN)
+    t = T(text, size=SMALL + 2, color=UNKNOWN)
+    g = VGroup(c, t).arrange(RIGHT, buff=0.15)
+    fit_content(g, max_width=6.3, max_height=0.32)
+    g.to_corner(UR, buff=0.25)
+    g.layout_role = "header-pill"
     return g
 
 
 def panel(mob, color: str = FAINT, buff: float = 0.25, fill: str = PANEL, opacity: float = 0.92,
-          corner: float = 0.18, stroke: float = 2) -> RoundedRectangle:
+          corner: float = 0.12, stroke: float = 1.2) -> RoundedRectangle:
     r = RoundedRectangle(width=mob.width + 2 * buff, height=mob.height + 2 * buff, corner_radius=corner,
                          stroke_color=color, stroke_width=stroke, fill_color=fill, fill_opacity=opacity)
     r.move_to(mob)
@@ -125,7 +171,7 @@ def boxed(mob, color: str = UNKNOWN, buff: float = 0.14) -> SurroundingRectangle
 def chip(label: str, color: str, size: int = SMALL) -> VGroup:
     """Small rounded tag such as [mol] or [g]."""
     t = T(label, size=size, color=BG, weight="BOLD")
-    r = RoundedRectangle(width=t.width + 0.3, height=t.height + 0.2, corner_radius=0.12,
+    r = RoundedRectangle(width=t.width + 0.30, height=t.height + 0.15, corner_radius=0.13,
                          stroke_width=0, fill_color=color, fill_opacity=1)
     r.move_to(t)
     return VGroup(r, t)

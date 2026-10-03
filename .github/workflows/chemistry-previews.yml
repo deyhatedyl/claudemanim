@@ -1,0 +1,73 @@
+name: Chemistry episode previews
+
+on:
+  push:
+    branches: [codex/chemistry-layout-20261003]
+    paths:
+      - energy_fuels_calorimetry/**
+      - .github/workflows/chemistry-previews.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chemistry-previews-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  EXPORT_BEAT_STILLS: '1'
+  RENDER_MODE: previews
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        episode: [E01, E02, E03]
+    defaults:
+      run:
+        working-directory: energy_fuels_calorimetry
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install render dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends ffmpeg libcairo2-dev libpango1.0-dev pkg-config dvisvgm texlive-xetex texlive-latex-extra texlive-science texlive-fonts-recommended fonts-inter fonts-dejavu fonts-noto-core
+          python -m pip install -r requirements.txt
+          echo "MANIM_BIN=$(command -v manim)" >> "$GITHUB_ENV"
+          fc-match Inter
+      - name: Verify chemistry and spoken scripts
+        run: |
+          python checks/verify_anchors.py
+          python tools/lint_scripts.py
+      - name: Render episode
+        run: |
+          if [ "$RENDER_MODE" = stills ]; then
+            python tools/render.py ${{ matrix.episode }} -q h --still --jobs 3
+          else
+            python tools/render.py ${{ matrix.episode }} -q h --jobs 3
+            python tools/package_preview.py ${{ matrix.episode }}
+          fi
+      - name: Build visual review sheets
+        if: always()
+        run: python tools/layout_report.py ${{ matrix.episode }} --tag 1080p30
+      - name: Save previews and checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chemistry-${{ matrix.episode }}-${{ github.run_number }}
+          compression-level: 1
+          retention-days: 14
+          path: |
+            energy_fuels_calorimetry/delivery/${{ matrix.episode }}
+            energy_fuels_calorimetry/checks/contact_sheets/${{ matrix.episode }}_1080p30
+            energy_fuels_calorimetry/checks/layout/1080p30/${{ matrix.episode }}*.json
+            energy_fuels_calorimetry/logs/render_${{ matrix.episode }}*.log
+            energy_fuels_calorimetry/logs/assemble_${{ matrix.episode }}*.json
+            energy_fuels_calorimetry/renders/timelines/1080p30/${{ matrix.episode }}*.json

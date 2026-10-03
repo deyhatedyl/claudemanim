@@ -22,9 +22,8 @@ CO2E = "#AEB6BF"
 
 
 def requested(text: str) -> VGroup:
-    c = chip("Asked", UNKNOWN)
-    t = T(text, size=SMALL + 2, color=UNKNOWN)
-    return VGroup(c, t).arrange(RIGHT, buff=0.15).to_corner(UR, buff=0.4)
+    from shared.style import asked_pill
+    return asked_pill(text)
 
 
 def hbars(rows, scale, x_left=-2.4, y0=0.0, gap=0.6, h=0.42, fmt="{:.0f}", unit=""):
@@ -217,7 +216,7 @@ class E12S05_Normalise(NarratedScene):
 class E12S06_Q23(NarratedScene):
     def construct(self):
         h = header("Practice Q23")
-        qc = question_card("Q23").move_to([0, 0.3, 0])
+        qc = question_card("Q23").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("per 1.00 MJ useful heat")
@@ -435,7 +434,7 @@ class E12S10_Sustainable(NarratedScene):
 class E12S11_Q24(NarratedScene):
     def construct(self):
         h = header("Practice Q24")
-        qc = question_card("Q24", size=SMALL + 1, width=13.0, cols=2).move_to([0, 0.2, 0])
+        qc = question_card("Q24", size=SMALL + 1, width=13.0, cols=2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         rows = [["per kg ethanol", "Process A", "Process B"],
