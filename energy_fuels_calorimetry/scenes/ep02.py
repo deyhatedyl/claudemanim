@@ -92,7 +92,7 @@ class E02S02_System(NarratedScene):
         sys_sub = T("the reacting chemicals", size=LABEL, color=SYSTEM)
         sg = VGroup(sys_lab, sys_sub).arrange(DOWN, aligned_edge=LEFT, buff=0.06).move_to([1.4, 1.4, 0]).align_to([0.4, 0, 0], LEFT)
         sur_lab = TB("Surroundings", size=BODY, color=SURR)
-        sur_sub = T("everything else: water, cup, thermometer, air", size=LABEL, color=SURR)
+        sur_sub = wrapped("everything else: water, cup, thermometer, air", size=LABEL, width=5.7, color=SURR)
         ug = VGroup(sur_lab, sur_sub).arrange(DOWN, aligned_edge=LEFT, buff=0.06).move_to([1.4, 0.0, 0]).align_to([0.4, 0, 0], LEFT)
         p1 = Line(sg.get_left() + 0.1 * LEFT, cal.system.get_right() + 0.05 * RIGHT, color=SYSTEM, stroke_width=2)
         p2 = Line(ug.get_left() + 0.1 * LEFT, cal.water.get_right() + 0.3 * LEFT + 0.2 * DOWN, color=SURR, stroke_width=2)
@@ -482,7 +482,7 @@ class E02S07_Q04(NarratedScene):
         cal = calorimeter(width=3.0, height=2.6, system=True).move_to([-4.3, 0.2, 0])
         cal.thermo.level.set_value(0.6)
         inA = flow_arrows(cal.system.get_center(), 0.55, 1.05, inward=True, color=SURR, stroke=5)
-        lab = T("endothermic: energy into the system", size=LABEL, color=SURR).next_to(cal, DOWN, buff=0.3)
+        lab = wrapped("endothermic: energy into the system", size=LABEL, width=4.8, color=SURR).next_to(cal, DOWN, buff=0.3)
         with self.beat("b02") as b:
             self.play(FadeOut(card), FadeIn(cal), run_time=0.8)
             self.play(LaggedStart(*[GrowArrow(a) for a in inA], lag_ratio=0.15), run_time=1.0)
@@ -536,7 +536,7 @@ class E02S07_Q04(NarratedScene):
 class E02S08_Oxygen(NarratedScene):
     def construct(self):
         h = header("Oxygen counts too")
-        eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}", size=EQ).move_to([0, 2.45, 0])
+        eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}", size=EQ).move_to([0, 2.20, 0])
         led = ledger([("4 × C–H", ""), ("2 × O=O", "")], [("2 × C=O", ""), ("4 × O–H", "")],
                      "energy in", "energy out", width=5.0).move_to([0, 0.05, 0])
         with self.beat("b01") as b:
@@ -564,8 +564,8 @@ class E02S08_Oxygen(NarratedScene):
         for n_, o_, m_ in zip(names, oxn, ms):
             n_.next_to(m_, DOWN, buff=0.3)
             o_.next_to(n_, DOWN, buff=0.12)
-        more = Arrow([-4.5, 2.3, 0], [4.5, 2.3, 0], buff=0, color=SYSTEM, stroke_width=4)
-        more_t = T("more oxidised  →", size=LABEL, color=SYSTEM).next_to(more, UP, buff=0.08)
+        more = Arrow([-4.5, 2.08, 0], [4.5, 2.08, 0], buff=0, color=SYSTEM, stroke_width=4)
+        more_t = T("more oxidised  →", size=SMALL + 1, color=SYSTEM).next_to(more, UP, buff=0.08)
         with self.beat("b03") as b:
             self.play(FadeOut(led), FadeOut(self.extra), FadeOut(eq), run_time=0.6)
             self.play(GrowArrow(more), FadeIn(more_t), run_time=0.6)

@@ -177,7 +177,7 @@ class E01S02_Labels(NarratedScene):
 class E01S03_ThreeRoutes(NarratedScene):
     def construct(self):
         h = header("Three routes to amount in moles")
-        ys = [2.2, 0.8, -0.6]
+        ys = [1.93, 0.65, -0.6]
 
         def row_label(text, color, y):
             return TB(text, size=LABEL + 2, color=color).move_to([-5.2, y, 0])
@@ -486,8 +486,8 @@ class E01S07_Q01(NarratedScene):
             pred = VGroup(TB("Predict first", size=LABEL + 2, color=UNKNOWN),
                           T("1 mol of ethanol = 46.0 g;  we have only 0.345 g", size=LABEL),
                           T("so expect much less than 1 mol: roughly 0.01 mol", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
-            pb = panel(pred, color=UNKNOWN)
-            pg = VGroup(pb, pred).move_to([0, 1.9, 0])
+            pb = panel(pred, color=UNKNOWN, buff=0.20)
+            pg = VGroup(pb, pred).move_to([0, 1.65, 0])
             self.play(FadeIn(pb), FadeIn(pred[0]), run_time=0.6)
             self.play(FadeIn(pred[1]), run_time=0.7)
             b.until(0.6)
@@ -495,7 +495,7 @@ class E01S07_Q01(NarratedScene):
             self.pg = pg
 
         with self.beat("b04") as b:
-            la = TB("a.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.45, 0])
+            la = TB("a.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.30, 0])
             w = VGroup(M(r"n(\text{ethanol})", "=", r"\frac{m}{M}", size=EQ_SMALL),
                        M(r"\phantom{n(\text{ethanol})}", "=", r"\frac{0.345\ \text{g}}{46.0\ \text{g mol}^{-1}}", size=EQ_SMALL),
                        M(r"\phantom{n(\text{ethanol})}", "=", r"\quad 0.00750\ \text{mol}", size=EQ_SMALL))
@@ -514,7 +514,7 @@ class E01S07_Q01(NarratedScene):
             self.part_a = VGroup(la, w, rb, chk)
 
         with self.beat("b05") as b:
-            lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([0.6, 0.45, 0])
+            lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([0.6, 0.30, 0])
             v = VGroup(M(r"V = 186\ \text{mL} \div 1000 = 0.186\ \text{L}", size=EQ_SMALL - 2, color=VOL_C),
                        M(r"n = \frac{V}{V_m} = \frac{0.186\ \text{L}}{24.8\ \text{L mol}^{-1}}", size=EQ_SMALL - 2),
                        M(r"= 0.00750\ \text{mol}", size=EQ_SMALL - 2)).arrange(DOWN, buff=0.25, aligned_edge=LEFT)

@@ -134,7 +134,7 @@ class E03S03_Activation(NarratedScene):
                        T("every one is a difference", size=LABEL, color=MUTED)).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
         for r_ in rules:
             r_.scale(0.9)
-        rules.move_to([4.6, 0.9, 0]).align_to([3.0, 0, 0], LEFT)
+        rules.move_to([4.6, 0.9, 0]).align_to([2.7, 0, 0], LEFT)
         with self.beat("b04") as b:
             self.play(GrowArrow(dh[0]), FadeIn(dh[1]), run_time=0.8)
             for i in range(3):
@@ -394,7 +394,7 @@ class E03S07_States(NarratedScene):
                          DashedLine([-1.9, gas, 0], [0.75, gas, 0], color=FAINT, stroke_width=1.5))
             self.play(Create(ext), run_time=0.4)
             vap = Arrow([0.6, liq, 0], [0.6, gas, 0], buff=0, color=SURR, stroke_width=5, max_tip_length_to_length_ratio=0.35)
-            vt = T("vaporisation absorbs ≈ 44 kJ per mol (25 °C)", size=SMALL + 1, color=SURR).move_to([3.9, 0.6, 0])
+            vt = T("vaporisation absorbs ≈ 44 kJ per mol (25 °C)", size=SMALL + 1, color=SURR).move_to([3.5, 0.6, 0])
             vt2 = T("2 mol: ≈ 88 kJ", size=SMALL + 1, color=SURR).next_to(vt, DOWN, buff=0.1)
             self.play(GrowArrow(vap), run_time=0.6)
             b.until(0.4)

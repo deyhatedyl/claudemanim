@@ -69,7 +69,7 @@ def set_section(scene_id: str, title: str):
 
 TEMPLATE = TexTemplate(
     tex_compiler="xelatex", output_format=".xdv",
-    preamble=r"\usepackage{amsmath}\usepackage{amssymb}\usepackage{fontspec}"
+    preamble=r"\usepackage{amsmath}\usepackage{amssymb}\usepackage[no-math]{fontspec}"
              r"\setmainfont{Inter}\setsansfont{Inter}"
              r"\usepackage{mathastext}\usepackage[version=4]{mhchem}"
              r"\usepackage{siunitx}\sisetup{per-mode=power,inter-unit-product=\,}",

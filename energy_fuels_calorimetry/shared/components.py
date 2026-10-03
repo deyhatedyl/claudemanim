@@ -644,10 +644,11 @@ def profile_axes(y_max: float = 175, y_step: float = 25, width: float = 7.0, hei
     from manim import Axes
     height = min(height, 4.20)
     ax = Axes(x_range=[0, 10, 1], y_range=[0, y_max, y_step], x_length=width, y_length=height,
-              axis_config=dict(color=MUTED, stroke_width=1.3, include_ticks=False, tip_length=0.12),
+              axis_config=dict(color=MUTED, stroke_width=1.3, include_ticks=False, tip_length=0.12,
+                               label_constructor=Text),
               y_axis_config=dict(include_ticks=numbers, include_numbers=numbers,
                                  numbers_to_include=np.arange(0, y_max + 1, y_step) if numbers else [],
-                                 font_size=24, decimal_number_config=dict(num_decimal_places=0, color=MUTED, mob_class=Text)))
+                                 font_size=24, decimal_number_config=dict(num_decimal_places=0, color=MUTED)))
     xl = T("Reaction coordinate (not time)", size=SMALL, color=MUTED).next_to(ax.x_axis, DOWN, buff=0.18)
     yl = T(y_label, size=SMALL, color=MUTED).rotate(np.pi / 2).next_to(ax.y_axis, LEFT, buff=0.55 if numbers else 0.2)
     g = VGroup(ax, xl, yl)
@@ -732,7 +733,8 @@ def temp_axes(x_max: float = 400, x_step: float = 60, y_min: float = 20, y_max: 
     height = min(height, 4.0)
     ax = Axes(x_range=[0, x_max, x_step], y_range=[y_min, y_max, y_step], x_length=width, y_length=height,
               axis_config=dict(color=MUTED, stroke_width=1.3, include_tip=False, font_size=22,
-                               decimal_number_config=dict(num_decimal_places=0, color=MUTED, mob_class=Text)),
+                               label_constructor=Text,
+                               decimal_number_config=dict(num_decimal_places=0, color=MUTED)),
               x_axis_config=dict(numbers_to_include=np.arange(0, x_max + 1, x_step)),
               y_axis_config=dict(numbers_to_include=np.arange(y_min, y_max + 0.01, y_step)))
     grid = VGroup(*[DashedLine(ax.c2p(0, y), ax.c2p(x_max, y), color=FAINT, stroke_width=1, dash_length=0.06)
