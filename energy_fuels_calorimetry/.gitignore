@@ -6,5 +6,12 @@ __pycache__/
 *.pyc
 media/
 delivery/
+# Manually supplied recordings and their derived timing/media stay local.
+audio/
+captions/
+renders/final/*.mp4
+renders/timelines/
+checks/layout/
+logs/assemble_*.json
 checks/beat_stills/
 checks/contact_sheets/

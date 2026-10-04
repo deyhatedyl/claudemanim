@@ -93,10 +93,26 @@ def fmt_ts(t: float, sep: str = ",") -> str:
     return f"{h:02d}:{m:02d}:{s:02d}{sep}{ms:03d}"
 
 
-def build_cues(beats_abs: list[dict]) -> list[tuple[float, float, str]]:
+def build_cues(beats_abs: list[dict], word_timings: dict | None = None) -> list[tuple[float, float, str]]:
     cues = []
     for b in beats_abs:
         chunks = chunk_text(b["text"])
+        if word_timings is not None:
+            words = word_timings[b["key"]]
+            if [w["word"] for w in words] != b["text"].split():
+                raise ValueError(f"{b['key']}: caption alignment does not match narration")
+            cursor = 0
+            for c in chunks:
+                selected = words[cursor:cursor + len(c.split())]
+                if [w["word"] for w in selected] != c.split():
+                    raise ValueError(f"{b['key']}: caption chunk has incomplete word coverage")
+                s = b["abs_start"] + max(0, selected[0]["start"] - 0.06)
+                e = b["abs_start"] + min(b["speech"], selected[-1]["end"] + 0.15)
+                if e <= s:
+                    raise ValueError(f"{b['key']}: invalid aligned caption interval")
+                cues.append((s, e, two_lines(c)))
+                cursor += len(selected)
+            continue
         total = sum(len(c) for c in chunks)
         t = b["abs_start"]
         for c in chunks:
@@ -129,6 +145,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episode")
     ap.add_argument("-q", "--quality", default="l", choices=QUALITY)
+    ap.add_argument("--word-timings", type=Path,
+                    help="Optional local word alignment JSON for measured caption timing")
     a = ap.parse_args()
     ep = a.episode.upper()
     tag = QUALITY[a.quality][1]
@@ -182,7 +200,8 @@ def main():
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
     cap_base.parent.mkdir(parents=True, exist_ok=True)
 
-    cues = build_cues(beats_abs)
+    word_timings = json.loads(a.word_timings.read_text()) if a.word_timings else None
+    cues = build_cues(beats_abs, word_timings)
     srt, vtt = cap_base.with_suffix(".srt"), cap_base.with_suffix(".vtt")
     write_srt(srt, cues)
     write_vtt(vtt, cues)

@@ -97,6 +97,25 @@ imports those measured segments. An edit to the spoken script invalidates that b
 Re-render with measured durations before assembling narrated lessons. Estimated preview timestamps
 must never be used as an audio alignment.
 
+For scene recordings named `E01S01.wav` through `E01S09.wav`, a local alignment route is available:
+
+```
+python -m pip install torch==2.8.0 torchaudio==2.8.0
+python tools/align_manual_audio.py E01 --directory audio/manual --output audio/aligned/E01
+# Review audio/aligned/E01/alignment-review.json and the scene boundaries before import.
+python tools/import_manual_audio.py --segments audio/aligned/E01/segments.json --episodes E01
+EXPORT_BEAT_STILLS=1 python tools/render.py E01 -q h --no-assemble
+python tools/layout_report.py E01 --tag 1080p30 --strict
+python tools/assemble.py E01 -q h --word-timings audio/aligned/E01/words.json
+python tools/package_narrated.py E01
+```
+
+The alignment tool downloads an English acoustic model on first use, then processes recordings
+locally. It produces measured beat boundaries, word timings and a recognition report. TorchAudio
+2.8 is pinned because later versions remove the CTC alignment functions used here. Word timings
+must match the exact current script; assembly rejects a mismatch. The narrated delivery has visible
+captions, a separate SRT/VTT and a transcript. Keep recordings and generated alignment data private.
+
 The prepared `.github/workflows/chemistry-previews.yml` renders only E01–E03 at 1080p30, exports
 review frames and geometry reports, and packages silent MP4s with visible captions. The workflow
 runs when changes are pushed to `codex/chemistry-layout-20261003`. The first three visual previews have been reviewed; they remain silent drafts with estimated

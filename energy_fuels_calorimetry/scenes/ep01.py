@@ -338,6 +338,10 @@ class E01S05_Recipe(NarratedScene):
         ox.move_to([-3.2, 0.45, 0])
         arrow = Arrow([-1.9, 0.45, 0], [-0.3, 0.45, 0], buff=0, color=TEXT, stroke_width=4)
         w1, w2 = mol_H2O(s), mol_H2O(s)
+        # Product bonds are added after the moving atoms. Keep them behind the
+        # atom disks so their strokes do not obscure the H and O labels.
+        w1.bonds.set_z_index(-1)
+        w2.bonds.set_z_index(-1)
         w1.move_to([1.3, 0.45, 0])
         w2.move_to([3.4, 0.45, 0])
         cnt_l = T("before: 4 H atoms, 2 O atoms", size=SMALL, color=MUTED).move_to([-4.2, -0.95, 0])

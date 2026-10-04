@@ -75,6 +75,10 @@ class NarratedScene(Scene):
         tex_dir = C.RENDERS / "media" / "Tex" / sid
         tex_dir.mkdir(parents=True, exist_ok=True)
         config.tex_dir = str(tex_dir)
+        # Workspace synchronization may place temporary directories beside TeX
+        # files. Manim's cleanup assumes every entry is a file; preserve these
+        # small compile intermediates so a sync directory cannot abort a render.
+        config.no_latex_cleanup = True
         text_dir = C.RENDERS / "media" / "texts" / sid
         text_dir.mkdir(parents=True, exist_ok=True)
         config.text_dir = str(text_dir)
