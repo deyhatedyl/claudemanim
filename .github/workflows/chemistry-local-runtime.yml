@@ -14,9 +14,14 @@ jobs:
       - run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-science
-          tar czf chemistry-tex.tar.gz -C /usr/share/texlive/texmf-dist tex/latex/mhchem tex/latex/siunitx
+          dpkg -L texlive-science | sed -n 's|^/usr/share/texlive/texmf-dist/||p' | grep '^tex/' | while read item; do
+            if [ -f "/usr/share/texlive/texmf-dist/$item" ]; then echo "$item"; fi
+          done > science-files.txt
+          tar czf chemistry-tex.tar.gz -C /usr/share/texlive/texmf-dist -T science-files.txt
+          printf '\\documentclass{article}\n\\usepackage{amsmath,mhchem,siunitx}\n\\begin{document}\n$\\ce{2H2 + O2 -> 2H2O}$\n\\end{document}\n' > smoke.tex
+          pdflatex -interaction=nonstopmode -halt-on-error smoke.tex
       - uses: actions/upload-artifact@v4
         with:
-          name: chemistry-equation-packages
+          name: chemistry-equation-packages-complete
           path: chemistry-tex.tar.gz
           retention-days: 3
