@@ -1,0 +1,57 @@
+name: Chemistry local render tools
+
+on:
+  push:
+    branches: [codex/chemistry-local-runtime-20261005]
+    paths: [.github/workflows/chemistry-local-runtime.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tools:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        kind: [render, speech, model]
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare public software only
+        env:
+          BUNDLE_KIND: ${{ matrix.kind }}
+        run: |
+          mkdir -p bundle/python bundle/bin bundle/lib bundle/fonts bundle/models
+          if [ "$BUNDLE_KIND" = render ]; then
+            sudo apt-get update -q
+            sudo apt-get install -y -q --no-install-recommends libcairo2-dev libpango1.0-dev pkg-config dvisvgm fonts-inter
+            python -m pip install --target bundle/python manim==0.19.2
+            cp /usr/bin/dvisvgm bundle/bin/
+            ldd /usr/bin/dvisvgm | awk '/=> \/.* \(/ { print $3 }' | while read -r dep; do
+              case "$dep" in */libc.so.*|*/libm.so.*|*/libpthread.so.*|*/libdl.so.*) continue ;; esac
+              cp -L "$dep" bundle/lib/
+            done
+            find /usr/share/fonts -iname '*inter*' -type f -exec cp '{}' bundle/fonts/ ';'
+          else
+            python -m pip install --target bundle/python torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+            if [ "$BUNDLE_KIND" = model ]; then
+              PYTHONPATH="$PWD/bundle/python" TORCH_HOME="$PWD/bundle/models" python -c 'import torchaudio; torchaudio.pipelines.WAV2VEC2_ASR_BASE_960H.get_model(); print("Alignment model ready")'
+              rm -rf bundle/python
+            fi
+          fi
+          find bundle -type d -name __pycache__ -prune -exec rm -rf '{}' +
+          tar -cf "tools-${BUNDLE_KIND}.tar" bundle
+          split -d -b 24M "tools-${BUNDLE_KIND}.tar" "tools-${BUNDLE_KIND}.part-"
+          sha256sum tools-*.part-* > "tools-${BUNDLE_KIND}-sha256.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chemistry-tools-${{ matrix.kind }}
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-*
+            tools-${{ matrix.kind }}-sha256.txt
