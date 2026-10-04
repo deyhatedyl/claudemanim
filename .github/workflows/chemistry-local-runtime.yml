@@ -8,50 +8,595 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
-  tools:
+  parts:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
         kind: [render, speech, model]
     steps:
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Prepare public software only
-        env:
-          BUNDLE_KIND: ${{ matrix.kind }}
-        run: |
-          mkdir -p bundle/python bundle/bin bundle/lib bundle/fonts bundle/models
-          if [ "$BUNDLE_KIND" = render ]; then
-            sudo apt-get update -q
-            sudo apt-get install -y -q --no-install-recommends libcairo2-dev libpango1.0-dev pkg-config dvisvgm fonts-inter
-            python -m pip install --target bundle/python manim==0.19.2
-            cp /usr/bin/dvisvgm bundle/bin/
-            ldd /usr/bin/dvisvgm | awk '/=> \/.* \(/ { print $3 }' | while read -r dep; do
-              case "$dep" in */libc.so.*|*/libm.so.*|*/libpthread.so.*|*/libdl.so.*) continue ;; esac
-              cp -L "$dep" bundle/lib/
-            done
-            find /usr/share/fonts -iname '*inter*' -type f -exec cp '{}' bundle/fonts/ ';'
-          else
-            python -m pip install --target bundle/python torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-            if [ "$BUNDLE_KIND" = model ]; then
-              PYTHONPATH="$PWD/bundle/python" TORCH_HOME="$PWD/bundle/models" python -c 'import torchaudio; torchaudio.pipelines.WAV2VEC2_ASR_BASE_960H.get_model(); print("Alignment model ready")'
-              rm -rf bundle/python
-            fi
-          fi
-          find bundle -type d -name __pycache__ -prune -exec rm -rf '{}' +
-          tar -cf "tools-${BUNDLE_KIND}.tar" bundle
-          split -d -b 24M "tools-${BUNDLE_KIND}.tar" "tools-${BUNDLE_KIND}.part-"
-          sha256sum tools-*.part-* > "tools-${BUNDLE_KIND}-sha256.txt"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: chemistry-tools-${{ matrix.kind }}
+          run-id: 37208284780
+          github-token: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-00', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-00
           compression-level: 1
           retention-days: 3
           path: |
-            tools-${{ matrix.kind }}.part-*
+            tools-${{ matrix.kind }}.part-00
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-01', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-01
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-01
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-02', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-02
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-02
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-03', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-03
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-03
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-04', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-04
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-04
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-05', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-05
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-05
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-06', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-06
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-06
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-07', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-07
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-07
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-08', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-08
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-08
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-09', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-09
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-09
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-10', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-10
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-10
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-11', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-11
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-11
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-12', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-12
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-12
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-13', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-13
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-13
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-14', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-14
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-14
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-15', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-15
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-15
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-16', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-16
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-16
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-17', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-17
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-17
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-18', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-18
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-18
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-19', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-19
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-19
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-20', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-20
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-20
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-21', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-21
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-21
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-22', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-22
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-22
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-23', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-23
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-23
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-24', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-24
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-24
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-25', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-25
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-25
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-26', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-26
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-26
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-27', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-27
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-27
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-28', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-28
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-28
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-29', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-29
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-29
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-30', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-30
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-30
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-31', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-31
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-31
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-32', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-32
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-32
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-33', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-33
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-33
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-34', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-34
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-34
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-35', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-35
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-35
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-36', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-36
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-36
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-37', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-37
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-37
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-38', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-38
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-38
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-39', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-39
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-39
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-40', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-40
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-40
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-41', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-41
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-41
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-42', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-42
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-42
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-43', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-43
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-43
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-44', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-44
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-44
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-45', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-45
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-45
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-46', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-46
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-46
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-47', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-47
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-47
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-48', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-48
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-48
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-49', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-49
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-49
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-50', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-50
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-50
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-51', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-51
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-51
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-52', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-52
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-52
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-53', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-53
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-53
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-54', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-54
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-54
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-55', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-55
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-55
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-56', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-56
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-56
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-57', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-57
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-57
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-58', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-58
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-58
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-59', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-59
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-59
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-60', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-60
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-60
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-61', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-61
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-61
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-62', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-62
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-62
+            tools-${{ matrix.kind }}-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles(format('tools-{0}.part-63', matrix.kind)) != '' }}
+        with:
+          name: chemistry-tools-${{ matrix.kind }}-part-63
+          compression-level: 1
+          retention-days: 3
+          path: |
+            tools-${{ matrix.kind }}.part-63
             tools-${{ matrix.kind }}-sha256.txt
