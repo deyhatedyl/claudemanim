@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T20:43:11",
+ "updated": "2026-10-05T14:43:24",
  "tts": {
   "provider": "gemini",
   "model": "gemini-3.8-flash-tts",
@@ -7,7 +7,7 @@
   "api_key_present": false
  },
  "blockers": [
-  "TTS: GEMINI_API_KEY not set in this environment; narration, narrated drafts and final renders cannot be produced. Add it as an environment variable and start a new session, then run tools/tts_probe.py."
+  "Awaiting learner narration WAVs for E04, E05, E06, E07, E08, E09, E10, E11, E12, E13, E14; silent previews use estimated timing. Narrated finals require checked alignment."
  ],
  "episodes": {
   "E01": {
@@ -23,117 +23,63 @@
    },
    "scenes_code": {
     "path": "scenes/ep01.py",
-    "sha": "472e4ccf2fec74a8"
+    "sha": "c051b9faffee9332"
    },
-   "stage": "draft-rendered",
+   "stage": "earlier-delivery",
    "scenes": [
     {
      "id": "E01S01",
      "title": "Welcome and a retrieval check",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 92.5333,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S02",
      "title": "One container, several different labels",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 93.2,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S03",
      "title": "Three ways to get moles, and why the units cancel",
      "beats": 6,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 139.4,
-      "fresh": true,
-      "estimated_beats": 6,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S04",
      "title": "The unit ladder",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 94.0,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S05",
      "title": "A balanced equation is a recipe in moles",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 103.3333,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S06",
      "title": "Round at the end, not along the way",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 57.1333,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S07",
      "title": "Practice Q01: two routes to an amount",
      "beats": 11,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 214.3333,
-      "fresh": true,
-      "estimated_beats": 11,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S08",
      "title": "Practice Q02: conversions inside a data sheet",
      "beats": 6,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 148.2,
-      "fresh": true,
-      "estimated_beats": 6,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E01S09",
      "title": "Recap and closing recall",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 68.0,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     }
    ],
    "audio": {
@@ -141,23 +87,29 @@
     "total": 47,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.mp4",
-    "final": false,
-    "narrated": false,
-    "duration": 1010.13,
-    "captions": [
-     "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing.vtt"
-    ],
-    "transcript": "renders/draft/E01_Mole_calculations_and_units_that_unlock_the_topic__480p15__SILENT-estimated-timing_transcript.md",
-    "problems": []
-   },
    "qa": {
     "draft_visual_qa": "pass",
     "draft_notes": "480p15 silent draft (estimated timing). Every beat-end still inspected; layout defects fixed (clipped text S01/S02/S03, overlaps S04/S05/S06/S08). Automatic layout check: 0 warnings. Narration sync, pronunciation and final 1080p QA pending TTS access.",
-    "final_qa": "pending"
-   }
+    "final_qa": "pending",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-03",
+     "resolution": "1920x1080",
+     "fps": 30,
+     "scenes": 9,
+     "beat_end_frames_inspected": 47,
+     "geometry_flags": 0,
+     "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+     "record": "checks/ui_review_20261003.json",
+     "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+     "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+     "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+     "preview_render_run": 37092538378
+    },
+    "delivery_status": "earlier_delivery",
+    "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
+   },
+   "note": "Keep the prior delivered MP4; its audio/media are not reloaded in this local continuation."
   },
   "E02": {
    "title": "Where reaction energy comes from",
@@ -172,117 +124,63 @@
    },
    "scenes_code": {
     "path": "scenes/ep02.py",
-    "sha": "0cc6dbe89192872c"
+    "sha": "f4bcda24cbc90411"
    },
-   "stage": "draft-rendered",
+   "stage": "earlier-delivery",
    "scenes": [
     {
      "id": "E02S01",
      "title": "Retrieval check and the big question",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 77.4,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S02",
      "title": "System, surroundings, heat and temperature",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 73.6,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S03",
      "title": "Exothermic and endothermic",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 65.1333,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S04",
      "title": "Breaking bonds absorbs energy; making bonds releases it",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 72.1333,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S05",
      "title": "Practice Q03: a bond-energy ledger",
      "beats": 11,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 191.4,
-      "fresh": true,
-      "estimated_beats": 11,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S06",
      "title": "Enthalpy, delta H and talking about signs",
      "beats": 6,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 121.9333,
-      "fresh": true,
-      "estimated_beats": 6,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S07",
      "title": "Practice Q04: an endothermic change",
      "beats": 6,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 96.6667,
-      "fresh": true,
-      "estimated_beats": 6,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S08",
      "title": "Oxygen counts too: partly oxidised fuels",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 102.4667,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E02S09",
      "title": "Recap and closing recall",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 60.5333,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     }
    ],
    "audio": {
@@ -290,23 +188,29 @@
     "total": 47,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.mp4",
-    "final": false,
-    "narrated": false,
-    "duration": 861.26,
-    "captions": [
-     "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing.vtt"
-    ],
-    "transcript": "renders/draft/E02_Where_reaction_energy_comes_from__480p15__SILENT-estimated-timing_transcript.md",
-    "problems": []
-   },
    "qa": {
     "draft_visual_qa": "pass",
     "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: exo/endo titles overlapping header, mispositioned 'energy in' arrow, magnet poles (now attract), \u0394H label overlap, long labels wrapped. Layout check: 0 warnings.",
-    "final_qa": "pending"
-   }
+    "final_qa": "pending",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-03",
+     "resolution": "1920x1080",
+     "fps": 30,
+     "scenes": 9,
+     "beat_end_frames_inspected": 47,
+     "geometry_flags": 0,
+     "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+     "record": "checks/ui_review_20261003.json",
+     "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+     "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+     "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+     "preview_render_run": 37092538378
+    },
+    "delivery_status": "earlier_delivery",
+    "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
+   },
+   "note": "Keep the prior delivered MP4; its audio/media are not reloaded in this local continuation."
   },
   "E03": {
    "title": "Energy profiles and thermochemical equations",
@@ -321,117 +225,63 @@
    },
    "scenes_code": {
     "path": "scenes/ep03.py",
-    "sha": "c96c89f8cdd32eff"
+    "sha": "912576f7aeeca07d"
    },
-   "stage": "draft-rendered",
+   "stage": "earlier-delivery",
    "scenes": [
     {
      "id": "E03S01",
      "title": "Retrieval check",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 59.3333,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S02",
      "title": "The axes and the two endpoints",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 58.6667,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S03",
      "title": "Activation energy, forward and reverse",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 83.4667,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S04",
      "title": "What a catalyst changes, and what it doesn't",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 79.2,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S05",
      "title": "Practice Q06: read the vertical distances",
      "beats": 10,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 139.2667,
-      "fresh": true,
-      "estimated_beats": 10,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S06",
      "title": "Thermochemical equations: scale and reverse",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 92.6667,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S07",
      "title": "States matter: liquid or gaseous water",
      "beats": 4,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 61.1333,
-      "fresh": true,
-      "estimated_beats": 4,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S08",
      "title": "Practice Q05: scaling, reversing and states",
      "beats": 5,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 117.2667,
-      "fresh": true,
-      "estimated_beats": 5,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     },
     {
      "id": "E03S09",
      "title": "Recap and closing recall",
      "beats": 3,
-     "audio_ready": 0,
-     "480p15": {
-      "duration": 60.6667,
-      "fresh": true,
-      "estimated_beats": 3,
-      "layout_warnings": 0
-     }
+     "audio_ready": 0
     }
    ],
    "audio": {
@@ -439,23 +289,29 @@
     "total": 42,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.mp4",
-    "final": false,
-    "narrated": false,
-    "duration": 751.66,
-    "captions": [
-     "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing.vtt"
-    ],
-    "transcript": "renders/draft/E03_Energy_profiles_and_thermochemical_equations__480p15__SILENT-estimated-timing_transcript.md",
-    "problems": []
-   },
    "qa": {
     "draft_visual_qa": "pass",
     "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: profile label collisions (labels moved to arrow tops, legend for catalysed path, wider reactant flats), Q06 axes inside safe area, state-diagram arrow/label overlaps. Q06 profile drawn to scale from the question data (80/25/150/110). Layout check: 0 warnings.",
-    "final_qa": "pending"
-   }
+    "final_qa": "pending",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-03",
+     "resolution": "1920x1080",
+     "fps": 30,
+     "scenes": 9,
+     "beat_end_frames_inspected": 42,
+     "geometry_flags": 0,
+     "source_commit": "ec37e87b5a739969d64d8dd9744dc2efaa56b47b",
+     "record": "checks/ui_review_20261003.json",
+     "notes": "Inter letters/numerals, reference palette, header/card/pill/graph clearance and internal labels checked. Silent estimated timing; narrated final QA pending learner audio.",
+     "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
+     "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
+     "preview_render_run": 37092538378
+    },
+    "delivery_status": "earlier_delivery",
+    "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
+   },
+   "note": "Keep the prior delivered MP4; its audio/media are not reloaded in this local continuation."
   },
   "E04": {
    "title": "Fuels, biofuels and the carbon cycle",
@@ -470,7 +326,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep04.py",
-    "sha": "a15a375d1277e470"
+    "sha": "7967d07a0b2be5ef"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -479,8 +335,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 62.6667,
+     "720p30": {
+      "duration": 62.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -491,8 +347,8 @@
      "title": "What counts as a fuel: the fossil fuels",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 46.7333,
+     "720p30": {
+      "duration": 46.9,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -503,8 +359,8 @@
      "title": "Renewable means replenished on a human timescale",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 65.1333,
+     "720p30": {
+      "duration": 65.2667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -515,8 +371,8 @@
      "title": "Following the carbon atoms",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 67.8667,
+     "720p30": {
+      "duration": 68.1,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -527,8 +383,8 @@
      "title": "Photosynthesis and respiration",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 51.4667,
+     "720p30": {
+      "duration": 51.6,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -539,8 +395,8 @@
      "title": "Making bioethanol: fermentation and distillation",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 75.5333,
+     "720p30": {
+      "duration": 75.7,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -551,8 +407,8 @@
      "title": "Practice Q07: fermentation yield",
      "beats": 8,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 164.2,
+     "720p30": {
+      "duration": 164.6,
       "fresh": true,
       "estimated_beats": 8,
       "layout_warnings": 0
@@ -563,8 +419,8 @@
      "title": "Biogas and biodiesel",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 74.1333,
+     "720p30": {
+      "duration": 74.3,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -575,8 +431,8 @@
      "title": "Practice Q08: same molecule, different source",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 108.2667,
+     "720p30": {
+      "duration": 108.5333,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -587,8 +443,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 53.0667,
+     "720p30": {
+      "duration": 53.1667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -600,22 +456,45 @@
     "total": 42,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 769.06,
+    "duration": 770.93,
     "captions": [
-     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E04_Fuels_biofuels_and_the_carbon_cycle__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 10,
+     "beat_end_frames_automatically_checked": 42,
+     "scene_end_frames_manually_inspected": 10,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E05": {
@@ -631,7 +510,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep05.py",
-    "sha": "83833d0629e3d6d3"
+    "sha": "e690a15f63822f6e"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -640,8 +519,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 46.6667,
+     "720p30": {
+      "duration": 46.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -652,8 +531,8 @@
      "title": "Respiration: food as a fuel",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 57.2667,
+     "720p30": {
+      "duration": 57.4,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -664,8 +543,8 @@
      "title": "Energy factors and the energy bar",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 70.0667,
+     "720p30": {
+      "duration": 70.2333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -676,8 +555,8 @@
      "title": "Per 100 g, per serving, per packet",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 80.0667,
+     "720p30": {
+      "duration": 80.2667,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -688,8 +567,8 @@
      "title": "Nutrition factors are a different basis",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 49.0,
+     "720p30": {
+      "duration": 49.2,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -700,8 +579,8 @@
      "title": "Practice Q09: a label with a serving trap",
      "beats": 7,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 123.3333,
+     "720p30": {
+      "duration": 123.6333,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -712,8 +591,8 @@
      "title": "Which food has more energy? Choose the basis first",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 59.8,
+     "720p30": {
+      "duration": 60.0,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -724,8 +603,8 @@
      "title": "Practice Q10: two bases, two answers",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 105.6,
+     "720p30": {
+      "duration": 105.7333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -736,8 +615,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 49.2667,
+     "720p30": {
+      "duration": 49.3667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -749,22 +628,45 @@
     "total": 36,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E05_Food_as_a_chemical_energy_source__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 641.06,
+    "duration": 642.6,
     "captions": [
-     "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E05_Food_as_a_chemical_energy_source__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E05_Food_as_a_chemical_energy_source__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E05_Food_as_a_chemical_energy_source__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E05_Food_as_a_chemical_energy_source__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 9,
+     "beat_end_frames_automatically_checked": 36,
+     "scene_end_frames_manually_inspected": 9,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E06": {
@@ -780,7 +682,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep06.py",
-    "sha": "1f236184fb7285c7"
+    "sha": "71ef81a9ba40b4e0"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -789,8 +691,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 50.7333,
+     "720p30": {
+      "duration": 50.8,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -801,8 +703,8 @@
      "title": "Balancing complete combustion: C, then H, then O",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 78.5333,
+     "720p30": {
+      "duration": 78.7667,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -813,8 +715,8 @@
      "title": "A hydrocarbon from petrol",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 29.7333,
+     "720p30": {
+      "duration": 29.8,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -825,8 +727,8 @@
      "title": "Incomplete combustion: products need to be specified",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 98.6,
+     "720p30": {
+      "duration": 98.8333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -837,8 +739,8 @@
      "title": "Practice Q11: incomplete combustion you can balance",
      "beats": 8,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 141.9333,
+     "720p30": {
+      "duration": 142.2333,
       "fresh": true,
       "estimated_beats": 8,
       "layout_warnings": 0
@@ -849,8 +751,8 @@
      "title": "Hot exhaust and dry gas",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 78.0,
+     "720p30": {
+      "duration": 78.2,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -861,8 +763,8 @@
      "title": "Practice Q12: hot exhaust versus cooled dry gas",
      "beats": 7,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 134.0667,
+     "720p30": {
+      "duration": 134.2667,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -873,8 +775,8 @@
      "title": "Moles, not grams; and which greenhouse gases?",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 56.4,
+     "720p30": {
+      "duration": 56.5,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -885,8 +787,8 @@
      "title": "Checkpoint: propane",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 49.5333,
+     "720p30": {
+      "duration": 49.5667,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -897,8 +799,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 54.8667,
+     "720p30": {
+      "duration": 54.9667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -910,22 +812,45 @@
     "total": 41,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E06_Combustion_equations_and_gaseous_products__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 772.4,
+    "duration": 773.93,
     "captions": [
-     "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E06_Combustion_equations_and_gaseous_products__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E06_Combustion_equations_and_gaseous_products__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E06_Combustion_equations_and_gaseous_products__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E06_Combustion_equations_and_gaseous_products__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 10,
+     "beat_end_frames_automatically_checked": 41,
+     "scene_end_frames_manually_inspected": 10,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E07": {
@@ -941,7 +866,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep07.py",
-    "sha": "b0b96358b326ba5f"
+    "sha": "b6473938e4055e68"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -950,8 +875,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 51.7333,
+     "720p30": {
+      "duration": 51.8,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -962,8 +887,8 @@
      "title": "Why the smaller number isn't always the limiting reactant",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 77.2,
+     "720p30": {
+      "duration": 77.4,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -974,8 +899,8 @@
      "title": "Initial, used, remaining",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 133.6667,
+     "720p30": {
+      "duration": 133.9,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -986,8 +911,8 @@
      "title": "Checkpoint: more grams, still limiting",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 91.8667,
+     "720p30": {
+      "duration": 92.0,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -998,8 +923,8 @@
      "title": "Practice Q13: excess means what's left after reaction",
      "beats": 7,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 169.4667,
+     "720p30": {
+      "duration": 169.7,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1010,8 +935,8 @@
      "title": "Gas mixtures: only the reactive part reacts",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 52.7333,
+     "720p30": {
+      "duration": 52.8333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1022,8 +947,8 @@
      "title": "Gas volumes react in the same ratio",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 70.8,
+     "720p30": {
+      "duration": 70.9333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1034,8 +959,8 @@
      "title": "Measuring a gas volume",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 78.7333,
+     "720p30": {
+      "duration": 78.8667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1046,8 +971,8 @@
      "title": "New carbon dioxide versus inlet carbon dioxide",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 34.4667,
+     "720p30": {
+      "duration": 34.5667,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -1058,8 +983,8 @@
      "title": "Practice Q14, part 1: budgets and the limiting reactant",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 112.9333,
+     "720p30": {
+      "duration": 113.1,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1070,8 +995,8 @@
      "title": "Practice Q14, part 2: carbon dioxide and energy",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 93.3333,
+     "720p30": {
+      "duration": 93.5333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1082,8 +1007,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 79.4,
+     "720p30": {
+      "duration": 79.4667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1095,22 +1020,45 @@
     "total": 48,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 1046.33,
+    "duration": 1048.1,
     "captions": [
-     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E07_Limiting_reactants_excess_fuel_and_gas_mixtures__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 12,
+     "beat_end_frames_automatically_checked": 48,
+     "scene_end_frames_manually_inspected": 12,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E08": {
@@ -1126,7 +1074,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep08.py",
-    "sha": "2d6b57d3f16162cf"
+    "sha": "7cd36de2f127cbdd"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1135,8 +1083,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 64.9333,
+     "720p30": {
+      "duration": 64.9667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1147,8 +1095,8 @@
      "title": "Where the energy goes",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 66.6667,
+     "720p30": {
+      "duration": 66.8667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1159,8 +1107,8 @@
      "title": "Building q = mc delta T",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 71.2667,
+     "720p30": {
+      "duration": 71.5667,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1171,8 +1119,8 @@
      "title": "Mass and energy change the temperature rise",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 45.6667,
+     "720p30": {
+      "duration": 45.8333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1183,8 +1131,8 @@
      "title": "How much fuel burned? A mass reading",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 93.5333,
+     "720p30": {
+      "duration": 93.7333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1195,8 +1143,8 @@
      "title": "Practice Q15: a measured fuel mass loss",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 134.5333,
+     "720p30": {
+      "duration": 134.7667,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1207,8 +1155,8 @@
      "title": "Efficiency, forwards and backwards",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 91.4667,
+     "720p30": {
+      "duration": 91.6333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1219,8 +1167,8 @@
      "title": "Practice Q16: work backwards from useful heat",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 123.5333,
+     "720p30": {
+      "duration": 123.7667,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1231,8 +1179,8 @@
      "title": "Why measured values come out low",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 89.9333,
+     "720p30": {
+      "duration": 90.0,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1243,8 +1191,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 54.4,
+     "720p30": {
+      "duration": 54.5,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1256,22 +1204,45 @@
     "total": 42,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 835.93,
+    "duration": 837.63,
     "captions": [
-     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E08_Measuring_combustion_energy_and_efficiency__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E08_Measuring_combustion_energy_and_efficiency__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 10,
+     "beat_end_frames_automatically_checked": 42,
+     "scene_end_frames_manually_inspected": 10,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E09": {
@@ -1287,7 +1258,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep09.py",
-    "sha": "3b5a44a8525a86c1"
+    "sha": "2a946f8f74f03ceb"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1296,8 +1267,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 57.5333,
+     "720p30": {
+      "duration": 57.5667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1308,8 +1279,8 @@
      "title": "More than the water gets heated",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 62.6,
+     "720p30": {
+      "duration": 62.8,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1320,8 +1291,8 @@
      "title": "Two kinds of calorimeter",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 82.8667,
+     "720p30": {
+      "duration": 83.0667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1332,8 +1303,8 @@
      "title": "Electrical calibration: E = VIt, then CF = E / delta T",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 58.2,
+     "720p30": {
+      "duration": 58.4333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1344,8 +1315,8 @@
      "title": "Stacking heat capacities and the lower bound",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 59.7333,
+     "720p30": {
+      "duration": 59.9333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1356,8 +1327,8 @@
      "title": "Practice Q17, part 1: calibrate, then use it",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 106.0,
+     "720p30": {
+      "duration": 106.2,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1368,8 +1339,8 @@
      "title": "Changing the contents changes CF",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 81.0,
+     "720p30": {
+      "duration": 81.1667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1380,8 +1351,8 @@
      "title": "Calibrating with a reaction of known delta H",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 64.7333,
+     "720p30": {
+      "duration": 64.8667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1392,8 +1363,8 @@
      "title": "Heat loss during calibration: follow the formula",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 91.6667,
+     "720p30": {
+      "duration": 91.9,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1404,8 +1375,8 @@
      "title": "Practice Q18: an impossible calibration factor",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 108.3333,
+     "720p30": {
+      "duration": 108.5333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1416,8 +1387,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 77.1333,
+     "720p30": {
+      "duration": 77.2667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1429,22 +1400,45 @@
     "total": 45,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E09_Why_calorimeters_need_calibration__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 849.79,
+    "duration": 851.73,
     "captions": [
-     "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E09_Why_calorimeters_need_calibration__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E09_Why_calorimeters_need_calibration__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E09_Why_calorimeters_need_calibration__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E09_Why_calorimeters_need_calibration__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E09S03 (solution vs bomb calorimeter) and E09S08 (chemical calibration, hypothetical reference reaction) added and inspected; scenes renumbered.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E09S03 (solution vs bomb calorimeter) and E09S08 (chemical calibration, hypothetical reference reaction) added and inspected; scenes renumbered.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 11,
+     "beat_end_frames_automatically_checked": 45,
+     "scene_end_frames_manually_inspected": 11,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E10": {
@@ -1460,7 +1454,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep10.py",
-    "sha": "16a3becc3dd0efad"
+    "sha": "75b7520e300edeab"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1469,8 +1463,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 67.0,
+     "720p30": {
+      "duration": 67.0667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1481,8 +1475,8 @@
      "title": "Mixing the solutions",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 68.1333,
+     "720p30": {
+      "duration": 68.3,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1493,8 +1487,8 @@
      "title": "Which reagent sets the heat?",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 47.6667,
+     "720p30": {
+      "duration": 47.8,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1505,8 +1499,8 @@
      "title": "From calorimeter heat to reaction enthalpy",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 48.4,
+     "720p30": {
+      "duration": 48.5667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1517,8 +1511,8 @@
      "title": "When the temperature falls",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 81.2667,
+     "720p30": {
+      "duration": 81.3,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1529,8 +1523,8 @@
      "title": "Practice Q19: justify the denominator",
      "beats": 7,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 145.6,
+     "720p30": {
+      "duration": 145.9333,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1541,8 +1535,8 @@
      "title": "No calibration factor? Use the solution's mass",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 92.8,
+     "720p30": {
+      "duration": 92.9667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1553,8 +1547,8 @@
      "title": "One mole of reagent is not always one mole of reaction",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 57.0667,
+     "720p30": {
+      "duration": 57.2333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1565,8 +1559,8 @@
      "title": "Practice Q20: predict the final temperature",
      "beats": 7,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 137.6667,
+     "720p30": {
+      "duration": 138.0,
       "fresh": true,
       "estimated_beats": 7,
       "layout_warnings": 0
@@ -1577,8 +1571,8 @@
      "title": "Coefficients change delta H, not the heat",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 49.0667,
+     "720p30": {
+      "duration": 49.1667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1589,8 +1583,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 66.0667,
+     "720p30": {
+      "duration": 66.1667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1602,22 +1596,45 @@
     "total": 42,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 860.73,
+    "duration": 862.5,
     "captions": [
-     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E10_Reaction_calorimetry_and_molar_enthalpy__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E10S05 (temperature fall, endothermic sign) and E10S07 (solution-only m c \u0394T model vs CF) added and inspected; scenes renumbered.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E10S05 (temperature fall, endothermic sign) and E10S07 (solution-only m c \u0394T model vs CF) added and inspected; scenes renumbered.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 11,
+     "beat_end_frames_automatically_checked": 42,
+     "scene_end_frames_manually_inspected": 11,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E11": {
@@ -1633,7 +1650,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep11.py",
-    "sha": "35b576829e8858ee"
+    "sha": "2494774d6745f220"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1642,8 +1659,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 52.5333,
+     "720p30": {
+      "duration": 52.6,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1654,8 +1671,8 @@
      "title": "Reading a temperature-time graph",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 52.8667,
+     "720p30": {
+      "duration": 53.0333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1666,8 +1683,8 @@
      "title": "Why the highest reading is too low",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 33.6667,
+     "720p30": {
+      "duration": 33.8,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -1678,8 +1695,8 @@
      "title": "Extrapolating the cooling line",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 99.1333,
+     "720p30": {
+      "duration": 99.4333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1690,8 +1707,8 @@
      "title": "Practice Q21: corrected heat",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 99.2667,
+     "720p30": {
+      "duration": 99.4333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1702,8 +1719,8 @@
      "title": "Drawing the extrapolation well",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 72.6667,
+     "720p30": {
+      "duration": 72.9,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1714,8 +1731,8 @@
      "title": "When the temperature falls",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 92.4,
+     "720p30": {
+      "duration": 92.5,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1726,8 +1743,8 @@
      "title": "Heat loss during calibration versus during the reaction",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 57.7333,
+     "720p30": {
+      "duration": 57.9,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1738,8 +1755,8 @@
      "title": "Systematic and random errors; accuracy and precision",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 66.0,
+     "720p30": {
+      "duration": 66.2333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1750,8 +1767,8 @@
      "title": "Resolution, mistakes and outliers",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 100.7333,
+     "720p30": {
+      "duration": 100.8333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1762,8 +1779,8 @@
      "title": "Practice Q22: a wrong CF and a thermometer offset",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 122.2,
+     "720p30": {
+      "duration": 122.4,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1774,8 +1791,8 @@
      "title": "The error-direction table",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 86.1333,
+     "720p30": {
+      "duration": 86.4333,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1786,8 +1803,8 @@
      "title": "Checkpoint: which improvement fixes which error?",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 65.5333,
+     "720p30": {
+      "duration": 65.5667,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -1798,8 +1815,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 60.5333,
+     "720p30": {
+      "duration": 60.6,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1811,22 +1828,45 @@
     "total": 55,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 1061.39,
+    "duration": 1063.67,
     "captions": [
-     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E11_Temperature_graphs_correction_and_experimental_reasoning__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 14,
+     "beat_end_frames_automatically_checked": 55,
+     "scene_end_frames_manually_inspected": 14,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E12": {
@@ -1842,7 +1882,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep12.py",
-    "sha": "91a45fd7547674da"
+    "sha": "1d8e30d59237f302"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -1851,8 +1891,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 61.3333,
+     "720p30": {
+      "duration": 61.4,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1863,8 +1903,8 @@
      "title": "Per mole, per gram, per useful output",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 59.4,
+     "720p30": {
+      "duration": 59.6,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1875,8 +1915,8 @@
      "title": "Per litre: another basis for gases",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 81.0,
+     "720p30": {
+      "duration": 81.1,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1887,8 +1927,8 @@
      "title": "Why oxygen-containing fuels release less energy",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 64.8667,
+     "720p30": {
+      "duration": 65.0333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1899,8 +1939,8 @@
      "title": "Normalise to the same useful output",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 42.5333,
+     "720p30": {
+      "duration": 42.7333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1911,8 +1951,8 @@
      "title": "Practice Q23: emissions per useful energy",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 118.8,
+     "720p30": {
+      "duration": 118.9667,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -1923,8 +1963,8 @@
      "title": "Checkpoint: per input is not per useful output",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 57.4667,
+     "720p30": {
+      "duration": 57.5,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -1935,8 +1975,8 @@
      "title": "Drawing the system boundary",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 51.8,
+     "720p30": {
+      "duration": 52.0,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1947,8 +1987,8 @@
      "title": "Is a biofuel carbon neutral?",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 64.1333,
+     "720p30": {
+      "duration": 64.2,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1959,8 +1999,8 @@
      "title": "Renewable is not the same as sustainable",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 80.0667,
+     "720p30": {
+      "duration": 80.2333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -1971,8 +2011,8 @@
      "title": "Practice Q24: build an evidence-based answer",
      "beats": 6,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 128.3333,
+     "720p30": {
+      "duration": 128.5667,
       "fresh": true,
       "estimated_beats": 6,
       "layout_warnings": 0
@@ -1983,8 +2023,8 @@
      "title": "Recap and closing recall",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 54.6667,
+     "720p30": {
+      "duration": 54.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -1996,22 +2036,45 @@
     "total": 41,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 864.39,
+    "duration": 866.1,
     "captions": [
-     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E12_Fair_fuel_comparisons_and_sustainability__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 12,
+     "beat_end_frames_automatically_checked": 41,
+     "scene_end_frames_manually_inspected": 12,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E13": {
@@ -2027,7 +2090,7 @@
    },
    "scenes_code": {
     "path": "scenes/ep13.py",
-    "sha": "73153c9b25245ac7"
+    "sha": "4a08f4fc04a22fda"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -2036,8 +2099,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 78.6,
+     "720p30": {
+      "duration": 78.7,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2048,8 +2111,8 @@
      "title": "The routine for every question",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 49.2667,
+     "720p30": {
+      "duration": 49.3333,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2060,8 +2123,8 @@
      "title": "Q25: attempt it first",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 92.8667,
+     "720p30": {
+      "duration": 92.9,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2072,8 +2135,8 @@
      "title": "Q25: read and annotate",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 82.9333,
+     "720p30": {
+      "duration": 83.1,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2084,8 +2147,8 @@
      "title": "Q25: plan the methods",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 56.7333,
+     "720p30": {
+      "duration": 56.8,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2096,8 +2159,8 @@
      "title": "Q25 parts a to c: amounts, equation and excess oxygen",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 93.1333,
+     "720p30": {
+      "duration": 93.3,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2108,8 +2171,8 @@
      "title": "Wrong solution: all the gas treated as methane",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 59.3333,
+     "720p30": {
+      "duration": 59.5,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2120,8 +2183,8 @@
      "title": "Q25 parts d and e: energy and efficiency",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 94.5333,
+     "720p30": {
+      "duration": 94.7,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2132,8 +2195,8 @@
      "title": "Q25 parts f and g: carbon dioxide and the source",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 85.0,
+     "720p30": {
+      "duration": 85.2,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2144,8 +2207,8 @@
      "title": "Checkpoint: spot the error",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 77.4667,
+     "720p30": {
+      "duration": 77.5667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2156,8 +2219,8 @@
      "title": "What if there were less air?",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 55.8,
+     "720p30": {
+      "duration": 55.8333,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2168,8 +2231,8 @@
      "title": "Q26: attempt it first",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 71.8667,
+     "720p30": {
+      "duration": 71.9333,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2180,8 +2243,8 @@
      "title": "Q26 parts a and b: per gram and per useful kilojoule",
      "beats": 5,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 120.1333,
+     "720p30": {
+      "duration": 120.3667,
       "fresh": true,
       "estimated_beats": 5,
       "layout_warnings": 0
@@ -2192,8 +2255,8 @@
      "title": "Wrong solution: emissions on different bases",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 66.9333,
+     "720p30": {
+      "duration": 67.1,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2204,8 +2267,8 @@
      "title": "Q26 parts c and d: explaining and limiting claims",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 68.8667,
+     "720p30": {
+      "duration": 69.0333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2216,8 +2279,8 @@
      "title": "Error log and close",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 87.2,
+     "720p30": {
+      "duration": 87.3333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2229,38 +2292,61 @@
     "total": 49,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 1240.66,
+    "duration": 1242.7,
     "captions": [
-     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E13_Exam_workshop_A_fuels_and_combustion__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 16,
+     "beat_end_frames_automatically_checked": 49,
+     "scene_end_frames_manually_inspected": 16,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   },
   "E14": {
    "title": "Exam workshop B on calorimetry and data evaluation",
    "script": {
     "path": "scripts/ep14.md",
-    "sha": "11df6782c86d4583",
+    "sha": "462a65b501df45cb",
     "beats": 54,
     "words": 2384,
     "est_minutes": 21.0,
     "anchors": "Q27,Q28",
-    "coverage": "C01,C08,C11,C18,C20,C21,C22,C23,C24,C25,C27,C28"
+    "coverage": "C01,C08,C11,C18,C20,C21,C22,C23,C24,C25,C26,C27,C28"
    },
    "scenes_code": {
     "path": "scenes/ep14.py",
-    "sha": "8cda14c0ba0b90bf"
+    "sha": "8f8e83df21c55653"
    },
    "stage": "draft-rendered",
    "scenes": [
@@ -2269,8 +2355,8 @@
      "title": "Retrieval check",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 85.6667,
+     "720p30": {
+      "duration": 85.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2281,8 +2367,8 @@
      "title": "Q27: attempt it first",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 89.5333,
+     "720p30": {
+      "duration": 89.6,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2293,8 +2379,8 @@
      "title": "Q27: read and annotate",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 76.2667,
+     "720p30": {
+      "duration": 76.4333,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2305,8 +2391,8 @@
      "title": "Q27: plan the methods",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 46.9333,
+     "720p30": {
+      "duration": 47.0333,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2317,8 +2403,8 @@
      "title": "Q27 part a: calibration",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 51.4667,
+     "720p30": {
+      "duration": 51.6,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2329,8 +2415,8 @@
      "title": "Q27 part b: the limiting reactant",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 46.6,
+     "720p30": {
+      "duration": 46.6667,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2341,8 +2427,8 @@
      "title": "Q27 part c: correcting the temperature rise",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 56.6,
+     "720p30": {
+      "duration": 56.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2353,8 +2439,8 @@
      "title": "Q27 part d: molar enthalpy",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 55.6,
+     "720p30": {
+      "duration": 55.7667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2365,8 +2451,8 @@
      "title": "Wrong solutions for Q27",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 59.5333,
+     "720p30": {
+      "duration": 59.7333,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2377,8 +2463,8 @@
      "title": "Q27 parts e and f: evidence and prediction",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 54.9333,
+     "720p30": {
+      "duration": 55.0667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2389,8 +2475,8 @@
      "title": "Checkpoint: spot the error",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 78.6667,
+     "720p30": {
+      "duration": 78.7667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2401,8 +2487,8 @@
      "title": "Q28: attempt it first",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 73.7333,
+     "720p30": {
+      "duration": 73.7667,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2413,8 +2499,8 @@
      "title": "Q28 parts a to c: testing the claim",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 66.4,
+     "720p30": {
+      "duration": 66.5667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2425,8 +2511,8 @@
      "title": "Q28 parts d and e: a calibration error",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 60.3333,
+     "720p30": {
+      "duration": 60.4667,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2437,8 +2523,8 @@
      "title": "Q28 part f: moisture",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 39.5333,
+     "720p30": {
+      "duration": 39.7,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2449,7 +2535,7 @@
      "title": "Checkpoint: which way does the result move?",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
+     "720p30": {
       "duration": 75.0,
       "fresh": true,
       "estimated_beats": 2,
@@ -2461,8 +2547,8 @@
      "title": "Choosing a method",
      "beats": 3,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 68.7333,
+     "720p30": {
+      "duration": 68.9,
       "fresh": true,
       "estimated_beats": 3,
       "layout_warnings": 0
@@ -2473,8 +2559,8 @@
      "title": "Diagnostic: the central traps",
      "beats": 4,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 136.3333,
+     "720p30": {
+      "duration": 136.3667,
       "fresh": true,
       "estimated_beats": 4,
       "layout_warnings": 0
@@ -2485,8 +2571,8 @@
      "title": "Series close",
      "beats": 2,
      "audio_ready": 0,
-     "480p15": {
-      "duration": 31.4,
+     "720p30": {
+      "duration": 31.5,
       "fresh": true,
       "estimated_beats": 2,
       "layout_warnings": 0
@@ -2498,24 +2584,48 @@
     "total": 54,
     "seconds": 0
    },
-   "assembled_480p15": {
-    "output": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.mp4",
+   "assembled_720p30": {
+    "output": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__720p30__SILENT-estimated-timing.mp4",
     "final": false,
     "narrated": false,
-    "duration": 1253.26,
+    "duration": 1255.47,
     "captions": [
-     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.srt",
-     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing.vtt"
+     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__720p30__SILENT-estimated-timing.srt",
+     "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__720p30__SILENT-estimated-timing.vtt"
     ],
-    "transcript": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__480p15__SILENT-estimated-timing_transcript.md",
+    "transcript": "renders/draft/E14_Exam_workshop_B_calorimetry_and_data_evaluation__720p30__SILENT-estimated-timing_transcript.md",
     "problems": []
    },
    "qa": {
     "draft_visual_qa": "pass",
-    "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
-    "final_qa": "pending"
+    "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+    "final_qa": "pending",
+    "previous_draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
+    "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+    "reference_ui_visual_qa": {
+     "status": "pass",
+     "date": "2026-10-05",
+     "still_resolution": [
+      1920,
+      1080
+     ],
+     "preview_resolution": [
+      1280,
+      720
+     ],
+     "fps": 30,
+     "scenes": 19,
+     "beat_end_frames_automatically_checked": 54,
+     "scene_end_frames_manually_inspected": 19,
+     "unique_practice_attempt_frames_inspected": 2,
+     "geometry_flags": 0,
+     "record": "checks/ui_review_20261005.json",
+     "video_validation": "checks/preview_validation_20261005.json",
+     "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+    }
    }
   }
  },
+ "narration_route": "learner-supplied WAVs; measured alignment before narrated rendering",
  "series_est_minutes": 214.4
 }

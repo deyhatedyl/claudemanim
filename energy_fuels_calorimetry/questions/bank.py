@@ -160,6 +160,10 @@ BANK = [
     ),
     dict(
         id="Q09", episode=5, title="Food label with a serving and unit trap",
+        visual=dict(type="table", column_widths=[2.8, 1.5, 1.8],
+                    prompt="A 90 g packet contains three 30.0 g servings. Use the nutrient amounts and energy factors below. The nutrient amounts are per 100 g of product.",
+                    rows=[["Nutrient", "g per 100 g", "Energy factor (kJ g⁻¹)"],
+                          ["Carbohydrate", "48.0", "16"], ["Protein", "12.0", "17"], ["Fat", "18.0", "37"]]),
         stem="A 90 g packet contains three 30.0 g servings. Per 100 g, the product contains 48.0 g "
              "carbohydrate, 12.0 g protein and 18.0 g fat.",
         parts=[
@@ -176,6 +180,11 @@ BANK = [
     ),
     dict(
         id="Q10", episode=5, title="Which food has more energy depends on the comparison",
+        visual=dict(type="table", column_widths=[3.1, 1.4, 1.4],
+                    prompt="Compare the two foods using these idealised label values. Nutrient masses are per 100 g of food. Use energy factors: carbohydrate 16, protein 17 and fat 37 kJ g⁻¹.",
+                    rows=[["Quantity", "Food A", "Food B"], ["Carbohydrate (g/100 g)", "50", "35"],
+                          ["Protein (g/100 g)", "10", "20"], ["Fat (g/100 g)", "12", "15"],
+                          ["Serving mass (g)", "80", "50"]]),
         stem="Idealised label values per 100 g: Food A contains 50 g carbohydrate, 10 g protein and 12 g "
              "fat; Food B contains 35 g carbohydrate, 20 g protein and 15 g fat. An A serving is 80 g and "
              "a B serving is 50 g.",
@@ -392,6 +401,11 @@ BANK = [
     ),
     dict(
         id="Q21", episode=11, title="Recover the appropriate temperature rise from a graph",
+        visual=dict(type="temperature", mixing_time=120, baseline=21.0, cooling_start=180,
+                    points=[(0, 21.0), (60, 21.0), (120, 21.0), (135, 23.0),
+                            (150, 25.0), (165, 26.0), (180, 26.1), (240, 25.9),
+                            (300, 25.7), (360, 25.5)],
+                    prompt="A reaction starts at t = 120 s. The graph shows the measured temperatures. The calorimeter's calibration factor is 650 J °C⁻¹. Assume a linear cooling trend from 180–360 s."),
         stem="Mixing begins at t = 120 s. Pre-mixing temperatures at 0, 60 and 120 s are 21.0 °C. Subsequent "
              "measured temperatures: 135 s, 23.0 °C; 150 s, 25.0 °C; 165 s, 26.0 °C; 180 s, 26.1 °C; "
              "240 s, 25.9 °C; 300 s, 25.7 °C; 360 s, 25.5 °C. CF = 650 J °C⁻¹.",
@@ -430,6 +444,11 @@ BANK = [
     ),
     dict(
         id="Q23", episode=12, title="Compare emissions per useful energy, not per fuel mass",
+        visual=dict(type="table", column_widths=[3.1, 1.4, 1.4],
+                    prompt="The table gives hypothetical data for fossil Fuel R and waste-derived Biofuel S. Each must deliver 1.00 MJ of useful heat. Lifecycle emissions are stated per MJ of fuel energy input.",
+                    rows=[["Quantity", "Fuel R", "Biofuel S"], ["Energy (MJ kg⁻¹)", "43.0", "29.0"],
+                          ["Useful-heat efficiency (%)", "35.0", "28.0"],
+                          ["Lifecycle emissions (g CO₂-e per MJ input)", "80.0", "45.0"]]),
         stem="Hypothetical comparison data, supplied solely for this exercise. Fossil Fuel R: 43.0 MJ kg⁻¹, "
              "35.0% useful-heat efficiency, lifecycle emissions 80.0 g CO₂-e per MJ of fuel energy. "
              "Waste-derived Biofuel S: 29.0 MJ kg⁻¹, 28.0% efficiency, lifecycle emissions 45.0 g CO₂-e per MJ of fuel energy.",
@@ -450,6 +469,13 @@ BANK = [
     ),
     dict(
         id="Q24", episode=12, title="Evidence-based sustainability with an honest limit",
+        visual=dict(type="table", column_widths=[1.8, 2.0, 2.4],
+                    prompt="The table compares two technically viable ethanol-production processes. All quantities are per kilogram of ethanol produced. Evaluate the processes using the data supplied.",
+                    rows=[["Quantity", "Process A", "Process B"],
+                          ["Feedstock", "Edible crop", "Food-processing waste"],
+                          ["Energy", "8 MJ natural-gas heat", "10 MJ electricity (60% renewable)"],
+                          ["Fresh water", "12 L", "20 L"],
+                          ["Fermentation CO₂", "Vented", "Captured and used in manufacturing"]]),
         stem="Per kilogram of ethanol produced: Process A uses edible crop feedstock, 8 MJ of natural-gas heat "
              "and 12 L of freshwater, and vents its fermentation CO₂. Process B uses food-processing waste, "
              "10 MJ of electricity (60% renewable) and 20 L of freshwater, and its captured fermentation CO₂ "
@@ -504,6 +530,12 @@ BANK = [
     ),
     dict(
         id="Q26", episode=13, title="A fuel ranking that needs a specified basis",
+        visual=dict(type="table", column_widths=[3.0, 1.5, 1.5],
+                    prompt="Compare the two fuel heaters using these data. Assume complete combustion. Direct CO₂ production is per mole of fuel; useful-energy efficiency is the fraction of fuel energy delivered as useful output.",
+                    rows=[["Quantity", "Methanol", "Ethanol"], ["M (g mol⁻¹)", "32.0", "46.0"],
+                          ["ΔH_c (kJ mol⁻¹)", "−726", "−1370"],
+                          ["CO₂ formed (mol per mol fuel)", "1", "2"],
+                          ["Useful-energy efficiency (%)", "25.0", "40.0"]]),
         stem="Methanol: M = 32.0 g mol⁻¹, ΔH_c = −726 kJ mol⁻¹. Ethanol: M = 46.0 g mol⁻¹, ΔH_c = "
              "−1370 kJ mol⁻¹. Complete combustion produces 1 mol and 2 mol CO₂ per mole of fuel respectively. "
              "A methanol heater has 25.0% useful-energy efficiency and an ethanol heater 40.0%.",
@@ -528,6 +560,9 @@ BANK = [
     ),
     dict(
         id="Q27", episode=14, title="Integrated workshop: calibration, a graph and neutralisation",
+        visual=dict(type="temperature", mixing_time=60, baseline=20.0, cooling_start=120,
+                    points=[(120, 24.7), (180, 24.6), (240, 24.5), (300, 24.4)],
+                    prompt="Calibration: 125.0 g water; 5.00 V, 1.20 A for 300 s; rise 3.00 °C. Reaction: 50.0 mL of 1.00 mol L⁻¹ HCl + 75.0 mL of 0.800 mol L⁻¹ NaOH. Baseline 20.0 °C; mixing at 60 s. The graph shows cooling readings. Assume the same CF, complete neutralisation and a linear cooling trend."),
         stem="A calorimeter is electrically calibrated with 125.0 g of water using 5.00 V and 1.20 A for "
              "300 s, giving a 3.00 °C rise. Assume this CF also applies accurately to the reaction mixture "
              "below. 50.0 mL of 1.00 mol L⁻¹ HCl is mixed with 75.0 mL of 0.800 mol L⁻¹ NaOH. The initial "

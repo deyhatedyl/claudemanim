@@ -119,8 +119,8 @@ class E14S03_Annotate(NarratedScene):
             ("baseline 20.0 °C; mixing at t = 60 s", "extrapolate back to 60 s", UNKNOWN, True),
             ("cooling readings from 120 s", "linear trend: best line", SURR, False),
         ])
-        given = T("given", size=SMALL, color=MUTED).next_to(rows[0][0], UP, buff=0.22).align_to(rows[0][0], LEFT)
-        note = T("annotation", size=SMALL, color=MUTED).next_to(rows[0][2], UP, buff=0.22).align_to(rows[0][2], LEFT)
+        given = T("given", size=SMALL, color=MUTED).next_to(rows[0][0], UP, buff=0.06).align_to(rows[0][0], LEFT)
+        note = T("annotation", size=SMALL, color=MUTED).next_to(rows[0][2], UP, buff=0.06).align_to(rows[0][2], LEFT)
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(given), FadeIn(note), run_time=0.6)
             show_row(self, rows[0])
@@ -566,7 +566,11 @@ class E14S14_PartsDE(NarratedScene):
             l2 = T("96.0%: appears to meet the claim", size=SMALL, color=BAD).next_to(g, DOWN, buff=0.15).align_to(g.n2p(96.0), RIGHT).shift(0.6 * RIGHT)
             b.until(0.4)
             self.play(Create(g), Create(claim), FadeIn(ct), FadeIn(m1), run_time=0.8)
-            self.play(TransformFromCopy(m1, m2), FadeIn(l2), run_time=0.8)
+            biased = m1.copy().set_color(BAD)
+            self.add(biased)
+            self.play(biased.animate.move_to(m2), FadeIn(l2), run_time=1.6)
+            self.remove(biased)
+            self.add(m2)
             bd = VGroup(mbox(), mbox()).arrange(RIGHT, buff=0.1).move_to([XM - 0.28, 0.05, 0])
             b.until(0.85)
             self.play(FadeIn(bd), run_time=0.3)
@@ -770,7 +774,7 @@ class E14S19_Close(NarratedScene):
                                  fill_color=PANEL, fill_opacity=1)
             g.move_to(r).align_to(r, LEFT).shift(0.3 * RIGHT)
             built.add(VGroup(r, g))
-        built.arrange_in_grid(rows=2, cols=2, buff=(0.4, 0.3)).move_to([0, 1.35, 0])
+        built.arrange_in_grid(rows=2, cols=2, buff=(0.4, 0.3)).move_to([0, 1.08, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), run_time=0.4)
             for i, fr in enumerate((0.25, 0.42, 0.6, 0.78)):

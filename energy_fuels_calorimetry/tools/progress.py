@@ -50,10 +50,7 @@ def main():
     have_key = bool(C.gemini_api_key())
     out = dict(updated=time.strftime("%Y-%m-%dT%H:%M:%S"), tts=dict(provider=C.TTS_PROVIDER, model=C.GEMINI_TTS_MODEL,
                voice=C.GEMINI_TTS_VOICE, api_key_present=have_key), blockers=[], episodes={})
-    if not have_key:
-        out["blockers"].append("TTS: GEMINI_API_KEY not set in this environment; narration, narrated drafts and "
-                               "final renders cannot be produced. Add it as an environment variable and start a new "
-                               "session, then run tools/tts_probe.py.")
+    out["narration_route"] = "learner-supplied WAVs; measured alignment before narrated rendering"
     total_est = 0.0
     for ep, title in EPISODES.items():
         n = ep[1:].lower()
@@ -75,11 +72,11 @@ def main():
             if cpath.exists():
                 e["scenes_code"] = dict(path=str(cpath.relative_to(ROOT)), sha=sha(cpath))
                 e["stage"] = "scenes-coded"
-            draft_ok = True
+            draft_tags = {"480p15", "720p30", "1080p30"}
             for s in sc.scenes:
                 row = dict(id=s.id, title=s.title, beats=len(s.beats),
                            audio_ready=sum(1 for b in s.beats if cached_clip(b.key, b.text, manifest)))
-                for tag in ("480p15", "1080p30"):
+                for tag in ("480p15", "720p30", "1080p30"):
                     tl = C.TIMELINES / tag / f"{s.id}.json"
                     if tl.exists():
                         d = json.loads(tl.read_text())
@@ -87,16 +84,16 @@ def main():
                         row[tag] = dict(duration=d["duration"], fresh=fresh,
                                         estimated_beats=sum(1 for b in d["beats"] if b["estimated"]),
                                         layout_warnings=sum(len(b.get("layout", [])) for b in d["beats"]))
-                if not row.get("480p15", {}).get("fresh"):
-                    draft_ok = False
+                draft_tags.intersection_update(tag for tag in draft_tags if row.get(tag, {}).get("fresh"))
                 e["scenes"].append(row)
-            for tag in ("480p15", "1080p30"):
+            for tag in ("480p15", "720p30", "1080p30"):
                 rep = C.LOGS / f"assemble_{ep}_{tag}.json"
                 if rep.exists():
                     e[f"assembled_{tag}"] = {k: v for k, v in json.loads(rep.read_text()).items()
                                              if k in ("output", "final", "narrated", "duration", "captions",
                                                       "transcript", "problems")}
-            if e["scenes_code"] and draft_ok and e.get("assembled_480p15"):
+            if e["scenes_code"] and any(e.get(f"assembled_{tag}") and
+                                        not e[f"assembled_{tag}"].get("problems") for tag in draft_tags):
                 e["stage"] = "draft-rendered"
             if e["audio"]["ready"] == e["audio"]["total"] and e["stage"] == "draft-rendered":
                 e["stage"] = "narrated"
@@ -106,7 +103,16 @@ def main():
                 if qa.get(ep, {}).get("final_qa") == "pass":
                     e["stage"] = "verified"
         e["qa"] = qa.get(ep, {})
+        if e["qa"].get("delivery_status") == "earlier_delivery":
+            e["stage"] = "earlier-delivery"
+            e["note"] = "Keep the prior delivered MP4; its audio/media are not reloaded in this local continuation."
         out["episodes"][ep] = e
+    missing_audio = [ep for ep, e in out["episodes"].items()
+                     if e["stage"] != "earlier-delivery" and e.get("audio", {}).get("ready", 0) <
+                     e.get("audio", {}).get("total", 0)]
+    if missing_audio:
+        out["blockers"].append("Awaiting learner narration WAVs for " + ", ".join(missing_audio) +
+                               "; silent previews use estimated timing. Narrated finals require checked alignment.")
     out["series_est_minutes"] = round(total_est / 60, 1)
     C.PROGRESS.write_text(json.dumps(out, indent=1))
     for ep, e in out["episodes"].items():

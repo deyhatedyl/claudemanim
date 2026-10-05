@@ -148,7 +148,7 @@ class E04S04_CarbonCycle(NarratedScene):
     def construct(self):
         h = header("Following the carbon atoms")
         sch = T("schematic", size=SMALL, color=MUTED).to_corner(UR, buff=0.45)
-        atm = card("Atmosphere", ["carbon dioxide, CO₂"], SURR, 3.6).move_to([-0.5, 2.25, 0])
+        atm = card("Atmosphere", ["carbon dioxide, CO₂"], SURR, 3.6).move_to([-0.5, 1.9, 0])
         plant = card("Plant", ["glucose, C₆H₁₂O₆"], BIO, 3.6).move_to([3.9, 0.15, 0])
         fuel = card("Fuel", ["ethanol, C₂H₅OH"], SYSTEM, 3.6).move_to([-0.5, -1.4, 0])
         a1 = CurvedArrow(atm.get_right() + 0.05 * RIGHT, plant.get_top() + 0.05 * UP, angle=-PI / 3, color=BIO, stroke_width=4)
@@ -165,29 +165,29 @@ class E04S04_CarbonCycle(NarratedScene):
             self.play(FadeIn(h), FadeIn(sch), FadeIn(atm), FadeIn(cs), run_time=0.8)
             b.until(0.35)
             self.play(Create(a1), FadeIn(l1), FadeIn(plant), run_time=1.0)
-            self.play(cs.animate.next_to(plant, DOWN, buff=0.08), run_time=1.4)
+            self.play(cs.animate(path_arc=-PI / 3).next_to(plant, DOWN, buff=0.08), run_time=1.8)
         with self.beat("b02") as b:
             self.play(Create(a2), FadeIn(l2), FadeIn(fuel), run_time=1.0)
-            self.play(cs[:2].animate.next_to(fuel, DOWN, buff=0.08), run_time=1.2)
+            self.play(cs[:2].animate(path_arc=-PI / 3).next_to(fuel, DOWN, buff=0.08), run_time=1.6)
             fco2 = T("one C leaves as CO₂", size=SMALL, color=MUTED).next_to(plant, LEFT, buff=0.25).shift(0.6 * DOWN)
-            self.play(cs[2].animate.next_to(atm, DOWN, buff=0.08).shift(0.8 * RIGHT), FadeIn(fco2), run_time=1.2)
+            self.play(cs[2].animate(path_arc=PI / 3).next_to(atm, DOWN, buff=0.08).shift(0.8 * RIGHT), FadeIn(fco2), run_time=1.6)
             self.fco2 = fco2
         with self.beat("b03") as b:
             self.play(Create(a3), FadeIn(l3), run_time=1.0)
-            self.play(cs[:2].animate.next_to(atm, DOWN, buff=0.08).shift(0.35 * LEFT), run_time=1.4)
+            self.play(cs[:2].animate(path_arc=-PI / 1.6).next_to(atm, DOWN, buff=0.08).shift(0.35 * LEFT), run_time=1.8)
             loop = T("recycled over months or years", size=LABEL, color=BIO).move_to([-0.5, 0.05, 0])
             b.until(0.6)
             self.play(FadeIn(loop), run_time=0.6)
         with self.beat("b04") as b:
             fos = card("Fossil carbon", ["stored underground for millions of years"], FOSSIL, 3.4).move_to([-4.9, -0.7, 0])
             fa = Arrow(fos.get_top(), atm.get_left() + 0.3 * DOWN, buff=0.1, color=FOSSIL, stroke_width=5)
-            ft = T("adds extra CO₂", size=SMALL + 1, color=FOSSIL).next_to(fa, LEFT, buff=0.05).shift(0.2 * UP)
+            ft = T("adds extra CO₂", size=SMALL + 1, color=FOSSIL).move_to([-4.9, 0.95, 0])
             extra = VGroup(*[atom("C", 0.9) for _ in range(3)]).arrange(RIGHT, buff=0.12).next_to(fos, DOWN, buff=0.08)
             self.play(FadeOut(l3), FadeIn(fos), FadeIn(extra), run_time=0.8)
             self.fossil = VGroup(fos, extra)
             self.play(GrowArrow(fa), FadeIn(ft), run_time=0.8)
             self.fossil.add(fa, ft)
-            self.play(extra.animate.next_to(atm, LEFT, buff=0.15).shift(0.0 * DOWN), run_time=1.4)
+            self.play(extra.animate(path_arc=PI / 6).next_to(atm, LEFT, buff=0.15), run_time=1.8)
         with self.beat("b05") as b:
             warn = wrapped("Not automatically carbon neutral: farming, processing and transport can use fossil energy.",
                            size=SMALL + 1, width=3.6, color=UNKNOWN)
@@ -228,7 +228,7 @@ class E04S05_Photosynthesis(NarratedScene):
             self.lab = lab
         with self.beat("b03") as b:
             rs = M(r"\ce{C6H12O6(aq)} + 6\ce{O2(g)} \ce{->} 6\ce{CO2(g)} + 6\ce{H2O(l)}", size=EQ_SMALL - 4, color=USEFUL)
-            rs.move_to([3.2, -0.95, 0])
+            rs.scale_to_fit_width(6.5).move_to([3.2, -0.95, 0])
             e = T("releases ≈ 2.8 × 10³ kJ per mol of glucose", size=LABEL, color=USEFUL).next_to(rs, DOWN, buff=0.2)
             why = T("because strong bonds form in CO₂ and H₂O", size=SMALL + 1, color=MUTED).next_to(e, DOWN, buff=0.12)
             self.play(Write(rs), run_time=1.2)
@@ -281,7 +281,7 @@ class E04S06_Ethanol(NarratedScene):
         A, bonds = glucose_layout(s)
         gl = VGroup(*A.values()).move_to([0, 0.75, 0])
         bl = bond_lines(A, bonds, s)
-        glab = T("glucose (schematic)", size=SMALL + 1, color=MUTED).move_to([0, -0.15, 0])
+        glab = T("glucose (schematic)", size=SMALL + 1, color=MUTED).next_to(gl, DOWN, buff=0.18)
         # product templates
         eA, eB = mol_C2H5OH(s), mol_C2H5OH(s)
         cA, cB = mol_CO2(s), mol_CO2(s)
@@ -350,11 +350,11 @@ class E04S06_Ethanol(NarratedScene):
                                  color=SURR, stroke_width=2.5, fill_color=SURR, fill_opacity=0.12)
             tube = Line(top + [0.0, -0.3, 0], top + [4.1, -1.5, 0], color=TEXT, stroke_width=3)
             recv = flask(width=1.4, height=1.6, liquid=SYSTEM, level=0.25).move_to(top + [4.3, -2.45, 0])
-            win = T("cooling water", size=SMALL, color=SURR).next_to(cond_outer, UP, buff=0.05).shift(0.5 * RIGHT)
+            win = T("cooling water", size=SMALL, color=SURR).move_to([-2.8, 1.55, 0])
             l_mix = wrapped("fermented mixture (about 10–15% ethanol)", size=SMALL + 1, width=4.2)
             l_mix.next_to(flame, DOWN, buff=0.15)
             l_vap = wrapped("vapour richer in ethanol (boils at 78 °C; water 100 °C)", size=SMALL + 1, width=3.4, color=UNKNOWN)
-            l_vap.move_to([0.4, 2.3, 0])
+            l_vap.move_to([0.4, 2.08, 0])
             l_dist = wrapped("distillate: much more concentrated, but at most about 95% ethanol, not pure", size=SMALL + 1,
                              width=3.6, color=SYSTEM).next_to(recv, RIGHT, buff=0.25)
             self.play(FadeIn(sch), FadeIn(still), FadeIn(flame), FadeIn(l_mix), run_time=1.0)

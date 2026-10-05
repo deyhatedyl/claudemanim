@@ -17,7 +17,9 @@
    "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
    "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
    "preview_render_run": 37092538378
-  }
+  },
+  "delivery_status": "earlier_delivery",
+  "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
  },
  "E02": {
   "draft_visual_qa": "pass",
@@ -37,7 +39,9 @@
    "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
    "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
    "preview_render_run": 37092538378
-  }
+  },
+  "delivery_status": "earlier_delivery",
+  "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
  },
  "E03": {
   "draft_visual_qa": "pass",
@@ -57,61 +61,316 @@
    "captioned_preview_validation": "pass: two-line cue samples fit reserved strip; full MP4 decode without errors",
    "export_commit": "91ab9feb14b4c5fe252bd95c41807b2a1ae69742",
    "preview_render_run": 37092538378
-  }
+  },
+  "delivery_status": "earlier_delivery",
+  "continuation_20261005": "Already delivered in the earlier session; no scene or spoken-script revision in this continuation. The earlier visual QA fields below are historical."
  },
  "E04": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: carbon atoms overlapping card text, warning panel placement, distillation labels in caption strip, Q07 chain label collision, marks panel over equation, ester-exchange product connectivity (CH3-O-CO-R), Q08 part c overlap. Fermentation animation preserves all 24 atoms (asserted in code). Layout check: 0 warnings.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 10,
+   "beat_end_frames_automatically_checked": 42,
+   "scene_end_frames_manually_inspected": 10,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E05": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: bar scale off-frame, fraction substring LaTeX failure, caution panel width, basis-comparison label/panel placement. Illustrative food values labelled as such. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 9,
+   "beat_end_frames_automatically_checked": 36,
+   "scene_end_frames_manually_inspected": 9,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E06": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: step label contrast, accounting columns overlapping trap label, amount/mass headers overlapping question. Balancer counters computed from formulas (not typed). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E06S09 (propane balancing checkpoint, counters computed from formulas) added and inspected. Exam reconciliation: E06S04 b04 (incomplete combustion from the O2:fuel ratio) added and inspected.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 10,
+   "beat_end_frames_automatically_checked": 41,
+   "scene_end_frames_manually_inspected": 10,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E07": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: Q14 prompt height (two-column parts), trap panels overflow, recipe/rule overlap, exam-sentence panel overlap, stream bars reordered so arrows leave from reactive segments only. Budget grid component added. Micro-prediction beat added (0.20 CH4/0.50 O2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E07S04 (limiting reactant from masses) and E07S07 (gas volume ratios; air needed) added and inspected; scenes renumbered. Exam reconciliation: E07S08 (measuring a gas volume; assumptions, % yield) added and inspected; scenes renumbered.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 12,
+   "beat_end_frames_automatically_checked": 48,
+   "scene_end_frames_manually_inspected": 12,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E08": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: rig label off-frame, key panel overlaps, panel notes overlapping, food-calorimetry panel in caption strip, formula/panel collision. Food calorimetry example (3344 J, 2.2 kJ/g) included per brief. Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Question card re-rendered so \u0394H_c shows a true subscript. Expanded: E08S09 (why measured values come out low; specific improvements) added and inspected.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 10,
+   "beat_end_frames_automatically_checked": 42,
+   "scene_end_frames_manually_inspected": 10,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E09": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E09S03 (solution vs bomb calorimeter) and E09S08 (chemical calibration, hypothetical reference reaction) added and inspected; scenes renumbered.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: labels off-frame (S02/S05), stacked heat-capacity bars overlapping formulas (S04/S06 re-laid out), Q18 number-line label collisions, checkpoint arrow overlap (S07). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E09S03 (solution vs bomb calorimeter) and E09S08 (chemical calibration, hypothetical reference reaction) added and inspected; scenes renumbered.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 11,
+   "beat_end_frames_automatically_checked": 45,
+   "scene_end_frames_manually_inspected": 11,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E10": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E10S05 (temperature fall, endothermic sign) and E10S07 (solution-only m c \u0394T model vs CF) added and inspected; scenes renumbered.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: mixing-scene label collisions (cylinders, amounts over calorimeter, panel over caption). Q19 trap denominators recomputed (-42.3, -24.2). Layout check: 0 warnings. Re-rendered practice scenes after spoken question-ID standardisation. Expanded: E10S05 (temperature fall, endothermic sign) and E10S07 (solution-only m c \u0394T model vs CF) added and inspected; scenes renumbered.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 11,
+   "beat_end_frames_automatically_checked": 42,
+   "scene_end_frames_manually_inspected": 11,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E11": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; graph uses Q21 data points only, fit recomputed with np.polyfit (asserted T(120 s)=26.3 \u00b0C); measured vs extrapolated markers and solid/dashed rises distinguished. Fixed: axis label in caption strip, source note over header, right-column overlaps, error table/caution overlap. Layout check: 0 warnings. Expanded: E11S06 (drawing the extrapolation by hand), E11S07 (endothermic warming-back graph) and E11S12 (improvement-to-error matching) added and inspected; scenes renumbered. Exam reconciliation: E11S10 (resolution, mistakes, outliers) added and inspected; averaging tag reworded; scenes renumbered.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 14,
+   "beat_end_frames_automatically_checked": 55,
+   "scene_end_frames_manually_inspected": 14,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E12": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills inspected; fixed: per-gram bar scale, chain-node spacing and label clearance (S03), Q23 row/panel collisions, leak-arrow label anchoring (S06), trade-off card crowding replaced with a single line plus 2x2 SDG chips, Q24 table/sentence layout with aligned left edges. Hypothetical data labelled. Layout check: 0 warnings. Expanded: E12S03 (energy per litre for gases) and E12S08 (carbon-neutral claim) added and inspected; scenes renumbered. Exam reconciliation: E12S04 (oxygen-containing fuels, partial oxidation) added and atom economy added to E12S10; inspected; scenes renumbered.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 12,
+   "beat_end_frames_automatically_checked": 41,
+   "scene_end_frames_manually_inspected": 12,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E13": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q25 card too tall (now two-column, inline marks, no header, clear of the attempt timer), pause banners overlapping card text, annotation arrows over data text, node text wrapping, header/tally collisions, low-contrast ticked mark boxes, basis labels outside the wrong-solution panel, lifecycle boundary text overflow. Original-question notice on the title card. Layout check: 0 warnings. Attempt scenes updated to the shared attempt-card layout (balanced columns, instruction in the timer label). Exam reconciliation: Q26 c reasoning revised to the oxygen-fraction / partial-oxidation explanation (E13S15 re-rendered and inspected).",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 16,
+   "beat_end_frames_automatically_checked": 49,
+   "scene_end_frames_manually_inspected": 16,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  },
  "E14": {
   "draft_visual_qa": "pass",
-  "draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
-  "final_qa": "pending"
+  "draft_notes": "2026-10-05: reference UI with explanatory animation and actual question stimuli. All scene ends/practice attempts inspected; zero geometry flags. Silent 720p30 MP4 fully decoded; no embedded subtitles. Estimated timing; learner WAVs pending.",
+  "final_qa": "pending",
+  "previous_draft_notes": "480p15 silent draft. All beat-end stills and both quiet-attempt frames inspected; fixed: Q27/Q28 cards too tall (columns now balanced by height, card at the top, attempt timer and instruction in the bottom strip, which carries no captions during the silent pause), calorimeter crowding the calibration bars, graph baseline label over the mixing line, number-line label collision, chain operation labels over boxes, diagnostic answers colliding with long statements, method table split into two tables. Plotted points are the Q27 data; fit recomputed. Original-question notice on the title card. Layout check: 0 warnings.",
+  "delivery_status": "silent-preview-ready; narrated-final-awaits-learner-audio",
+  "reference_ui_visual_qa": {
+   "status": "pass",
+   "date": "2026-10-05",
+   "still_resolution": [
+    1920,
+    1080
+   ],
+   "preview_resolution": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "scenes": 19,
+   "beat_end_frames_automatically_checked": 54,
+   "scene_end_frames_manually_inspected": 19,
+   "unique_practice_attempt_frames_inspected": 2,
+   "geometry_flags": 0,
+   "record": "checks/ui_review_20261005.json",
+   "video_validation": "checks/preview_validation_20261005.json",
+   "notes": "Silent preview only. Narrated final QA and checked alignment pending WAVs."
+  }
  }
 }

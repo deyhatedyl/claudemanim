@@ -81,6 +81,9 @@ def question_card(qid: str, width: float = 12.6, size: int = LABEL, show_parts: 
     """The full prompt of an anchor question with its marks (no answers). cols=2 lays parts out in two columns;
     side=True puts the stem on the left and a single column of parts on the right (for long questions)."""
     q = BY_ID[qid]
+    if q.get("visual") and show_parts:
+        from .question_visuals import visual_question
+        return visual_question(q, width=width, size=size, parts=parts, tight=tight)
     total = sum(p[2] for p in q["parts"])
     head = VGroup(TB(f"{qid}", size=size + 4, color=SYSTEM),
                   T(q["title"], size=size, color=TEXT),

@@ -46,21 +46,23 @@ def export(episodes: list[str], dest: Path):
                               "thinking_pause_after_seconds": b.pause})
         (folder / f"{ep.id}-Full-narration.txt").write_text("\n\n".join(all_text) + "\n")
     (dest / "beat-index.json").write_text(json.dumps(index, indent=2))
-    readme = """# Narration for Episodes 1–3
+    names = ", ".join(episodes)
+    counts = "; ".join(f"{ep}: {len(load_episode(ep).scenes)} scenes" for ep in episodes)
+    readme = f"""# Narration for {names}
 
 Use Voice-direction.txt as the voice/style instruction. The narration text is already written in
 spoken form: chemical formulas, numbers and units are spelled out for the voice.
 
 Choose one of these equivalent recording formats:
 
-* **Scene files (recommended):** generate one audio file per text in E01/scenes, E02/scenes and
-  E03/scenes. Name them E01S01.wav, E01S02.wav, and so on. Short chunks are easier to regenerate
-  and align accurately. All three episodes have nine scenes each.
-* **Whole episodes:** use E01-Full-narration.txt, E02-Full-narration.txt and E03-Full-narration.txt.
-  Return E01.wav, E02.wav and E03.wav. These need speech alignment before the narration beats
+* **Scene files (recommended):** generate one audio file per text in each episode's scenes folder.
+  Keep its scene ID as the WAV name. Short chunks are easier to regenerate
+  and align accurately. Scene counts: {counts}.
+* **Whole episodes:** use each episode's Full-narration.txt and return its episode ID as the
+  WAV name. These need speech alignment before the narration beats
   can be timed precisely. The preview's estimated timestamps are not final audio timestamps.
 * **Beat files:** use the smaller files in each beats folder and preserve filenames such as
-  E01S01.b01.wav. These can be imported directly without speech alignment.
+  {episodes[0]}S01.b01.wav. These can be imported directly without speech alignment.
 
 WAV is preferred; MP3 or M4A is also usable. Keep exactly the script's words and the same voice.
 Don't read identifiers or instructions aloud, add background music, or add long thinking pauses.

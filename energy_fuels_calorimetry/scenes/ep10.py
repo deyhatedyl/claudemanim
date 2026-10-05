@@ -90,8 +90,8 @@ class E10S02_Mixing(NarratedScene):
             self.play(Write(eq), run_time=1.2)
             b.until(0.55)
             self.play(FadeIn(ratio), run_time=0.5)
-        a1 = M(r"n(\ce{HCl}) = 0.0750\ \text{L} \times 0.800 = 0.0600\ \text{mol}", size=EQ_SMALL - 8, color=MOL_C).move_to([0, 1.1, 0]).align_to([1.0, 0, 0], LEFT)
-        a2 = M(r"n(\ce{NaOH}) = 0.0500\ \text{L} \times 0.900 = 0.0450\ \text{mol}", size=EQ_SMALL - 8, color=MOL_C).move_to([0, 0.4, 0]).align_to([1.0, 0, 0], LEFT)
+        a1 = M(r"n(\ce{HCl}) = 0.0750\ \text{L} \times 0.800 = 0.0600\ \text{mol}", size=EQ_SMALL - 10, color=MOL_C).move_to([0, 1.1, 0]).align_to([0.8, 0, 0], LEFT)
+        a2 = M(r"n(\ce{NaOH}) = 0.0500\ \text{L} \times 0.900 = 0.0450\ \text{mol}", size=EQ_SMALL - 10, color=MOL_C).move_to([0, 0.4, 0]).align_to([0.8, 0, 0], LEFT)
         with self.beat("b03") as b:
             b.until(0.15)
             self.play(Write(a1), run_time=1.2)
@@ -137,6 +137,7 @@ class E10S03_Limiting(NarratedScene):
 # =====================================================================================
 class E10S04_Signs(NarratedScene):
     def construct(self):
+        from shared.motion import flow
         h = header("From calorimeter heat to ΔH")
         f1 = M(r"q_{\text{cal}} = CF \times \Delta T", size=EQ).move_to([0, 2.2, 0])
         with self.beat("b01") as b:
@@ -149,6 +150,7 @@ class E10S04_Signs(NarratedScene):
             self.play(FadeIn(cols[0][0]), run_time=0.6)
             self.play(GrowArrow(cols[1]), FadeIn(cols[2]), run_time=0.7)
             self.play(FadeIn(cols[0][1]), run_time=0.6)
+            flow(self, cols[1].get_start(), cols[1].get_end(), USEFUL, run_time=1.4)
             b.until(0.6)
             self.play(Write(f2), run_time=0.8)
             ass = T("assumes all the heat stays in the calorimeter", size=SMALL + 1, color=MUTED).next_to(f2, DOWN, buff=0.12)
@@ -304,13 +306,13 @@ class E10S07_MassModel(NarratedScene):
             tgt = self.work.copy().scale(0.75)
             tgt.move_to([0, -0.05, 0]).align_to([-6.3, 0, 0], LEFT)
             self.play(FadeOut(self.src), Transform(self.work, tgt), run_time=0.7)
-            sc = 0.0042
+            sc = 0.0037
             x_left = 2.2
 
             def bar(v, y, col, lab, val):
                 r = Rectangle(width=v * sc, height=0.32, fill_color=col, fill_opacity=0.85, stroke_width=0)
                 r.move_to([0, y, 0]).align_to([x_left, 0, 0], LEFT)
-                return VGroup(r, T(lab, size=SMALL, color=col).next_to(r, UP, buff=0.06).align_to(r, LEFT),
+                return VGroup(r, T(lab, size=SMALL - 2, color=col).next_to(r, UP, buff=0.06).align_to(r, LEFT),
                               T(val, size=SMALL, color=col).next_to(r, RIGHT, buff=0.12))
             hd = T("heat capacity counted (J °C⁻¹)", size=SMALL + 1, color=MUTED).move_to([3.6, 1.05, 0])
             b1 = bar(590, 0.3, UNKNOWN, "calibration factor: whole calorimeter", "590")

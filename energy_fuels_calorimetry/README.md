@@ -4,31 +4,30 @@ Production project for a 14-episode narrated video series (12 teaching episodes 
 following `brief/production_brief.md`. All practice questions (Q01–Q28) are original material written
 for this series; they are not official VCAA questions or marking schemes.
 
-**Current continuation: see `checks/ui_review_20261003.json` and `checks/qa_status.json`.**
-`progress.json` records the earlier 480p draft run and does not include the new CI preview artifacts.
+**Current continuation (5 October 2026): Episodes 4–14.** Episodes 1–3 were delivered earlier;
+Episode 3 is kept as delivered. The continuation keeps the supplied reference UI: Inter text and
+equation letters/numerals, navy background, compact section labels, centered titles and colored badges.
 
-**Continuation, 3 October 2026:** the shared UI follows the supplied reference contact sheets:
-Inter text and equation letters/numerals, dark navy, centered scene titles, compact section labels,
-filled pills/checklist badges and lighter outlines. Question cards and graphs fit below the title;
-long kickers leave room for the top-right pills. Internal label spacing was also reviewed.
-E01–E03 have been rendered at 1080p30 and all 136 beat-end frames inspected. Automatic checks
-report zero off-frame, caption-strip, header-crowding or kicker/pill flags across 27 scenes.
-Captioned silent MP4s are available from the chemistry preview workflow; two-line captions fit
-the reserved bottom strip. Narration remains pending; these are visual previews with estimated timing.
-E04–E14 have **not** been rendered or reviewed with this new shared style; their older QA below
-applies to the previously committed 480p drafts.
+The remaining episodes add curved carbon and molecule movement, animated useful/lost energy,
+thermometer changes, matching equation transformations, traced cooling extrapolation and moving
+calibration-bias markers. Graph questions Q21 and Q27 show actual plotted givens during the attempt,
+with fine divisions and exact cooling readings. Fits and corrected temperatures appear in the solution.
+Q09, Q10, Q23, Q24 and Q26 display comparison data as tables. All questions remain original practice
+with indicative marks. The numerical givens and spoken scripts are unchanged.
 
-* All 14 episodes are scripted (TTS-ready, 0 lint issues), built as Manim scenes and rendered as
-  **silent 480p drafts with estimated timing**; every beat-end still has been inspected and the
-  automatic layout check reports no off-frame or caption-strip content. Draft series runtime is about
-  3 h 34 min (`series_index.md`).
-* Learner documents are complete: `questions/worksheet.md`, `solutions/worked_solutions.md`,
-  `solutions/formula_and_method_sheet.md`; plus `coverage_matrix.md` and `series_index.md`.
-* `checks/verify_anchors.py`: 337 independent numerical, atom-balance and marks checks, 0 failures.
-* **Not yet produced:** narration audio, narrated drafts, final narrated 1080p30 lessons and audio-aligned captions.
-  The learner will supply manually generated narration; no TTS API key is required for this route.
-  Nothing in `renders/draft/` is a finished lesson: silent drafts carry `SILENT-estimated-timing`
-  in their names, and draft MP4s are git-ignored (regenerate with `tools/render.py`).
+`checks/ui_review_20261005.json` and `checks/preview_validation_20261005.json` record the new review.
+The continuation exports **silent 720p30 visual previews with estimated timing**. They are not narrated
+final lessons. The narration pack supplies 11 standalone Python files using the learner's working
+Gemini request format and existing Melb Teacher F1 voice. Narrated 1080p30 renders require the learner's
+WAVs, checked speech alignment and measured beat durations.
+
+**Future MP4s contain neither burned-in captions nor embedded subtitle tracks.** SRT/VTT and
+transcripts remain separate optional files. Nothing from the earlier delivered Episode 3 is replaced.
+Recorded narration, keys and derived alignment files stay private and outside GitHub.
+
+All 14 episodes are scripted; the 337 independent numerical, atom-balance and mark checks pass.
+The full worksheet, worked solutions, formula/method sheet, coverage matrix and viewing order are
+included. C26 is taught in Episode 14's Q28 calibration/active-fraction example and is now tagged.
 
 ## Layout
 
@@ -56,8 +55,8 @@ Each scene's narration is split into beats (`[bNN]` in the script). `NarratedSce
 measured duration of that beat's clip (or a words-per-minute estimate when no clip exists), runs the
 visuals inside it, then waits for the narration to finish. Frame-accurate start times are written to
 `renders/timelines/<quality>/<scene>.json`; `tools/assemble.py` places each clip at its start time,
-normalises loudness (−16 LUFS, −1.5 dBTP), builds captions from the same timeline and muxes the MP4
-with a soft subtitle track.
+normalises loudness (−16 LUFS, −1.5 dBTP), writes separate captions from the same timeline and
+exports the MP4 without subtitles.
 
 ## Commands
 
@@ -79,7 +78,7 @@ symbols use the available TeX symbol fonts). Colour roles (always paired with a 
 arrow or line style): system = orange, calorimeter/surroundings = blue, useful energy = green solid,
 losses = red dashed, unknown = yellow box with "?"/"Asked" tag. Quantity chips: amount (mol) lavender,
 mass (g) teal, volume (L) light blue, concentration pink, energy amber. The bottom ~15% of the frame
-is kept clear for subtitles; every beat is checked automatically for off-frame or caption-strip content.
+remains clear for thinking timers and visual breathing room; every beat is checked automatically for off-frame or caption-strip content.
 
 ## Manual narration and preview workflow
 
@@ -113,10 +112,23 @@ python tools/package_narrated.py E01
 The alignment tool downloads an English acoustic model on first use, then processes recordings
 locally. It produces measured beat boundaries, word timings and a recognition report. TorchAudio
 2.8 is pinned because later versions remove the CTC alignment functions used here. Word timings
-must match the exact current script; assembly rejects a mismatch. The narrated delivery has visible
-captions, a separate SRT/VTT and a transcript. Keep recordings and generated alignment data private.
+must match the exact current script; assembly rejects a mismatch. The narrated delivery has no subtitles in the MP4, plus a separate SRT/VTT and a transcript. Keep recordings and generated alignment data private.
 
-The prepared `.github/workflows/chemistry-previews.yml` renders only E01–E03 at 1080p30, exports
-review frames and geometry reports, and packages silent MP4s with visible captions. The workflow
-runs when changes are pushed to `codex/chemistry-layout-20261003`. The first three visual previews have been reviewed; they remain silent drafts with estimated
-timing. Narrated final QA requires the learner's audio and re-rendering at measured beat durations.
+The older chemistry preview workflow covers Episodes 1–3 and is a historical preview route. For the
+continuation, use `tools/render_series.py E04 E05 E06 E07 E08 E09 E10 E11 E12 E13 E14 -q m --jobs 3`,
+then `tools/assemble.py E04 -q m` and `tools/package_preview.py E04 --tag 720p30` (repeat by episode).
+`tools/verify_previews.py E04` checks the complete video stream, timing, layout and absence of audio/subtitles.
+Do not render the same scene concurrently at different qualities: its per-scene text/TeX cache is shared.
+
+Generate the reusable narration pack with:
+
+```bash
+python tools/build_narration_pack.py E04 E05 E06 E07 E08 E09 E10 E11 E12 E13 E14
+python checks/verify_narration_pack.py
+python checks/verify_question_visuals.py
+python tools/export_question_figures.py
+```
+
+The pack's START-HERE.md includes all Terminal commands and the per-episode WAV ZIP helper.
+Question graph/table conventions follow the VCAA Chemistry [planning guidance](https://www.vcaa.vic.edu.au/curriculum/vce-curriculum/vce-study-designs/chemistry/planning)
+for labelled quantities, units, scales and data presentation; these are original practice questions.

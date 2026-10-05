@@ -158,6 +158,12 @@ Two purified fuels each contain only CH₄. One is obtained from geological natu
 
 A 90 g packet contains three 30.0 g servings. Per 100 g, the product contains 48.0 g carbohydrate, 12.0 g protein and 18.0 g fat.
 
+| Nutrient | g per 100 g | Energy factor (kJ g⁻¹) |
+|---|---|---|
+| Carbohydrate | 48.0 | 16 |
+| Protein | 12.0 | 17 |
+| Fat | 18.0 | 37 |
+
 **a.** Calculate the energy per 100 g, in kJ, using the supplied food factors. *[2 marks]*
 
 &nbsp;
@@ -174,6 +180,13 @@ A 90 g packet contains three 30.0 g servings. Per 100 g, the product contains 48
 ### Q10. Which food has more energy depends on the comparison (5 marks)
 
 Idealised label values per 100 g: Food A contains 50 g carbohydrate, 10 g protein and 12 g fat; Food B contains 35 g carbohydrate, 20 g protein and 15 g fat. An A serving is 80 g and a B serving is 50 g.
+
+| Quantity | Food A | Food B |
+|---|---|---|
+| Carbohydrate (g/100 g) | 50 | 35 |
+| Protein (g/100 g) | 10 | 20 |
+| Fat (g/100 g) | 12 | 15 |
+| Serving mass (g) | 80 | 50 |
 
 **a.** Calculate the energy per 100 g of each food. *[2 marks]*
 
@@ -426,6 +439,15 @@ A setup contains 100.0 g of water and a cup/probe of positive heat capacity. A s
 
 Mixing begins at t = 120 s. Pre-mixing temperatures at 0, 60 and 120 s are 21.0 °C. Subsequent measured temperatures: 135 s, 23.0 °C; 150 s, 25.0 °C; 165 s, 26.0 °C; 180 s, 26.1 °C; 240 s, 25.9 °C; 300 s, 25.7 °C; 360 s, 25.5 °C. CF = 650 J °C⁻¹.
 
+![Q21: measured temperatures; no solution fit](figures/Q21-temperature.svg)
+
+| Time (s) | Temperature (°C) |
+|---|---|
+| 180 | 26.1 |
+| 240 | 25.9 |
+| 300 | 25.7 |
+| 360 | 25.5 |
+
 **a.** Use the linear 180–360 s cooling trend to estimate the temperature at the mixing time. *[2 marks]*
 
 &nbsp;
@@ -466,6 +488,12 @@ A reaction of 0.0400 mol shows a 4.00 °C temperature rise. The valid CF is 500 
 
 Hypothetical comparison data, supplied solely for this exercise. Fossil Fuel R: 43.0 MJ kg⁻¹, 35.0% useful-heat efficiency, lifecycle emissions 80.0 g CO₂-e per MJ of fuel energy. Waste-derived Biofuel S: 29.0 MJ kg⁻¹, 28.0% efficiency, lifecycle emissions 45.0 g CO₂-e per MJ of fuel energy.
 
+| Quantity | Fuel R | Biofuel S |
+|---|---|---|
+| Energy (MJ kg⁻¹) | 43.0 | 29.0 |
+| Useful-heat efficiency (%) | 35.0 | 28.0 |
+| Lifecycle emissions (g CO₂-e per MJ input) | 80.0 | 45.0 |
+
 **a.** For delivery of 1.00 MJ of useful heat, calculate the fuel energy input for each fuel. *[2 marks]*
 
 &nbsp;
@@ -486,6 +514,13 @@ Hypothetical comparison data, supplied solely for this exercise. Fossil Fuel R: 
 ### Q24. Evidence-based sustainability with an honest limit (6 marks)
 
 Per kilogram of ethanol produced: Process A uses edible crop feedstock, 8 MJ of natural-gas heat and 12 L of freshwater, and vents its fermentation CO₂. Process B uses food-processing waste, 10 MJ of electricity (60% renewable) and 20 L of freshwater, and its captured fermentation CO₂ is used in another manufacturing process. Both are technically viable.
+
+| Quantity | Process A | Process B |
+|---|---|---|
+| Feedstock | Edible crop | Food-processing waste |
+| Energy | 8 MJ natural-gas heat | 10 MJ electricity (60% renewable) |
+| Fresh water | 12 L | 20 L |
+| Fermentation CO₂ | Vented | Captured and used in manufacturing |
 
 **a.** Compare the processes using one relevant green chemistry or circular-economy consideration. *[2 marks]*
 
@@ -543,6 +578,13 @@ A purified digester gas contains 90.0% CH₄ and 10.0% CO₂ by volume. An ideal
 
 Methanol: M = 32.0 g mol⁻¹, ΔH<sub>c</sub> = −726 kJ mol⁻¹. Ethanol: M = 46.0 g mol⁻¹, ΔH<sub>c</sub> = −1370 kJ mol⁻¹. Complete combustion produces 1 mol and 2 mol CO₂ per mole of fuel respectively. A methanol heater has 25.0% useful-energy efficiency and an ethanol heater 40.0%.
 
+| Quantity | Methanol | Ethanol |
+|---|---|---|
+| M (g mol⁻¹) | 32.0 | 46.0 |
+| ΔH<sub>c</sub> (kJ mol⁻¹) | −726 | −1370 |
+| CO₂ formed (mol per mol fuel) | 1 | 2 |
+| Useful-energy efficiency (%) | 25.0 | 40.0 |
+
 **a.** Calculate the energy released per gram for each fuel. *[2 marks]*
 
 &nbsp;
@@ -565,6 +607,15 @@ Methanol: M = 32.0 g mol⁻¹, ΔH<sub>c</sub> = −726 kJ mol⁻¹. Ethanol: M 
 ### Q27. Integrated workshop: calibration, a graph and neutralisation (14 marks)
 
 A calorimeter is electrically calibrated with 125.0 g of water using 5.00 V and 1.20 A for 300 s, giving a 3.00 °C rise. Assume this CF also applies accurately to the reaction mixture below. 50.0 mL of 1.00 mol L⁻¹ HCl is mixed with 75.0 mL of 0.800 mol L⁻¹ NaOH. The initial baseline is 20.0 °C and mixing starts at t = 60 s. Post-reaction cooling measurements: 120 s, 24.7 °C; 180 s, 24.6 °C; 240 s, 24.5 °C; 300 s, 24.4 °C. Assume a linear cooling trend is suitable for the correction and neutralisation is complete.
+
+![Q27: measured temperatures; no solution fit](figures/Q27-temperature.svg)
+
+| Time (s) | Temperature (°C) |
+|---|---|
+| 120 | 24.7 |
+| 180 | 24.6 |
+| 240 | 24.5 |
+| 300 | 24.4 |
 
 **a.** Calculate the calibration energy and CF, and check CF against the water-only heat capacity. *[3 marks]*
 

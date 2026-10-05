@@ -78,6 +78,7 @@ class E08S01_Retrieval(NarratedScene):
 # =====================================================================================
 class E08S02_EnergyFlow(NarratedScene):
     def construct(self):
+        from shared.motion import flow
         h = header("Where the energy goes")
         sch = T("schematic", size=SMALL, color=MUTED).to_corner(UR, buff=0.45)
         rig = burner_rig([-2.7, -0.2, 0], 0.95)
@@ -98,10 +99,13 @@ class E08S02_EnergyFlow(NarratedScene):
         legend.arrange(DOWN, aligned_edge=LEFT, buff=0.25).move_to([3.2, 1.0, 0])
         with self.beat("b02") as b:
             self.play(FadeOut(labs[0]), FadeOut(labs[1]), GrowArrow(a_w), FadeIn(legend[0]), run_time=0.9)
+            flow(self, a_w.get_start(), a_w.get_end(), USEFUL)
+            self.play(rig.th.level.animate.set_value(0.65), run_time=1.0)
             b.until(0.4)
             self.play(GrowArrow(a_can), FadeIn(legend[1]), run_time=0.8)
             b.until(0.65)
             self.play(Create(a_air1), Create(a_air2), FadeIn(legend[2]), run_time=0.9)
+            flow(self, fpos, fpos + np.array([2.4, 1.4, 0]), LOSS, run_time=1.4)
         with self.beat("b03") as b:
             soot = VGroup(*[Dot(rig.can.get_bottom() + RIGHT * x + 0.03 * UP, radius=0.05, color="#333333") for x in np.linspace(-0.6, 0.6, 9)])
             st = VGroup(T("incomplete combustion", size=LABEL, color=UNKNOWN), T("soot; less energy released", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
@@ -166,7 +170,7 @@ class E08S03_qmcT(NarratedScene):
 class E08S04_MassEnergy(NarratedScene):
     def construct(self):
         h = header("What changes the temperature rise?")
-        f = M(r"\Delta T = \frac{q}{m\,c}", size=EQ).move_to([0, 2.5, 0]).to_edge(RIGHT, buff=0.8)
+        f = M(r"\Delta T = \frac{q}{m\,c}", size=EQ).move_to([0, 2.15, 0]).to_edge(RIGHT, buff=0.8)
         specs = [("4180 J", "100 g", 10, "+10 °C"), ("4180 J", "200 g", 5, "+5 °C"), ("8360 J", "100 g", 20, "+20 °C")]
         panels = VGroup()
         for e, m, dt, lab in specs:
@@ -221,7 +225,7 @@ class E08S05_MassLoss(NarratedScene):
             self.top = VGroup(r1, r2, chain)
         food = VGroup(TB("Food calorimetry", size=LABEL + 2, color=SYSTEM),
                       T("1.50 g dry food burned · 100.0 g water · rise 8.0 °C", size=LABEL)).arrange(DOWN, buff=0.12)
-        food.move_to([0, 2.4, 0])
+        food.move_to([0, 2.2, 0])
         with self.beat("b02") as b:
             self.play(FadeOut(self.top), run_time=0.5)
             self.play(FadeIn(food), run_time=0.8)
@@ -438,16 +442,16 @@ class E08S09_TooLow(NarratedScene):
             self.rows = rows
         with self.beat("b03") as b:
             dirn = chip("each makes the calculated |ΔH| too small", LOSS, size=SMALL + 2)
-            dirn.move_to([0, -0.85, 0]).align_to([x0, 0, 0], LEFT)
+            dirn.move_to([0, -1.17, 0]).align_to([x0, 0, 0], LEFT)
             self.play(FadeIn(dirn), run_time=0.5)
             fixes = VGroup(*[T(t, size=SMALL + 1, color=GOOD) for t in (
                 "draught shield and lid; flame close to a thin copper can; stir",
                 "enough air for a clean blue flame; cap and reweigh at once")]).arrange(DOWN, aligned_edge=LEFT, buff=0.12)
-            fixes.move_to([0, -1.6, 0]).align_to([x0, 0, 0], LEFT)
+            fixes.scale_to_fit_width(7.55).move_to([0, -1.87, 0]).align_to([x0, 0, 0], LEFT)
             b.until(0.3)
             self.play(FadeIn(fixes, lag_ratio=0.3), run_time=0.9)
             note = T("a result above the data book value points to an error", size=SMALL,
-                     color=MUTED).move_to([0, -2.38, 0]).align_to([x0, 0, 0], LEFT)
+                     color=MUTED).move_to([0, -2.55, 0]).align_to([x0, 0, 0], LEFT)
             b.until(0.82)
             self.play(FadeIn(note), run_time=0.5)
 

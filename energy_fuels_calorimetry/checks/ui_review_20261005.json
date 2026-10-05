@@ -1,0 +1,379 @@
+{
+  "date": "2026-10-05",
+  "base_commit": "8127d15e21f1e3c78ce7d6758cf6ba8084838c69",
+  "branch": "codex/episode-01-narration",
+  "scope": "E04\u2013E14 only; E01\u2013E03 earlier deliveries preserved",
+  "reference_ui": "Navy background, Inter text/equations, compact kicker, colored badges and outlined panels",
+  "still_resolution": [
+    1920,
+    1080
+  ],
+  "video_resolution": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "review_method": "All 134 scene-end frames and all 22 unique practice-attempt frames manually inspected. All 495 beats checked automatically at both resolutions for frame edges, bottom strip, title crowding and kicker/pill collisions. Selected actual movie frames inspect motion. The automated check does not prove separation of every internal object.",
+  "internal_header_fix": "Section numbers wider than 0.65 units are fitted within their reserved column; all 25 affected scenes re-rendered at 720p and as 1080p stills and inspected.",
+  "narration": "The 495 spoken beats are unchanged. No E04\u2013E14 recordings were supplied; previews are silent and timed by speech estimates. Alignment, pronunciation, pacing and narrated 1080p final review remain pending learner WAVs.",
+  "subtitle_policy": "No burned-in narration captions or embedded subtitle streams in new MP4s. Optional captions/transcripts are separate files.",
+  "question_stimuli": [
+    "Q09",
+    "Q10",
+    "Q21",
+    "Q23",
+    "Q24",
+    "Q26",
+    "Q27"
+  ],
+  "graph_attempts": "Q21/Q27 show measured points, fine divisions, units, mixing time and exact cooling readings during the attempt; solution fits/corrected temperatures are withheld.",
+  "motion_samples": [
+    "E04S04_CarbonCycle",
+    "E04S06_Ethanol",
+    "E06S02_Balance",
+    "E07S02_Batches",
+    "E08S02_EnergyFlow",
+    "E11S04_Extrapolate",
+    "E12S09_Neutral",
+    "E14S14_PartsDE"
+  ],
+  "checks": {
+    "numerical_atom_balance_and_marks": {
+      "checks": 337,
+      "failures": 0
+    },
+    "script_lint": {
+      "episodes": 14,
+      "issues": 0
+    },
+    "question_givens_and_solution_consistency": "pass: all seven new stimuli",
+    "narration_pack": "pass: 11 standalone scripts, 134 sections, 495 exact spoken beats; resume/model switching, transcript hashes, valid WAVs and ZIP completeness",
+    "silent_movies": "pass: all 11 exports fully decoded, measured timing/resolution/frame rate checked, one video stream, no audio or subtitle streams"
+  },
+  "episodes": {
+    "E04": {
+      "scenes": 10,
+      "beats": 42,
+      "manual_scene_ends": 10,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 42,
+        "720p30": 42
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E04/E04-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 770.933333,
+        "scenes": 10,
+        "beats": 42,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "428272a5f691119503286c2c79c63d42d28a7c9959f1f303a3ed8c7a2b1f41ce"
+      }
+    },
+    "E05": {
+      "scenes": 9,
+      "beats": 36,
+      "manual_scene_ends": 9,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 36,
+        "720p30": 36
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E05/E05-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 642.6,
+        "scenes": 9,
+        "beats": 36,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "ef37519694ad415db6c644a2afb914f7a8d290e2fec722ede78fb6f50dfe5bb5"
+      }
+    },
+    "E06": {
+      "scenes": 10,
+      "beats": 41,
+      "manual_scene_ends": 10,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 41,
+        "720p30": 41
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E06/E06-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 773.933333,
+        "scenes": 10,
+        "beats": 41,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "b146ce5cf65d636124520400445e72c4cf3686cdfc4033d54ddab95b568466ef"
+      }
+    },
+    "E07": {
+      "scenes": 12,
+      "beats": 48,
+      "manual_scene_ends": 12,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 48,
+        "720p30": 48
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E07/E07-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 1048.1,
+        "scenes": 12,
+        "beats": 48,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "c2658034ecba9ff77e5331a2405b0ff3b1ad2ff67b92ab29cca46a573ee6193a"
+      }
+    },
+    "E08": {
+      "scenes": 10,
+      "beats": 42,
+      "manual_scene_ends": 10,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 42,
+        "720p30": 42
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E08/E08-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 837.633333,
+        "scenes": 10,
+        "beats": 42,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "6ae13ba9be1ba5106a0824c1e91fc9ca4c4bbc8d7aaa227b564d293ce4776a58"
+      }
+    },
+    "E09": {
+      "scenes": 11,
+      "beats": 45,
+      "manual_scene_ends": 11,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 45,
+        "720p30": 45
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E09/E09-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "duration_seconds": 851.733333,
+        "scenes": 11,
+        "beats": 45,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "b80aedee19515e91e7855e99d06633a48b8e0c7480a9b1abdd0e1d8e015be1c7"
+      }
+    },
+    "E10": {
+      "scenes": 11,
+      "beats": 42,
+      "manual_scene_ends": 11,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 42,
+        "720p30": 42
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E10/E10-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "average_fps": 30.0,
+        "duration_seconds": 862.5,
+        "scenes": 11,
+        "beats": 42,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "34982e64aeb185641163c67f5712435b846439e3fa3361f3de49d0d32e9b0e62"
+      }
+    },
+    "E11": {
+      "scenes": 14,
+      "beats": 55,
+      "manual_scene_ends": 14,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 55,
+        "720p30": 55
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E11/E11-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "average_fps": 30.0,
+        "duration_seconds": 1063.666667,
+        "scenes": 14,
+        "beats": 55,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "30080e14de1cf441390c7f251b90bf539a8e29ea1133ff117a38fc3142e9205f"
+      }
+    },
+    "E12": {
+      "scenes": 12,
+      "beats": 41,
+      "manual_scene_ends": 12,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 41,
+        "720p30": 41
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E12/E12-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "average_fps": 30.0000225508194,
+        "duration_seconds": 866.099349,
+        "scenes": 12,
+        "beats": 41,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "e031a14f2296a83886b4504778ff686443bc9fed4b2c6f58bee663dd3aff9bc2"
+      }
+    },
+    "E13": {
+      "scenes": 16,
+      "beats": 49,
+      "manual_scene_ends": 16,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 49,
+        "720p30": 49
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E13/E13-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "average_fps": 30.0,
+        "duration_seconds": 1242.7,
+        "scenes": 16,
+        "beats": 49,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "18946376305920fcabad11a1f0637a4d933681ec44f22784cc8f6c3507958781"
+      }
+    },
+    "E14": {
+      "scenes": 19,
+      "beats": 54,
+      "manual_scene_ends": 19,
+      "manual_unique_practice_attempts": 2,
+      "automatic_beat_checks": {
+        "1080p30": 54,
+        "720p30": 54
+      },
+      "geometry_flags": 0,
+      "visual_review": "pass",
+      "video_validation": {
+        "file": "delivery/E14/E14-Chemistry-SILENT-preview-720p30.mp4",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 30,
+        "average_fps": 30.0,
+        "duration_seconds": 1255.466667,
+        "scenes": 19,
+        "beats": 54,
+        "audio_streams": 0,
+        "subtitle_streams": 0,
+        "assembly_timing_problems": 0,
+        "geometry_flags": 0,
+        "full_video_decode": "pass",
+        "sha256": "aa0b7b0b2db6dae28a04eb32105f3c5c29c49805b58c3a36e7d8c6d1463cab63"
+      }
+    }
+  }
+}

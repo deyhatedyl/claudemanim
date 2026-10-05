@@ -134,8 +134,8 @@ class E13S04_Annotate(NarratedScene):
             if trap:
                 g.add(chip("trap", LOSS, size=SMALL - 2).next_to(at, RIGHT, buff=0.25))
             built.add(g)
-        given = T("given", size=SMALL, color=MUTED).next_to(built[0][0], UP, buff=0.22).align_to(built[0][0], LEFT)
-        note = T("annotation", size=SMALL, color=MUTED).next_to(built[0][2], UP, buff=0.22).align_to(built[0][2], LEFT)
+        given = T("given", size=SMALL, color=MUTED).next_to(built[0][0], UP, buff=0.06).align_to(built[0][0], LEFT)
+        note = T("annotation", size=SMALL, color=MUTED).next_to(built[0][2], UP, buff=0.06).align_to(built[0][2], LEFT)
 
         def show(i, run=0.8):
             r = built[i]
@@ -300,6 +300,7 @@ class E13S07_WrongMethane(NarratedScene):
 # =====================================================================================
 class E13S08_PartsDE(NarratedScene):
     def construct(self):
+        from shared.motion import flow
         h = header("Q25 parts d–e")
         tl = tally_text("Q25", 7, 15)
         l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 200\ \text{kJ released}", 2.15, ENERGY_C)
@@ -330,6 +331,7 @@ class E13S08_PartsDE(NarratedScene):
             b.until(0.45)
             self.play(Write(l2), FadeIn(b2), run_time=1.1)
             self.play(GrowFromEdge(water, LEFT), FadeIn(lw), Create(loss), FadeIn(ll), run_time=0.8)
+            flow(self, fuel.get_left(), water.get_right(), USEFUL, run_time=1.4)
             b.until(0.85)
             self.play(tick(b2), Transform(self.tl, tally_text("Q25", 9, 15)), run_time=0.4)
         with self.beat("b02") as b:

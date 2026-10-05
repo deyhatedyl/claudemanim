@@ -99,9 +99,9 @@ class E05S02_Respiration(NarratedScene):
             sch = T("schematic split, not to scale", size=SMALL, color=MUTED).move_to([0, -2.2, 0])
             self.play(Create(total), FadeIn(tl), run_time=0.8)
             b.until(0.35)
-            self.play(FadeIn(work), FadeIn(wl), run_time=0.7)
+            self.play(GrowFromEdge(work, LEFT), FadeIn(wl), run_time=1.0)
             b.until(0.6)
-            self.play(FadeIn(heat), FadeIn(hl), FadeIn(sch), run_time=0.7)
+            self.play(GrowFromEdge(heat, LEFT), FadeIn(hl), FadeIn(sch), run_time=1.0)
 
 
 # =====================================================================================
@@ -179,8 +179,8 @@ class E05S04_Scaling(NarratedScene):
         with self.beat("b05") as b:
             a = VGroup(T("energy taken in doubles: ≈ 1486 kJ", size=LABEL + 2, color=GOOD),
                        T("energy per gram unchanged: 16.5 kJ g⁻¹", size=LABEL + 2, color=GOOD)).arrange(RIGHT, buff=0.6)
-            a.move_to([0, -2.45, 0])
-            self.play(self.ck.animate.shift(0.35 * UP), FadeIn(a[0]), run_time=0.7)
+            a.move_to([0, -2.50, 0])
+            self.play(FadeIn(a[0]), run_time=0.7)
             b.until(0.45)
             self.play(FadeIn(a[1]), run_time=0.6)
 
@@ -328,10 +328,10 @@ class E05S07_WhichFood(NarratedScene):
 class E05S08_Q10(NarratedScene):
     def construct(self):
         h = header("Practice Q10")
-        qc = question_card("Q10").move_to([0, -0.10, 0])
+        qc = question_card("Q10").scale(0.95).move_to([0, 0.12, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-            bases = T("First: which two comparison bases?", size=LABEL + 2, color=UNKNOWN).next_to(qc, DOWN, buff=0.3)
+            bases = T("First: which two comparison bases?", size=LABEL + 2, color=UNKNOWN).next_to(qc, DOWN, buff=0.15)
             self.play(FadeIn(bases), run_time=0.6)
             self.qc, self.bases = qc, bases
         colA, colB = -3.4, 3.4

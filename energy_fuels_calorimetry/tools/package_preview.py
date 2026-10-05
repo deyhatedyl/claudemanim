@@ -1,4 +1,4 @@
-"""Make a captioned MP4 from an actually assembled silent preview."""
+"""Make a clean MP4 from an actually assembled silent preview; no subtitles."""
 from __future__ import annotations
 
 import argparse
@@ -13,9 +13,10 @@ ROOT = Path(__file__).resolve().parent.parent
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episode")
+    ap.add_argument("--tag", default="1080p30", choices=["720p30", "1080p30", "480p15"])
     a = ap.parse_args()
     ep = a.episode.upper()
-    report = json.loads((ROOT / "logs" / f"assemble_{ep}_1080p30.json").read_text())
+    report = json.loads((ROOT / "logs" / f"assemble_{ep}_{a.tag}.json").read_text())
     source = ROOT / report["output"]
     if report["narrated"]:
         raise ValueError("This command packages silent previews only")
@@ -23,22 +24,14 @@ def main():
         raise ValueError(f"Assembly timing failed: {report['problems']}")
     out = ROOT / "delivery" / ep
     out.mkdir(parents=True, exist_ok=True)
-    caption = ROOT / report["captions"][0]
-    output = out / f"{ep}-Chemistry-SILENT-preview-1080p.mp4"
-    # Captions occupy the reserved lower strip and remain readable in players
-    # that do not expose the MP4's optional soft-subtitle track.
-    relative_caption = str(caption.relative_to(ROOT))
-    # libass uses its 288-high SRT reference canvas. At 1080p these values
-    # keep two lines inside the 169-pixel caption strip (SAFE_BOTTOM).
-    style = "FontName=Inter,FontSize=15,PrimaryColour=&H00F8F1EE,OutlineColour=&H001E110C,BorderStyle=1,Outline=1,Shadow=0,MarginV=10"
-    subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-i", str(source), "-vf",
-                           f"subtitles={relative_caption}:force_style='{style}'", "-an", "-sn",
-                           "-c:v", "libx264", "-preset", "fast", "-crf", "19",
+    output = out / f"{ep}-Chemistry-SILENT-preview-{a.tag}.mp4"
+    subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-i", str(source), "-an", "-sn",
+                           "-map", "0:v:0", "-c:v", "copy",
                            "-movflags", "+faststart", str(output)], cwd=ROOT)
     for rel in report["captions"] + [report["transcript"]]:
         p = ROOT / rel
         shutil.copyfile(p, out / p.name)
-    (out / "README.txt").write_text("Silent 1080p30 visual preview. Captions and beat timing are estimated.\n"
+    (out / "README.txt").write_text(f"Silent {a.tag} visual preview. Beat timing is estimated. No embedded subtitles.\n"
                                     "After manual narration is supplied, re-render with measured speech durations.\n")
     print(output)
 

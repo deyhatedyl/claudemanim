@@ -15,3 +15,5 @@ checks/layout/
 logs/assemble_*.json
 checks/beat_stills/
 checks/contact_sheets/
+checks/scene_stills/
+checks/series_render_*.json

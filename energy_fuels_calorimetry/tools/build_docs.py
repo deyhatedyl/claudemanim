@@ -122,6 +122,20 @@ def build_worksheet(info):
         L += [f"## Episode {ep[1:]}: {info[ep]['title']}", ""]
         for q in qs:
             L += [f"### {q['id']}. {md(q['title'])} ({marks_total(q['id'])} marks)", "", md(q["stem"]), ""]
+            visual = q.get("visual", {})
+            if visual.get("type") == "table":
+                rows = visual["rows"]
+                L += ["| " + " | ".join(md(str(c)).replace("|", "\\|") for c in rows[0]) + " |",
+                      "|" + "---|" * len(rows[0])]
+                L += ["| " + " | ".join(md(str(c)).replace("|", "\\|") for c in row) + " |"
+                      for row in rows[1:]]
+                L += [""]
+            elif visual.get("type") == "temperature":
+                L += [f"![{q['id']}: measured temperatures; no solution fit](figures/{q['id']}-temperature.svg)", "",
+                      "| Time (s) | Temperature (°C) |", "|---|---|"]
+                L += [f"| {t} | {temp:.1f} |" for t, temp in visual["points"]
+                      if t >= visual["cooling_start"]]
+                L += [""]
             for lab, txt, mk in q["parts"]:
                 L += [f"**{lab}.** {md(txt)} *[{mk} mark{'s' if mk > 1 else ''}]*", "",
                       "&nbsp;", ""]
@@ -198,11 +212,11 @@ def build_coverage(info):
 def build_index(info, logs):
     qa = json.loads((ROOT / "checks" / "qa_status.json").read_text())
     L = ["# Series index", "",
-         "Viewing order, runtimes and files. **Every video listed is a silent 480p draft with estimated "
-         "timing** (narration has not been generated yet), so runtimes will change once the narration "
-         "exists. Final narrated 1080p episodes will appear in `renders/final/` with captions in "
-         "`captions/`.", "",
-         "| # | Episode | Draft runtime | Anchor questions | Draft video | Captions (draft) | Transcript | Visual QA |",
+         "Viewing order and latest local outputs. E01–E03 were delivered earlier and are unchanged in "
+         "this continuation. E04–E14 have silent 720p30 previews with estimated timing; narrated "
+         "1080p30 finals await the learner's audio. Future MP4s contain no burned-in captions or "
+         "embedded subtitles. Optional captions and transcripts are separate files.", "",
+         "| # | Episode | Runtime | Anchor questions | Video | Separate captions | Transcript | Visual QA |",
          "|---|---|---|---|---|---|---|---|"]
     total = 0.0
     for ep, e in info.items():
@@ -214,10 +228,13 @@ def build_index(info, logs):
             row = (f"| {ep[1:]} | {e['title']} | {mmss(lg['duration'])} | {', '.join(e['anchors'])} | "
                    f"`{vid}` | `{Path(stem).name}.srt` / `.vtt` | `{Path(stem).name}_transcript.md` | "
                    f"{qa.get(ep, {}).get('draft_visual_qa', '–')} |")
+        elif qa.get(ep, {}).get("delivery_status") == "earlier_delivery":
+            row = (f"| {ep[1:]} | {e['title']} | earlier delivery | {', '.join(e['anchors'])} | "
+                   "keep previously delivered MP4 | earlier delivery | earlier delivery | unchanged |")
         else:
             row = f"| {ep[1:]} | {e['title']} | – | {', '.join(e['anchors'])} | not rendered | – | – | – |"
         L.append(row)
-    L += ["", f"Total draft runtime: {int(total // 3600)} h {int(total % 3600 // 60):02d} min "
+    L += ["", f"Current local output runtime (excludes earlier deliveries): {int(total // 3600)} h {int(total % 3600 // 60):02d} min "
                f"({total / 60:.1f} min) at an estimated 145 words per minute, including scripted pauses.", "",
           "Learner documents: `questions/worksheet.md` (questions only), `solutions/worked_solutions.md`, "
           "`solutions/formula_and_method_sheet.md`. Project status: `progress.json`, `logs/known_issues.md`."]
@@ -227,6 +244,8 @@ def build_index(info, logs):
 
 def main():
     info = episode_info()
+    from tools.export_question_figures import export
+    export()
     logs = {ep: lg for ep in EPISODES if (lg := assemble_log(ep))}
     tallies = scene_tallies()
     missing = [q["id"] for q in BANK if q["id"] not in tallies]

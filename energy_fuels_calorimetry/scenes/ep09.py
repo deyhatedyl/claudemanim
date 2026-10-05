@@ -185,6 +185,7 @@ class E09S03_Kinds(NarratedScene):
 # =====================================================================================
 class E09S04_EVIt(NarratedScene):
     def construct(self):
+        from shared.motion import flow
         h = header("Electrical calibration")
         cal = calorimeter(width=2.6, height=2.2, heater=True).move_to([-4.6, -0.3, 0])
         ps = RoundedRectangle(width=1.6, height=0.9, corner_radius=0.1, color=TEXT, stroke_width=2.5).move_to([-1.6, 1.9, 0])
@@ -216,6 +217,9 @@ class E09S04_EVIt(NarratedScene):
             self.play(Indicate(vm), Indicate(am), run_time=0.8)
             b.until(0.55)
             self.play(Write(u), FadeIn(u2), run_time=1.0)
+            self.play(cal.heater.animate.set_color(UNKNOWN), run_time=0.4)
+            flow(self, cal.heater.get_center(), cal.water.get_center() + 0.5 * LEFT, UNKNOWN)
+            self.play(cal.thermo.level.animate.set_value(0.7), run_time=1.2)
         with self.beat("b03") as b:
             tbox = VGroup(T("4 min = 4 × 60 = 240 s", size=LABEL + 2, color=TEMP_C),
                           T("using 4 instead of 240: E is 60 × too small", size=LABEL, color=BAD)).arrange(DOWN, buff=0.15)
@@ -253,7 +257,7 @@ class E09S05_Stack(NarratedScene):
             self.ass = ass
         with self.beat("b03") as b:
             y = st[0].get_top()[1]
-            lb = DashedLine([st[0].get_left()[0] - 0.25, y, 0], [st[0].get_right()[0] + 0.25, y, 0], color=UNKNOWN, stroke_width=4)
+            lb = DashedLine([st[0].get_left()[0] - 0.25, y, 0], [st[0].get_right()[0], y, 0], color=UNKNOWN, stroke_width=4)
             lbt = wrapped("dashed: water alone = lower bound", size=SMALL + 1, width=2.6, color=UNKNOWN).next_to(st[2], DOWN, buff=0.25).align_to(st[2], LEFT)
             self.play(Create(lb), FadeIn(lbt), run_time=0.8)
             ineq = M(r"C_{\text{apparatus}} > 0 \;\Rightarrow\; CF > m_{\text{water}}\,c_{\text{water}}", size=EQ_SMALL, color=UNKNOWN)
@@ -307,7 +311,7 @@ class E09S07_Contents(NarratedScene):
     def construct(self):
         h = header("Changing the contents changes CF")
         q = T("Q17 d: 150.0 g water, same apparatus. Keep CF = 540?", size=LABEL + 2, color=UNKNOWN).move_to([0, 2.45, 0])
-        before = cf_stack(501.6, 38.4, scale=0.0034, width=1.0, x=-5.9, y_base=-2.2)
+        before = cf_stack(501.6, 38.4, scale=0.0034, width=1.0, x=-5.5, y_base=-2.2)
         bl = T("120.0 g water", size=SMALL + 1).next_to(before[0], DOWN, buff=0.1)
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(before), FadeIn(bl), run_time=1.0)
@@ -429,7 +433,7 @@ class E09S09_HeatLoss(NarratedScene):
             self.clear(h, f)
             ck = VGroup(TB("Checkpoint", size=LABEL + 2, color=UNKNOWN),
                         T("time recorded as 200 s instead of 240 s: CF too big or too small?", size=LABEL + 2)).arrange(DOWN, buff=0.2)
-            ck.move_to([0, 2.45, 0])
+            ck.move_to([0, 2.2, 0])
             self.play(FadeIn(ck), run_time=0.8)
         with self.beat("b06") as b:
             Ea = Arrow(E.get_top() + 0.75 * UP, E.get_top() + 0.1 * UP, buff=0, color=BAD, stroke_width=6)

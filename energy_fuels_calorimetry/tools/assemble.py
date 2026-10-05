@@ -1,7 +1,7 @@
 """
 Assemble one episode from its rendered scenes: concatenate video, lay narration clips at the
-frame-accurate times recorded in the scene timelines, normalise loudness, write SRT/VTT captions
-and a transcript, and mux everything into one MP4.
+frame-accurate times recorded in the scene timelines, normalise loudness, write separate
+SRT/VTT captions and a transcript, and export an MP4 without subtitles.
 
     python tools/assemble.py E01 -q l      # draft
     python tools/assemble.py E01 -q h      # final (requires narration for every beat)
@@ -234,11 +234,11 @@ def main():
                                    f"measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
                                    f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:"
                                    f"offset={m['target_offset']}:linear=true", "-ar", "48000", str(norm)])
-            cmd += ["-i", str(norm), "-i", str(srt), "-map", "0:v", "-map", "1:a", "-map", "2:s",
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-c:s", "mov_text"]
+            cmd += ["-i", str(norm), "-map", "0:v:0", "-map", "1:a:0", "-sn",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "160k"]
         else:
-            cmd += ["-i", str(srt), "-map", "0:v", "-map", "1:s", "-c:v", "copy", "-c:s", "mov_text"]
-        cmd += ["-metadata:s:s:0", "language=eng", "-metadata", f"title={script.title}",
+            cmd += ["-map", "0:v:0", "-an", "-sn", "-c:v", "copy"]
+        cmd += ["-metadata", f"title={script.title}",
                 "-movflags", "+faststart", str(out_mp4)]
         subprocess.check_call(cmd)
 

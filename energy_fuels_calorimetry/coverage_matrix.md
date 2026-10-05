@@ -29,7 +29,7 @@ Maps each coverage item of the production brief (`brief/production_brief.md`, it
 | C23 | E10, E14 | Q19, Q20, Q27, Q28 | covered |
 | C24 | E11, E14 | Q21, Q22, Q27, Q28 | covered |
 | C25 | E09, E11, E14 | Q17, Q18, Q21, Q22, Q27, Q28 | covered |
-| C26 | – | – | **not tagged in any episode: check against the brief** |
+| C26 | E14 | Q27, Q28 | covered |
 | C27 | E12, E13, E14 | Q23, Q24, Q25, Q26, Q27, Q28 | covered |
 | C28 | E12, E14 | Q23, Q24, Q27, Q28 | covered |
 
@@ -50,6 +50,4 @@ Maps each coverage item of the production brief (`brief/production_brief.md`, it
 | E11 | Temperature graphs, correction and experimental reasoning | C24, C25, C21, C08 | Q21, Q22 |
 | E12 | Fair fuel comparisons and sustainability | C19, C27, C28, C02, C03, C17, C11 | Q23, Q24 |
 | E13 | Exam workshop A: fuels and combustion | C01, C04, C07, C11, C12, C14, C15, C16, C17, C18, C19, C27 | Q25, Q26 |
-| E14 | Exam workshop B: calorimetry and data evaluation | C01, C08, C11, C18, C20, C21, C22, C23, C24, C25, C27, C28 | Q27, Q28 |
-
-**Open check:** C26 carries no episode tag. Confirm against the brief whether the item is taught under another tag or needs a scene.
+| E14 | Exam workshop B: calorimetry and data evaluation | C01, C08, C11, C18, C20, C21, C22, C23, C24, C25, C26, C27, C28 | Q27, Q28 |

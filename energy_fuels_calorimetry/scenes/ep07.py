@@ -72,7 +72,7 @@ class E07S02_Batches(NarratedScene):
     def construct(self):
         h = header("Which reactant runs out?")
         recipe = VGroup(TB("Recipe for one batch:", size=LABEL), mol_CH4(0.6), T("+", size=LABEL), mol_O2(0.6), mol_O2(0.6),
-                        T("→ CO₂ + 2H₂O", size=LABEL)).arrange(RIGHT, buff=0.25).move_to([0, 2.45, 0])
+                        T("→ CO₂ + 2H₂O", size=LABEL)).arrange(RIGHT, buff=0.25).move_to([0, 2.15, 0])
         ch4s = VGroup(*[mol_CH4(0.7) for _ in range(3)]).arrange(DOWN, buff=0.35).move_to([-5.2, 0.2, 0])
         o2s = VGroup(*[mol_O2(0.7) for _ in range(4)]).arrange(DOWN, buff=0.3).move_to([-3.4, 0.2, 0])
         lab1 = T("3 CH₄", size=LABEL, color=CH4C).next_to(ch4s, DOWN, buff=0.2)
@@ -92,8 +92,9 @@ class E07S02_Batches(NarratedScene):
             self.play(FadeOut(self.q), Create(boxes), FadeIn(bl), run_time=0.7)
             for i in range(2):
                 c = boxes[i].get_center()
-                self.play(ch4s[i].animate.move_to(c + LEFT * 0.75), o2s[2 * i].animate.move_to(c + RIGHT * 0.55 + UP * 0.3),
-                          o2s[2 * i + 1].animate.move_to(c + RIGHT * 0.55 + DOWN * 0.3), run_time=1.0)
+                self.play(ch4s[i].animate(path_arc=PI / 8).move_to(c + LEFT * 0.75),
+                          o2s[2 * i].animate(path_arc=-PI / 8).move_to(c + RIGHT * 0.55 + UP * 0.3),
+                          o2s[2 * i + 1].animate(path_arc=-PI / 8).move_to(c + RIGHT * 0.55 + DOWN * 0.3), run_time=1.3)
             left = SurroundingRectangle(ch4s[2], color=UNKNOWN, buff=0.12)
             lt = T("1 CH₄ left over", size=LABEL, color=UNKNOWN).next_to(left, RIGHT, buff=0.2)
             out = T("O₂ ran out: O₂ limits the reaction", size=LABEL + 2, color=O2C).move_to([2.2, -1.5, 0])
@@ -484,7 +485,7 @@ class E07S10_Q14a(NarratedScene):
             self.play(FadeIn(fuel), FadeIn(fl), run_time=0.9)
         air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=1.1, x_left=-5.0, width=6.0)
         al = VGroup(M(r"0.210 \times 90.0 = 18.9\ \text{L}", size=EQ_SMALL - 8),
-                    M(r"\tfrac{18.9}{24.8} = 0.7621\ \text{mol}", size=EQ_SMALL - 8, color=O2C)).arrange(RIGHT, buff=0.3).next_to(air, RIGHT, buff=0.3)
+                    M(r"\tfrac{18.9}{24.8} = 0.7621\ \text{mol}", size=EQ_SMALL - 8, color=O2C)).arrange(RIGHT, buff=0.3).scale(0.88).next_to(air, RIGHT, buff=0.3)
         with self.beat("b03") as b:
             self.play(FadeIn(air), run_time=0.7)
             b.until(0.35)

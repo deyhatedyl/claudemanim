@@ -1559,7 +1559,7 @@
  {
   "qid": "Q27",
   "label": "extrapolated T at 60 s",
-  "computed": 24.799999999999997,
+  "computed": 24.8,
   "target": 24.8,
   "unit": "",
   "rel_tol": 1e-06,
@@ -1568,7 +1568,7 @@
  {
   "qid": "Q27",
   "label": "corrected rise",
-  "computed": 4.799999999999997,
+  "computed": 4.800000000000001,
   "target": 4.8,
   "unit": "",
   "rel_tol": 1e-06,
@@ -1577,7 +1577,7 @@
  {
   "qid": "Q27",
   "label": "q_cal",
-  "computed": 2879.999999999998,
+  "computed": 2880.0000000000005,
   "target": 2880,
   "unit": "J",
   "rel_tol": 1e-06,
@@ -1586,7 +1586,7 @@
  {
   "qid": "Q27",
   "label": "deltaH",
-  "computed": -57.599999999999966,
+  "computed": -57.60000000000001,
   "target": -57.6,
   "unit": "kJ/mol",
   "rel_tol": 1e-06,

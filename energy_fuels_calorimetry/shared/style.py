@@ -126,6 +126,9 @@ def header(title: str, kicker: str | None = None, color: str | None = None) -> V
     section = re.match(r"E(\d+)S(\d+)", _SECTION_ID)
     num = f"{int(section[1])} · {int(section[2])}" if section else "VCE"
     n = TB(num, size=18, color=SYSTEM).move_to([-6.62, 3.57, 0], aligned_edge=LEFT)
+    # Double-digit episode/scene labels must leave a gap before the kicker.
+    if n.width > 0.65:
+        n.scale(0.65 / n.width, about_point=n.get_left())
     k = T((kicker or _SECTION_TITLE).upper(), size=15, color=MUTED)
     if k.width > 5.7:
         k.scale(5.7 / k.width)

@@ -255,7 +255,7 @@ class E12S06_Q23(NarratedScene):
                                             "Mass and emissions measure different things."], width=10.5, size=LABEL)
             ev.move_to([0, -1.88, 0])
             self.play(FadeIn(ev), run_time=0.9)
-            mk = T("marks: 2 inputs · 2 masses · 2 emissions · 1 evaluation", size=SMALL + 1, color=GOOD).to_corner(UL, buff=0.4).shift(0.8 * DOWN)
+            mk = T("marks: 2 inputs · 2 masses · 2 emissions · 1 evaluation", size=SMALL + 1, color=GOOD).to_corner(UL, buff=0.4).shift(0.92 * DOWN)
             b.until(0.75)
             self.play(FadeIn(mk), run_time=0.5)
 
@@ -281,7 +281,7 @@ class E12S07_Checkpoint(NarratedScene):
             b2 = hbars([("R", 228.6, FOSSIL), ("T", 350, SURR)], 1 / 95, x_left=-3.0, y0=-1.4, unit=" g per useful MJ")
             t2 = T("per MJ of useful heat (÷ efficiency): R is better", size=LABEL, color=UNKNOWN).next_to(b2, UP, buff=0.12).align_to(b2, LEFT)
             c = VGroup(M(r"80 \div 0.35 = 229", size=EQ_SMALL - 10, color=FOSSIL), M(r"70 \div 0.20 = 350", size=EQ_SMALL - 10, color=SURR)).arrange(DOWN, buff=0.2)
-            c.move_to([5.4, -1.7, 0])
+            c.scale_to_fit_width(2.8).move_to([5.45, -1.7, 0])
             self.play(FadeIn(t2), FadeIn(b2), run_time=1.0)
             self.play(Write(c), run_time=0.8)
 
@@ -325,6 +325,7 @@ class E12S08_Boundary(NarratedScene):
 # =====================================================================================
 class E12S09_Neutral(NarratedScene):
     def construct(self):
+        from shared.motion import flow
         h = header("Is a biofuel carbon neutral?")
         claim = T("“Our biofuel is carbon neutral: the crop absorbed the CO₂ it releases.”", size=LABEL + 1)
         claim.move_to([0, 2.15, 0])
@@ -363,6 +364,9 @@ class E12S09_Neutral(NarratedScene):
             b.until(0.5)
             self.play(Create(cyc[2]), FadeIn(burn), run_time=0.6)
             self.play(Create(cyc[3]), run_time=0.6)
+            flow(self, air.get_left(), crop.get_top(), BIO, angle=0.6, run_time=1.2)
+            flow(self, fuel.get_right(), burn.get_bottom(), SYSTEM, angle=0.6, run_time=1.2)
+            flow(self, burn.get_top(), air.get_right(), LOSS, angle=0.6, run_time=1.2)
             sc = VGroup(T("short-term", size=SMALL, color=BIO), T("carbon cycle", size=SMALL, color=BIO)).arrange(DOWN, buff=0.06)
             sc.move_to([-3.45, -0.45, 0])
             b.until(0.75)
@@ -442,8 +446,8 @@ class E12S11_Q24(NarratedScene):
                 ["energy", "8 MJ natural-gas heat", "10 MJ electricity (60% renewable)"],
                 ["fresh water", "12 L", "20 L"],
                 ["fermentation CO₂", "vented", "captured and used"]]
-        tb = table(rows, [3.0, 3.6, 4.6], size=SMALL + 1, row_h=0.5).move_to([0, 1.5, 0])
-        sent_y = [-0.75, -1.5, -2.15]
+        tb = table(rows, [3.0, 3.6, 4.6], size=SMALL + 1, row_h=0.5).move_to([0, 1.08, 0])
+        sent_y = [-0.95, -1.7, -2.25]
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(tb), run_time=0.9)
             s1 = wrapped("1. Feedstock: B uses waste, not an edible crop, so it avoids competing with food and keeps materials in use "

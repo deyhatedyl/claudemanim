@@ -30,7 +30,7 @@ def requested(text: str) -> VGroup:
     return asked_pill(text)
 
 
-def q21_plot(center=(-2.0, 0.1, 0), width=7.2, height=4.2):
+def q21_plot(center=(-2.0, -0.15, 0), width=7.2, height=3.8):
     g = temp_axes(x_max=420, x_step=60, y_min=20, y_max=27, width=width, height=height)
     g.move_to(center)
     return g
@@ -120,6 +120,7 @@ class E11S03_PeakTooLow(NarratedScene):
 # =====================================================================================
 class E11S04_Extrapolate(NarratedScene):
     def construct(self):
+        from shared.motion import trace
         h = header("Extrapolating the cooling line")
         pg = q21_plot()
         ax = pg.ax
@@ -145,7 +146,7 @@ class E11S04_Extrapolate(NarratedScene):
         with self.beat("b03") as b:
             self.play(FadeOut(self.tri), run_time=0.3)
             ext = DashedLine(ax.c2p(180, 26.1), ax.c2p(120, T_MIX), color=SURR, stroke_width=4, dash_length=0.1)
-            self.play(Create(ext), run_time=1.0)
+            trace(self, ext, SURR, run_time=1.4)
             corr = Square(side_length=0.2, color=UNKNOWN, fill_color=UNKNOWN, fill_opacity=1).rotate(PI / 4).move_to(ax.c2p(120, T_MIX))
             ct = M(r"26.1 + 60 \times 0.00333 = 26.3\ {}^{\circ}\text{C}", size=EQ_SMALL - 10, color=UNKNOWN).move_to([col, 0.6, 0])
             b.until(0.5)
@@ -413,8 +414,11 @@ class E11S09_Errors(NarratedScene):
         loose = VGroup(*[Dot(nl.n2p(v) + 0.85 * UP, radius=0.08, color=SURR) for v in (-55.5, -47.0, -52.5, -44.5, -50.5)])
         with self.beat("b02") as b:
             self.play(Create(nl), FadeIn(nlt), Create(true), FadeIn(truet), run_time=1.0)
-            d = VGroup(TB("accuracy:", size=SMALL + 1, color=GOOD), T("close to the true value", size=SMALL + 1),
-                       TB("precision:", size=SMALL + 1, color=SYSTEM), T("repeats agree with each other", size=SMALL + 1)).arrange(RIGHT, buff=0.15)
+            accuracy = VGroup(TB("accuracy:", size=SMALL + 1, color=GOOD),
+                              T("close to the true value", size=SMALL + 1)).arrange(RIGHT, buff=0.12)
+            precision = VGroup(TB("precision:", size=SMALL + 1, color=SYSTEM),
+                               T("repeats agree with each other", size=SMALL + 1)).arrange(RIGHT, buff=0.12)
+            d = VGroup(accuracy, precision).arrange(RIGHT, buff=0.5)
             d.move_to([0, -1.45, 0])
             self.play(FadeIn(d), run_time=0.6)
             b.until(0.5)
@@ -573,7 +577,7 @@ class E11S12_Table(NarratedScene):
                 ["CF used is too small", "calculated heat and |molar ΔH| ↓"],
                 ["Same additive thermometer offset on both readings", "temperature difference unchanged"],
                 ["More repeat trials with the same systematic fault", "better estimate of a biased mean; fault remains"]]
-        tb = table(rows, [6.8, 6.0], size=SMALL + 1, row_h=0.56).move_to([0, 0.45, 0])
+        tb = table(rows, [6.8, 6.0], size=SMALL + 1, row_h=0.56).scale(0.86).move_to([0, 0.5, 0])
         grid, cells = tb[0], tb[1]
         with self.beat("b01") as b:
             self.play(FadeIn(h), Create(grid), FadeIn(VGroup(*cells[:2])), run_time=1.0)

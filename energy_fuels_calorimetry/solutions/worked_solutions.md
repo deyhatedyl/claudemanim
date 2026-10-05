@@ -35,7 +35,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Using 186 (mL) as if it were litres, or treating mol and grams as interchangeable.
 
-**Worked in:** E01S07 “Practice Q01: two routes to an amount” (≈9:39 in the draft)
+**Worked in:** E01S07 “Practice Q01: two routes to an amount”
 
 ### Q02. Conversions inside a realistic data sheet (5 marks)
 
@@ -60,7 +60,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Treating the whole air volume as oxygen, or treating m³ as mL.
 
-**Worked in:** E01S08 “Practice Q02: conversions inside a data sheet” (≈13:13 in the draft)
+**Worked in:** E01S08 “Practice Q02: conversions inside a data sheet”
 
 ## Episode 02: Where reaction energy comes from
 
@@ -88,7 +88,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Adding all bond energies together, or saying that breaking bonds releases energy.
 
-**Worked in:** E02S05 “Practice Q03: a bond-energy ledger” (≈4:48 in the draft)
+**Worked in:** E02S05 “Practice Q03: a bond-energy ledger”
 
 ### Q04. Endothermic does not mean energy disappears (3 marks)
 
@@ -117,7 +117,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Giving the system and the calorimeter the same sign.
 
-**Worked in:** E02S07 “Practice Q04: an endothermic change” (≈10:01 in the draft)
+**Worked in:** E02S07 “Practice Q04: an endothermic change”
 
 ## Episode 03: Energy profiles and thermochemical equations
 
@@ -148,7 +148,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Treating −572 kJ as per mole of H₂, or ignoring physical states.
 
-**Worked in:** E03S08 “Practice Q05: scaling, reversing and states” (≈9:33 in the draft)
+**Worked in:** E03S08 “Practice Q05: scaling, reversing and states”
 
 ### Q06. Read the vertical distances, not the absolute heights (5 marks)
 
@@ -187,7 +187,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Reading 150 as Ea, or saying a lower barrier changes ΔH.
 
-**Worked in:** E03S05 “Practice Q06: read the vertical distances” (≈4:40 in the draft)
+**Worked in:** E03S05 “Practice Q06: read the vertical distances”
 
 ## Episode 04: Fuels, biofuels and the carbon cycle
 
@@ -220,7 +220,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Using a 1 : 1 glucose : ethanol ratio, applying the 78.0% twice, or calling distillation fermentation.
 
-**Worked in:** E04S07 “Practice Q07: fermentation yield” (≈6:09 in the draft)
+**Worked in:** E04S07 “Practice Q07: fermentation yield” (≈6:10 in the draft)
 
 ### Q08. Same molecule, different source (4 marks)
 
@@ -249,7 +249,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Claiming that biomethane produces no CO₂ when burned.
 
-**Worked in:** E04S09 “Practice Q08: same molecule, different source” (≈10:07 in the draft)
+**Worked in:** E04S09 “Practice Q08: same molecule, different source” (≈10:09 in the draft)
 
 ## Episode 05: Food as a chemical energy source
 
@@ -309,7 +309,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Comparing unmatched portion sizes without stating the basis.
 
-**Worked in:** E05S08 “Practice Q10: two bases, two answers” (≈8:06 in the draft)
+**Worked in:** E05S08 “Practice Q10: two bases, two answers” (≈8:07 in the draft)
 
 ## Episode 06: Combustion equations and gaseous products
 
@@ -345,7 +345,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Forgetting the O atom in ethanol, or assuming incomplete combustion always gives only CO.
 
-**Worked in:** E06S05 “Practice Q11: incomplete combustion you can balance” (≈4:17 in the draft)
+**Worked in:** E06S05 “Practice Q11: incomplete combustion you can balance” (≈4:18 in the draft)
 
 ### Q12. Hot exhaust versus cooled dry gas (5 marks)
 
@@ -379,7 +379,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Excluding hot water vapour, or applying the SLC molar volume to gas at 600 °C.
 
-**Worked in:** E06S07 “Practice Q12: hot exhaust versus cooled dry gas” (≈7:57 in the draft)
+**Worked in:** E06S07 “Practice Q12: hot exhaust versus cooled dry gas” (≈7:58 in the draft)
 
 ## Episode 07: Limiting reactants, excess fuel and gas mixtures
 
@@ -415,7 +415,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Taking the smaller raw mole number as limiting, or reporting the starting amount as the amount remaining.
 
-**Worked in:** E07S05 “Practice Q13: excess means what's left after reaction” (≈5:54 in the draft)
+**Worked in:** E07S05 “Practice Q13: excess means what's left after reaction” (≈5:55 in the draft)
 
 ### Q14. A fuel stream already containing carbon dioxide (8 marks)
 
@@ -459,7 +459,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Counting all of the fuel-stream gas as methane, or treating all measured CO₂ as newly formed.
 
-**Worked in:** E07S10 “Practice Q14, part 1: budgets and the limiting reactant” (≈12:40 in the draft); E07S11 “Practice Q14, part 2: carbon dioxide and energy” (≈14:33 in the draft)
+**Worked in:** E07S10 “Practice Q14, part 1: budgets and the limiting reactant” (≈12:42 in the draft); E07S11 “Practice Q14, part 2: carbon dioxide and energy” (≈14:35 in the draft)
 
 ## Episode 08: Measuring combustion energy and efficiency
 
@@ -529,7 +529,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Using the efficiency in the wrong direction.
 
-**Worked in:** E08S08 “Practice Q16: work backwards from useful heat” (≈9:28 in the draft)
+**Worked in:** E08S08 “Practice Q16: work backwards from useful heat” (≈9:29 in the draft)
 
 ## Episode 09: Why calorimeters need calibration
 
@@ -565,7 +565,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Using mcΔT for the water as if it included the apparatus, or keeping CF unchanged after changing the contents.
 
-**Worked in:** E09S06 “Practice Q17, part 1: calibrate, then use it” (≈5:20 in the draft)
+**Worked in:** E09S06 “Practice Q17, part 1: calibrate, then use it” (≈5:21 in the draft)
 
 ### Q18. An impossible calibration factor and an appealing wrong explanation (4 marks)
 
@@ -595,7 +595,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Giving 'heat loss' as a universal explanation without following the formula.
 
-**Worked in:** E09S10 “Practice Q18: an impossible calibration factor” (≈11:04 in the draft)
+**Worked in:** E09S10 “Practice Q18: an impossible calibration factor” (≈11:05 in the draft)
 
 ## Episode 10: Reaction calorimetry and molar enthalpy
 
@@ -631,7 +631,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Dividing by the acid initially supplied, by total moles of solution, or by the total volume.
 
-**Worked in:** E10S06 “Practice Q19: justify the denominator” (≈5:12 in the draft)
+**Worked in:** E10S06 “Practice Q19: justify the denominator” (≈5:13 in the draft)
 
 ### Q20. One mole of reagent is not always one mole of reaction (6 marks)
 
@@ -675,7 +675,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Multiplying 0.0300 mol directly by 114 kJ, or reporting the rise as the final temperature.
 
-**Worked in:** E10S09 “Practice Q20: predict the final temperature” (≈10:07 in the draft)
+**Worked in:** E10S09 “Practice Q20: predict the final temperature” (≈10:09 in the draft)
 
 ## Episode 11: Temperature graphs, correction and experimental reasoning
 
@@ -740,7 +740,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Equating repeatability with accuracy, or assuming every offset changes a difference.
 
-**Worked in:** E11S11 “Practice Q22: a wrong CF and a thermometer offset” (≈12:06 in the draft)
+**Worked in:** E11S11 “Practice Q22: a wrong CF and a thermometer offset” (≈12:08 in the draft)
 
 ## Episode 12: Fair fuel comparisons and sustainability
 
@@ -810,7 +810,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Assuming 'bio' or 'renewable electricity' makes a process superior on every criterion.
 
-**Worked in:** E12S11 “Practice Q24: build an evidence-based answer” (≈11:21 in the draft)
+**Worked in:** E12S11 “Practice Q24: build an evidence-based answer” (≈11:22 in the draft)
 
 ## Episode 13: Exam workshop A: fuels and combustion
 
@@ -861,7 +861,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Mixture vs reactive component; air vs oxygen; new vs inlet CO₂; energy units; efficiency direction.
 
-**Worked in:** E13S03 “Q25: attempt it first” (≈2:07 in the draft); E13S04 “Q25: read and annotate” (≈3:40 in the draft); E13S05 “Q25: plan the methods” (≈5:03 in the draft); E13S06 “Q25 parts a to c: amounts, equation and excess oxygen” (≈6:00 in the draft); E13S08 “Q25 parts d and e: energy and efficiency” (≈8:32 in the draft); E13S09 “Q25 parts f and g: carbon dioxide and the source” (≈10:07 in the draft)
+**Worked in:** E13S03 “Q25: attempt it first” (≈2:08 in the draft); E13S04 “Q25: read and annotate” (≈3:40 in the draft); E13S05 “Q25: plan the methods” (≈5:04 in the draft); E13S06 “Q25 parts a to c: amounts, equation and excess oxygen” (≈6:00 in the draft); E13S08 “Q25 parts d and e: energy and efficiency” (≈8:33 in the draft); E13S09 “Q25 parts f and g: carbon dioxide and the source” (≈10:08 in the draft)
 
 ### Q26. A fuel ranking that needs a specified basis (10 marks)
 
@@ -895,7 +895,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Per mole vs per gram; CO₂ per mole vs per useful energy; explaining energy content by one shared bond (or by bond enthalpies without full calculations) instead of the degree of oxidation; unsupported lifecycle claim.
 
-**Worked in:** E13S12 “Q26: attempt it first” (≈13:45 in the draft); E13S13 “Q26 parts a and b: per gram and per useful kilojoule” (≈14:57 in the draft); E13S15 “Q26 parts c and d: explaining and limiting claims” (≈18:04 in the draft)
+**Worked in:** E13S12 “Q26: attempt it first” (≈13:46 in the draft); E13S13 “Q26 parts a and b: per gram and per useful kilojoule” (≈14:58 in the draft); E13S15 “Q26 parts c and d: explaining and limiting claims” (≈18:06 in the draft)
 
 ## Episode 14: Exam workshop B: calorimetry and data evaluation
 
@@ -941,7 +941,7 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Seconds, solution volumes, wrong denominator, observed vs corrected peak, precision vs accuracy, excess vs reacted.
 
-**Worked in:** E14S02 “Q27: attempt it first” (≈1:25 in the draft); E14S03 “Q27: read and annotate” (≈2:55 in the draft); E14S04 “Q27: plan the methods” (≈4:11 in the draft); E14S05 “Q27 part a: calibration” (≈4:58 in the draft); E14S06 “Q27 part b: the limiting reactant” (≈5:49 in the draft); E14S07 “Q27 part c: correcting the temperature rise” (≈6:36 in the draft); E14S08 “Q27 part d: molar enthalpy” (≈7:33 in the draft); E14S09 “Wrong solutions for Q27” (≈8:28 in the draft); E14S10 “Q27 parts e and f: evidence and prediction” (≈9:28 in the draft)
+**Worked in:** E14S02 “Q27: attempt it first” (≈1:25 in the draft); E14S03 “Q27: read and annotate” (≈2:55 in the draft); E14S04 “Q27: plan the methods” (≈4:11 in the draft); E14S05 “Q27 part a: calibration” (≈4:58 in the draft); E14S06 “Q27 part b: the limiting reactant” (≈5:50 in the draft); E14S07 “Q27 part c: correcting the temperature rise” (≈6:37 in the draft); E14S08 “Q27 part d: molar enthalpy” (≈7:33 in the draft); E14S09 “Wrong solutions for Q27” (≈8:29 in the draft); E14S10 “Q27 parts e and f: evidence and prediction” (≈9:29 in the draft)
 
 ### Q28. A hand-warmer claim distorted by the wrong calibration (12 marks)
 
@@ -985,4 +985,4 @@ Each solution gives the working for every part, the indicative mark allocation s
 
 **Trap.** Claim vs evidence, calibration-error direction, precise but biased results, active mass vs total sample mass.
 
-**Worked in:** E14S12 “Q28: attempt it first” (≈11:41 in the draft); E14S13 “Q28 parts a to c: testing the claim” (≈12:55 in the draft); E14S14 “Q28 parts d and e: a calibration error” (≈14:01 in the draft); E14S15 “Q28 part f: moisture” (≈15:02 in the draft)
+**Worked in:** E14S12 “Q28: attempt it first” (≈11:43 in the draft); E14S13 “Q28 parts a to c: testing the claim” (≈12:56 in the draft); E14S14 “Q28 parts d and e: a calibration error” (≈14:03 in the draft); E14S15 “Q28 part f: moisture” (≈15:04 in the draft)

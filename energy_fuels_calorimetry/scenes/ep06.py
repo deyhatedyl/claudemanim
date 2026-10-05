@@ -105,7 +105,7 @@ class Balancer:
         (self.reac if side == "r" else self.prod)[idx][0] = value
         new_eq = build_eq(self.reac, self.prod, self.size).move_to([0, self.y, 0])
         nl, nr = self._counters()
-        self.s.play(TransformMatchingTex(self.eq, new_eq) if False else ReplacementTransform(self.eq, new_eq),
+        self.s.play(TransformMatchingTex(self.eq, new_eq, transform_mismatches=True),
                     ReplacementTransform(self.lc, nl), ReplacementTransform(self.rc, nr), run_time=rt)
         self.eq, self.lc, self.rc = new_eq, nl, nr
         if flag:
@@ -152,7 +152,7 @@ class E06S02_Balance(NarratedScene):
         bal = Balancer(self, [[None, "CH3OH"], [None, "O2"]], [[None, "CO2"], [None, "H2O"]], y=1.5)
         with self.beat("b01") as b:
             self.play(FadeIn(h), run_time=0.4)
-            note = T("complete combustion: all C → CO₂, all H → H₂O", size=LABEL, color=MUTED).move_to([0, 2.55, 0])
+            note = T("complete combustion: all C → CO₂, all H → H₂O", size=LABEL, color=MUTED).move_to([0, 2.4, 0])
             self.play(FadeIn(note), run_time=0.5)
             bal.reac[0][0] = 1
             bal.eq = build_eq(bal.reac, bal.prod).move_to([0, 1.5, 0])

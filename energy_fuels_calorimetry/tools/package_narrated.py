@@ -1,4 +1,4 @@
-"""Export a checked narrated episode with captions visible in every player."""
+"""Export a checked narrated episode without burned or embedded subtitles."""
 from __future__ import annotations
 
 import argparse
@@ -23,15 +23,10 @@ def main():
     output_dir = ROOT / 'delivery' / ep
     output_dir.mkdir(parents=True, exist_ok=True)
     output = output_dir / f'{ep}-Chemistry-Narrated-1080p.mp4'
-    caption = report['captions'][0]
-    style = ('FontName=Inter,FontSize=15,PrimaryColour=&H00F8F1EE,'
-             'OutlineColour=&H001E110C,BorderStyle=1,Outline=1,Shadow=0,MarginV=10')
     subprocess.check_call([
         'ffmpeg', '-y', '-v', 'error', '-i', str(ROOT / report['output']),
-        '-vf', f"subtitles={caption}:force_style='{style}'",
         '-map', '0:v:0', '-map', '0:a:0', '-sn',
-        '-c:v', 'libx264', '-preset', 'fast', '-crf', '19', '-threads', '3',
-        '-c:a', 'copy', '-movflags', '+faststart', str(output)
+        '-c', 'copy', '-movflags', '+faststart', str(output)
     ], cwd=ROOT)
     for name in report['captions'] + [report['transcript']]:
         path = ROOT / name
