@@ -235,6 +235,7 @@ class E02S04_Bonds(NarratedScene):
         with self.beat("b02") as b:
             self.play(FadeIn(a1), FadeIn(a2), run_time=0.6)
             target = mol_H2(2.4).move_to([3.6, 1.0, 0])
+            target.bonds.set_z_index(-1)
             self.play(a1.animate.move_to(target.atoms[0]), a2.animate.move_to(target.atoms[1]), run_time=1.2)
             self.play(FadeIn(target.bonds), run_time=0.4)
             eout = VGroup(Arrow([3.6, 1.35, 0], [3.6, 2.6, 0], buff=0, color=USEFUL, stroke_width=7,
