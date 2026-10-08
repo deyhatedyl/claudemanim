@@ -371,19 +371,19 @@ class E08S08_Q16(NarratedScene):
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
             return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
-        l1 = L(r"q = 180.0 \times 4.18 \times 60.0 = 45\,144\ \text{J} = 45.144\ \text{kJ}", 2.2, USEFUL)
+        l1 = L(r"q = 180.0 \times 4.18 \times 60.0 = 45\,144\ \text{J} = 45.144\ \text{kJ}", 1.75, USEFUL)
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
-            dt = T("ΔT = 78.0 − 18.0 = 60.0 °C", size=LABEL, color=TEMP_C).move_to([0, 2.75, 0]).align_to([colL, 0, 0], LEFT)
+            dt = T("ΔT = 78.0 − 18.0 = 60.0 °C", size=LABEL, color=TEMP_C).move_to([0, 2.35, 0]).align_to([colL, 0, 0], LEFT)
             self.play(FadeIn(dt), run_time=0.6)
             b.until(0.35)
             self.play(Write(l1), run_time=1.3)
-        l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 1.35, SYSTEM)
+        l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 0.85, SYSTEM)
         with self.beat("b03") as b:
             self.play(Write(l2), run_time=1.2)
             bigger = T("larger than the useful heat ✓", size=SMALL + 1, color=GOOD).next_to(l2, RIGHT, buff=0.3)
             self.play(FadeIn(bigger), run_time=0.4)
-        l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", 0.35, MASS_C)
+        l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
             self.play(Write(l3), run_time=1.3)
         with self.beat("b05") as b:
