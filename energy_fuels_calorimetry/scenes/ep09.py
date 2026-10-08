@@ -190,17 +190,23 @@ class E09S04_EVIt(NarratedScene):
         cal = calorimeter(width=2.6, height=2.2, heater=True).move_to([-4.6, -0.3, 0])
         ps = RoundedRectangle(width=1.6, height=0.9, corner_radius=0.1, color=TEXT, stroke_width=2.5).move_to([-1.6, 1.9, 0])
         pst = T("power supply", size=SMALL, color=MUTED).next_to(ps, UP, buff=0.08)
-        vm = meter("V", UNKNOWN).move_to([-1.6, 0.4, 0])
+        vm = meter("V", UNKNOWN).move_to([-2.45, 0.45, 0])
         am = meter("A", SURR).move_to([-3.1, 1.9, 0])
         top_l, top_r = cal.heater[1][0].get_end(), cal.heater[1][1].get_end()
         wires = VGroup(Line(ps.get_left(), am.get_right(), color=TEXT, stroke_width=2.5),
                        Line(am.get_left(), [top_l[0], 1.9, 0], color=TEXT, stroke_width=2.5),
                        Line([top_l[0], 1.9, 0], top_l, color=TEXT, stroke_width=2.5),
-                       Line(ps.get_bottom(), [-1.6, 1.0, 0], color=TEXT, stroke_width=2.5),
-                       Line([-1.6, -0.2, 0], [-1.6, -1.6, 0], color=TEXT, stroke_width=2.5),
-                       Line([-1.6, -1.6, 0], [top_r[0] + 0.6, -1.6, 0], color=TEXT, stroke_width=2.5),
+                       Line(ps.get_right(), [-0.3, 1.9, 0], color=TEXT, stroke_width=2.5),
+                       Line([-0.3, 1.9, 0], [-0.3, -1.6, 0], color=TEXT, stroke_width=2.5),
+                       Line([-0.3, -1.6, 0], [top_r[0] + 0.6, -1.6, 0], color=TEXT, stroke_width=2.5),
                        Line([top_r[0] + 0.6, -1.6, 0], [top_r[0] + 0.6, top_r[1], 0], color=TEXT, stroke_width=2.5),
-                       Line([top_r[0] + 0.6, top_r[1], 0], top_r, color=TEXT, stroke_width=2.5))
+                       Line([top_r[0] + 0.6, top_r[1], 0], top_r, color=TEXT, stroke_width=2.5),
+                       # Voltage is measured across the heater; A remains in series.
+                       Line([top_l[0], 1.35, 0], [-2.45, 1.35, 0], color=TEXT, stroke_width=2.5),
+                       Line([-2.45, 1.35, 0], vm.get_top(), color=TEXT, stroke_width=2.5),
+                       Line(vm.get_bottom(), [-2.45, -1.6, 0], color=TEXT, stroke_width=2.5),
+                       Dot([top_l[0], 1.35, 0], radius=0.035, color=TEXT),
+                       Dot([-2.45, -1.6, 0], radius=0.035, color=TEXT))
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(cal), run_time=0.8)
             self.play(FadeIn(ps), FadeIn(pst), Create(wires), FadeIn(am), FadeIn(vm), run_time=1.2)
@@ -312,11 +318,15 @@ class E09S07_Contents(NarratedScene):
         h = header("Changing the contents changes CF")
         q = T("Q17 d: 150.0 g water, same apparatus. Keep CF = 540?", size=LABEL + 2, color=UNKNOWN).move_to([0, 2.45, 0])
         before = cf_stack(501.6, 38.4, scale=0.0034, width=1.0, x=-5.5, y_base=-2.2)
+        before[2].become(T("water\n501.6", size=17, color=BG).move_to(before[0]))
+        before[3].become(T("apparatus\n38.4", size=16, color=APP).next_to(before[1], RIGHT, buff=0.12))
         bl = T("120.0 g water", size=SMALL + 1).next_to(before[0], DOWN, buff=0.1)
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(before), FadeIn(bl), run_time=1.0)
             self.play(FadeIn(q), run_time=0.7)
         after = cf_stack(627.0, 38.4, scale=0.0034, width=1.0, x=-2.6, y_base=-2.2)
+        after[2].become(T("water\n627.0", size=17, color=BG).move_to(after[0]))
+        after[3].become(T("apparatus\n38.4", size=16, color=APP).next_to(after[1], RIGHT, buff=0.12))
         al = T("150.0 g water", size=SMALL + 1).next_to(after[0], DOWN, buff=0.1)
         calc = VGroup(M(r"150.0 \times 4.18 = 627.0", size=EQ_SMALL - 6, color=SURR),
                       M(r"627.0 + 38.4 = 665.4 \approx 665\ \text{J}\ {}^{\circ}\text{C}^{-1}", size=EQ_SMALL - 6, color=UNKNOWN)).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
@@ -447,84 +457,5 @@ class E09S09_HeatLoss(NarratedScene):
 
 
 # =====================================================================================
-class E09S10_Q18(NarratedScene):
-    def construct(self):
-        h = header("Practice Q18")
-        qc = question_card("Q18").move_to([0, -0.10, 0])
-        with self.beat("b01"):
-            self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        nl = NumberLine(x_range=[300, 600, 50], length=10.0, include_numbers=True, color=TEXT,
-                        decimal_number_config=dict(num_decimal_places=0, color=MUTED), font_size=24).move_to([0, 1.2, 0])
-        unit = T("CF (J °C⁻¹)", size=SMALL + 1, color=MUTED).next_to(nl, RIGHT, buff=0.2).shift(0.0 * UP)
-        with self.beat("b02") as b:
-            self.play(FadeOut(qc), Create(nl), FadeIn(unit), run_time=1.0)
-            lbm = DashedLine(nl.n2p(418) + 0.6 * UP, nl.n2p(418) + 0.6 * DOWN, color=SURR, stroke_width=3)
-            lbt = M(r"m c = 100.0 \times 4.18 = 418", size=EQ_SMALL - 8, color=SURR).next_to(lbm, UP, buff=0.1)
-            allowed = Line(nl.n2p(418), nl.n2p(600), color=GOOD, stroke_width=10).set_opacity(0.6)
-            at = T("allowed: CF > 418", size=SMALL + 1, color=GOOD).next_to(allowed, DOWN, buff=0.75)
-            self.play(Create(lbm), Write(lbt), run_time=1.0)
-            self.play(Create(allowed), FadeIn(at), run_time=0.7)
-            rep = Dot(nl.n2p(360), color=BAD, radius=0.12)
-            rt = T("reported 360 ✗", size=LABEL, color=BAD).next_to(rep, DOWN, buff=0.75)
-            b.until(0.7)
-            self.play(FadeIn(rep), FadeIn(rt), run_time=0.7)
-        with self.beat("b03") as b:
-            f = M(r"CF = \frac{E}{\Delta T}", size=EQ).move_to([-4.0, -1.4, 0])
-            hl = VGroup(T("heat loss: ΔT ↓  →  CF ↑", size=LABEL + 2, color=UNKNOWN),
-                        T("so heat loss cannot explain a LOW CF", size=LABEL + 2, color=BAD)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
-            hl.next_to(f, RIGHT, buff=0.6)
-            self.play(Write(f), FadeIn(hl[0]), run_time=1.0)
-            b.until(0.55)
-            self.play(FadeIn(hl[1]), run_time=0.6)
-            self.f, self.hl = f, hl
-        with self.beat("b04") as b:
-            self.play(FadeOut(self.hl), run_time=0.4)
-            ok = right_panel("Errors that make CF too low", ["ΔT overestimated (e.g. thermometer misread)",
-                                                             "E underestimated: t, I or V recorded too low"], width=6.6)
-            ok.next_to(self.f, RIGHT, buff=0.6)
-            self.play(FadeIn(ok), run_time=0.9)
-        with self.beat("b05") as b:
-            self.clear(h)
-            tally = mark_tally([(1, "water-only lower bound: 418 J °C⁻¹"), (1, "360 is inconsistent with the setup"),
-                                (1, "heat loss would raise CF, not lower it"), (1, "a valid error that lowers CF")], width=7.2).move_to([0, 0.6, 0])
-            pat = T("Full-credit pattern: which measurement → which direction → effect on the result", size=LABEL + 2, color=UNKNOWN).move_to([0, -2.0, 0])
-            self.play(FadeIn(tally), run_time=0.9)
-            b.until(0.6)
-            self.play(FadeIn(pat), run_time=0.6)
 
-
-# =====================================================================================
-class E09S11_Recap(NarratedScene):
-    def construct(self):
-        h = header("Recap")
-        items = bullets(["CF: energy per °C for the whole calorimeter and its contents",
-                         "Electrical calibration: E = VIt (t in seconds), CF = E ÷ ΔT",
-                         "CF = m c (water) + C (apparatus) > m c (water)",
-                         "Reuse CF only for matched contents; trace errors through the formula"], size=LABEL + 2, width=12.0, buff=0.35)
-        items.move_to([0, 0.3, 0])
-        with self.beat("b01") as b:
-            self.play(FadeIn(h), run_time=0.4)
-            for i, it in enumerate(items):
-                b.until(0.05 + 0.2 * i)
-                self.play(FadeIn(it, shift=0.1 * RIGHT), run_time=0.6)
-        with self.beat("b02") as b:
-            self.play(FadeOut(items), run_time=0.4)
-            q = VGroup(TB("Closing recall", size=BODY, color=UNKNOWN),
-                       T("12.0 V, 2.00 A, 5 minutes; temperature rise 6.0 °C. CF = ?", size=BODY)).arrange(DOWN, buff=0.35).move_to([0, 1.0, 0])
-            self.play(FadeIn(q), run_time=0.8)
-            self.q = q
-        with self.beat("b03") as b:
-            a = VGroup(M(r"E = 12.0 \times 2.00 \times 300 = 7200\ \text{J}", size=EQ_SMALL, color=GOOD),
-                       M(r"CF = \frac{7200}{6.0} = 1200\ \text{J}\ {}^{\circ}\text{C}^{-1}", size=EQ_SMALL, color=GOOD)).arrange(DOWN, buff=0.25)
-            a.next_to(self.q, DOWN, buff=0.45)
-            self.play(Write(a[0]), run_time=1.0)
-            b.until(0.35)
-            self.play(Write(a[1]), run_time=1.0)
-            nxt = T("Next: Episode 10 · Reaction calorimetry and molar enthalpy", size=LABEL, color=MUTED).move_to([0, -2.4, 0])
-            b.until(0.7)
-            self.play(FadeIn(nxt), run_time=0.5)
-
-
-EPISODE_SCENES = ["E09S01_Retrieval", "E09S02_MoreThanWater", "E09S03_Kinds", "E09S04_EVIt", "E09S05_Stack",
-                  "E09S06_Q17a", "E09S07_Contents", "E09S08_Chemical", "E09S09_HeatLoss", "E09S10_Q18",
-                  "E09S11_Recap"]
+EPISODE_SCENES = ['E09S01_Retrieval', 'E09S02_MoreThanWater', 'E09S03_Kinds', 'E09S04_EVIt', 'E09S05_Stack', 'E09S06_Q17a', 'E09S07_Contents', 'E09S08_Chemical', 'E09S09_HeatLoss']
