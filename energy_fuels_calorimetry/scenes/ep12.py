@@ -447,7 +447,7 @@ class E12S11_Q24(NarratedScene):
                 ["fresh water", "12 L", "20 L"],
                 ["fermentation CO₂", "vented", "captured and used"]]
         tb = table(rows, [3.0, 3.6, 4.6], size=SMALL + 1, row_h=0.5).move_to([0, 1.08, 0])
-        sent_y = [-0.95, -1.7, -2.25]
+        sent_y = [-0.95, -1.7]
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(tb), run_time=0.9)
             s1 = wrapped("1. Feedstock: B uses waste, not an edible crop, so it avoids competing with food and keeps materials in use "
@@ -458,7 +458,7 @@ class E12S11_Q24(NarratedScene):
             self.play(Create(hl), FadeIn(s1), run_time=1.0)
             self.hl = hl
         with self.beat("b03") as b:
-            s2 = wrapped("2. Resources: A uses less listed energy (8 vs 10 MJ) and less fresh water (12 vs 20 L) per kg.",
+            s2 = wrapped("2. Per kg: A uses less listed energy (8 vs 10 MJ) and fresh water (12 vs 20 L).",
                          size=SMALL + 1, width=12.6, color=SURR)
             s2.move_to([0, sent_y[1], 0]).align_to([-6.0, 0, 0], LEFT)
             hl2 = SurroundingRectangle(VGroup(*tb[1][6:12]), color=SURR, buff=0.05)
@@ -467,7 +467,7 @@ class E12S11_Q24(NarratedScene):
         with self.beat("b04") as b:
             s3 = wrapped("3. Trade-off: B wins on feedstock and CO₂ use; A wins on energy and water. Using CO₂ is not permanent storage.",
                          size=SMALL + 1, width=12.6, color=UNKNOWN)
-            s3.move_to([0, sent_y[2], 0]).align_to([-6.0, 0, 0], LEFT)
+            s3.next_to(s2, DOWN, buff=0.18).align_to(s2, LEFT)
             self.play(FadeOut(self.hl), FadeIn(s3), run_time=1.0)
             self.sents = VGroup(s3)
         with self.beat("b05") as b:
