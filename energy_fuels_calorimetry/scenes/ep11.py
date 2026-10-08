@@ -464,7 +464,7 @@ class E11S10_Resolution(NarratedScene):
         thl = T("marked every 1 °C", size=SMALL, color=MUTED).next_to(th, DOWN, buff=0.2)
         probe = display("23.4 °C", "digital probe").move_to([-0.6, 1.0, 0])
         bal = display("12.37 g", "digital balance").move_to([3.6, 1.0, 0])
-        q = T("higher resolution: the thermometer or the probe?", size=LABEL + 1, color=UNKNOWN).move_to([0, -1.0, 0])
+        q = T("higher resolution: the thermometer or the probe?", size=LABEL + 1, color=UNKNOWN).move_to([0, -1.75, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(th), FadeIn(ticks), FadeIn(thl), run_time=0.9)
             self.play(FadeIn(probe), run_time=0.6)
