@@ -678,7 +678,7 @@ class E14S17_Methods(NarratedScene):
                 ["electrical calibration", "E = V × I × t;  CF = E ÷ ΔT"],
                 ["calibrated calorimeter", "q = CF × ΔT"]]
         right = [["Asked", "Relationship"],
-                 ["molar enthalpy", "ΔH = −q ÷ n(limiting); negative if heat is released"],
+                 ["molar enthalpy", "ΔH = −q ÷ n(stated basis); negative for exothermic"],
                  ["efficiency", "useful output ÷ energy input × 100%"],
                  ["input needed for a target output", "useful output ÷ efficiency"],
                  ["comparing fuels", "state the basis: per mol, per g or per useful kJ"]]
@@ -713,7 +713,7 @@ class E14S18_Diagnostic(NarratedScene):
     ROUND1 = [("n(NaOH) = 0.800 × 75.0 = 60.0 mol", "✗  mL → L: 0.0600 mol"),
               ("A 90% CH₄ mixture: use its total amount as n(CH₄)", "✗  mixture vs component"),
               ("60.0 L of air contains 60.0 L of O₂", "✗  air is 21.0% O₂"),
-              ("ΔH: divide q by the amount of the excess reactant", "✗  use the limiting reactant"),
+              ("ΔH: divide q by the amount of the excess reactant", "✗  use the stated molar basis"),
               ("q = 600 J °C⁻¹ × 4.8 °C = 2880 kJ", "✗  J, not kJ"),
               ("ΔH for an exothermic reaction is negative", "✓  correct")]
     ROUND2 = [("The highest reading is the corrected temperature", "✗  extrapolate the cooling line"),
