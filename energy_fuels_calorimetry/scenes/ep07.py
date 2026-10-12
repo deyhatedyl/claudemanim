@@ -561,7 +561,7 @@ class E07S12_Recap(NarratedScene):
                  "Divide by coefficients: smallest → limiting, gives the extent",
                  "Used = coefficient × extent",
                  "Remaining = initial − used (never negative)",
-                 "Formed = coefficient × extent (+ anything passing through)"]
+                 "Newly formed = coefficient × extent; total leaving also includes inlet"]
         rows = VGroup()
         from shared.components import number_badge
         for i, s in enumerate(steps, 1):
