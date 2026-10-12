@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (Budget, bullets, mark_tally, mol_CH4, mol_O2, question_card, result_box,  # noqa: E402
                                right_panel, title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.worked_sidebar import WorkedQuestionSidebar  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MOL_C,  # noqa: E402
                           MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
                           header, panel)
@@ -236,24 +237,38 @@ class E07S05_Q13(NarratedScene):
     def construct(self):
         h = header("Practice Q13")
         qc = question_card("Q13").move_to([0, -0.10, 0])
+        dock = WorkedQuestionSidebar(
+            "Q13",
+            "Complete combustion of the ethanol portion that can react.",
+            [("ethanol", "Ethanol", "0.400 mol", "question"),
+             ("oxygen", "O₂", "32.0 g", "question"),
+             ("oxygen_M", "M(O₂)", "32.0 g mol⁻¹", "question"),
+             ("ethanol_M", "M(ethanol)", "46.0 g mol⁻¹", "question"),
+             ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question")],
+            "a Limiting  •  b Ethanol left  •  c CO₂ formed  •  d Heat released",
+            width=3.85,
+        )
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        model = T("idealised: reacting ethanol burns completely; excess ethanol left unreacted", size=LABEL, color=MUTED).move_to([0, 2.5, 0])
+        model = T("idealised: reacting ethanol burns completely; excess remains", size=LABEL, color=MUTED).move_to([1.95, 2.4, 0])
+        model.scale_to_fit_width(min(8.1, model.width))
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(model), run_time=0.6)
+            self.play(FadeOut(qc), FadeIn(model), FadeIn(dock), run_time=0.6)
             a = VGroup(M(r"n(\text{ethanol}) = 0.400\ \text{mol}", size=EQ_SMALL - 2, color=MOL_C),
-                       M(r"n(\ce{O2}) = \frac{32.0\ \text{g}}{32.0\ \text{g mol}^{-1}} = 1.00\ \text{mol}", size=EQ_SMALL - 2, color=MOL_C)).arrange(RIGHT, buff=0.8)
-            a.move_to([0, 1.5, 0])
+                       M(r"n(\ce{O2}) = \frac{32.0\ \text{g}}{32.0\ \text{g mol}^{-1}} = 1.00\ \text{mol}", size=EQ_SMALL - 2, color=MOL_C)).arrange(RIGHT, buff=0.35)
+            a.scale_to_fit_width(min(8.0, a.width))
+            a.move_to([1.95, 1.5, 0])
             b.until(0.3)
-            self.play(Write(a[0]), run_time=0.7)
+            self.play(Write(a[0]), Indicate(dock.focus("ethanol"), color=SURR), run_time=0.7)
             b.until(0.6)
-            self.play(Write(a[1]), run_time=1.0)
+            self.play(Write(a[1]), Indicate(dock.focus("oxygen"), color=SURR), run_time=1.0)
             self.amts = a
-        eq = M(r"\ce{C2H5OH + 3O2 -> 2CO2 + 3H2O}", size=EQ_SMALL).move_to([0, 0.55, 0])
+        eq = M(r"\ce{C2H5OH + 3O2 -> 2CO2 + 3H2O}", size=EQ_SMALL).move_to([1.95, 0.55, 0])
         with self.beat("b03") as b:
             self.play(Write(eq), run_time=0.9)
             cmp_ = VGroup(M(r"\text{ethanol}: \tfrac{0.400}{1} = 0.400", size=EQ_SMALL - 4),
-                          M(r"\ce{O2}: \tfrac{1.00}{3} = 0.333", size=EQ_SMALL - 4, color=O2C)).arrange(RIGHT, buff=1.0).move_to([0, -0.4, 0])
+                          M(r"\ce{O2}: \tfrac{1.00}{3} = 0.333", size=EQ_SMALL - 4, color=O2C)).arrange(RIGHT, buff=0.35).move_to([1.95, -0.4, 0])
+            cmp_.scale_to_fit_width(min(7.9, cmp_.width))
             b.until(0.4)
             self.play(Write(cmp_), run_time=1.2)
             box = SurroundingRectangle(cmp_[1], color=UNKNOWN, buff=0.1)
@@ -263,32 +278,35 @@ class E07S05_Q13(NarratedScene):
             self.cmp = VGroup(cmp_, box, lim)
         with self.beat("b04") as b:
             just = right_panel("Exam sentence", ["0.400 mol ethanol would need 3 × 0.400 = 1.20 mol O₂, but only 1.00 mol O₂ is available, "
-                                                 "so O₂ is limiting."], width=11.0, size=LABEL)
-            just.move_to([0, -1.75, 0])
+                                                 "so O₂ is limiting."], width=7.6, size=LABEL)
+            just.move_to([1.95, -1.75, 0])
             self.play(FadeOut(self.cmp[2]), FadeIn(just), run_time=1.0)
             self.just = just
         with self.beat("b05") as b:
             self.play(FadeOut(self.just), FadeOut(self.cmp), FadeOut(self.amts), FadeOut(model), run_time=0.5)
-            self.play(eq.animate.move_to([0, 2.45, 0]), run_time=0.5)
-            bud = Budget(["ethanol", "O₂", "CO₂"], ["initial (mol)", "used / formed", "remaining"], col_w=2.9, label_w=1.7,
-                         col_colors=[MUTED, SYSTEM, GOOD]).move_to([0, 0.75, 0])
+            self.play(eq.animate.move_to([1.95, 2.32, 0]), run_time=0.5)
+            bud = Budget(["ethanol", "O₂", "CO₂"], ["initial (mol)", "used / formed", "remaining"], col_w=2.05, label_w=1.35,
+                         col_colors=[MUTED, SYSTEM, GOOD]).move_to([1.95, 0.68, 0])
             self.play(FadeIn(bud), FadeIn(VGroup(bud.cell(0, 0, "0.400"), bud.cell(1, 0, "1.00"), bud.cell(2, 0, "0"))), run_time=0.8)
             ext = T("extent = 1.00 ÷ 3 = 0.3333 mol", size=LABEL, color=UNKNOWN).next_to(bud, DOWN, buff=0.15)
             self.play(FadeIn(ext), run_time=0.5)
             self.play(FadeIn(bud.cell(0, 1, "0.3333", SYSTEM)), FadeIn(bud.cell(1, 1, "1.00 (all)", SYSTEM)), run_time=0.6)
             b.until(0.5)
             self.play(FadeIn(bud.cell(0, 2, "0.0667", GOOD)), FadeIn(bud.cell(1, 2, "0", GOOD)), run_time=0.6)
-            m = M(r"m(\text{ethanol left}) = 0.0667 \times 46.0 = 3.07\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([0, -1.35, 0])
+            m = M(r"m(\text{ethanol left}) = 0.0667 \times 46.0 = 3.07\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.35, 0])
+            m.scale_to_fit_width(min(8.0, m.width))
             b.until(0.75)
             self.play(Write(m), run_time=1.0)
             self.bud, self.ext, self.m = bud, ext, m
         with self.beat("b06") as b:
             self.play(FadeIn(self.bud.cell(2, 1, "+0.6667", GOOD)), FadeIn(self.bud.cell(2, 2, "0.6667", GOOD)), run_time=0.6)
-            c = M(r"m(\ce{CO2}) = 0.6667 \times 44.0 = 29.3\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([0, -1.95, 0])
-            e = M(r"E = 0.3333 \times 1370 = 456.7 \approx 457\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([0, -2.5, 0])
+            c = M(r"m(\ce{CO2}) = 0.6667 \times 44.0 = 29.3\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.95, 0])
+            c.scale_to_fit_width(min(8.0, c.width))
+            e = M(r"E = 0.3333 \times 1370 = 456.7 \approx 457\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([1.95, -2.5, 0])
+            e.scale_to_fit_width(min(8.0, e.width))
             self.play(Write(c), run_time=1.0)
             b.until(0.55)
-            self.play(Write(e), run_time=1.0)
+            self.play(Write(e), Indicate(dock.focus("enthalpy"), color=UNKNOWN), run_time=1.0)
         with self.beat("b07") as b:
             self.clear(h)
             tally = mark_tally([(2, "amounts and limiting justification"), (2, "ethanol used; 3.07 g remaining"),
