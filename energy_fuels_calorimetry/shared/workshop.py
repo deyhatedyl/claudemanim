@@ -28,11 +28,11 @@ def question_ribbon(qid: str, part: str, text: str, source: str = "question") ->
     content = VGroup(label, body).arrange(RIGHT, buff=0.22)
     if content.width > 12.0:
         content.scale(12.0 / content.width)
-    frame = RoundedRectangle(width=12.5, height=0.39, corner_radius=0.09,
+    frame = RoundedRectangle(width=12.5, height=0.36, corner_radius=0.09,
                              stroke_color=FAINT, stroke_width=1.0,
                              fill_color=PANEL, fill_opacity=0.96)
     content.move_to(frame)
-    return VGroup(frame, content).move_to([0, 2.48, 0])
+    return VGroup(frame, content).move_to([0, 2.41, 0])
 
 
 def requested(text: str) -> VGroup:
