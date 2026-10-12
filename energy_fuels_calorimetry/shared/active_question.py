@@ -28,6 +28,8 @@ def _source_style(source: str) -> tuple[str, str]:
         return DATA_BOOK_COLOUR, "2026 VCAA DATA BOOK"
     if "final" in lowered:
         return CALCULATED_COLOUR, "FINAL ANSWER"
+    if "this part" in lowered:
+        return CALCULATED_COLOUR, "CALCULATED THIS PART"
     return CALCULATED_COLOUR, "CALCULATED EARLIER"
 
 

@@ -316,12 +316,13 @@ class E13S08_PartsDE(NarratedScene):
         prompt_d = active_part_ribbon("Q25", "d", [
             ("methane", "CH₄ reacted", "0.225 mol", "earlier result"),
             ("enthalpy", "|ΔH|", "890 kJ mol⁻¹", "question"),
-            ("water", "Water", "800.0 g; ΔT = 40.0 °C", "question")])
+            ("water", "Water", "800.0 g", "question"),
+            ("temp", "Start → end", "17.0 → 57.0 °C", "question")])
         prompt_e = active_part_ribbon("Q25", "e", [
             ("fuel", "Fuel energy", "200.25 kJ", "earlier result"),
             ("water", "Useful water heat", "133.76 kJ", "earlier result")])
         tl = tally_text("Q25", 7, 15)
-        l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 200\ \text{kJ released}", 1.90, ENERGY_C)
+        l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 2.00\times10^2\ \text{kJ}", 1.90, ENERGY_C)
         l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.26, USEFUL)
         td, te = part_tag("d", l1), None
         b1, b2 = boxes_for(l1), boxes_for(l2)

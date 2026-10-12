@@ -162,6 +162,7 @@ def main() -> int:
         return 0
     voice, source = voice_id(argparse.Namespace(
         voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None, lite=False))
+    voice_fingerprint = hashlib.sha256(voice.encode("utf-8")).hexdigest()
     beats = {b.key: b for ep in ("E06", "E07", "E08", "E12", "E14")
              for b in load_episode(ep).beats()}
     all_keys = sorted(AUDITED_RETAKES)
@@ -176,7 +177,9 @@ def main() -> int:
         meta = dest.with_suffix(".wav.json")
         if dest.is_file() and meta.is_file():
             old = json.loads(meta.read_text())
-            if old.get("text_sha256") == digest:
+            if (old.get("text_sha256") == digest
+                    and old.get("model") == MODEL
+                    and old.get("voice_fingerprint") == voice_fingerprint):
                 done[beat_key] = {"file": str(dest.resolve()), "start": 0.0, "end": old["duration_seconds"]}
                 print(f"REUSED {beat_key}")
                 continue
@@ -185,6 +188,7 @@ def main() -> int:
         duration = synthesize(beat.text, voice, key, dest)
         meta.write_text(json.dumps({
             "text_sha256": digest, "model": MODEL, "voice_label": VOICE_NAME,
+            "voice_fingerprint": voice_fingerprint,
             "voice_source": source, "provider": "OpenRouter", "duration_seconds": duration,
         }, indent=2))
         done[beat_key] = {"file": str(dest.resolve()), "start": 0.0, "end": duration}

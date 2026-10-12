@@ -383,7 +383,8 @@ class E14S10_PartsEF(NarratedScene):
         h = header("Q27 parts e and f")
         prompt_e = active_part_ribbon("Q27", "e")
         prompt_f = active_part_ribbon("Q27", "f", [
-            ("NaOH", "Doubled NaOH concentration", "1.60 mol L⁻¹", "earlier result"),
+            ("given", "Original NaOH", "0.800 mol L⁻¹", "question"),
+            ("NaOH", "Doubled NaOH", "1.60 mol L⁻¹", "calculated in this part"),
             ("acid", "HCl limiting", "0.0500 mol", "earlier result")])
         tl = tally_text("Q27", 10, 14)
         with self.beat("b01") as b:
