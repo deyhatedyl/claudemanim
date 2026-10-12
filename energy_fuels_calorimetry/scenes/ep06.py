@@ -387,13 +387,14 @@ class E06S06_Exhaust(NarratedScene):
                 dr.move_to(trap[1].get_center() + RIGHT * (i - 1) * 0.32)
             self.play(*[ReplacementTransform(w, dr) for w, dr in zip(waters, drops)], run_time=1.2)
             b.until(0.55)
-            self.play(Create(p2), GrowArrow(p3), FadeIn(dry), FadeIn(dl), run_time=0.8)
+            dryer = chip("drying agent", UNKNOWN, size=SMALL - 3).move_to([3.8, 0.35, 0])
+            self.play(Create(p2), GrowArrow(p3), FadeIn(dryer), FadeIn(dry), FadeIn(dl), run_time=0.8)
             self.play(*[o.animate.move_to(dry.get_center() + np.array([((i % 3) - 1) * 0.45, (i // 3 - 0.5) * 0.45, 0]))
                         for i, o in enumerate(others)], run_time=1.4)
         cols = VGroup(VGroup(TB("Formed by the reaction", size=LABEL, color=SYSTEM),
                              T("CO₂(g)", size=LABEL), T("H₂O(g)  (vapour, hot)", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.1),
                       VGroup(TB("Measured after cooling", size=LABEL, color=GOOD),
-                             T("CO₂(g) at SLC", size=LABEL), T("remaining vapour dried separately", size=LABEL, color=MUTED)).arrange(DOWN, aligned_edge=LEFT, buff=0.1))
+                             T("CO₂(g) at SLC", size=LABEL), T("residual vapour dried", size=LABEL, color=MUTED)).arrange(DOWN, aligned_edge=LEFT, buff=0.1))
         cols.arrange(RIGHT, buff=1.0, aligned_edge=UP).move_to([-1.9, -2.0, 0])
         with self.beat("b03") as b:
             self.play(FadeOut(tl), FadeIn(cols[0]), run_time=0.7)
