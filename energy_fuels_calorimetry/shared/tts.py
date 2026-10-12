@@ -69,7 +69,36 @@ def cached_clip(beat_key: str, text: str, manifest: dict | None = None) -> dict 
     e = manifest.get(beat_key)
     if not e:
         return None
-    if e.get("source") == "manual":
+    if e.get("source") == "openrouter_gemini_retake":
+        # Audit retakes are NOT interchangeable with ordinary manually imported
+        # originals. Verify both original OpenRouter sidecar and imported bytes
+        # each time this private clip is admitted to a narrated render.
+        try:
+            digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+            original_meta = C.ROOT / e["metadata_path"]
+            provenance = json.loads(original_meta.read_text(encoding="utf-8"))
+            p = C.ROOT / e["path"]
+            wav_sha = hashlib.sha256(p.read_bytes()).hexdigest()
+            matches = (
+                e.get("text_hash") == manual_text_hash(text)
+                and provenance.get("provider") == "OpenRouter"
+                and provenance.get("model") == "google/gemini-3.8-flash-tts"
+                and e.get("model") == provenance.get("model")
+                and provenance.get("text_sha256") == digest
+                and provenance.get("audio_sha256") == wav_sha == e.get("audio_sha256")
+                and provenance.get("voice_fingerprint") == e.get("voice_fingerprint")
+                and isinstance(e.get("voice_fingerprint"), str)
+                and bool(re.fullmatch(r"[0-9a-f]{64}", e["voice_fingerprint"]))
+            )
+        except (OSError, ValueError, KeyError, TypeError, UnicodeError):
+            return None
+    elif e.get("source") == "manual":
+        # An audited chemistry correction may never silently fall back to
+        # archived original narration, even when a stale manual cache entry
+        # happens to carry the current text hash (historical E08S06.b06).
+        from tools.reconcile_authored_narration import AUDITED_RETAKES
+        if beat_key in AUDITED_RETAKES:
+            return None
         matches = e.get("text_hash") == manual_text_hash(text)
     else:
         matches = e.get("hash") == clip_hash(text)
