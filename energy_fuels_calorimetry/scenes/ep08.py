@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (Thermometer, bullets, mark_tally, question_card, result_box, right_panel,  # noqa: E402
                                title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.worked_sidebar import WorkedQuestionSidebar  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB,
                           chip, header, panel)
@@ -257,37 +258,52 @@ class E08S06_Q15(NarratedScene):
     def construct(self):
         h = header("Practice Q15")
         qc = question_card("Q15").move_to([0, -0.10, 0])
+        dock = WorkedQuestionSidebar(
+            "Q15", "Ethanol burner heats water. Calculate efficiency.",
+            [("before", "Burner before", "102.640 g", "question"),
+             ("after", "Burner after", "101.720 g", "question"),
+             ("molar", "M(ethanol)", "46.0 g mol⁻¹", "question"),
+             ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question"),
+             ("water", "Water mass", "250.0 g", "question"),
+             ("temperature", "Water start → end", "19.8 → 37.0 °C", "question"),
+             ("heat_capacity", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 data book")],
+            "a mass and amount  •  b fuel heat  •  c water heat  •  d efficiency",
+            width=3.85
+        )
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("efficiency (%)")
-        colL = -6.2
+        colL = -2.28
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
-            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
-        l1 = L(r"m = 102.640 - 101.720 = 0.920\ \text{g}", 2.2, MASS_C)
-        l2 = L(r"n = \frac{0.920\ \text{g}}{46.0\ \text{g mol}^{-1}} = 0.0200\ \text{mol}", 1.45, MOL_C)
+            line = M(tex, size=s, color=col)
+            line.scale_to_fit_width(min(line.width, 8.35))
+            return line.move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
+        l1 = L(r"m = 102.640 - 101.720 = 0.920\ \text{g}", 2.12, MASS_C)
+        l2 = L(r"n = \frac{0.920\ \text{g}}{46.0\ \text{g mol}^{-1}} = 0.0200\ \text{mol}", 1.34, MOL_C)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
-            self.play(Write(l1), run_time=1.0)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(dock), run_time=0.5)
+            self.play(Write(l1), Indicate(dock.focus("before"), color=SURR), run_time=1.0)
             b.until(0.45)
-            self.play(Write(l2), run_time=1.1)
-        l3 = L(r"E_{\text{fuel}} = 0.0200 \times 1370 = 27.4\ \text{kJ}", 0.7, ENERGY_C)
+            self.play(Write(l2), Indicate(dock.focus("molar"), color=SURR), run_time=1.1)
+        l3 = L(r"E_{\text{fuel}} = 0.0200 \times 1370 = 27.4\ \text{kJ}", 0.58, ENERGY_C)
         with self.beat("b03") as b:
-            self.play(Write(l3), run_time=1.0)
-        l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", 0.0, TEMP_C)
-        l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.7, USEFUL)
+            self.play(Write(l3), Indicate(dock.focus("enthalpy"), color=UNKNOWN), run_time=1.0)
+        l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
+        l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
-            self.play(Write(l4), run_time=0.9)
+            self.play(Write(l4), Indicate(dock.focus("temperature"), color=SURR), run_time=0.9)
             b.until(0.35)
-            self.play(Write(l5), run_time=1.2)
-            nw = T("water's mass, not the fuel's", size=SMALL + 1, color=MUTED).next_to(l5, RIGHT, buff=0.3)
+            self.play(Write(l5), Indicate(dock.focus("water"), color=SURR), run_time=1.2)
+            nw = T("calculated heat absorbed by water", size=SMALL - 2, color=GOOD).next_to(l5, DOWN, buff=0.09)
             self.play(FadeIn(nw), run_time=0.4)
         with self.beat("b05") as b:
-            pred = T("predict: water gained less than the fuel released → below 100%", size=LABEL, color=UNKNOWN).move_to([0, -1.4, 0])
+            pred = T("predict: water gained less than the fuel released → below 100%", size=SMALL - 2, color=UNKNOWN).move_to([1.8, -1.63, 0])
             self.play(FadeIn(pred), run_time=0.6)
-            l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([0, -2.2, 0])
+            l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.26, 0])
+            l6.scale_to_fit_width(min(8.3, l6.width))
             b.until(0.35)
-            self.play(Write(l6), run_time=1.3)
+            self.play(Write(l6), Create(result_box(l6)), run_time=1.3)
         with self.beat("b06") as b:
             self.clear(h, req)
             tally = mark_tally([(2, "mass and amount of ethanol"), (1, "fuel energy: 27.4 kJ"), (2, "water heat: 18.0 kJ"),
