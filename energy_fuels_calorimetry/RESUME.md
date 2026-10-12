@@ -1,3 +1,67 @@
+## Continuation 12 October 2026 — source and first render checks
+
+The 12 October chemistry audit is available in the learner's ChatGPT file Library
+as `Chemistry-Series-Audit-2026.md`, alongside the authoritative 2026 Chemistry
+Data Book. Scene WAV ZIP archives `Archive 7.zip` through `Archive 14.zip`
+and the original narrated 1080p MP4s are also in the learner's Library. They
+are deliberately not checked into this public repository.
+
+**Audited corrections committed on this branch:**
+- E06: oxygen shortage does not force all methane to react incompletely;
+  CO/CO₂ split requires complete-consumption and product assumptions.
+  Cooling alone leaves residual water vapour, so a drying step is indicated.
+- E07: distinguish newly produced CO₂ from the total CO₂ leaving the system.
+- E08: mixing 17,974 J with 27.4 kJ and multiplying by 100 gives 65,600%,
+  whereas the unit-consistent Q15 answer remains 65.6%.
+- E12: octane -5470 kJ/mol and 48.0 kJ/g, ethanol -1367 kJ/mol and
+  29.7 kJ/g for current-book GENERAL comparisons. Q13/Q15/Q26 explicitly
+  supply -1370, which must be retained. Lower lifecycle emissions also
+  require comparative evidence.
+- E14: the molar-enthalpy denominator is the amount on the requested basis;
+  for a reaction as written use reaction extent, not always raw limiting moles.
+- Corresponding script wording was updated in scripts/ep06,07,08,12,14.md;
+  altered speech must be rerecorded/checked before a narrated final export.
+
+**Visual work committed:**
+- `shared/worked_sidebar.py` holds a compact, persistent question/source
+  panel with labels question (blue), 2026 data book (amber), earlier result
+  (green) and focusable per-value rows.
+- E07S05 (Q13), E08S06 (Q15) and E08S08 (Q16) preserve question givens
+  beside calculation lines and Indicate() source quantities during related
+  narration beats. The full question remains visible during the attempt.
+- `shared/workshop.py:question_ribbon` supports full-width data-source
+  reminders just below workshop scene titles.
+- E13S06,S08,S09 (Q25) and E14S05,S06,S08,S13 (Q27/Q28) use this ribbon.
+
+**Validation as of 12 Oct:**
+- `.github/workflows/chemistry-worked-questions.yml` performs independent
+  numeric/script checks, Python compilation, a 480p15 animated scene render,
+  and a 1080p30 Manim still for each targeted scene.
+- First run (GitHub Actions #38207504818) completed successfully for
+  E07S05, E08S06 and E08S08; its artifacts contain silent 480p15
+  animated previews and full-HD end frames.
+- Follow-up run #38207998884 checks the additional E13/E14 workshop changes;
+  inspect outcome and artifacts rather than assuming pass.
+- The full corrected narrated MP4s have not yet been exported; the
+  previous versions are still the original lessons.
+
+**Next steps when the run finishes:**
+1. Inspect its stills and mid-scene frames for visual overlap and layout.
+   Correct any problems and rerun only failing scenes.
+2. Continue the persistent question/source pattern for remaining worked
+   examples, especially E07 Q14, E08 other practice, E13 Q26 and E14 Q28.
+3. Restore WAVs from the learner's Archive ZIPs into private audio/manual.
+   Compare their *actual revised spoken words* with the current scripts.
+   Regenerate only narration affected by the audit, using the user's
+   requested Gemini voice, then force-align and check all beat timestamps.
+4. With matched speech, re-render affected scenes at 1080p30, assemble
+   complete episodes, decode/listen through the MP4s and verify readability,
+   chemistry, units, timing and absence of embedded subtitles.
+5. Deliver revised narrated MP4s as private attachments rather than GitHub
+   source commits. Do not modify delivered Episode 3.
+
+---
+
 # Resuming the chemistry series
 
 1. Read `checks/ui_review_20261005.json`, `checks/preview_validation_20261005.json`,
