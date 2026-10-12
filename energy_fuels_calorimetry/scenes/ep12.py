@@ -78,19 +78,19 @@ class E12S02_Bases(NarratedScene):
     def construct(self):
         h = header("Per mole, per gram, per useful output")
         data = VGroup(M(r"\ce{CH4}: \Delta H_c = -890\ \text{kJ mol}^{-1},\ M = 16.0", size=EQ_SMALL - 8),
-                      M(r"\ce{C8H18}: \Delta H_c \approx -5460\ \text{kJ mol}^{-1},\ M = 114.0", size=EQ_SMALL - 8)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
+                      M(r"\ce{C8H18}: \Delta H_c = -5470\ \text{kJ mol}^{-1},\ M = 114.0", size=EQ_SMALL - 8)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
         data.move_to([0, 2.2, 0])
-        b1 = hbars([("methane", 890, SURR), ("octane", 5460, SYSTEM)], 1 / 1000, x_left=-2.2, y0=0.75)
+        b1 = hbars([("methane", 890, SURR), ("octane", 5470, SYSTEM)], 1 / 1000, x_left=-2.2, y0=0.75)
         t1 = TB("per mole (kJ mol⁻¹)", size=LABEL + 2).next_to(b1, UP, buff=0.15).align_to([-4.6, 0, 0], LEFT)
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(data), run_time=0.9)
             b.until(0.4)
             self.play(FadeIn(t1), FadeIn(b1), run_time=1.0)
-        b2 = hbars([("methane", 55.6, SURR), ("octane", 47.9, SYSTEM)], 1 / 14, x_left=-2.2, y0=-1.05, fmt="{:.1f}")
+        b2 = hbars([("methane", 55.6, SURR), ("octane", 48.0, SYSTEM)], 1 / 14, x_left=-2.2, y0=-1.05, fmt="{:.1f}")
         t2 = TB("per gram (kJ g⁻¹)", size=LABEL + 2).next_to(b2, UP, buff=0.15).align_to([-4.6, 0, 0], LEFT)
         with self.beat("b02") as b:
             self.play(FadeIn(t2), FadeIn(b2), run_time=1.0)
-            c = VGroup(M(r"890 \div 16.0 = 55.6", size=EQ_SMALL - 10, color=SURR), M(r"5460 \div 114.0 = 47.9", size=EQ_SMALL - 10, color=SYSTEM)).arrange(DOWN, buff=0.18)
+            c = VGroup(M(r"890 \div 16.0 = 55.6", size=EQ_SMALL - 10, color=SURR), M(r"5470 \div 114.0 = 48.0", size=EQ_SMALL - 10, color=SYSTEM)).arrange(DOWN, buff=0.18)
             c.move_to([4.9, -1.35, 0])
             b.until(0.4)
             self.play(Write(c), run_time=1.0)
@@ -143,13 +143,13 @@ class E12S03_PerLitre(NarratedScene):
 class E12S04_Oxygenated(NarratedScene):
     def construct(self):
         h = header("Why oxygen-containing fuels release less energy")
-        data = VGroup(M(r"\ce{C2H5OH}: \Delta H_c = -1370\ \text{kJ mol}^{-1},\ M = 46.0", size=EQ_SMALL - 8),
+        data = VGroup(M(r"\ce{C2H5OH}: \Delta H_c = -1367\ \text{kJ mol}^{-1},\ M = 46.0", size=EQ_SMALL - 8),
                       M(r"\ce{C3H8}: \Delta H_c = -2220\ \text{kJ mol}^{-1},\ M = 44.0", size=EQ_SMALL - 8)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
         data.move_to([0, 2.2, 0])
         PROP = "#85C1E9"
-        bars = hbars([("ethanol", 29.8, SYSTEM), ("propane", 50.5, PROP)], 1 / 12, x_left=-2.2, y0=0.75, fmt="{:.1f}")
+        bars = hbars([("ethanol", 29.7, SYSTEM), ("propane", 50.5, PROP)], 1 / 12, x_left=-2.2, y0=0.75, fmt="{:.1f}")
         tb = TB("per gram (kJ g⁻¹)", size=LABEL + 2).next_to(bars, UP, buff=0.15).align_to([-4.6, 0, 0], LEFT)
-        calc = VGroup(M(r"1370 \div 46.0 = 29.8", size=EQ_SMALL - 10, color=SYSTEM),
+        calc = VGroup(M(r"1367 \div 46.0 = 29.7", size=EQ_SMALL - 10, color=SYSTEM),
                       M(r"2220 \div 44.0 = 50.5", size=EQ_SMALL - 10, color=PROP)).arrange(DOWN, buff=0.18).move_to([5.1, 0.45, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(data), run_time=0.9)
