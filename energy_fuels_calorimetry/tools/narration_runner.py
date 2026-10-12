@@ -111,19 +111,40 @@ def wav_duration(data: bytes) -> float:
         return frames / rate
 
 
-def ready(dest: Path, text: str) -> bool:
-    if not dest.is_file():
+def voice_fingerprint(vid: str) -> str:
+    """Identify a custom voice without writing its ID to audio metadata."""
+    return hashlib.sha256(vid.encode("utf-8")).hexdigest()
+
+
+def ready(dest: Path, text: str, model: str | None = None, vid: str | None = None) -> bool:
+    """Reuse only valid WAVs with complete matching provenance.
+
+    Model and voice must be supplied by callers making a generation decision.
+    Omitting them is supported for existing packaging callers that only verify
+    whether provenance is present and the transcript matches.
+    """
+    meta = dest.with_suffix(".wav.json")
+    if not dest.is_file() or not meta.is_file():
         return False
     try:
         wav_duration(dest.read_bytes())
-        meta = dest.with_suffix(".wav.json")
-        if meta.is_file():
-            digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
-            metadata = json.loads(meta.read_text(encoding="utf-8"))
-            if not isinstance(metadata, dict) or metadata.get("text_sha256") != digest:
-                return False
+        metadata = json.loads(meta.read_text(encoding="utf-8"))
+        if not isinstance(metadata, dict):
+            return False
+        if metadata.get("text_sha256") != hashlib.sha256(text.encode("utf-8")).hexdigest():
+            return False
+        recorded_model = metadata.get("model")
+        fingerprint = metadata.get("voice_fingerprint")
+        if not isinstance(recorded_model, str) or not recorded_model.strip():
+            return False
+        if not isinstance(fingerprint, str) or re.fullmatch(r"[0-9a-f]{64}", fingerprint) is None:
+            return False
+        if model is not None and recorded_model != model:
+            return False
+        if vid is not None and fingerprint != voice_fingerprint(vid):
+            return False
         return True
-    except (OSError, ValueError, EOFError, wave.Error):
+    except (OSError, ValueError, EOFError, wave.Error, UnicodeError):
         return False
 
 
@@ -138,7 +159,7 @@ def atomic_write(path: Path, data: bytes) -> None:
         Path(name).unlink(missing_ok=True)
 
 
-def save_response(response, dest: Path, text: str, model: str, label: str) -> float:
+def save_response(response, dest: Path, text: str, model: str, label: str, vid: str) -> float:
     audio = getattr(response, "output_audio", None)
     if audio is None or not getattr(audio, "data", None):
         raise ValueError("Google returned no audio. No output file was created.")
@@ -151,6 +172,7 @@ def save_response(response, dest: Path, text: str, model: str, label: str) -> fl
         "text_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
         "model": model,
         "voice_label": label,
+        "voice_fingerprint": voice_fingerprint(vid),
         "duration_seconds": round(duration, 6),
         "created_utc": datetime.now(timezone.utc).isoformat(),
     }
@@ -205,10 +227,20 @@ def main(argv=None) -> int:
         return 1
     out = args.output.expanduser().resolve()
     print(f"Model: {model}\nOutput: {out}")
+    try:
+        vid, label = voice_id(args)
+    except (OSError, ValueError) as e:
+        if not args.dry_run:
+            print(e, file=sys.stderr)
+            return 1
+        # Dry runs remain credential-free even without a local custom-voice file.
+        # Without its ID, existing audio cannot be verified for reuse.
+        vid, label = None, None
+        print("Custom voice unavailable; treating cached WAVs as pending.", file=sys.stderr)
     pending = []
     for sid, text in jobs:
         dest = out / f"{sid}.wav"
-        done = not args.force and ready(dest, text)
+        done = not args.force and vid is not None and ready(dest, text, model, vid)
         if done:
             print(f"{sid}: already done (use --force to redo)")
         else:
@@ -222,14 +254,10 @@ def main(argv=None) -> int:
         print(f"\n{len(jobs)}/{len(jobs)} sections ready. No API call needed.")
         return 0
     try:
-        vid, label = voice_id(args)
         from google import genai
     except ImportError:
         print("Install/update the SDK first: python3.12 -m pip install --upgrade google-genai",
               file=sys.stderr)
-        return 1
-    except (OSError, ValueError) as e:
-        print(e, file=sys.stderr)
         return 1
     key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not key:
@@ -247,7 +275,7 @@ def main(argv=None) -> int:
     ok = len(jobs) - len(pending)
     last_start = None
     waits = [65, 120, 180, 240]
-    print(f"Voice: {label}\nGenerating {len(pending)} sections. Existing WAVs are kept when switching models.")
+    print(f"Voice: {label}\nGenerating {len(pending)} sections. Only matching model and voice recordings are reused.")
     try:
         for sid, text, dest in pending:
             print(f"{sid}: {len(text)} characters...", flush=True)
@@ -290,7 +318,7 @@ def main(argv=None) -> int:
                     return 1
                 # Local validation/write failures must not trigger another billable API request.
                 try:
-                    duration = save_response(response, dest, text, model, label)
+                    duration = save_response(response, dest, text, model, label, vid)
                 except (OSError, ValueError, EOFError, wave.Error) as e:
                     print(f"Couldn't save {sid}: {e}. Fix the problem before retrying.", file=sys.stderr)
                     return 1
