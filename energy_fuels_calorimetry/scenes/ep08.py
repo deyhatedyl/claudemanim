@@ -302,13 +302,14 @@ class E08S06_Q15(NarratedScene):
             nw = T("calculated heat absorbed by water", size=SMALL - 2, color=GOOD).next_to(l5, DOWN, buff=0.09)
             self.play(FadeIn(nw), run_time=0.4)
         with self.beat("b05") as b:
-            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.35)
+            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), FadeOut(nw), run_time=0.35)
             pred = T("predict: water gained less than the fuel released → below 100%", size=SMALL - 2, color=UNKNOWN).move_to([1.8, -1.63, 0])
             self.play(FadeIn(pred), run_time=0.6)
             l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.18, 0])
             l6.scale_to_fit_width(min(8.3, l6.width))
-            b.until(0.35)
-            self.play(Write(l6), Create(result_box(l6)), run_time=1.3)
+            self.play(FadeOut(pred), run_time=0.2)
+            b.until(0.15)
+            self.play(Write(l6), Create(result_box(l6)), run_time=1.1)
         with self.beat("b06") as b:
             self.clear(h, req)
             tally = mark_tally([(2, "mass and amount of ethanol"), (1, "fuel energy: 27.4 kJ"), (2, "water heat: 18.0 kJ"),
