@@ -1,0 +1,68 @@
+name: Chemistry worked-question render checks
+
+on:
+  push:
+    branches:
+      - codex/episodes-07-14-narration
+    paths:
+      - energy_fuels_calorimetry/scenes/ep07.py
+      - energy_fuels_calorimetry/scenes/ep08.py
+      - energy_fuels_calorimetry/shared/worked_sidebar.py
+      - .github/workflows/chemistry-worked-questions.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chemistry-worked-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  questions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 70
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - episode: E07
+            scene: E07S05
+          - episode: E08
+            scene: E08S06
+          - episode: E08
+            scene: E08S08
+    defaults:
+      run:
+        working-directory: energy_fuels_calorimetry
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Manim runtime
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends ffmpeg libcairo2-dev libpango1.0-dev pkg-config dvisvgm texlive-xetex texlive-latex-extra texlive-science texlive-fonts-recommended fonts-inter fonts-dejavu fonts-noto-core
+          python -m pip install -r requirements.txt
+          echo "MANIM_BIN=$(command -v manim)" >> "$GITHUB_ENV"
+      - name: Compile, check questions and scripts
+        run: |
+          python -m compileall -q scenes shared checks tools
+          python checks/verify_anchors.py
+          python tools/lint_scripts.py
+      - name: Render narrated-beat visual preview
+        run: python tools/render.py ${{ matrix.episode }} -q l --scenes ${{ matrix.scene }} --jobs 1 --no-assemble
+      - name: Render full-HD layout still
+        run: python tools/render.py ${{ matrix.episode }} -q h --still ${{ matrix.scene }} --jobs 1
+      - name: Store review frames and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: question-review-${{ matrix.scene }}-${{ github.run_number }}
+          retention-days: 14
+          compression-level: 1
+          path: |
+            energy_fuels_calorimetry/renders/media/images
+            energy_fuels_calorimetry/renders/media/videos
+            energy_fuels_calorimetry/logs/render_${{ matrix.scene }}*
+            energy_fuels_calorimetry/renders/timelines
