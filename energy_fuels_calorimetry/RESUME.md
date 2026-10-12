@@ -1,3 +1,47 @@
+## Visual layout re-audit and narration handoff — 12 October 2026
+
+**The user noticed overlapping text and graphics in the Episode 14 full-HD SILENT
+preview and asked to fix that and the rest of the affected series, then give
+a Mac Terminal command to produce the final Gemini narration clips.**
+
+- `shared/active_question.py:active_part_ribbon` now puts the **exact original
+  active lettered sub-question** into the top title band, with readable sourced
+  values; unused generic headings are hidden in E07 Q14, E13 Q25/Q26 and E14
+  Q27/Q28 scenes.
+- `shared/workshop.py:tally_text` puts indicative marks in the **bottom-right
+  margin**, where they cannot overlap the question or the top of graphs.
+- E14 specific geometry refinements: Q27 temperature graph lowered to clear
+  the prompt; Q28 comparison table lowered; the incorrect-CF explanation and
+  95% claim label separated from each other and the table.
+- E13 Q26 misleading graph header space cleared; E07 Q14 mixed-gas worked
+  prompt moved clear of the energy and amount diagrams.
+- All E14S05/S06/S07/S08/S10/S13/S14/S15, E13S06/S08/S09/S13/S15 and
+  E07S10/S11 scene stills rendered successfully on the Mac and were
+  individually inspected; discovered collisions were fixed and rerendered.
+  E08 Q15/Q16 and recovered E09 Q18 were spot checked as well.
+- 337 independent chemistry checks and the original-question visual-data
+  checks passed. E14S14 was explicitly rechecked after its last collision fix.
+- GitHub Actions full 1920×1080 / 30fps silent visual rerender (three
+  affected episodes E07, E13 and E14), with MP4 decoding, layout and timing
+  validation: https://github.com/deyhatedyl/claudemanim/actions/runs/38234850646 .
+  Treat the workflow as **running** until it explicitly reports success.
+- The original narration WAVs are locally archived. The nine changed audit
+  beats require Gemini with the user's **Melb Teacher F1** voice. No Karen,
+  generic system voice or substitute model is authorized.
+- `tools/openrouter_gemini_retakes.py` accepts a private
+  `OPENROUTER_API_KEY`; run `--check-auth`, then `--test`, then the
+  full command. ZIP only the generated `audio/gemini_retakes/*.wav`, and
+  upload it in the chat. The previously exposed key returned HTTP 401; it
+  must NOT be reused. A replacement must be set privately in Terminal.
+- **No narrated 1080p MP4s are claimed complete yet**: after Gemini
+  recordings arrive, align individual beats to actual speech timestamps,
+  re-render 1080p, inspect transitions and deliver complete narrated MP4s.
+- The native Gemini runner now rejects stale caches when the script text,
+  model or custom voice differs and has offline regression tests.
+- Episode 3 must remain unchanged.
+
+---
+
 ## Continuation 12 October 2026 — source and first render checks
 
 The 12 October chemistry audit is available in the learner's ChatGPT file Library
