@@ -1,0 +1,62 @@
+name: VCE Chemistry source and narration integrity
+
+on:
+  push:
+    branches: [codex/episodes-07-14-narration]
+    paths:
+      - 'energy_fuels_calorimetry/**'
+      - '.github/workflows/chemistry-source-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: energy_fuels_calorimetry
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile entire Chemistry project
+        run: python -m compileall -q scenes shared tools questions checks
+      - name: Validate independent chemical calculations and question stimuli
+        run: |
+          python checks/verify_anchors.py
+          python checks/verify_question_visuals.py
+      - name: Validate user-authored narration scripts
+        run: python tools/lint_scripts.py > checks/narration_lint_ci.txt
+      - name: Check that no private narration or credentials are tracked
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          paths = subprocess.check_output(['git', 'ls-files'], text=True, cwd='..').splitlines()
+          sensitive = []
+          for p in paths:
+              pp = Path(p)
+              if not p.startswith('energy_fuels_calorimetry/'):
+                  continue
+              if pp.suffix.lower() in {'.wav', '.mp3', '.m4a', '.flac'}:
+                  sensitive.append(p)
+              if any(s in pp.name.lower() for s in ('voice_ids.txt', '.env', 'api_key')):
+                  sensitive.append(p)
+          if sensitive:
+              raise SystemExit('Private media or credentials tracked; check repository content.')
+          print('No private audio or credential-named files tracked.')
+          PY
+      - name: Preserve auditable QA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chemistry-source-qa-${{ github.run_number }}
+          retention-days: 14
+          path: |
+            energy_fuels_calorimetry/checks/numerical_check_record.json
+            energy_fuels_calorimetry/checks/numerical_check_record.md
+            energy_fuels_calorimetry/checks/narration_lint_ci.txt
