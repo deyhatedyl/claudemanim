@@ -5,13 +5,34 @@ running mark tallies, question-card pause banners and method-map nodes.
 from manim import *  # noqa: F403
 
 from .components import question_card, wrapped
-from .style import (BG, EQ_SMALL, FAINT, GOOD, LABEL, MUTED, PANEL, SMALL, SYSTEM, TEXT, UNKNOWN, M, T, TB, chip)
+from .style import (BG, EQ_SMALL, FAINT, GOOD, LABEL, MUTED, PANEL, SMALL, SYSTEM, SURR, TEXT, UNKNOWN, M, T, TB, chip)
 
 BIO = "#7BE495"
 CO2E = "#AEB6BF"
 WK = EQ_SMALL - 8          # working-line size
 X0 = -5.55                 # left edge of working lines
 XM = 6.0                   # mark-box column
+
+
+
+def question_ribbon(qid: str, part: str, text: str, source: str = "question") -> VGroup:
+    """A compact persistent source-labelled prompt below the title.
+
+    Uses the narrow gap above the working area, keeping original graphs and
+    equation sizes untouched. The label distinguishes question givens from
+    quantities carried forward from earlier worked parts.
+    """
+    col = GOOD if source == "earlier results" else UNKNOWN if source == "2026 data book" else SURR
+    label = TB(f"{qid} {part}", size=SMALL - 2, color=SYSTEM)
+    body = T(f"{source.upper()}: {text}", size=SMALL - 3, color=col)
+    content = VGroup(label, body).arrange(RIGHT, buff=0.22)
+    if content.width > 12.0:
+        content.scale(12.0 / content.width)
+    frame = RoundedRectangle(width=12.5, height=0.39, corner_radius=0.09,
+                             stroke_color=FAINT, stroke_width=1.0,
+                             fill_color=PANEL, fill_opacity=0.96)
+    content.move_to(frame)
+    return VGroup(frame, content).move_to([0, 2.48, 0])
 
 
 def requested(text: str) -> VGroup:
