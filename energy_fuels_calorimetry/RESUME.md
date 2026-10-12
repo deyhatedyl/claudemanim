@@ -102,3 +102,37 @@ are deliberately not checked into this public repository.
    after content changes. `tools/export_question_figures.py` and `tools/build_docs.py` regenerate
    learner resources. The formula/method sheet is maintained by hand. Commit public code,
    scripts, documents and review records; do not commit recordings, keys, alignment or MP4s.
+## Gemini-only narration correction — 12 October 2026
+
+The learner explicitly requires the existing **Gemini Melb Teacher F1**
+voice for every final narrated video. No alternate voice is authorised for
+delivery. The previous temporary macOS Karen retakes are EXCLUDED from the
+active `audio/manifest.json` (all nine entries removed); never package them.
+The original archived scene WAV files remain unmodified.
+
+- The original voice ID exists in the user's private
+  `Electrochemistry/voice_samples_melb/voice_ids.txt` and is resolved by
+  `tools/narration_runner.py`.
+- `tools/gemini_audit_retakes.py` prepares only the **nine** chemistry-audit
+  narration changes, preserving all other authored speech. Its dry run
+  passed for `gemini-3.8-flash-tts` and the original Melb Teacher F1 voice.
+- The connected workspace presently has no `GEMINI_API_KEY` or
+  `GOOGLE_API_KEY`. Provide one as a private environment variable in the
+  local Chat On Steroids session; never commit or paste it into source files.
+- Then install the Google GenAI SDK in the project venv, run
+  `python tools/gemini_audit_retakes.py`, and follow the import instruction
+  printed by the script. Inspect the voice, exact numbers and pronunciation
+  before full narration assembly.
+- The known-good original Q13 recording was force-aligned with 0.9766
+  recognition similarity; `audio/aligned/E07/words.json` contains measured
+  speech timing for seven beats. The E08 Q15 recording was independently
+  aligned at 0.9623 similarity.
+- The exact-part question UI in `shared/active_question.py` now replaces the
+  combined Q13/Q15/Q16 question sidebar. Additional source-backed question
+  ribbons were added to Q14, Q25, Q26, Q27 and Q28 working.
+- Python compilation, the 337 independent chemistry checks, the question
+  stimulus audit and Q25/Q26 preview stills passed. Full revised 1080p
+  narrated episodes have **not yet been produced**; more render and audio
+  synchronization checks are required.
+
+---

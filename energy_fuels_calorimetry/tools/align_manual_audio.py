@@ -150,16 +150,31 @@ def main():
     ap.add_argument("episode")
     ap.add_argument("--directory", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
+    ap.add_argument("--authored-source", type=Path,
+                    help="Verified narration_eNN.py directory; align the exact words originally "
+                         "recorded when later chemistry audit edits changed the current script")
+    ap.add_argument("--scenes", nargs="+",
+                    help="Optional scene IDs to align individually while reviewing")
     ap.add_argument("--threads", type=int, default=2)
     args = ap.parse_args()
     torch.set_num_threads(args.threads)
     ep = load_episode(args.episode.upper())
+    if args.authored_source:
+        # The recording, not the later changed script, is the source of truth
+        # for acoustic alignment. A separate audit manifest identifies retakes.
+        from tools.reconcile_authored_narration import authored_beats
+        spoken = authored_beats(args.authored_source.resolve(), ep.id)
+        for scene in ep.scenes:
+            for beat in scene.beats:
+                beat.text = spoken[beat.key]
     bundle = torchaudio.pipelines.WAV2VEC2_ASR_BASE_960H
     model = bundle.get_model().eval()
     labels = bundle.get_labels()
     args.output.mkdir(parents=True, exist_ok=True)
     segments, words, reports = {}, {}, []
     for scene in ep.scenes:
+        if args.scenes and scene.id not in args.scenes:
+            continue
         t0 = time.monotonic()
         a, w, report = align_scene(scene, args.directory / f"{scene.id}.wav", model, labels)
         segments.update(a)

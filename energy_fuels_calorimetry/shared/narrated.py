@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -57,6 +58,29 @@ class _BeatTracker:
         if t > 1 / config.frame_rate:
             self.scene.wait(t)
 
+    def until_words(self, phrase: str, *, fallback_frac: float = 0.5, lead: float = 0.0) -> None:
+        """Wait until the recording says the exact words.
+
+        Word times are from local forced alignment (audio/aligned/E##/words.json),
+        relative to the corresponding beat. The fallback is only for
+        exploratory silent previews where no verified alignment exists.
+        """
+        items = self.scene._aligned_words.get(self.beat.key, [])
+        def norm(value: str) -> str:
+            return re.sub(r"[^\w]+", "", value.lower())
+        needle = [norm(x) for x in phrase.split()]
+        hay = [norm(x["word"]) for x in items]
+        for offset in range(len(hay) - len(needle) + 1):
+            if hay[offset:offset+len(needle)] == needle:
+                to_wait = (self.start + max(0.0, float(items[offset]["start"]) - lead)
+                           - self.scene.time)
+                if to_wait > 1 / config.frame_rate:
+                    self.scene.wait(to_wait)
+                return
+        if items:
+            raise ValueError(f"{self.beat.key}: alignment has no phrase {phrase!r}")
+        self.until(fallback_frac)
+
     def rt(self, frac: float, lo: float = 0.4, hi: float = 4.0) -> float:
         """A run_time equal to `frac` of the clip, clamped to [lo, hi] seconds."""
         return min(hi, max(lo, frac * self.dur))
@@ -89,6 +113,8 @@ class NarratedScene(Scene):
         self._used: list[str] = []
         self._timeline: list[dict] = []
         self._manifest = load_manifest()
+        aligned_path = C.AUDIO / "aligned" / sid[:3] / "words.json"
+        self._aligned_words = json.loads(aligned_path.read_text()) if aligned_path.is_file() else {}
 
     # ------------------------------------------------------------ beats
     def beat_duration(self, beat) -> tuple[float, str | None, bool]:

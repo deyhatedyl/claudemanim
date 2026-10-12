@@ -13,7 +13,7 @@ from shared.components import (Budget, bullets, mark_tally, mol_CH4, mol_O2, que
                                right_panel, title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.workshop import question_ribbon  # noqa: E402
-from shared.worked_sidebar import WorkedQuestionSidebar  # noqa: E402
+from shared.active_question import PartPrompt, active_part_ribbon  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MOL_C,  # noqa: E402
                           MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
                           header, panel)
@@ -238,31 +238,41 @@ class E07S05_Q13(NarratedScene):
     def construct(self):
         h = header("Practice Q13")
         qc = question_card("Q13").move_to([0, -0.10, 0])
-        dock = WorkedQuestionSidebar(
-            "Q13",
-            "Complete combustion of the ethanol portion that can react.",
-            [("ethanol", "Ethanol", "0.400 mol", "question"),
-             ("oxygen", "O₂", "32.0 g", "question"),
-             ("oxygen_M", "M(O₂)", "32.0 g mol⁻¹", "question"),
-             ("ethanol_M", "M(ethanol)", "46.0 g mol⁻¹", "question"),
-             ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question")],
-            "a Limiting  •  b Ethanol left  •  c CO₂ formed  •  d Heat released",
-            width=3.85,
-        )
+        # Original question wording is read directly from the question bank.
+        # Each part has only the inputs needed for its own working.
+        part_a = PartPrompt("Q13", "a", [
+            ("ethanol", "Initial ethanol", "0.400 mol", "question"),
+            ("oxygen", "O₂ mass", "32.0 g", "question"),
+            ("oxygen_M", "M(O₂)", "32.0 g mol⁻¹", "question"),
+        ])
+        part_b = PartPrompt("Q13", "b", [
+            ("initial", "Initial ethanol", "0.400 mol", "question"),
+            ("extent", "Reaction extent", "0.3333 mol", "earlier result"),
+            ("ethanol_M", "M(ethanol)", "46.0 g mol⁻¹", "question"),
+        ])
+        part_c = PartPrompt("Q13", "c", [
+            ("extent", "Reaction extent", "0.3333 mol", "earlier result"),
+            ("ratio", "Balanced equation", "2 mol CO₂ per mol ethanol", "earlier result"),
+            ("co2_M", "M(CO₂) = 12.0 + 2 × 16.0", "44.0 g mol⁻¹", "2026 VCAA Data Book"),
+        ])
+        part_d = PartPrompt("Q13", "d", [
+            ("used", "Ethanol reacted", "0.3333 mol", "earlier result"),
+            ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question"),
+        ])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         model = T("idealised: reacting ethanol burns completely; excess remains", size=LABEL, color=MUTED).move_to([1.95, 2.4, 0])
         model.scale_to_fit_width(min(8.1, model.width))
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(model), FadeIn(dock), run_time=0.6)
+            self.play(FadeOut(qc), FadeIn(model), FadeIn(part_a), run_time=0.6)
             a = VGroup(M(r"n(\text{ethanol}) = 0.400\ \text{mol}", size=EQ_SMALL - 2, color=MOL_C),
                        M(r"n(\ce{O2}) = \frac{32.0\ \text{g}}{32.0\ \text{g mol}^{-1}} = 1.00\ \text{mol}", size=EQ_SMALL - 2, color=MOL_C)).arrange(RIGHT, buff=0.35)
             a.scale_to_fit_width(min(8.0, a.width))
             a.move_to([1.95, 1.5, 0])
-            b.until(0.3)
-            self.play(Write(a[0]), Indicate(dock.focus("ethanol"), color=SURR), run_time=0.7)
-            b.until(0.6)
-            self.play(Write(a[1]), Indicate(dock.focus("oxygen"), color=SURR), run_time=1.0)
+            b.until_words("The ethanol is already given", fallback_frac=0.3, lead=0.25)
+            self.play(Write(a[0]), Indicate(part_a.focus("ethanol"), color=SURR), run_time=0.7)
+            b.until_words("For oxygen", fallback_frac=0.6, lead=0.15)
+            self.play(Write(a[1]), Indicate(part_a.focus("oxygen"), color=SURR), run_time=1.0)
             self.amts = a
         eq = M(r"\ce{C2H5OH + 3O2 -> 2CO2 + 3H2O}", size=EQ_SMALL).move_to([1.95, 0.55, 0])
         with self.beat("b03") as b:
@@ -284,7 +294,8 @@ class E07S05_Q13(NarratedScene):
             self.play(FadeOut(self.cmp[2]), FadeIn(just), run_time=1.0)
             self.just = just
         with self.beat("b05") as b:
-            self.play(FadeOut(self.just), FadeOut(self.cmp), FadeOut(self.amts), FadeOut(model), run_time=0.5)
+            self.play(FadeOut(self.just), FadeOut(self.cmp), FadeOut(self.amts),
+                      FadeOut(model), ReplacementTransform(part_a, part_b), run_time=0.5)
             self.play(eq.animate.move_to([1.95, 2.32, 0]), run_time=0.5)
             bud = Budget(["ethanol", "O₂", "CO₂"], ["initial (mol)", "used / formed", "remaining"], col_w=2.05, label_w=1.35,
                          col_colors=[MUTED, SYSTEM, GOOD]).move_to([1.95, 0.68, 0])
@@ -297,17 +308,20 @@ class E07S05_Q13(NarratedScene):
             m = M(r"m(\text{ethanol left}) = 0.0667 \times 46.0 = 3.07\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.35, 0])
             m.scale_to_fit_width(min(8.0, m.width))
             b.until(0.75)
-            self.play(Write(m), run_time=1.0)
+            self.play(Write(m), Indicate(part_b.focus("ethanol_M"), color=SURR), run_time=1.0)
             self.bud, self.ext, self.m = bud, ext, m
         with self.beat("b06") as b:
-            self.play(FadeIn(self.bud.cell(2, 1, "+0.6667", GOOD)), FadeIn(self.bud.cell(2, 2, "0.6667", GOOD)), run_time=0.6)
+            self.play(ReplacementTransform(part_b, part_c),
+                      FadeIn(self.bud.cell(2, 1, "+0.6667", GOOD)),
+                      FadeIn(self.bud.cell(2, 2, "0.6667", GOOD)), run_time=0.6)
             c = M(r"m(\ce{CO2}) = 0.6667 \times 44.0 = 29.3\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.95, 0])
             c.scale_to_fit_width(min(8.0, c.width))
-            e = M(r"E = 0.3333 \times 1370 = 456.7 \approx 457\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([1.95, -2.5, 0])
+            e = M(r"E = 0.3333 \times 1370 = 456.7 \approx 457\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([1.95, -2.35, 0])
             e.scale_to_fit_width(min(8.0, e.width))
-            self.play(Write(c), run_time=1.0)
-            b.until(0.55)
-            self.play(Write(e), Indicate(dock.focus("enthalpy"), color=UNKNOWN), run_time=1.0)
+            self.play(Write(c), Indicate(part_c.focus("co2_M"), color=UNKNOWN), run_time=1.0)
+            b.until_words("Finally, it asks for the energy released", fallback_frac=0.55, lead=0.15)
+            self.play(ReplacementTransform(part_c, part_d), run_time=0.35)
+            self.play(Write(e), Indicate(part_d.focus("enthalpy"), color=SURR), run_time=1.0)
         with self.beat("b07") as b:
             self.clear(h)
             tally = mark_tally([(2, "amounts and limiting justification"), (2, "ethanol used; 3.07 g remaining"),
@@ -493,17 +507,25 @@ class E07S09_NewVsInlet(NarratedScene):
 class E07S10_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
-        prompt = question_ribbon("Q14", "a–c", "fuel 12.4 L: 80% CH₄, 20% CO₂; air 90.0 L: 21% O₂; SLC 24.8 L/mol")
+        prompt_a = active_part_ribbon("Q14", "a", [
+            ("fuel", "Fuel", "12.4 L, 80.0% CH₄", "question"),
+            ("air", "Air", "90.0 L, 21.0% O₂", "question")])
+        prompt_b = active_part_ribbon("Q14", "b", [
+            ("CH4", "Methane", "0.400 mol", "earlier result"),
+            ("O2", "Oxygen", "0.7621 mol", "earlier result")])
+        prompt_c = active_part_ribbon("Q14", "c", [
+            ("remaining", "Methane left", "0.01895 mol", "earlier result"),
+            ("M", "M(CH₄)", "16.0 g mol⁻¹", "question")])
         qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("limiting reactant; CH₄ left (g)")
-        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=1.82, x_left=-5.0, width=6.0)
+        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=1.68, x_left=-5.0, width=6.0)
         fl = T("12.4 L ÷ 24.8 = 0.500 mol", size=SMALL + 1).next_to(fuel, RIGHT, buff=0.3)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), FadeIn(prompt), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(prompt_a), run_time=0.5)
             self.play(FadeIn(fuel), FadeIn(fl), run_time=0.9)
-        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=0.98, x_left=-5.0, width=6.0)
+        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=0.85, x_left=-5.0, width=6.0)
         al = VGroup(M(r"0.210 \times 90.0 = 18.9\ \text{L}", size=EQ_SMALL - 8),
                     M(r"\tfrac{18.9}{24.8} = 0.7621\ \text{mol}", size=EQ_SMALL - 8, color=O2C)).arrange(RIGHT, buff=0.3).scale(0.88).next_to(air, RIGHT, buff=0.3)
         with self.beat("b03") as b:
@@ -513,6 +535,7 @@ class E07S10_Q14a(NarratedScene):
         cmp_ = VGroup(M(r"\ce{CH4}: \tfrac{0.400}{1} = 0.400", size=EQ_SMALL - 6, color=CH4C),
                       M(r"\ce{O2}: \tfrac{0.7621}{2} = 0.3810", size=EQ_SMALL - 6, color=O2C)).arrange(RIGHT, buff=0.9).move_to([0, 0.2, 0])
         with self.beat("b04") as b:
+            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
             eq = T("CH₄ + 2O₂ → CO₂ + 2H₂O", size=LABEL).next_to(cmp_, LEFT, buff=0.4)
             VGroup(eq, cmp_).move_to([0, 0.2, 0])
             self.play(FadeIn(eq), Write(cmp_), run_time=1.2)
@@ -523,6 +546,7 @@ class E07S10_Q14a(NarratedScene):
         bud = Budget(["O₂", "CH₄"], ["initial", "used", "remaining"], col_w=2.3, label_w=1.3, row_h=0.55,
                      col_colors=[MUTED, SYSTEM, GOOD]).move_to([-1.5, -1.65, 0])
         with self.beat("b05") as b:
+            self.play(ReplacementTransform(prompt_b, prompt_c), run_time=0.35)
             self.play(FadeIn(bud), run_time=0.5)
             self.play(FadeIn(bud.cell(0, 0, "0.7621")), FadeIn(bud.cell(0, 1, "0.7621", SYSTEM)), FadeIn(bud.cell(0, 2, "0", GOOD)), run_time=0.8)
             b.until(0.35)
@@ -536,7 +560,14 @@ class E07S10_Q14a(NarratedScene):
 class E07S11_Q14b(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 2)")
-        prompt = question_ribbon("Q14", "d–f", "CH₄ used = 0.3810 mol (part 1); inlet CO₂ = 0.100 mol; |ΔH| = 890 kJ/mol", "earlier results")
+        prompt_d = active_part_ribbon("Q14", "d", [
+            ("methane", "CH₄ reacted", "0.3810 mol", "earlier result")])
+        prompt_e = active_part_ribbon("Q14", "e", [
+            ("formed", "New CO₂", "9.45 L", "earlier result"),
+            ("inlet", "Inlet CO₂", "2.48 L", "earlier result")])
+        prompt_f = active_part_ribbon("Q14", "f", [
+            ("methane", "CH₄ reacted", "0.3810 mol", "earlier result"),
+            ("enthalpy", "|ΔH_c|", "890 kJ mol⁻¹", "question")])
         sc = 0.55
         newb = Rectangle(width=9.45 * sc, height=0.6, fill_color=GOOD, fill_opacity=0.85, stroke_width=0)
         inb = Rectangle(width=2.48 * sc, height=0.6, fill_color=CO2C, fill_opacity=0.85, stroke_width=0)
@@ -544,14 +575,16 @@ class E07S11_Q14b(NarratedScene):
         nl = M(r"\text{new: } 0.3810 \times 24.8 = 9.45\ \text{L}", size=EQ_SMALL - 6, color=GOOD).next_to(newb, UP, buff=0.15)
         il = T("inlet: 2.48 L", size=SMALL + 1, color=CO2C).next_to(inb, DOWN, buff=0.12)
         with self.beat("b01") as b:
-            self.play(FadeIn(h), FadeIn(prompt), run_time=0.4)
+            self.play(FadeIn(h), FadeIn(prompt_d), run_time=0.4)
             self.play(GrowFromEdge(newb, LEFT), Write(nl), run_time=1.2)
         tot = M(r"\text{total} = 9.45 + 2.48 = 11.93 \approx 11.9\ \text{L}", size=EQ_SMALL - 4).move_to([0, 0.15, 0])
         with self.beat("b02") as b:
+            self.play(ReplacementTransform(prompt_d, prompt_e), run_time=0.35)
             self.play(GrowFromEdge(inb, LEFT), FadeIn(il), run_time=0.8)
             b.until(0.4)
             self.play(Write(tot), run_time=1.2)
         with self.beat("b03") as b:
+            self.play(ReplacementTransform(prompt_e, prompt_f), run_time=0.35)
             e = M(r"E = 0.3810\ \text{mol} \times 890\ \text{kJ mol}^{-1} = 339\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([0, -0.85, 0])
             self.play(Write(e), run_time=1.2)
             n = T("(ΔH data for water formed as a liquid)", size=SMALL + 1, color=MUTED).next_to(e, DOWN, buff=0.15)

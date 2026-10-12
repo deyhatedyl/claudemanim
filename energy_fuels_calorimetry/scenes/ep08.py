@@ -12,7 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (Thermometer, bullets, mark_tally, question_card, result_box, right_panel,  # noqa: E402
                                title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
-from shared.worked_sidebar import WorkedQuestionSidebar  # noqa: E402
+from shared.active_question import PartPrompt  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB,
                           chip, header, panel)
@@ -258,18 +258,20 @@ class E08S06_Q15(NarratedScene):
     def construct(self):
         h = header("Practice Q15")
         qc = question_card("Q15").move_to([0, -0.10, 0])
-        dock = WorkedQuestionSidebar(
-            "Q15", "Ethanol burner heats water. Calculate efficiency.",
-            [("before", "Burner before", "102.640 g", "question"),
-             ("after", "Burner after", "101.720 g", "question"),
-             ("molar", "M(ethanol)", "46.0 g mol⁻¹", "question"),
-             ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question"),
-             ("water", "Water mass", "250.0 g", "question"),
-             ("temperature", "Water start → end", "19.8 → 37.0 °C", "question"),
-             ("heat_capacity", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 data book")],
-            "a mass and amount  •  b fuel heat  •  c water heat  •  d efficiency",
-            width=3.85
-        )
+        part_a = PartPrompt("Q15", "a", [
+            ("before", "Burner before", "102.640 g", "question"),
+            ("after", "Burner after", "101.720 g", "question"),
+            ("molar", "M(ethanol)", "46.0 g mol⁻¹", "question")])
+        part_b = PartPrompt("Q15", "b", [
+            ("amount", "Ethanol burned", "0.0200 mol", "earlier result"),
+            ("enthalpy", "ΔH_c(ethanol)", "−1370 kJ mol⁻¹", "question")])
+        part_c = PartPrompt("Q15", "c", [
+            ("water", "Water mass", "250.0 g", "question"),
+            ("temperature", "Initial → final", "19.8 → 37.0 °C", "question"),
+            ("heat_capacity", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 VCAA Data Book")])
+        part_d = PartPrompt("Q15", "d", [
+            ("fuel", "Fuel energy released", "27.4 kJ", "earlier result"),
+            ("water", "Useful heat to water", "17.974 kJ", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("efficiency (%)")
@@ -282,22 +284,25 @@ class E08S06_Q15(NarratedScene):
         l1 = L(r"m = 102.640 - 101.720 = 0.920\ \text{g}", 2.12, MASS_C)
         l2 = L(r"n = \frac{0.920\ \text{g}}{46.0\ \text{g mol}^{-1}} = 0.0200\ \text{mol}", 1.34, MOL_C)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), FadeIn(dock), run_time=0.5)
-            self.play(Write(l1), Indicate(dock.focus("before"), color=SURR), run_time=1.0)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(part_a), run_time=0.5)
+            self.play(Write(l1), Indicate(part_a.focus("before"), color=SURR), run_time=1.0)
             b.until(0.45)
-            self.play(Write(l2), Indicate(dock.focus("molar"), color=SURR), run_time=1.1)
+            self.play(Write(l2), Indicate(part_a.focus("molar"), color=SURR), run_time=1.1)
         l3 = L(r"E_{\text{fuel}} = 0.0200 \times 1370 = 27.4\ \text{kJ}", 0.58, ENERGY_C)
         with self.beat("b03") as b:
-            self.play(Write(l3), Indicate(dock.focus("enthalpy"), color=UNKNOWN), run_time=1.0)
+            self.play(ReplacementTransform(part_a, part_b), run_time=0.35)
+            self.play(Write(l3), Indicate(part_b.focus("enthalpy"), color=SURR), run_time=1.0)
         l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
         l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
-            self.play(Write(l4), Indicate(dock.focus("temperature"), color=SURR), run_time=0.9)
+            self.play(ReplacementTransform(part_b, part_c), run_time=0.35)
+            self.play(Write(l4), Indicate(part_c.focus("temperature"), color=SURR), run_time=0.9)
             b.until(0.35)
-            self.play(Write(l5), Indicate(dock.focus("water"), color=SURR), run_time=1.2)
+            self.play(Write(l5), Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=1.2)
             nw = T("calculated heat absorbed by water", size=SMALL - 2, color=GOOD).next_to(l5, DOWN, buff=0.09)
             self.play(FadeIn(nw), run_time=0.4)
         with self.beat("b05") as b:
+            self.play(ReplacementTransform(part_c, part_d), run_time=0.35)
             pred = T("predict: water gained less than the fuel released → below 100%", size=SMALL - 2, color=UNKNOWN).move_to([1.8, -1.63, 0])
             self.play(FadeIn(pred), run_time=0.6)
             l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.18, 0])
@@ -380,16 +385,20 @@ class E08S08_Q16(NarratedScene):
     def construct(self):
         h = header("Practice Q16")
         qc = question_card("Q16").move_to([0, -0.10, 0])
-        dock = WorkedQuestionSidebar(
-            "Q16", "Find the fuel mass needed to deliver useful heat.",
-            [("water", "Water mass", "180.0 g", "question"),
-             ("temperature", "Water start → end", "18.0 → 78.0 °C", "question"),
-             ("efficiency", "Efficiency", "45.0%", "question"),
-             ("fuel", "Energy of fuel", "29.8 kJ g⁻¹", "question"),
-             ("c", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 data book")],
-            "a useful q  •  b chemical input  •  c fuel mass  •  d explain trap",
-            width=3.85
-        )
+        part_a = PartPrompt("Q16", "a", [
+            ("water", "Water mass", "180.0 g", "question"),
+            ("temperature", "Initial → final", "18.0 → 78.0 °C", "question"),
+            ("c", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 VCAA Data Book")])
+        part_b = PartPrompt("Q16", "b", [
+            ("useful", "Required useful heat", "45.144 kJ", "earlier result"),
+            ("efficiency", "Efficiency", "45.0%", "question")])
+        part_c = PartPrompt("Q16", "c", [
+            ("input", "Required fuel energy", "100.32 kJ", "earlier result"),
+            ("fuel", "Fuel energy value", "29.8 kJ g⁻¹", "question")])
+        part_d = PartPrompt("Q16", "d", [
+            ("useful", "Required useful heat", "45.144 kJ", "earlier result"),
+            ("efficiency", "Efficiency", "45.0%", "question"),
+            ("fuel", "Fuel energy value", "29.8 kJ g⁻¹", "question")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("minimum fuel mass (g)")
@@ -401,22 +410,24 @@ class E08S08_Q16(NarratedScene):
             return ln.move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
         l1 = L(r"q = 180.0 \times 4.18 \times 60.0 = 45\,144\ \text{J} = 45.144\ \text{kJ}", 1.75, USEFUL)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), FadeIn(dock), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(part_a), run_time=0.5)
             dt = T("ΔT = 78.0 − 18.0 = 60.0 °C", size=LABEL, color=TEMP_C).move_to([0, 2.35, 0]).align_to([colL, 0, 0], LEFT)
-            self.play(FadeIn(dt), Indicate(dock.focus("temperature"), color=SURR), run_time=0.6)
+            self.play(FadeIn(dt), Indicate(part_a.focus("temperature"), color=SURR), run_time=0.6)
             b.until(0.35)
-            self.play(Write(l1), Indicate(dock.focus("water"), color=SURR), run_time=1.3)
+            self.play(Write(l1), Indicate(part_a.focus("c"), color=UNKNOWN), run_time=1.3)
         l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 0.85, SYSTEM)
         with self.beat("b03") as b:
-            self.play(Write(l2), Indicate(dock.focus("efficiency"), color=SURR), run_time=1.2)
+            self.play(ReplacementTransform(part_a, part_b), run_time=0.35)
+            self.play(Write(l2), Indicate(part_b.focus("efficiency"), color=SURR), run_time=1.2)
             bigger = T("calculated input is larger than useful heat ✓", size=SMALL - 1, color=GOOD).move_to([1.8, 0.33, 0])
             self.play(FadeIn(bigger), run_time=0.4)
         l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
-            self.play(Write(l3), Indicate(dock.focus("fuel"), color=SURR), run_time=1.3)
+            self.play(ReplacementTransform(part_b, part_c), run_time=0.35)
+            self.play(Write(l3), Indicate(part_c.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
-            self.play(FadeOut(dock), FadeOut(l1), FadeOut(l2), FadeOut(l3), FadeOut(dt), FadeOut(bigger),
-                      run_time=0.4)
+            self.play(ReplacementTransform(part_c, part_d), FadeOut(l1), FadeOut(l2),
+                      FadeOut(l3), FadeOut(dt), FadeOut(bigger), run_time=0.4)
             w = wrong_panel("Efficiency used the wrong way", [M(r"\frac{45.144 \times 0.450}{29.8} = 0.682\ \text{g}", size=EQ_SMALL - 8, color=TEXT)], width=5.4)
             w.move_to([-3.2, -1.55, 0])
             minb = right_panel("100% efficient minimum", [M(r"\frac{45.144}{29.8} = 1.515\ \text{g}", size=EQ_SMALL - 8, color=TEXT),

@@ -15,6 +15,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, calorimeter, data_points, linfit, mark_tally, question_card,  # noqa: E402
                                result_box, right_panel, table, temp_axes, title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ_SMALL, FAINT, GOOD, LABEL, LOSS, MASS_C, MOL_C,  # noqa: E402
                           MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header,
                           panel)
@@ -172,7 +173,9 @@ class E14S04_Plan(NarratedScene):
 class E14S05_PartA(NarratedScene):
     def construct(self):
         h = header("Q27 part a: calibration")
-        prompt = question_ribbon("Q27", "part a", "V = 5.00 V, I = 1.20 A, t = 300 s, rise = 3.00 °C, water = 125.0 g")
+        prompt = active_part_ribbon("Q27", "a", [
+            ("electrical", "Calibration", "5.00 V, 1.20 A, 300 s", "question"),
+            ("water", "Water", "125.0 g; rise 3.00 °C", "question")])
         tl = tally_text("Q27", 0, 14)
         cal = calorimeter(width=2.3, height=2.1, heater=True).move_to([-4.7, 1.2, 0])
         x0 = -2.6
@@ -208,7 +211,9 @@ class E14S05_PartA(NarratedScene):
 class E14S06_PartB(NarratedScene):
     def construct(self):
         h = header("Q27 part b: the limiting reactant")
-        prompt = question_ribbon("Q27", "part b", "HCl: 50.0 mL × 1.00 mol/L; NaOH: 75.0 mL × 0.800 mol/L")
+        prompt = active_part_ribbon("Q27", "b", [
+            ("acid", "HCl", "50.0 mL × 1.00 mol/L", "question"),
+            ("alkali", "NaOH", "75.0 mL × 0.800 mol/L", "question")])
         tl = tally_text("Q27", 3, 14)
         eq = M(r"\ce{HCl(aq) + NaOH(aq) -> NaCl(aq) + H2O(l)}", size=EQ_SMALL - 4).move_to([0, 2.00, 0])
         l1 = work(r"n(\ce{HCl}) = 1.00 \times 0.0500\ \text{L} = 0.0500\ \text{mol}", 1.3, MOL_C)
@@ -248,6 +253,9 @@ class E14S06_PartB(NarratedScene):
 class E14S07_Graph(NarratedScene):
     def construct(self):
         h = header("Q27 part c: correcting the temperature rise")
+        prompt = active_part_ribbon("Q27", "c", [
+            ("mixing", "Mixing time", "60 s", "question"),
+            ("baseline", "Baseline", "20.0 °C", "question")])
         pg = temp_axes(x_max=300, x_step=60, y_min=19, y_max=26, width=6.8, height=4.2).move_to([-2.3, 0.0, 0])
         ax = pg.ax
         col = 4.45
@@ -258,7 +266,7 @@ class E14S07_Graph(NarratedScene):
         pts = data_points(ax, COOL)
         src = T("data: practice question Q27", size=SMALL, color=MUTED).move_to([col, -2.35, 0])
         with self.beat("b01") as b:
-            self.play(FadeIn(h), Create(ax), FadeIn(pg.grid), FadeIn(pg[2]), FadeIn(pg[3]), FadeIn(src), run_time=1.2)
+            self.play(FadeIn(h), FadeIn(prompt), Create(ax), FadeIn(pg.grid), FadeIn(pg[2]), FadeIn(pg[3]), FadeIn(src), run_time=1.2)
             self.play(Create(base), FadeIn(bt), run_time=0.7)
             b.until(0.3)
             self.play(Create(mix), FadeIn(mixt), run_time=0.6)
@@ -296,7 +304,10 @@ class E14S07_Graph(NarratedScene):
 class E14S08_PartD(NarratedScene):
     def construct(self):
         h = header("Q27 part d: molar enthalpy")
-        prompt = question_ribbon("Q27", "part d", "CF = 600 J/°C (a); corrected rise = 4.8 °C (c); water formed = 0.0500 mol (b)", "earlier results")
+        prompt = active_part_ribbon("Q27", "d", [
+            ("CF", "CF", "600 J °C⁻¹", "earlier result"),
+            ("temp", "Corrected rise", "4.8 °C", "earlier result"),
+            ("amount", "H₂O formed", "0.0500 mol", "earlier result")])
         tl = tally_text("Q27", 7, 14)
         l1 = work(r"q = \text{CF} \times \Delta T = 600 \times 4.8 = 2880\ \text{J} = 2.880\ \text{kJ}", 1.9, ENERGY_C)
         l2 = work(r"\Delta H = -\frac{2.880\ \text{kJ}}{0.0500\ \text{mol}} = -57.6\ \text{kJ mol}^{-1}", 0.5, UNKNOWN)
@@ -370,10 +381,14 @@ class E14S09_Wrong(NarratedScene):
 class E14S10_PartsEF(NarratedScene):
     def construct(self):
         h = header("Q27 parts e and f")
+        prompt_e = active_part_ribbon("Q27", "e")
+        prompt_f = active_part_ribbon("Q27", "f", [
+            ("NaOH", "Doubled NaOH concentration", "1.60 mol L⁻¹", "earlier result"),
+            ("acid", "HCl limiting", "0.0500 mol", "earlier result")])
         tl = tally_text("Q27", 10, 14)
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), run_time=0.5)
+            self.play(FadeIn(h), FadeIn(prompt_e), FadeIn(tl), run_time=0.5)
             nl = NumberLine(x_range=[-62, -50, 2], length=6.0, include_numbers=True, color=TEXT, font_size=20,
                             decimal_number_config=dict(num_decimal_places=0, color=MUTED)).move_to([-2.6, 1.0, 0])
             tv = DashedLine(nl.n2p(-60.0) + 0.9 * UP, nl.n2p(-60.0) + 0.15 * DOWN, color=GOOD, stroke_width=3)
@@ -393,6 +408,7 @@ class E14S10_PartsEF(NarratedScene):
             self.play(FadeIn(be), run_time=0.3)
             self.play(tick(be), Transform(self.tl, tally_text("Q27", 12, 14)), run_time=0.4)
         with self.beat("b02") as b:
+            self.play(ReplacementTransform(prompt_e, prompt_f), run_time=0.35)
             f1 = work(r"\text{f: } n(\ce{NaOH}) = 1.60 \times 0.0750 = 0.120\ \text{mol}", -1.15, MOL_C, size=WK - 2, x=X0 - 0.6)
             f2 = work(r"n(\ce{HCl}) = 0.0500\ \text{mol: still limiting} \Rightarrow \text{same } n(\ce{H2O}),\ \text{same heat}",
                       -1.85, UNKNOWN, size=WK - 2, x=X0 - 0.6)
@@ -486,7 +502,16 @@ def chain(items, colors, y, x_left=-6.1, gap=0.95, size=LABEL):
 class E14S13_PartsAC(NarratedScene):
     def construct(self):
         h = header("Q28 parts a to c")
-        prompt = question_ribbon("Q28", "a–c", "4.00 g sample; CF = 300 J/°C; rise 3.20 °C; 24.0 kJ/mol; M(X)=80.0 g/mol; claim 95.0%")
+        prompt_a = active_part_ribbon("Q28", "a", [
+            ("CF", "Calibration factor", "300 J °C⁻¹", "question"),
+            ("rise", "Temperature rise", "3.20 °C", "question")])
+        prompt_b = active_part_ribbon("Q28", "b", [
+            ("heat", "Calorimeter heat", "0.960 kJ", "earlier result"),
+            ("enthalpy", "X releases", "24.0 kJ mol⁻¹", "question"),
+            ("mass", "M(X)", "80.0 g mol⁻¹", "question")])
+        prompt_c = active_part_ribbon("Q28", "c", [
+            ("measured", "Measured X", "80.0%", "earlier result"),
+            ("claimed", "Claimed X", "95.0%", "question")])
         tl = tally_text("Q28", 0, 12)
         items = [("3.20 °C", ""), ("960 J", "× 300"), ("0.960 kJ", "÷ 1000"), ("0.0400 mol", "÷ 24.0"),
                  ("3.20 g X", "× 80.0"), ("80.0%", "÷ 4.00")]
@@ -497,13 +522,14 @@ class E14S13_PartsAC(NarratedScene):
                       T("b", size=SMALL, color=SYSTEM).next_to(boxes[5], DOWN, buff=0.15))
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(prompt), FadeIn(tl), FadeIn(boxes[0]), run_time=0.6)
+            self.play(FadeIn(h), FadeIn(prompt_a), FadeIn(tl), FadeIn(boxes[0]), run_time=0.6)
             self.play(GrowArrow(arrows[0][0]), FadeIn(arrows[0][1]), FadeIn(boxes[1]), FadeIn(tags[0]), run_time=0.8)
             l1 = work(r"\text{a: } q = 300 \times 3.20 = 960\ \text{J}", 0.75, ENERGY_C, x=X0 - 0.6)
             self.play(Write(l1), run_time=0.8)
             b.until(0.8)
             self.play(Transform(self.tl, tally_text("Q28", 2, 12)), run_time=0.4)
         with self.beat("b02") as b:
+            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
             for i in (1, 2):
                 self.play(GrowArrow(arrows[i][0]), FadeIn(arrows[i][1]), FadeIn(boxes[i + 1]), run_time=0.7)
                 b.until(0.3 if i == 1 else 0.5)
@@ -521,6 +547,7 @@ class E14S13_PartsAC(NarratedScene):
             b.until(0.85)
             self.play(Transform(self.tl, tally_text("Q28", 6, 12)), run_time=0.4)
         with self.beat("b04") as b:
+            self.play(ReplacementTransform(prompt_b, prompt_c), run_time=0.35)
             g = NumberLine(x_range=[70, 100, 5], length=7.0, include_numbers=True, color=TEXT, font_size=20,
                            decimal_number_config=dict(num_decimal_places=0, color=MUTED)).move_to([-0.6, -2.15, 0])
             pct = T("% X", size=SMALL, color=MUTED).next_to(g, RIGHT, buff=0.25)
@@ -538,6 +565,11 @@ class E14S13_PartsAC(NarratedScene):
 class E14S14_PartsDE(NarratedScene):
     def construct(self):
         h = header("Q28 parts d and e: a calibration error")
+        prompt_d = active_part_ribbon("Q28", "d", [
+            ("incorrect", "Wrong CF", "360 J °C⁻¹", "question"),
+            ("correct", "Correct CF", "300 J °C⁻¹", "question")])
+        prompt_e = active_part_ribbon("Q28", "e", [
+            ("error", "Repeated CF", "360 J °C⁻¹ (wrong)", "earlier result")])
         tl = tally_text("Q28", 7, 12)
         rows = [[blank(), "CF (J °C⁻¹)", "q (J)", "n(X) (mol)", "m(X) (g)", "% X"],
                 ["correct", "300", "960", "0.0400", "3.20", "80.0"],
@@ -550,12 +582,13 @@ class E14S14_PartsDE(NarratedScene):
         cells[12].set_color(BAD)
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), Create(grid), FadeIn(VGroup(*cells[:12])), run_time=1.0)
+            self.play(FadeIn(h), FadeIn(prompt_d), FadeIn(tl), Create(grid), FadeIn(VGroup(*cells[:12])), run_time=1.0)
             self.play(FadeIn(cells[12]), FadeIn(cells[13]), run_time=0.5)
             for i, fr in zip(range(14, 18), (0.3, 0.5, 0.68, 0.85)):
                 b.until(fr)
                 self.play(FadeIn(cells[i], shift=0.05 * DOWN), run_time=0.4)
         with self.beat("b02") as b:
+            self.play(ReplacementTransform(prompt_d, prompt_e), run_time=0.35)
             ups = VGroup(*[Arrow(cells[i].get_bottom() + 0.05 * DOWN + 0.25 * DOWN, cells[i].get_bottom() + 0.05 * DOWN,
                                  buff=0, color=BAD, stroke_width=4, max_tip_length_to_length_ratio=0.45).next_to(cells[i], RIGHT, buff=0.08)
                          for i in range(14, 18)])
@@ -593,6 +626,7 @@ class E14S14_PartsDE(NarratedScene):
 class E14S15_PartF(NarratedScene):
     def construct(self):
         h = header("Q28 part f: moisture")
+        prompt = active_part_ribbon("Q28", "f")
         tl = tally_text("Q28", 10, 12)
         sc = 2.0
         x_left = -2.8
@@ -612,7 +646,7 @@ class E14S15_PartF(NarratedScene):
         ill = T("schematic proportions", size=SMALL - 2, color=MUTED).next_to(wet, DOWN, buff=0.12).align_to(wet[0], RIGHT)
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), FadeIn(dry), run_time=0.7)
+            self.play(FadeIn(h), FadeIn(prompt), FadeIn(tl), FadeIn(dry), run_time=0.7)
             b.until(0.45)
             self.play(FadeIn(wet), FadeIn(ill), run_time=0.9)
         with self.beat("b02") as b:

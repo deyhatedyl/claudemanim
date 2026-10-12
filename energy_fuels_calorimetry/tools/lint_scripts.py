@@ -39,11 +39,15 @@ def lint(path: Path) -> tuple[int, float]:
         for b in sc.beats:
             est = estimate_duration(b.text)
             st += est + b.pause + 0.45
+            # The user's deliberately revised voice recordings spell the
+            # initialism SLC as "S L C". The middle L is a spoken letter,
+            # not a bare litre unit, so normalise for linting only.
+            spoken_for_lint = re.sub(r"\bS\s+L\s+C\b", "SLC", b.text)
             for rx, why in RULES:
-                for m in rx.finditer(b.text):
+                for m in rx.finditer(spoken_for_lint):
                     tok = m.group(0)
                     issues += 1
-                    ctx = b.text[max(0, m.start() - 25):m.end() + 25]
+                    ctx = spoken_for_lint[max(0, m.start() - 25):m.end() + 25]
                     print(f"  {b.key}: {why}: '{tok}'  …{ctx}…")
         words = sum(b.words for b in sc.beats)
         print(f"  {sc.id} {sc.title[:48]:<48} beats={len(sc.beats):>2} words={words:>4} est={st/60:5.2f} min")

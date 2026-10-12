@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, calorimeter, mark_tally, question_card, result_box, right_panel,  # noqa: E402
                                title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.active_question import PartPrompt  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB,
                           chip, header, panel)
@@ -458,4 +459,92 @@ class E09S09_HeatLoss(NarratedScene):
 
 # =====================================================================================
 
-EPISODE_SCENES = ['E09S01_Retrieval', 'E09S02_MoreThanWater', 'E09S03_Kinds', 'E09S04_EVIt', 'E09S05_Stack', 'E09S06_Q17a', 'E09S07_Contents', 'E09S08_Chemical', 'E09S09_HeatLoss']
+class E09S10_Q18(NarratedScene):
+    """Recover original recorded Q18 workshop absent from older scene code."""
+    PAUSE_LABELS = {"b01": "Try Q18 before the solution"}
+
+    def construct(self):
+        h = header("Practice Q18: diagnose calibration")
+        q = question_card("Q18").move_to([0, -0.10, 0])
+        a = PartPrompt("Q18", "a", [
+            ("water", "Mass of water", "100.0 g", "question"),
+            ("reported", "Student's CF", "360 J °C⁻¹", "question"),
+            ("c", "Water specific heat", "4.18 J g⁻¹ °C⁻¹", "2026 VCAA Data Book")])
+        bb = PartPrompt("Q18", "b", [
+            ("reported", "Measured CF", "360 J °C⁻¹", "question"),
+            ("formula", "Calibration formula", "CF = E / ΔT", "earlier result")])
+        c = PartPrompt("Q18", "c", [
+            ("reported", "CF is too small", "360 < 418", "earlier result"),
+            ("formula", "Calibration formula", "CF = E / ΔT", "earlier result")])
+        with self.beat("b01"):
+            self.play(FadeIn(h), FadeIn(q), run_time=0.8)
+        check = M(r"m c = 100.0 \times 4.18 = 418\ \mathrm{J}\,{}^{\circ}\mathrm{C}^{-1}",
+                  size=EQ_SMALL - 6, color=SURR).move_to([1.95, 1.45, 0])
+        comparison = VGroup(
+            TB("CF must exceed 418 J °C⁻¹", size=LABEL + 1, color=GOOD),
+            TB("reported 360 J °C⁻¹ is impossible", size=LABEL, color=BAD)
+        ).arrange(DOWN, buff=0.28).move_to([1.95, -0.25, 0])
+        with self.beat("b02") as beat:
+            self.play(FadeOut(q), FadeIn(a), Write(check), Indicate(a.focus("water"), color=SURR),
+                      run_time=1.2)
+            beat.until(0.6)
+            self.play(FadeIn(comparison), run_time=0.8)
+        with self.beat("b03") as beat:
+            self.play(FadeOut(check), FadeOut(comparison), ReplacementTransform(a, bb), run_time=0.6)
+            eq = M(r"\mathrm{CF} = \frac{E}{\Delta T}", size=EQ).move_to([1.95, 1.3, 0])
+            smaller = TB("Heat lost → ΔT smaller", size=LABEL + 2, color=BAD).move_to([1.95, 0.0, 0])
+            conclusion = TB("E / ΔT gets LARGER", size=LABEL + 2, color=UNKNOWN).move_to([1.95, -1.0, 0])
+            self.play(Write(eq), FadeIn(smaller), run_time=0.9)
+            beat.until(0.55)
+            self.play(FadeIn(conclusion), run_time=0.8)
+        with self.beat("b04") as beat:
+            self.play(FadeOut(eq), FadeOut(smaller), FadeOut(conclusion),
+                      ReplacementTransform(bb, c), run_time=0.6)
+            cause = VGroup(
+                TB("ΔT measured too large", size=LABEL + 1, color=BAD),
+                T("or E calculated too small", size=LABEL + 1, color=BAD),
+                T("e.g. time, current or voltage recorded too low", size=SMALL + 1, color=TEXT),
+            ).arrange(DOWN, aligned_edge=LEFT, buff=0.35).move_to([1.85, 0.3, 0])
+            self.play(FadeIn(cause), run_time=1.2)
+        with self.beat("b05") as beat:
+            self.clear(h)
+            checklist = VGroup(
+                TB("How to earn all four marks", size=LABEL + 3, color=SYSTEM),
+                T("a. 418 J °C⁻¹ lower bound → reported 360 is inconsistent", size=LABEL),
+                T("b. Heat loss reduces ΔT, making CF larger", size=LABEL),
+                T("c. Find an error making E low or ΔT high", size=LABEL),
+                TB("Always state the measurement, direction and effect.", size=LABEL, color=GOOD),
+            ).arrange(DOWN, aligned_edge=LEFT, buff=0.35).move_to([0, 0.15, 0])
+            self.play(FadeIn(checklist), run_time=1.0)
+
+
+class E09S11_Recap(NarratedScene):
+    """Recover final recorded E09 recap and numerical check."""
+    def construct(self):
+        h = header("Calibration: one last check")
+        f1 = M(r"E=VIt", size=EQ, color=ENERGY_C)
+        f2 = M(r"\mathrm{CF}=\frac{E}{\Delta T}", size=EQ, color=UNKNOWN)
+        eqs = VGroup(f1, f2).arrange(RIGHT, buff=1.0).move_to([0, 1.20, 0])
+        rule = wrapped("CF includes water AND apparatus. Reuse it only when the contents match.",
+                       size=LABEL, width=11.0, color=GOOD).move_to([0, -0.05, 0])
+        with self.beat("b01") as beat:
+            self.play(FadeIn(h), Write(f1), Write(f2), run_time=1.3)
+            beat.until(0.65)
+            self.play(FadeIn(rule), run_time=0.65)
+        problem = wrapped("12.0 V, 2.00 A for 5 min; temperature rises by 6.0 °C. Find CF.",
+                          size=LABEL + 1, width=11.5, color=UNKNOWN).move_to([0, -0.95, 0])
+        with self.beat("b02") as beat:
+            self.play(FadeIn(problem), run_time=0.65)
+        conversion = M(r"t = 5 \times 60 = 300\ \mathrm{s}", size=EQ_SMALL - 6).move_to([0, -1.45, 0])
+        energy = M(r"E = 12.0 \times 2.00 \times 300 = 7200\ \mathrm{J}",
+                   size=EQ_SMALL - 7).move_to([0, -2.05, 0])
+        answer = M(r"\mathrm{CF} = 7200 / 6.0 = 1200\ \mathrm{J}\,{}^{\circ}\mathrm{C}^{-1}",
+                   size=EQ_SMALL - 7, color=GOOD).move_to([0, -2.5, 0])
+        with self.beat("b03") as beat:
+            self.play(FadeOut(rule), FadeOut(problem), FadeIn(conversion), run_time=0.6)
+            self.play(Write(energy), run_time=0.8)
+            beat.until(0.6)
+            self.play(Write(answer), run_time=0.9)
+
+
+EPISODE_SCENES = ['E09S01_Retrieval', 'E09S02_MoreThanWater', 'E09S03_Kinds', 'E09S04_EVIt', 'E09S05_Stack', 'E09S06_Q17a', 'E09S07_Contents', 'E09S08_Chemical', 'E09S09_HeatLoss', 'E09S10_Q18', 'E09S11_Recap']
