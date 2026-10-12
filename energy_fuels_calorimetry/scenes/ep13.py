@@ -15,7 +15,7 @@ from shared.components import (bullets, mark_tally, question_card, result_box, r
                                title_card, wrap, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.workshop import (BIO, CO2E, WK, X0, XM, attempt_card, blank, boxes_for, mbox, node, number,  # noqa: E402
-                             part_tag, requested, tally_text, tick, work)
+                             part_tag, question_ribbon, requested, tally_text, tick, work)
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
                           header, panel)
@@ -208,6 +208,7 @@ class E13S05_Plan(NarratedScene):
 class E13S06_PartsAC(NarratedScene):
     def construct(self):
         h = header("Q25 parts a–c")
+        prompt = question_ribbon("Q25", "a–c", "fuel 6.20 L: 90% CH₄; air 60.0 L: 21% O₂; SLC 24.8 L/mol; M(O₂)=32.0")
         tl = tally_text("Q25", 0, 15)
         ys = [2.05, 1.35, 0.65, -0.35, -1.3, -2.05]
         l1 = work(r"n_{\text{mix}} = 6.20 \div 24.8 = 0.250\ \text{mol}", ys[0], MOL_C)
@@ -231,7 +232,7 @@ class E13S06_PartsAC(NarratedScene):
 
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), run_time=0.5)
+            self.play(FadeIn(h), FadeIn(prompt), FadeIn(tl), run_time=0.5)
             step(l1, bx[0], ta)
             score(bx[0], 1)
             b.until(0.3)
@@ -302,9 +303,10 @@ class E13S08_PartsDE(NarratedScene):
     def construct(self):
         from shared.motion import flow
         h = header("Q25 parts d–e")
+        prompt = question_ribbon("Q25", "d–e", "n(CH₄)=0.225 mol (a); |ΔH|=890 kJ/mol (question); water 800.0 g, ΔT=40.0 °C", "earlier results")
         tl = tally_text("Q25", 7, 15)
         l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 200\ \text{kJ released}", 2.15, ENERGY_C)
-        l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.5, USEFUL)
+        l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.3, USEFUL)
         td, te = part_tag("d", l1), None
         b1, b2 = boxes_for(l1), boxes_for(l2)
         sc = 0.03
@@ -324,7 +326,7 @@ class E13S08_PartsDE(NarratedScene):
         b3 = boxes_for(l3, 2)
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), run_time=0.5)
+            self.play(FadeIn(h), FadeIn(prompt), FadeIn(tl), run_time=0.5)
             self.play(Write(l1), FadeIn(td), FadeIn(b1), run_time=1.0)
             self.play(tick(b1), Transform(self.tl, tally_text("Q25", 8, 15)), run_time=0.4)
             self.play(GrowFromEdge(fuel, LEFT), FadeIn(lf), run_time=0.7)
@@ -362,6 +364,7 @@ class E13S08_PartsDE(NarratedScene):
 class E13S09_PartsFG(NarratedScene):
     def construct(self):
         h = header("Q25 parts f–g")
+        prompt = question_ribbon("Q25", "f–g", "methane used 0.225 mol; CO₂ inlet = 10.0% of 0.250 mol mixture; SLC")
         tl = tally_text("Q25", 12, 15)
         new = VGroup(T("new CO₂ from combustion", size=SMALL + 1, color=MUTED),
                      M(r"1 \times 0.225 = 0.225\ \text{mol}", size=WK, color=MOL_C)).arrange(DOWN, buff=0.12)
@@ -376,7 +379,7 @@ class E13S09_PartsFG(NarratedScene):
         tf = TB("f.", size=LABEL + 2, color=SYSTEM).move_to([-6.3, 1.15, 0])
         with self.beat("b01") as b:
             self.tl = tl
-            self.play(FadeIn(h), FadeIn(tl), FadeIn(tf), run_time=0.5)
+            self.play(FadeIn(h), FadeIn(prompt), FadeIn(tl), FadeIn(tf), run_time=0.5)
             self.play(FadeIn(new), run_time=0.7)
             b.until(0.35)
             self.play(FadeIn(inl), run_time=0.7)
