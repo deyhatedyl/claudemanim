@@ -294,7 +294,7 @@ class E08S06_Q15(NarratedScene):
                                 (1, "efficiency: 65.6%")], width=5.4).move_to([-3.5, 0.4, 0])
             ws = VGroup(wrong_panel("Whole burner mass", [T("102.640 g → 2.23 mol ✗", size=LABEL)], width=4.8, size=SMALL + 2),
                         wrong_panel("Fuel mass in mcΔT", [T("0.920 × 4.18 × 17.2 = 66 J ✗", size=LABEL)], width=4.8, size=SMALL + 2),
-                        wrong_panel("J divided by kJ", [T("17 974 ÷ 27.4 → 656% ✗", size=LABEL)], width=4.8, size=SMALL + 2))
+                        wrong_panel("J divided by kJ", [T("17 974 ÷ 27.4 × 100% ≈ 65,600% ✗", size=LABEL)], width=4.8, size=SMALL + 2))
             ws.arrange(DOWN, buff=0.2).move_to([3.4, 0.4, 0])
             self.play(FadeIn(tally), run_time=0.8)
             for i, w in enumerate(ws):
