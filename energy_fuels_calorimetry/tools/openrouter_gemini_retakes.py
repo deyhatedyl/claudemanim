@@ -34,6 +34,59 @@ URL = "https://openrouter.ai/api/v1/audio/speech"
 KEY_URL = "https://openrouter.ai/api/v1/key"
 MODEL = "google/gemini-3.8-flash-tts"
 
+
+def safe_provider_reason(body: bytes, *, voice: str = "", input_text: str = "") -> str:
+    """Extract an actionable error reason without exposing user data.
+
+    Do not echo raw HTTP responses: they may contain the request, voice ID,
+    account details, or credentials. Redact before displaying any detail.
+    """
+    try:
+        payload = json.loads(body[:10000].decode("utf-8", errors="replace"))
+    except (ValueError, UnicodeError):
+        return "The provider returned no readable JSON error explanation."
+    if not isinstance(payload, dict):
+        return "The provider returned an unexpected error response."
+    err = payload.get("error", {})
+    if not isinstance(err, dict):
+        err = {}
+    message = err.get("message", "")
+    # Some upstream errors are embedded in the error's metadata.
+    metadata = err.get("metadata", {})
+    if not isinstance(metadata, dict):
+        metadata = {}
+    raw = metadata.get("raw", "")
+    if not isinstance(message, str):
+        message = ""
+    if not message and isinstance(raw, str):
+        try:
+            upstream = json.loads(raw)
+            if isinstance(upstream, dict):
+                nested = upstream.get("error", upstream)
+                if isinstance(nested, dict):
+                    message = nested.get("message", "") or ""
+        except ValueError:
+            message = raw
+    if not isinstance(message, str) or not message.strip():
+        return "No detailed error message was supplied."
+    # Remove exact user-provided inputs and identifiable identifiers.
+    if input_text:
+        message = message.replace(input_text, "[narration text hidden]")
+    if voice:
+        message = message.replace(voice, "[custom voice ID hidden]")
+    message = re.sub(r"(?i)bearer\s+[^\s,;}]+", "Bearer [hidden]", message)
+    message = re.sub(r"sk-or-v1-[\w-]+|AIza[\w-]+", "[API key hidden]", message)
+    message = re.sub(r"voice_[\w-]+|voicekey_[\w-]+", "[custom voice ID hidden]", message)
+    message = re.sub(r"https?://\S+", "[URL hidden]", message)
+    message = re.sub(r"[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}", "[email hidden]", message)
+    return " ".join(message.split())[:280]
+
+
+def diagnose_speech_error(status: int, body: bytes, *, voice: str, input_text: str) -> str:
+    reason = safe_provider_reason(body, voice=voice, input_text=input_text)
+    return explain_speech_error(status) + "\nProvider explanation (redacted): " + reason
+
+
 def check_authentication(api_key: str) -> None:
     """Validate credentials before making a paid synthesis request.
 
@@ -106,7 +159,8 @@ def synthesize(text: str, voice: str, api_key: str, dest: Path):
             mime = resp.headers.get("Content-Type", "").lower()
     except urllib.error.HTTPError as exc:
         # Raw error bodies are untrusted and can contain private details.
-        raise RuntimeError(explain_speech_error(exc.code)) from None
+        raise RuntimeError(diagnose_speech_error(
+            exc.code, exc.read(10000), voice=voice, input_text=text)) from None
     if len(audio) < 4096:
         raise ValueError("Gemini returned implausibly little audio.")
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -144,6 +198,8 @@ def main() -> int:
     cli.add_argument("--voice-file", type=Path)
     cli.add_argument("--check-auth", action="store_true",
                      help="Validate the OpenRouter key; do not generate audio")
+    cli.add_argument("--probe", action="store_true",
+                     help="Generate 1 short sentence with the SAME custom Gemini voice to isolate voice access from input-length issues")
     args = cli.parse_args()
     key = os.getenv("OPENROUTER_API_KEY")
     if not key:
@@ -162,6 +218,17 @@ def main() -> int:
         return 0
     voice, source = voice_id(argparse.Namespace(
         voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None, lite=False))
+    if args.probe:
+        path = ROOT / "audio" / "gemini_retakes" / "voice_probe.wav"
+        try:
+            duration = synthesize(
+                "Welcome to the VCE Chemistry lesson.", voice, key, path)
+        except RuntimeError as exc:
+            print(f"Same-voice short probe failed: {exc}", file=sys.stderr)
+            return 4
+        print(f"Same-voice probe succeeded ({duration:.1f}s): {path}")
+        print("The voice works with a short input; the longer test segment or its text may be the issue.")
+        return 0
     voice_fingerprint = hashlib.sha256(voice.encode("utf-8")).hexdigest()
     beats = {b.key: b for ep in ("E06", "E07", "E08", "E12", "E14")
              for b in load_episode(ep).beats()}
