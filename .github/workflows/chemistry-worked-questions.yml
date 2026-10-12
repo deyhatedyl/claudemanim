@@ -7,6 +7,9 @@ on:
     paths:
       - energy_fuels_calorimetry/scenes/ep07.py
       - energy_fuels_calorimetry/scenes/ep08.py
+      - energy_fuels_calorimetry/scenes/ep13.py
+      - energy_fuels_calorimetry/scenes/ep14.py
+      - energy_fuels_calorimetry/shared/workshop.py
       - energy_fuels_calorimetry/shared/worked_sidebar.py
       - .github/workflows/chemistry-worked-questions.yml
 
@@ -31,6 +34,20 @@ jobs:
             scene: E08S06
           - episode: E08
             scene: E08S08
+          - episode: E13
+            scene: E13S06
+          - episode: E13
+            scene: E13S08
+          - episode: E13
+            scene: E13S09
+          - episode: E14
+            scene: E14S05
+          - episode: E14
+            scene: E14S06
+          - episode: E14
+            scene: E14S08
+          - episode: E14
+            scene: E14S13
     defaults:
       run:
         working-directory: energy_fuels_calorimetry
