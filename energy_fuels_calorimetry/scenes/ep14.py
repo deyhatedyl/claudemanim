@@ -173,7 +173,7 @@ class E14S04_Plan(NarratedScene):
 class E14S05_PartA(NarratedScene):
     def construct(self):
         h = header("Q27 part a: calibration")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt = active_part_ribbon("Q27", "a", [
             ("electrical", "Calibration", "5.00 V, 1.20 A, 300 s", "question"),
             ("water", "Water", "125.0 g; rise 3.00 °C", "question")])
@@ -212,7 +212,7 @@ class E14S05_PartA(NarratedScene):
 class E14S06_PartB(NarratedScene):
     def construct(self):
         h = header("Q27 part b: the limiting reactant")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt = active_part_ribbon("Q27", "b", [
             ("acid", "HCl", "50.0 mL × 1.00 mol/L", "question"),
             ("alkali", "NaOH", "75.0 mL × 0.800 mol/L", "question")])
@@ -255,11 +255,15 @@ class E14S06_PartB(NarratedScene):
 class E14S07_Graph(NarratedScene):
     def construct(self):
         h = header("Q27 part c: correcting the temperature rise")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt = active_part_ribbon("Q27", "c", [
             ("mixing", "Mixing time", "60 s", "question"),
             ("baseline", "Baseline", "20.0 °C", "question")])
-        pg = temp_axes(x_max=300, x_step=60, y_min=19, y_max=26, width=6.8, height=4.2).move_to([-2.3, -0.18, 0])
+        # Leave clear vertical separation between the graph's top tick and
+        # the persistent original-question ribbon.
+        # Lift the graph slightly: the time-axis label must stay above the
+        # footer-safe line without crowding the top active-question ribbon.
+        pg = temp_axes(x_max=300, x_step=60, y_min=19, y_max=26, width=6.8, height=3.7).move_to([-2.3, 0.02, 0])
         ax = pg.ax
         col = 4.45
         base = Line(ax.c2p(0, BASE), ax.c2p(60, BASE), color=SURR, stroke_width=4)
@@ -307,7 +311,7 @@ class E14S07_Graph(NarratedScene):
 class E14S08_PartD(NarratedScene):
     def construct(self):
         h = header("Q27 part d: molar enthalpy")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt = active_part_ribbon("Q27", "d", [
             ("CF", "CF", "600 J °C⁻¹", "earlier result"),
             ("temp", "Corrected rise", "4.8 °C", "earlier result"),
@@ -385,7 +389,7 @@ class E14S09_Wrong(NarratedScene):
 class E14S10_PartsEF(NarratedScene):
     def construct(self):
         h = header("Q27 parts e and f")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_e = active_part_ribbon("Q27", "e")
         prompt_f = active_part_ribbon("Q27", "f", [
             ("given", "Original NaOH", "0.800 mol L⁻¹", "question"),
@@ -508,7 +512,7 @@ def chain(items, colors, y, x_left=-6.1, gap=0.95, size=LABEL):
 class E14S13_PartsAC(NarratedScene):
     def construct(self):
         h = header("Q28 parts a to c")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_a = active_part_ribbon("Q28", "a", [
             ("CF", "Calibration factor", "300 J °C⁻¹", "question"),
             ("rise", "Temperature rise", "3.20 °C", "question")])
@@ -572,7 +576,7 @@ class E14S13_PartsAC(NarratedScene):
 class E14S14_PartsDE(NarratedScene):
     def construct(self):
         h = header("Q28 parts d and e: a calibration error")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_d = active_part_ribbon("Q28", "d", [
             ("incorrect", "Wrong CF", "360 J °C⁻¹", "question"),
             ("correct", "Correct CF", "300 J °C⁻¹", "question")])
@@ -605,6 +609,8 @@ class E14S14_PartsDE(NarratedScene):
             g = NumberLine(x_range=[70, 100, 5], length=7.0, include_numbers=True, color=TEXT, font_size=20,
                            decimal_number_config=dict(num_decimal_places=0, color=MUTED)).move_to([-0.6, -1.4, 0])
             claim = DashedLine(g.n2p(95.0) + 0.75 * UP, g.n2p(95.0) + 0.1 * DOWN, color=UNKNOWN, stroke_width=3)
+            # Keep the claim label below the table explanation rather than
+            # putting it directly on top of the warning sentence.
             ct = T("claim 95.0%", size=SMALL, color=UNKNOWN).move_to([4.40, -0.86, 0])
             m1 = Dot(g.n2p(80.0) + 0.3 * UP, radius=0.1, color=GOOD)
             m2 = Dot(g.n2p(96.0) + 0.3 * UP, radius=0.1, color=BAD)
@@ -634,7 +640,7 @@ class E14S14_PartsDE(NarratedScene):
 class E14S15_PartF(NarratedScene):
     def construct(self):
         h = header("Q28 part f: moisture")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt = active_part_ribbon("Q28", "f")
         tl = tally_text("Q28", 10, 12)
         sc = 2.0

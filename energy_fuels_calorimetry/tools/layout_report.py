@@ -27,7 +27,9 @@ def main():
     frames = sorted((ROOT / "checks/beat_stills" / f"{ep}_{a.tag}").glob("*.png"))
     out = ROOT / "checks/contact_sheets" / f"{ep}_{a.tag}"
     out.mkdir(parents=True, exist_ok=True)
-    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 17)
+    linux_font = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
+    font = (ImageFont.truetype(str(linux_font), 17) if linux_font.exists()
+            else ImageFont.load_default(size=17))
     by_scene = {}
     for path in frames:
         by_scene.setdefault(path.stem.split(".")[0], []).append(path)

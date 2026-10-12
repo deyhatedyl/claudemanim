@@ -69,7 +69,14 @@ def boxes_for(line: Mobject, n: int = 1, marks: int = 1) -> VGroup:
 
 
 def tally_text(qid: str, got: int, total: int) -> Text:
-    return T(f"{qid} marks shown: {got} / {total}", size=SMALL, color=GOOD).to_corner(DR, buff=0.22)
+    # The top of exam-workshop scenes is reserved for the exact current
+    # subquestion. Keep optional mark tracking in a separate bottom strip.
+    label = T(f"{qid} marks shown: {got} / {total}", size=SMALL, color=GOOD).to_corner(DR, buff=0.22)
+    # Deliberately use the otherwise empty footer (no embedded subtitles).
+    # Marking this explicitly lets layout QA keep detecting accidental
+    # subtitle-strip crossings by graphs, equations and other content.
+    label.layout_role = "footer"
+    return label
 
 
 def blank() -> Dot:

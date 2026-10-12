@@ -1,0 +1,34 @@
+# Q13, Q15, Q16, Q25–Q28 — bank-to-scene QA (12 October 2026)
+
+Scope: read-only review of `questions/bank.py` against the current worked Manim scenes in `scenes/ep07.py`, `ep08.py`, `ep13.py`, and `ep14.py`. No scene, script, helper, or question-bank source was edited. The opening question cards and active part prompts take their **wording and indicative marks** directly from `questions.bank.BY_ID` via `shared/components.py:78–86`, `shared/active_question.py:34–39,53–60,97–110`, and `shared/workshop.py:96–100`; that mechanism avoids a separate, potentially stale copy of the question text in the scenes.
+
+**Finding: no critical calculation or stoichiometry mismatches** across the seven assigned questions. A read-only invocation of `checks/verify_anchors.py`'s equation checks and `q13`, `q15`, `q16`, `q25`, `q26`, `q27`, `q28` produced **87 checks, 0 failures**. This independent numerical verification is distinct from watching the final rendered video; the specific problems below concern chemistry explanation, provenance, and clarity.
+
+## Issues to correct
+
+| Severity | Exact lines | Problem and proposed correction |
+|---|---|---|
+| **Moderate — Q26 explanation overstates oxygen content** | `scenes/ep13.py:660–662`, also source answer `questions/bank.py:551–554` | The correct numbers are 22.7 vs 29.8 kJ g⁻¹, but `oxygen is 50% ... vs 35%: already partly oxidised, so methanol releases less per gram` sounds like oxygen percentage by itself determines the energy difference or that oxygen atoms are what were oxidised. It is safer and sufficient to explain that **the whole molecule and its combustion reaction** determine ΔH, that a shared O–H bond proves nothing about energy per gram, and that the **given ΔH/M values** establish the comparison. Oxygen fraction can be an accompanying observation, not a universal causal rule. |
+| **Minor — Q25 worked part skips a visible temperature subtraction** | `scenes/ep13.py:316–326` (especially **326**); source `questions/bank.py:503–508` | The part-d ribbon now correctly attributes **800.0 g** and **17.0→57.0 °C** to the question. However, the worked part jumps straight to `q = 800.0 × 4.18 × 40.0`; ideally show `ΔT = 57.0 − 17.0 = 40.0 °C` explicitly. An earlier reading/annotation scene already derives it at `ep13.py:123`, so this is a presentation improvement, not a source or numerical defect. |
+
+During the parallel scene revisions on the same day, three issues initially observed were **fixed**: Q25's input ribbon now labels the original temperatures as question data (`ep13.py:319–320`), Q25's 3-s.f. energy is now `2.00 × 10² kJ` (`ep13.py:325`), and Q27's changed NaOH concentration is labelled `CALCULATED THIS PART` (`ep14.py:385–388` together with `shared/active_question.py:31–32`). The Q27 hypothetical can still be spelled out as `2 × 0.800 = 1.60 mol L⁻¹` for extra clarity.
+
+None of the explicitly **wrong student examples** should be accidentally treated as a correct worked answer: the propane slip `0.300 × 44.0 = 1.32 g` in `scenes/ep13.py:84` is **deliberate** and is immediately called out as `should be 13.2 g` at **86,95–96**. The erroneous conversions in `ep13.py:453–459`, `ep14.py:343–351`, and `ep14.py:437–466` are also positioned as wrong-solution exercises.
+
+## Verified original data and worked results
+
+| Question | Bank locations; matching scene locations | Verified calculation and result |
+|---|---|---|
+| **Q13** | `bank.py:241–259`; `ep07.py:237–328` | Oxygen: 32.0/32.0 = **1.00 mol**. Ethanol needs 0.400×3 = 1.20 mol O₂; **O₂ limits**. Ethanol reacted **1/3 mol**; unreacted (0.400−1/3)×46.0 = **3.07 g**. CO₂: (2/3)×44.0 = **29.3 g**. Energy: (1/3)×1370 = **457 kJ released**. |
+| **Q15** | `bank.py:285–301`; `ep08.py:257–315` | Ethanol mass lost 102.640−101.720 = **0.920 g** = **0.0200 mol**; released energy **27.4 kJ**. ΔT = **17.2 °C**; water heat 250.0×4.18×17.2 = **17,974 J** = **17.974 kJ**; useful efficiency **65.6%**. |
+| **Q16** | `bank.py:304–320`; `ep08.py:384–442` | Useful heat 180.0×4.18×60.0 = **45.144 kJ**; input **45.144/0.450 = 100.32 kJ**; fuel mass **100.32/29.8 = 3.37 g**. Incorrectly multiplying by 0.450 gives **0.682 g**, below even the 100%-efficient minimum **1.515 g**. |
+| **Q25** | `bank.py:503–529`; `ep13.py:209–265,313–440` | Gas mixture **0.250 mol**; CH₄ **0.225 mol**; available O₂ **0.5081 mol**; O₂ needed **0.450 mol**; excess O₂ **1.86 g**. Methane energy **200.25 kJ**; water heat **133.76 kJ**; efficiency **66.8%**. New + inlet CO₂ = 0.225+0.0250 = **0.250 mol** = **6.20 L at SLC**. The equation explicitly produces liquid water. |
+| **Q26** | `bank.py:532–560`; `ep13.py:540–698` | Methanol **726/32.0 = 22.7 kJ g⁻¹**; ethanol **1370/46.0 = 29.8 kJ g⁻¹**. Methanol direct CO₂/useful kJ **44.0/(726×0.250) = 0.242 g kJ⁻¹**; ethanol **88.0/(1370×0.400) = 0.161 g kJ⁻¹**. Scenes correctly avoid claiming either is lower over the full lifecycle. |
+| **Q27** | `bank.py:562–591`; `ep14.py:175–425` | Electrical calibration **1800 J**; CF **600 J °C⁻¹**, physically above water-only **522.5 J °C⁻¹**. HCl **0.0500 mol** limits NaOH **0.0600 mol**. Cooling extrapolation to 60 s gives **24.8 °C**; corrected ΔT **4.8 °C**; heat **2880 J**; ΔH **−57.6 kJ mol⁻¹** of water. Doubling NaOH keeps acid limiting and reaction heat unchanged under the stated assumptions. |
+| **Q28** | `bank.py:594–619`; `ep14.py:502–665` | Heat **300×3.20 = 960 J**; X **0.0400 mol**, **3.20 g**, **80.0%** of 4.00 g, below the claimed 95.0%. Wrong CF 360 gives **1152 J**, **3.84 g X**, **96.0%**, which falsely appears to support the claim. Repeats retain systematic error; moisture lowers active mass fraction under stipulated assumptions. |
+
+**VCAA data-book wording:** Q13, Q15 and Q26 explicitly **supply** ethanol ΔH₍c₎ = −1370 kJ mol⁻¹ in their question stems (`bank.py:242–244,286–288,539–541`). The scenes correctly treat it as **question data** (`ep07.py:258–260`, `ep08.py:265–267`, `ep13.py:544–546`), irrespective of whether an identically rounded figure appears in the 2026 VCAA data book. This is not an occasion to substitute an external value silently. The separate values 4.18 J g⁻¹ °C⁻¹, atomic masses, and 24.8 L mol⁻¹ are established by the shared-data assumptions in `bank.py:15–19`.
+
+## Verification method and limits
+
+Read each target bank prompt, parts, answers, and relevant visuals; inspected each worked scene and its displayed calculations, sign conventions, temperature corrections, energy-efficiency direction, chemical equations, relevant wrong-answer examples, and the implementation of source-derived question cards. Ran the read-only in-memory version of the existing independent verifier; **87 selected checks passed**. No renders were recreated or inspected frame by frame in this audit, so this report does not establish on-screen legibility, audio synchronisation, or final-video completeness.

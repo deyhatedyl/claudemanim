@@ -1,13 +1,13 @@
 """Re-record corrected chemistry beats through OpenRouter's Gemini 3.8 TTS.
 
-Uses the existing Melb Teacher F1 custom voice ID from the user's private
-Electrochemistry voice file; never substitutes a different voice silently.
+Defaults to the warm Sulafat Gemini studio voice; an explicitly supplied
+private voice file remains supported. Voice selection is recorded.
 
     OPENROUTER_API_KEY=... python tools/openrouter_gemini_retakes.py --test
     OPENROUTER_API_KEY=... python tools/openrouter_gemini_retakes.py
 
 The API key is read only from process environment, never recorded on disk.
-Only the nine reviewed chemistry-audit beats are synthesized. Existing WAV
+Only the ten reviewed chemistry-correction beats are synthesized. Existing WAV
 recordings and original voice configuration remain unchanged.
 """
 from __future__ import annotations
@@ -203,9 +203,11 @@ def synthesize(text: str, voice: str, api_key: str, dest: Path):
 
 def main() -> int:
     cli = argparse.ArgumentParser()
-    cli.add_argument("--test", action="store_true", help="Synthesize one 9-beat correction for voice compatibility")
+    cli.add_argument("--test", action="store_true", help="Synthesize one corrected beat for voice compatibility")
     cli.add_argument("--interval", type=float, default=21.0)
     cli.add_argument("--voice-file", type=Path)
+    cli.add_argument("--studio-voice", default="Sulafat",
+                     help="Gemini prebuilt warm voice (no custom voice ID); default Sulafat")
     cli.add_argument("--check-auth", action="store_true",
                      help="Validate the OpenRouter key; do not generate audio")
     cli.add_argument("--probe", action="store_true",
@@ -224,23 +226,24 @@ def main() -> int:
         return 3
     if args.check_auth:
         print("OpenRouter authentication succeeded (HTTP 200). "
-              "The Gemini model and custom voice have NOT been tested yet.")
+              "The Gemini model and selected voice have NOT been tested yet.")
         return 0
     voice, source = voice_id(argparse.Namespace(
-        voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None, lite=False))
+        voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None,
+        studio_voice=None if args.voice_file else args.studio_voice, lite=False))
     if args.probe:
         path = ROOT / "audio" / "gemini_retakes" / "voice_probe.wav"
         try:
             duration = synthesize(
-                "Welcome to the VCE Chemistry lesson.", voice, key, path)
+                "Good morning, Year Twelve. Today we\u0027ll work through calorimetry, check the units, and explain why the energy released depends on the fuel.", voice, key, path)
         except RuntimeError as exc:
-            print(f"Same-voice short probe failed: {exc}", file=sys.stderr)
+            print(f"Selected-voice short probe failed: {exc}", file=sys.stderr)
             return 4
-        print(f"Same-voice probe succeeded ({duration:.1f}s): {path}")
+        print(f"Selected-voice probe succeeded ({duration:.1f}s): {path}")
         print("The voice works with a short input; the longer test segment or its text may be the issue.")
         return 0
     voice_fingerprint = hashlib.sha256(voice.encode("utf-8")).hexdigest()
-    beats = {b.key: b for ep in ("E06", "E07", "E08", "E12", "E14")
+    beats = {b.key: b for ep in ("E06", "E07", "E08", "E12", "E13", "E14")
              for b in load_episode(ep).beats()}
     all_keys = sorted(AUDITED_RETAKES)
     keys = ["E12S02.b01"] if args.test else all_keys
@@ -264,7 +267,7 @@ def main() -> int:
             time.sleep(max(0.0, args.interval))
         duration = synthesize(beat.text, voice, key, dest)
         meta.write_text(json.dumps({
-            "text_sha256": digest, "model": MODEL, "voice_label": VOICE_NAME,
+            "text_sha256": digest, "model": MODEL, "voice_label": source,
             "voice_fingerprint": voice_fingerprint,
             "voice_source": source, "provider": "OpenRouter", "duration_seconds": duration,
         }, indent=2))
@@ -272,7 +275,7 @@ def main() -> int:
         print(f"CREATED {beat_key}: {duration:.2f}s via Gemini")
     if not args.test and len(done) == len(all_keys):
         (target / "segments.json").write_text(json.dumps(done, indent=2))
-        print(f"All nine Gemini TTS retakes ready in {target}")
+        print(f"All {len(all_keys)} Gemini TTS retakes ready in {target}")
     return 0
 
 

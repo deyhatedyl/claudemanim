@@ -1,7 +1,8 @@
-"""Check whether a private Google Gemini API project owns Melb Teacher F1.
+"""Check whether a Google Gemini API key can retrieve stored Melb Teacher F1.
 
-The stateful voice_... ID is stored in the project that created it. An
+Stored voice_... IDs are scoped to the project that created them. An
 OpenRouter API key is NOT a Google API key and cannot access Google Voices API.
+This read-only lookup does not verify TTS synthesis/model availability.
 No audio is generated and no credentials or voice identifiers are printed.
 
   read -rs "GEMINI_API_KEY?Google Gemini API key: "; echo
@@ -26,7 +27,7 @@ BASE = "https://generativelanguage.googleapis.com/v1beta/voices/"
 
 
 def check_access(voice: str, google_api_key: str) -> tuple[int, str]:
-    """Return HTTP status and safe diagnostic; never return secret input."""
+    """GET a stored voice; return status and a safe, non-identifying diagnostic."""
     if not voice.startswith("voice_"):
         if voice.startswith("voicekey_"):
             return 0, ("Stateless voice keys cannot be looked up with the "
@@ -40,25 +41,32 @@ def check_access(voice: str, google_api_key: str) -> tuple[int, str]:
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             if response.status == 200:
-                return 200, ("This Google API key can access the stored Melb "
-                             "Teacher F1 voice. You can use direct Gemini TTS.")
+                return 200, ("Google retrieved the stored Melb Teacher F1 voice "
+                             "with this key. This does not test Gemini TTS synthesis "
+                             "or access to a particular speech model.")
             return response.status, "Unexpected Google Voices API response."
     except urllib.error.HTTPError as exc:
         if exc.code == 404:
-            return 404, ("Voice not found for this Google project. Use an API "
-                         "key from the SAME Google AI Studio project that "
-                         "created Melb Teacher F1, or check voice expiry.")
+            return 404, ("Google could not retrieve this stored voice with the "
+                         "supplied key. Check the original Google AI Studio "
+                         "project, voice ID and expiry; a 404 does not establish "
+                         "which of those is responsible.")
         if exc.code == 403:
             return 403, ("Google denied access to this stored voice; check "
                          "project ownership, API permissions and TTS access.")
         if exc.code == 401:
             return 401, "Google API key authentication failed."
         if exc.code == 400:
-            return 400, ("Google rejected the lookup request. The stored "
-                         "voice may not be recognised by this project.")
+            return 400, ("Google rejected the lookup request. Check the voice "
+                         "ID format and Google API key configuration; this "
+                         "response does not establish voice ownership.")
+        if exc.code == 429:
+            return 429, "Google rate-limited the voice lookup; try again later."
         return exc.code, f"Google Voices API returned HTTP {exc.code}."
     except urllib.error.URLError:
         return 0, "Unable to reach Google's Voices API; check the connection."
+    except (TimeoutError, OSError):
+        return 0, "The Google Voices API lookup failed locally; check the connection."
 
 
 def main() -> int:

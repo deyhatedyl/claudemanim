@@ -209,7 +209,7 @@ class E13S05_Plan(NarratedScene):
 class E13S06_PartsAC(NarratedScene):
     def construct(self):
         h = header("Q25 parts a–c")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_a = active_part_ribbon("Q25", "a", [
             ("fuel", "Fuel", "6.20 L, 90.0% CH₄", "question"),
             ("air", "Air", "60.0 L, 21.0% O₂", "question")])
@@ -314,7 +314,7 @@ class E13S08_PartsDE(NarratedScene):
     def construct(self):
         from shared.motion import flow
         h = header("Q25 parts d–e")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_d = active_part_ribbon("Q25", "d", [
             ("methane", "CH₄ reacted", "0.225 mol", "earlier result"),
             ("enthalpy", "|ΔH|", "890 kJ mol⁻¹", "question"),
@@ -325,6 +325,7 @@ class E13S08_PartsDE(NarratedScene):
             ("water", "Useful water heat", "133.76 kJ", "earlier result")])
         tl = tally_text("Q25", 7, 15)
         l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 2.00\times10^2\ \text{kJ}", 1.90, ENERGY_C)
+        delta_t = work(r"\Delta T = 57.0 - 17.0 = 40.0\ {}^{\circ}\text{C}", 1.26, USEFUL)
         l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.26, USEFUL)
         td, te = part_tag("d", l1), None
         b1, b2 = boxes_for(l1), boxes_for(l2)
@@ -350,7 +351,9 @@ class E13S08_PartsDE(NarratedScene):
             self.play(tick(b1), Transform(self.tl, tally_text("Q25", 8, 15)), run_time=0.4)
             self.play(GrowFromEdge(fuel, LEFT), FadeIn(lf), run_time=0.7)
             b.until(0.45)
-            self.play(Write(l2), FadeIn(b2), run_time=1.1)
+            self.play(Write(delta_t), run_time=0.55)
+            b.until(0.60)
+            self.play(ReplacementTransform(delta_t, l2), FadeIn(b2), run_time=0.9)
             self.play(GrowFromEdge(water, LEFT), FadeIn(lw), Create(loss), FadeIn(ll), run_time=0.8)
             flow(self, fuel.get_left(), water.get_right(), USEFUL, run_time=1.4)
             b.until(0.85)
@@ -384,7 +387,7 @@ class E13S08_PartsDE(NarratedScene):
 class E13S09_PartsFG(NarratedScene):
     def construct(self):
         h = header("Q25 parts f–g")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_f = active_part_ribbon("Q25", "f", [
             ("formed", "CO₂ formed", "0.225 mol", "earlier result"),
             ("inlet", "CO₂ inlet", "0.0250 mol", "earlier result")])
@@ -545,7 +548,7 @@ class E13S12_Q26Attempt(NarratedScene):
 class E13S13_PartsAB(NarratedScene):
     def construct(self):
         h = header("Q26 parts a–b")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_a = active_part_ribbon("Q26", "a", [
             ("methanol", "Methanol", "−726 kJ/mol, M=32.0", "question"),
             ("ethanol", "Ethanol", "−1370 kJ/mol, M=46.0", "question")])
@@ -657,14 +660,15 @@ class E13S14_WrongBases(NarratedScene):
 class E13S15_PartsCD(NarratedScene):
     def construct(self):
         h = header("Q26 parts c–d")
-        h.set_opacity(0)  # active original subquestion occupies the title band
+        h.set_opacity(0)  # the active original question replaces the redundant title
         prompt_c = active_part_ribbon("Q26", "c")
         prompt_d = active_part_ribbon("Q26", "d")
         claim = T("“Both contain an O–H bond, so they release equal energy per gram.”", size=LABEL + 2)
         claim.move_to([0, 1.94, 0])
         r1 = T("1.  one shared bond can't decide: it depends on the whole molecule's combustion", size=LABEL, color=GOOD)
-        r2 = wrapped("2.  oxygen is 50% of methanol's mass but 35% of ethanol's: already partly oxidised, so "
-                     "methanol releases less per gram (22.7 vs 29.8 kJ g⁻¹)", size=LABEL, width=12.0, color=GOOD)
+        r2 = wrapped("2.  different molecular structures give different combustion enthalpies: "
+                     "726 ÷ 32.0 = 22.7 (methanol), versus 1370 ÷ 46.0 = 29.8 kJ g⁻¹ (ethanol)",
+                     size=LABEL, width=12.0, color=GOOD)
         rs = VGroup(r1, r2).arrange(DOWN, buff=0.25, aligned_edge=LEFT).move_to([0, 1.05, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(prompt_c), FadeIn(claim), run_time=0.7)
@@ -700,7 +704,7 @@ class E13S15_PartsCD(NarratedScene):
         with self.beat("b03") as b:
             self.clear(h)
             tally = mark_tally([(2, "a: energy per gram for each fuel"), (4, "b: useful energy and g CO₂ per useful kJ, each fuel"),
-                                (2, "c: one bond can't decide; oxygen fraction (already partly oxidised)"), (2, "d: no; lifecycle stages missing")],
+                                (2, "c: whole molecule determines combustion energy; ΔH/M differs"), (2, "d: no; lifecycle stages missing")],
                                size=SMALL + 2, width=8.0, title="Q26 indicative marks").move_to([0, 0.1, 0])
             self.play(FadeIn(tally), run_time=0.9)
 

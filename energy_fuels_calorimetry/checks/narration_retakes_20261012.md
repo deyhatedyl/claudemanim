@@ -2,10 +2,11 @@
 
 This is an exact comparison of [bNN] spoken text on the chemistry branch before
 the October 12 audit corrections (commit `ebad79350f5e70cf20f28cbdb0a8234b7ee0a3c0`)
-and the corrected scripts. Preserve the learner's selected
-**Gemini Melb Teacher F1 voice** for regenerated audio.
+and the corrected scripts. Preserve **Gemini** and use the learner's updated
+preference: a **warm, natural Melburnian high-school teacher voice**;
+the prior exact **Melb Teacher F1** ID is no longer required.
 
-## Exactly nine changed narration beats
+## Ten changed narration beats (original nine plus post-render Q26 correction)
 
 | Episode | Beat | Why narration must be refreshed |
 |---|---|---|
@@ -16,16 +17,18 @@ and the corrected scripts. Preserve the learner's selected
 | E12 | E12S02.b02 | Octane: 5470 ÷ 114 = 48.0 kJ/g |
 | E12 | E12S04.b01 | Ethanol: 1367 kJ/mol, approximately 29.7 kJ/g in the current data-book comparison |
 | E12 | E12S09.b03 | A lower-carbon claim needs lifecycle evidence |
+| E13 | E13S15.b01 | Remove an overgeneralisation that oxygen atoms release no combustion energy; explain Q26 from the whole reaction, supplied molar enthalpies and molar masses |
 | E14 | E14S17.b03 | Divide reaction heat by the requested molar basis, normally reaction extent for per-mole-of-reaction as written |
 | E14 | E14S18.b02 | Same distinction when diagnosing an incorrect answer |
 
-Every other `[bNN]` spoken line in those five episodes was unchanged by this
-audit. Original question-specific values (e.g. Q13, Q15, Q26 ethanol
+The first nine beats came from the October 12 audit; Q26 was added after a
+second independent scientific review. Every other `[bNN]` spoken line is
+preserved. Original question-specific values (e.g. Q13, Q15, Q26 ethanol
 `-1370 kJ mol⁻¹`) remain valid because they were **given in those questions**.
 
 ## Rendering/synchronisation requirements
 
-1. Export the nine **exact updated beat texts** from current `scripts/epNN.md`.
+1. Export the ten **exact updated beat texts** from current `scripts/epNN.md`.
    Record only these segments with the same voice. Do not substitute the
    original recordings for beats whose words or numbers changed.
 2. Recover original Archive 7–14 scene WAVs privately from ChatGPT Library.

@@ -178,7 +178,11 @@ class NarratedScene(Scene):
         """Frame, caption, header and header-pill collisions at each completed beat."""
         out = []
         family = [m for root in self.mobjects for m in root.get_family()]
-        headers = [m for m in family if getattr(m, "layout_role", None) == "header"]
+        # Worked solutions deliberately hide the generic scene header and
+        # replace it with the exact active question ribbon. A transparent
+        # header still occupies geometric space, but cannot overlap visually.
+        headers = [m for m in family if getattr(m, "layout_role", None) == "header"
+                   and m[2].get_fill_opacity() > 0.001]
         header_ids = {id(m) for h in headers for m in h.get_family()}
         hw = config.frame_width / 2 - 0.15
         hh = config.frame_height / 2 - 0.05
@@ -190,9 +194,9 @@ class NarratedScene(Scene):
             name = type(m).__name__
             txt = getattr(m, "text", None) or getattr(m, "tex_string", None)
             label = f"{name}({txt[:30]!r})" if isinstance(txt, str) else name
-            if l < -hw or r > hw or tp > hh:
+            if l < -hw or r > hw or tp > hh or bt < -hh:
                 out.append(f"off-frame {label} x[{l:.2f},{r:.2f}] y[{bt:.2f},{tp:.2f}]")
-            elif bt < SAFE_BOTTOM - 0.02:
+            elif bt < SAFE_BOTTOM - 0.02 and getattr(m, "layout_role", None) != "footer":
                 out.append(f"caption-strip {label} bottom {bt:.2f}")
             if id(m) in header_ids:
                 continue

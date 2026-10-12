@@ -30,8 +30,10 @@ LITE_MODEL = "gemini-3.8-flash-lite-tts"
 VOICE_NAME = "Melb Teacher F1"
 DEFAULT_PREFIX = None
 STYLE = (
-    "Clear, warm Australian high-school chemistry teacher explaining to one Year 12 student; "
-    "calm, steady pace; friendly but precise. Aim for about 145 words per minute, slightly "
+    "Warm, natural Melburnian high-school chemistry teacher, speaking English with an "
+    "authentic Melbourne/Victorian Australian accent (not American or British), explaining "
+    "to one Year 12 student; calm, conversational, encouraging and precise. Aim for about 145 "
+    "words per minute, slightly "
     "slower for numbers and equations. Articulate decimal numbers, chemical names and units "
     "clearly. Read the supplied transcript exactly without adding an introduction, commentary "
     "or music. Do not add long thinking pauses; these are inserted separately in the video."
@@ -64,6 +66,11 @@ def selected_jobs(prefix: str, use_beats: bool) -> list[tuple[str, str]]:
 
 
 def voice_id(args) -> tuple[str, str]:
+    studio = getattr(args, "studio_voice", None)
+    if studio:
+        if getattr(args, "voice_id", None) or getattr(args, "voice_file", None):
+            raise ValueError("Choose a studio voice OR a custom voice, not both.")
+        return studio.strip(), f"Gemini studio voice: {studio.strip()}"
     if args.voice_id:
         return args.voice_id.strip(), "explicit voice ID"
     if os.environ.get("GEMINI_TTS_VOICE_ID", "").strip():
@@ -207,6 +214,7 @@ def parse_args(argv=None):
     p.add_argument("--dry-run", action="store_true", help="list files; no key, SDK or API calls needed")
     p.add_argument("--voice-file", help="path to your existing voice_ids.txt")
     p.add_argument("--voice-id", help="use your existing voice ID directly")
+    p.add_argument("--studio-voice", help="prebuilt Gemini voice, e.g. Sulafat (warm); no saved custom voice required")
     p.add_argument("--output", type=Path, default=ROOT / "audio" / "raw")
     p.add_argument("--interval", type=float, default=21.0,
                    help="minimum seconds between request starts (default: 21)")

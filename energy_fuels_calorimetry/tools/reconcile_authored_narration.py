@@ -29,6 +29,7 @@ from shared.script_parser import load_episode
 AUDITED_RETAKES = {
     "E06S04.b04", "E07S12.b01", "E08S06.b06",
     "E12S02.b01", "E12S02.b02", "E12S04.b01", "E12S09.b03",
+    "E13S15.b01",
     "E14S17.b03", "E14S18.b02",
 }
 LINE_RE = re.compile(r"^(\[(b\d\d)(?:\s+[^]]+)?\]\s*)(.*)$")

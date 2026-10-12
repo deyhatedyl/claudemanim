@@ -1,8 +1,9 @@
-"""Regenerate only the nine chemistry-audit narration changes with Gemini.
+"""Regenerate only the ten reviewed chemistry narration corrections with Gemini.
 
-Uses the same Gemini TTS request, model and Melb Teacher F1 voice selection as
-the user's original narration_eNN.py files. Existing unchanged recordings are
-left intact. Output is local/private and excluded from version control.
+Uses Gemini 3.8 Flash TTS with a warm prebuilt voice and Melbourne-accent
+style instruction, as requested after the custom-F1-voice requirement was
+relaxed. Existing unchanged recordings are left intact. Output is local,
+private and excluded from version control.
 
 Examples:
   python tools/gemini_audit_retakes.py --dry-run
@@ -30,7 +31,7 @@ from tools import narration_runner as gemini
 def prepare() -> list[dict]:
     beats = {
         beat.key: beat
-        for episode in ("E06", "E07", "E08", "E12", "E14")
+        for episode in ("E06", "E07", "E08", "E12", "E13", "E14")
         for beat in load_episode(episode).beats()
     }
     missing = AUDITED_RETAKES - beats.keys()
@@ -47,6 +48,8 @@ def main() -> int:
     ap.add_argument("--lite", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--voice-file", type=Path)
+    ap.add_argument("--studio-voice", default="Sulafat",
+                    help="Gemini prebuilt warm voice; default Sulafat (use with an Australian-accent style)")
     ap.add_argument("--interval", type=float, default=21.0)
     args = ap.parse_args()
     gemini.BEATS = prepare()
@@ -57,6 +60,8 @@ def main() -> int:
         params += ["--lite"]
     if args.voice_file:
         params += ["--voice-file", str(args.voice_file)]
+    else:
+        params += ["--studio-voice", args.studio_voice]
     if args.dry_run:
         params += ["--dry-run"]
     elif not (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")):
@@ -75,7 +80,7 @@ def main() -> int:
     (output / "segments.json").write_text(json.dumps(segments, indent=2))
     print(f"Gemini clips ready ({len(segments)}): {output}")
     print(f"Import: python tools/import_manual_audio.py "
-          f"--segments {output / 'segments.json'} --episodes E06 E07 E08 E12 E14")
+          f"--segments {output / 'segments.json'} --episodes E06 E07 E08 E12 E13 E14")
     return 0
 
 

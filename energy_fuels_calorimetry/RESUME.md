@@ -1,47 +1,3 @@
-## Visual layout re-audit and narration handoff — 12 October 2026
-
-**The user noticed overlapping text and graphics in the Episode 14 full-HD SILENT
-preview and asked to fix that and the rest of the affected series, then give
-a Mac Terminal command to produce the final Gemini narration clips.**
-
-- `shared/active_question.py:active_part_ribbon` now puts the **exact original
-  active lettered sub-question** into the top title band, with readable sourced
-  values; unused generic headings are hidden in E07 Q14, E13 Q25/Q26 and E14
-  Q27/Q28 scenes.
-- `shared/workshop.py:tally_text` puts indicative marks in the **bottom-right
-  margin**, where they cannot overlap the question or the top of graphs.
-- E14 specific geometry refinements: Q27 temperature graph lowered to clear
-  the prompt; Q28 comparison table lowered; the incorrect-CF explanation and
-  95% claim label separated from each other and the table.
-- E13 Q26 misleading graph header space cleared; E07 Q14 mixed-gas worked
-  prompt moved clear of the energy and amount diagrams.
-- All E14S05/S06/S07/S08/S10/S13/S14/S15, E13S06/S08/S09/S13/S15 and
-  E07S10/S11 scene stills rendered successfully on the Mac and were
-  individually inspected; discovered collisions were fixed and rerendered.
-  E08 Q15/Q16 and recovered E09 Q18 were spot checked as well.
-- 337 independent chemistry checks and the original-question visual-data
-  checks passed. E14S14 was explicitly rechecked after its last collision fix.
-- GitHub Actions full 1920×1080 / 30fps silent visual rerender (three
-  affected episodes E07, E13 and E14), with MP4 decoding, layout and timing
-  validation: https://github.com/deyhatedyl/claudemanim/actions/runs/38234850646 .
-  Treat the workflow as **running** until it explicitly reports success.
-- The original narration WAVs are locally archived. The nine changed audit
-  beats require Gemini with the user's **Melb Teacher F1** voice. No Karen,
-  generic system voice or substitute model is authorized.
-- `tools/openrouter_gemini_retakes.py` accepts a private
-  `OPENROUTER_API_KEY`; run `--check-auth`, then `--test`, then the
-  full command. ZIP only the generated `audio/gemini_retakes/*.wav`, and
-  upload it in the chat. The previously exposed key returned HTTP 401; it
-  must NOT be reused. A replacement must be set privately in Terminal.
-- **No narrated 1080p MP4s are claimed complete yet**: after Gemini
-  recordings arrive, align individual beats to actual speech timestamps,
-  re-render 1080p, inspect transitions and deliver complete narrated MP4s.
-- The native Gemini runner now rejects stale caches when the script text,
-  model or custom voice differs and has offline regression tests.
-- Episode 3 must remain unchanged.
-
----
-
 ## Continuation 12 October 2026 — source and first render checks
 
 The 12 October chemistry audit is available in the learner's ChatGPT file Library
@@ -157,7 +113,7 @@ The original archived scene WAV files remain unmodified.
 - The original voice ID exists in the user's private
   `Electrochemistry/voice_samples_melb/voice_ids.txt` and is resolved by
   `tools/narration_runner.py`.
-- `tools/gemini_audit_retakes.py` prepares only the **nine** chemistry-audit
+- `tools/gemini_audit_retakes.py` prepares only the **ten** reviewed chemistry
   narration changes, preserving all other authored speech. Its dry run
   passed for `gemini-3.8-flash-tts` and the original Melb Teacher F1 voice.
 - The connected workspace presently has no `GEMINI_API_KEY` or
@@ -178,5 +134,61 @@ The original archived scene WAV files remain unmodified.
   stimulus audit and Q25/Q26 preview stills passed. Full revised 1080p
   narrated episodes have **not yet been produced**; more render and audio
   synchronization checks are required.
+
+## Subsequent QA update — October 12 (after 1080p cloud review)
+
+- Final-layout cloud run 38234850646 successfully rendered E07/E13/E14 at
+  1080p30 and assembled silent previews, but strict validation flagged hidden
+  replaced headers, footer tallies, and the E14 time-axis label. The layout
+  detector now ignores transparent headers, recognises intentional footer
+  tallies without exempting ordinary content, and still enforces off-frame
+  bounds. E14 graph height was adjusted after inspecting the actual still.
+- E13 Q25 part d now explicitly displays `57.0 - 17.0 = 40.0 °C` before
+  substituting into `q = mcΔT`. Independent Q26 scientific review found the
+  original oxygen-fraction wording too categorical. Q26 scene, answer and
+  spoken script now use whole-molecule combustion enthalpies and molar masses.
+  **This requires an additional Gemini retake `E13S15.b01`: ten in total.**
+- Four layout regression tests pass; 337 chemistry anchor checks, question
+  stimuli verification, Gemini cache tests and Python compilation pass.
+- The original 161 WAV symlinks remain available locally. Initial E04S01
+  original-speech alignment passed with 0.962 recognition similarity. Only
+  E07 Q13 and E08 Q15 had been imported into the active beat manifest prior
+  to the new E04 alignment test.
+- The Mac checkout must not be hard-reset: remote branch has newer API-made
+  commits, local HEAD differs, and private/QA files remain in the working tree.
+- A final narrated 1080p export still requires complete checked audio imports,
+  successful custom Melb Teacher F1 Gemini retakes, and rendered-frame QA.
+
+## Updated user voice preference — October 12, later message
+
+The learner has explicitly **relaxed** the earlier F1-only constraint:
+"we dont need f1 melbourne tea cher voice, just a melbournian warm teacher voice."
+Keep Gemini synthesis and a warm, natural Melbourne/Victorian Australian
+Chemistry-teacher delivery. The retired exact Melb Teacher F1 voice ID is
+**not** required for corrected audio. The corrected-beat tools now default
+to Gemini's prebuilt warm **Sulafat** voice, with an explicit
+Melbourne/Australian accent and Year 12 teaching style for native Google
+speech_metadata. Choose/confirm a short audible sample before recording all
+ten changed beats: a preset's warm timbre alone cannot prove its accent.
+An existing private Google API key or OpenRouter key is still required to
+actually generate the corrected WAVs; no key is present in this workspace.
+Preserve existing good original WAVs, and never print credentials.
+
+## First complete narrated full-HD output — Episode 4
+
+The ten original E04 scene WAVs were force-aligned to the verified authored
+transcript, with recognition similarity 0.962–0.995. All 42 beats were
+imported and E04 rendered/assembled at 1080p30 with measured speech timing.
+
+- Local MP4: `delivery/E04/E04-Chemistry-Narrated-1080p.mp4`.
+- Assembly: 42/42 audio-backed beats, final and narrated, 770.83 seconds.
+- Strict geometry: ten scenes, no reported layout problems.
+- Full FFmpeg video/audio decoding succeeded; FFprobe found H.264
+  1920×1080 at 30 fps, AAC audio, zero embedded subtitle tracks.
+- Eight sampled frames across the completed movie showed no obvious overlaps.
+  A continuous human watch-through is still recommended.
+
+The existing original Gemini recording is retained; no new narration is
+needed for E04. The studio-voice preference applies to future retakes.
 
 ---
