@@ -300,7 +300,7 @@ class E08S06_Q15(NarratedScene):
         with self.beat("b05") as b:
             pred = T("predict: water gained less than the fuel released → below 100%", size=SMALL - 2, color=UNKNOWN).move_to([1.8, -1.63, 0])
             self.play(FadeIn(pred), run_time=0.6)
-            l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.26, 0])
+            l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.18, 0])
             l6.scale_to_fit_width(min(8.3, l6.width))
             b.until(0.35)
             self.play(Write(l6), Create(result_box(l6)), run_time=1.3)
