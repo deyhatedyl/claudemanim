@@ -255,13 +255,14 @@ class E06S04_Incomplete(NarratedScene):
             self.warn = VGroup(wp, warn)
         with self.beat("b04") as b:
             self.play(FadeOut(self.warn), run_time=0.4)
-            l1 = M(r"1.00\ \text{mol}\ \ce{CH4} + 1.60\ \text{mol}\ \ce{O2}:\ \text{complete needs } 2.00\ \text{mol}"
-                   r"\ \Rightarrow\ \text{must be incomplete}", size=EQ_SMALL - 8, color=UNKNOWN).move_to([0, 1.95, 0])
-            l2 = M(r"\text{no soot} \Rightarrow\ 0.20\ \ce{CO2} + 0.80\ \ce{CO} + 2.00\ \ce{H2O}\ \ (\text{mol})",
-                   size=EQ_SMALL - 8, color=GOOD).move_to([0, 1.2, 0])
+            l1 = M(r"1.00\ \text{mol}\ \ce{CH4} + 1.60\ \text{mol}\ \ce{O2}:\ \text{complete needs } 2.00\ \text{mol}", size=EQ_SMALL - 8, color=UNKNOWN).move_to([0, 1.95, 0])
+            l2 = M(r"\text{Assume all methane and oxygen react; only }\ce{CO2},\ce{CO},\ce{H2O}\text{ form}",
+                   size=EQ_SMALL - 10, color=UNKNOWN).move_to([0, 1.2, 0])
+            l3 = M(r"0.20\ \ce{CO2} + 0.80\ \ce{CO} + 2.00\ \ce{H2O}\quad(\text{mol})",
+                   size=EQ_SMALL - 8, color=GOOD).move_to([0, 0.50, 0])
             self.play(Write(l1), run_time=1.2)
             b.until(0.55)
-            self.play(Write(l2), run_time=1.1)
+            self.play(Write(l2), Write(l3), run_time=1.1)
 
 
 # =====================================================================================
@@ -372,7 +373,7 @@ class E06S06_Exhaust(NarratedScene):
                       RoundedRectangle(width=1.4, height=0.7, corner_radius=0.1, color=SURR, stroke_width=2.5).move_to(cooler.get_bottom() + 1.25 * DOWN))
         tl = T("liquid water removed", size=SMALL + 1, color=SURR).next_to(trap[1], DOWN, buff=0.1)
         dry = RoundedRectangle(width=1.9, height=1.2, corner_radius=0.15, color=GOOD, stroke_width=3).move_to([5.6, -0.6, 0])
-        dl = wrapped("dry gas measured at SLC", size=SMALL + 1, width=2.2, color=GOOD).next_to(dry, DOWN, buff=0.1)
+        dl = wrapped("dry gas after drying, at SLC", size=SMALL + 1, width=2.2, color=GOOD).next_to(dry, DOWN, buff=0.1)
         p2 = Line(cooler.get_right(), [dry.get_left()[0] - 0.2, 1.0, 0], color=GOOD, stroke_width=3)
         p3 = Arrow([dry.get_left()[0] - 0.2, 1.0, 0], [dry.get_center()[0], dry.get_top()[1], 0], buff=0, color=GOOD, stroke_width=3)
         with self.beat("b02") as b:
@@ -392,7 +393,7 @@ class E06S06_Exhaust(NarratedScene):
         cols = VGroup(VGroup(TB("Formed by the reaction", size=LABEL, color=SYSTEM),
                              T("CO₂(g)", size=LABEL), T("H₂O(g)  (vapour, hot)", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.1),
                       VGroup(TB("Measured after cooling", size=LABEL, color=GOOD),
-                             T("CO₂(g) at SLC", size=LABEL), T("water removed as liquid", size=LABEL, color=MUTED)).arrange(DOWN, aligned_edge=LEFT, buff=0.1))
+                             T("CO₂(g) at SLC", size=LABEL), T("remaining vapour dried separately", size=LABEL, color=MUTED)).arrange(DOWN, aligned_edge=LEFT, buff=0.1))
         cols.arrange(RIGHT, buff=1.0, aligned_edge=UP).move_to([-1.9, -2.0, 0])
         with self.beat("b03") as b:
             self.play(FadeOut(tl), FadeIn(cols[0]), run_time=0.7)
