@@ -98,30 +98,30 @@ class PartPrompt(VGroup):
 
 def active_part_ribbon(qid: str, letter: str,
                        rows: list[tuple[str, str, str, str]] | None = None,
-                       *, width: float = 12.5, y: float = 2.34,
-                       max_height: float = 0.55) -> VGroup:
+                       *, width: float = 12.0, y: float = 2.89,
+                       max_height: float = 0.92) -> VGroup:
     """Full-width alternative for scenes whose original diagrams occupy both sides.
 
     The exact active part wording is shown first; a small selection of inputs
     accompanies it. Scene authors must position diagrams beneath the ribbon.
     """
     original, marks = exact_part(qid, letter)
-    heading = TB(f"{qid} {letter}.", size=SMALL - 2, color=SYSTEM)
-    wording = T(original, size=SMALL - 3, color=TEXT)
+    heading = TB(f"{qid} {letter}.", size=SMALL + 1, color=SYSTEM)
+    wording = T(original, size=SMALL, color=TEXT)
     title = VGroup(heading, wording).arrange(RIGHT, buff=0.20, aligned_edge=DOWN)
     if title.width > width - 0.35:
         title.scale((width - 0.35) / title.width)
     values = VGroup()
     for key, label, value, source in (rows or []):
         colour, source_label = _source_style(source)
-        v = T(f"{label}: {value} ({source_label.lower()})", size=SMALL - 7, color=colour)
+        v = T(f"{label}: {value} ({source_label.lower()})", size=SMALL - 4, color=colour)
         values.add(v)
     if len(values):
         values.arrange(RIGHT, buff=0.34)
         if values.width > width - 0.4:
             values.scale((width - 0.4) / values.width)
     elements = [title] + ([values] if len(values) else [])
-    body = VGroup(*elements).arrange(DOWN, aligned_edge=LEFT, buff=0.035)
+    body = VGroup(*elements).arrange(DOWN, aligned_edge=LEFT, buff=0.08)
     if body.height > max_height - 0.15:
         body.scale((max_height - 0.15) / body.height)
     background = RoundedRectangle(width=width, height=body.height + 0.14,

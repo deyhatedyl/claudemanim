@@ -507,6 +507,7 @@ class E07S09_NewVsInlet(NarratedScene):
 class E07S10_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_a = active_part_ribbon("Q14", "a", [
             ("fuel", "Fuel", "12.4 L, 80.0% CH₄", "question"),
             ("air", "Air", "90.0 L, 21.0% O₂", "question")])
@@ -560,6 +561,7 @@ class E07S10_Q14a(NarratedScene):
 class E07S11_Q14b(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 2)")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_d = active_part_ribbon("Q14", "d", [
             ("methane", "CH₄ reacted", "0.3810 mol", "earlier result")])
         prompt_e = active_part_ribbon("Q14", "e", [

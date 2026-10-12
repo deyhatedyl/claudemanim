@@ -209,6 +209,7 @@ class E13S05_Plan(NarratedScene):
 class E13S06_PartsAC(NarratedScene):
     def construct(self):
         h = header("Q25 parts a–c")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_a = active_part_ribbon("Q25", "a", [
             ("fuel", "Fuel", "6.20 L, 90.0% CH₄", "question"),
             ("air", "Air", "60.0 L, 21.0% O₂", "question")])
@@ -313,6 +314,7 @@ class E13S08_PartsDE(NarratedScene):
     def construct(self):
         from shared.motion import flow
         h = header("Q25 parts d–e")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_d = active_part_ribbon("Q25", "d", [
             ("methane", "CH₄ reacted", "0.225 mol", "earlier result"),
             ("enthalpy", "|ΔH|", "890 kJ mol⁻¹", "question"),
@@ -382,6 +384,7 @@ class E13S08_PartsDE(NarratedScene):
 class E13S09_PartsFG(NarratedScene):
     def construct(self):
         h = header("Q25 parts f–g")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_f = active_part_ribbon("Q25", "f", [
             ("formed", "CO₂ formed", "0.225 mol", "earlier result"),
             ("inlet", "CO₂ inlet", "0.0250 mol", "earlier result")])
@@ -542,6 +545,7 @@ class E13S12_Q26Attempt(NarratedScene):
 class E13S13_PartsAB(NarratedScene):
     def construct(self):
         h = header("Q26 parts a–b")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_a = active_part_ribbon("Q26", "a", [
             ("methanol", "Methanol", "−726 kJ/mol, M=32.0", "question"),
             ("ethanol", "Ethanol", "−1370 kJ/mol, M=46.0", "question")])
@@ -653,10 +657,11 @@ class E13S14_WrongBases(NarratedScene):
 class E13S15_PartsCD(NarratedScene):
     def construct(self):
         h = header("Q26 parts c–d")
+        h.set_opacity(0)  # active original subquestion occupies the title band
         prompt_c = active_part_ribbon("Q26", "c")
         prompt_d = active_part_ribbon("Q26", "d")
         claim = T("“Both contain an O–H bond, so they release equal energy per gram.”", size=LABEL + 2)
-        claim.move_to([0, 2.15, 0])
+        claim.move_to([0, 1.94, 0])
         r1 = T("1.  one shared bond can't decide: it depends on the whole molecule's combustion", size=LABEL, color=GOOD)
         r2 = wrapped("2.  oxygen is 50% of methanol's mass but 35% of ethanol's: already partly oxidised, so "
                      "methanol releases less per gram (22.7 vs 29.8 kJ g⁻¹)", size=LABEL, width=12.0, color=GOOD)

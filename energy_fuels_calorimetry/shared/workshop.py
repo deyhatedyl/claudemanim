@@ -69,7 +69,7 @@ def boxes_for(line: Mobject, n: int = 1, marks: int = 1) -> VGroup:
 
 
 def tally_text(qid: str, got: int, total: int) -> Text:
-    return T(f"{qid} marks shown: {got} / {total}", size=SMALL + 1, color=GOOD).to_corner(UR, buff=0.4)
+    return T(f"{qid} marks shown: {got} / {total}", size=SMALL, color=GOOD).to_corner(DR, buff=0.22)
 
 
 def blank() -> Dot:
