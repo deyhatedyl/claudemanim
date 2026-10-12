@@ -69,6 +69,14 @@ def main():
     a = ap.parse_args()
     ep = a.episode.upper()
     classes = episode_scenes(ep)
+    # Manim's guarantee_existence uses mkdir without exist_ok. If workers start
+    # simultaneously, they can race to create the shared episode output path.
+    # Create all shared output roots once before launching parallel processes.
+    tag = QUALITY[a.quality][1]
+    for kind in ("videos", "images"):
+        (C.RENDERS / "media" / kind / f"ep{ep[1:].lower()}" / tag).mkdir(
+            parents=True, exist_ok=True
+        )
     if a.still is not None:
         sel = [c for c in classes if not a.still or c.split("_")[0] in a.still]
         failures = []
