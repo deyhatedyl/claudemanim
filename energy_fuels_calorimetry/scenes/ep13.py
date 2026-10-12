@@ -210,7 +210,7 @@ class E13S06_PartsAC(NarratedScene):
         h = header("Q25 parts a–c")
         prompt = question_ribbon("Q25", "a–c", "fuel 6.20 L: 90% CH₄; air 60.0 L: 21% O₂; SLC 24.8 L/mol; M(O₂)=32.0")
         tl = tally_text("Q25", 0, 15)
-        ys = [2.05, 1.35, 0.65, -0.35, -1.3, -2.05]
+        ys = [1.88, 1.2, 0.52, -0.4, -1.32, -2.08]
         l1 = work(r"n_{\text{mix}} = 6.20 \div 24.8 = 0.250\ \text{mol}", ys[0], MOL_C)
         l2 = work(r"n(\ce{CH4}) = 0.900 \times 0.250 = 0.225\ \text{mol}", ys[1], MOL_C)
         l3 = work(r"n(\ce{O2}) = 0.210 \times 60.0 \div 24.8 = 12.6 \div 24.8 = 0.508\ \text{mol}", ys[2], MOL_C)
@@ -305,8 +305,8 @@ class E13S08_PartsDE(NarratedScene):
         h = header("Q25 parts d–e")
         prompt = question_ribbon("Q25", "d–e", "n(CH₄)=0.225 mol (a); |ΔH|=890 kJ/mol (question); water 800.0 g, ΔT=40.0 °C", "earlier results")
         tl = tally_text("Q25", 7, 15)
-        l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 200\ \text{kJ released}", 2.15, ENERGY_C)
-        l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.3, USEFUL)
+        l1 = work(r"E = 0.225 \times 890 = 200.25\ \text{kJ} \approx 200\ \text{kJ released}", 1.90, ENERGY_C)
+        l2 = work(r"q = 800.0 \times 4.18 \times 40.0 = 133\,760\ \text{J} = 133.76\ \text{kJ}", 1.26, USEFUL)
         td, te = part_tag("d", l1), None
         b1, b2 = boxes_for(l1), boxes_for(l2)
         sc = 0.03
@@ -370,7 +370,7 @@ class E13S09_PartsFG(NarratedScene):
                      M(r"1 \times 0.225 = 0.225\ \text{mol}", size=WK, color=MOL_C)).arrange(DOWN, buff=0.12)
         inl = VGroup(T("inlet CO₂ (passes through)", size=SMALL + 1, color=MUTED),
                      M(r"0.100 \times 0.250 = 0.0250\ \text{mol}", size=WK, color=MOL_C)).arrange(DOWN, buff=0.12)
-        new.move_to([-3.6, 1.85, 0])
+        new.move_to([-3.6, 1.67, 0])
         inl.move_to([-3.6, 0.45, 0])
         tot = M(r"0.250\ \text{mol} \times 24.8 = 6.20\ \text{L}", size=WK + 2, color=VOL_C).move_to([2.9, 1.15, 0])
         a1 = Arrow(new.get_right(), tot.get_left() + 0.15 * UP, buff=0.2, color=CO2E, stroke_width=4)
