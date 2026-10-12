@@ -380,29 +380,43 @@ class E08S08_Q16(NarratedScene):
     def construct(self):
         h = header("Practice Q16")
         qc = question_card("Q16").move_to([0, -0.10, 0])
+        dock = WorkedQuestionSidebar(
+            "Q16", "Find the fuel mass needed to deliver useful heat.",
+            [("water", "Water mass", "180.0 g", "question"),
+             ("temperature", "Water start → end", "18.0 → 78.0 °C", "question"),
+             ("efficiency", "Efficiency", "45.0%", "question"),
+             ("fuel", "Energy of fuel", "29.8 kJ g⁻¹", "question"),
+             ("c", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 data book")],
+            "a useful q  •  b chemical input  •  c fuel mass  •  d explain trap",
+            width=3.85
+        )
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("minimum fuel mass (g)")
-        colL = -6.2
+        colL = -2.23
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
-            return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
+            ln = M(tex, size=s, color=col)
+            ln.scale_to_fit_width(min(8.35, ln.width))
+            return ln.move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
         l1 = L(r"q = 180.0 \times 4.18 \times 60.0 = 45\,144\ \text{J} = 45.144\ \text{kJ}", 1.75, USEFUL)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(dock), run_time=0.5)
             dt = T("ΔT = 78.0 − 18.0 = 60.0 °C", size=LABEL, color=TEMP_C).move_to([0, 2.35, 0]).align_to([colL, 0, 0], LEFT)
-            self.play(FadeIn(dt), run_time=0.6)
+            self.play(FadeIn(dt), Indicate(dock.focus("temperature"), color=SURR), run_time=0.6)
             b.until(0.35)
-            self.play(Write(l1), run_time=1.3)
+            self.play(Write(l1), Indicate(dock.focus("water"), color=SURR), run_time=1.3)
         l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 0.85, SYSTEM)
         with self.beat("b03") as b:
-            self.play(Write(l2), run_time=1.2)
-            bigger = T("larger than the useful heat ✓", size=SMALL + 1, color=GOOD).next_to(l2, RIGHT, buff=0.3)
+            self.play(Write(l2), Indicate(dock.focus("efficiency"), color=SURR), run_time=1.2)
+            bigger = T("calculated input is larger than useful heat ✓", size=SMALL - 1, color=GOOD).move_to([1.8, 0.33, 0])
             self.play(FadeIn(bigger), run_time=0.4)
         l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
-            self.play(Write(l3), run_time=1.3)
+            self.play(Write(l3), Indicate(dock.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
+            self.play(FadeOut(dock), FadeOut(l1), FadeOut(l2), FadeOut(l3), FadeOut(dt), FadeOut(bigger),
+                      run_time=0.4)
             w = wrong_panel("Efficiency used the wrong way", [M(r"\frac{45.144 \times 0.450}{29.8} = 0.682\ \text{g}", size=EQ_SMALL - 8, color=TEXT)], width=5.4)
             w.move_to([-3.2, -1.55, 0])
             minb = right_panel("100% efficient minimum", [M(r"\frac{45.144}{29.8} = 1.515\ \text{g}", size=EQ_SMALL - 8, color=TEXT),
