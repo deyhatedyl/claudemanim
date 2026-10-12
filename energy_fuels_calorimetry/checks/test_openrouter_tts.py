@@ -78,6 +78,15 @@ class AuthTests(unittest.TestCase):
         self.assertNotIn(voice, str(caught.exception))
         self.assertNotIn("PLACEHOLDER_KEY", str(caught.exception))
 
+    def test_nested_provider_metadata_explains_generic_error(self):
+        payload = {"error": {
+            "message": "Provider returned an error",
+            "metadata": {"raw": json.dumps({"error": {
+                "message": "Unknown voice: voice_PRIVATENOTFOUND"}})}}}
+        reason = tts.safe_provider_reason(json.dumps(payload).encode())
+        self.assertIn("Unknown voice", reason)
+        self.assertNotIn("PRIVATENOTFOUND", reason)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -58,15 +58,25 @@ def safe_provider_reason(body: bytes, *, voice: str = "", input_text: str = "") 
     raw = metadata.get("raw", "")
     if not isinstance(message, str):
         message = ""
-    if not message and isinstance(raw, str):
+    upstream_message = ""
+    if isinstance(raw, str):
         try:
             upstream = json.loads(raw)
             if isinstance(upstream, dict):
                 nested = upstream.get("error", upstream)
                 if isinstance(nested, dict):
-                    message = nested.get("message", "") or ""
+                    upstream_message = nested.get("message", "") or ""
         except ValueError:
-            message = raw
+            upstream_message = raw
+    elif isinstance(raw, dict):
+        nested = raw.get("error", raw)
+        if isinstance(nested, dict):
+            upstream_message = nested.get("message", "") or ""
+    if isinstance(upstream_message, str) and upstream_message:
+        # Upstream details can be more useful than generic OpenRouter wording.
+        if not message or any(x in message.casefold() for x in (
+                "provider returned", "provider error", "bad request", "validation failed")):
+            message = upstream_message
     if not isinstance(message, str) or not message.strip():
         return "No detailed error message was supplied."
     # Remove exact user-provided inputs and identifiable identifiers.
