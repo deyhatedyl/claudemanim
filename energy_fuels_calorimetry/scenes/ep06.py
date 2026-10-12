@@ -13,6 +13,7 @@ from manim import *  # noqa: E402,F403
 
 from shared.components import (atom, bullets, mark_tally, question_card, result_box, right_panel, table,  # noqa: E402
                                title_card, wrapped, wrong_panel)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (ATOM_COLORS, BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MOL_C,  # noqa: E402
                           MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
@@ -269,13 +270,23 @@ class E06S04_Incomplete(NarratedScene):
 class E06S05_Q11(NarratedScene):
     def construct(self):
         h = header("Practice Q11")
+        h.set_opacity(0)  # original part wording replaces the redundant title
         qc = question_card("Q11").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q11", "a", [
+            ("reactants", "Reactants", "1.00 mol ethanol; 2.50 mol O₂", "question")])
+        part_b = active_part_ribbon("Q11", "b", [
+            ("water", "H₂O formed", "3.00 mol", "earlier result")])
+        part_c = active_part_ribbon("Q11", "c", [
+            ("products", "CO₂, CO", "1.00 mol each", "earlier result"),
+            ("water", "H₂O", "3.00 mol", "earlier result")])
+        part_d = active_part_ribbon("Q11", "d", [
+            ("available", "O₂ available", "2.50 mol", "question"),
+            ("complete", "O₂ for complete combustion", "3.00 mol", "calculated in this part")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        sk = M(r"\ce{C2H5OH}", "+", r"2.5\,\ce{O2}", r"\ce{->}", r"x\,\ce{CO2}", "+", r"y\,\ce{CO}", "+", r"z\,\ce{H2O}", size=EQ).move_to([0, 2.3, 0])
-        req = requested("amounts of each product")
+        sk = M(r"\ce{C2H5OH}", "+", r"2.5\,\ce{O2}", r"\ce{->}", r"x\,\ce{CO2}", "+", r"y\,\ce{CO}", "+", r"z\,\ce{H2O}", size=EQ).move_to([0, 1.98, 0])
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
             self.play(Write(sk), run_time=1.4)
             given = T("all ethanol and O₂ react · only CO₂, CO, H₂O · no soot", size=LABEL, color=MUTED).next_to(sk, DOWN, buff=0.2)
             self.play(FadeIn(given), run_time=0.6)
@@ -292,7 +303,7 @@ class E06S05_Q11(NarratedScene):
         with self.beat("b03") as b:
             self.play(FadeOut(self.given), Write(Hl), run_time=1.0)
         with self.beat("b04") as b:
-            self.play(Write(Cl), run_time=0.9)
+            self.play(Write(Cl), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.9)
         with self.beat("b05") as b:
             hl = T("1 from ethanol!", size=SMALL + 1, color=UNKNOWN)
             self.play(Write(Ol), run_time=1.6)
@@ -306,17 +317,17 @@ class E06S05_Q11(NarratedScene):
             b.until(0.6)
             self.play(FadeIn(amts), run_time=0.6)
         with self.beat("b07") as b:
-            self.clear(h, req)
+            self.clear(h)
             fin = M(r"\ce{C2H5OH(l)} + 2\tfrac{1}{2}\ce{O2(g)} \ce{->} \ce{CO2(g)} + \ce{CO(g)} + 3\ce{H2O(g)}", size=EQ_SMALL, color=GOOD)
             fin.move_to([0, 1.3, 0])
             comp = M(r"\text{complete: } \ce{C2H5OH} + 3\ce{O2} \ce{->} 2\ce{CO2} + 3\ce{H2O}", size=EQ_SMALL - 4).move_to([0, 0.1, 0])
             diff = T("3.00 mol O₂ needed for complete combustion; only 2.50 mol here", size=LABEL, color=UNKNOWN).move_to([0, -0.8, 0])
-            self.play(Write(fin), run_time=1.4)
+            self.play(Write(fin), FadeIn(part_c), run_time=1.4)
             b.until(0.5)
-            self.play(Write(comp), run_time=1.0)
+            self.play(Write(comp), Succession(FadeOut(part_c), FadeIn(part_d)), run_time=1.0)
             self.play(FadeIn(diff), run_time=0.6)
         with self.beat("b08") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(1, "H balance: 3 H₂O"), (2, "C and O balances: x = y = 1"), (1, "balanced equation"),
                                 (1, "complete needs 3.00 mol O₂")], width=5.6, size=SMALL + 2).move_to([-3.4, 0.4, 0])
             w = wrong_panel("Ethanol's own O forgotten", [M(r"2x + y = 2 \Rightarrow x = 0,\ y = 2", size=EQ_SMALL - 8, color=TEXT)],
@@ -421,13 +432,25 @@ class E06S06_Exhaust(NarratedScene):
 class E06S07_Q12(NarratedScene):
     def construct(self):
         h = header("Practice Q12")
+        h.set_opacity(0)  # exact active part stays visible during the calculations
         qc = question_card("Q12").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q12", "a", [
+            ("methane", "CH₄ burned", "0.250 mol", "question"),
+            ("temp", "Hot exhaust", "600 °C", "question")])
+        part_b = active_part_ribbon("Q12", "b", [
+            ("amounts", "Formed", "0.250 mol CO₂, 0.500 mol H₂O", "earlier result"),
+            ("molar", "M(CO₂), M(H₂O)", "44.0, 18.0 g mol⁻¹", "2026 VCAA Data Book")])
+        part_c = active_part_ribbon("Q12", "c", [
+            ("masses", "Masses calculated", "11.0 g CO₂; 9.00 g H₂O", "earlier result")])
+        part_d = active_part_ribbon("Q12", "d", [
+            ("co2", "CO₂ formed", "0.250 mol", "earlier result"),
+            ("slc", "SLC molar volume", "24.8 L mol⁻¹", "2026 VCAA Data Book")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}", size=EQ_SMALL).move_to([0, 2.35, 0])
+        eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}", size=EQ_SMALL).move_to([0, 1.96, 0])
         tag = T("water is a gas at 600 °C", size=SMALL + 1, color=MUTED).next_to(eq, DOWN, buff=0.1)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), Write(eq), FadeIn(tag), run_time=1.2)
+            self.play(FadeOut(qc), Write(eq), FadeIn(tag), FadeIn(part_a), run_time=1.2)
             r = VGroup(M(r"n(\ce{CO2}) = 0.250\ \text{mol}\ (1:1)", size=EQ_SMALL - 6, color=MOL_C),
                        M(r"n(\ce{H2O}) = 0.500\ \text{mol}\ (1:2)", size=EQ_SMALL - 6, color=MOL_C)).arrange(RIGHT, buff=0.8)
             r.move_to([0, 1.2, 0])
@@ -442,13 +465,15 @@ class E06S07_Q12(NarratedScene):
                        M(r"= 6.20\ \text{L}", size=EQ_SMALL - 6, color=VOL_C)).arrange(DOWN, aligned_edge=LEFT, buff=0.18)
         VGroup(left, right).arrange(RIGHT, buff=1.2, aligned_edge=UP).move_to([0, -0.7, 0])
         with self.beat("b03") as b:
-            self.play(FadeIn(left[0]), Write(left[1]), run_time=1.0)
+            self.play(FadeIn(left[0]), Write(left[1]),
+                      Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             b.until(0.4)
             self.play(Write(left[2]), run_time=1.0)
             b.until(0.75)
-            self.play(Write(left[3]), run_time=0.7)
+            self.play(Write(left[3]), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.7)
         with self.beat("b04") as b:
-            self.play(FadeIn(right[0]), Write(right[1]), run_time=1.0)
+            self.play(FadeIn(right[0]), Write(right[1]),
+                      Succession(FadeOut(part_c), FadeIn(part_d)), run_time=1.0)
             self.play(Write(right[2]), run_time=0.7)
         with self.beat("b05") as b:
             self.clear(h)

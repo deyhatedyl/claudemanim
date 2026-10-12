@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 
 from shared.components import (bullets, mark_tally, question_card, result_box, right_panel, table,  # noqa: E402
                                title_card, wrapped, wrong_panel)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header,
@@ -216,19 +217,32 @@ class E12S05_Normalise(NarratedScene):
 class E12S06_Q23(NarratedScene):
     def construct(self):
         h = header("Practice Q23")
+        h.set_opacity(0)  # exact original part wording takes the title's place
         qc = question_card("Q23").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q23", "a", [
+            ("useful", "Useful heat target", "1.00 MJ", "question"),
+            ("efficiency", "R / S efficiencies", "35.0% / 28.0%", "question")])
+        part_b = active_part_ribbon("Q23", "b", [
+            ("input", "Inputs R / S", "2.857 / 3.571 MJ", "earlier result"),
+            ("energy", "Fuel R / S", "43.0 / 29.0 MJ kg⁻¹", "question")])
+        part_c = active_part_ribbon("Q23", "c", [
+            ("input", "Inputs R / S", "2.857 / 3.571 MJ", "earlier result"),
+            ("emissions", "CO₂-e factors R / S", "80.0 / 45.0 g MJ⁻¹", "question")])
+        part_d = active_part_ribbon("Q23", "d", [
+            ("masses", "Masses R / S", "0.0664 / 0.123 kg", "earlier result"),
+            ("emissions", "Emissions R / S", "229 / 161 g CO₂-e", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("per 1.00 MJ useful heat")
-        hyp = T("hypothetical data", size=SMALL, color=MUTED).next_to(req, DOWN, buff=0.1).align_to(req, RIGHT)
+        hyp = T("hypothetical data", size=SMALL, color=MUTED).move_to([-5.72, 2.18, 0])
         xR, xS = -3.3, 3.3
-        hR = TB("Fossil Fuel R", size=LABEL + 2, color=FOSSIL).move_to([xR, 2.25, 0])
-        hS = TB("Biofuel S", size=LABEL + 2, color=BIO).move_to([xS, 2.25, 0])
+        hR = TB("Fossil Fuel R", size=LABEL + 2, color=FOSSIL).move_to([xR, 1.98, 0])
+        hS = TB("Biofuel S", size=LABEL + 2, color=BIO).move_to([xS, 1.98, 0])
 
         def row(x, tex, y, col):
             return M(tex, size=EQ_SMALL - 8, color=col).move_to([x, y, 0])
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), FadeIn(hyp), FadeIn(hR), FadeIn(hS), run_time=0.7)
+            self.play(FadeOut(qc), FadeIn(part_a), FadeIn(hyp), FadeIn(hR), FadeIn(hS), run_time=0.7)
             r1 = row(xR, r"\text{input} = \frac{1.00}{0.350} = 2.857\ \text{MJ}", 1.5, SYSTEM)
             s1 = row(xS, r"\text{input} = \frac{1.00}{0.280} = 3.571\ \text{MJ}", 1.5, SYSTEM)
             self.play(Write(r1), run_time=1.0)
@@ -237,7 +251,7 @@ class E12S06_Q23(NarratedScene):
         with self.beat("b03") as b:
             r2 = row(xR, r"m = \frac{2.857}{43.0} = 0.0664\ \text{kg}", 0.6, MASS_C)
             s2 = row(xS, r"m = \frac{3.571}{29.0} = 0.123\ \text{kg}", 0.6, MASS_C)
-            self.play(Write(r2), run_time=1.0)
+            self.play(Write(r2), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             b.until(0.45)
             self.play(Write(s2), run_time=1.0)
             less = T("R: less mass", size=SMALL + 1, color=FOSSIL).next_to(r2, DOWN, buff=0.1)
@@ -245,7 +259,7 @@ class E12S06_Q23(NarratedScene):
         with self.beat("b04") as b:
             r3 = row(xR, r"2.857 \times 80.0 = 229\ \text{g CO}_2\text{-e}", -0.35, CO2E)
             s3 = row(xS, r"3.571 \times 45.0 = 161\ \text{g CO}_2\text{-e}", -0.35, CO2E)
-            self.play(Write(r3), run_time=1.0)
+            self.play(Write(r3), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.0)
             b.until(0.45)
             self.play(Write(s3), run_time=1.0)
             lower = T("S: lower lifecycle emissions", size=SMALL + 1, color=BIO).next_to(s3, DOWN, buff=0.1)
@@ -254,7 +268,7 @@ class E12S06_Q23(NarratedScene):
             ev = right_panel("Evaluation", ["False here: R needs less mass, but S emits less for the same useful heat. "
                                             "Mass and emissions measure different things."], width=10.5, size=LABEL)
             ev.move_to([0, -1.88, 0])
-            self.play(FadeIn(ev), run_time=0.9)
+            self.play(FadeIn(ev), Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.9)
             mk = T("marks: 2 inputs · 2 masses · 2 emissions · 1 evaluation", size=SMALL + 1, color=GOOD).to_corner(UL, buff=0.4).shift(0.92 * DOWN)
             b.until(0.75)
             self.play(FadeIn(mk), run_time=0.5)
@@ -438,7 +452,15 @@ class E12S10_Sustainable(NarratedScene):
 class E12S11_Q24(NarratedScene):
     def construct(self):
         h = header("Practice Q24")
+        h.set_opacity(0)  # keep the original active subpart visible instead
         qc = question_card("Q24", size=SMALL + 1, width=13.0, cols=2).move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q24", "a", [
+            ("feedstock", "A / B feedstock", "Edible crop / food waste", "question")])
+        part_b = active_part_ribbon("Q24", "b", [
+            ("energy", "A / B energy", "8 MJ gas / 10 MJ electricity", "question"),
+            ("water", "A / B freshwater", "12 / 20 L", "question")])
+        part_c = active_part_ribbon("Q24", "c")
+        part_d = active_part_ribbon("Q24", "d")
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         rows = [["per kg ethanol", "Process A", "Process B"],
@@ -449,7 +471,7 @@ class E12S11_Q24(NarratedScene):
         tb = table(rows, [3.0, 3.6, 4.6], size=SMALL + 1, row_h=0.5).move_to([0, 1.08, 0])
         sent_y = [-0.95, -1.7]
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(tb), run_time=0.9)
+            self.play(FadeOut(qc), FadeIn(tb), FadeIn(part_a), run_time=0.9)
             s1 = wrapped("1. Feedstock: B uses waste, not an edible crop, so it avoids competing with food and keeps materials in use "
                          "(renewable feedstocks; circular economy).", size=SMALL + 1, width=12.6, color=GOOD)
             s1.move_to([0, sent_y[0], 0]).align_to([-6.0, 0, 0], LEFT)
@@ -462,13 +484,15 @@ class E12S11_Q24(NarratedScene):
                          size=SMALL + 1, width=12.6, color=SURR)
             s2.move_to([0, sent_y[1], 0]).align_to([-6.0, 0, 0], LEFT)
             hl2 = SurroundingRectangle(VGroup(*tb[1][6:12]), color=SURR, buff=0.05)
-            self.play(ReplacementTransform(self.hl, hl2), FadeIn(s2), run_time=1.0)
+            self.play(ReplacementTransform(self.hl, hl2), FadeIn(s2),
+                      Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             self.hl = hl2
         with self.beat("b04") as b:
             s3 = wrapped("3. Trade-off: B wins on feedstock and CO₂ use; A wins on energy and water. Using CO₂ is not permanent storage.",
                          size=SMALL + 1, width=12.6, color=UNKNOWN)
             s3.next_to(s2, DOWN, buff=0.18).align_to(s2, LEFT)
-            self.play(FadeOut(self.hl), FadeIn(s3), run_time=1.0)
+            self.play(FadeOut(self.hl), FadeIn(s3),
+                      Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.0)
             self.sents = VGroup(s3)
         with self.beat("b05") as b:
             lim = wrong_panel("Can't conclude total lifecycle emissions", ["no emission factors for the gas heat or the 40% non-renewable "
@@ -476,7 +500,7 @@ class E12S11_Q24(NarratedScene):
                               width=11.6, size=SMALL + 1)
             lim.move_to([0, 0.9, 0])
             self.play(*[FadeOut(m) for m in self.mobjects if m is not h], run_time=0.5)
-            self.play(FadeIn(lim), run_time=0.9)
+            self.play(FadeIn(lim), FadeIn(part_d), run_time=0.9)
             self.lim = lim
         with self.beat("b06") as b:
             rec = right_panel("Conditional recommendation", ["If avoiding food competition is the priority, choose B, accepting its higher energy and water use. "
