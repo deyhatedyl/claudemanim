@@ -409,7 +409,7 @@ class E14S10_PartsEF(NarratedScene):
             self.play(FadeIn(be), run_time=0.3)
             self.play(tick(be), Transform(self.tl, tally_text("Q27", 12, 14)), run_time=0.4)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_e, prompt_f), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_e), FadeIn(prompt_f)), run_time=0.35)
             f1 = work(r"\text{f: } n(\ce{NaOH}) = 1.60 \times 0.0750 = 0.120\ \text{mol}", -1.15, MOL_C, size=WK - 2, x=X0 - 0.6)
             f2 = work(r"n(\ce{HCl}) = 0.0500\ \text{mol: still limiting} \Rightarrow \text{same } n(\ce{H2O}),\ \text{same heat}",
                       -1.85, UNKNOWN, size=WK - 2, x=X0 - 0.6)
@@ -530,7 +530,7 @@ class E14S13_PartsAC(NarratedScene):
             b.until(0.8)
             self.play(Transform(self.tl, tally_text("Q28", 2, 12)), run_time=0.4)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_a), FadeIn(prompt_b)), run_time=0.35)
             for i in (1, 2):
                 self.play(GrowArrow(arrows[i][0]), FadeIn(arrows[i][1]), FadeIn(boxes[i + 1]), run_time=0.7)
                 b.until(0.3 if i == 1 else 0.5)
@@ -548,7 +548,7 @@ class E14S13_PartsAC(NarratedScene):
             b.until(0.85)
             self.play(Transform(self.tl, tally_text("Q28", 6, 12)), run_time=0.4)
         with self.beat("b04") as b:
-            self.play(ReplacementTransform(prompt_b, prompt_c), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_b), FadeIn(prompt_c)), run_time=0.35)
             g = NumberLine(x_range=[70, 100, 5], length=7.0, include_numbers=True, color=TEXT, font_size=20,
                            decimal_number_config=dict(num_decimal_places=0, color=MUTED)).move_to([-0.6, -2.15, 0])
             pct = T("% X", size=SMALL, color=MUTED).next_to(g, RIGHT, buff=0.25)
@@ -589,7 +589,7 @@ class E14S14_PartsDE(NarratedScene):
                 b.until(fr)
                 self.play(FadeIn(cells[i], shift=0.05 * DOWN), run_time=0.4)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_d, prompt_e), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_d), FadeIn(prompt_e)), run_time=0.35)
             ups = VGroup(*[Arrow(cells[i].get_bottom() + 0.05 * DOWN + 0.25 * DOWN, cells[i].get_bottom() + 0.05 * DOWN,
                                  buff=0, color=BAD, stroke_width=4, max_tip_length_to_length_ratio=0.45).next_to(cells[i], RIGHT, buff=0.08)
                          for i in range(14, 18)])

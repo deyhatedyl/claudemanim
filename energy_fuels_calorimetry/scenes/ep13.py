@@ -250,12 +250,12 @@ class E13S06_PartsAC(NarratedScene):
             step(l3, bx[2], run=1.2)
             score(bx[2], 3)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_a), FadeIn(prompt_b)), run_time=0.35)
             step(l4, bx[3], tb_, run=1.3)
             b.until(0.55)
             score(bx[3], 5)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(prompt_b, prompt_c), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_b), FadeIn(prompt_c)), run_time=0.35)
             step(l5, bx[4], tc, run=1.2)
             score(bx[4], 6)
             b.until(0.62)
@@ -354,7 +354,7 @@ class E13S08_PartsDE(NarratedScene):
             b.until(0.85)
             self.play(tick(b2), Transform(self.tl, tally_text("Q25", 9, 15)), run_time=0.4)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_d, prompt_e), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_d), FadeIn(prompt_e)), run_time=0.35)
             self.play(Write(l3), FadeIn(tg_e), FadeIn(b3), run_time=1.2)
             self.play(*[tick(x) for x in b3], Transform(self.tl, tally_text("Q25", 11, 15)), run_time=0.4)
             b.until(0.6)
@@ -423,7 +423,7 @@ class E13S09_PartsFG(NarratedScene):
             self.play(FadeIn(dry), run_time=0.5)
             self.cc = VGroup(cc, dry)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(prompt_f, prompt_g), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_f), FadeIn(prompt_g)), run_time=0.35)
             gp = right_panel("g. Renewable because of its source",
                              [wrapped("recently grown biomass (food or farm waste), replenished on a human timescale; "
                                       "the CH₄ molecule is identical to fossil methane", size=SMALL + 1, width=9.8)],
@@ -572,7 +572,7 @@ class E13S13_PartsAB(NarratedScene):
             b.until(0.5)
             self.play(Write(a_e), run_time=0.8)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_a), FadeIn(prompt_b)), run_time=0.35)
             m1 = col(xm, r"1\ \text{mol} \to 1\ \text{mol CO}_2 = 44.0\ \text{g}", 0.25, CO2E)
             m2 = col(xm, r"\text{useful} = 726 \times 0.250 = 181.5\ \text{kJ}", -0.4, USEFUL)
             m3 = col(xm, r"44.0 \div 181.5 = 0.242\ \text{g kJ}^{-1}", -1.1, UNKNOWN)
@@ -670,7 +670,7 @@ class E13S15_PartsCD(NarratedScene):
             b.until(0.75)
             self.play(FadeIn(r2), run_time=0.6)
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_c, prompt_d), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_c), FadeIn(prompt_d)), run_time=0.35)
             it = T("combustion CO₂ (calculated)", size=SMALL, color=SYSTEM)
             inner = RoundedRectangle(width=it.width + 0.5, height=0.8, corner_radius=0.12, stroke_color=SYSTEM, stroke_width=3)
             ot = VGroup(T("lifecycle: feedstock · processing · transport", size=SMALL, color=SURR),

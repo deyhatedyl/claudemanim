@@ -295,7 +295,7 @@ class E07S05_Q13(NarratedScene):
             self.just = just
         with self.beat("b05") as b:
             self.play(FadeOut(self.just), FadeOut(self.cmp), FadeOut(self.amts),
-                      FadeOut(model), ReplacementTransform(part_a, part_b), run_time=0.5)
+                      FadeOut(model), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.5)
             self.play(eq.animate.move_to([1.95, 2.32, 0]), run_time=0.5)
             bud = Budget(["ethanol", "O₂", "CO₂"], ["initial (mol)", "used / formed", "remaining"], col_w=2.05, label_w=1.35,
                          col_colors=[MUTED, SYSTEM, GOOD]).move_to([1.95, 0.68, 0])
@@ -311,7 +311,7 @@ class E07S05_Q13(NarratedScene):
             self.play(Write(m), Indicate(part_b.focus("ethanol_M"), color=SURR), run_time=1.0)
             self.bud, self.ext, self.m = bud, ext, m
         with self.beat("b06") as b:
-            self.play(ReplacementTransform(part_b, part_c),
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)),
                       FadeIn(self.bud.cell(2, 1, "+0.6667", GOOD)),
                       FadeIn(self.bud.cell(2, 2, "0.6667", GOOD)), run_time=0.6)
             c = M(r"m(\ce{CO2}) = 0.6667 \times 44.0 = 29.3\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.95, 0])
@@ -320,7 +320,7 @@ class E07S05_Q13(NarratedScene):
             e.scale_to_fit_width(min(8.0, e.width))
             self.play(Write(c), Indicate(part_c.focus("co2_M"), color=UNKNOWN), run_time=1.0)
             b.until_words("Finally, it asks for the energy released", fallback_frac=0.55, lead=0.15)
-            self.play(ReplacementTransform(part_c, part_d), run_time=0.35)
+            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.35)
             self.play(Write(e), Indicate(part_d.focus("enthalpy"), color=SURR), run_time=1.0)
         with self.beat("b07") as b:
             self.clear(h)
@@ -535,7 +535,7 @@ class E07S10_Q14a(NarratedScene):
         cmp_ = VGroup(M(r"\ce{CH4}: \tfrac{0.400}{1} = 0.400", size=EQ_SMALL - 6, color=CH4C),
                       M(r"\ce{O2}: \tfrac{0.7621}{2} = 0.3810", size=EQ_SMALL - 6, color=O2C)).arrange(RIGHT, buff=0.9).move_to([0, 0.2, 0])
         with self.beat("b04") as b:
-            self.play(ReplacementTransform(prompt_a, prompt_b), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_a), FadeIn(prompt_b)), run_time=0.35)
             eq = T("CH₄ + 2O₂ → CO₂ + 2H₂O", size=LABEL).next_to(cmp_, LEFT, buff=0.4)
             VGroup(eq, cmp_).move_to([0, 0.2, 0])
             self.play(FadeIn(eq), Write(cmp_), run_time=1.2)
@@ -546,7 +546,7 @@ class E07S10_Q14a(NarratedScene):
         bud = Budget(["O₂", "CH₄"], ["initial", "used", "remaining"], col_w=2.3, label_w=1.3, row_h=0.55,
                      col_colors=[MUTED, SYSTEM, GOOD]).move_to([-1.5, -1.65, 0])
         with self.beat("b05") as b:
-            self.play(ReplacementTransform(prompt_b, prompt_c), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_b), FadeIn(prompt_c)), run_time=0.35)
             self.play(FadeIn(bud), run_time=0.5)
             self.play(FadeIn(bud.cell(0, 0, "0.7621")), FadeIn(bud.cell(0, 1, "0.7621", SYSTEM)), FadeIn(bud.cell(0, 2, "0", GOOD)), run_time=0.8)
             b.until(0.35)
@@ -579,12 +579,12 @@ class E07S11_Q14b(NarratedScene):
             self.play(GrowFromEdge(newb, LEFT), Write(nl), run_time=1.2)
         tot = M(r"\text{total} = 9.45 + 2.48 = 11.93 \approx 11.9\ \text{L}", size=EQ_SMALL - 4).move_to([0, 0.15, 0])
         with self.beat("b02") as b:
-            self.play(ReplacementTransform(prompt_d, prompt_e), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_d), FadeIn(prompt_e)), run_time=0.35)
             self.play(GrowFromEdge(inb, LEFT), FadeIn(il), run_time=0.8)
             b.until(0.4)
             self.play(Write(tot), run_time=1.2)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(prompt_e, prompt_f), run_time=0.35)
+            self.play(Succession(FadeOut(prompt_e), FadeIn(prompt_f)), run_time=0.35)
             e = M(r"E = 0.3810\ \text{mol} \times 890\ \text{kJ mol}^{-1} = 339\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([0, -0.85, 0])
             self.play(Write(e), run_time=1.2)
             n = T("(ΔH data for water formed as a liquid)", size=SMALL + 1, color=MUTED).next_to(e, DOWN, buff=0.15)

@@ -490,7 +490,7 @@ class E09S10_Q18(NarratedScene):
             beat.until(0.6)
             self.play(FadeIn(comparison), run_time=0.8)
         with self.beat("b03") as beat:
-            self.play(FadeOut(check), FadeOut(comparison), ReplacementTransform(a, bb), run_time=0.6)
+            self.play(FadeOut(check), FadeOut(comparison), Succession(FadeOut(a), FadeIn(bb)), run_time=0.6)
             eq = M(r"\mathrm{CF} = \frac{E}{\Delta T}", size=EQ).move_to([1.95, 1.3, 0])
             smaller = TB("Heat lost → ΔT smaller", size=LABEL + 2, color=BAD).move_to([1.95, 0.0, 0])
             conclusion = TB("E / ΔT gets LARGER", size=LABEL + 2, color=UNKNOWN).move_to([1.95, -1.0, 0])
@@ -499,7 +499,7 @@ class E09S10_Q18(NarratedScene):
             self.play(FadeIn(conclusion), run_time=0.8)
         with self.beat("b04") as beat:
             self.play(FadeOut(eq), FadeOut(smaller), FadeOut(conclusion),
-                      ReplacementTransform(bb, c), run_time=0.6)
+                      Succession(FadeOut(bb), FadeIn(c)), run_time=0.6)
             cause = VGroup(
                 TB("ΔT measured too large", size=LABEL + 1, color=BAD),
                 T("or E calculated too small", size=LABEL + 1, color=BAD),

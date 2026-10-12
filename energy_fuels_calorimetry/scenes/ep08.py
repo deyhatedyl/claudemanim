@@ -290,19 +290,19 @@ class E08S06_Q15(NarratedScene):
             self.play(Write(l2), Indicate(part_a.focus("molar"), color=SURR), run_time=1.1)
         l3 = L(r"E_{\text{fuel}} = 0.0200 \times 1370 = 27.4\ \text{kJ}", 0.58, ENERGY_C)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(part_a, part_b), run_time=0.35)
+            self.play(Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.35)
             self.play(Write(l3), Indicate(part_b.focus("enthalpy"), color=SURR), run_time=1.0)
         l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
         l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
-            self.play(ReplacementTransform(part_b, part_c), run_time=0.35)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
             self.play(Write(l4), Indicate(part_c.focus("temperature"), color=SURR), run_time=0.9)
             b.until(0.35)
             self.play(Write(l5), Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=1.2)
             nw = T("calculated heat absorbed by water", size=SMALL - 2, color=GOOD).next_to(l5, DOWN, buff=0.09)
             self.play(FadeIn(nw), run_time=0.4)
         with self.beat("b05") as b:
-            self.play(ReplacementTransform(part_c, part_d), run_time=0.35)
+            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.35)
             pred = T("predict: water gained less than the fuel released → below 100%", size=SMALL - 2, color=UNKNOWN).move_to([1.8, -1.63, 0])
             self.play(FadeIn(pred), run_time=0.6)
             l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.18, 0])
@@ -417,22 +417,22 @@ class E08S08_Q16(NarratedScene):
             self.play(Write(l1), Indicate(part_a.focus("c"), color=UNKNOWN), run_time=1.3)
         l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 0.85, SYSTEM)
         with self.beat("b03") as b:
-            self.play(ReplacementTransform(part_a, part_b), run_time=0.35)
+            self.play(Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.35)
             self.play(Write(l2), Indicate(part_b.focus("efficiency"), color=SURR), run_time=1.2)
             bigger = T("calculated input is larger than useful heat ✓", size=SMALL - 1, color=GOOD).move_to([1.8, 0.33, 0])
             self.play(FadeIn(bigger), run_time=0.4)
         l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
-            self.play(ReplacementTransform(part_b, part_c), run_time=0.35)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
             self.play(Write(l3), Indicate(part_c.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
-            self.play(ReplacementTransform(part_c, part_d), FadeOut(l1), FadeOut(l2),
+            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), FadeOut(l1), FadeOut(l2),
                       FadeOut(l3), FadeOut(dt), FadeOut(bigger), run_time=0.4)
             w = wrong_panel("Efficiency used the wrong way", [M(r"\frac{45.144 \times 0.450}{29.8} = 0.682\ \text{g}", size=EQ_SMALL - 8, color=TEXT)], width=5.4)
-            w.move_to([-3.2, -1.55, 0])
+            w.move_to([2.10, 0.42, 0])
             minb = right_panel("100% efficient minimum", [M(r"\frac{45.144}{29.8} = 1.515\ \text{g}", size=EQ_SMALL - 8, color=TEXT),
                                                           T("0.682 g < 1.515 g: impossible", size=LABEL, color=BAD)], width=5.0)
-            minb.move_to([3.3, -1.55, 0])
+            minb.move_to([2.10, -1.45, 0])
             self.play(FadeIn(w), run_time=0.8)
             b.until(0.45)
             self.play(FadeIn(minb), run_time=0.8)
