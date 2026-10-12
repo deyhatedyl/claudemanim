@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (Budget, bullets, mark_tally, mol_CH4, mol_O2, question_card, result_box,  # noqa: E402
                                right_panel, title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.workshop import question_ribbon  # noqa: E402
 from shared.worked_sidebar import WorkedQuestionSidebar  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MOL_C,  # noqa: E402
                           MUTED, PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, VOL_C, M, T, TB, chip,
@@ -492,16 +493,17 @@ class E07S09_NewVsInlet(NarratedScene):
 class E07S10_Q14a(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 1)")
+        prompt = question_ribbon("Q14", "a–c", "fuel 12.4 L: 80% CH₄, 20% CO₂; air 90.0 L: 21% O₂; SLC 24.8 L/mol")
         qc = question_card("Q14", size=SMALL + 1, width=13.2, cols=2).move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("limiting reactant; CH₄ left (g)")
-        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=2.0, x_left=-5.0, width=6.0)
+        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=1.82, x_left=-5.0, width=6.0
         fl = T("12.4 L ÷ 24.8 = 0.500 mol", size=SMALL + 1).next_to(fuel, RIGHT, buff=0.3)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(req), FadeIn(prompt), run_time=0.5)
             self.play(FadeIn(fuel), FadeIn(fl), run_time=0.9)
-        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=1.1, x_left=-5.0, width=6.0)
+        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=0.98, x_left=-5.0, width=6.0
         al = VGroup(M(r"0.210 \times 90.0 = 18.9\ \text{L}", size=EQ_SMALL - 8),
                     M(r"\tfrac{18.9}{24.8} = 0.7621\ \text{mol}", size=EQ_SMALL - 8, color=O2C)).arrange(RIGHT, buff=0.3).scale(0.88).next_to(air, RIGHT, buff=0.3)
         with self.beat("b03") as b:
@@ -534,6 +536,7 @@ class E07S10_Q14a(NarratedScene):
 class E07S11_Q14b(NarratedScene):
     def construct(self):
         h = header("Practice Q14 (part 2)")
+        prompt = question_ribbon("Q14", "d–f", "CH₄ used = 0.3810 mol (part 1); inlet CO₂ = 0.100 mol; |ΔH| = 890 kJ/mol", "earlier results")
         sc = 0.55
         newb = Rectangle(width=9.45 * sc, height=0.6, fill_color=GOOD, fill_opacity=0.85, stroke_width=0)
         inb = Rectangle(width=2.48 * sc, height=0.6, fill_color=CO2C, fill_opacity=0.85, stroke_width=0)
@@ -541,7 +544,7 @@ class E07S11_Q14b(NarratedScene):
         nl = M(r"\text{new: } 0.3810 \times 24.8 = 9.45\ \text{L}", size=EQ_SMALL - 6, color=GOOD).next_to(newb, UP, buff=0.15)
         il = T("inlet: 2.48 L", size=SMALL + 1, color=CO2C).next_to(inb, DOWN, buff=0.12)
         with self.beat("b01") as b:
-            self.play(FadeIn(h), run_time=0.4)
+            self.play(FadeIn(h), FadeIn(prompt), run_time=0.4)
             self.play(GrowFromEdge(newb, LEFT), Write(nl), run_time=1.2)
         tot = M(r"\text{total} = 9.45 + 2.48 = 11.93 \approx 11.9\ \text{L}", size=EQ_SMALL - 4).move_to([0, 0.15, 0])
         with self.beat("b02") as b:
