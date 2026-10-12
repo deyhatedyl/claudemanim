@@ -31,6 +31,8 @@ jobs:
           python checks/verify_question_visuals.py
       - name: Verify narrated MP4 acceptance rules (offline fixtures)
         run: python -m unittest discover -s checks -p test_verify_narrated_media.py -v
+      - name: Verify aligned narration gate (offline fixtures)
+        run: python -m unittest discover -s checks -p test_narration_alignment_gate.py -v
       - name: Validate user-authored narration scripts
         run: python tools/lint_scripts.py > checks/narration_lint_ci.txt
       - name: Check that no private narration or credentials are tracked
