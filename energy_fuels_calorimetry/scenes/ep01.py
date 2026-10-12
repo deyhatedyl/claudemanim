@@ -13,6 +13,7 @@ from shared.components import (bullets, flask, fraction, given_asked, hladder, l
                                mark_tally, mol_H2, mol_H2O, mol_O2, molecule, number_badge,
                                question_card, result_box, right_panel, strike, table, tag,
                                title_card, wrapped, wrong_panel)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (BAD, BG, BODY, CONC_C, EQ, EQ_SMALL, ENERGY_C, FAINT, GOOD, HEAD, LABEL,  # noqa: E402
                           MASS_C, MOL_C, MUTED, PANEL, SMALL, SYSTEM, TEXT, UNKNOWN, VOL_C, M, T,
@@ -470,7 +471,17 @@ class E01S06_Rounding(NarratedScene):
 class E01S07_Q01(NarratedScene):
     def construct(self):
         h = header("Practice Q01")
+        h.set_opacity(0)  # the current bank-sourced part replaces the generic heading
         card = question_card("Q01").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q01", "a", [
+            ("mass", "Ethanol mass", "0.345 g", "question"),
+            ("molar", "M(ethanol)", "46.0 g mol⁻¹", "question")])
+        part_b = active_part_ribbon("Q01", "b", [
+            ("gas", "Gas at SLC", "186 mL", "question"),
+            ("molar_volume", "SLC molar volume", "24.8 L mol⁻¹", "2026 VCAA Data Book")])
+        part_c = active_part_ribbon("Q01", "c", [
+            ("ethanol", "Ethanol amount", "0.00750 mol", "earlier result"),
+            ("gas", "Gas amount", "0.00750 mol", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
@@ -481,12 +492,13 @@ class E01S07_Q01(NarratedScene):
             ga.move_to([0, 0.4, 0])
             self.play(FadeIn(ga[0]), run_time=0.8)
             b.until(0.45)
-            self.play(FadeIn(ga[1]), run_time=0.8)
-            self.ga = ga
+            # Keep the givens overview, but show only the currently active
+            # original subpart rather than a sidebar listing all three parts.
+            self.play(FadeIn(part_a), run_time=0.8)
+            self.ga = ga[0]
 
-        req = requested("amount in mol")
         with self.beat("b03") as b:
-            self.play(FadeOut(self.ga), FadeIn(req), run_time=0.6)
+            self.play(FadeOut(self.ga), run_time=0.6)
             pred = VGroup(TB("Predict first", size=LABEL + 2, color=UNKNOWN),
                           T("1 mol of ethanol = 46.0 g;  we have only 0.345 g", size=LABEL),
                           T("so expect much less than 1 mol: roughly 0.01 mol", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
@@ -523,7 +535,8 @@ class E01S07_Q01(NarratedScene):
                        M(r"n = \frac{V}{V_m} = \frac{0.186\ \text{L}}{24.8\ \text{L mol}^{-1}}", size=EQ_SMALL - 2),
                        M(r"= 0.00750\ \text{mol}", size=EQ_SMALL - 2)).arrange(DOWN, buff=0.25, aligned_edge=LEFT)
             v.next_to(lb, RIGHT, buff=0.3, aligned_edge=UP).shift(0.2 * UP)
-            self.play(FadeIn(lb), Write(v[0]), run_time=1.0)
+            self.play(FadeIn(lb), Write(v[0]),
+                      Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             b.until(0.45)
             self.play(Write(v[1]), run_time=1.0)
             b.until(0.8)
@@ -540,7 +553,8 @@ class E01S07_Q01(NarratedScene):
                 "Molar masses can differ, and the gas's identity and molar mass are not given, so its mass cannot be found."],
                 width=11.0)
             VGroup(lc, good).arrange(RIGHT, buff=0.3, aligned_edge=UP).move_to([0, 1.2, 0])
-            self.play(FadeIn(lc), FadeIn(good[0]), FadeIn(good[1][0]), run_time=0.6)
+            self.play(FadeIn(lc), FadeIn(good[0]), FadeIn(good[1][0]),
+                      Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.6)
             self.play(FadeIn(good[1][1][0]), run_time=0.8)
             b.until(0.5)
             self.play(FadeIn(good[1][1][1]), run_time=0.8)
@@ -556,7 +570,7 @@ class E01S07_Q01(NarratedScene):
             self.play(FadeIn(weak[2][2]), run_time=0.8)
 
         with self.beat("b07") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(1, "a. amount of ethanol, 0.00750 mol"),
                                 (2, "b. 186 mL → 0.186 L, then ÷ 24.8 L mol⁻¹ = 0.00750 mol"),
                                 (1, "c. equal amounts ≠ equal masses: molar masses differ; gas unknown")],
@@ -583,7 +597,7 @@ class E01S07_Q01(NarratedScene):
             self.play(FadeIn(sg), run_time=0.8)
 
         with self.beat("b09") as b:
-            self.clear(h, req)
+            self.clear(h)
             p = VGroup(TB("Changed condition", size=BODY, color=UNKNOWN),
                        T("The same gas sample is measured at 50 °C instead.", size=LABEL + 2),
                        T("Can you still divide by 24.8 L mol⁻¹?", size=LABEL + 2)).arrange(DOWN, buff=0.3)
@@ -607,13 +621,22 @@ class E01S07_Q01(NarratedScene):
 class E01S08_Q02(NarratedScene):
     def construct(self):
         h = header("Practice Q02")
+        h.set_opacity(0)  # the original active subpart occupies the title region
         card = question_card("Q02").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q02", "a", [
+            ("volume", "Dry air at SLC", "0.0850 m³", "question"),
+            ("time", "Heating time", "0.150 h", "question"),
+            ("energy", "Input energy", "7.20 × 10⁴ J", "question")])
+        part_b = active_part_ribbon("Q02", "b", [
+            ("air", "Air at SLC", "85.0 L", "earlier result"),
+            ("fraction", "Oxygen by volume", "20.9%", "question"),
+            ("molar_volume", "SLC molar volume", "24.8 L mol⁻¹", "2026 VCAA Data Book")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
         with self.beat("b02") as b:
-            self.play(FadeOut(card), run_time=0.5)
-            la = TB("a.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 2.2, 0])
+            self.play(FadeOut(card), FadeIn(part_a), run_time=0.5)
+            la = TB("a.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 1.90, 0])
             lines = VGroup(
                 M(r"0.0850\ \text{m}^3 \times 1000\ \text{L m}^{-3} = 85.0\ \text{L}", size=EQ_SMALL, color=VOL_C),
                 M(r"0.150\ \text{h} \times 3600\ \text{s h}^{-1} = 540\ \text{s}", size=EQ_SMALL),
@@ -634,9 +657,9 @@ class E01S08_Q02(NarratedScene):
             self.play(LaggedStart(*[FadeIn(d) for d in dirs], lag_ratio=0.3), run_time=1.0)
             self.part_a = VGroup(la, lines, dirs)
 
-        req = requested("n(O₂) in mol")
         with self.beat("b03") as b:
-            self.play(self.part_a.animate.shift(0.2 * UP).set_opacity(0.45), FadeIn(req), run_time=0.6)
+            self.play(self.part_a.animate.shift(0.2 * UP).set_opacity(0.45),
+                      Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.6)
             pred = VGroup(TB("Predict first", size=LABEL + 2, color=UNKNOWN),
                           T("all gas: 85 L ÷ about 25 L mol⁻¹ ≈ 3.4 mol", size=LABEL),
                           T("oxygen is about one fifth of air  →  expect ≈ 0.7 mol", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
@@ -682,7 +705,7 @@ class E01S08_Q02(NarratedScene):
             self.play(Create(rb), FadeIn(chk), run_time=0.6)
 
         with self.beat("b06") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(3, "a. three conversions: 85.0 L, 540 s, 72.0 kJ"),
                                 (1, "b. oxygen fraction: 17.765 L of O₂"),
                                 (1, "b. n(O₂) = 0.716 mol")], width=6.0).move_to([-3.4, 0.6, 0])

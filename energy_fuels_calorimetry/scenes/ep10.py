@@ -11,6 +11,7 @@ from manim import *  # noqa: E402,F403
 
 from shared.components import (Budget, Thermometer, bullets, calorimeter, mark_tally, question_card,  # noqa: E402
                                result_box, right_panel, title_card, wrapped, wrong_panel, number_badge)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (BAD, BG, BODY, CONC_C, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, VOL_C, M, T,
@@ -217,32 +218,44 @@ class E10S05_Falls(NarratedScene):
 class E10S06_Q19(NarratedScene):
     def construct(self):
         h = header("Practice Q19")
+        h.set_opacity(0)  # replace generic title with exact active part
         qc = question_card("Q19").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q19", "a", [
+            ("acid", "HCl", "75.0 mL · 0.800 mol L⁻¹", "question"),
+            ("base", "NaOH", "50.0 mL · 0.900 mol L⁻¹", "question")])
+        part_b = active_part_ribbon("Q19", "b", [
+            ("acid", "HCl amount", "0.0600 mol", "earlier result"),
+            ("base", "NaOH amount", "0.0450 mol", "earlier result")])
+        part_c = active_part_ribbon("Q19", "c", [
+            ("cf", "Calibrated CF", "590 J °C⁻¹", "question"),
+            ("temp", "Initial → final", "20.00 → 24.30 °C", "question")])
+        part_d = active_part_ribbon("Q19", "d", [
+            ("heat", "Calorimeter heat", "+2537 J", "earlier result"),
+            ("water", "H₂O formed", "0.0450 mol", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        req = requested("ΔH per mol water")
         colL = -6.3
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
             return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
-            ab = VGroup(L(r"\text{a. } n(\ce{HCl}) = 0.0600,\ n(\ce{NaOH}) = 0.0450\ \text{mol}", 2.3, MOL_C),
-                        L(r"\text{b. NaOH limiting; HCl left} = 0.0600 - 0.0450 = 0.0150\ \text{mol}", 1.6, MOL_C))
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
+            ab = VGroup(L(r"\text{a. } n(\ce{HCl}) = 0.0600,\ n(\ce{NaOH}) = 0.0450\ \text{mol}", 1.95, MOL_C),
+                        L(r"\text{b. NaOH limiting; HCl left} = 0.0600 - 0.0450 = 0.0150\ \text{mol}", 1.28, MOL_C))
             self.play(Write(ab[0]), run_time=1.0)
             b.until(0.4)
-            self.play(Write(ab[1]), run_time=1.2)
+            self.play(Write(ab[1]), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.2)
         with self.beat("b03") as b:
-            c1 = L(r"\text{c. } \Delta T = 24.30 - 20.00 = 4.30\ {}^{\circ}\text{C}", 0.8, TEMP_C)
-            c2 = L(r"q_{\text{cal}} = 590 \times 4.30 = 2537\ \text{J}", 0.15, SURR)
+            c1 = L(r"\text{c. } \Delta T = 24.30 - 20.00 = 4.30\ {}^{\circ}\text{C}", 0.55, TEMP_C)
+            c2 = L(r"q_{\text{cal}} = 590 \times 4.30 = 2537\ \text{J}", -0.08, SURR)
             note = T("CF measured for these exact conditions", size=SMALL + 1, color=MUTED).next_to(c2, RIGHT, buff=0.3)
-            self.play(Write(c1), run_time=1.0)
+            self.play(Write(c1), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.0)
             b.until(0.45)
             self.play(Write(c2), FadeIn(note), run_time=1.0)
         with self.beat("b04") as b:
             pred = T("predict: strong acid + strong base → roughly −50 to −60 kJ per mol of water", size=LABEL, color=UNKNOWN)
-            pred.move_to([0, -0.55, 0])
-            self.play(FadeIn(pred), run_time=0.7)
+            pred.move_to([0, -0.82, 0])
+            self.play(FadeIn(pred), Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.7)
             self.pred = pred
         with self.beat("b05") as b:
             d = L(r"\text{d. } \Delta H = \frac{-2.537\ \text{kJ}}{0.0450\ \text{mol H}_2\text{O}} = -56.4\ \text{kJ mol}^{-1}", -1.5, GOOD, EQ_SMALL - 2)
@@ -254,7 +267,7 @@ class E10S06_Q19(NarratedScene):
             basis = T("per mole of water formed", size=SMALL + 1, color=UNKNOWN).next_to(d, DOWN, buff=0.15).align_to(d, LEFT).shift(1.0 * RIGHT)
             self.play(FadeIn(basis), run_time=0.4)
         with self.beat("b06") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(2, "amounts"), (2, "limiting reagent and excess"), (2, "heat gained: 2537 J"),
                                 (2, "denominator, sign and value: −56.4 kJ mol⁻¹")], width=7.4).move_to([0, 0.3, 0])
             self.play(FadeIn(tally), run_time=0.9)
@@ -361,39 +374,58 @@ class E10S08_Extent(NarratedScene):
 class E10S09_Q20(NarratedScene):
     def construct(self):
         h = header("Practice Q20")
+        h.set_opacity(0)  # exact active original subpart replaces generic title
         qc = question_card("Q20", size=SMALL + 2, width=13.0, cols=2).move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q20", "a", [
+            ("naoh", "NaOH", "0.0300 mol (coefficient 2)", "question"),
+            ("acid", "H₂SO₄", "0.0200 mol (coefficient 1)", "question")])
+        part_b = active_part_ribbon("Q20", "b", [
+            ("ratio", "n / coefficient", "0.0150 vs 0.0200 mol", "earlier result")])
+        part_c = active_part_ribbon("Q20", "c", [
+            ("extent", "Reaction extent", "0.0150 mol", "earlier result"),
+            ("enthalpy", "ΔH as written", "−114 kJ", "question")])
+        part_d = active_part_ribbon("Q20", "d", [
+            ("heat", "Heat gained", "1710 J", "earlier result"),
+            ("cf", "Calibration factor", "480 J °C⁻¹", "question")])
+        part_e = active_part_ribbon("Q20", "e", [
+            ("initial", "Initial temperature", "21.0 °C", "question"),
+            ("rise", "Temperature rise", "3.5625 °C", "earlier result")])
+        part_f = active_part_ribbon("Q20", "f", [
+            ("acid", "Initial H₂SO₄", "0.0200 mol", "question"),
+            ("extent", "H₂SO₄ reacted", "0.0150 mol", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        req = requested("final temperature")
         colL = -6.3
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
             return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
-            l1 = L(r"\ce{NaOH}: \tfrac{0.0300}{2} = 0.0150 \qquad \ce{H2SO4}: \tfrac{0.0200}{1} = 0.0200", 2.3, MOL_C)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
+            l1 = L(r"\ce{NaOH}: \tfrac{0.0300}{2} = 0.0150 \qquad \ce{H2SO4}: \tfrac{0.0200}{1} = 0.0200", 1.95, MOL_C)
             self.play(Write(l1), run_time=1.3)
-            l2 = L(r"\text{NaOH limiting; extent} = 0.0150\ \text{mol}", 1.6, UNKNOWN)
+            l2 = L(r"\text{NaOH limiting; extent} = 0.0150\ \text{mol}", 1.28, UNKNOWN)
             b.until(0.6)
-            self.play(Write(l2), run_time=1.0)
+            self.play(Write(l2), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
         with self.beat("b03") as b:
-            l3 = L(r"q = 0.0150 \times 114 = 1.710\ \text{kJ} = 1710\ \text{J}", 0.9, ENERGY_C)
-            self.play(Write(l3), run_time=1.2)
+            l3 = L(r"q = 0.0150 \times 114 = 1.710\ \text{kJ} = 1710\ \text{J}", 0.58, ENERGY_C)
+            self.play(Write(l3), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.2)
         th = Thermometer(height=3.0, level=0.2).move_to([5.4, -0.2, 0])
         tl0 = T("21.0 °C", size=LABEL).next_to(th, LEFT, buff=0.2).shift(0.6 * DOWN)
         with self.beat("b04") as b:
-            l4 = L(r"\Delta T = \frac{1710\ \text{J}}{480\ \text{J}\ {}^{\circ}\text{C}^{-1}} = 3.5625\ {}^{\circ}\text{C}", 0.1, TEMP_C)
-            self.play(Write(l4), FadeIn(th), FadeIn(tl0), run_time=1.3)
+            l4 = L(r"\Delta T = \frac{1710\ \text{J}}{480\ \text{J}\ {}^{\circ}\text{C}^{-1}} = 3.5625\ {}^{\circ}\text{C}", -0.12, TEMP_C)
+            self.play(Write(l4), FadeIn(th), FadeIn(tl0),
+                      Succession(FadeOut(part_c), FadeIn(part_d)), run_time=1.3)
         with self.beat("b05") as b:
-            l5 = L(r"T_{\text{final}} = 21.0 + 3.5625 = 24.5625 \approx 24.6\ {}^{\circ}\text{C}", -0.7, GOOD)
-            self.play(Write(l5), th.level.animate.set_value(0.55), run_time=1.4)
+            l5 = L(r"T_{\text{final}} = 21.0 + 3.5625 = 24.5625 \approx 24.6\ {}^{\circ}\text{C}", -0.90, GOOD)
+            self.play(Write(l5), th.level.animate.set_value(0.55),
+                      Succession(FadeOut(part_d), FadeIn(part_e)), run_time=1.4)
             tl1 = T("24.6 °C", size=LABEL, color=GOOD).next_to(th, LEFT, buff=0.2).shift(0.35 * UP)
             self.play(FadeIn(tl1), run_time=0.4)
         with self.beat("b06") as b:
-            l6 = L(r"n(\ce{H2SO4})_{\text{left}} = 0.0200 - 0.0150 = 0.00500\ \text{mol}", -1.45, MOL_C)
-            self.play(Write(l6), run_time=1.2)
+            l6 = L(r"n(\ce{H2SO4})_{\text{left}} = 0.0200 - 0.0150 = 0.00500\ \text{mol}", -1.62, MOL_C)
+            self.play(Write(l6), Succession(FadeOut(part_e), FadeIn(part_f)), run_time=1.2)
         with self.beat("b07") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(1, "limiting by n/coefficient"), (1, "extent 0.0150 mol"), (1, "heat 1.710 kJ"),
                                 (1, "rise 3.56 °C"), (1, "final 24.6 °C"), (1, "acid left 0.00500 mol")], width=5.2, size=SMALL + 2).move_to([-3.5, 0.3, 0])
             ws = VGroup(wrong_panel("0.0300 × 114 kJ", [T("3.42 kJ: twice the heat", size=LABEL)], width=4.6),

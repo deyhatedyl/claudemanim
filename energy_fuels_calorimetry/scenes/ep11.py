@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 
 from shared.components import (bullets, data_points, linfit, mark_tally, question_card, result_box,  # noqa: E402
                                right_panel, table, temp_axes, title_card, wrapped, wrong_panel)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MUTED,  # noqa: E402
                           PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header,
@@ -180,35 +181,48 @@ class E11S04_Extrapolate(NarratedScene):
 class E11S05_Q21(NarratedScene):
     def construct(self):
         h = header("Practice Q21")
+        h.set_opacity(0)  # the exact current question part replaces this generic heading
         qc = question_card("Q21", size=SMALL + 2).move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q21", "a", [
+            ("mix", "Mixing time", "120 s", "question"),
+            ("cool", "Cooling: 180–360 s", "26.1 → 25.5 °C", "question")])
+        part_b = active_part_ribbon("Q21", "b", [
+            ("baseline", "Pre-mixing baseline", "21.0 °C", "question"),
+            ("corrected", "Extrapolated at 120 s", "26.3 °C", "earlier result")])
+        part_c = active_part_ribbon("Q21", "c", [
+            ("cf", "Calibration factor", "650 J °C⁻¹", "question"),
+            ("rise", "Corrected rise", "5.3 °C", "earlier result")])
+        part_d = active_part_ribbon("Q21", "d", [
+            ("peak", "Highest observed temperature", "26.1 °C", "question"),
+            ("baseline", "Baseline", "21.0 °C", "question"),
+            ("corrected", "Corrected heat", "≈ 3.4 kJ", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        req = requested("corrected heat; comparison")
         colL = -6.3
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
             return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
-            a = L(r"\text{a. slope} = -0.00333\ {}^{\circ}\text{C s}^{-1};\ T(120\ \text{s}) = 26.1 + 0.2 = 26.3\ {}^{\circ}\text{C}", 2.2, SURR)
-            bb = L(r"\text{b. corrected rise} = 26.3 - 21.0 = 5.3\ {}^{\circ}\text{C}", 1.45, UNKNOWN)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
+            a = L(r"\text{a. slope} = -0.00333\ {}^{\circ}\text{C s}^{-1};\ T(120\ \text{s}) = 26.1 + 0.2 = 26.3\ {}^{\circ}\text{C}", 1.96, SURR)
+            bb = L(r"\text{b. corrected rise} = 26.3 - 21.0 = 5.3\ {}^{\circ}\text{C}", 1.24, UNKNOWN)
             self.play(Write(a), run_time=1.4)
-            b.until(0.55)
-            self.play(Write(bb), run_time=1.0)
+            b.until_words("Part b asked for the corrected temperature rise", fallback_frac=0.55, lead=0.12)
+            self.play(Succession(FadeOut(part_a), FadeIn(part_b)), Write(bb), run_time=1.0)
         with self.beat("b03") as b:
-            c = L(r"\text{c. } q = 650 \times 5.3 = 3445\ \text{J} \approx 3.4\ \text{kJ}", 0.65, GOOD)
-            self.play(Write(c), run_time=1.2)
+            c = L(r"\text{c. } q = 650 \times 5.3 = 3445\ \text{J} \approx 3.4\ \text{kJ}", 0.55, GOOD)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), Write(c), run_time=1.2)
             sf = T("2 significant figures: the rise is a graph estimate", size=SMALL + 1, color=MUTED).next_to(c, RIGHT, buff=0.3)
             b.until(0.6)
             self.play(FadeIn(sf), run_time=0.5)
         with self.beat("b04") as b:
             d = L(r"\text{d. observed max: } 650 \times 5.1 = 3315\ \text{J} \approx 3.3\ \text{kJ}", -0.15, SYSTEM)
-            self.play(Write(d), run_time=1.2)
+            self.play(Succession(FadeOut(part_c), FadeIn(part_d)), Write(d), run_time=1.2)
             u = T("underestimate: cooling had already begun before the peak", size=LABEL, color=SYSTEM).next_to(d, DOWN, buff=0.2).align_to(d, LEFT)
             b.until(0.6)
             self.play(FadeIn(u), run_time=0.6)
         with self.beat("b05") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(2, "cooling region and extrapolation to 26.3 °C"), (1, "corrected rise 5.3 °C"),
                                 (1, "corrected heat ≈ 3.4 kJ"), (1, "comparison: observed max underestimates")], width=6.2).move_to([-3.2, 0.3, 0])
             ws = VGroup(wrong_panel("Observed max used as corrected", [T("5.1 °C → 3.3 kJ", size=LABEL)], width=4.8),
@@ -516,35 +530,47 @@ class E11S10_Resolution(NarratedScene):
 class E11S11_Q22(NarratedScene):
     def construct(self):
         h = header("Practice Q22")
+        h.set_opacity(0)  # the exact original active part replaces this generic title
         qc = question_card("Q22").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q22", "a", [
+            ("cf", "Used / valid CF", "450 / 500 J °C⁻¹", "question"),
+            ("rise", "Rise", "4.00 °C", "question"),
+            ("extent", "Reaction amount", "0.0400 mol", "question")])
+        part_b = active_part_ribbon("Q22", "b", [
+            ("used", "Spreadsheet CF", "450 J °C⁻¹", "question"),
+            ("valid", "Valid CF", "500 J °C⁻¹", "question")])
+        part_c = active_part_ribbon("Q22", "c", [
+            ("offset", "Equal reading offset", "+1.5 °C at both readings", "question"),
+            ("rise", "Original rise", "4.00 °C", "question")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        req = requested("reported vs corrected ΔH")
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
             r = VGroup(TB("spreadsheet (CF = 450)", size=LABEL, color=BAD),
                        M(r"\Delta H = -\frac{450 \times 4.00}{0.0400} = -45\,000\ \text{J mol}^{-1}", size=EQ_SMALL - 6),
                        M(r"= -45.0\ \text{kJ mol}^{-1}", size=EQ_SMALL - 4, color=BAD)).arrange(DOWN, buff=0.15)
             c = VGroup(TB("valid (CF = 500)", size=LABEL, color=GOOD),
                        M(r"\Delta H = -\frac{500 \times 4.00}{0.0400} = -50\,000\ \text{J mol}^{-1}", size=EQ_SMALL - 6),
                        M(r"= -50.0\ \text{kJ mol}^{-1}", size=EQ_SMALL - 4, color=GOOD)).arrange(DOWN, buff=0.15)
-            VGroup(r, c).arrange(RIGHT, buff=0.9, aligned_edge=UP).move_to([0, 1.3, 0])
+            VGroup(r, c).arrange(RIGHT, buff=0.9, aligned_edge=UP).move_to([0, 1.15, 0])
             self.play(FadeIn(r), run_time=1.2)
             b.until(0.55)
             self.play(FadeIn(c), run_time=1.2)
         with self.beat("b03") as b:
             nl = NumberLine(x_range=[-55, -40, 5], length=7.0, include_numbers=True, color=TEXT, font_size=22,
                             decimal_number_config=dict(num_decimal_places=0, color=MUTED)).move_to([0, -0.6, 0])
+            illustrative = T("illustrative repeats (not measured data)", size=SMALL + 1, color=UNKNOWN).next_to(nl, UP, buff=0.25)
             reps = VGroup(*[Dot(nl.n2p(v) + 0.35 * UP, radius=0.08, color=BAD) for v in (-45.2, -44.9, -45.0, -45.1)])
             tv = DashedLine(nl.n2p(-50) + 0.8 * UP, nl.n2p(-50) + 0.2 * DOWN, color=GOOD, stroke_width=3)
-            self.play(Create(nl), Create(tv), run_time=0.8)
+            self.play(Succession(FadeOut(part_a), FadeIn(part_b)),
+                      Create(nl), Create(tv), FadeIn(illustrative), run_time=0.8)
             self.play(LaggedStart(*[FadeIn(p, scale=1.5) for p in reps], lag_ratio=0.2), run_time=0.9)
             t = T("repeats agree (repeatable) but share the same bias", size=LABEL, color=BAD).next_to(nl, DOWN, buff=0.4)
             b.until(0.55)
             self.play(FadeIn(t), run_time=0.6)
-            self.nl = VGroup(nl, reps, tv, t)
+            self.nl = VGroup(nl, reps, tv, t, illustrative)
         with self.beat("b04") as b:
-            self.play(FadeOut(self.nl), run_time=0.4)
+            self.play(FadeOut(self.nl), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.4)
             off = M(r"\Delta T = (T_f + 1.5) - (T_i + 1.5) = T_f - T_i", size=EQ_SMALL, color=GOOD).move_to([0, -0.6, 0])
             self.play(Write(off), run_time=1.4)
             canc = T("an identical additive offset cancels", size=LABEL + 2, color=GOOD).next_to(off, DOWN, buff=0.25)
@@ -556,7 +582,7 @@ class E11S11_Q22(NarratedScene):
             w.move_to([0, -2.1, 0])
             self.play(FadeIn(w), run_time=0.8)
         with self.beat("b06") as b:
-            self.clear(h, req)
+            self.clear(h)
             tally = mark_tally([(2, "reported −45.0 and corrected −50.0 kJ mol⁻¹"), (1, "repeating keeps the same bias"),
                                 (2, "offset cancels in the subtraction")], width=6.8).move_to([-2.6, 0.4, 0])
             ws = VGroup(wrong_panel("Repeatable = accurate", [T("✗", size=LABEL)], width=3.6),

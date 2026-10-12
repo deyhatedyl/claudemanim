@@ -12,7 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, calorimeter, mark_tally, question_card, result_box, right_panel,  # noqa: E402
                                title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
-from shared.active_question import PartPrompt  # noqa: E402
+from shared.active_question import PartPrompt, active_part_ribbon  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MASS_C,  # noqa: E402
                           MOL_C, MUTED, PANEL, SMALL, SURR, SYSTEM, TEMP_C, TEXT, UNKNOWN, USEFUL, M, T, TB,
                           chip, header, panel)
@@ -281,34 +281,44 @@ class E09S05_Stack(NarratedScene):
 class E09S06_Q17a(NarratedScene):
     def construct(self):
         h = header("Practice Q17")
+        h.set_opacity(0)  # the exact active part replaces the redundant title
         qc = question_card("Q17").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q17", "a", [
+            ("electrical", "Electrical heating", "6.00 V · 1.50 A · 240 s", "question"),
+            ("rise", "Temperature rise", "4.00 °C", "question")])
+        part_b = active_part_ribbon("Q17", "b", [
+            ("water", "Water", "120.0 g", "question"),
+            ("capacity", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 VCAA Data Book"),
+            ("cf", "Calibration factor", "540 J °C⁻¹", "earlier result")])
+        part_c = active_part_ribbon("Q17", "c", [
+            ("rise", "Later matched rise", "5.60 °C", "question"),
+            ("cf", "Matched CF", "540 J °C⁻¹", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        req = requested("CF, apparatus share, later heat")
         colL = -6.3
 
         def L(tex, y, col=TEXT, s=EQ_SMALL - 6):
             return M(tex, size=s, color=col).move_to([0, y, 0]).align_to([colL, 0, 0], LEFT)
-        l1 = L(r"E = VIt = 6.00 \times 1.50 \times 240 = 2160\ \text{J}", 2.2, ENERGY_C)
-        l2 = L(r"CF = \frac{2160\ \text{J}}{4.00\ {}^{\circ}\text{C}} = 540\ \text{J}\ {}^{\circ}\text{C}^{-1}", 1.35, UNKNOWN)
+        l1 = L(r"E = VIt = 6.00 \times 1.50 \times 240 = 2160\ \text{J}", 1.95, ENERGY_C)
+        l2 = L(r"CF = \frac{2160\ \text{J}}{4.00\ {}^{\circ}\text{C}} = 540\ \text{J}\ {}^{\circ}\text{C}^{-1}", 1.15, UNKNOWN)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.5)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.5)
             self.play(Write(l1), run_time=1.2)
             b.until(0.5)
             self.play(Write(l2), run_time=1.2)
         st = cf_stack(501.6, 38.4, scale=0.0055, x=3.0, y_base=-2.3)
         with self.beat("b03") as b:
-            l3 = L(r"m c = 120.0 \times 4.18 = 501.6\ \text{J}\ {}^{\circ}\text{C}^{-1} < 540 \ \checkmark", 0.45, SURR)
+            l3 = L(r"m c = 120.0 \times 4.18 = 501.6\ \text{J}\ {}^{\circ}\text{C}^{-1} < 540 \ \checkmark", 0.35, SURR)
             self.play(Write(l3), run_time=1.2)
             self.play(GrowFromEdge(st[0], DOWN), FadeIn(st[2]), run_time=0.8)
         with self.beat("b04") as b:
-            l4 = L(r"C_{\text{app}} = 540 - 501.6 = 38.4\ \text{J}\ {}^{\circ}\text{C}^{-1}", -0.4, APP)
-            self.play(Write(l4), run_time=1.0)
+            l4 = L(r"C_{\text{app}} = 540 - 501.6 = 38.4\ \text{J}\ {}^{\circ}\text{C}^{-1}", -0.48, APP)
+            self.play(Write(l4), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             self.play(GrowFromEdge(st[1], DOWN), FadeIn(st[3]), FadeIn(st[4]), run_time=0.8)
         with self.beat("b05") as b:
-            l5 = L(r"q = CF \times \Delta T = 540 \times 5.60 = 3024\ \text{J} \approx 3.02\ \text{kJ}", -1.35, GOOD)
+            l5 = L(r"q = CF \times \Delta T = 540 \times 5.60 = 3024\ \text{J} \approx 3.02\ \text{kJ}", -1.38, GOOD)
             n = T("same calorimeter, same contents (matched)", size=SMALL + 1, color=MUTED).next_to(l5, DOWN, buff=0.15).align_to(l5, LEFT)
-            self.play(Write(l5), run_time=1.2)
+            self.play(Write(l5), Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.2)
             b.until(0.55)
             self.play(FadeIn(n), run_time=0.5)
 
@@ -317,21 +327,25 @@ class E09S06_Q17a(NarratedScene):
 class E09S07_Contents(NarratedScene):
     def construct(self):
         h = header("Changing the contents changes CF")
-        q = T("Q17 d: 150.0 g water, same apparatus. Keep CF = 540?", size=LABEL + 2, color=UNKNOWN).move_to([0, 2.45, 0])
+        h.set_opacity(0)  # show the complete bank wording for Q17(d)
+        part_d = active_part_ribbon("Q17", "d", [
+            ("water", "New water mass", "150.0 g", "question"),
+            ("apparatus", "Same apparatus", "38.4 J °C⁻¹", "earlier result"),
+            ("capacity", "c(water)", "4.18 J g⁻¹ °C⁻¹", "2026 VCAA Data Book")])
         before = cf_stack(501.6, 38.4, scale=0.0034, width=1.0, x=-5.5, y_base=-2.2)
         before[2].become(T("water\n501.6", size=17, color=BG).move_to(before[0]))
         before[3].become(T("apparatus\n38.4", size=16, color=APP).next_to(before[1], RIGHT, buff=0.12))
         bl = T("120.0 g water", size=SMALL + 1).next_to(before[0], DOWN, buff=0.1)
         with self.beat("b01") as b:
-            self.play(FadeIn(h), FadeIn(before), FadeIn(bl), run_time=1.0)
-            self.play(FadeIn(q), run_time=0.7)
+            self.play(FadeIn(h), FadeIn(before), FadeIn(bl), FadeIn(part_d), run_time=1.0)
+            self.play(Indicate(part_d[1], color=UNKNOWN), run_time=0.7)
         after = cf_stack(627.0, 38.4, scale=0.0034, width=1.0, x=-2.6, y_base=-2.2)
         after[2].become(T("water\n627.0", size=17, color=BG).move_to(after[0]))
         after[3].become(T("apparatus\n38.4", size=16, color=APP).next_to(after[1], RIGHT, buff=0.12))
         al = T("150.0 g water", size=SMALL + 1).next_to(after[0], DOWN, buff=0.1)
         calc = VGroup(M(r"150.0 \times 4.18 = 627.0", size=EQ_SMALL - 6, color=SURR),
                       M(r"627.0 + 38.4 = 665.4 \approx 665\ \text{J}\ {}^{\circ}\text{C}^{-1}", size=EQ_SMALL - 6, color=UNKNOWN)).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
-        calc.move_to([3.6, 1.6, 0])
+        calc.move_to([3.6, 1.15, 0])
         with self.beat("b02") as b:
             self.play(TransformFromCopy(before[0], after[0]), FadeIn(al), FadeIn(after[2]), run_time=1.0)
             self.play(Write(calc[0]), run_time=0.8)

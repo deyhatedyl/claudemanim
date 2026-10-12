@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, calorimeter, dH_arrow, enthalpy_axis, ledger, level, mark_tally,  # noqa: E402
                                mol_CH3OH, mol_CH4, mol_CO2, mol_H2, number_badge, question_card, result_box,
                                right_panel, title_card, wrapped, wrong_panel, atom)
+from shared.active_question import active_part_ribbon  # noqa: E402
 from shared.narrated import NarratedScene  # noqa: E402
 from shared.style import (BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, LOSS, MUTED, PANEL,  # noqa: E402
                           SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header, panel)
@@ -286,15 +287,22 @@ class E02S04_Bonds(NarratedScene):
 class E02S05_Q03(NarratedScene):
     def construct(self):
         h = header("Practice Q03")
+        h.set_opacity(0)  # original current part wording replaces generic title
         card = question_card("Q03").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q03", "a", [
+            ("hh", "H–H bond", "436 kJ mol⁻¹", "question"),
+            ("clcl", "Cl–Cl bond", "243 kJ mol⁻¹", "question"),
+            ("hcl", "H–Cl bond", "431 kJ mol⁻¹", "question")])
+        part_b = active_part_ribbon("Q03", "b", [
+            ("broken", "Bonds broken", "679 kJ", "earlier result"),
+            ("formed", "Bonds formed", "862 kJ", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
-        eq = M(r"\ce{H2(g) + Cl2(g) -> 2HCl(g)}", size=EQ).move_to([0, 2.45, 0])
-        req = requested("ΔH for the equation as written")
+        eq = M(r"\ce{H2(g) + Cl2(g) -> 2HCl(g)}", size=EQ).move_to([0, 1.96, 0])
         with self.beat("b02") as b:
             self.play(FadeOut(card), run_time=0.5)
-            self.play(Write(eq), FadeIn(req), run_time=1.0)
+            self.play(Write(eq), FadeIn(part_a), run_time=1.0)
             asw = T("1 mol H₂ + 1 mol Cl₂ → 2 mol HCl", size=LABEL, color=MUTED).next_to(eq, DOWN, buff=0.15)
             self.play(FadeIn(asw), run_time=0.6)
             model = M(r"\Delta H \approx \textstyle\sum(\text{bonds broken}) - \sum(\text{bonds formed})", size=EQ_SMALL - 2)
@@ -348,14 +356,14 @@ class E02S05_Q03(NarratedScene):
                 "Exothermic because more energy is released forming the two H–Cl bonds (862 kJ) than is absorbed "
                 "breaking the H–H and Cl–Cl bonds (679 kJ)."], width=11.5)
             good.move_to([0, -0.15, 0])
-            self.play(FadeIn(good), run_time=0.8)
+            self.play(FadeIn(good), Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.8)
             weak = wrong_panel("Misses the comparison", ['"Exothermic because bonds are formed."'], width=11.5)
             weak.next_to(good, DOWN, buff=0.3)
             b.until(0.62)
             self.play(FadeIn(weak), run_time=0.8)
 
         with self.beat("b08") as b:
-            self.clear(h, req, eq)
+            self.clear(h, eq)
             tally = mark_tally([(1, "bonds broken total: 679 kJ"), (1, "bonds formed total: 862 kJ"),
                                 (1, "ΔH ≈ −183 kJ (subtraction, correct sign)"),
                                 (1, "explanation compares energy released and absorbed")], width=8.5)
@@ -363,7 +371,7 @@ class E02S05_Q03(NarratedScene):
             self.play(FadeIn(tally), run_time=1.0)
 
         with self.beat("b09") as b:
-            self.clear(h, req, eq)
+            self.clear(h, eq)
             w1 = wrong_panel("Adding everything", [M(r"436 + 243 + 862 = 1541\ \text{kJ}", size=EQ_SMALL - 6, color=TEXT)],
                              note="No physical meaning", width=5.0)
             w2 = wrong_panel("Breaking treated as release", [M(r"862 - 679 = +183\ \text{kJ}", size=EQ_SMALL - 6, color=TEXT)],
@@ -378,7 +386,7 @@ class E02S05_Q03(NarratedScene):
             self.play(FadeIn(first), run_time=0.6)
 
         with self.beat("b10") as b:
-            self.clear(h, req, eq)
+            self.clear(h, eq)
             p = VGroup(TB("Changed condition", size=BODY, color=UNKNOWN),
                        T("Suppose forming the two new bonds released only 600 kJ in total.", size=LABEL + 2),
                        T("Still exothermic?", size=LABEL + 2)).arrange(DOWN, buff=0.25).move_to([0, 0.9, 0])
@@ -476,7 +484,15 @@ class E02S06_Enthalpy(NarratedScene):
 class E02S07_Q04(NarratedScene):
     def construct(self):
         h = header("Practice Q04")
+        h.set_opacity(0)  # exact original active subpart replaces the heading
         card = question_card("Q04").move_to([0, -0.10, 0])
+        part_a = active_part_ribbon("Q04", "a", [
+            ("energy", "Energy absorbed per mol", "+18.0 kJ mol⁻¹", "question"),
+            ("amount", "Solute dissolved", "0.0250 mol", "question")])
+        part_b = active_part_ribbon("Q04", "b", [
+            ("system", "System energy change", "+0.450 kJ", "earlier result")])
+        part_c = active_part_ribbon("Q04", "c", [
+            ("calorimeter", "Calorimeter energy change", "−0.450 kJ", "earlier result")])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(card, shift=0.1 * UP), run_time=1.0)
 
@@ -485,7 +501,7 @@ class E02S07_Q04(NarratedScene):
         inA = flow_arrows(cal.system.get_center(), 0.55, 1.05, inward=True, color=SURR, stroke=5)
         lab = wrapped("endothermic: energy into the system", size=LABEL, width=4.8, color=SURR).next_to(cal, DOWN, buff=0.3)
         with self.beat("b02") as b:
-            self.play(FadeOut(card), FadeIn(cal), run_time=0.8)
+            self.play(FadeOut(card), FadeIn(cal), FadeIn(part_a), run_time=0.8)
             self.play(LaggedStart(*[GrowArrow(a) for a in inA], lag_ratio=0.15), run_time=1.0)
             self.play(FadeIn(lab), run_time=0.5)
 
@@ -504,11 +520,13 @@ class E02S07_Q04(NarratedScene):
             lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([-1.3, 0.2, 0])
             l3 = M(r"q_{\text{calorimeter}} = -0.450\ \text{kJ}", size=EQ_SMALL - 2, color=SURR)
             l3.next_to(lb, RIGHT, buff=0.25)
-            self.play(FadeIn(lb), Write(l3), run_time=1.0)
+            self.play(FadeIn(lb), Write(l3),
+                      Succession(FadeOut(part_a), FadeIn(part_b)), run_time=1.0)
             lc = TB("c.", size=LABEL + 2, color=SYSTEM).move_to([-1.3, -1.0, 0])
             l4 = T("the temperature falls", size=BODY, color=SURR).next_to(lc, RIGHT, buff=0.25)
             b.until(0.5)
-            self.play(FadeIn(lc), FadeIn(l4), cal.thermo.level.animate.set_value(0.3), run_time=1.4)
+            self.play(FadeIn(lc), FadeIn(l4), cal.thermo.level.animate.set_value(0.3),
+                      Succession(FadeOut(part_b), FadeIn(part_c)), run_time=1.4)
 
         with self.beat("b05") as b:
             self.clear(h)
