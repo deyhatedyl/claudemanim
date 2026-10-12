@@ -295,7 +295,7 @@ class E08S06_Q15(NarratedScene):
         l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
         l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
-            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), FadeOut(bigger), run_time=0.35)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
             self.play(Write(l4), Indicate(part_c.focus("temperature"), color=SURR), run_time=0.9)
             b.until(0.35)
             self.play(Write(l5), Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=1.2)
@@ -423,7 +423,7 @@ class E08S08_Q16(NarratedScene):
             self.play(FadeIn(bigger), run_time=0.4)
         l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
-            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), FadeOut(bigger), run_time=0.35)
             self.play(Write(l3), Indicate(part_c.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
             self.play(Succession(FadeOut(part_c), FadeIn(part_d)), FadeOut(l1), FadeOut(l2),
