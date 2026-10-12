@@ -491,7 +491,7 @@ class E14S13_PartsAC(NarratedScene):
         items = [("3.20 °C", ""), ("960 J", "× 300"), ("0.960 kJ", "÷ 1000"), ("0.0400 mol", "÷ 24.0"),
                  ("3.20 g X", "× 80.0"), ("80.0%", "÷ 4.00")]
         cols = [TEMP_C, ENERGY_C, ENERGY_C, MOL_C, MASS_C, UNKNOWN]
-        boxes, arrows = chain(items, cols, 1.75, x_left=-6.35, gap=0.85, size=SMALL + 1)
+        boxes, arrows = chain(items, cols, 1.47, x_left=-6.35, gap=0.85, size=SMALL + 1)
         tags = VGroup(T("a", size=SMALL, color=SYSTEM).next_to(boxes[1], DOWN, buff=0.15),
                       T("b", size=SMALL, color=SYSTEM).next_to(boxes[3], DOWN, buff=0.15),
                       T("b", size=SMALL, color=SYSTEM).next_to(boxes[5], DOWN, buff=0.15))
