@@ -1,0 +1,65 @@
+name: Revised VCE chemistry episode previews
+
+on:
+  push:
+    branches:
+      - codex/episodes-07-14-narration
+    paths:
+      - .github/workflows/chemistry-revised-previews.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chemistry-revised-previews-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  episode:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        episode: [E06, E07, E08, E12, E13, E14]
+    defaults:
+      run:
+        working-directory: energy_fuels_calorimetry
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Manim runtime
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends ffmpeg libcairo2-dev libpango1.0-dev pkg-config dvisvgm texlive-xetex texlive-latex-extra texlive-science texlive-fonts-recommended fonts-inter fonts-dejavu fonts-noto-core
+          python -m pip install -r requirements.txt
+          echo "MANIM_BIN=$(command -v manim)" >> "$GITHUB_ENV"
+      - name: Check chemistry and scripts
+        run: |
+          python -m compileall -q scenes shared checks tools
+          python checks/verify_anchors.py
+          python checks/verify_question_visuals.py
+          python tools/lint_scripts.py
+      - name: Render revised episode in HD
+        run: python tools/render.py ${{ matrix.episode }} -q m --jobs 2 --no-assemble
+      - name: Assemble silent preview
+        run: |
+          python tools/assemble.py ${{ matrix.episode }} -q m
+          python tools/package_preview.py ${{ matrix.episode }} --tag 720p30
+          python tools/verify_previews.py ${{ matrix.episode }}
+      - name: Upload corrected silent MP4 and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corrected-${{ matrix.episode }}-${{ github.run_number }}
+          retention-days: 14
+          compression-level: 1
+          path: |
+            energy_fuels_calorimetry/delivery/${{ matrix.episode }}
+            energy_fuels_calorimetry/renders/draft/${{ matrix.episode }}*
+            energy_fuels_calorimetry/renders/final/${{ matrix.episode }}*
+            energy_fuels_calorimetry/logs/render_${{ matrix.episode }}*
+            energy_fuels_calorimetry/logs/assemble_${{ matrix.episode }}*
