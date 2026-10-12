@@ -18,11 +18,11 @@ concurrency:
 jobs:
   episode:
     runs-on: ubuntu-24.04
-    timeout-minutes: 180
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       matrix:
-        episode: [E06, E07, E08, E12, E13, E14]
+        episode: [E06, E07, E08, E09, E12, E13, E14]
     defaults:
       run:
         working-directory: energy_fuels_calorimetry
@@ -45,14 +45,14 @@ jobs:
           python checks/verify_anchors.py
           python checks/verify_question_visuals.py
           python tools/lint_scripts.py
-      - name: Render revised episode in HD
-        run: python tools/render.py ${{ matrix.episode }} -q m --jobs 2 --no-assemble
+      - name: Render revised complete episode at 1920x1080
+        run: python tools/render.py ${{ matrix.episode }} -q h --jobs 2 --no-assemble
       - name: Assemble silent preview
         run: |
-          python tools/assemble.py ${{ matrix.episode }} -q m
-          python tools/package_preview.py ${{ matrix.episode }} --tag 720p30
-          python tools/verify_previews.py ${{ matrix.episode }}
-      - name: Upload corrected silent MP4 and reports
+          python tools/assemble.py ${{ matrix.episode }} -q h
+          python tools/package_preview.py ${{ matrix.episode }} --tag 1080p30
+          python tools/verify_previews.py ${{ matrix.episode }} --tag 1080p30
+      - name: Upload full-length 1080p visual preview and reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
