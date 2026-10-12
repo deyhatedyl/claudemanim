@@ -12,6 +12,8 @@ from manim import *  # noqa: E402,F403
 from shared.components import (bullets, mark_tally, question_card, result_box, right_panel, table,  # noqa: E402
                                title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.active_question import PartPrompt  # noqa: E402
+from questions.bank import BY_ID  # noqa: E402
 from shared.style import (BAD, BG, BODY, ENERGY_C, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MUTED,  # noqa: E402
                           PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header, panel)
 
@@ -219,48 +221,73 @@ class E05S05_Basis(NarratedScene):
 class E05S06_Q09(NarratedScene):
     def construct(self):
         h = header("Practice Q09")
-        qc = question_card("Q09").move_to([0, -0.10, 0])
+        qc = question_card("Q09").scale(0.86).move_to([0, 0.50, 0])
+        original_stem = wrapped(BY_ID["Q09"]["stem"], size=SMALL - 1, width=11.6, color=MUTED)
+        # Keep the exact bank stem below the visual card but above captions.
+        original_stem.move_to([0, -2.25, 0])
         with self.beat("b01"):
-            self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
+            self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), FadeIn(original_stem), run_time=1.0)
         req = requested("one serving, in kJ and J")
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), FadeIn(req), run_time=0.6)
+            part_a = PartPrompt("Q09", "a", [
+                ("carb", "Carbohydrate", "48.0 g / 100 g", "question"),
+                ("protein", "Protein", "12.0 g / 100 g", "question"),
+                ("fat", "Fat", "18.0 g / 100 g", "question"),
+                ("factors", "Food factors", "16, 17, 37 kJ g⁻¹", "question"),
+            ], width=3.7, y=-0.15)
+            self.play(FadeOut(qc), FadeOut(original_stem), FadeIn(part_a), FadeIn(req), run_time=0.6)
             plan = VGroup(T("per 100 g label", size=LABEL + 2), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
                           T("energy per 100 g", size=LABEL + 2), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
                           T("× 30.0/100", size=LABEL + 2, color=UNKNOWN), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
-                          T("one serving", size=LABEL + 2)).arrange(RIGHT, buff=0.2).move_to([0, 1.9, 0])
+                          T("one serving", size=LABEL + 2)).arrange(RIGHT, buff=0.2).scale(0.63).move_to([2.0, 1.85, 0])
             b.until(0.4)
             self.play(FadeIn(plan), run_time=1.0)
             self.plan = plan
+            self.part_a = part_a
         with self.beat("b03") as b:
             pred = T("Predict: 30 g is a bit under a third of 100 g, so a bit under a third of the per-100 g energy",
-                     size=LABEL, color=UNKNOWN).move_to([0, 1.1, 0])
+                     size=LABEL, color=UNKNOWN).scale(0.75).move_to([2.0, 1.05, 0])
             self.play(FadeIn(pred), run_time=0.8)
             self.pred = pred
         calcs = VGroup(M(r"48.0 \times 16 = 768\ \text{kJ}", size=EQ_SMALL - 6, color=CARB),
                        M(r"12.0 \times 17 = 204\ \text{kJ}", size=EQ_SMALL - 6, color=PROT),
                        M(r"18.0 \times 37 = 666\ \text{kJ}", size=EQ_SMALL - 6, color=FAT)).arrange(DOWN, buff=0.18, aligned_edge=LEFT)
-        calcs.move_to([-4.0, -0.4, 0])
-        bar = food_bar(768, 204, 666, x_left=-1.4, y=-0.4)
+        calcs.scale(0.78).move_to([-0.55, -0.40, 0])
+        bar = food_bar(768, 204, 666, x_left=-1.4, y=-0.4).scale(0.65).move_to([3.0, -0.4, 0])
         with self.beat("b04") as b:
+            self.play(FadeOut(self.plan), FadeOut(self.pred), run_time=0.3)
             for i in range(3):
                 b.until(0.08 + 0.22 * i)
                 self.play(Write(calcs[i]), FadeIn(bar[i]), run_time=0.8)
-            tot = M(r"1638\ \text{kJ per 100 g}", size=EQ_SMALL - 2, color=ENERGY_C).next_to(bar, RIGHT, buff=0.3)
+            # Keep the aggregate within the right working column at 16:9.
+            tot = M(r"1638\ \text{kJ per 100 g}", size=EQ_SMALL - 2, color=ENERGY_C).scale(0.76).move_to([2.05, -1.45, 0])
             b.until(0.8)
             self.play(Write(tot), run_time=0.7)
             self.tot = tot
         with self.beat("b05") as b:
+            part_b = PartPrompt("Q09", "b", [
+                ("per100", "Energy per 100 g", "1638 kJ", "calculated earlier"),
+                ("serving", "Serving mass", "30.0 g", "question"),
+                ("basis", "Label basis", "100 g", "question"),
+            ], width=3.7, y=-0.15)
             s1 = M(r"1638\ \text{kJ} \times \frac{30.0\ \text{g}}{100\ \text{g}} = 491.4\ \text{kJ} \approx 491\ \text{kJ}", size=EQ_SMALL - 2)
-            s1.move_to([0, -1.6, 0])
-            self.play(Write(s1), run_time=1.4)
-            ok = T("✓ just under a third", size=SMALL + 1, color=GOOD).next_to(s1, RIGHT, buff=0.3)
+            s1.scale(0.70).move_to([2.0, -0.7, 0])
+            self.play(FadeOut(self.part_a), FadeOut(calcs), FadeOut(bar), FadeOut(self.tot),
+                      FadeIn(part_b), Write(s1), run_time=1.4)
+            ok = T("✓ just under a third", size=SMALL + 1, color=GOOD).scale(0.8).next_to(s1, DOWN, buff=0.25)
             b.until(0.7)
             self.play(FadeIn(ok), run_time=0.4)
+            self.part_b, self.s1, self.ok = part_b, s1, ok
         with self.beat("b06") as b:
+            part_c = PartPrompt("Q09", "c", [
+                ("kj", "Serving energy", "491.4 kJ", "calculated earlier"),
+            ], width=3.7, y=-0.15)
             s2 = M(r"491.4\ \text{kJ} \times 1000\ \text{J kJ}^{-1} = 4.91\times10^{5}\ \text{J}", size=EQ_SMALL - 2, color=GOOD)
-            s2.move_to([0, -2.35, 0])
-            self.play(Write(s2), run_time=1.2)
+            s2.scale(0.78).move_to([2.0, -0.5, 0])
+            self.play(FadeOut(self.part_b), FadeOut(self.s1), FadeOut(self.ok),
+                      FadeIn(part_c), Write(s2), run_time=1.2)
+            si_note = T("SI unit definition: kilo = 1000", size=SMALL, color=MUTED).next_to(s2, DOWN, buff=0.24)
+            self.play(FadeIn(si_note), run_time=0.35)
         with self.beat("b07") as b:
             self.clear(h, req)
             tally = mark_tally([(2, "weighted sum: 1638 kJ per 100 g"), (1, "serving factor: 491 kJ"),
@@ -328,21 +355,33 @@ class E05S07_WhichFood(NarratedScene):
 class E05S08_Q10(NarratedScene):
     def construct(self):
         h = header("Practice Q10")
-        qc = question_card("Q10").scale(0.95).move_to([0, 0.12, 0])
+        qc = question_card("Q10").scale(0.82).move_to([0, 0.56, 0])
+        # The visual question card displays the supplied table but not the bank stem.
+        original_stem = wrapped(BY_ID["Q10"]["stem"], size=SMALL - 3, width=12.0, color=MUTED)
+        original_stem.move_to([0, -2.36, 0])
         with self.beat("b01"):
-            self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
+            self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), FadeIn(original_stem), run_time=1.0)
             bases = T("First: which two comparison bases?", size=LABEL + 2, color=UNKNOWN).next_to(qc, DOWN, buff=0.15)
+            bases.scale(0.80).move_to([0, -1.86, 0])
             self.play(FadeIn(bases), run_time=0.6)
             self.qc, self.bases = qc, bases
-        colA, colB = -3.4, 3.4
-        hA = TB("Food A", size=BODY, color=SYSTEM).move_to([colA, 2.3, 0])
-        hB = TB("Food B", size=BODY, color=SURR).move_to([colB, 2.3, 0])
+        colA, colB = -0.10, 4.05
+        hA = TB("Food A", size=BODY, color=SYSTEM).move_to([colA, 2.20, 0])
+        hB = TB("Food B", size=BODY, color=SURR).move_to([colB, 2.20, 0])
         with self.beat("b02") as b:
-            self.play(FadeOut(self.qc), FadeOut(self.bases), FadeIn(hA), FadeIn(hB), run_time=0.7)
-            bt = T("per 100 g", size=LABEL + 2, color=UNKNOWN).move_to([0, 1.65, 0])
-            a1 = M(r"50(16) + 10(17) + 12(37)", size=EQ_SMALL - 8).move_to([colA, 1.15, 0])
+            part_a = PartPrompt("Q10", "a", [
+                ("a", "A: carb / protein / fat", "50 / 10 / 12 g", "question"),
+                ("b", "B: carb / protein / fat", "35 / 20 / 15 g", "question"),
+                ("factors", "Food factors", "16 / 17 / 37 kJ g⁻¹", "question"),
+                ("basis", "Nutrient basis", "per 100 g", "question"),
+            ], width=3.7, y=-0.15)
+            self.play(FadeOut(self.qc), FadeOut(self.bases), FadeOut(original_stem),
+                      FadeIn(part_a), FadeIn(hA), FadeIn(hB), run_time=0.7)
+            self.part_a = part_a
+            bt = T("per 100 g", size=LABEL + 2, color=UNKNOWN).move_to([2.05, 1.62, 0])
+            a1 = M(r"50(16) + 10(17) + 12(37)", size=EQ_SMALL - 8).scale(0.80).move_to([colA, 1.08, 0])
             a2 = M(r"= 1414\ \text{kJ}", size=EQ_SMALL - 4, color=SYSTEM).next_to(a1, DOWN, buff=0.15)
-            b1 = M(r"35(16) + 20(17) + 15(37)", size=EQ_SMALL - 8).move_to([colB, 1.15, 0])
+            b1 = M(r"35(16) + 20(17) + 15(37)", size=EQ_SMALL - 8).scale(0.80).move_to([colB, 1.08, 0])
             b2 = M(r"= 1455\ \text{kJ}", size=EQ_SMALL - 4, color=SURR).next_to(b1, DOWN, buff=0.15)
             self.play(FadeIn(bt), Write(a1), run_time=1.0)
             self.play(Write(a2), run_time=0.6)
@@ -352,23 +391,35 @@ class E05S08_Q10(NarratedScene):
             self.b2 = b2
         with self.beat("b03") as b:
             hi = SurroundingRectangle(self.b2, color=GOOD, buff=0.1)
-            hiT = T("higher per 100 g", size=SMALL + 1, color=GOOD).next_to(hi, RIGHT, buff=0.15)
+            hiT = T("higher per 100 g", size=SMALL + 1, color=GOOD).next_to(hi, DOWN, buff=0.08)
             self.play(Create(hi), FadeIn(hiT), run_time=0.7)
-            st = T("per serving", size=LABEL + 2, color=UNKNOWN).move_to([0, -0.45, 0])
-            a3 = M(r"1414 \times 0.80 = 1131.2\ \text{kJ}", size=EQ_SMALL - 6, color=SYSTEM).move_to([colA, -1.0, 0])
-            b3 = M(r"1455 \times 0.50 = 727.5\ \text{kJ}", size=EQ_SMALL - 6, color=SURR).move_to([colB, -1.0, 0])
+            part_b = PartPrompt("Q10", "b", [
+                ("a", "Food A per 100 g", "1414 kJ", "calculated earlier"),
+                ("b", "Food B per 100 g", "1455 kJ", "calculated earlier"),
+                ("serva", "Food A serving", "80 g", "question"),
+                ("servb", "Food B serving", "50 g", "question"),
+            ], width=3.7, y=-0.15)
+            st = T("per serving", size=LABEL + 2, color=UNKNOWN).move_to([2.05, -0.46, 0])
+            a3 = M(r"1414 \times 0.80 = 1131.2\ \text{kJ}", size=EQ_SMALL - 6, color=SYSTEM).scale(0.82).move_to([colA, -1.0, 0])
+            b3 = M(r"1455 \times 0.50 = 727.5\ \text{kJ}", size=EQ_SMALL - 6, color=SURR).scale(0.82).move_to([colB, -1.0, 0])
             b.until(0.3)
-            self.play(FadeIn(st), Write(a3), run_time=1.0)
+            self.play(FadeOut(self.part_a), FadeIn(part_b), FadeIn(st), Write(a3), run_time=1.0)
+            self.part_b = part_b
             b.until(0.65)
             self.play(Write(b3), run_time=1.0)
             hi2 = SurroundingRectangle(a3, color=GOOD, buff=0.1)
             hi2T = T("larger serving energy", size=SMALL + 1, color=GOOD).next_to(hi2, DOWN, buff=0.1)
             self.play(Create(hi2), FadeIn(hi2T), run_time=0.6)
         with self.beat("b04") as b:
-            concl = T("B: more energy per 100 g.   A serving: more energy per serving.", size=LABEL + 2, color=UNKNOWN).move_to([0, -2.0, 0])
-            self.play(FadeIn(concl), run_time=0.8)
+            part_c = PartPrompt("Q10", "c", [
+                ("per100", "Per 100 g", "A 1414; B 1455 kJ", "calculated earlier"),
+                ("serving", "Per serving", "A 1131; B 728 kJ", "calculated earlier"),
+            ], width=3.7, y=-0.15)
+            concl = T("B: more energy per 100 g.   A serving: more energy per serving.", size=LABEL + 2, color=UNKNOWN)
+            concl.scale(0.74).move_to([2.05, -1.95, 0])
+            self.play(FadeOut(self.part_b), FadeIn(part_c), FadeIn(concl), run_time=0.8)
             marks = T("Marks: 2 per-100 g values · 2 serving values · 1 both comparisons with bases", size=SMALL + 1, color=GOOD)
-            marks.move_to([0, -2.5, 0])
+            marks.scale(0.70).move_to([2.05, -2.43, 0])
             b.until(0.4)
             self.play(FadeIn(marks), run_time=0.6)
 

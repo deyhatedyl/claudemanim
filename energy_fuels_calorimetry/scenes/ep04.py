@@ -12,6 +12,7 @@ from manim import *  # noqa: E402,F403
 from shared.components import (atom, bullets, flask, mark_tally, mol_C2H5OH, mol_CH4, mol_CO2, molecule,  # noqa: E402
                                question_card, result_box, right_panel, table, title_card, wrapped, wrong_panel)
 from shared.narrated import NarratedScene  # noqa: E402
+from shared.active_question import PartPrompt  # noqa: E402
 from shared.style import (BAD, BG, BODY, EQ, EQ_SMALL, FAINT, GOOD, HEAD, LABEL, MASS_C, MOL_C, MUTED,  # noqa: E402
                           PANEL, SMALL, SURR, SYSTEM, TEXT, UNKNOWN, USEFUL, M, T, TB, chip, header, panel)
 
@@ -373,36 +374,51 @@ class E04S07_Q07(NarratedScene):
         qc = question_card("Q07").move_to([0, -0.10, 0])
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
-        eq = M(r"\ce{C6H12O6(aq)} \ce{->} 2\ce{C2H5OH(aq)} + 2\ce{CO2(g)}", size=EQ_SMALL).move_to([0, 2.35, 0])
+        eq = M(r"\ce{C6H12O6(aq)} \ce{->} 2\ce{C2H5OH(aq)} + 2\ce{CO2(g)}", size=EQ_SMALL)
+        eq.scale(0.78).move_to([2.05, 2.0, 0])
         ratio = T("1 : 2 : 2", size=LABEL + 2, color=MOL_C).next_to(eq, DOWN, buff=0.12)
         req = requested("masses (g)")
+        part_a = PartPrompt("Q07", "a", [
+            ("reactant", "Reactant", "glucose(aq)", "question"),
+            ("products", "Products", "ethanol + CO₂", "question"),
+        ], width=3.7, y=-0.15)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), Write(eq), FadeIn(req), run_time=1.2)
+            self.play(FadeOut(qc), FadeIn(part_a), Write(eq), run_time=1.2)
             b.until(0.55)
             self.play(FadeIn(ratio), run_time=0.6)
         with self.beat("b03") as b:
+            part_b = PartPrompt("Q07", "b", [
+                ("mass", "Glucose mass", "270.0 g", "question"),
+                ("molar", "Glucose M", "180.0 g mol⁻¹", "question"),
+                ("yield", "Conversion", "78.0%", "question"),
+                ("ethanol", "M(ethanol)", "46.0 g mol⁻¹", "2026 VCAA Data Book"),
+                ("co2", "M(CO₂)", "44.0 g mol⁻¹", "2026 VCAA Data Book"),
+            ], width=3.7, y=-0.15)
             pred = VGroup(TB("Predict first", size=LABEL + 2, color=UNKNOWN),
                           T("270 g ÷ 180 g mol⁻¹ ≈ 1.5 mol glucose", size=LABEL),
                           T("→ at most 3 mol ethanol ≈ 140 g; yield < 100% → a bit over 100 g", size=LABEL)).arrange(DOWN, aligned_edge=LEFT, buff=0.12)
+            pred.scale(0.76)
             pb = panel(pred, color=UNKNOWN)
-            pg = VGroup(pb, pred).move_to([0, 0.55, 0])
-            self.play(FadeIn(pb), FadeIn(pred[0]), FadeIn(pred[1]), run_time=0.8)
+            pg = VGroup(pb, pred).move_to([2.1, 0.55, 0])
+            self.play(FadeOut(part_a), FadeIn(part_b), FadeIn(req),
+                      FadeIn(pb), FadeIn(pred[0]), FadeIn(pred[1]), run_time=0.8)
             b.until(0.45)
             self.play(FadeIn(pred[2]), run_time=0.8)
             self.pg = pg
+            self.part_b = part_b
         chain_y = 0.05
         boxes = VGroup(
             VGroup(TB("glucose", size=SMALL + 1, color=MUTED), M(r"1.50\ \text{mol}", size=EQ_SMALL - 6, color=MOL_C)).arrange(DOWN, buff=0.1),
             VGroup(TB("theoretical", size=SMALL + 1, color=MUTED), M(r"3.00\ \text{mol}", size=EQ_SMALL - 6, color=MOL_C)).arrange(DOWN, buff=0.1),
             VGroup(TB("actual (78.0%)", size=SMALL + 1, color=MUTED), M(r"2.34\ \text{mol}", size=EQ_SMALL - 6, color=MOL_C)).arrange(DOWN, buff=0.1),
-        ).arrange(RIGHT, buff=2.1).move_to([0, chain_y, 0])
+        ).arrange(RIGHT, buff=2.1).scale(0.75).move_to([2.05, chain_y, 0])
         arrs = VGroup(Arrow(boxes[0].get_right(), boxes[1].get_left(), buff=0.15, color=TEXT, stroke_width=3),
                       Arrow(boxes[1].get_right(), boxes[2].get_left(), buff=0.15, color=TEXT, stroke_width=3))
         al = VGroup(T("× 2", size=SMALL + 1, color=MOL_C).next_to(arrs[0], UP, buff=0.05),
                     T("× 0.780", size=SMALL + 1, color=UNKNOWN).next_to(arrs[1], UP, buff=0.05))
         with self.beat("b04") as b:
             self.play(FadeOut(self.pg), run_time=0.4)
-            c1 = M(r"n(\text{glucose}) = \frac{270.0\ \text{g}}{180.0\ \text{g mol}^{-1}} = 1.50\ \text{mol}", size=EQ_SMALL - 4).move_to([0, 1.1, 0])
+            c1 = M(r"n(\text{glucose}) = \frac{270.0\ \text{g}}{180.0\ \text{g mol}^{-1}} = 1.50\ \text{mol}", size=EQ_SMALL - 4).scale(0.79).move_to([2.05, 1.1, 0])
             self.play(Write(c1), run_time=1.2)
             self.play(FadeIn(boxes[0]), run_time=0.5)
             b.until(0.55)
@@ -415,7 +431,7 @@ class E04S07_Q07(NarratedScene):
         with self.beat("b06") as b:
             m1 = M(r"m(\text{ethanol}) = 2.34 \times 46.0 = 107.64\ \text{g} \approx 108\ \text{g}", size=EQ_SMALL - 4, color=MASS_C)
             m2 = M(r"m(\ce{CO2}) = 2.34 \times 44.0 = 102.96\ \text{g} \approx 103\ \text{g}", size=EQ_SMALL - 4, color=MASS_C)
-            VGroup(m1, m2).arrange(DOWN, buff=0.3).move_to([0, -1.5, 0])
+            VGroup(m1, m2).arrange(DOWN, buff=0.3).scale(0.76).move_to([2.05, -1.65, 0])
             self.play(Write(m1), run_time=1.2)
             b.until(0.45)
             self.play(Write(m2), run_time=1.2)
@@ -423,15 +439,22 @@ class E04S07_Q07(NarratedScene):
             b.until(0.8)
             self.play(FadeIn(chk), run_time=0.5)
         with self.beat("b07") as b:
-            self.clear(h, req, eq, ratio)
+            # The equation, previous masses and generic "Asked masses" chip
+            # belong to part b, not the current distillation question.
+            self.clear(h)
+            part_c = PartPrompt("Q07", "c", [
+                ("mixture", "Mixture", "aqueous ethanol", "question"),
+                ("method", "Method", "distillation", "question"),
+            ], width=3.7, y=-0.15)
             ans = right_panel("c. Full-credit style", [
                 "Distillation separates and concentrates the ethanol from the aqueous fermentation mixture, using the "
-                "difference in volatility (boiling point) of ethanol and water."], width=11.0)
-            ans.move_to([0, 0.4, 0])
-            self.play(FadeIn(ans), run_time=1.0)
+                "difference in volatility (boiling point) of ethanol and water."], width=8.0)
+            ans.scale(0.85).move_to([2.0, 0.4, 0])
+            self.play(FadeIn(part_c), FadeIn(ans), run_time=1.0)
             self.ans = ans
+            self.part_c = part_c
         with self.beat("b08") as b:
-            self.play(FadeOut(self.ans), FadeOut(eq), FadeOut(ratio), run_time=0.4)
+            self.play(FadeOut(self.ans), FadeOut(self.part_c), run_time=0.4)
             tally = mark_tally([(1, "equation with states"), (1, "1 : 2 ratio → 3.00 mol"), (1, "yield applied once → 2.34 mol"),
                                 (2, "masses: 108 g ethanol, 103 g CO₂"), (1, "distillation separates/concentrates")],
                                width=6.0, size=SMALL + 1).move_to([-3.3, 0.2, 0])
@@ -523,30 +546,42 @@ class E04S09_Q08(NarratedScene):
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         with self.beat("b02") as b:
-            self.play(FadeOut(qc), run_time=0.4)
-            la = TB("a.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 2.2, 0])
-            eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}", size=EQ_SMALL - 4).next_to(la, RIGHT, buff=0.3)
+            part_a = PartPrompt("Q08", "a", [
+                ("fuel", "Both purified fuels", "CH₄", "question"),
+                ("conditions", "Burning conditions", "identical", "question"),
+            ], width=3.7, y=-0.15)
+            self.play(FadeOut(qc), FadeIn(part_a), run_time=0.4)
+            eq = M(r"\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}", size=EQ_SMALL - 4)
+            eq.scale(0.82).move_to([2.05, 1.45, 0])
             t = wrapped("Identical: same molecule, same reaction → same energy released and 1 mol CO₂ per mol CH₄ burned.",
-                        size=LABEL, width=11.4).next_to(eq, DOWN, buff=0.2).align_to(eq, LEFT)
-            self.play(FadeIn(la), Write(eq), run_time=1.0)
+                        size=LABEL, width=7.4).next_to(eq, DOWN, buff=0.3).align_to(eq, LEFT)
+            self.play(Write(eq), run_time=1.0)
             b.until(0.4)
             self.play(FadeIn(t), run_time=0.8)
-            self.pa = VGroup(la, eq, t)
+            self.pa = VGroup(eq, t)
+            self.part_a = part_a
         with self.beat("b03") as b:
-            lb = TB("b.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0.75, 0])
+            part_b = PartPrompt("Q08", "b", [
+                ("natural", "Natural gas", "geological reserve", "question"),
+                ("bio", "Biomethane", "recent plant waste", "question"),
+            ], width=3.7, y=-0.15)
             c1 = card("Natural gas", ["non-renewable: formed over millions of years, used far faster than replaced"], FOSSIL, 5.4)
             c2 = card("Biomethane", ["renewable: plant feedstock regrows on a human timescale"], BIO, 5.4)
-            VGroup(c1, c2).arrange(RIGHT, buff=0.35, aligned_edge=UP).next_to(lb, RIGHT, buff=0.3, aligned_edge=UP)
-            self.play(FadeIn(lb), FadeIn(c1), run_time=0.8)
+            VGroup(c1, c2).arrange(RIGHT, buff=0.35, aligned_edge=UP).scale(0.72).move_to([2.1, 0.65, 0])
+            self.play(FadeOut(self.part_a), FadeOut(self.pa), FadeIn(part_b), FadeIn(c1), run_time=0.8)
             b.until(0.5)
             self.play(FadeIn(c2), run_time=0.8)
-            self.pb = VGroup(lb, c1, c2)
+            self.pb = VGroup(c1, c2)
+            self.part_b = part_b
         with self.beat("b04") as b:
-            lc = TB("c.", size=LABEL + 2, color=SYSTEM).move_to([-6.2, 0, 0]).set_y(self.pb.get_bottom()[1] - 0.35)
+            part_c = PartPrompt("Q08", "c", [
+                ("fuel", "Fuel", "biomethane", "question"),
+                ("source", "Feedstock", "recent plant waste", "question"),
+            ], width=3.7, y=-0.15)
             items = bullets(["methane leakage from digesters and pipes (a potent greenhouse gas)",
-                             "energy used in processing", "land and water used to grow feedstock"], size=SMALL + 1, width=11.0, buff=0.1)
-            items.next_to(lc, RIGHT, buff=0.3, aligned_edge=UP)
-            self.play(FadeIn(lc), FadeIn(items[0]), run_time=0.8)
+                             "energy used in processing", "land and water used to grow feedstock"], size=SMALL + 1, width=7.4, buff=0.1)
+            items.move_to([2.0, 0.4, 0])
+            self.play(FadeOut(self.part_b), FadeOut(self.pb), FadeIn(part_c), FadeIn(items[0]), run_time=0.8)
             b.until(0.5)
             self.play(FadeIn(items[1:]), run_time=0.8)
         with self.beat("b05") as b:
