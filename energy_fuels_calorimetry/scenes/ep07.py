@@ -498,12 +498,12 @@ class E07S10_Q14a(NarratedScene):
         with self.beat("b01"):
             self.play(FadeIn(h), FadeIn(qc, shift=0.1 * UP), run_time=1.0)
         req = requested("limiting reactant; CH₄ left (g)")
-        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=1.82, x_left=-5.0, width=6.0
+        fuel = stream_bar([(0.80, "CH₄ 0.400 mol", CH4C, True), (0.20, "CO₂ 0.100", CO2C, False)], y=1.82, x_left=-5.0, width=6.0)
         fl = T("12.4 L ÷ 24.8 = 0.500 mol", size=SMALL + 1).next_to(fuel, RIGHT, buff=0.3)
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(req), FadeIn(prompt), run_time=0.5)
             self.play(FadeIn(fuel), FadeIn(fl), run_time=0.9)
-        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=0.98, x_left=-5.0, width=6.0
+        air = stream_bar([(0.21, "O₂", O2C, True), (0.79, "inert 79%", INERT, False)], y=0.98, x_left=-5.0, width=6.0)
         al = VGroup(M(r"0.210 \times 90.0 = 18.9\ \text{L}", size=EQ_SMALL - 8),
                     M(r"\tfrac{18.9}{24.8} = 0.7621\ \text{mol}", size=EQ_SMALL - 8, color=O2C)).arrange(RIGHT, buff=0.3).scale(0.88).next_to(air, RIGHT, buff=0.3)
         with self.beat("b03") as b:
