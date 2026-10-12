@@ -2,12 +2,17 @@
 from __future__ import annotations
 
 import io
+import hashlib
 import json
+import os
+import tempfile
 import unittest
 from unittest import mock
 import urllib.error
 from pathlib import Path
 import sys
+from contextlib import redirect_stdout, redirect_stderr
+import wave
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -86,6 +91,104 @@ class AuthTests(unittest.TestCase):
         reason = tts.safe_provider_reason(json.dumps(payload).encode())
         self.assertIn("Unknown voice", reason)
         self.assertNotIn("PRIVATENOTFOUND", reason)
+
+    def test_freeform_provider_response_never_leaks_unknown_secret(self):
+        body = json.dumps({"error": {"message": "Account PRIVATE_RARE_VALUE has insufficient balance"}}).encode()
+        reason = tts.safe_provider_reason(body)
+        self.assertNotIn("PRIVATE_RARE_VALUE", reason)
+        self.assertIn("omitted", reason)
+
+    def test_offline_dry_run_selects_exact_ten_and_probe_without_key(self):
+        for options, expected in (([], "E13S15.b01"),
+                                  (["--probe"], "One short voice probe")):
+            stdout = io.StringIO()
+            with mock.patch.dict(os.environ, {}, clear=True), \
+                 mock.patch.object(tts.urllib.request, "urlopen") as http, \
+                 redirect_stdout(stdout):
+                self.assertEqual(tts.main(["--dry-run", *options]), 0)
+            http.assert_not_called()
+            self.assertIn(expected, stdout.getvalue())
+
+    def test_missing_openrouter_key_never_calls_provider(self):
+        stderr = io.StringIO()
+        with mock.patch.dict(os.environ, {}, clear=True), \
+             mock.patch.object(tts.urllib.request, "urlopen") as http, \
+             redirect_stderr(stderr):
+            self.assertEqual(tts.main(["--probe"]), 2)
+        http.assert_not_called()
+        self.assertIn("OPENROUTER_API_KEY", stderr.getvalue())
+
+    def test_mocked_probe_uses_selected_preset_and_unique_private_output(self):
+        stdout = io.StringIO()
+        with mock.patch.dict(os.environ, {"OPENROUTER_API_KEY": "NONREAL_KEY"}, clear=True), \
+             mock.patch.object(tts, "check_authentication") as auth, \
+             mock.patch.object(tts, "synthesize", return_value=0.6) as synth, \
+             redirect_stdout(stdout):
+            self.assertEqual(tts.main(["--probe", "--studio-voice", "Sulafat"]), 0)
+        auth.assert_called_once_with("NONREAL_KEY")
+        synth.assert_called_once()
+        text, voice, api_key, destination = synth.call_args.args
+        self.assertIn("calorimetry", text)
+        self.assertEqual(voice, "Sulafat")
+        self.assertEqual(api_key, "NONREAL_KEY")
+        self.assertEqual(destination.parent.name, "probes")
+        self.assertTrue(destination.name.startswith("openrouter_voice_probe_"))
+        self.assertNotIn("NONREAL_KEY", stdout.getvalue())
+        self.assertIn("does not expose", stdout.getvalue())
+
+    def test_mocked_pcm_synthesis_atomic_and_cache_integrity(self):
+        class FakeAudio:
+            headers = {"Content-Type": "audio/pcm;rate=24000;channels=1"}
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def read(self): return bytes([0, 0]) * 2400
+
+        with tempfile.TemporaryDirectory() as td:
+            output = Path(td) / "retake.wav"
+            with mock.patch.object(tts.urllib.request, "urlopen", return_value=FakeAudio()) as call:
+                duration = tts.synthesize("Short test.", "Sulafat", "NONREAL_KEY", output)
+            self.assertAlmostEqual(duration, 0.1)
+            self.assertTrue(output.is_file())
+            with wave.open(str(output), "rb") as wav:
+                self.assertEqual(wav.getframerate(), 24000)
+                self.assertEqual(wav.getnchannels(), 1)
+            request = call.call_args.args[0]
+            self.assertEqual(request.get_method(), "POST")
+            self.assertEqual(request.full_url, tts.URL)
+            payload = json.loads(request.data)
+            self.assertEqual(payload, {
+                "model": tts.MODEL, "voice": "Sulafat",
+                "input": "Short test.", "response_format": "pcm",
+            })
+            meta = output.with_suffix(".wav.json")
+            fields = {
+                "text_sha256": hashlib.sha256(b"Short test.").hexdigest(),
+                "model": tts.MODEL, "provider": "OpenRouter",
+                "voice_fingerprint": hashlib.sha256(b"Sulafat").hexdigest(),
+                "audio_sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
+                "duration_seconds": duration,
+            }
+            meta.write_text(json.dumps(fields))
+            self.assertEqual(tts.cached_duration(output, "Short test.", "Sulafat"), duration)
+            self.assertIsNone(tts.cached_duration(output, "Another text", "Sulafat"))
+            self.assertIsNone(tts.cached_duration(output, "Short test.", "Kore"))
+            output.write_bytes(output.read_bytes()[:-4])
+            self.assertIsNone(tts.cached_duration(output, "Short test.", "Sulafat"))
+
+    def test_invalid_response_never_overwrites_existing_wav(self):
+        class FakeBad:
+            headers = {"Content-Type": "application/json"}
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def read(self): return b"PRIVATE" * 1000
+
+        with tempfile.TemporaryDirectory() as td:
+            dest = Path(td) / "original.wav"
+            dest.write_bytes(b"ORIGINAL")
+            with mock.patch.object(tts.urllib.request, "urlopen", return_value=FakeBad()):
+                with self.assertRaises(ValueError):
+                    tts.synthesize("text", "Sulafat", "KEY", dest)
+            self.assertEqual(dest.read_bytes(), b"ORIGINAL")
 
 
 if __name__ == "__main__":

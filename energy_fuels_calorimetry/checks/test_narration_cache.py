@@ -14,8 +14,9 @@ from pathlib import Path
 import sys
 import tempfile
 from types import SimpleNamespace
+from types import ModuleType
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 import wave
 
 
@@ -51,6 +52,7 @@ class NarrationCacheTests(unittest.TestCase):
             "model": MODEL,
             "voice_label": tts.VOICE_NAME,
             "voice_fingerprint": tts.voice_fingerprint(VOICE_ID),
+            "style_sha256": tts.style_fingerprint(),
         }
         data.update(overrides)
         self.meta.write_text(json.dumps(data), encoding="utf-8")
@@ -74,6 +76,15 @@ class NarrationCacheTests(unittest.TestCase):
         self.store_metadata()
         self.assertFalse(tts.ready(self.dest, TRANSCRIPT, MODEL, "another-custom-voice-id"))
 
+    def test_accent_instruction_change_invalidates_cache(self):
+        self.store_metadata()
+        self.assertTrue(tts.ready(self.dest, TRANSCRIPT, MODEL, VOICE_ID, tts.STYLE))
+        self.assertFalse(tts.ready(self.dest, TRANSCRIPT, MODEL, VOICE_ID, "Different accent"))
+
+    def test_missing_style_fingerprint_is_stale(self):
+        self.store_metadata(style_sha256=None)
+        self.assertFalse(tts.ready(self.dest, TRANSCRIPT, MODEL, VOICE_ID))
+
     def test_legacy_metadata_without_fingerprint_is_stale(self):
         self.store_metadata()
         data = json.loads(self.meta.read_text(encoding="utf-8"))
@@ -96,6 +107,7 @@ class NarrationCacheTests(unittest.TestCase):
         self.assertAlmostEqual(duration, 0.01)
         metadata = json.loads(self.meta.read_text(encoding="utf-8"))
         self.assertEqual(metadata["voice_fingerprint"], tts.voice_fingerprint(VOICE_ID))
+        self.assertEqual(metadata["style_sha256"], tts.style_fingerprint())
         self.assertNotIn(VOICE_ID, self.meta.read_text(encoding="utf-8"))
         self.assertTrue(tts.ready(self.dest, TRANSCRIPT, MODEL, VOICE_ID))
 
@@ -126,6 +138,48 @@ class NarrationCacheTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("1 selected; 1 would be generated", stdout.getvalue())
         self.assertIn("Custom voice unavailable", stderr.getvalue())
+
+    def test_probe_dry_run_requires_no_beats_or_credentials(self):
+        with patch.object(tts, "BEATS", []), patch.dict("os.environ", {}, clear=True):
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                code = tts.main(["--probe", "--dry-run", "--studio-voice", "Sulafat",
+                                 "--output", self.tmp.name])
+        self.assertEqual(code, 0)
+        self.assertIn("1 selected; 1 would be generated", stdout.getvalue())
+        self.assertIn("probes", stdout.getvalue())
+        self.assertFalse((Path(self.tmp.name) / "probes").exists())
+
+    def test_sdk_error_never_prints_private_provider_text(self):
+        secret = "PRIVATE_TRANSCRIPT APIKEY_RANDOM_123"
+        error = RuntimeError("upstream failed: " + secret)
+        self.assertNotIn(secret, tts.safe_gemini_error(error))
+        error.status_code = 401
+        self.assertIn("HTTP 401", tts.safe_gemini_error(error))
+
+    def test_native_probe_mocked_end_to_end_creates_one_unique_wav(self):
+        response = SimpleNamespace(output_audio=SimpleNamespace(
+            data=base64.b64encode(synthetic_wav()).decode("ascii")))
+        mock_create = Mock(return_value=response)
+        client = SimpleNamespace(interactions=SimpleNamespace(create=mock_create), close=Mock())
+        google_module = ModuleType("google")
+        google_module.genai = SimpleNamespace(Client=Mock(return_value=client))
+        stdout = io.StringIO()
+        with patch.dict(sys.modules, {"google": google_module}), \
+             patch.dict("os.environ", {"GEMINI_API_KEY": "NONREAL_PLACEHOLDER"}, clear=True), \
+             patch.object(tts, "BEATS", []), redirect_stdout(stdout):
+            status = tts.main(["--probe", "--studio-voice", "Sulafat",
+                               "--output", self.tmp.name, "--interval", "0"])
+        self.assertEqual(status, 0)
+        mock_create.assert_called_once()
+        request = mock_create.call_args.kwargs
+        self.assertEqual(request["model"], tts.FLASH_MODEL)
+        self.assertEqual(request["generation_config"], {"speech_config": [{"voice": "Sulafat"}]})
+        self.assertEqual(request["input"][0]["content"][0]["annotations"][0]["style"], tts.STYLE)
+        files = list((Path(self.tmp.name) / "probes").glob("voice_probe_*.wav"))
+        self.assertEqual(len(files), 1)
+        self.assertTrue(files[0].with_suffix(".wav.json").is_file())
+        self.assertNotIn("NONREAL_PLACEHOLDER", stdout.getvalue())
 
 
 if __name__ == "__main__":

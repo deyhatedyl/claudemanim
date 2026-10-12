@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -23,12 +24,13 @@ import time
 import urllib.error
 import urllib.request
 import wave
+from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from shared.script_parser import load_episode
 from tools.reconcile_authored_narration import AUDITED_RETAKES
-from tools.narration_runner import voice_id, VOICE_NAME
+from tools.narration_runner import atomic_write, voice_id, wav_duration
 
 URL = "https://openrouter.ai/api/v1/audio/speech"
 KEY_URL = "https://openrouter.ai/api/v1/key"
@@ -77,19 +79,22 @@ def safe_provider_reason(body: bytes, *, voice: str = "", input_text: str = "") 
         if not message or any(x in message.casefold() for x in (
                 "provider returned", "provider error", "bad request", "validation failed")):
             message = upstream_message
-    if not isinstance(message, str) or not message.strip():
-        return "No detailed error message was supplied."
-    # Remove exact user-provided inputs and identifiable identifiers.
-    if input_text:
-        message = message.replace(input_text, "[narration text hidden]")
-    if voice:
-        message = message.replace(voice, "[custom voice ID hidden]")
-    message = re.sub(r"(?i)bearer\s+[^\s,;}]+", "Bearer [hidden]", message)
-    message = re.sub(r"sk-or-v1-[\w-]+|AIza[\w-]+", "[API key hidden]", message)
-    message = re.sub(r"voice_[\w-]+|voicekey_[\w-]+", "[custom voice ID hidden]", message)
-    message = re.sub(r"https?://\S+", "[URL hidden]", message)
-    message = re.sub(r"[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}", "[email hidden]", message)
-    return " ".join(message.split())[:280]
+    # Never echo free-form provider text: it can contain arbitrary account fields,
+    # partial transcript fragments, and secrets that regex redaction cannot know.
+    lowered = message.casefold() if isinstance(message, str) else ""
+    if "unknown voice" in lowered:
+        return "Unknown voice identifier."
+    if "voice" in lowered and "not available" in lowered:
+        return "Selected voice is not available."
+    if "voice" in lowered and "not found" in lowered:
+        return "Selected voice not found by provider."
+    if "model" in lowered and ("not found" in lowered or "not available" in lowered):
+        return "Selected speech model not available."
+    if "unsupported" in lowered:
+        return "A requested speech option is unsupported."
+    if "invalid" in lowered:
+        return "Provider reports invalid speech request parameters."
+    return "Provider rejected the request; private response details omitted."
 
 
 def diagnose_speech_error(status: int, body: bytes, *, voice: str, input_text: str) -> str:
@@ -132,7 +137,7 @@ def explain_speech_error(status: int) -> str:
     if status == 401:
         return ("HTTP 401: authentication was rejected by OpenRouter. "
                 "This does not establish whether Gemini or the selected "
-                "Melb Teacher F1 voice is supported.")
+                "voice is supported.")
     if status == 400:
         return ("HTTP 400: TTS request validation failed. After successful "
                 "authentication, verify model, voice identifier and format. "
@@ -171,11 +176,12 @@ def synthesize(text: str, voice: str, api_key: str, dest: Path):
         # Raw error bodies are untrusted and can contain private details.
         raise RuntimeError(diagnose_speech_error(
             exc.code, exc.read(10000), voice=voice, input_text=text)) from None
+    except urllib.error.URLError:
+        raise RuntimeError("Could not reach OpenRouter speech endpoint.") from None
     if len(audio) < 4096:
         raise ValueError("Gemini returned implausibly little audio.")
-    dest.parent.mkdir(parents=True, exist_ok=True)
     if mime.startswith("audio/wav") or audio[:4] == b"RIFF":
-        dest.write_bytes(audio)
+        prepared = audio
     elif "audio/pcm" in mime or "application/octet-stream" in mime:
         rate_match = re.search(r"rate=(\d+)", mime)
         channels_match = re.search(r"channels=(\d+)", mime)
@@ -187,23 +193,50 @@ def synthesize(text: str, voice: str, api_key: str, dest: Path):
             raise ValueError(f"PCM sample rate {rate} Hz requires conversion to 24 kHz.")
         if len(audio) % 2:
             raise ValueError("PCM audio has odd byte count.")
-        with wave.open(str(dest), "wb") as out:
+        buffer = io.BytesIO()
+        with wave.open(buffer, "wb") as out:
             out.setnchannels(1)
             out.setsampwidth(2)
             out.setframerate(rate)
             out.writeframes(audio)
+        prepared = buffer.getvalue()
     else:
-        raise ValueError(f"Unexpected Gemini TTS content-type {mime!r}")
-    with wave.open(str(dest), "rb") as result:
-        if (result.getframerate(), result.getnchannels(), result.getsampwidth()) != (24000, 1, 2):
-            raise ValueError("Audio WAV format incompatible with existing narration pipeline.")
-        duration = result.getnframes() / 24000.0
+        raise ValueError("Unexpected speech audio content type.")
+    duration = wav_duration(prepared)
+    atomic_write(dest, prepared)
     return duration
 
 
-def main() -> int:
+def cached_duration(dest: Path, text: str, voice: str) -> float | None:
+    """Reject stale/malformed cache, including WAV bytes that changed on disk."""
+    meta = dest.with_suffix(".wav.json")
+    if not dest.is_file() or not meta.is_file():
+        return None
+    try:
+        record = json.loads(meta.read_text(encoding="utf-8"))
+        if not isinstance(record, dict) or record.get("provider") != "OpenRouter":
+            return None
+        if record.get("model") != MODEL:
+            return None
+        if record.get("text_sha256") != hashlib.sha256(text.encode("utf-8")).hexdigest():
+            return None
+        if record.get("voice_fingerprint") != hashlib.sha256(voice.encode("utf-8")).hexdigest():
+            return None
+        wav = dest.read_bytes()
+        if record.get("audio_sha256") != hashlib.sha256(wav).hexdigest():
+            return None
+        duration = wav_duration(wav)
+        if abs(float(record.get("duration_seconds", -1)) - duration) > 0.02:
+            return None
+        return duration
+    except (OSError, ValueError, TypeError, UnicodeError, EOFError, wave.Error):
+        return None
+
+
+def main(argv=None) -> int:
     cli = argparse.ArgumentParser()
     cli.add_argument("--test", action="store_true", help="Synthesize one corrected beat for voice compatibility")
+    cli.add_argument("--dry-run", action="store_true", help="Show exactly ten selected beats without credentials or API calls")
     cli.add_argument("--interval", type=float, default=21.0)
     cli.add_argument("--voice-file", type=Path)
     cli.add_argument("--studio-voice", default="Sulafat",
@@ -211,8 +244,24 @@ def main() -> int:
     cli.add_argument("--check-auth", action="store_true",
                      help="Validate the OpenRouter key; do not generate audio")
     cli.add_argument("--probe", action="store_true",
-                     help="Generate 1 short sentence with the SAME custom Gemini voice to isolate voice access from input-length issues")
-    args = cli.parse_args()
+                     help="One paid short preset/custom-voice sample; stored with a unique name under probes/")
+    args = cli.parse_args(argv)
+    if args.interval < 0:
+        cli.error("--interval must be nonnegative")
+    if args.probe and args.test:
+        cli.error("--test and --probe are mutually exclusive")
+    all_keys = sorted(AUDITED_RETAKES)
+    if len(all_keys) != 10 or "E13S15.b01" not in all_keys:
+        print("Ten-retake manifest is inconsistent.", file=sys.stderr)
+        return 2
+    if args.dry_run:
+        if args.probe:
+            print("One short voice probe would be generated in probes/ (billable without --dry-run).")
+        else:
+            for beat_key in (["E12S02.b01"] if args.test else all_keys):
+                print(f"  {beat_key}: would generate/validate")
+        print("Offline dry run; no credentials or API requests used.")
+        return 0
     key = os.getenv("OPENROUTER_API_KEY")
     if not key:
         print("OPENROUTER_API_KEY is not set in this process. Export a new key "
@@ -228,24 +277,32 @@ def main() -> int:
         print("OpenRouter authentication succeeded (HTTP 200). "
               "The Gemini model and selected voice have NOT been tested yet.")
         return 0
-    voice, source = voice_id(argparse.Namespace(
-        voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None,
-        studio_voice=None if args.voice_file else args.studio_voice, lite=False))
+    try:
+        voice, source = voice_id(argparse.Namespace(
+            voice_id=None, voice_file=str(args.voice_file) if args.voice_file else None,
+            studio_voice=None if args.voice_file else args.studio_voice, lite=False))
+    except (ValueError, OSError):
+        print("Voice selection failed. Verify the private file or studio voice name.",
+              file=sys.stderr)
+        return 2
     if args.probe:
-        path = ROOT / "audio" / "gemini_retakes" / "voice_probe.wav"
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        path = ROOT / "audio" / "gemini_retakes" / "probes" / f"openrouter_voice_probe_{stamp}.wav"
         try:
             duration = synthesize(
-                "Good morning, Year Twelve. Today we\u0027ll work through calorimetry, check the units, and explain why the energy released depends on the fuel.", voice, key, path)
-        except RuntimeError as exc:
+                "Good morning, Year Twelve. Let's check the units in this calorimetry question.", voice, key, path)
+        except (RuntimeError, ValueError, OSError) as exc:
             print(f"Selected-voice short probe failed: {exc}", file=sys.stderr)
             return 4
         print(f"Selected-voice probe succeeded ({duration:.1f}s): {path}")
-        print("The voice works with a short input; the longer test segment or its text may be the issue.")
+        print("Listen for accent and tone; OpenRouter's speech endpoint does not expose Google's native speech_metadata style field.")
         return 0
     voice_fingerprint = hashlib.sha256(voice.encode("utf-8")).hexdigest()
     beats = {b.key: b for ep in ("E06", "E07", "E08", "E12", "E13", "E14")
              for b in load_episode(ep).beats()}
-    all_keys = sorted(AUDITED_RETAKES)
+    if any(key not in beats for key in all_keys):
+        print("Retake manifest references missing script beats.", file=sys.stderr)
+        return 2
     keys = ["E12S02.b01"] if args.test else all_keys
     target = ROOT / "audio" / "gemini_retakes"
     target.mkdir(parents=True, exist_ok=True)
@@ -255,26 +312,29 @@ def main() -> int:
         dest = target / (beat_key + ".wav")
         digest = hashlib.sha256(beat.text.encode()).hexdigest()
         meta = dest.with_suffix(".wav.json")
-        if dest.is_file() and meta.is_file():
-            old = json.loads(meta.read_text())
-            if (old.get("text_sha256") == digest
-                    and old.get("model") == MODEL
-                    and old.get("voice_fingerprint") == voice_fingerprint):
-                done[beat_key] = {"file": str(dest.resolve()), "start": 0.0, "end": old["duration_seconds"]}
-                print(f"REUSED {beat_key}")
-                continue
+        cached = cached_duration(dest, beat.text, voice)
+        if cached is not None:
+            done[beat_key] = {"file": str(dest.resolve()), "start": 0.0, "end": cached}
+            print(f"REUSED {beat_key}")
+            continue
         if index:
             time.sleep(max(0.0, args.interval))
-        duration = synthesize(beat.text, voice, key, dest)
-        meta.write_text(json.dumps({
+        try:
+            duration = synthesize(beat.text, voice, key, dest)
+        except (RuntimeError, ValueError, OSError) as exc:
+            print(f"{beat_key}: synthesis stopped: {exc}", file=sys.stderr)
+            return 4
+        metadata = {
             "text_sha256": digest, "model": MODEL, "voice_label": source,
             "voice_fingerprint": voice_fingerprint,
             "voice_source": source, "provider": "OpenRouter", "duration_seconds": duration,
-        }, indent=2))
+            "audio_sha256": hashlib.sha256(dest.read_bytes()).hexdigest(),
+        }
+        atomic_write(meta, (json.dumps(metadata, indent=2) + "\n").encode("utf-8"))
         done[beat_key] = {"file": str(dest.resolve()), "start": 0.0, "end": duration}
         print(f"CREATED {beat_key}: {duration:.2f}s via Gemini")
     if not args.test and len(done) == len(all_keys):
-        (target / "segments.json").write_text(json.dumps(done, indent=2))
+        atomic_write(target / "segments.json", (json.dumps(done, indent=2) + "\n").encode("utf-8"))
         print(f"All {len(all_keys)} Gemini TTS retakes ready in {target}")
     return 0
 

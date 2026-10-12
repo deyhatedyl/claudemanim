@@ -123,7 +123,13 @@ def voice_fingerprint(vid: str) -> str:
     return hashlib.sha256(vid.encode("utf-8")).hexdigest()
 
 
-def ready(dest: Path, text: str, model: str | None = None, vid: str | None = None) -> bool:
+def style_fingerprint(style: str = STYLE) -> str:
+    """Changing the delivery/accents must invalidate previously generated audio."""
+    return hashlib.sha256(style.encode("utf-8")).hexdigest()
+
+
+def ready(dest: Path, text: str, model: str | None = None, vid: str | None = None,
+          style: str | None = None) -> bool:
     """Reuse only valid WAVs with complete matching provenance.
 
     Model and voice must be supplied by callers making a generation decision.
@@ -142,13 +148,18 @@ def ready(dest: Path, text: str, model: str | None = None, vid: str | None = Non
             return False
         recorded_model = metadata.get("model")
         fingerprint = metadata.get("voice_fingerprint")
+        recorded_style = metadata.get("style_sha256")
         if not isinstance(recorded_model, str) or not recorded_model.strip():
             return False
         if not isinstance(fingerprint, str) or re.fullmatch(r"[0-9a-f]{64}", fingerprint) is None:
             return False
+        if not isinstance(recorded_style, str) or re.fullmatch(r"[0-9a-f]{64}", recorded_style) is None:
+            return False
         if model is not None and recorded_model != model:
             return False
         if vid is not None and fingerprint != voice_fingerprint(vid):
+            return False
+        if style is not None and recorded_style != style_fingerprint(style):
             return False
         return True
     except (OSError, ValueError, EOFError, wave.Error, UnicodeError):
@@ -180,6 +191,7 @@ def save_response(response, dest: Path, text: str, model: str, label: str, vid: 
         "model": model,
         "voice_label": label,
         "voice_fingerprint": voice_fingerprint(vid),
+        "style_sha256": style_fingerprint(),
         "duration_seconds": round(duration, 6),
         "created_utc": datetime.now(timezone.utc).isoformat(),
     }
@@ -204,6 +216,32 @@ def daily_limit(message: str) -> bool:
     return "perday" in compact or "daily" in compact
 
 
+def safe_gemini_error(error: Exception) -> str:
+    """Return only a category, never an untrusted provider error body."""
+    raw_code = getattr(error, "status_code", None) or getattr(error, "code", None)
+    try:
+        code = int(raw_code)
+    except (ValueError, TypeError):
+        code = None
+    categories = {
+        400: "HTTP 400: request rejected; check model, voice, and input format.",
+        401: "HTTP 401: Google API authentication failed.",
+        403: "HTTP 403: the model or voice is not accessible to this Google project.",
+        404: "HTTP 404: requested model or voice was not found.",
+        429: "HTTP 429: Google quota or rate limit reached.",
+    }
+    if code in categories:
+        return categories[code]
+    if code is not None and 500 <= code <= 599:
+        return "HTTP 5xx: Google service temporarily unavailable."
+    lowered = str(error).casefold()
+    if "quota" in lowered or "resource_exhausted" in lowered or "429" in lowered:
+        return categories[429]
+    if any(token in lowered for token in ("timeout", "timed out", "connection", "unavailable")):
+        return "Temporary Gemini service or network failure."
+    return "Gemini request failed. Check private provider diagnostics; no details were logged."
+
+
 def parse_args(argv=None):
     p = argparse.ArgumentParser(description='VCE Chemistry - Energy, Fuels and Calorimetry, Episodes 1-14')
     p.add_argument("prefix", nargs="?", default=DEFAULT_PREFIX,
@@ -212,6 +250,8 @@ def parse_args(argv=None):
     p.add_argument("--force", action="store_true", help="regenerate selected files")
     p.add_argument("--beats", action="store_true", help="one WAV per narration beat instead of per scene")
     p.add_argument("--dry-run", action="store_true", help="list files; no key, SDK or API calls needed")
+    p.add_argument("--probe", action="store_true",
+                   help="synthesize ONE short test sentence into a unique probes/ WAV (billable unless --dry-run)")
     p.add_argument("--voice-file", help="path to your existing voice_ids.txt")
     p.add_argument("--voice-id", help="use your existing voice ID directly")
     p.add_argument("--studio-voice", help="prebuilt Gemini voice, e.g. Sulafat (warm); no saved custom voice required")
@@ -219,7 +259,7 @@ def parse_args(argv=None):
     p.add_argument("--interval", type=float, default=21.0,
                    help="minimum seconds between request starts (default: 21)")
     args = p.parse_args(argv)
-    if args.prefix is None:
+    if args.prefix is None and not args.probe:
         p.error("choose an episode prefix or all")
     if args.interval < 0:
         p.error("--interval must be nonnegative")
@@ -229,11 +269,17 @@ def parse_args(argv=None):
 def main(argv=None) -> int:
     args = parse_args(argv)
     model = LITE_MODEL if args.lite else FLASH_MODEL
-    jobs = selected_jobs(args.prefix, args.beats or "." in args.prefix)
+    if args.probe:
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        jobs = [(f"voice_probe_{stamp}", "Good morning, Year Twelve. Let's check the units in this calorimetry question.")]
+    else:
+        jobs = selected_jobs(args.prefix, args.beats or "." in args.prefix)
     if not jobs:
         print(f"No narration matches '{args.prefix}' in this Python file.", file=sys.stderr)
         return 1
     out = args.output.expanduser().resolve()
+    if args.probe:
+        out = out / "probes"
     print(f"Model: {model}\nOutput: {out}")
     try:
         vid, label = voice_id(args)
@@ -248,7 +294,8 @@ def main(argv=None) -> int:
     pending = []
     for sid, text in jobs:
         dest = out / f"{sid}.wav"
-        done = not args.force and vid is not None and ready(dest, text, model, vid)
+        done = not args.force and not args.probe and vid is not None and ready(
+            dest, text, model, vid, STYLE)
         if done:
             print(f"{sid}: already done (use --force to redo)")
         else:
@@ -277,7 +324,7 @@ def main(argv=None) -> int:
     try:
         client = genai.Client(api_key=key)
     except Exception as e:
-        print(f"Couldn't initialise Gemini: {str(e).replace(key, '[hidden API key]')}",
+        print(f"Couldn't initialise Gemini: {safe_gemini_error(e)}",
               file=sys.stderr)
         return 1
     ok = len(jobs) - len(pending)
@@ -295,13 +342,15 @@ def main(argv=None) -> int:
                 try:
                     response = request_audio(client, model, text, vid)
                 except Exception as e:
-                    msg = str(e).replace(key, "[hidden API key]")
-                    lower = msg.lower()
-                    limited = "429" in msg or "resource_exhausted" in lower or "quota" in lower
+                    # Use untrusted content only for internal retry decisions.
+                    lower = str(e).lower()
+                    msg = safe_gemini_error(e)
+                    status = getattr(e, "status_code", None) or getattr(e, "code", None)
+                    limited = str(status) == "429" or "429" in lower or "resource_exhausted" in lower or "quota" in lower
                     if limited:
                         if limited_attempts == 0:
-                            print("  Google says:", msg[:700].replace("\n", " "), flush=True)
-                        if daily_limit(msg):
+                            print("  Google says:", msg, flush=True)
+                        if daily_limit(lower):
                             other = "remove --lite" if args.lite else "add --lite"
                             print(f"Daily limit reached. {ok}/{len(jobs)} sections ready; {other} to try the other model.")
                             return 2
@@ -313,7 +362,7 @@ def main(argv=None) -> int:
                             continue
                         print(f"Still limited. {ok}/{len(jobs)} sections ready. Rerun later to resume.")
                         return 2
-                    transient = any(s in lower for s in (
+                    transient = str(status) in ("500", "502", "503", "504") or any(s in lower for s in (
                         "500", "502", "503", "504", "unavailable", "timeout", "timed out", "connection"
                     ))
                     if transient and transient_attempts < 2:
@@ -321,7 +370,7 @@ def main(argv=None) -> int:
                         print("  Temporary error; waiting 25 seconds, then retrying...", flush=True)
                         time.sleep(25)
                         continue
-                    print(f"FAILED: {msg[:1000]}\n{ok}/{len(jobs)} sections ready. Fix the error and rerun.",
+                    print(f"FAILED: {msg}\n{ok}/{len(jobs)} sections ready. Fix the error and rerun.",
                           file=sys.stderr)
                     return 1
                 # Local validation/write failures must not trigger another billable API request.
@@ -337,7 +386,9 @@ def main(argv=None) -> int:
         close = getattr(client, "close", None)
         if callable(close):
             close()
-    print(f"\n{ok}/{len(jobs)} sections ready. ZIP {out} and send it back for syncing.")
+    print(f"\n{ok}/{len(jobs)} sections ready. WAV directory: {out}")
+    if args.probe:
+        print("Listen to the sample; a supported preset does not guarantee a Melbourne accent.")
     return 0
 
 
