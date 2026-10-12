@@ -295,7 +295,7 @@ class E08S06_Q15(NarratedScene):
         l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
         l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
-            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
+            self.play(Succession(FadeOut(part_b), FadeIn(part_c)), FadeOut(bigger), run_time=0.35)
             self.play(Write(l4), Indicate(part_c.focus("temperature"), color=SURR), run_time=0.9)
             b.until(0.35)
             self.play(Write(l5), Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=1.2)
@@ -427,7 +427,7 @@ class E08S08_Q16(NarratedScene):
             self.play(Write(l3), Indicate(part_c.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
             self.play(Succession(FadeOut(part_c), FadeIn(part_d)), FadeOut(l1), FadeOut(l2),
-                      FadeOut(l3), FadeOut(dt), FadeOut(bigger), run_time=0.4)
+                      FadeOut(l3), FadeOut(dt), run_time=0.4)
             w = wrong_panel("Efficiency used the wrong way", [M(r"\frac{45.144 \times 0.450}{29.8} = 0.682\ \text{g}", size=EQ_SMALL - 8, color=TEXT)], width=5.4)
             w.move_to([2.10, 0.42, 0])
             minb = right_panel("100% efficient minimum", [M(r"\frac{45.144}{29.8} = 1.515\ \text{g}", size=EQ_SMALL - 8, color=TEXT),
