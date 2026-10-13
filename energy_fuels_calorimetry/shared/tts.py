@@ -69,7 +69,28 @@ def cached_clip(beat_key: str, text: str, manifest: dict | None = None) -> dict 
     e = manifest.get(beat_key)
     if not e:
         return None
-    if e.get("source") == "openrouter_gemini_retake":
+    if e.get("source") == "user_supplied_retake":
+        # User-uploaded MP3s have no authenticated provider/voice receipt.
+        # Admit only the reviewed source bytes, PCM decode and exact text.
+        try:
+            provenance = json.loads((C.ROOT / e["metadata_path"]).read_text())
+            p = C.ROOT / e["path"]
+            original = C.ROOT / provenance["input_path"]
+            matches = (
+                provenance.get("source") == "user_supplied_retake"
+                and provenance.get("key") == beat_key
+                and e.get("text_hash") == provenance.get("text_hash") == manual_text_hash(text)
+                and e.get("input_sha256") == provenance.get("input_sha256")
+                == hashlib.sha256(original.read_bytes()).hexdigest()
+                and e.get("audio_sha256") == provenance.get("audio_sha256")
+                == hashlib.sha256(p.read_bytes()).hexdigest()
+                and float(provenance["alignment"]["greedy_transcription_similarity"]) >= 0.90
+                and " ".join(w["word"] for w in provenance["words"]) == text
+                and abs(wav_duration(p) - float(e["duration"])) < 0.001
+            )
+        except (OSError, ValueError, KeyError, TypeError, UnicodeError, wave.Error):
+            return None
+    elif e.get("source") == "openrouter_gemini_retake":
         # Audit retakes are NOT interchangeable with ordinary manually imported
         # originals. Verify both original OpenRouter sidecar and imported bytes
         # each time this private clip is admitted to a narrated render.
@@ -228,3 +249,4 @@ def estimate_duration(text: str) -> float:
     words = len(text.split())
     stops = len(re.findall(r"[.?!;:]", text))
     return words / C.EST_WPM * 60 + stops * C.EST_PUNCT_PAUSE
+
