@@ -303,11 +303,11 @@ class E07S05_Q13(NarratedScene):
             ext = T("extent = 1.00 ÷ 3 = 0.3333 mol", size=LABEL, color=UNKNOWN).next_to(bud, DOWN, buff=0.15)
             self.play(FadeIn(ext), run_time=0.5)
             self.play(FadeIn(bud.cell(0, 1, "0.3333", SYSTEM)), FadeIn(bud.cell(1, 1, "1.00 (all)", SYSTEM)), run_time=0.6)
-            b.until(0.5)
+            b.until_words("The ethanol remaining", fallback_frac=0.5, lead=0.2)
             self.play(FadeIn(bud.cell(0, 2, "0.0667", GOOD)), FadeIn(bud.cell(1, 2, "0", GOOD)), run_time=0.6)
             m = M(r"m(\text{ethanol left}) = 0.0667 \times 46.0 = 3.07\ \text{g}", size=EQ_SMALL - 4, color=MASS_C).move_to([1.95, -1.35, 0])
             m.scale_to_fit_width(min(8.0, m.width))
-            b.until(0.75)
+            b.until_words("Times forty-six point zero", fallback_frac=0.75, lead=0.2)
             self.play(Write(m), Indicate(part_b.focus("ethanol_M"), color=SURR), run_time=1.0)
             self.bud, self.ext, self.m = bud, ext, m
         with self.beat("b06") as b:
@@ -318,6 +318,7 @@ class E07S05_Q13(NarratedScene):
             c.scale_to_fit_width(min(8.0, c.width))
             e = M(r"E = 0.3333 \times 1370 = 456.7 \approx 457\ \text{kJ released}", size=EQ_SMALL - 4, color=ENERGY_C).move_to([1.95, -2.35, 0])
             e.scale_to_fit_width(min(8.0, e.width))
+            b.until_words("Times forty-four point zero", fallback_frac=0.3, lead=0.2)
             self.play(Write(c), Indicate(part_c.focus("co2_M"), color=UNKNOWN), run_time=1.0)
             b.until_words("Finally, it asks for the energy released", fallback_frac=0.55, lead=0.15)
             self.play(Succession(FadeOut(part_c), FadeIn(part_d)), run_time=0.35)
@@ -649,3 +650,4 @@ class E07S12_Recap(NarratedScene):
 EPISODE_SCENES = ["E07S01_Retrieval", "E07S02_Batches", "E07S03_Trays", "E07S04_MassCheck", "E07S05_Q13",
                   "E07S06_Mixtures", "E07S07_GasVolumes", "E07S08_GasMeasure", "E07S09_NewVsInlet",
                   "E07S10_Q14a", "E07S11_Q14b", "E07S12_Recap"]
+

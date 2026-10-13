@@ -285,20 +285,29 @@ class E08S06_Q15(NarratedScene):
         l2 = L(r"n = \frac{0.920\ \text{g}}{46.0\ \text{g mol}^{-1}} = 0.0200\ \text{mol}", 1.34, MOL_C)
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(req), FadeIn(part_a), run_time=0.5)
+            b.until_words("one hundred and two point six four zero", lead=0.3)
             self.play(Write(l1), Indicate(part_a.focus("before"), color=SURR), run_time=1.0)
-            b.until(0.45)
+            b.until_words("minus one hundred and one point seven two zero", lead=0.2)
+            self.play(Indicate(part_a.focus("after"), color=SURR), run_time=0.7)
+            b.until_words("forty-six point zero", fallback_frac=0.45, lead=0.25)
             self.play(Write(l2), Indicate(part_a.focus("molar"), color=SURR), run_time=1.1)
         l3 = L(r"E_{\text{fuel}} = 0.0200 \times 1370 = 27.4\ \text{kJ}", 0.58, ENERGY_C)
         with self.beat("b03") as b:
             self.play(Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.35)
-            self.play(Write(l3), Indicate(part_b.focus("enthalpy"), color=SURR), run_time=1.0)
+            b.until_words("zero point zero two zero zero", lead=0.25)
+            self.play(Write(l3), Indicate(part_b.focus("amount"), color=GOOD), run_time=1.0)
+            b.until_words("one thousand three hundred and seventy", lead=0.15)
+            self.play(Indicate(part_b.focus("enthalpy"), color=SURR), run_time=0.7)
         l4 = L(r"\Delta T = 37.0 - 19.8 = 17.2\ {}^{\circ}\text{C}", -0.18, TEMP_C)
         l5 = L(r"q = 250.0 \times 4.18 \times 17.2 = 17\,974\ \text{J} = 17.974\ \text{kJ}", -0.96, USEFUL)
         with self.beat("b04") as b:
             self.play(Succession(FadeOut(part_b), FadeIn(part_c)), run_time=0.35)
+            b.until_words("Thirty-seven point zero", lead=0.3)
             self.play(Write(l4), Indicate(part_c.focus("temperature"), color=SURR), run_time=0.9)
-            b.until(0.35)
-            self.play(Write(l5), Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=1.2)
+            b.until_words("two hundred and fifty point zero", fallback_frac=0.35, lead=0.25)
+            self.play(Write(l5), Indicate(part_c.focus("water"), color=SURR), run_time=0.9)
+            b.until_words("four point one eight", lead=0.15)
+            self.play(Indicate(part_c.focus("heat_capacity"), color=UNKNOWN), run_time=0.7)
             nw = T("calculated heat absorbed by water", size=SMALL - 2, color=GOOD).next_to(l5, DOWN, buff=0.09)
             self.play(FadeIn(nw), run_time=0.4)
         with self.beat("b05") as b:
@@ -307,9 +316,15 @@ class E08S06_Q15(NarratedScene):
             self.play(FadeIn(pred), run_time=0.6)
             l6 = M(r"\text{efficiency} = \frac{17.974\ \text{kJ}}{27.4\ \text{kJ}} \times 100\% = 65.6\%", size=EQ_SMALL - 4, color=GOOD).move_to([1.8, -2.18, 0])
             l6.scale_to_fit_width(min(8.3, l6.width))
+            b.until_words("Efficiency equals useful energy over total energy", fallback_frac=0.15, lead=0.25)
             self.play(FadeOut(pred), run_time=0.2)
-            b.until(0.15)
             self.play(Write(l6), Create(result_box(l6)), run_time=1.1)
+            b.until_words("seventeen point nine seven four", lead=0.1)
+            self.play(Indicate(part_d.focus("water"), color=GOOD), run_time=0.7)
+            b.until_words("twenty-seven point four", lead=0.1)
+            self.play(Indicate(part_d.focus("fuel"), color=GOOD), run_time=0.7)
+            b.until_words("sixty-five point six", lead=0.2)
+            self.play(Indicate(l6, color=GOOD), run_time=0.7)
         with self.beat("b06") as b:
             self.clear(h, req)
             tally = mark_tally([(2, "mass and amount of ethanol"), (1, "fuel energy: 27.4 kJ"), (2, "water heat: 18.0 kJ"),
@@ -320,7 +335,8 @@ class E08S06_Q15(NarratedScene):
             ws.arrange(DOWN, buff=0.2).move_to([3.4, 0.4, 0])
             self.play(FadeIn(tally), run_time=0.8)
             for i, w in enumerate(ws):
-                b.until(0.3 + 0.2 * i)
+                b.until_words(["Using the whole burner mass", "Using the fuel's mass", "And dividing"][i],
+                              fallback_frac=0.3 + 0.2 * i, lead=0.2)
                 self.play(FadeIn(w), run_time=0.5)
 
 
@@ -413,18 +429,23 @@ class E08S08_Q16(NarratedScene):
         with self.beat("b02") as b:
             self.play(FadeOut(qc), FadeIn(req), FadeIn(part_a), run_time=0.5)
             dt = T("ΔT = 78.0 − 18.0 = 60.0 °C", size=LABEL, color=TEMP_C).move_to([0, 2.35, 0]).align_to([colL, 0, 0], LEFT)
+            b.until_words("eighteen point zero to seventy-eight point zero", lead=0.2)
             self.play(FadeIn(dt), Indicate(part_a.focus("temperature"), color=SURR), run_time=0.6)
-            b.until(0.35)
-            self.play(Write(l1), Indicate(part_a.focus("c"), color=UNKNOWN), run_time=1.3)
+            b.until_words("Useful heat equals", fallback_frac=0.35, lead=0.2)
+            self.play(Write(l1), Indicate(part_a.focus("water"), color=SURR), run_time=1.0)
+            b.until_words("four point one eight", lead=0.15)
+            self.play(Indicate(part_a.focus("c"), color=UNKNOWN), run_time=0.7)
         l2 = L(r"E_{\text{input}} = \frac{45.144\ \text{kJ}}{0.450} = 100.32\ \text{kJ}", 0.85, SYSTEM)
         with self.beat("b03") as b:
             self.play(Succession(FadeOut(part_a), FadeIn(part_b)), run_time=0.35)
+            b.until_words("forty-five point zero percent", lead=0.2)
             self.play(Write(l2), Indicate(part_b.focus("efficiency"), color=SURR), run_time=1.2)
             bigger = T("calculated input is larger than useful heat ✓", size=SMALL - 1, color=GOOD).move_to([1.8, 0.33, 0])
             self.play(FadeIn(bigger), run_time=0.4)
         l3 = L(r"m = \frac{100.32\ \text{kJ}}{29.8\ \text{kJ g}^{-1}} = 3.366\ \text{g} \approx 3.37\ \text{g}", -0.05, MASS_C)
         with self.beat("b04") as b:
             self.play(Succession(FadeOut(part_b), FadeIn(part_c)), FadeOut(bigger), run_time=0.35)
+            b.until_words("twenty-nine point eight", lead=0.2)
             self.play(Write(l3), Indicate(part_c.focus("fuel"), color=SURR), run_time=1.3)
         with self.beat("b05") as b:
             self.play(Succession(FadeOut(part_c), FadeIn(part_d)), FadeOut(l1), FadeOut(l2),
@@ -529,3 +550,4 @@ class E08S10_Recap(NarratedScene):
 EPISODE_SCENES = ["E08S01_Retrieval", "E08S02_EnergyFlow", "E08S03_qmcT", "E08S04_MassEnergy",
                   "E08S05_MassLoss", "E08S06_Q15", "E08S07_Efficiency", "E08S08_Q16", "E08S09_TooLow",
                   "E08S10_Recap"]
+
