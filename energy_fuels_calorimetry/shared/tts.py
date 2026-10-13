@@ -126,7 +126,21 @@ def cached_clip(beat_key: str, text: str, manifest: dict | None = None) -> dict 
     if not matches:
         return None
     p = C.ROOT / e["path"]
-    return e if p.exists() else None
+    # A text-matched manifest must not admit an empty/truncated PCM cache.
+    # Check its measured duration and final sample without reading the whole
+    # recording on every render beat.
+    try:
+        with wave.open(str(p), "rb") as w:
+            if (w.getnchannels(), w.getsampwidth(), w.getframerate()) != (1, 2, C.AUDIO_RATE):
+                return None
+            if not w.getnframes() or abs(w.getnframes() / w.getframerate() - float(e["duration"])) > 0.01:
+                return None
+            w.setpos(w.getnframes() - 1)
+            if len(w.readframes(1)) != 2:
+                return None
+    except (OSError, EOFError, ValueError, KeyError, TypeError, wave.Error):
+        return None
+    return e
 
 
 # ---------------------------------------------------------------- Gemini REST

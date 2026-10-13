@@ -63,6 +63,14 @@ class SuppliedRetakeTests(unittest.TestCase):
         self.meta.unlink()
         self.assertIsNone(self.cached())
 
+    def test_text_matched_manual_cache_still_rejects_truncated_pcm(self):
+        entry = {"source": "manual", "text_hash": manual_text_hash(self.text),
+                 "path": "clip.wav", "duration": 1.0}
+        with patch.object(C, "ROOT", self.root):
+            self.assertIsNotNone(cached_clip("E06S04.b03", self.text, {"E06S04.b03": entry}))
+            self.wav.write_bytes(self.wav.read_bytes()[:80])
+            self.assertIsNone(cached_clip("E06S04.b03", self.text, {"E06S04.b03": entry}))
+
     def test_incomplete_batch_is_rejected_before_any_audio_change(self):
         with patch("tools.ingest_supplied_retakes.ROOT", self.root):
             with self.assertRaises(Rejected):

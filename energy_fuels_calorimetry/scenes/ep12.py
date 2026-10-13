@@ -390,7 +390,7 @@ class E12S09_Neutral(NarratedScene):
             for i, fr in enumerate((0.05, 0.13, 0.2, 0.27, 0.36)):
                 b.until(fr)
                 self.play(FadeIn(extras[i], shift=0.1 * LEFT), run_time=0.4)
-            v = right_panel("Verdict", [wrapped("Both “lower-carbon” and “carbon neutral” need comparative lifecycle evidence.",
+            v = right_panel("Verdict", [wrapped("Lower-carbon and carbon neutral require lifecycle comparisons.",
                                                 size=SMALL + 1, width=4.8)], size=SMALL + 1, width=4.8, color=UNKNOWN)
             v.move_to([0, -1.85, 0]).align_to([x0, 0, 0], LEFT)
             b.until_words("we cannot claim it is lower carbon", fallback_frac=0.6, lead=0.2)

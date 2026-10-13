@@ -661,7 +661,9 @@ class E13S15_PartsCD(NarratedScene):
     def construct(self):
         h = header("Q26 parts c–d")
         h.set_opacity(0)  # the active original question replaces the redundant title
-        prompt_c = active_part_ribbon("Q26", "c")
+        prompt_c = active_part_ribbon("Q26", "c", [
+            ("methanol", "Methanol ΔH_c / M", "−726 kJ mol⁻¹ / 32.0 g mol⁻¹", "question"),
+            ("ethanol", "Ethanol ΔH_c / M", "−1370 kJ mol⁻¹ / 46.0 g mol⁻¹", "question")])
         prompt_d = active_part_ribbon("Q26", "d")
         claim = T("“Both contain an O–H bond, so they release equal energy per gram.”", size=LABEL + 2)
         claim.move_to([0, 1.94, 0])
@@ -672,12 +674,15 @@ class E13S15_PartsCD(NarratedScene):
         rs = VGroup(r1, r2).arrange(DOWN, buff=0.25, aligned_edge=LEFT).move_to([0, 1.05, 0])
         with self.beat("b01") as b:
             self.play(FadeIn(h), FadeIn(prompt_c), FadeIn(claim), run_time=0.7)
-            b.until(0.25)
+            b.until_words("One shared bond cannot decide that", fallback_frac=0.25, lead=0.2)
             self.play(Create(Line(claim.get_left(), claim.get_right(), color=BAD, stroke_width=4)), run_time=0.5)
-            b.until(0.4)
+            b.until_words("The energy released depends on the combustion reaction", fallback_frac=0.4, lead=0.2)
             self.play(FadeIn(r1), run_time=0.6)
-            b.until(0.75)
+            b.until_words("Methanol gives seven hundred and twenty-six", fallback_frac=0.75, lead=0.2)
             self.play(FadeIn(r2), run_time=0.6)
+            self.play(Indicate(prompt_c[1][1][0], color=SURR), run_time=0.7)
+            b.until_words("Ethanol gives one thousand three hundred and seventy", lead=0.2)
+            self.play(Indicate(prompt_c[1][1][1], color=SURR), run_time=0.7)
         with self.beat("b02") as b:
             self.play(Succession(FadeOut(prompt_c), FadeIn(prompt_d)), run_time=0.35)
             it = T("combustion CO₂ (calculated)", size=SMALL, color=SYSTEM)
@@ -753,3 +758,4 @@ EPISODE_SCENES = ["E13S01_Retrieval", "E13S02_Routine", "E13S03_Q25Attempt", "E1
                   "E13S06_PartsAC", "E13S07_WrongMethane", "E13S08_PartsDE", "E13S09_PartsFG",
                   "E13S10_SpotError", "E13S11_LessAir", "E13S12_Q26Attempt", "E13S13_PartsAB",
                   "E13S14_WrongBases", "E13S15_PartsCD", "E13S16_ErrorLog"]
+
