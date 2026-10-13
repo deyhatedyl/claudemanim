@@ -1,0 +1,28 @@
+name: Chemistry equation font dependencies
+on:
+  push:
+    branches: [codex/chemistry-tex-runtime-20261013]
+    paths: [.github/workflows/chemistry-tex-runtime.yml]
+permissions:
+  contents: read
+jobs:
+  tex-styles:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Collect public TeX science packages
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends texlive-science
+          mkdir -p texmf/tex/latex
+          for package in mhchem siunitx chemgreek translations; do
+            cp -a "/usr/share/texlive/texmf-dist/tex/latex/$package" texmf/tex/latex/
+          done
+          find texmf -type f -exec sha256sum '{}' + > styles-sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chemistry-tex-science-styles
+          retention-days: 14
+          path: |
+            texmf
+            styles-sha256.txt
