@@ -1,3 +1,30 @@
+## Latest completed narration sync — October 2026
+
+E06, E07, E08, E12, E13 and E14 were re-rendered with the updated native Manim
+question panels, diagrams and the learner's ten supplied MP3 corrections. All
+275 beats use verified recordings and measured local CTC word timing. Strict
+geometry/timing checks and complete FFmpeg decoding passed for every export.
+The final movies are H.264 1920×1080 at 30 fps with AAC audio and zero subtitle
+tracks; no captions are burned in. Sampled final frames and the changed
+question/graph/callout frames were visually inspected.
+
+The six private `E##-Chemistry-Narrated-1080p.mp4` attachments replace the older
+Library versions. `Chemistry-Verified-Audio-and-Timing.zip` preserves the
+current audio cache, supplied MP3 bytes and measured word maps privately.
+No new TTS call or API key is needed to restore this finished state. Preserve
+Episode 3 exactly as delivered. Other episodes' completed native revisions
+from the learner's local checkout must also be preserved.
+
+Use `checks/narrated_sync_completed.json` for the completed episode summary.
+`tools/ingest_supplied_retakes.py` records honest user-upload/PCM/acoustic
+provenance for MP3s; it does not fabricate OpenRouter or voice receipts. The
+existing authenticated OpenRouter WAV ingestion path remains separate.
+Cached PCM now rejects empty, truncated or duration-mismatched files.
+
+The older notes below are historical and do not indicate pending retakes.
+
+---
+
 ## Continuation 12 October 2026 — source and first render checks
 
 The 12 October chemistry audit is available in the learner's ChatGPT file Library
@@ -192,3 +219,4 @@ The existing original Gemini recording is retained; no new narration is
 needed for E04. The studio-voice preference applies to future retakes.
 
 ---
+

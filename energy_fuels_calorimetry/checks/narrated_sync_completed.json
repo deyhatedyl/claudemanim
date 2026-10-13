@@ -1,0 +1,97 @@
+{
+  "source_revision": "f084537",
+  "episode_3": "unchanged",
+  "updated_episodes": [
+    {
+      "episode": "E06",
+      "duration_seconds": 744.8,
+      "beats": 41,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    },
+    {
+      "episode": "E07",
+      "duration_seconds": 1048.533333,
+      "beats": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    },
+    {
+      "episode": "E08",
+      "duration_seconds": 811.5,
+      "beats": 42,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    },
+    {
+      "episode": "E12",
+      "duration_seconds": 878.532682,
+      "beats": 41,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    },
+    {
+      "episode": "E13",
+      "duration_seconds": 1234.433333,
+      "beats": 49,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    },
+    {
+      "episode": "E14",
+      "duration_seconds": 1259.166667,
+      "beats": 54,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "subtitle_streams": 0,
+      "full_decode": "pass",
+      "audio_timing": "measured CTC words; no estimated beats",
+      "layout": "strict pass",
+      "visual_review": "sampled final frames and targeted revised question/diagram frames inspected"
+    }
+  ],
+  "private_audio": "275 verified clips; 10 supplied MP3 corrections; original recordings retained"
+}
