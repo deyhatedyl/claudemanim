@@ -390,10 +390,10 @@ class E12S09_Neutral(NarratedScene):
             for i, fr in enumerate((0.05, 0.13, 0.2, 0.27, 0.36)):
                 b.until(fr)
                 self.play(FadeIn(extras[i], shift=0.1 * LEFT), run_time=0.4)
-            v = right_panel("Verdict", [wrapped("lower-carbon is possible; “carbon neutral” needs lifecycle evidence",
+            v = right_panel("Verdict", [wrapped("Both “lower-carbon” and “carbon neutral” need comparative lifecycle evidence.",
                                                 size=SMALL + 1, width=4.8)], size=SMALL + 1, width=4.8, color=UNKNOWN)
             v.move_to([0, -1.85, 0]).align_to([x0, 0, 0], LEFT)
-            b.until(0.6)
+            b.until_words("we cannot claim it is lower carbon", fallback_frac=0.6, lead=0.2)
             self.play(FadeIn(v), run_time=0.7)
 
 
@@ -546,3 +546,4 @@ class E12S12_Recap(NarratedScene):
 EPISODE_SCENES = ["E12S01_Retrieval", "E12S02_Bases", "E12S03_PerLitre", "E12S04_Oxygenated",
                   "E12S05_Normalise", "E12S06_Q23", "E12S07_Checkpoint", "E12S08_Boundary", "E12S09_Neutral",
                   "E12S10_Sustainable", "E12S11_Q24", "E12S12_Recap"]
+
