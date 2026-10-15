@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "scope": "Revised Episodes 4 and 5; preserve all other completed revisions",
+  "source_validation": {
+    "base_commit": "39df73bf9ace6029e5ad217b32347736a6200a6b",
+    "source_files_sha256": {
+      "scenes/ep04.py": "2c592b46037c7b520437e9d0fc81834b4751dd371a1dbc44e89e3a80336b4608",
+      "scenes/ep05.py": "bab998f92aecb55fc4b98e6b06ccf64b7c446d507dae6dca38100a1137380779"
+    },
+    "chemistry_checks": 337,
+    "chemistry_failures": 0,
+    "layout_regression_tests": 4,
+    "question_stimulus_audit": "passed",
+    "spoken_script_changes": false,
+    "voice_regenerated": false,
+    "episode_3_changed": false
+  },
+  "episodes": [
+    {
+      "episode": "E04",
+      "recorded_beats": 42,
+      "native_scenes": 10,
+      "runtime_seconds": 751.133333,
+      "video": "H.264 1920x1080 30fps",
+      "audio": "AAC",
+      "subtitle_tracks": 0,
+      "captions_burned_in": false,
+      "estimated_beats": 0,
+      "maximum_visual_overrun_seconds": 0.0,
+      "strict_geometry_passed": true,
+      "measured_speech_timing_passed": true,
+      "complete_media_decode_passed": true,
+      "sampled_final_frames_reviewed": true,
+      "sha256": "1b767844d86f0dc87641286f63aa1e81a99419bf657f273642c7d09fa2df61d9"
+    },
+    {
+      "episode": "E05",
+      "recorded_beats": 36,
+      "native_scenes": 9,
+      "runtime_seconds": 623.366667,
+      "video": "H.264 1920x1080 30fps",
+      "audio": "AAC",
+      "subtitle_tracks": 0,
+      "captions_burned_in": false,
+      "estimated_beats": 0,
+      "maximum_visual_overrun_seconds": 0.0,
+      "strict_geometry_passed": true,
+      "measured_speech_timing_passed": true,
+      "complete_media_decode_passed": true,
+      "sampled_final_frames_reviewed": true,
+      "sha256": "00bec373430e8d9af77a30fd24279bf1fc6f836b3ac3035fc53760739bf94988"
+    }
+  ],
+  "review": "Exact authored transcript/audio cache checks, measured acoustic word timing, native scene geometry, complete FFmpeg decode and sampled final/question-frame visual review. No continuous human watch-through is claimed.",
+  "private_checkpoint": "Chemistry-E04-E05-Audio-and-Timing.zip",
+  "private_audio_or_movies_committed": false
+}

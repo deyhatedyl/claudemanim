@@ -1,3 +1,36 @@
+## Latest completed narration sync — Episodes 4 and 5
+
+E04 and E05 now have revised native Manim 1080p30 narrated exports. All 78
+beats (42 and 36) use the original recordings, matched to the exact authored
+scripts and measured local CTC word timing. No new TTS or spoken-script
+changes were needed. Episode 3 and other completed revisions are preserved.
+
+Q07–Q10 keep the exact active question beside the working, identify supplied
+and calculated values, and highlight relevant source rows at recorded words.
+Q07 identifies molar masses derived from Data Book atomic masses. Q09 keeps
+the per-100 g label basis visible and wraps the prediction inside its column.
+The carbohydrate/protein/fat factors match the supplied 2026 VCAA Data Book.
+
+All 19 native scenes passed strict geometry, all 78 beats passed the measured
+speech-timing gate, and both final MP4s passed complete video/audio decoding.
+The exports use H.264 1920×1080 at 30 fps with AAC audio, zero subtitle tracks
+and no burned captions. Final sampled frames and worked-question frames were
+visually reviewed; a continuous human watch-through is not claimed.
+The 337 independent chemistry checks, question-stimulus audit, four layout
+regression tests, script lint and Python compilation also passed.
+
+`checks/narrated_e04_e05_completed.json` records this completion. The private
+`E04-Chemistry-Narrated-1080p.mp4` and `E05-Chemistry-Narrated-1080p.mp4`
+replace their older attachments. `Chemistry-E04-E05-Audio-and-Timing.zip`
+preserves these recordings and alignments separately from the earlier six-
+episode audio checkpoint. Merge its manifest entries when restoring; preserve
+all other episode audio. No audio, alignment or movies belong in public Git.
+
+The earlier completion note for E06/E07/E08/E12/E13/E14 remains valid. Older
+pending-work notes below are historical.
+
+---
+
 ## Latest completed narration sync — October 2026
 
 E06, E07, E08, E12, E13 and E14 were re-rendered with the updated native Manim
@@ -219,4 +252,5 @@ The existing original Gemini recording is retained; no new narration is
 needed for E04. The studio-voice preference applies to future retakes.
 
 ---
+
 

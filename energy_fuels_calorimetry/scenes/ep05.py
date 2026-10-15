@@ -234,19 +234,22 @@ class E05S06_Q09(NarratedScene):
                 ("protein", "Protein", "12.0 g / 100 g", "question"),
                 ("fat", "Fat", "18.0 g / 100 g", "question"),
                 ("factors", "Food factors", "16, 17, 37 kJ g⁻¹", "question"),
+                ("basis", "Label basis", "per 100 g", "question"),
             ], width=3.7, y=-0.15)
             self.play(FadeOut(qc), FadeOut(original_stem), FadeIn(part_a), FadeIn(req), run_time=0.6)
             plan = VGroup(T("per 100 g label", size=LABEL + 2), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
                           T("energy per 100 g", size=LABEL + 2), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
                           T("× 30.0/100", size=LABEL + 2, color=UNKNOWN), Arrow(LEFT * 0.5, RIGHT * 0.5, buff=0, color=TEXT),
                           T("one serving", size=LABEL + 2)).arrange(RIGHT, buff=0.2).scale(0.63).move_to([2.0, 1.85, 0])
-            b.until(0.4)
+            b.until_words("The label gives")
+            self.play(Indicate(part_a.focus("basis")), run_time=0.6)
+            b.until_words("So we'll find")
             self.play(FadeIn(plan), run_time=1.0)
             self.plan = plan
             self.part_a = part_a
         with self.beat("b03") as b:
-            pred = T("Predict: 30 g is a bit under a third of 100 g, so a bit under a third of the per-100 g energy",
-                     size=LABEL, color=UNKNOWN).scale(0.75).move_to([2.0, 1.05, 0])
+            pred = wrapped("Predict: 30 g is just under one third of 100 g, so expect just under one third of the energy.",
+                           size=LABEL, width=7.4, color=UNKNOWN).move_to([2.05, 1.05, 0])
             self.play(FadeIn(pred), run_time=0.8)
             self.pred = pred
         calcs = VGroup(M(r"48.0 \times 16 = 768\ \text{kJ}", size=EQ_SMALL - 6, color=CARB),
@@ -256,12 +259,18 @@ class E05S06_Q09(NarratedScene):
         bar = food_bar(768, 204, 666, x_left=-1.4, y=-0.4).scale(0.65).move_to([3.0, -0.4, 0])
         with self.beat("b04") as b:
             self.play(FadeOut(self.plan), FadeOut(self.pred), run_time=0.3)
-            for i in range(3):
-                b.until(0.08 + 0.22 * i)
-                self.play(Write(calcs[i]), FadeIn(bar[i]), run_time=0.8)
+            for i, (phrase, row, factor) in enumerate([
+                ("Carbohydrate", "carb", "sixteen"),
+                ("Protein", "protein", "seventeen"),
+                ("Fat", "fat", "thirty-seven"),
+            ]):
+                b.until_words(phrase)
+                self.play(Write(calcs[i]), FadeIn(bar[i]), Indicate(self.part_a.focus(row)), run_time=0.8)
+                b.until_words(factor)
+                self.play(Indicate(self.part_a.focus("factors")), run_time=0.6)
             # Keep the aggregate within the right working column at 16:9.
             tot = M(r"1638\ \text{kJ per 100 g}", size=EQ_SMALL - 2, color=ENERGY_C).scale(0.76).move_to([2.05, -1.45, 0])
-            b.until(0.8)
+            b.until_words("Total")
             self.play(Write(tot), run_time=0.7)
             self.tot = tot
         with self.beat("b05") as b:
@@ -273,9 +282,15 @@ class E05S06_Q09(NarratedScene):
             s1 = M(r"1638\ \text{kJ} \times \frac{30.0\ \text{g}}{100\ \text{g}} = 491.4\ \text{kJ} \approx 491\ \text{kJ}", size=EQ_SMALL - 2)
             s1.scale(0.70).move_to([2.0, -0.7, 0])
             self.play(FadeOut(self.part_a), FadeOut(calcs), FadeOut(bar), FadeOut(self.tot),
-                      FadeIn(part_b), Write(s1), run_time=1.4)
+                      FadeIn(part_b), run_time=0.5)
+            b.until_words("one thousand six hundred and thirty-eight")
+            self.play(Write(s1), Indicate(part_b.focus("per100")), run_time=1.0)
+            b.until_words("thirty point zero")
+            self.play(Indicate(part_b.focus("serving")), run_time=0.6)
+            b.until_words("over one hundred")
+            self.play(Indicate(part_b.focus("basis")), run_time=0.6)
             ok = T("✓ just under a third", size=SMALL + 1, color=GOOD).scale(0.8).next_to(s1, DOWN, buff=0.25)
-            b.until(0.7)
+            b.until_words("That's just under a third")
             self.play(FadeIn(ok), run_time=0.4)
             self.part_b, self.s1, self.ok = part_b, s1, ok
         with self.beat("b06") as b:
@@ -285,7 +300,9 @@ class E05S06_Q09(NarratedScene):
             s2 = M(r"491.4\ \text{kJ} \times 1000\ \text{J kJ}^{-1} = 4.91\times10^{5}\ \text{J}", size=EQ_SMALL - 2, color=GOOD)
             s2.scale(0.78).move_to([2.0, -0.5, 0])
             self.play(FadeOut(self.part_b), FadeOut(self.s1), FadeOut(self.ok),
-                      FadeIn(part_c), Write(s2), run_time=1.2)
+                      FadeIn(part_c), run_time=0.5)
+            b.until_words("multiply by one thousand")
+            self.play(Write(s2), Indicate(part_c.focus("kj")), run_time=1.0)
             si_note = T("SI unit definition: kilo = 1000", size=SMALL, color=MUTED).next_to(s2, DOWN, buff=0.24)
             self.play(FadeIn(si_note), run_time=0.35)
         with self.beat("b07") as b:
@@ -383,10 +400,13 @@ class E05S08_Q10(NarratedScene):
             a2 = M(r"= 1414\ \text{kJ}", size=EQ_SMALL - 4, color=SYSTEM).next_to(a1, DOWN, buff=0.15)
             b1 = M(r"35(16) + 20(17) + 15(37)", size=EQ_SMALL - 8).scale(0.80).move_to([colB, 1.08, 0])
             b2 = M(r"= 1455\ \text{kJ}", size=EQ_SMALL - 4, color=SURR).next_to(b1, DOWN, buff=0.15)
-            self.play(FadeIn(bt), Write(a1), run_time=1.0)
+            b.until_words("Food A per one hundred grams")
+            self.play(FadeIn(bt), Write(a1), Indicate(part_a.focus("a")), Indicate(part_a.focus("factors")), run_time=1.0)
+            b.until_words("one thousand four hundred and fourteen")
             self.play(Write(a2), run_time=0.6)
-            b.until(0.55)
-            self.play(Write(b1), run_time=1.0)
+            b.until_words("Food B")
+            self.play(Write(b1), Indicate(part_a.focus("b")), run_time=1.0)
+            b.until_words("one thousand four hundred and fifty-five")
             self.play(Write(b2), run_time=0.6)
             self.b2 = b2
         with self.beat("b03") as b:
@@ -402,11 +422,17 @@ class E05S08_Q10(NarratedScene):
             st = T("per serving", size=LABEL + 2, color=UNKNOWN).move_to([2.05, -0.46, 0])
             a3 = M(r"1414 \times 0.80 = 1131.2\ \text{kJ}", size=EQ_SMALL - 6, color=SYSTEM).scale(0.82).move_to([colA, -1.0, 0])
             b3 = M(r"1455 \times 0.50 = 727.5\ \text{kJ}", size=EQ_SMALL - 6, color=SURR).scale(0.82).move_to([colB, -1.0, 0])
-            b.until(0.3)
-            self.play(FadeOut(self.part_a), FadeIn(part_b), FadeIn(st), Write(a3), run_time=1.0)
+            b.until_words("Now the servings")
+            self.play(FadeOut(self.part_a), FadeIn(part_b), FadeIn(st), run_time=0.5)
+            b.until_words("eighty grams")
+            self.play(Indicate(part_b.focus("serva")), run_time=0.6)
+            b.until_words("one thousand four hundred and fourteen")
+            self.play(Write(a3), Indicate(part_b.focus("a")), run_time=1.0)
             self.part_b = part_b
-            b.until(0.65)
-            self.play(Write(b3), run_time=1.0)
+            b.until_words("fifty grams")
+            self.play(Indicate(part_b.focus("servb")), run_time=0.6)
+            b.until_words("one thousand four hundred and fifty-five")
+            self.play(Write(b3), Indicate(part_b.focus("b")), run_time=1.0)
             hi2 = SurroundingRectangle(a3, color=GOOD, buff=0.1)
             hi2T = T("larger serving energy", size=SMALL + 1, color=GOOD).next_to(hi2, DOWN, buff=0.1)
             self.play(Create(hi2), FadeIn(hi2T), run_time=0.6)
@@ -454,3 +480,4 @@ class E05S09_Recap(NarratedScene):
 
 EPISODE_SCENES = ["E05S01_Retrieval", "E05S02_Respiration", "E05S03_Factors", "E05S04_Scaling", "E05S05_Basis",
                   "E05S06_Q09", "E05S07_WhichFood", "E05S08_Q10", "E05S09_Recap"]
+

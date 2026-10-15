@@ -391,8 +391,8 @@ class E04S07_Q07(NarratedScene):
                 ("mass", "Glucose mass", "270.0 g", "question"),
                 ("molar", "Glucose M", "180.0 g mol⁻¹", "question"),
                 ("yield", "Conversion", "78.0%", "question"),
-                ("ethanol", "M(ethanol)", "46.0 g mol⁻¹", "2026 VCAA Data Book"),
-                ("co2", "M(CO₂)", "44.0 g mol⁻¹", "2026 VCAA Data Book"),
+                ("ethanol", "M(ethanol) from Aᵣ", "46.0 g mol⁻¹", "2026 VCAA Data Book"),
+                ("co2", "M(CO₂) from Aᵣ", "44.0 g mol⁻¹", "2026 VCAA Data Book"),
             ], width=3.7, y=-0.15)
             pred = VGroup(TB("Predict first", size=LABEL + 2, color=UNKNOWN),
                           T("270 g ÷ 180 g mol⁻¹ ≈ 1.5 mol glucose", size=LABEL),
@@ -402,7 +402,11 @@ class E04S07_Q07(NarratedScene):
             pg = VGroup(pb, pred).move_to([2.1, 0.55, 0])
             self.play(FadeOut(part_a), FadeIn(part_b), FadeIn(req),
                       FadeIn(pb), FadeIn(pred[0]), FadeIn(pred[1]), run_time=0.8)
-            b.until(0.45)
+            b.until_words("one hundred and eighty")
+            self.play(Indicate(part_b.focus("molar")), run_time=0.6)
+            b.until_words("two hundred and seventy grams")
+            self.play(Indicate(part_b.focus("mass")), run_time=0.6)
+            b.until_words("That could make")
             self.play(FadeIn(pred[2]), run_time=0.8)
             self.pg = pg
             self.part_b = part_b
@@ -418,25 +422,42 @@ class E04S07_Q07(NarratedScene):
                     T("× 0.780", size=SMALL + 1, color=UNKNOWN).next_to(arrs[1], UP, buff=0.05))
         with self.beat("b04") as b:
             self.play(FadeOut(self.pg), run_time=0.4)
-            c1 = M(r"n(\text{glucose}) = \frac{270.0\ \text{g}}{180.0\ \text{g mol}^{-1}} = 1.50\ \text{mol}", size=EQ_SMALL - 4).scale(0.79).move_to([2.05, 1.1, 0])
+            c1 = M(r"n(\text{glucose}) = \frac{270.0\ \text{g}}{180.0\ \text{g mol}^{-1}} = 1.50\ \text{mol}", size=EQ_SMALL - 4).scale(0.79).move_to([2.05, 0.85, 0])
+            b.until_words("two hundred and seventy point zero")
             self.play(Write(c1), run_time=1.2)
+            self.play(Indicate(self.part_b.focus("mass")), run_time=0.6)
+            b.until_words("one hundred and eighty point zero")
+            self.play(Indicate(self.part_b.focus("molar")), run_time=0.6)
+            b.until_words("one point five zero")
             self.play(FadeIn(boxes[0]), run_time=0.5)
-            b.until(0.55)
+            b.until_words("three point zero zero")
             self.play(GrowArrow(arrs[0]), FadeIn(al[0]), FadeIn(boxes[1]), run_time=0.9)
             note = T("ethanol and CO₂ each", size=SMALL, color=MUTED).next_to(boxes[1], DOWN, buff=0.1)
             self.play(FadeIn(note), run_time=0.4)
             self.c1 = VGroup(c1, note)
         with self.beat("b05") as b:
+            b.until_words("seventy-eight point zero percent")
+            self.play(Indicate(self.part_b.focus("yield")), run_time=0.6)
+            b.until_words("zero point seven eight zero")
             self.play(GrowArrow(arrs[1]), FadeIn(al[1]), FadeIn(boxes[2]), run_time=1.0)
+            b.until_words("two point three four moles of ethanol")
+            self.play(Indicate(boxes[2]), run_time=0.6)
         with self.beat("b06") as b:
             m1 = M(r"m(\text{ethanol}) = 2.34 \times 46.0 = 107.64\ \text{g} \approx 108\ \text{g}", size=EQ_SMALL - 4, color=MASS_C)
             m2 = M(r"m(\ce{CO2}) = 2.34 \times 44.0 = 102.96\ \text{g} \approx 103\ \text{g}", size=EQ_SMALL - 4, color=MASS_C)
             VGroup(m1, m2).arrange(DOWN, buff=0.3).scale(0.76).move_to([2.05, -1.65, 0])
+            b.until_words("Ethanol")
             self.play(Write(m1), run_time=1.2)
-            b.until(0.45)
+            b.until_words("forty-six point zero")
+            self.play(Indicate(self.part_b.focus("ethanol")), run_time=0.6)
+            b.until_words("one hundred and eight grams")
+            self.play(Indicate(m1), run_time=0.6)
+            b.until_words("Carbon dioxide")
             self.play(Write(m2), run_time=1.2)
+            b.until_words("forty-four point zero")
+            self.play(Indicate(self.part_b.focus("co2")), run_time=0.6)
             chk = T("✓ a bit over 100 g, as predicted", size=SMALL + 1, color=GOOD).next_to(m2, DOWN, buff=0.15)
-            b.until(0.8)
+            b.until_words("Both fit the prediction")
             self.play(FadeIn(chk), run_time=0.5)
         with self.beat("b07") as b:
             # The equation, previous masses and generic "Asked masses" chip
@@ -556,7 +577,9 @@ class E04S09_Q08(NarratedScene):
             t = wrapped("Identical: same molecule, same reaction → same energy released and 1 mol CO₂ per mol CH₄ burned.",
                         size=LABEL, width=7.4).next_to(eq, DOWN, buff=0.3).align_to(eq, LEFT)
             self.play(Write(eq), run_time=1.0)
-            b.until(0.4)
+            b.until_words("same energy")
+            self.play(Indicate(part_a.focus("fuel")), run_time=0.6)
+            b.until_words("one mole of carbon dioxide")
             self.play(FadeIn(t), run_time=0.8)
             self.pa = VGroup(eq, t)
             self.part_a = part_a
@@ -569,8 +592,10 @@ class E04S09_Q08(NarratedScene):
             c2 = card("Biomethane", ["renewable: plant feedstock regrows on a human timescale"], BIO, 5.4)
             VGroup(c1, c2).arrange(RIGHT, buff=0.35, aligned_edge=UP).scale(0.72).move_to([2.1, 0.65, 0])
             self.play(FadeOut(self.part_a), FadeOut(self.pa), FadeIn(part_b), FadeIn(c1), run_time=0.8)
-            b.until(0.5)
-            self.play(FadeIn(c2), run_time=0.8)
+            b.until_words("natural gas")
+            self.play(Indicate(part_b.focus("natural")), run_time=0.6)
+            b.until_words("Biomethane")
+            self.play(FadeIn(c2), Indicate(part_b.focus("bio")), run_time=0.8)
             self.pb = VGroup(c1, c2)
             self.part_b = part_b
         with self.beat("b04") as b:
@@ -642,3 +667,4 @@ class E04S10_Recap(NarratedScene):
 
 EPISODE_SCENES = ["E04S01_Retrieval", "E04S02_Fossil", "E04S03_Timescale", "E04S04_CarbonCycle", "E04S05_Photosynthesis",
                   "E04S06_Ethanol", "E04S07_Q07", "E04S08_BiogasBiodiesel", "E04S09_Q08", "E04S10_Recap"]
+
